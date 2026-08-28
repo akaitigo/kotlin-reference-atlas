@@ -9,7 +9,7 @@
   "target": {
     "repository_id": "kotlin-reference-atlas",
     "title_ja": "Kotlin 技術実証アトラス",
-    "core_commit": "be19ddaa411fe60dcf12f0f5d457902bb57b9eb3"
+    "core_commit": "219dee20e23811195f541bbce71a730237a27231"
   },
   "mappings": [
     { "from": "kotlin.language.context-parameters", "to": "language.context-parameters", "state": "planned", "note_ja": "従来Claim IDを将来Inventoryへ引き継ぐ。" },

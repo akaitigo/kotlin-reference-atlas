@@ -8,7 +8,7 @@ if [[ -d "${repo_root}/.atlas-core/.git" ]]; then
 fi
 core_dir="${ATLAS_CORE_DIR:-${default_core_dir}}"
 go_cache_dir="${ATLAS_GO_CACHE_DIR:-${repo_root}/.cache/go-build}"
-pinned_commit="be19ddaa411fe60dcf12f0f5d457902bb57b9eb3"
+pinned_commit="219dee20e23811195f541bbce71a730237a27231"
 
 if [[ ! -d "${core_dir}/.git" ]]; then
   echo "エラー: reference-atlas-coreが見つかりません: ${core_dir}" >&2
@@ -22,8 +22,8 @@ if [[ "${actual_commit}" != "${pinned_commit}" ]]; then
 fi
 
 command="${1:-}"
-if [[ "${command}" != "validate" && "${command}" != "audit" && "${command}" != "certificate" ]]; then
-  echo "エラー: 使い方: atlas validate <manifest...> | atlas audit <repository-root> [--gate definitive] | atlas certificate generate|verify|generate-definitive|verify-definitive <repository-root>" >&2
+if [[ "${command}" != "validate" && "${command}" != "audit" && "${command}" != "certificate" && "${command}" != "baseline" ]]; then
+  echo "エラー: 使い方: atlas validate <manifest...> | atlas audit <repository-root> [--gate definitive|non-regression] | atlas baseline generate <repository-root> <output> --commit SHA [--captured-at RFC3339] | atlas certificate generate|verify|generate-definitive|verify-definitive <repository-root>" >&2
   exit 1
 fi
 
@@ -39,6 +39,10 @@ if [[ "${command}" == "validate" ]]; then
     fi
   done
   exec env GOCACHE="${go_cache_dir}" go -C "${core_dir}" run ./cmd/atlas validate "${manifest_paths[@]}"
+fi
+
+if [[ "${command}" == "baseline" ]]; then
+  exec env GOCACHE="${go_cache_dir}" go -C "${core_dir}" run ./cmd/atlas baseline "$@"
 fi
 
 if [[ "${command}" == "certificate" ]]; then
@@ -64,10 +68,10 @@ if [[ "${audit_root}" != /* ]]; then
   audit_root="${repo_root}/${audit_root}"
 fi
 if [[ "$#" -eq 3 ]]; then
-  if [[ "$2" != "--gate" || "$3" != "definitive" ]]; then
-    echo "エラー: auditで指定できる追加引数は--gate definitiveだけです" >&2
+  if [[ "$2" != "--gate" || ( "$3" != "definitive" && "$3" != "non-regression" ) ]]; then
+    echo "エラー: auditで指定できる追加引数は--gate definitiveまたは--gate non-regressionです" >&2
     exit 1
   fi
-  exec env GOCACHE="${go_cache_dir}" go -C "${core_dir}" run ./cmd/atlas audit "${audit_root}" --gate definitive
+  exec env GOCACHE="${go_cache_dir}" go -C "${core_dir}" run ./cmd/atlas audit "${audit_root}" --gate "$3"
 fi
 exec env GOCACHE="${go_cache_dir}" go -C "${core_dir}" run ./cmd/atlas audit "${audit_root}"

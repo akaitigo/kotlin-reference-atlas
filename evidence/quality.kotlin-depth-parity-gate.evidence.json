@@ -15,13 +15,13 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:234af747c35ac3e14ee0479ff05d09ae59c2e215f7082f69e17d29da51d0ba95",
+  "harness_digest": "sha256:85d82cf97deffef848d8199f2a320d2fb9db00d1ec0b93350c3c3eabf3090a80",
   "harness_path": "atlas/definitive/kotlin-depth-parity.json",
   "id": "quality.kotlin-depth-parity-gate",
   "kind": "compatibility",
   "producer": "kotlin-depth-parity-gate",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:55e1c7c88ce3365af3be0fff625230cd7906e641b1548706b64bece274ba46b4",
+  "source_digest": "sha256:86f0ef4639aef0ccceec127c1455bec11ad7821e5b9da6b45de080d8dd63d836",
   "verdict": "pass"
 }

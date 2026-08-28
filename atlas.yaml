@@ -19,7 +19,7 @@
     "statement": "Kotlin 2.4.10を基準に、言語Semanticsと型、Coroutine/Flow、JVM/Native/JS/Wasm、Interop、Compiler/Runtime、Gradle/Toolchain、Testing、Performance、Security、Failure/Debugging、Compatibility/Migration、Operations、Agent SkillをDefinitive Gate v2の細粒度Behavior、実Runtime、比較Variant、Artifact Evidence、Skill Evalで実証する。",
     "exclusions": [
       "Android SDK、Ktor、Spring、Compose等の第三者または周辺Framework固有APIはKotlin本体の検証範囲から分離する。",
-      "Full Xcodeを必要とするNative executable実行とSwift Export consumerは現在のHost Toolchainではinfeasibleとし、Native test KLIB compileを代替Evidenceとして明示する。",
+      "Full Xcodeを必要とするNative executable実行とSwift Export consumerは現在のHost Toolchainでは未実行として記録し、Native test KLIB compileをRuntime Evidenceの代替にしない。",
       "Kotlin 2.4.10より前の全Versionを再現せず、互換性と移行Contractを立証するversioned fixtureを対象にする。"
     ]
   },

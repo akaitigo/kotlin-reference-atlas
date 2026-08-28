@@ -1,7 +1,7 @@
 schema_version: 2
 atlas_id: kotlin-reference-atlas
 epoch: '2026-08-28'
-authority_lock_digest: sha256:55e1c7c88ce3365af3be0fff625230cd7906e641b1548706b64bece274ba46b4
+authority_lock_digest: sha256:86f0ef4639aef0ccceec127c1455bec11ad7821e5b9da6b45de080d8dd63d836
 authority_artifacts:
 - id: gradle
   source_id: gradle-source-9.5.0

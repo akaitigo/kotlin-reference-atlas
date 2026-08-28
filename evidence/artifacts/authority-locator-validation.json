@@ -1,0 +1,41 @@
+{
+  "body_fields_rejected": [
+    "body",
+    "body_text",
+    "content",
+    "document",
+    "excerpt",
+    "html",
+    "markdown",
+    "quote",
+    "raw",
+    "raw_body",
+    "response_body",
+    "source_text",
+    "text"
+  ],
+  "depth_axis_must_remain_partial": true,
+  "index": "authority/locator-extraction.json",
+  "index_digest": "sha256:f7a1798b54a33320cbe22c9da2a4c8ca48772d861699f65fac5d2a2d8536e09a",
+  "local_methodology_reference": {
+    "artifact_count": 4,
+    "available": true,
+    "verified": true
+  },
+  "methodology_reference": "baseline/fe-authority-locator-reference-v1.json",
+  "schema_version": 1,
+  "summary": {
+    "authority_body_locator_candidates": 0,
+    "authority_text_surfaces_exhaustive": false,
+    "core_v2_eligible_surfaces": 0,
+    "human_reviewed_locator_surfaces": 0,
+    "locked_authority_sources": 9,
+    "reference_edges_classified": 69,
+    "source_body_evaluations_deferred": 9,
+    "source_digest_matched": 0,
+    "source_digest_stale": 0,
+    "unclassified_reference_edges": 0
+  },
+  "verdict": "pass",
+  "violations": []
+}

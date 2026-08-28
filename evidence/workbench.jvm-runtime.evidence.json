@@ -24,6 +24,6 @@
   "retention": "git",
   "runtime_identity": "Homebrew OpenJDK 17.0.17+0 aarch64; Kotlin 2.4.10; kotlinx.coroutines 1.11.0",
   "schema_version": 1,
-  "source_digest": "sha256:55e1c7c88ce3365af3be0fff625230cd7906e641b1548706b64bece274ba46b4",
+  "source_digest": "sha256:86f0ef4639aef0ccceec127c1455bec11ad7821e5b9da6b45de080d8dd63d836",
   "verdict": "pass"
 }

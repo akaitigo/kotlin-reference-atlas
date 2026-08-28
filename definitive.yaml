@@ -4,6 +4,7 @@ epoch: "2026-08-28"
 completion_class: subject-definitive
 surface_inventory: surface.inventory.yaml
 verification_matrix: verification.matrix.yaml
+depth_parity: depth.parity.yaml
 skill_eval: evals/kotlin-reference-router.definitive-skill-eval.json
 certificate: evidence/definitive-certificate.json
 historical_certificates:

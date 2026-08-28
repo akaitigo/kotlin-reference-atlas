@@ -7,7 +7,7 @@
 - Subject Definitive: 未完
 - Completion Certificateの再発行: 禁止
 
-v0.2.0は固定した28 Target、8 Source、Local／Container profileに対するCore v1証明として改変しません。一方、Native executable／Swift consumerの実Runtimeを`infeasible`、Automation Workbenchを`planned`として許容したため、Kotlin分野全体を閉じた証明には使用しません。現行候補はbaseline 8 Sourceと追加10 Source、9 Authority Artifact、69 Behavior、29 Gapを扱い、旧Certificateとは別の未完graphです。
+v0.2.0は固定した28 Target、8 Source、Local／Container profileに対するCore v1証明として改変しません。一方、Native executable／Swift consumerの実Runtimeを`infeasible`、Automation Workbenchを`planned`として許容したため、Kotlin分野全体を閉じた証明には使用しません。現行候補はbaseline 8 Sourceと追加10 Source、9 Authority Artifact、69 Behavior、30 Gapを扱い、旧Certificateとは別の未完graphです。
 
 ## v2で追加した実体
 
@@ -29,6 +29,8 @@ JVM実Runtime Test 8件と集約Claim／Artifact Evidenceは接続済みです�
 [`atlas/definitive/kotlin-depth-parity.json`](../atlas/definitive/kotlin-depth-parity.json)は、`frontend-behavior-atlas` commit `4a0b2df8e2091a963bd0e0e1bbccef9c84b49a45`の`FE_DEPTH_REFERENCE.json`、参照文書、4 fixture、非後退baselineをdigest固定しています。Authority本文消化、Atomic behavior、実Runtime、Normal／Boundary／Refusal／Failure／Recovery／Migration／Operations／Security／Performance／Compatibility、Artifact・Trace、統合Reference System、Skill Eval、Rights／Provenance、非後退の18軸をKotlin固有denominatorへ写像します。
 
 FE側の判定は1軸satisfied、17軸partialで`incomplete`です。KotlinはFEのTarget／Test／Capture等の絶対件数や比率を閾値にせず、69 Authority由来Behaviorと適用Scenario／Runtime／Profileを母集団にします。現在のKotlin判定も1軸satisfied、17軸partial、30件の軸別Gap参照です。`scripts/verify_fe_parity.py`は18軸ID、正本commitとdigest、Kotlin denominator、Behavior×Scenario×Profile×Proof×専用Artifact粒度、Evidence、Gap、非後退を検証し、Gapがある状態での`complete`またはCertificate発行を拒否します。
+
+Authority locator抽出の方法論は`frontend-behavior-atlas` commit `cabf687bab769b17928d950acc416f3f77eb4ca3`へ別途digest固定しています。`authority/locator-extraction.json`は第三者本文を保存せず、URL、Source metadata、digest、locator offsetだけを許可します。現状は69件の既存reference edge分類に対し、本文全体の抽出候補0、Source body評価deferred 9、stale 0、Human review 0です。`scripts/verify_authority_locators.py`は本文field混入を拒否し、この未完状態を再集計します。本文全体のSurface denominatorが閉じるまで`authority-body-digestion`は`partial`です。
 
 ## Completion禁止条件
 

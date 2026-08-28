@@ -1,0 +1,27 @@
+{
+  "artifact": {
+    "digest": "sha256:57b1dce59189963c5fbb527ee4279f5ce781102859d2d51a386f504bfdb8ce94",
+    "media_type": "application/json",
+    "size_bytes": 1071,
+    "uri": "evidence/artifacts/authority-locator-validation.json"
+  },
+  "atlas_id": "kotlin-reference-atlas",
+  "claim_ids": [
+    "authority.locator-inventory-is-copyright-safe-and-incomplete"
+  ],
+  "command": "python3 scripts/generate_authority_locators.py && python3 scripts/verify_authority_locators.py",
+  "created_at": "2026-08-28T00:00:00+09:00",
+  "environment": {
+    "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
+    "profile": "local"
+  },
+  "harness_digest": "sha256:f7a1798b54a33320cbe22c9da2a4c8ca48772d861699f65fac5d2a2d8536e09a",
+  "harness_path": "authority/locator-extraction.json",
+  "id": "authority.locator-validation",
+  "kind": "capture",
+  "producer": "kotlin-authority-locator-verifier",
+  "retention": "git",
+  "schema_version": 1,
+  "source_digest": "sha256:86f0ef4639aef0ccceec127c1455bec11ad7821e5b9da6b45de080d8dd63d836",
+  "verdict": "pass"
+}

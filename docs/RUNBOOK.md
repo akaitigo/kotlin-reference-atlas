@@ -7,7 +7,7 @@
 - Git
 - Node.js 25（Kotlin/JS・Wasm実行）
 - Docker 29（Container profile）
-- `reference-atlas-core` commit `be19ddaa411fe60dcf12f0f5d457902bb57b9eb3`
+- `reference-atlas-core` commit `219dee20e23811195f541bbce71a730237a27231`
 
 ## Execute
 

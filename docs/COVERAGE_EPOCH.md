@@ -6,7 +6,7 @@
 - Gradle: 9.5.0
 - kotlinx.coroutines: 1.11.0
 - JVM bytecode target: 17
-- Reference Atlas Core Definitive Gate v2: `be19ddaa411fe60dcf12f0f5d457902bb57b9eb3`
+- Reference Atlas Core Definitive Gate v2: `219dee20e23811195f541bbce71a730237a27231`
 - Gradle依存: `gradle.lockfile`と`gradle/verification-metadata.xml`でVersionとSHA-256を固定
 
 ## bounded v0.2.0で閉じた範囲
@@ -20,7 +20,7 @@
 
 ## Definitive v2で再開した範囲
 
-公式Spec／Docs／KEEP／Compiler／stdlib／Native runtime／coroutines／serialization／Gradleから69 Behaviorを導出した。`atlas/definitive/gap-ledger.yaml`の26 Gapを閉じ、10 Scenario Matrixと実Runtime Evidenceが揃うまでは`incomplete`とする。
+公式Spec／Docs／KEEP／Compiler／stdlib／Native runtime／coroutines／serialization／Gradleから既存reference edgeとして69 Behaviorを分類した。これはAuthority本文全体の網羅抽出ではない。`atlas/definitive/gap-ledger.yaml`の30 Gapを閉じ、Authority本文のLocator抽出・Human review、10 Scenario Matrix、実Runtime Evidenceが揃うまでは`incomplete`とする。
 
 ## Blockedと対象外
 

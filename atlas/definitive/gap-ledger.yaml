@@ -7,6 +7,16 @@ policy: >-
   Gapは文書またはTarget件数では閉じない。各適用Behaviorに専用Claim、Proof Obligation、正常・境界・拒否・障害・回復、
   実Runtime、比較Variant、Artifact Evidence、Skill Evalが接続され、Core Definitive Gate v2が通過した場合だけclosedにする。
 gaps:
+  - id: authority.exhaustive-locator-review
+    area: authority-extraction
+    state: open
+    target_ids: [quality.kotlin-depth-parity-gate]
+    authority_ids: [kotlin-spec-snapshot, kotlin-docs-snapshot, kotlin-keep-snapshot, kotlin-compiler-source-2.4.10, kotlin-stdlib-source-2.4.10, kotlin-native-source-2.4.10, kotlinx-coroutines-source-1.11.0, kotlinx-serialization-source-snapshot, gradle-source-9.5.0]
+    current_evidence_ids: [authority.locator-validation]
+    missing:
+      - 9 Authorityの固定本文をcopyright-safeな一時入力として再取得し、digest一致・stale・failedをSource別に評価する
+      - 既存69 reference edgeとは別に本文全体からLocator offset候補を抽出し、未分類Surfaceをゼロにする
+      - 抽出候補をHuman reviewし、Behavior・Variant・Claim・Proof・Evidenceへ接続する
   - id: types.subtyping-and-inference
     area: types
     state: partial
