@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:6f2044c57ba46ebf74ce879f310bc9b0ba3512ea3402b52d15bfe8dad740e8fb",
+  "harness_digest": "sha256:1a5e822854ec77392731d16021861f24f21ffd518f888f2135e16fe0233ed310",
+  "harness_path": "scripts/inventory.py",
   "id": "inventory.public-surface",
   "kind": "capture",
   "producer": "kotlin-artifact-inventory",

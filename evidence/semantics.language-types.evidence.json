@@ -16,7 +16,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:3d6260773aa6b194a509a195cc59fd69508c6e8c495a54d38bfb92469426a8e5",
+  "harness_digest": "sha256:54929da2003c6f7e59249e88a930c30e1a9ff2fb65c0f97dbb74172752c01292",
+  "harness_path": "labs/semantics/build.gradle.kts",
   "id": "semantics.language-types",
   "kind": "test-report",
   "producer": "gradle-junit",

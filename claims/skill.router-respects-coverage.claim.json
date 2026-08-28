@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "skill.coverage-router",
+  "id": "skill.router-respects-coverage",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "設計、実装、診断、移行、Review、Gapの全Eval caseが期待Routeと一致すること"
+      ],
+      "id": "skill.route-and-gap-cases",
+      "statement": "設計、実装、診断、移行、Review、Gapの全Eval caseが期待Routeと一致すること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "reference-atlas-core-v1"
+  ],
+  "statement": "RouterはCoverage内CapabilityへRouteし、Coverage外質問にはgapを返す。",
+  "status": "accepted"
+}

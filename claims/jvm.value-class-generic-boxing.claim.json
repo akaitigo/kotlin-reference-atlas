@@ -1,0 +1,27 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "jvm.value-class-boundary",
+  "id": "jvm.value-class-generic-boxing",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "異なるvalue classを混同しない型付きAPIがcompileすること"
+      ],
+      "id": "jvm.compile-type-separation",
+      "statement": "異なるvalue classを混同しない型付きAPIがcompileすること"
+    },
+    {
+      "acceptance_criteria": [
+        "Any境界でruntime classがUserIdとして観測されること"
+      ],
+      "id": "jvm.runtime-generic-boxing",
+      "statement": "Any境界でruntime classがUserIdとして観測されること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "value classはsource-levelで別型を提供し、Anyを受けるgeneric境界ではwrapper objectとして観測される。",
+  "status": "accepted"
+}

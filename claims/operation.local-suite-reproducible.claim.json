@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "operation.reproducible-profiles",
+  "id": "operation.local-suite-reproducible",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "scripts/verify.pyが全Local Gateを実行しpass summaryを生成すること"
+      ],
+      "id": "operation.single-entrypoint",
+      "statement": "scripts/verify.pyが全Local Gateを実行しpass summaryを生成すること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "reference-atlas-core-v1"
+  ],
+  "statement": "Local profileでManifest、全Platform Lab、Skill、RightsのGateを一Commandから再実行し正規化Artifactを生成できる。",
+  "status": "accepted"
+}

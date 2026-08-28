@@ -1,0 +1,21 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "gradle.toolchain-lock",
+  "id": "gradle.toolchain-and-artifacts-locked",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "全Project lockfileとWrapper checksum、verification metadataが存在し検証されること"
+      ],
+      "id": "gradle.lock-and-verification",
+      "statement": "全Project lockfileとWrapper checksum、verification metadataが存在し検証されること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "gradle-9.5.0",
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "Gradle Wrapper、全Project dependency lock、Artifact checksumが固定される。",
+  "status": "accepted"
+}

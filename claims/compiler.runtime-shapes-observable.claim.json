@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "compiler.runtime-shapes",
+  "id": "compiler.runtime-shapes-observable",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "data class、lambda、reified、suspend continuationのJUnit Oracleがpassすること"
+      ],
+      "id": "compiler.runtime-tests",
+      "statement": "data class、lambda、reified、suspend continuationのJUnit Oracleがpassすること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "data class、capturing lambda、reified filter、suspend continuationのRuntime挙動を観測できる。",
+  "status": "accepted"
+}

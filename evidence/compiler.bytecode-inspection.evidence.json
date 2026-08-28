@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:473432e8becfa2bf32264267f2a100d4a35f3d3d70a665defe666fee946078b9",
+  "harness_digest": "sha256:fa6641ce4ffd67e9b91894f8d6690c429d3e39d7f944398aaa404a91c26d4969",
+  "harness_path": "labs/compiler-runtime/build.gradle.kts",
   "id": "compiler.bytecode-inspection",
   "kind": "compatibility",
   "producer": "jdk-javap",

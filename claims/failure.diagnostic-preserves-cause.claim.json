@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "failure.diagnostics",
+  "id": "failure.diagnostic-preserves-cause",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "Failure categoryとcause typeをassertするTestがpassすること"
+      ],
+      "id": "failure.diagnostic-test",
+      "statement": "Failure categoryとcause typeをassertするTestがpassすること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "Failure分類は入力・状態・予期せぬ失敗を区別し、root cause型を失わない。",
+  "status": "accepted"
+}

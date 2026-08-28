@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "semantics.type-system",
+  "id": "types.variance-nothing-reified",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "variance、Nothing、reified型のcompileとruntime assertionがpassすること"
+      ],
+      "id": "types.runtime-and-compile-oracles",
+      "statement": "variance、Nothing、reified型のcompileとruntime assertionがpassすること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "declaration-site variance、Nothingのsubtyping、reified runtime tokenが期待する型境界を保つ。",
+  "status": "accepted"
+}

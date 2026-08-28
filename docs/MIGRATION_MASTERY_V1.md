@@ -12,6 +12,6 @@
 - `mastery.yaml`は既存Manifestの代替ではなく、利用者が達成できるOutcomeと答えるべきSurfaceの正本とする。
 - CycloneDX直接依存SBOMを維持し、新しいPublication Contract用にRootの`sbom.spdx.json`を追加する。
 
-## 完了状態
+## 移行時点の完了状態
 
-Mastery移行と`atlas audit`が通っても、Container Evidence、完全な公開Surface Inventory、完全なtransitive SBOM、Completion Certificateが未完了なので`status: incomplete`を維持する。
+Mastery移行直後に不足していたContainer Evidence、公開Surface Inventory、transitive SBOMはv0.2.0候補で実装した。Native runtimeは再評価日付き`infeasible`として閉じた。Core Control Plane v1の第三者SchemaがMaven/npm ecosystemを表現できず、Supply-chain監査が`go.mod`を必須化しているため、Completion Certificate発行前の`status: incomplete`を維持する。

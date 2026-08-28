@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:0f8b90deb1a27fe20a6f6341603cd3d54934a17746570c1f6f91c57a91924284",
+    "digest": "sha256:8c9048627455f3a84baba8e74d53c4618b09471c2c9dd42e42400bb1801af6ce",
     "media_type": "application/json",
-    "size_bytes": 371,
+    "size_bytes": 305,
     "uri": "evidence/artifacts/manifest-validation.json"
   },
   "atlas_id": "kotlin-reference-atlas",
@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:7861b5f74198198853fdbdf5eec169b609b1e2ab9c09ca92bbc9dc18524de806",
+  "harness_digest": "sha256:67a6f07598df5e62b8e36d8d2d077b69fc7ff6ffd43852a578a3121c8123fb87",
+  "harness_path": "atlas/capabilities/capabilities.json",
   "id": "authority.source-lock-validation",
   "kind": "conformance",
   "producer": "kotlin-atlas-verifier",

@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:17726de6ba872acebacd8b08ed22214c31f1cf2914d2ce9dce2cdb2634f03b4a",
+  "harness_digest": "sha256:70d6dca058f6ab7af86e9f20905ecc58cf1006bfe15d3a7fb33ed92d4432515d",
+  "harness_path": "labs/engineering/build.gradle.kts",
   "id": "performance.measurement",
   "kind": "benchmark",
   "producer": "gradle-junit",

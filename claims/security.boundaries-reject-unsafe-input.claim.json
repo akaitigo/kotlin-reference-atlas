@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "security.input-boundaries",
+  "id": "security.boundaries-reject-unsafe-input",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "危険なURIとPathを拒否するnegative testとSecret比較testがpassすること"
+      ],
+      "id": "security.negative-tests",
+      "statement": "危険なURIとPathを拒否するnegative testとSecret比較testがpassすること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "非HTTPS、非許可Host、User info、Path traversalを拒否し、Secret byte列をMessageDigest.isEqualで比較する。",
+  "status": "accepted"
+}

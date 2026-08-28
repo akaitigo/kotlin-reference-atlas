@@ -1,0 +1,27 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "coroutines.structured-cancellation",
+  "id": "coroutines.child-failure-cancels-sibling",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "兄弟Coroutineのfinallyが必ず実行されること"
+      ],
+      "id": "coroutines.sibling-finally",
+      "statement": "兄弟Coroutineのfinallyが必ず実行されること"
+    },
+    {
+      "acceptance_criteria": [
+        "callerが同じIllegalStateExceptionを観測すること"
+      ],
+      "id": "coroutines.parent-exception",
+      "statement": "callerが同じIllegalStateExceptionを観測すること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlinx-coroutines-core-jvm-1.11.0"
+  ],
+  "statement": "coroutineScope内の子Coroutine失敗は待機中の兄弟をcancelし、元の例外を親callerへ伝播する。",
+  "status": "accepted"
+}

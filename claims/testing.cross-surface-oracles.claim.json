@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "quality.testing-oracles",
+  "id": "testing.cross-surface-oracles",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "全JUnit、JS、Wasm suiteでfailureとskippedがゼロであること"
+      ],
+      "id": "testing.multi-suite-pass",
+      "statement": "全JUnit、JS、Wasm suiteでfailureとskippedがゼロであること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "正常、拒否、失敗、回復、互換性、Platform差を複数Test suiteのOracleで検証する。",
+  "status": "accepted"
+}

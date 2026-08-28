@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "authority.lock",
+  "id": "authority.source-lock-matches",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "SHA-256を再計算しCoverage値と完全一致すること"
+      ],
+      "id": "authority.digest-equality",
+      "statement": "SHA-256を再計算しCoverage値と完全一致すること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "reference-atlas-core-v1"
+  ],
+  "statement": "Coverage Manifestのauthority_lock_digestはsources.lock.yamlのbyte digestと一致する。",
+  "status": "accepted"
+}

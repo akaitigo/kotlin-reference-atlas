@@ -16,7 +16,7 @@ python3 scripts/verify.py
 
 ## 状態
 
-Required Coverageは`covered`または再評価日付き`infeasible`で閉じています。Native executable実行だけはFull Xcode不在のため`infeasible`で、Native test KLIB compileを代替Evidenceとします。Completion CertificateとRelease固定が完了するまで`status: incomplete`を維持します。
+固定EpochのRequired Coverageは`covered`または再評価日付き`infeasible`で閉じ、Local/Container profileも通過しています。一方、Core Control Plane v1の第三者SchemaがMaven/npm ecosystemを表現できず、`atlas audit`のSupply-chain照合が全Atlasへ`go.mod`を要求するため、契約どおり`status: incomplete`を維持します。Native executable実行はFull Xcode不在のため`infeasible`で、Native test KLIB compileを代替Evidenceとします。
 
 ## 正本
 

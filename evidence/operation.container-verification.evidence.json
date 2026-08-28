@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:fc213e8b3f6831c1d4da8b3d90278e22262cd663c496490d96a1ae8817865dbe",
+    "digest": "sha256:2868cd4d3192c33d6fae20a20d11f28f1ead35a0509b0639f9e0b273bbcc465f",
     "media_type": "application/json",
-    "size_bytes": 14835,
+    "size_bytes": 14812,
     "uri": "evidence/artifacts/container-verification.json"
   },
   "atlas_id": "kotlin-reference-atlas",
@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:0edb538dff8c0614f95c2cad31f767737a650debec84813302dab379b224b051",
     "profile": "container"
   },
-  "harness_digest": "sha256:a206d716341436fa2dace9ee9b850482bbe240c4a61b2a8ea3bed10716aac7b0",
+  "harness_digest": "sha256:85ac387cdd75cec61625e3469e3a0c1b7a3e4c75763284ce764b161d66a8fa98",
+  "harness_path": "environments/container/Dockerfile",
   "id": "operation.container-verification",
   "kind": "conformance",
   "producer": "docker-gradle",

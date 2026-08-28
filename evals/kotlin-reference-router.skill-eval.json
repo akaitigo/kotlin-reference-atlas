@@ -1,0 +1,118 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "atlas_release": "v0.2.0",
+  "cases": [
+    {
+      "assertion": "Router Eval semantics-designは期待DispositionとCapability境界を満たす。",
+      "category": "routing",
+      "id": "semantics-design",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval types-implementは期待DispositionとCapability境界を満たす。",
+      "category": "routing",
+      "id": "types-implement",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval jvm-value-classは期待DispositionとCapability境界を満たす。",
+      "category": "routing",
+      "id": "jvm-value-class",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval multiplatform-reviewは期待DispositionとCapability境界を満たす。",
+      "category": "execution",
+      "id": "multiplatform-review",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval native-compileは期待DispositionとCapability境界を満たす。",
+      "category": "execution",
+      "id": "native-compile",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval java-interopは期待DispositionとCapability境界を満たす。",
+      "category": "near-neighbor",
+      "id": "java-interop",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval compiler-bytecodeは期待DispositionとCapability境界を満たす。",
+      "category": "execution",
+      "id": "compiler-bytecode",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval gradle-testkitは期待DispositionとCapability境界を満たす。",
+      "category": "execution",
+      "id": "gradle-testkit",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval toolchain-securityは期待DispositionとCapability境界を満たす。",
+      "category": "authorization",
+      "id": "toolchain-security",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval coroutine-cancellationは期待DispositionとCapability境界を満たす。",
+      "category": "lifecycle",
+      "id": "coroutine-cancellation",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval flow-diagnoseは期待DispositionとCapability境界を満たす。",
+      "category": "lifecycle",
+      "id": "flow-diagnose",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval performance-reviewは期待DispositionとCapability境界を満たす。",
+      "category": "execution",
+      "id": "performance-review",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval security-reviewは期待DispositionとCapability境界を満たす。",
+      "category": "security",
+      "id": "security-review",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval migrationは期待DispositionとCapability境界を満たす。",
+      "category": "lifecycle",
+      "id": "migration",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval operation-recoveryは期待DispositionとCapability境界を満たす。",
+      "category": "lifecycle",
+      "id": "operation-recovery",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval sbom-reviewは期待DispositionとCapability境界を満たす。",
+      "category": "authority",
+      "id": "sbom-review",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval swift-export-gapは期待DispositionとCapability境界を満たす。",
+      "category": "coverage-gap",
+      "id": "swift-export-gap",
+      "result": "pass"
+    },
+    {
+      "assertion": "Router Eval ktor-gapは期待DispositionとCapability境界を満たす。",
+      "category": "coverage-gap",
+      "id": "ktor-gap",
+      "result": "pass"
+    }
+  ],
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "id": "kotlin-reference-router.v0-2-0",
+  "schema_version": 1,
+  "skill_id": "kotlin-reference-router"
+}

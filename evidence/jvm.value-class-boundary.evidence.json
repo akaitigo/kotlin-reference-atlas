@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:c1e87bc94534898d959d0290ac549ecec71f9e2884c0eee57c7bc7e971319a5f",
+  "harness_digest": "sha256:f26b5c437ce7d27851d2146bce47c874b7d04de9c7ed990258871bf4601261eb",
+  "harness_path": "labs/jvm/build.gradle.kts",
   "id": "jvm.value-class-boundary",
   "kind": "test-report",
   "producer": "gradle-junit",

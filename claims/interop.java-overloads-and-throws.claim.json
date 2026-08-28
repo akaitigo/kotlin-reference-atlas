@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "interop.java-consumer",
+  "id": "interop.java-overloads-and-throws",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "Java test sourceがoverloadを呼び例外宣言をcompile時に扱えること"
+      ],
+      "id": "interop.java-source-consumer",
+      "statement": "Java test sourceがoverloadを呼び例外宣言をcompile時に扱えること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "@JvmOverloadsで生成したoverloadと@Throwsで宣言した例外をJava source consumerがcompileし実行できる。",
+  "status": "accepted"
+}

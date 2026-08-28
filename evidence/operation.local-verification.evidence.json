@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:5705f463fd02bc47578c2b5e6c8f1cc2603d63a3cb7f83428882a16855764b1a",
+    "digest": "sha256:16d191718c420a257e9600cbc8c29e121b59c5f8929143aa6838a50e58ce2433",
     "media_type": "application/json",
-    "size_bytes": 582,
+    "size_bytes": 708,
     "uri": "evidence/artifacts/verification-summary.json"
   },
   "atlas_id": "kotlin-reference-atlas",
@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:85cd0340538a75e5a299a79b16d9dfd5ff2ea80ce9db70a90546dce845a15291",
+  "harness_digest": "sha256:ce733ab9eed176b657f7cb948639cf477e1baf424805801e4e3bc27f8351aa20",
+  "harness_path": "build.gradle.kts",
   "id": "operation.local-verification",
   "kind": "conformance",
   "producer": "kotlin-atlas-verifier",

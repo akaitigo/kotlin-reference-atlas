@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "inventory.public-surface",
+  "id": "inventory.locked-surface-enumerated",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "固定stdlibとCompiler ArtifactのDigest、Class数、Package数がInventoryへ記録されること"
+      ],
+      "id": "inventory.artifact-enumeration",
+      "statement": "固定stdlibとCompiler ArtifactのDigest、Class数、Package数がInventoryへ記録されること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "固定Compilerとstdlib ArtifactのClass entry、Package、Digestを決定論的にInventoryできる。",
+  "status": "accepted"
+}

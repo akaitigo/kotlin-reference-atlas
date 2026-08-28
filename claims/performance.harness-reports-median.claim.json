@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "performance.measurement-harness",
+  "id": "performance.harness-reports-median",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "Medianが正、sample数が固定、checksumが数式結果と一致すること"
+      ],
+      "id": "performance.measurement-test",
+      "statement": "Medianが正、sample数が固定、checksumが数式結果と一致すること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "性能Harnessは複数sampleから正のMedian、sample数、結果checksumを生成する。",
+  "status": "accepted"
+}

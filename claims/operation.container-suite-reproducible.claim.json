@@ -1,0 +1,21 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "operation.reproducible-profiles",
+  "id": "operation.container-suite-reproducible",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "scripts/container-verify.shが隔離Gradle homeでJVM GateをpassしArtifactを生成すること"
+      ],
+      "id": "operation.container-entrypoint",
+      "statement": "scripts/container-verify.shが隔離Gradle homeでJVM GateをpassしArtifactを生成すること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "reference-atlas-core-v1",
+    "gradle-9.5.0"
+  ],
+  "statement": "Container profileでHostのGradle cacheから独立してJVM必須Gateを再実行できる。",
+  "status": "accepted"
+}

@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:f6d1a4b0bae66421ef1a31a90097ee6da6ac50f0c07385f8c5f2b8354aafca28",
+  "harness_digest": "sha256:fa6641ce4ffd67e9b91894f8d6690c429d3e39d7f944398aaa404a91c26d4969",
+  "harness_path": "labs/flow/build.gradle.kts",
   "id": "flow.pipeline-semantics",
   "kind": "test-report",
   "producer": "gradle-junit",

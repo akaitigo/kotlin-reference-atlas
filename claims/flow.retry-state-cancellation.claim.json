@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "flow.pipeline-semantics",
+  "id": "flow.retry-state-cancellation",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "順序、retry、StateFlow、cancellation、cleanupのJUnit Oracleがpassすること"
+      ],
+      "id": "flow.pipeline-tests",
+      "statement": "順序、retry、StateFlow、cancellation、cleanupのJUnit Oracleがpassすること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlinx-coroutines-core-jvm-1.11.0"
+  ],
+  "statement": "cold Flowの順序、retryによる再収集、StateFlow最新値、collector cancellationのcleanupを再現できる。",
+  "status": "accepted"
+}

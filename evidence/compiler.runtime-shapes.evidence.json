@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:373eacd9386ed6f612c491e89ab56bcd7f53b5da16c5162dd67c0e44e675a834",
+  "harness_digest": "sha256:fa6641ce4ffd67e9b91894f8d6690c429d3e39d7f944398aaa404a91c26d4969",
+  "harness_path": "labs/compiler-runtime/build.gradle.kts",
   "id": "compiler.runtime-shapes",
   "kind": "test-report",
   "producer": "gradle-junit",

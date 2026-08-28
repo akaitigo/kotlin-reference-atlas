@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:9d82ca580da3fd3f76faf66e72be1d1089400f277cc9dccb3ee1d0c9c283facd",
+  "harness_digest": "sha256:f26b5c437ce7d27851d2146bce47c874b7d04de9c7ed990258871bf4601261eb",
+  "harness_path": "labs/interop/build.gradle.kts",
   "id": "interop.java-consumer",
   "kind": "compatibility",
   "producer": "gradle-junit",

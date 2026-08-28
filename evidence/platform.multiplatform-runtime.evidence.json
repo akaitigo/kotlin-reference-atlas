@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:ebcc192c117d580d9d1e2218660621ddc9199f85f20425e6b290fb227275fc04",
+  "harness_digest": "sha256:08af5e1d8a7cf85040f5c99bbb66420cc3ae74c6497f273873bc4f085c52940f",
+  "harness_path": "labs/multiplatform/build.gradle.kts",
   "id": "platform.multiplatform-runtime",
   "kind": "compatibility",
   "producer": "kotlin-multiplatform",

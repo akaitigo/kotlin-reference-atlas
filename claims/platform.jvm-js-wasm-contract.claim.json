@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "platform.multiplatform-runtime",
+  "id": "platform.jvm-js-wasm-contract",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "jvmTest、jsNodeTest、wasmJsNodeTestが同じcommonTestをpassすること"
+      ],
+      "id": "platform.jvm-js-wasm-tests",
+      "statement": "jvmTest、jsNodeTest、wasmJsNodeTestが同じcommonTestをpassすること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "同じcommonTestがJVM、Node.js上のJS、Node.js上のWasmで実行され、各actual実装へLinkする。",
+  "status": "accepted"
+}

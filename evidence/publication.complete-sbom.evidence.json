@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:b31ae4ec4803cb69cd1ec4ce19ae42b457e6d5d71bf1aa7afde578ad31f4387c",
+    "digest": "sha256:959e0aae4dc70627c3eab06a435bc96a5993329503b4dfb8b371e9c82c1ec7c9",
     "media_type": "application/json",
-    "size_bytes": 650,
+    "size_bytes": 652,
     "uri": "evidence/artifacts/rights-validation.json"
   },
   "atlas_id": "kotlin-reference-atlas",
@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:f854ebaf8b4191f5ca92cf7715eb4bf728efc8ee54f0339c10e1f4a6998bd099",
+  "harness_digest": "sha256:2f7766daa73cfa5557a181e33cf5f9b5fc89260ecd37bd1b79e94267a3cf83cd",
+  "harness_path": "kotlin-js-store/package-lock.json",
   "id": "publication.complete-sbom",
   "kind": "capture",
   "producer": "spdx-lock-generator",

@@ -1,11 +1,8 @@
 {
   "atlas_id": "kotlin-reference-atlas",
   "completion_gaps": [
-    "platform.native-runtime: Full Xcode unavailable",
-    "reference-system.automation-workbench (recommended)",
-    "evidence/completion-certificate.json",
-    "local release tag",
-    "github-hosted CI execution"
+    "Core Control Plane v1のthird-party kindにMaven/npmがなく、auditが全Atlasへgo.modを要求する",
+    "Core互換修正後のCompletion Certificateとlocal release tag"
   ],
   "epoch": "2026-08-28",
   "implementation_gates": {
@@ -17,6 +14,12 @@
     "rights_metadata": "pass",
     "skill": "pass"
   },
+  "recommended_open": [
+    "reference-system.automation-workbench"
+  ],
+  "recorded_infeasible": [
+    "platform.native-runtime: Full Xcode unavailable"
+  ],
   "repository_status": "incomplete",
   "verdict": "pass"
 }

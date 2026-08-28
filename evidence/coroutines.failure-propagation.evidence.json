@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:02c8cbc8616c549397ebeae863eb3a9d96723f29d26ffdcf5df4f47864f109ce",
+  "harness_digest": "sha256:d925a9ef420775baaa112e2be32e395e456add65a18c7e6cf43e65e7f38ab691",
+  "harness_path": "labs/coroutines/build.gradle.kts",
   "id": "coroutines.failure-propagation",
   "kind": "test-report",
   "producer": "gradle-junit",

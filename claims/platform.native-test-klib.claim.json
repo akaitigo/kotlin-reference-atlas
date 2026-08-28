@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "platform.native-compile",
+  "id": "platform.native-test-klib",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "compileTestKotlinMacosArm64がtest KLIBを生成すること"
+      ],
+      "id": "platform.native-klib-compile",
+      "statement": "compileTestKotlinMacosArm64がtest KLIBを生成すること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "macOS arm64 Native向けcommonTestとactual実装がtest KLIBまでcompileする。",
+  "status": "accepted"
+}

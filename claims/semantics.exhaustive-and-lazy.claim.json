@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "semantics.language-core",
+  "id": "semantics.exhaustive-and-lazy",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "sealed分岐、smart cast、delegate、Sequenceの全JUnit Oracleがpassすること"
+      ],
+      "id": "semantics.language-oracles",
+      "statement": "sealed分岐、smart cast、delegate、Sequenceの全JUnit Oracleがpassすること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "sealed型のexhaustive分岐、smart cast、delegate初期化、Sequence変換を実行可能なOracleで確認できる。",
+  "status": "accepted"
+}

@@ -1,0 +1,21 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "gradle.plugin-consumer",
+  "id": "gradle.plugin-registers-probe-task",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "GradleRunnerの独立fixtureでatlasProbe taskが成功すること"
+      ],
+      "id": "gradle.testkit-consumer",
+      "statement": "GradleRunnerの独立fixtureでatlasProbe taskが成功すること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "gradle-9.5.0",
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "Plugin ID dev.akaitigo.kotlin-atlas-probeを適用したconsumer buildはatlasProbe taskを実行できる。",
+  "status": "accepted"
+}

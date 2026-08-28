@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:7e018b046a2ec5bb515149d5bf43c530f93459b5525192d1b929100b94d4ac46",
+  "harness_digest": "sha256:89ba61d349973b22ed8bf6b6dbe19883f3c9897a60ac86454f8e3c47222ac962",
+  "harness_path": "labs/gradle-plugin/build.gradle.kts",
   "id": "gradle.plugin-consumer",
   "kind": "test-report",
   "producer": "gradle-testkit",

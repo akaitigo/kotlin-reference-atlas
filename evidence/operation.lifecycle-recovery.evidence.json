@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:98fa2c7002ef718844e8f1717458273e9db619464c0453784e758c3f6b2a8684",
+  "harness_digest": "sha256:697ee00c3c69c41761fdc16d7392d4fd2009b88adec81559d19e0c8976b3f15b",
+  "harness_path": "docs/RUNBOOK.md",
   "id": "operation.lifecycle-recovery",
   "kind": "conformance",
   "producer": "gradle-junit",

@@ -1,9 +1,9 @@
 {
   "artifact": {
-    "digest": "sha256:3355bd6b44968f15ddf555fd3d95f48e70187b7e6b39e5bc4ac774247b9a9a48",
+    "digest": "sha256:83c6db28f83f4c44743c989ea622b9d811bcf2042edc3fa96951fb8bbb66baaf",
     "media_type": "application/json",
-    "size_bytes": 9460,
-    "uri": "evidence/artifacts/skill-eval.json"
+    "size_bytes": 3887,
+    "uri": "evals/kotlin-reference-router.skill-eval.json"
   },
   "atlas_id": "kotlin-reference-atlas",
   "claim_ids": [
@@ -15,7 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:f93be166396bdddfcf687c90bb2b53dd2ba0928df81766678b1bec8015b7a43b",
+  "harness_digest": "sha256:10dedf2c4b66cc6570e0ceb47f1714c265bbd5cd96dd911e8abed05dfd5034b7",
+  "harness_path": ".agents/skills/kotlin-reference-router/SKILL.md",
   "id": "skill.router-evaluation",
   "kind": "skill-eval",
   "producer": "kotlin-router-eval",

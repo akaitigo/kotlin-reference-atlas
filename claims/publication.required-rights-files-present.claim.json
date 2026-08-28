@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "authority.lock",
+  "id": "publication.required-rights-files-present",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "必須Rights fileと依存Componentが欠落していないこと"
+      ],
+      "id": "publication.metadata-gate",
+      "statement": "必須Rights fileと依存Componentが欠落していないこと"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "reference-atlas-core-v1"
+  ],
+  "statement": "Apache-2.0 License、NOTICE、第三者Manifest、SPDX SBOMが存在し相互に整合する。",
+  "status": "accepted"
+}

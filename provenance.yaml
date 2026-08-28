@@ -1,0 +1,107 @@
+{
+  "artifacts": [
+    {
+      "digest": "sha256:085426b301ae5609b3e2bec70e7353a7bacea69a1ed41d2c60aff95ebdb1f2af",
+      "generated_by": "python3 scripts/inventory.py",
+      "kind": "generated",
+      "license": "Apache-2.0",
+      "path": "atlas/inventory/kotlin-public-surface.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
+      "digest": "sha256:83c6db28f83f4c44743c989ea622b9d811bcf2042edc3fa96951fb8bbb66baaf",
+      "generated_by": "python3 scripts/verify.py",
+      "kind": "skill-eval",
+      "license": "Apache-2.0",
+      "path": "evals/kotlin-reference-router.skill-eval.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
+      "digest": "sha256:3ccc910e53ecc505a50f522eb7baf59809a6d2b4f54fd1d45b6e73e06ae5cb9a",
+      "generated_by": "python3 scripts/inspect_bytecode.py",
+      "kind": "generated",
+      "license": "Apache-2.0",
+      "path": "evidence/artifacts/bytecode-inspection.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
+      "digest": "sha256:2868cd4d3192c33d6fae20a20d11f28f1ead35a0509b0639f9e0b273bbcc465f",
+      "generated_by": "scripts/container-verify.sh",
+      "kind": "generated",
+      "license": "Apache-2.0",
+      "path": "evidence/artifacts/container-verification.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
+      "digest": "sha256:ffceb25094976bc1be77c809fd6ada42cc47597662b349fcff8be822ad682a92",
+      "generated_by": "./gradlew :labs:engineering:test",
+      "kind": "test-report",
+      "license": "Apache-2.0",
+      "path": "evidence/artifacts/lab-results.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
+      "digest": "sha256:8c9048627455f3a84baba8e74d53c4618b09471c2c9dd42e42400bb1801af6ce",
+      "generated_by": "atlas validate atlas.yaml mastery.yaml coverage.yaml sources.lock.yaml skill.package.yaml && atlas audit .",
+      "kind": "generated",
+      "license": "Apache-2.0",
+      "path": "evidence/artifacts/manifest-validation.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
+      "digest": "sha256:c0d313ec5fc5093b05d04d9a4d72927a14eb0157b7af667c0e8af313090e6a83",
+      "generated_by": "./gradlew :labs:multiplatform:compileTestKotlinMacosArm64",
+      "kind": "generated",
+      "license": "Apache-2.0",
+      "path": "evidence/artifacts/platform-validation.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
+      "digest": "sha256:959e0aae4dc70627c3eab06a435bc96a5993329503b4dfb8b371e9c82c1ec7c9",
+      "generated_by": "python3 scripts/generate_sbom.py",
+      "kind": "generated",
+      "license": "Apache-2.0",
+      "path": "evidence/artifacts/rights-validation.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
+      "digest": "sha256:16d191718c420a257e9600cbc8c29e121b59c5f8929143aa6838a50e58ce2433",
+      "generated_by": "python3 scripts/verify.py",
+      "kind": "generated",
+      "license": "Apache-2.0",
+      "path": "evidence/artifacts/verification-summary.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
+      "digest": "sha256:6b921f366b196a6b75cace2320565c6a7d88b2e93b86325cb9481dbef9ca5dcd",
+      "generated_by": "python3 scripts/generate_sbom.py",
+      "kind": "sbom",
+      "license": "CC0-1.0",
+      "path": "sbom.spdx.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    }
+  ],
+  "atlas_id": "kotlin-reference-atlas",
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "schema_version": 1
+}

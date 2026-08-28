@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "compiler.jvm-bytecode",
+  "id": "compiler.bytecode-state-machine",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "固定Classへのjavap結果が必須MemberとContinuation descriptorを含むこと"
+      ],
+      "id": "compiler.javap-inspection",
+      "statement": "固定Classへのjavap結果が必須MemberとContinuation descriptorを含むこと"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "javap出力にdata class生成Member、captured field、suspend Continuation signatureが存在する。",
+  "status": "accepted"
+}

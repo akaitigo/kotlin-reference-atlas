@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "evolution.schema-migration",
+  "id": "migration.v1-v2-compatible",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "v1/v2の期待値と未知Version拒否をassertするTestがpassすること"
+      ],
+      "id": "migration.compatibility-test",
+      "statement": "v1/v2の期待値と未知Version拒否をassertするTestがpassすること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-compiler-2.4.10"
+  ],
+  "statement": "Version 1と2を現行Modelへ移行し、未知Versionをsilent fallbackせず拒否する。",
+  "status": "accepted"
+}

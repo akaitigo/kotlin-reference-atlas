@@ -1,0 +1,21 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "publication.complete-sbom",
+  "id": "publication.transitive-sbom-from-locks",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "Gradle/npm lockの全一意ComponentがSPDX Packageに存在すること"
+      ],
+      "id": "publication.sbom-lock-closure",
+      "statement": "Gradle/npm lockの全一意ComponentがSPDX Packageに存在すること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "reference-atlas-core-v1",
+    "gradle-9.5.0"
+  ],
+  "statement": "全Gradle lockとnpm package-lockのComponentがRoot SPDX SBOMへ決定論的に反映される。",
+  "status": "accepted"
+}
