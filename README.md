@@ -16,7 +16,7 @@ python3 scripts/verify.py
 
 ## 状態
 
-固定EpochのRequired Coverageは`covered`または再評価日付き`infeasible`で閉じ、Local/Container profileも通過しています。Core Control Plane v1のMaven/npm Supply-chain契約へ移行済みで、Completion Certificateを最終固定するまで`status: incomplete`を維持します。Native executable実行はFull Xcode不在のため`infeasible`で、Native test KLIB compileを代替Evidenceとします。
+固定EpochのRequired Coverageは`covered`または再評価日付き`infeasible`で閉じ、Local/Container profile、Claim/Evidence Graph、Skill Eval、Maven/npm Supply-chain、Provenance、Completion Certificateの全Gateを通過したため`status: complete`です。Native executable実行はFull Xcode不在のため`infeasible`で、Native test KLIB compileを代替Evidenceとします。
 
 ## 正本
 

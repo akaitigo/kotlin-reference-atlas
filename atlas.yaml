@@ -10,7 +10,7 @@
   },
   "archetypes": ["product", "language-platform"],
   "stage": 1,
-  "status": "incomplete",
+  "status": "complete",
   "language": { "primary": "ja", "identifiers": "en" },
   "coverage": { "epoch": "2026-08-28", "manifest": "coverage.yaml" },
   "authority": { "lockfile": "sources.lock.yaml", "policy": "primary-first" },

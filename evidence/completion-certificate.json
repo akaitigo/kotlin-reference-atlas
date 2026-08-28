@@ -1,0 +1,61 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "atlas_release": "v0.2.0",
+  "authority_lock_digest": "sha256:fd978b99941851cad91ebff64e37463dda21984a9cd14b2520cc0c68e2ab2f10",
+  "commit": "3728b02c3a014a9ba4cc932d8890efa6fb4d1c82",
+  "core_policy_version": "1.0.0",
+  "coverage_epoch": "2026-08-28",
+  "evidence_set_digest": "sha256:9de4a9f42bc0cc864a61876360e67d06995d90d6d3e2420814b0f3c8aca59146",
+  "graph_digest": "sha256:6fd07713bfd95a85a18cfefaa063f7d0a2832dd1717c845ddbc1fd1ddf1f436d",
+  "issued_at": "2026-08-28T00:00:00+09:00",
+  "provenance_digest": "sha256:61c30f4ad27040bd8747680e68c09fb0548ba6b205f42f4e3789fd44232d892a",
+  "required_profiles": [
+    {
+      "evidence_ids": [
+        "authority.source-lock-validation",
+        "build.toolchain-lock",
+        "compiler.bytecode-inspection",
+        "compiler.runtime-shapes",
+        "coroutines.failure-propagation",
+        "evolution.compatibility-migration",
+        "failure.debugging",
+        "flow.pipeline-semantics",
+        "gradle.plugin-consumer",
+        "interop.java-consumer",
+        "inventory.public-surface",
+        "jvm.value-class-boundary",
+        "operation.lifecycle-recovery",
+        "operation.local-verification",
+        "performance.measurement",
+        "platform.multiplatform-runtime",
+        "platform.native-compile",
+        "publication.complete-sbom",
+        "publication.rights-metadata",
+        "quality.testing-oracles",
+        "security.boundaries",
+        "semantics.language-types",
+        "skill.router-evaluation"
+      ],
+      "profile": "local",
+      "result": "pass"
+    },
+    {
+      "evidence_ids": [
+        "operation.container-verification"
+      ],
+      "profile": "container",
+      "result": "pass"
+    }
+  ],
+  "sbom_digest": "sha256:6b921f366b196a6b75cace2320565c6a7d88b2e93b86325cb9481dbef9ca5dcd",
+  "schema_version": 1,
+  "signature": {
+    "digest": "sha256:afe29217ea9b5bc225022b73606d0ba672c5ae80c900a1d33335c70d8264d72a",
+    "type": "payload-sha256"
+  },
+  "skill_eval": {
+    "digest": "sha256:83c6db28f83f4c44743c989ea622b9d811bcf2042edc3fa96951fb8bbb66baaf",
+    "pass_rate": 1
+  },
+  "skill_package_digest": "sha256:61ac5acc1d02b64d3ff04880813fed3194b61e8c944ab7ff806c34a8f30dc21b"
+}

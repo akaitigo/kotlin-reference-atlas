@@ -1,9 +1,6 @@
 {
   "atlas_id": "kotlin-reference-atlas",
-  "completion_gaps": [
-    "Core Control Plane v1のthird-party kindにMaven/npmがなく、auditが全Atlasへgo.modを要求する",
-    "Core互換修正後のCompletion Certificateとlocal release tag"
-  ],
+  "completion_gaps": [],
   "epoch": "2026-08-28",
   "implementation_gates": {
     "container": "pass",
@@ -20,6 +17,6 @@
   "recorded_infeasible": [
     "platform.native-runtime: Full Xcode unavailable"
   ],
-  "repository_status": "incomplete",
+  "repository_status": "complete",
   "verdict": "pass"
 }

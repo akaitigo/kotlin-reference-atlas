@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:16d191718c420a257e9600cbc8c29e121b59c5f8929143aa6838a50e58ce2433",
+    "digest": "sha256:178d38f6764878f0e1c3c80c90704b60c3dc2680a97b2475e978bdf8c6dc21c6",
     "media_type": "application/json",
-    "size_bytes": 708,
+    "size_bytes": 520,
     "uri": "evidence/artifacts/verification-summary.json"
   },
   "atlas_id": "kotlin-reference-atlas",

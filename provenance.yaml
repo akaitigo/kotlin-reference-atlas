@@ -31,7 +31,7 @@
       ]
     },
     {
-      "digest": "sha256:2868cd4d3192c33d6fae20a20d11f28f1ead35a0509b0639f9e0b273bbcc465f",
+      "digest": "sha256:72051e72e5373cc355e1f5c2feaa7d4de22f952231227869d7a71478dd1f993c",
       "generated_by": "scripts/container-verify.sh",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "digest": "sha256:16d191718c420a257e9600cbc8c29e121b59c5f8929143aa6838a50e58ce2433",
+      "digest": "sha256:178d38f6764878f0e1c3c80c90704b60c3dc2680a97b2475e978bdf8c6dc21c6",
       "generated_by": "python3 scripts/verify.py",
       "kind": "generated",
       "license": "Apache-2.0",

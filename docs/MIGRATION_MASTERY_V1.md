@@ -14,4 +14,4 @@
 
 ## 移行時点の完了状態
 
-Mastery移行直後に不足していたContainer Evidence、公開Surface Inventory、transitive SBOMはv0.2.0候補で実装した。Native runtimeは再評価日付き`infeasible`として閉じた。Core Control Plane v1のMaven/npm Supply-chain契約へ移行し、Completion Certificateを最終固定するまで`status: incomplete`を維持する。
+Mastery移行直後に不足していたContainer Evidence、公開Surface Inventory、transitive SBOMはv0.2.0で実装した。Native runtimeは再評価日付き`infeasible`として閉じた。Core Control Plane v1のMaven/npm Supply-chain契約へ移行し、Completion Certificateを固定・検証したため`status: complete`とする。

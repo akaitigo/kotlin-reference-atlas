@@ -1,8 +1,8 @@
 {
   "repository": "reference-atlas-core",
   "version": "architecture-v1",
-  "commit": "eabefbb706c36140ae3f6509c9ca1bfae3c815ec",
-  "archive_sha256": "d193d41748897d6797021c4be2fdb6b8cc05677e6ad51ad5a51845d38d60f275",
+  "commit": "b32f6afe888e2e07eef0e2e016f6f7d139582159",
+  "archive_sha256": "15360911a1a7b6d6f4772bbaec4280f2990c68645f49ec261db7f0b4836858c5",
   "release_state": "commit-pinned",
   "note_ja": "Control Plane v1とMaven/npm Supply-chain監査を含むCore完成commitを固定する。"
 }

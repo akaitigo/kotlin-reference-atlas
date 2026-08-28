@@ -1,0 +1,14 @@
+{
+  "commit": "3728b02c3a014a9ba4cc932d8890efa6fb4d1c82",
+  "evidence_set_digest": "sha256:9de4a9f42bc0cc864a61876360e67d06995d90d6d3e2420814b0f3c8aca59146",
+  "graph_digest": "sha256:6fd07713bfd95a85a18cfefaa063f7d0a2832dd1717c845ddbc1fd1ddf1f436d",
+  "profiles": [
+    "local",
+    "container"
+  ],
+  "provenance_digest": "sha256:61c30f4ad27040bd8747680e68c09fb0548ba6b205f42f4e3789fd44232d892a",
+  "sbom_digest": "sha256:6b921f366b196a6b75cace2320565c6a7d88b2e93b86325cb9481dbef9ca5dcd",
+  "signature_digest": "sha256:afe29217ea9b5bc225022b73606d0ba672c5ae80c900a1d33335c70d8264d72a",
+  "skill_package_digest": "sha256:61ac5acc1d02b64d3ff04880813fed3194b61e8c944ab7ff806c34a8f30dc21b",
+  "verdict": "pass"
+}
