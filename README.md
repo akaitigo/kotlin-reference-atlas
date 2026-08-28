@@ -16,7 +16,7 @@ python3 scripts/verify.py
 
 ## 状態
 
-固定EpochのRequired Coverageは`covered`または再評価日付き`infeasible`で閉じ、Local/Container profile、Claim/Evidence Graph、Skill Eval、Maven/npm Supply-chain、Provenance、Completion Certificateの全Gateを通過したため`status: complete`です。Native executable実行はFull Xcode不在のため`infeasible`で、Native test KLIB compileを代替Evidenceとします。
+固定EpochのRequired Coverageは`covered`または再評価日付き`infeasible`で閉じ、Local/Container profile、Claim/Evidence Graph、Skill Eval、Maven/npm Supply-chain、Provenance、Completion Certificateの全Gateを通過したため`status: complete`です。Local profileのNative executable実行はFull Xcode不在のため`infeasible`でNative test KLIB compileを代替Evidenceとし、Full Xcodeを持つmacOS CIでは`macosArm64Test`を追加実行します。
 
 ## 正本
 

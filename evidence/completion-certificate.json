@@ -5,10 +5,10 @@
   "commit": "3728b02c3a014a9ba4cc932d8890efa6fb4d1c82",
   "core_policy_version": "1.0.0",
   "coverage_epoch": "2026-08-28",
-  "evidence_set_digest": "sha256:61114d93330287f8f1eb03934c249f9c1c749b5fd0a334a69ca694c1eff93e7b",
-  "graph_digest": "sha256:dd2fe4dceda7c485592707bd7b9e4a31f982a810ba495950e18763b5de3217b7",
+  "evidence_set_digest": "sha256:63b99bccdd37b26aeb9cb2afb9475fb02f2abef5dc3c46c358490b3101178ef2",
+  "graph_digest": "sha256:2a3c539fdf97ecd2024579e2787992e077b73530ba14f21cb553dbaf474fabf2",
   "issued_at": "2026-08-28T00:00:00+09:00",
-  "provenance_digest": "sha256:f5eac5406597f884435c4c590f845c91f4d5cc3189174694e7d43652c37f4bc0",
+  "provenance_digest": "sha256:71d8d712347c66144451d62a50d1db831a7df5f72aba463a8217d37398006ea6",
   "required_profiles": [
     {
       "evidence_ids": [
@@ -50,7 +50,7 @@
   "sbom_digest": "sha256:6b921f366b196a6b75cace2320565c6a7d88b2e93b86325cb9481dbef9ca5dcd",
   "schema_version": 1,
   "signature": {
-    "digest": "sha256:48faf3835119b8b0ce4a4e34042d8026af590a945ab7a3c958220bbfd880e4a0",
+    "digest": "sha256:12890ccd51c45272a3592ac65b2cb55c7f702c1956c4c2bf9cbc943cdf06836f",
     "type": "payload-sha256"
   },
   "skill_eval": {

@@ -93,6 +93,17 @@ def run(command: list[str], *, capture: bool = False) -> subprocess.CompletedPro
     return result
 
 
+def detect_full_xcode() -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        ["/usr/bin/xcrun", "xcodebuild", "-version"],
+        cwd=ROOT,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        check=False,
+    )
+
+
 def validate_manifests() -> dict:
     run([str(ROOT / "bin" / "atlas"), "validate", *MANIFESTS])
     atlas = load_json(ROOT / "atlas.yaml")
@@ -130,7 +141,11 @@ def validate_manifests() -> dict:
 
 
 def collect_test_results() -> dict:
-    run([str(ROOT / "gradlew"), "clean", "atlasCheck", "--configuration-cache", "--no-daemon"])
+    command = [str(ROOT / "gradlew"), "clean", "atlasCheck"]
+    if detect_full_xcode().returncode == 0:
+        command.append(":labs:multiplatform:macosArm64Test")
+    command.extend(["--configuration-cache", "--no-daemon"])
+    run(command)
     suites = []
     for report in sorted((ROOT / "labs").rglob("TEST-*.xml")):
         xml_root = ET.parse(report).getroot()
@@ -146,7 +161,7 @@ def collect_test_results() -> dict:
         suites.append({"module": relative.parts[0], "task": report.parent.name, "suite": xml_root.attrib.get("name", ""), "cases": sorted(cases, key=lambda item: (item["class"], item["name"]))})
     if not suites or any(case["status"] != "pass" for suite in suites for case in suite["cases"]):
         raise RuntimeError("全LabのJUnit resultをpassとして収集できない")
-    result = {"command": "./gradlew clean atlasCheck --configuration-cache --no-daemon", "suites": suites, "test_case_count": sum(len(suite["cases"]) for suite in suites), "verdict": "pass"}
+    result = {"command": " ".join(command).replace(str(ROOT / "gradlew"), "./gradlew"), "suites": suites, "test_case_count": sum(len(suite["cases"]) for suite in suites), "verdict": "pass"}
     write_json(ARTIFACTS / "lab-results.json", result)
     return result
 
@@ -164,16 +179,10 @@ def generate_deep_artifacts() -> dict:
         errors.append("Wasm test executableが生成されていない")
     if errors:
         raise RuntimeError("; ".join(errors))
-    xcode = subprocess.run(
-        ["/usr/bin/xcrun", "xcodebuild", "-version"],
-        cwd=ROOT,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        check=False,
-    )
-    if xcode.returncode == 0:
-        raise RuntimeError("Full Xcodeを検出したためplatform.native-runtimeのinfeasible判定を再評価してください")
+    xcode = detect_full_xcode()
+    native_runtime_report = next((ROOT / "labs" / "multiplatform").rglob("macosArm64Test/TEST-*.xml"), None)
+    if xcode.returncode == 0 and native_runtime_report is None:
+        raise RuntimeError("Full Xcode環境でmacosArm64Test resultを収集できない")
     result = {
         "jvm_runtime": "pass",
         "js_node_runtime": "pass",
@@ -182,10 +191,10 @@ def generate_deep_artifacts() -> dict:
         "native_macos_arm64_compile": "pass",
         "native_test_klib_digest": digest_tree([native_klib]),
         "native_runtime": {
-            "verdict": "infeasible" if xcode.returncode != 0 else "not-run",
+            "verdict": "pass" if xcode.returncode == 0 else "infeasible",
             "xcodebuild_exit_code": xcode.returncode,
             "xcodebuild_output": xcode.stdout.strip(),
-            "reason": "Full XcodeのxcodebuildがHostに存在しないためlinkDebugTestMacosArm64を実行できない" if xcode.returncode != 0 else "Full Xcodeを検出したためNative runtime Targetを再評価する必要がある",
+            "reason": "Full XcodeのxcodebuildがHostに存在しないためlinkDebugTestMacosArm64を実行できない" if xcode.returncode != 0 else "Full Xcode環境でmacosArm64Testを実行した",
         },
         "verdict": "pass",
     }
@@ -562,7 +571,7 @@ def main(*, skip_container: bool = False) -> None:
             "Core Control Plane v1のthird-party kindにMaven/npmがなく、auditが全Atlasへgo.modを要求する",
             "Core互換修正後のCompletion Certificateとlocal release tag",
         ],
-        "recorded_infeasible": ["platform.native-runtime: Full Xcode unavailable"],
+        "recorded_infeasible": ["platform.native-runtime: Full Xcode unavailable"] if deep_result["native_runtime"]["verdict"] == "infeasible" else [],
         "recommended_open": ["reference-system.automation-workbench"],
         "repository_status": load_json(ROOT / "atlas.yaml")["status"],
         "verdict": "pass",
