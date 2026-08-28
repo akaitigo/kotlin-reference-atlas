@@ -1,0 +1,1265 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "baseline_commit": "c0e9b1c60768f606221f6a3ef0556052a8b5d0e9",
+  "captured_at": "2026-08-28T00:00:00+09:00",
+  "collections": {
+    "ci_jobs": [
+      {
+        "enabled": true,
+        "fingerprint": "sha256:6dd37295c16de335a68aec242a4a674a9bdd49af20f3b74678380bc7ede53032",
+        "id": ".github/workflows/ci.yml:container",
+        "kind": "ci-job",
+        "path": ".github/workflows/ci.yml",
+        "platform": "ubuntu-latest"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:dbfacf75374a6ebdfba075d1fe9e866b710b617c82a538b4160c3067b789d0e4",
+        "id": ".github/workflows/ci.yml:validate",
+        "kind": "ci-job",
+        "path": ".github/workflows/ci.yml",
+        "platform": "macos-14"
+      }
+    ],
+    "claims": [
+      {
+        "fingerprint": "sha256:e8036ea5c187f8a99a6ca35dcdf4f18dffe6b4f09125598e9be94b32a727ace5",
+        "id": "authority.locator-inventory-is-copyright-safe-and-incomplete"
+      },
+      {
+        "fingerprint": "sha256:e4d3feff6846ec1d966938c5d33f00ecde2ab417bb2ab7f76872d3ec62e14f69",
+        "id": "authority.source-lock-matches"
+      },
+      {
+        "fingerprint": "sha256:f6f5c1e860773a0cf21df7c918ee42eac7b7b400c1d5f11c03bfdcd31626d1ce",
+        "id": "compiler.bytecode-state-machine"
+      },
+      {
+        "fingerprint": "sha256:fcb0f471da503698cebdcfb53fb5df9c764350c7b68dd1d746c01b589355b959",
+        "id": "compiler.runtime-shapes-observable"
+      },
+      {
+        "fingerprint": "sha256:f8de1238cf61ab570740dbf1cb1a7285dab86c1c06d3d4067cf2a794b96bd693",
+        "id": "coroutines.child-failure-cancels-sibling"
+      },
+      {
+        "fingerprint": "sha256:353a2cb5318b108d2fa320f2842857474d04b34342c806960016d8362388a51c",
+        "id": "failure.diagnostic-preserves-cause"
+      },
+      {
+        "fingerprint": "sha256:1d880479ad42d89287b3adc25cec8a978fca0afe8386b117f7138e381d508ec4",
+        "id": "flow.retry-state-cancellation"
+      },
+      {
+        "fingerprint": "sha256:178bca8050b03a11adb58014087dc6ac70c71b02dae87eeacd83f254b0de706a",
+        "id": "gradle.plugin-registers-probe-task"
+      },
+      {
+        "fingerprint": "sha256:f4cd09577ccaa38175637e098569a4555735c18e078518a490229eaeb71c6fd5",
+        "id": "gradle.toolchain-and-artifacts-locked"
+      },
+      {
+        "fingerprint": "sha256:8064045912f8d9017f15e91f77b76760ef1105f2b19a9e02dd28140226a66f43",
+        "id": "interop.java-overloads-and-throws"
+      },
+      {
+        "fingerprint": "sha256:8e51b715e787563d78666994e93c5fe5876c9261811dd7f3e2b52cac141beba4",
+        "id": "inventory.locked-surface-enumerated"
+      },
+      {
+        "fingerprint": "sha256:3baea60d7afc0de6fe57900aa38801423486b37ad6fbfa758169d5a4e9050267",
+        "id": "jvm.value-class-generic-boxing"
+      },
+      {
+        "fingerprint": "sha256:90fde6d792eff6a57365b84eb64ae6a999f6be40817411b732f8a61bbded41d5",
+        "id": "migration.v1-v2-compatible"
+      },
+      {
+        "fingerprint": "sha256:2914f94ee202332d2dcf36e4bb30d03b6c60c7418b8743be0a2044f40333ff46",
+        "id": "operation.container-suite-reproducible"
+      },
+      {
+        "fingerprint": "sha256:9e8e13b6bd2fe7b838cbe011db7662462744501e9af0ba10bea96f9116943901",
+        "id": "operation.lifecycle-recovers"
+      },
+      {
+        "fingerprint": "sha256:e759c5eafabd3eff7fdd5ee71483dd2c1dc0471fe66d30cff6e2e2652a2df25a",
+        "id": "operation.local-suite-reproducible"
+      },
+      {
+        "fingerprint": "sha256:85d88dee92810d8e2ac1a389f09a4f31209ac1193bd5260028941569b9717009",
+        "id": "performance.harness-reports-median"
+      },
+      {
+        "fingerprint": "sha256:3fff74d0696ccb06c73a263c973e18e55217c95d66c1faf965989b04d6522fac",
+        "id": "platform.jvm-js-wasm-contract"
+      },
+      {
+        "fingerprint": "sha256:71ec99447e912152fcd24b634f4ca182d439cb8ca8ddcd540bdfd0cfcb6ba367",
+        "id": "platform.native-test-klib"
+      },
+      {
+        "fingerprint": "sha256:1677e84cb1d30e91d1ffd378f5ceab4c45103f9dd78608091edf4fa4d97f9266",
+        "id": "publication.required-rights-files-present"
+      },
+      {
+        "fingerprint": "sha256:0e5f012a00fdb12beb671355c89fd86eb88ddc7cb12fefd53421feb435a49c72",
+        "id": "publication.transitive-sbom-from-locks"
+      },
+      {
+        "fingerprint": "sha256:17d58b1837cbdc70205a907470a337846ca4b7af3b204fe21ab8051ae8b91f06",
+        "id": "quality.kotlin-depth-parity-gaps-block-definitive"
+      },
+      {
+        "fingerprint": "sha256:3cf4854347247309eafdd1dc1f6c752888df8035d6bae9a88ade8e42acc3eaa7",
+        "id": "quality.public-main-never-regresses"
+      },
+      {
+        "fingerprint": "sha256:37b927f05a30d41c30cf6bed58d9dff70e78e785db89fb0645abbdecc039751d",
+        "id": "security.boundaries-reject-unsafe-input"
+      },
+      {
+        "fingerprint": "sha256:6daad9b5bda90853693cd57bafc10afdc4b55cce196d5fea57aa227e53bb7494",
+        "id": "semantics.exhaustive-and-lazy"
+      },
+      {
+        "fingerprint": "sha256:dc29f07df24a8a94604fe1cbef62ac88331fa2058df3b51e5d15af641ec6b83b",
+        "id": "skill.router-respects-coverage"
+      },
+      {
+        "fingerprint": "sha256:27a5cb761ae02c92aeb7cd343856d52b55a950318c66b82009ead03dbc045200",
+        "id": "testing.cross-surface-oracles"
+      },
+      {
+        "fingerprint": "sha256:204fcd06d67b08f7e93421e77a7ce899abb06a24a02733dc47294d5f9275f026",
+        "id": "types.variance-nothing-reified"
+      },
+      {
+        "fingerprint": "sha256:0dd3bae7baa949e48fb70139584a6feff134b68068a18ba12f2172eb92aabd47",
+        "id": "workbench.jvm-integrated-scenarios"
+      }
+    ],
+    "depth_parity_rows": [],
+    "evidence": [
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:8b619f73659027436245b9db4dd4767d109c60130fd5daf3e26d02f9461e94d3",
+        "id": "authority.locator-validation",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "runtime",
+        "fingerprint": "sha256:34451f9b48590c59cdcb5d7590e37d4e4420b3fd2052bbfa12f850f01b144557",
+        "id": "authority.source-lock-validation",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:4c47549a1de492214ac6a99e3ef1aedc118f631fc1e7a885cb6ad110fa25c051",
+        "id": "build.toolchain-lock",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:44523c5eee74af4291e6a4711afc136688181034bc462b1da918bc2ad7deb5ee",
+        "id": "compiler.bytecode-inspection",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:96ec41716c3dc9d205c3d73a0311c7835cb5de8b2e780751d5ec6615a18a0860",
+        "id": "compiler.runtime-shapes",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:6be5e5aee79f84ea9baa56547ba4a088b9b624955ba2039ad5c6c2f2fd3e04d9",
+        "id": "coroutines.failure-propagation",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "runtime",
+        "fingerprint": "sha256:8ad2ada12ca6a6b59bbedf7225ac4850cd24f3212e547e7086980d1f2e0aae06",
+        "id": "evolution.compatibility-migration",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:8d0a5d19242826ea0370c834d43e61983a117ea87aabbf00f5f95d2e9d9a1240",
+        "id": "failure.debugging",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:497a573c9ce2d8d23a96a631d87c741b331146e6fbe1476aa1cb72dcbc6859a8",
+        "id": "flow.pipeline-semantics",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:d1e14ff53f75176b9e6679019c5d406827989fb608228053600fb988bbc1588d",
+        "id": "gradle.plugin-consumer",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:a69ac18bd0582455ba729a1dda169c5efffaa96fc899587aef2a88fcc1682d8a",
+        "id": "interop.java-consumer",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:0e7270147741d2e754081e08859d2c71bf4fd06a0f3abbe95bc624ec779e54ed",
+        "id": "inventory.public-surface",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:4bcc5af42d9a5b5c6fb023358f6c9b02a344eefb74d453026fe202a95de50c9f",
+        "id": "jvm.value-class-boundary",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:7cbcf19579fd6a7419ed21385490d8cee38877f1029e92959c2fbe1bb8f2f0e5",
+        "id": "operation.container-verification",
+        "profile": "container",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:a3c9abc18600762748a5745bd712d7677a1fa6aa5d34c315f9cdd45668fe305e",
+        "id": "operation.lifecycle-recovery",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:ec293c2cf8fd77e707e48e01e9e9ae6e290a042459d4579760008706ba12ee6d",
+        "id": "operation.local-verification",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:93cad3e51d65fa45b214caee2dc212867662df92092f40555c5a0b8bda2f4cbb",
+        "id": "performance.measurement",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:94ef419d5fe8252c0012b61832fd9815742d942a0c210c596cedfbaa3088acdc",
+        "id": "platform.multiplatform-runtime",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:819774ff29c6c3bd7f2f8aca66ea7be93b6217d7c28816f413876e45c23861c0",
+        "id": "platform.native-compile",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:37f805e797824059fe39105096530313333d7fb470844993d220ecf9edc5fea3",
+        "id": "publication.complete-sbom",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:66ad9caaabaa485ddb89858c24592269fc0259c622ad40107a06b5ffc770f6d5",
+        "id": "publication.rights-metadata",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:ecabb01ac02d86b13225e28feeb3adcad6463fe328bd1fda952f110033110179",
+        "id": "quality.kotlin-depth-parity-gate",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:b8946f8b5b682249939577c9bdfeba36b4aef96baad8596902ef07ff776fc85c",
+        "id": "quality.non-regression-baseline",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:76ef036f6d39787e6d1869668a02bb2a20fa92ce1444909403ee288fcf9ce220",
+        "id": "quality.testing-oracles",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:ba58557019a9e72680abd7f818a6acf50a8d5faa3457f6f60460ce0a1b9b242a",
+        "id": "security.boundaries",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:969b6d8660edca2c51af83ead2f94fdbe444f99fe76cc3c7508a1ab38735e699",
+        "id": "semantics.language-types",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "static",
+        "fingerprint": "sha256:1180aea073475b5b82d32b013b0fcac2f16229cf52f9841d9c95d7a80d194905",
+        "id": "skill.router-evaluation",
+        "profile": "local",
+        "verdict": "pass"
+      },
+      {
+        "execution_mode": "runtime",
+        "fingerprint": "sha256:0b7b55c7181551cfbf8ad4541aa58ef9140c124633bcfb23241642194f4ba619",
+        "id": "workbench.jvm-runtime",
+        "profile": "local",
+        "verdict": "pass"
+      }
+    ],
+    "matrix_rows": [
+      {
+        "fingerprint": "sha256:1f9ee91701ca2a71867fd99f243cfc92097fcd799ba4b71cd4b764c07347c436",
+        "id": "coroutines.job-state-cancellation:failure"
+      }
+    ],
+    "proof_obligations": [
+      {
+        "fingerprint": "sha256:29c9b200092072e5ffefe1061de97e69d4764f70b98e9144ca5018a5258261aa",
+        "id": "authority.digest-equality"
+      },
+      {
+        "fingerprint": "sha256:313250a53c769e8a44168639a92baea783aa96ad998d4112d87fb7c29cd0d960",
+        "id": "authority.locator-storage-and-incompleteness"
+      },
+      {
+        "fingerprint": "sha256:ecdf31156ae4ddef54a30df647ef7bf34120e3dcfa7a3610e266495ee4fd4ff9",
+        "id": "compiler.javap-inspection"
+      },
+      {
+        "fingerprint": "sha256:b353dc95700ed8066ae8897dad5de7dce896fc7233aba5d0be15fe10edf81fcf",
+        "id": "compiler.runtime-tests"
+      },
+      {
+        "fingerprint": "sha256:22e5f41512b6c4f48777c60a6bf80fedf02c52399c089c2b2677b2f81cfa92e5",
+        "id": "coroutines.parent-exception"
+      },
+      {
+        "fingerprint": "sha256:d10d7aeb98d84527efb2c9e4e8a8406c35d61ac07dcbb0ba9a8e392d3fed7191",
+        "id": "coroutines.sibling-finally"
+      },
+      {
+        "fingerprint": "sha256:932bce93970ccd5b1c90e892b9efa6c6d8c7f37b283dff41d7aead32d205a2ba",
+        "id": "failure.diagnostic-test"
+      },
+      {
+        "fingerprint": "sha256:932d8efaf44c8de8fe9a8b3ddbd521f0c7d9a628dac9bef823128d411c5060be",
+        "id": "flow.pipeline-tests"
+      },
+      {
+        "fingerprint": "sha256:eeaef8bf0015937d96f6efaa8914e9011ebb9cdce228ab5c3e8f20ddd2c78372",
+        "id": "gradle.lock-and-verification"
+      },
+      {
+        "fingerprint": "sha256:ac9901e6c63750e37524f5ae44b2f1d8a2740dd9fd0f61cd6cc9cdd9ac4c86c4",
+        "id": "gradle.testkit-consumer"
+      },
+      {
+        "fingerprint": "sha256:2f6aa7ae3b11630894330b73d6992c566557656eb3a5ee52de06a3f566782f32",
+        "id": "interop.java-source-consumer"
+      },
+      {
+        "fingerprint": "sha256:f35849a868ca0da9917402bf88d0e580fb951ed95b9654a58ac4da03045c81c7",
+        "id": "inventory.artifact-enumeration"
+      },
+      {
+        "fingerprint": "sha256:2277799193a510291887aae76c62c044eae6eb4e3c903de3ce91e4e48bd1290c",
+        "id": "jvm.compile-type-separation"
+      },
+      {
+        "fingerprint": "sha256:f892fff491f7d73995645c70fed7084de6b44acf2431fb905d48e1b40cfd356e",
+        "id": "jvm.runtime-generic-boxing"
+      },
+      {
+        "fingerprint": "sha256:53f6e4b2c35c68b8b825f541c3955ad61eb99a52d46513a1b840fb38d1efb2f2",
+        "id": "migration.compatibility-test"
+      },
+      {
+        "fingerprint": "sha256:de6ce2a747938fe3a72d371282985c7ed604b9d447f7456459d7f2f0f936feac",
+        "id": "operation.container-entrypoint"
+      },
+      {
+        "fingerprint": "sha256:1587a82ed59a578e65bf70e229569077899ef4ccb804855d986a5991e6df6ef2",
+        "id": "operation.lifecycle-test"
+      },
+      {
+        "fingerprint": "sha256:f3d69323dec519b6839a092a850e8d0a79a97f9288fbb38262640e10fbfd61c3",
+        "id": "operation.single-entrypoint"
+      },
+      {
+        "fingerprint": "sha256:1d0a211cfe14ca4303ad403f495ef6a0dab221a6b2f13454ba93f87828b05906",
+        "id": "performance.measurement-test"
+      },
+      {
+        "fingerprint": "sha256:cd0ed1d61755cd8dde54a6ad3b99d2aba522c8503078aa778673dcc1bbea39ef",
+        "id": "platform.jvm-js-wasm-tests"
+      },
+      {
+        "fingerprint": "sha256:560a410ffd928c2a9dd654a0f1e4e5fad4405b1fd085b1744ae2acf7c2857320",
+        "id": "platform.native-klib-compile"
+      },
+      {
+        "fingerprint": "sha256:b53747553165d09784da266f870a18172476343e0e2a268735ae87cd6bc576ce",
+        "id": "publication.metadata-gate"
+      },
+      {
+        "fingerprint": "sha256:254e543f14fb703efab4dabe77669e97ec13654067dafb2e3f6c1493e21518f8",
+        "id": "publication.sbom-lock-closure"
+      },
+      {
+        "fingerprint": "sha256:10f5711b7aee32728651cc00cbb522fd57ae319173e17b68501e11f3f4701b14",
+        "id": "quality.kotlin-depth-parity-incomplete-gate"
+      },
+      {
+        "fingerprint": "sha256:50bd8f88877178b4c9e1c82dfafe65414a7a53c9bfd1ccb96be219a82220abe8",
+        "id": "quality.public-main-baseline-gate"
+      },
+      {
+        "fingerprint": "sha256:926422d1a71e81bffe024b1acc97f15a6cc57d9a14a771bcb02d80f3c13dbeb6",
+        "id": "security.negative-tests"
+      },
+      {
+        "fingerprint": "sha256:4763d7521c94c47468db5ace4a8a498d541e4d933e6ba55b34a66505e05fcf2b",
+        "id": "semantics.language-oracles"
+      },
+      {
+        "fingerprint": "sha256:96898536dcb19d248e48a005f7b9d9fc2ae6a18976bf940a7381a762c1e7415e",
+        "id": "skill.route-and-gap-cases"
+      },
+      {
+        "fingerprint": "sha256:73cacd21181acc4ff8904fc21e5be5cc09c72a1ca70888840e19dcbe308cf9ed",
+        "id": "testing.multi-suite-pass"
+      },
+      {
+        "fingerprint": "sha256:64463c74435d9e996b695ef39d39dac4c6801ce173450912a5f13b85350e2bde",
+        "id": "types.runtime-and-compile-oracles"
+      },
+      {
+        "fingerprint": "sha256:b3aea6d2112458f0fe67b36d543362382a3623de018468f3fb27169bdfd4fab8",
+        "id": "workbench.jvm.normal-boundary-rejection-failure-recovery"
+      }
+    ],
+    "required_profiles": [
+      {
+        "fingerprint": "sha256:29fb24a09109031672a8623940e7270457f4521cca1b345291eabd206cd97a22",
+        "id": "container"
+      },
+      {
+        "fingerprint": "sha256:5ecda787e51a590af90a522264b84a48da429ab4475f34348877334c82a1cf61",
+        "id": "local"
+      }
+    ],
+    "skill_eval_cases": [
+      {
+        "fingerprint": "sha256:dc28e888686e8553208cc577e7e94490ec8b2d60ade741b36553ba1923ed489f",
+        "id": "compiler-bytecode"
+      },
+      {
+        "fingerprint": "sha256:dde88d27278845f931fa2e2c2b2d2715647dab51014b4f8b176c335431273cf1",
+        "id": "coroutine-cancellation"
+      },
+      {
+        "fingerprint": "sha256:8df4dcaa43efba6684a7fb34c42ec678289aaf1a44347642d1dc2b7f915577d2",
+        "id": "definitive.authorization-boundary"
+      },
+      {
+        "fingerprint": "sha256:c2cd23b8467bec4684d6bec43abaa2a715d8d516a80e1124399df2905ef61c71",
+        "id": "definitive.native-runtime-gap"
+      },
+      {
+        "fingerprint": "sha256:d71dbec84437bd0e3baef224c3005c66927b4a533bc652e9e4b4e18ee1148c61",
+        "id": "definitive.workbench-route"
+      },
+      {
+        "fingerprint": "sha256:10348f80d0abf9b6a62dc6304e85870dd74dfc371b76b4cb85c5fdc8b8184f00",
+        "id": "flow-diagnose"
+      },
+      {
+        "fingerprint": "sha256:f87e3f08c2cf88d1f14001b2b6b5a3c0943f4b8cd7425aaa2f8dcbb8b3031ab6",
+        "id": "gradle-testkit"
+      },
+      {
+        "fingerprint": "sha256:7dfe389cac53d0f52e2fcb5188ec6e0403568426c41a1b01cefd99f51190261f",
+        "id": "java-interop"
+      },
+      {
+        "fingerprint": "sha256:db62449992e4c1ad9a27ce62f2f146a77d783f7f950f67c89ecffb70e0a3e3c3",
+        "id": "jvm-value-class"
+      },
+      {
+        "fingerprint": "sha256:d2d90b383e2de73b4c4fba44d531bc4bc8df5e938ab8b026d03c4949235f8a91",
+        "id": "ktor-gap"
+      },
+      {
+        "fingerprint": "sha256:a7e4aa968bb0d91c3bb117730943f7a6aaf63d502cc55d462da137d09d0e0922",
+        "id": "migration"
+      },
+      {
+        "fingerprint": "sha256:c938e012b501309d463c5a343a039a54c99952f4fa08e24b13c16d386d7759e4",
+        "id": "multiplatform-review"
+      },
+      {
+        "fingerprint": "sha256:249d9ce22efd32279aad301d40a4c990cece17cbb30128d042f42d0a4cd856af",
+        "id": "native-compile"
+      },
+      {
+        "fingerprint": "sha256:bb9aec59e093f3de683e648cae232a7757551907630aaacf9a8774c3b18e58d3",
+        "id": "operation-recovery"
+      },
+      {
+        "fingerprint": "sha256:4bd831348dec38b56c27ebe1005ea11c23ebbf6c37d07b8744a17f6a52886e08",
+        "id": "performance-review"
+      },
+      {
+        "fingerprint": "sha256:8a135ad5ea11d69eb1c184c7ac242fc48dc2ad4930b1c0906f08329dd4985c77",
+        "id": "sbom-review"
+      },
+      {
+        "fingerprint": "sha256:ac5a681f9a16ac3feaf217fe97fbdfcc5974d066e78a6474d04a9b0cd6d61b4a",
+        "id": "security-review"
+      },
+      {
+        "fingerprint": "sha256:dd4eb67e43bc98b8b2df26e42388540e64e734d5155a310c7cf48d3e151ebc81",
+        "id": "semantics-design"
+      },
+      {
+        "fingerprint": "sha256:0f23179d8ae6c6a1839a66eb1585f3912c6415fb922b954a540bdf1ac4a5a687",
+        "id": "swift-export-gap"
+      },
+      {
+        "fingerprint": "sha256:7db310f0eae365a927da6c10a42c2bec29f30900f19de1903d8c2a51a4cc1c1e",
+        "id": "toolchain-security"
+      },
+      {
+        "fingerprint": "sha256:298bb6745e54b9119467b342944d869acbc6016e4c0aa503bdf63fe57c10d3ce",
+        "id": "types-implement"
+      }
+    ],
+    "sources": [
+      {
+        "fingerprint": "sha256:85eea42a6ee84e36dfa95d0eac5457ca96c99620f3bab74300634e8677a2a91e",
+        "id": "gradle-9.5.0"
+      },
+      {
+        "fingerprint": "sha256:a4702b4541eb5cf37ea73be2d22bdb8bc6696eeaf0874538f11ab0ab803a03d2",
+        "id": "gradle-source-9.5.0"
+      },
+      {
+        "fingerprint": "sha256:00224efd6d4997ab19fb14102beb6f1e67247c06c64775820eab1348084ad853",
+        "id": "kotlin-compiler-2.4.10"
+      },
+      {
+        "fingerprint": "sha256:8d781ab6b3c623cbec958a212b99ced091189883e4a2395cf55e8afd428f6604",
+        "id": "kotlin-compiler-source-2.4.10"
+      },
+      {
+        "fingerprint": "sha256:21d0c096eaaee952e36b28250f9476047b7ccc8d7978faf824210e87a165c546",
+        "id": "kotlin-docs-snapshot"
+      },
+      {
+        "fingerprint": "sha256:6949ce5f9f58c79bac3c296eacb7fa0a9d3e0ab2e91565349b094a3e619a8b0f",
+        "id": "kotlin-keep-snapshot"
+      },
+      {
+        "fingerprint": "sha256:fd66b9833fe2fc843416ed163847a59338734c6577065f6d42c19954fd031cf7",
+        "id": "kotlin-native-macos-arm64-2.4.10"
+      },
+      {
+        "fingerprint": "sha256:8bfe18eb13eb7e97430ce8b09bd6ebf6dac4d44249a1b1b62a52850be192c978",
+        "id": "kotlin-native-source-2.4.10"
+      },
+      {
+        "fingerprint": "sha256:0c77ac619620b4bf78dc51ef0bf1c9de6a78f39f900295ac3ce7a32d8d24071e",
+        "id": "kotlin-spec-snapshot"
+      },
+      {
+        "fingerprint": "sha256:cb0e3f4e04599567c159a510a289488859334d9812c00dac2e372d6ac2fab4e7",
+        "id": "kotlin-stdlib-js-2.4.10"
+      },
+      {
+        "fingerprint": "sha256:b9ec2b957d0376c4f4626ebda8ca320e337b9415d53cb781c239a4c7d517d6c2",
+        "id": "kotlin-stdlib-jvm-2.4.10"
+      },
+      {
+        "fingerprint": "sha256:d53da21df37d7e682ea3b727de359706e3ee08cbcd65e7a1087464ff549bedc0",
+        "id": "kotlin-stdlib-source-2.4.10"
+      },
+      {
+        "fingerprint": "sha256:53e117a951cf4311d4157074f26ffe107cb18e921dd542e19b60d7d2ff228a42",
+        "id": "kotlin-stdlib-wasm-js-2.4.10"
+      },
+      {
+        "fingerprint": "sha256:36de2142786f0a3f010593cfd7eb463ead96ea91a376e1851c0f5aa0ea2f59d2",
+        "id": "kotlinx-coroutines-core-jvm-1.11.0"
+      },
+      {
+        "fingerprint": "sha256:377137635b0061c585a6e1efce3aa13fca31a660fd16c3af72c4411e28d008bc",
+        "id": "kotlinx-coroutines-source-1.11.0"
+      },
+      {
+        "fingerprint": "sha256:0cfcf8c1f41c4cc5f87bda981c4fabafe4e3e356ec2af841223689d92aac280b",
+        "id": "kotlinx-serialization-source-snapshot"
+      },
+      {
+        "fingerprint": "sha256:43ac7f54a789157ee2b16d93f0b576b7eda187b42bd7538061c4b6c4d0ab6d4c",
+        "id": "reference-atlas-core-definitive-v2"
+      },
+      {
+        "fingerprint": "sha256:e84995c40cce65012613d6eedcbdd796c203ed8303f4306496dc3a14f457dd69",
+        "id": "reference-atlas-core-v1"
+      }
+    ],
+    "target_sets": [
+      {
+        "fingerprint": "sha256:d68b070d1f31887ea6dcff4b84a6f260fd7b8d5390308959541788e274189677",
+        "id": "authority"
+      },
+      {
+        "fingerprint": "sha256:425204085d97494af0a6dd34fa7453485a3ae55630fb1b2aa34985d7c198c5c3",
+        "id": "build-tooling"
+      },
+      {
+        "fingerprint": "sha256:349bb7c22c5b2d44ea0c6ea082ecd5cb11a64a98fb608bb862433084f578af76",
+        "id": "compiler-runtime"
+      },
+      {
+        "fingerprint": "sha256:cce018cb35885e66e0bc7f469ee363b569891bcceb66a28b7fbccbd5f9e1cbd4",
+        "id": "concurrency"
+      },
+      {
+        "fingerprint": "sha256:dd43a8e91d123ecc6a4ef1bb8d8508ac26f6532c77715c6511281b0f3b793d7e",
+        "id": "evolution"
+      },
+      {
+        "fingerprint": "sha256:874fc690e8a6b67fe84f46d5030e4622dfdc01fc4f0b21ebc483cd075f43a98b",
+        "id": "interop"
+      },
+      {
+        "fingerprint": "sha256:5221e76e4e4086be78b902bdf703b4946eccefc49a4529c92c852c6184328fcd",
+        "id": "operation"
+      },
+      {
+        "fingerprint": "sha256:44addd82300998ae73f09660c46c2ed9c4c1f8ffa3f3f2b5dcddda5e5cc2a142",
+        "id": "performance-security"
+      },
+      {
+        "fingerprint": "sha256:af51d669e1210229a0c504c2f40969c8317cd50063ce35d670898e596113ac98",
+        "id": "platforms"
+      },
+      {
+        "fingerprint": "sha256:ec56651786d896be5c3ec1f3d4e62da8b463429a56f99d29663e57171b3ba0d4",
+        "id": "publication"
+      },
+      {
+        "fingerprint": "sha256:0ee014077da63b1b0f0ecf57b15cb29f98ee887fb7ee8d419da83219e37fd1a0",
+        "id": "quality"
+      },
+      {
+        "fingerprint": "sha256:3abab5b07afdce6b58279f3cf814f8c424f486e5b9cb1a076f54eaac0a84af5f",
+        "id": "semantics"
+      },
+      {
+        "fingerprint": "sha256:ab39658c3c1c08d9b6e5023743932e9f2f3c0cab5e1c0206d040686a18e08283",
+        "id": "skill"
+      }
+    ],
+    "targets": [
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:0cb8f2cceff044712a2ac5507b76d4764e40308c77ef2dd3e664dc5f2a0edf27",
+        "id": "authority.source-lock",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:65c43d287e9055b555f5cfede43072a09a47987a8bd306c21c047cc6fa5a166c",
+        "id": "build.gradle-plugin-consumer",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:88701117b5f7641025084a4d85146bdcb90d0c6da607eeaacd8d60411b13fad4",
+        "id": "build.toolchain-lock",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:6bf243da0933aeaea90f0a76dd1ab4f882b366ca40c275783ee9e9a2adae37aa",
+        "id": "compiler.jvm-bytecode",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:3e088fd18bef3366d1a2cd2146bc32bf9dce64a26b376c1e15d45a9093ba1e8b",
+        "id": "compiler.runtime-shapes",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:c4b01f1341b9cc3829c51336af9fde647e503d7f23407ebf95023beba7175bda",
+        "id": "concurrency.flow-pipelines",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:415f7441b2b650b65ef35c341889f5d68da4e4d394d372d4918843a40e1c2eab",
+        "id": "concurrency.structured-cancellation",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:fcc45f68f73d2fc5a4d4bdc050cd15ee27ae171cbb3af060eb458dcd2e6686b7",
+        "id": "evolution.compatibility-migration",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 2,
+        "evidence_count": 2,
+        "fingerprint": "sha256:a4410e7abaec5e3dd7c0d07032f1fb71ce9c79d5c92edff16599f95c587d448f",
+        "id": "interop.expect-actual",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:365f1f9fc3cb5b6956b05a6917306321b37b4cab485c507c40b9ca4679689c0b",
+        "id": "interop.java-consumer",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:4ea2ec8a298bd5bb0a3a2ad3a486c3cf72b979db32b33139f9b2ea2cd900f242",
+        "id": "inventory.kotlin-public-surface",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:7e5858714f60036f25c9c2e551bc1e2cf26901a75a94177b14e666432286d849",
+        "id": "operation.container-evidence",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:347a9fa7f217c240cad669493ba0f56ea07789aad2b4d60461b9c5266d35d73b",
+        "id": "operation.lifecycle-recovery",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:219d772405aa4cd1c0ed3866faa16cbac70d3550952aa7bb701c713b74518f56",
+        "id": "operation.local-evidence",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:55be045d7cb425a74fd4edde2dda3a4e7be1f6c2b181653866f7e7922c2e3ef9",
+        "id": "performance.measurement-harness",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:4d209565e420e5f3359103023134fd346604ba9e5b75b07ad9bb7918dcbe89f7",
+        "id": "platform.jvm-js-wasm-runtime",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:dbd0e936383af0a6e74f33d8b6456199ff7c97060d5f3d68660b7a3d74c2795e",
+        "id": "platform.jvm-value-class-boundary",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:cd87b790522c34eff28c59b604b408ce9f09e580fe400951c2bb95824161ae85",
+        "id": "platform.native-compile",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 0,
+        "evidence_count": 0,
+        "fingerprint": "sha256:a5f8b9496c3f7290dfe130dc70dcaa471fca01007aa5e1f017f8916cf8b3454e",
+        "id": "platform.native-runtime",
+        "requirement": "required",
+        "state": "infeasible"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:20ccbf88b7a5e484b1bf3a5c4c41f0ece6c0d7a3d11929087ef441a2b368eb14",
+        "id": "publication.complete-sbom",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:bf00bd8499665ba8e6a159ac52c842ea5192e9ae106e133be891f1c93e5daa91",
+        "id": "publication.rights-metadata",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:9fc68dad81356b1bc570098f4209fc4a9d97b573f417e3f2474cf88eebced823",
+        "id": "quality.failure-debugging",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:d263605beb40241c190b5afe22ddee7b343c7ec30dcc7d597012ea2a95f4f75e",
+        "id": "quality.kotlin-depth-parity-gate",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:691caae1c694a5f19982c38daa3cdea0d0a3c4222519df17771fa94da7c16806",
+        "id": "quality.public-main-non-regression",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:a1ea88eb68caaa247cdaf395de0dca9fd3a4fa7e587cf5fff388ef0511462308",
+        "id": "quality.testing-oracles",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:1c92bfe905348b7768cff5c09cc6e9c780cc6c3c4dc5e9148ef5d0e6c454f5c4",
+        "id": "reference-system.automation-workbench",
+        "requirement": "recommended",
+        "state": "partial"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:2b6210d894b389081935abdb3a5a5250d9eb419900c000815c35f24860c7522e",
+        "id": "security.input-boundaries",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:a4b42178b629d97e0b0bb8f0c41d2b6ad792599f48499802775b78e0d2fc33cd",
+        "id": "semantics.language-core",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:9bee1014c05cc6329c7e63861163d0cdcf68b54029c18e19a1d236d82c988264",
+        "id": "semantics.type-system",
+        "requirement": "required",
+        "state": "covered"
+      },
+      {
+        "claim_count": 1,
+        "evidence_count": 1,
+        "fingerprint": "sha256:db864593ab527bbf0f682002f0a8338c64be89839a4ed3cc19954655c8f82a14",
+        "id": "skill.router-evaluation",
+        "requirement": "required",
+        "state": "covered"
+      }
+    ],
+    "tests_labs": [
+      {
+        "enabled": true,
+        "fingerprint": "sha256:d8561ae8a54b9fc4990e0cfc927212e22bab22346f8cb995ac13f48710035a78",
+        "id": "lab:labs/compiler-runtime/build.gradle.kts",
+        "kind": "lab",
+        "path": "labs/compiler-runtime/build.gradle.kts"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:63e6f6a0f11e74c0c64573d368d4e96cc34e9f2e332c07d7e71e478fbc93a4aa",
+        "id": "lab:labs/compiler-runtime/gradle.lockfile",
+        "kind": "lab",
+        "path": "labs/compiler-runtime/gradle.lockfile"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:85ff5625e65da9aded10832d0420e799356dfb0479ed469d7a4460533d2846bb",
+        "id": "lab:labs/compiler-runtime/src/main/kotlin/dev/akaitigo/kotlinatlas/runtime/RuntimeShapes.kt",
+        "kind": "lab",
+        "path": "labs/compiler-runtime/src/main/kotlin/dev/akaitigo/kotlinatlas/runtime/RuntimeShapes.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:d774ad26a867f8bd3340474e0d26a3747081177c89471355a44bf457f47047d3",
+        "id": "lab:labs/compiler-runtime/src/test/kotlin/dev/akaitigo/kotlinatlas/runtime/RuntimeShapesTest.kt",
+        "kind": "lab",
+        "path": "labs/compiler-runtime/src/test/kotlin/dev/akaitigo/kotlinatlas/runtime/RuntimeShapesTest.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:6b0f8f85fe77520acb009f352b9e0e8e410f85af237783b61072262c0359803d",
+        "id": "lab:labs/coroutines/build.gradle.kts",
+        "kind": "lab",
+        "path": "labs/coroutines/build.gradle.kts"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:63e6f6a0f11e74c0c64573d368d4e96cc34e9f2e332c07d7e71e478fbc93a4aa",
+        "id": "lab:labs/coroutines/gradle.lockfile",
+        "kind": "lab",
+        "path": "labs/coroutines/gradle.lockfile"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:809b12ab0c13d498ef5499eb714918c687271ef6c27f6f3b74b356083b161eb2",
+        "id": "lab:labs/coroutines/src/main/kotlin/dev/akaitigo/kotlinatlas/coroutines/FailurePropagation.kt",
+        "kind": "lab",
+        "path": "labs/coroutines/src/main/kotlin/dev/akaitigo/kotlinatlas/coroutines/FailurePropagation.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:bd9cc91cce92408894808a85c53d6506f65cc32977aa7bebc0bde7e5f9f21185",
+        "id": "lab:labs/coroutines/src/test/kotlin/dev/akaitigo/kotlinatlas/coroutines/FailurePropagationTest.kt",
+        "kind": "lab",
+        "path": "labs/coroutines/src/test/kotlin/dev/akaitigo/kotlinatlas/coroutines/FailurePropagationTest.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:30e1c1197c60882baa354367bff59872f1ef660d236c7952ee9d364ffc730352",
+        "id": "lab:labs/engineering/build.gradle.kts",
+        "kind": "lab",
+        "path": "labs/engineering/build.gradle.kts"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:7c94ecaf458f643b9fd0023123f928546777cea044092ef04fc3c0d4267d4bae",
+        "id": "lab:labs/engineering/gradle.lockfile",
+        "kind": "lab",
+        "path": "labs/engineering/gradle.lockfile"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:040d5ada3d989ed13b2c017b32ccaeb3d24e34b11d8f02ab121c70fca372f328",
+        "id": "lab:labs/engineering/src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt",
+        "kind": "lab",
+        "path": "labs/engineering/src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:4a1f9a6f96891d0fc5e46d12aab3b1a8fee1bfd0a337725fd02efbe7556eea57",
+        "id": "lab:labs/engineering/src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt",
+        "kind": "lab",
+        "path": "labs/engineering/src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:d8561ae8a54b9fc4990e0cfc927212e22bab22346f8cb995ac13f48710035a78",
+        "id": "lab:labs/flow/build.gradle.kts",
+        "kind": "lab",
+        "path": "labs/flow/build.gradle.kts"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:63e6f6a0f11e74c0c64573d368d4e96cc34e9f2e332c07d7e71e478fbc93a4aa",
+        "id": "lab:labs/flow/gradle.lockfile",
+        "kind": "lab",
+        "path": "labs/flow/gradle.lockfile"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:1892da5df328034d62cc8ee30ae9505b07822f22305ba10187be31c0633306f1",
+        "id": "lab:labs/flow/src/main/kotlin/dev/akaitigo/kotlinatlas/flow/FlowPipelines.kt",
+        "kind": "lab",
+        "path": "labs/flow/src/main/kotlin/dev/akaitigo/kotlinatlas/flow/FlowPipelines.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:ab728c15b7414bc0c58ca349a770abba9ad6479609e8034e2e062208057ad30d",
+        "id": "lab:labs/flow/src/test/kotlin/dev/akaitigo/kotlinatlas/flow/FlowPipelinesTest.kt",
+        "kind": "lab",
+        "path": "labs/flow/src/test/kotlin/dev/akaitigo/kotlinatlas/flow/FlowPipelinesTest.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:ebf65fb7c411dfc9228fc9cc67c89c61147173be4cea4deb9a4ce5d0cfc22816",
+        "id": "lab:labs/gradle-plugin/build.gradle.kts",
+        "kind": "lab",
+        "path": "labs/gradle-plugin/build.gradle.kts"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:7c94ecaf458f643b9fd0023123f928546777cea044092ef04fc3c0d4267d4bae",
+        "id": "lab:labs/gradle-plugin/gradle.lockfile",
+        "kind": "lab",
+        "path": "labs/gradle-plugin/gradle.lockfile"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:ef2ce50793462155ee0a5fe9f975e40fe77a2ce687d4825145b6515c8cf94a6f",
+        "id": "lab:labs/gradle-plugin/src/main/kotlin/dev/akaitigo/kotlinatlas/gradle/AtlasProbePlugin.kt",
+        "kind": "lab",
+        "path": "labs/gradle-plugin/src/main/kotlin/dev/akaitigo/kotlinatlas/gradle/AtlasProbePlugin.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:0ccfc5497d21de824f30e860d3dae6980cb84f4b1394d836824b111db0b01d78",
+        "id": "lab:labs/gradle-plugin/src/test/kotlin/dev/akaitigo/kotlinatlas/gradle/AtlasProbePluginTest.kt",
+        "kind": "lab",
+        "path": "labs/gradle-plugin/src/test/kotlin/dev/akaitigo/kotlinatlas/gradle/AtlasProbePluginTest.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:aa84836cbcdac4b5e89a9ea810bb7aeb4f8d1db1805f0750a5efb0d3b20a7c93",
+        "id": "lab:labs/interop/build.gradle.kts",
+        "kind": "lab",
+        "path": "labs/interop/build.gradle.kts"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:7c94ecaf458f643b9fd0023123f928546777cea044092ef04fc3c0d4267d4bae",
+        "id": "lab:labs/interop/gradle.lockfile",
+        "kind": "lab",
+        "path": "labs/interop/gradle.lockfile"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:20020d023333d6b93d4769c766b2698f0aae559591273c6cda1817526e574299",
+        "id": "lab:labs/interop/src/main/kotlin/dev/akaitigo/kotlinatlas/interop/AtlasApi.kt",
+        "kind": "lab",
+        "path": "labs/interop/src/main/kotlin/dev/akaitigo/kotlinatlas/interop/AtlasApi.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:b7c599e67cdf4b7c73c8625665eaecd0fe2b9de5eab8a217a391b1f40e83e80e",
+        "id": "lab:labs/interop/src/test/java/dev/akaitigo/kotlinatlas/interop/JavaConsumerTest.java",
+        "kind": "lab",
+        "path": "labs/interop/src/test/java/dev/akaitigo/kotlinatlas/interop/JavaConsumerTest.java"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:aa84836cbcdac4b5e89a9ea810bb7aeb4f8d1db1805f0750a5efb0d3b20a7c93",
+        "id": "lab:labs/jvm/build.gradle.kts",
+        "kind": "lab",
+        "path": "labs/jvm/build.gradle.kts"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:7c94ecaf458f643b9fd0023123f928546777cea044092ef04fc3c0d4267d4bae",
+        "id": "lab:labs/jvm/gradle.lockfile",
+        "kind": "lab",
+        "path": "labs/jvm/gradle.lockfile"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:0ab15a5db3ca7c61f1b51cc4cbde02647513d47c60240b974b1dacd494d87f64",
+        "id": "lab:labs/jvm/src/main/kotlin/dev/akaitigo/kotlinatlas/jvm/Identifiers.kt",
+        "kind": "lab",
+        "path": "labs/jvm/src/main/kotlin/dev/akaitigo/kotlinatlas/jvm/Identifiers.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:6f39e6d81b833b277b83029e39a315c798a9ef5a7d0838a3c9df51f268ef2fe5",
+        "id": "lab:labs/jvm/src/test/kotlin/dev/akaitigo/kotlinatlas/jvm/ValueClassBoundaryTest.kt",
+        "kind": "lab",
+        "path": "labs/jvm/src/test/kotlin/dev/akaitigo/kotlinatlas/jvm/ValueClassBoundaryTest.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:3941865f45653cc6c4e9e2526e89df55dba89704b717aa2472ddf85d816f0662",
+        "id": "lab:labs/multiplatform/build.gradle.kts",
+        "kind": "lab",
+        "path": "labs/multiplatform/build.gradle.kts"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:6ce7a60d5eb8b9c01262208dcb9a1ad9ad4af6e6e8efe9ea6a4118684aaac093",
+        "id": "lab:labs/multiplatform/gradle.lockfile",
+        "kind": "lab",
+        "path": "labs/multiplatform/gradle.lockfile"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:eb887b4edc4476ef221bb79010b7578f17d79e82647f04b8e2d2fb555019ce12",
+        "id": "lab:labs/multiplatform/src/commonMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformContract.kt",
+        "kind": "lab",
+        "path": "labs/multiplatform/src/commonMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformContract.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:272d530a55491065e30c389f53fcef23a95c3113b51920e4151ea73a62e64ac2",
+        "id": "lab:labs/multiplatform/src/commonTest/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformContractTest.kt",
+        "kind": "lab",
+        "path": "labs/multiplatform/src/commonTest/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformContractTest.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:3ddfc045bea42eebec1f81dc7158be3a938cd948c47ef8c5d9f4fb501fac7a65",
+        "id": "lab:labs/multiplatform/src/jsMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformJs.kt",
+        "kind": "lab",
+        "path": "labs/multiplatform/src/jsMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformJs.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:40131e2892931c41e46ee53a13031e6fa4afc1a6c52a1ffb79e29e13ca0874f2",
+        "id": "lab:labs/multiplatform/src/jvmMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformJvm.kt",
+        "kind": "lab",
+        "path": "labs/multiplatform/src/jvmMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformJvm.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:591c46f909708e0cc23452366c03a7058af37930d93a216ae68a99b5e7923989",
+        "id": "lab:labs/multiplatform/src/macosArm64Main/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformNative.kt",
+        "kind": "lab",
+        "path": "labs/multiplatform/src/macosArm64Main/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformNative.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:6a155c72f5c44ab8632cc2c319a822a307166c377f17eefe82ec58dde6160580",
+        "id": "lab:labs/multiplatform/src/wasmJsMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformWasm.kt",
+        "kind": "lab",
+        "path": "labs/multiplatform/src/wasmJsMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformWasm.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:a06a7a0895fe25a5a0e0dd88e8350adc7f011adb35a1064f803b6e57a35e92f1",
+        "id": "lab:labs/semantics/build.gradle.kts",
+        "kind": "lab",
+        "path": "labs/semantics/build.gradle.kts"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:7c94ecaf458f643b9fd0023123f928546777cea044092ef04fc3c0d4267d4bae",
+        "id": "lab:labs/semantics/gradle.lockfile",
+        "kind": "lab",
+        "path": "labs/semantics/gradle.lockfile"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:d753b91a383ffc75fe83169a1ce038c02683ad4992c4e6c4962de4edd6113bf5",
+        "id": "lab:labs/semantics/src/main/kotlin/dev/akaitigo/kotlinatlas/semantics/Semantics.kt",
+        "kind": "lab",
+        "path": "labs/semantics/src/main/kotlin/dev/akaitigo/kotlinatlas/semantics/Semantics.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:a72b1ee28ef05fcccc2c3c389219ced6dc02e3994341e65050338ad4bcbc3ed2",
+        "id": "lab:labs/semantics/src/test/kotlin/dev/akaitigo/kotlinatlas/semantics/SemanticsTest.kt",
+        "kind": "lab",
+        "path": "labs/semantics/src/test/kotlin/dev/akaitigo/kotlinatlas/semantics/SemanticsTest.kt"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:70576283716d572ee511d40922413a39a36e27549b591c84a1edcf2f2cc59851",
+        "id": "test-harness:scripts/container-verify.sh",
+        "kind": "test-harness",
+        "path": "scripts/container-verify.sh"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:673b1aa680e6baeb6388e623fc7a01685e3a00b8bf04731122f16a3f505a6508",
+        "id": "test-harness:scripts/verify.py",
+        "kind": "test-harness",
+        "path": "scripts/verify.py"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:92abc79fb8fd118f76b2133a9b3d4403992041d55c1a1e51bc8ddfcc7d0b6dc4",
+        "id": "test-harness:scripts/verify_authority_locators.py",
+        "kind": "test-harness",
+        "path": "scripts/verify_authority_locators.py"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:bcfe282a8c8f62463d342a06987f1359228ffcf7013cf2756477cf286593f3b0",
+        "id": "test-harness:scripts/verify_fe_parity.py",
+        "kind": "test-harness",
+        "path": "scripts/verify_fe_parity.py"
+      },
+      {
+        "enabled": true,
+        "fingerprint": "sha256:588ab02f73c15537420daebd4f760f9559503ff0243ca1e0d8aa2613f41b3485",
+        "id": "test-harness:scripts/verify_non_regression.py",
+        "kind": "test-harness",
+        "path": "scripts/verify_non_regression.py"
+      }
+    ]
+  },
+  "minimum_skill_pass_rate": 1,
+  "schema_version": 2,
+  "scope_exclusions": [
+    "Android SDK、Ktor、Spring、Compose等の第三者または周辺Framework固有APIはKotlin本体の検証範囲から分離する。",
+    "Full Xcodeを必要とするNative executable実行とSwift Export consumerは現在のHost Toolchainでは未実行として記録し、Native test KLIB compileをRuntime Evidenceの代替にしない。",
+    "Kotlin 2.4.10より前の全Versionを再現せず、互換性と移行Contractを立証するversioned fixtureを対象にする。"
+  ],
+  "scope_statement_fingerprint": "sha256:a7b0926954befd2889f241b91ae5f390991dd6becb4b3d2b8b17639ae081e8d8"
+}

@@ -1,0 +1,51 @@
+{
+  "candidate_surfaces": [
+    {
+      "candidate_behavior_id": "candidate.authority.gradle-9.5.0",
+      "capability_id": "authority.locator-extraction",
+      "claim_id": "authority.locator-inventory-is-copyright-safe-and-incomplete",
+      "classification": "candidate-included-unreviewed",
+      "classification_basis": "domain-contract-projection-unreviewed",
+      "context_digest": null,
+      "context_end": null,
+      "context_start": null,
+      "context_unit": null,
+      "domain_reference_metadata_digest": "sha256:8062a10e73cb3d6f5617d206a623904077f7c6609f4e953d3a1a87d2180eaa96",
+      "edge_id": "edge.authority.gradle-9.5.0",
+      "heading_digest": null,
+      "locator": "document-root",
+      "locator_status": "not-evaluated-fetch-failed",
+      "pattern_id": "authority/gradle-9-5-0",
+      "pattern_kind": "atomic",
+      "reference_url": "https://services.gradle.org/distributions/gradle-9.5.0-bin.zip",
+      "source_id": "gradle-9.5.0",
+      "surface_ids": [
+        "provenance-rights"
+      ],
+      "target_id": "authority.locator-extraction",
+      "variant_ids": [
+        "variant.authority.gradle-9.5.0.locked"
+      ]
+    }
+  ],
+  "extraction": {
+    "body_storage": "digest-and-locator-context-digest-only",
+    "method": "locked-body-locator-context-digest",
+    "review_status": "automated-unreviewed",
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v1"
+  },
+  "fetch": {
+    "content_type": null,
+    "error_digest": "sha256:fb7a4304bd0ddb42805f7cefbd167907eef4df6fe63d83506475f1b0544859d5",
+    "fetched_bytes": null,
+    "fetched_digest": null,
+    "final_url": null,
+    "http_status": null,
+    "locked_digest_match": false,
+    "status": "failed"
+  },
+  "locked_source_digest": "sha256:553c78f50dafcd54d65b9a444649057857469edf836431389695608536d6b746",
+  "schema_version": 1,
+  "source_id": "gradle-9.5.0",
+  "source_url": "https://services.gradle.org/distributions/gradle-9.5.0-bin.zip"
+}

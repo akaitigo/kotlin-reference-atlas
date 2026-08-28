@@ -1,0 +1,29 @@
+{
+  "all_candidates_pending_human": true,
+  "baseline": "baselines/authority-body-inventory-v1.json",
+  "index": "authority/body-inventory.snapshot.json",
+  "local_methodology_reference": {
+    "artifact_count": 5,
+    "available": true,
+    "verified": true
+  },
+  "methodology_reference": "baseline/fe-authority-body-reference-v1.json",
+  "raw_anchor_depth_credit": false,
+  "schema_version": 1,
+  "summary": {
+    "authority_semantics_exhaustive": false,
+    "classified_anchors": 0,
+    "failed_documents": 0,
+    "human_reviewed_anchors": 0,
+    "matched_documents": 7,
+    "promoted_surface_artifacts": 0,
+    "raw_anchors": 146146,
+    "selector_exhaustive_documents": 7,
+    "source_entries": 9,
+    "stale_documents": 0,
+    "unclassified_anchors": 146146,
+    "unique_documents": 7
+  },
+  "verdict": "pass",
+  "violations": []
+}

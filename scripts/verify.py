@@ -18,6 +18,8 @@ MANIFESTS = ["atlas.yaml", "mastery.yaml", "coverage.yaml", "sources.lock.yaml",
 DEFINITIVE_MANIFESTS = [
     "definitive.yaml",
     "depth.parity.yaml",
+    "non-regression.yaml",
+    "baselines/definitive-c0e9b1c.non-regression-baseline.json",
     "surface.inventory.yaml",
     "verification.matrix.yaml",
     "evals/kotlin-reference-router.definitive-skill-eval.json",
@@ -132,7 +134,9 @@ def detect_full_xcode() -> subprocess.CompletedProcess[str]:
 
 def validate_manifests() -> dict:
     authority_manifests = [path.relative_to(ROOT).as_posix() for path in sorted((ROOT / "authority" / "surfaces").glob("*.yaml"))]
-    run([str(ROOT / "bin" / "atlas"), "validate", *MANIFESTS, *DEFINITIVE_MANIFESTS, *authority_manifests])
+    run([sys.executable, str(ROOT / "scripts" / "generate_core_authority_extraction.py")])
+    authority_drafts = [path.relative_to(ROOT).as_posix() for path in sorted((ROOT / "authority" / "surfaces-draft").glob("*.json"))]
+    run([str(ROOT / "bin" / "atlas"), "validate", *MANIFESTS, *DEFINITIVE_MANIFESTS, "authority/extraction.snapshot.json", *authority_drafts, *authority_manifests])
     atlas = load_json(ROOT / "atlas.yaml")
     mastery = load_json(ROOT / "mastery.yaml")
     coverage = load_json(ROOT / "coverage.yaml")
@@ -411,6 +415,13 @@ def validate_non_regression() -> dict:
     result = load_json(ARTIFACTS / "non-regression.json")
     if result.get("verdict") != "pass" or result.get("violations"):
         raise RuntimeError("公開main非後退Gateがpassではない")
+    # Core v2はRepository配下の全Lab pathを監査するため、Evidenceへ収集済みの
+    # Gradle生成物を除去して追跡Source/Harnessだけを入力にする。
+    run([str(ROOT / "gradlew"), "clean", "--no-daemon"])
+    core = run([str(ROOT / "bin" / "atlas"), "audit", ".", "--gate", "non-regression"], capture=True)
+    result["core_v2_audit"] = core.stdout.strip()
+    result["core_v2_baseline"] = "baselines/definitive-c0e9b1c.non-regression-baseline.json"
+    write_json(ARTIFACTS / "non-regression.json", result)
     return result
 
 
@@ -422,6 +433,14 @@ def validate_authority_locators() -> dict:
         raise RuntimeError("Authority locator Gateがpassではない")
     if result.get("summary", {}).get("authority_text_surfaces_exhaustive") is not False:
         raise RuntimeError("Authority本文全体の未完状態が失われた")
+    return result
+
+
+def validate_authority_body_inventory() -> dict:
+    run([sys.executable, str(ROOT / "scripts" / "verify_authority_body_inventory.py")])
+    result = load_json(ARTIFACTS / "authority-body-inventory-validation.json")
+    if result.get("verdict") != "pass" or result.get("violations") or result.get("raw_anchor_depth_credit") is not False:
+        raise RuntimeError("Authority body denominator Gateがpassではない")
     return result
 
 
@@ -506,9 +525,11 @@ def write_evidence() -> list[Path]:
     non_regression = ARTIFACTS / "non-regression.json"
     fe_parity = ARTIFACTS / "kotlin-depth-parity.json"
     authority_locators = ARTIFACTS / "authority-locator-validation.json"
+    authority_body = ARTIFACTS / "authority-body-inventory-validation.json"
     specs = [
         ("authority.source-lock-validation", ["authority.source-lock-matches"], "conformance", "kotlin-atlas-verifier", "atlas validate atlas.yaml mastery.yaml coverage.yaml sources.lock.yaml skill.package.yaml && atlas audit .", manifest, [ROOT / "atlas", ROOT / "mastery.yaml", ROOT / "scripts" / "verify.py"]),
         ("authority.locator-validation", ["authority.locator-inventory-is-copyright-safe-and-incomplete"], "capture", "kotlin-authority-locator-verifier", "python3 scripts/generate_authority_locators.py && python3 scripts/verify_authority_locators.py", authority_locators, [ROOT / "scripts" / "verify_authority_locators.py", ROOT / "authority" / "locator-extraction.json", ROOT / "baseline" / "fe-authority-locator-reference-v1.json"]),
+        ("authority.body-inventory-validation", ["authority.raw-anchor-denominator-is-pending-human"], "capture", "kotlin-authority-body-inventory-verifier", "python3 scripts/verify_authority_body_inventory.py", authority_body, [ROOT / "scripts" / "verify_authority_body_inventory.py", ROOT / "authority" / "body-inventory.snapshot.json", ROOT / "baselines" / "authority-body-inventory-v1.json"]),
         ("inventory.public-surface", ["inventory.locked-surface-enumerated"], "capture", "kotlin-artifact-inventory", "python3 scripts/inventory.py", inventory, [ROOT / "scripts" / "inventory.py", ROOT / "sources.lock.yaml"]),
         ("semantics.language-types", ["semantics.exhaustive-and-lazy", "types.variance-nothing-reified"], "test-report", "gradle-junit", "./gradlew :labs:semantics:test", lab, [ROOT / "labs" / "semantics"]),
         ("jvm.value-class-boundary", ["jvm.value-class-generic-boxing"], "test-report", "gradle-junit", "./gradlew :labs:jvm:test", lab, [ROOT / "labs" / "jvm"]),
@@ -731,20 +752,23 @@ def main(*, skip_container: bool = False) -> None:
     rights_result = validate_rights()
     non_regression_result = validate_non_regression()
     authority_locator_result = validate_authority_locators()
+    authority_body_result = validate_authority_body_inventory()
     fe_parity_result = validate_fe_parity()
     neutral_language_result = validate_neutral_language()
     gaps = summarize_gap_ledger()
     summary = {
         "atlas_id": "kotlin-reference-atlas",
         "epoch": "2026-08-28",
-        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "definitive": "expected-incomplete"},
+        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "definitive": "expected-incomplete"},
         "kotlin_depth_parity": {"axis_count": fe_parity_result["axis_count"], "status_counts": fe_parity_result["status_counts"], "total_axis_gaps": fe_parity_result["total_axis_gaps"], "all_axes_closed": fe_parity_result["all_axes_closed"], "reference_commit": fe_parity_result["reference_commit"]},
         "completion_class": "incomplete",
         "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
         "authority_surface_inventory": {"artifacts": manifest_result["authority_artifacts"], "behaviors": manifest_result["authority_behaviors"]},
         "authority_locator_extraction": authority_locator_result["summary"],
+        "authority_body_denominator": authority_body_result["summary"],
         "gap_ledger": gaps,
         "completion_gaps": [
+            "146146 raw anchor候補のHuman decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
             "69 Authority由来Behaviorに対する専用Claim/Proofと18 AxisのScenario Matrixが未閉鎖",
             "8 Outcomeと14 Surfaceを網羅するDefinitive Skill Evalが未閉鎖",
             "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖",

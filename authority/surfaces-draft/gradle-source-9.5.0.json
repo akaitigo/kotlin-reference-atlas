@@ -1,0 +1,51 @@
+{
+  "candidate_surfaces": [
+    {
+      "candidate_behavior_id": "candidate.authority.gradle-source-9.5.0",
+      "capability_id": "authority.locator-extraction",
+      "claim_id": "authority.locator-inventory-is-copyright-safe-and-incomplete",
+      "classification": "candidate-included-unreviewed",
+      "classification_basis": "domain-contract-projection-unreviewed",
+      "context_digest": null,
+      "context_end": null,
+      "context_start": null,
+      "context_unit": null,
+      "domain_reference_metadata_digest": "sha256:dcb26763e0a9914da2589fe95086daef3c07e6844370e7c3e5a06a76149a4bba",
+      "edge_id": "edge.authority.gradle-source-9.5.0",
+      "heading_digest": null,
+      "locator": "document-root",
+      "locator_status": "not-evaluated-fetch-failed",
+      "pattern_id": "authority/gradle-source-9-5-0",
+      "pattern_kind": "atomic",
+      "reference_url": "https://github.com/gradle/gradle/commit/3fe117d68f3907790f3809f121aa36303a9151f8",
+      "source_id": "gradle-source-9.5.0",
+      "surface_ids": [
+        "provenance-rights"
+      ],
+      "target_id": "authority.locator-extraction",
+      "variant_ids": [
+        "variant.authority.gradle-source-9.5.0.locked"
+      ]
+    }
+  ],
+  "extraction": {
+    "body_storage": "digest-and-locator-context-digest-only",
+    "method": "locked-body-locator-context-digest",
+    "review_status": "automated-unreviewed",
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v1"
+  },
+  "fetch": {
+    "content_type": null,
+    "error_digest": "sha256:2c1edb0593fb38f1c583080499cac65e38473475652cf938fee88bbcca3866e4",
+    "fetched_bytes": null,
+    "fetched_digest": null,
+    "final_url": null,
+    "http_status": null,
+    "locked_digest_match": false,
+    "status": "failed"
+  },
+  "locked_source_digest": "sha256:63f6246f601e260c3db5e6325599a9fca69cafc8868e90237a9c4c51d7502b85",
+  "schema_version": 1,
+  "source_id": "gradle-source-9.5.0",
+  "source_url": "https://github.com/gradle/gradle/commit/3fe117d68f3907790f3809f121aa36303a9151f8"
+}

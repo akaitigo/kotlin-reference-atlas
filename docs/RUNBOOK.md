@@ -7,7 +7,7 @@
 - Git
 - Node.js 25（Kotlin/JS・Wasm実行）
 - Docker 29（Container profile）
-- `reference-atlas-core` commit `219dee20e23811195f541bbce71a730237a27231`
+- `reference-atlas-core` commit `1ea027babf3a8d6720ac617c56988e447695ba63`
 
 ## Execute
 
@@ -15,6 +15,7 @@
 PATH="$PWD/bin:$PATH" atlas validate atlas.yaml mastery.yaml coverage.yaml sources.lock.yaml skill.package.yaml
 PATH="$PWD/bin:$PATH" atlas audit .
 PATH="$PWD/bin:$PATH" atlas audit . --gate definitive # 未完中は非0終了
+PATH="$PWD/bin:$PATH" atlas audit . --gate non-regression
 python3 scripts/verify.py
 ```
 

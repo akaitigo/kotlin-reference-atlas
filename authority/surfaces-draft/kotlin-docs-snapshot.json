@@ -1,0 +1,51 @@
+{
+  "candidate_surfaces": [
+    {
+      "candidate_behavior_id": "candidate.authority.kotlin-docs-snapshot",
+      "capability_id": "authority.locator-extraction",
+      "claim_id": "authority.locator-inventory-is-copyright-safe-and-incomplete",
+      "classification": "candidate-included-unreviewed",
+      "classification_basis": "domain-contract-projection-unreviewed",
+      "context_digest": null,
+      "context_end": null,
+      "context_start": null,
+      "context_unit": null,
+      "domain_reference_metadata_digest": "sha256:922e3dd6e6a132a9f65cca92739be96c7ce6cb15b375242a55b883789b53a206",
+      "edge_id": "edge.authority.kotlin-docs-snapshot",
+      "heading_digest": null,
+      "locator": "document-root",
+      "locator_status": "not-evaluated-fetch-failed",
+      "pattern_id": "authority/kotlin-docs-snapshot",
+      "pattern_kind": "atomic",
+      "reference_url": "https://github.com/JetBrains/kotlin-web-site/commit/135c79983f678c6367c5cc19eb5d8445eb3c95ce",
+      "source_id": "kotlin-docs-snapshot",
+      "surface_ids": [
+        "provenance-rights"
+      ],
+      "target_id": "authority.locator-extraction",
+      "variant_ids": [
+        "variant.authority.kotlin-docs-snapshot.locked"
+      ]
+    }
+  ],
+  "extraction": {
+    "body_storage": "digest-and-locator-context-digest-only",
+    "method": "locked-body-locator-context-digest",
+    "review_status": "automated-unreviewed",
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v1"
+  },
+  "fetch": {
+    "content_type": null,
+    "error_digest": "sha256:e39d44483e7884095c7a9224931a8ff4b6ce57a21bbf904729aed7f73ba183ca",
+    "fetched_bytes": null,
+    "fetched_digest": null,
+    "final_url": null,
+    "http_status": null,
+    "locked_digest_match": false,
+    "status": "failed"
+  },
+  "locked_source_digest": "sha256:3200d58d59e7ad08b9306a755aa0fd440b3a0264c7c3dc488cf3201d81fe54de",
+  "schema_version": 1,
+  "source_id": "kotlin-docs-snapshot",
+  "source_url": "https://github.com/JetBrains/kotlin-web-site/commit/135c79983f678c6367c5cc19eb5d8445eb3c95ce"
+}

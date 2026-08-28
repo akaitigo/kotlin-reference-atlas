@@ -2,7 +2,7 @@
   "schema_version": 1,
   "atlas_id": "kotlin-reference-atlas",
   "epoch": "2026-08-28",
-  "authority_lock_digest": "sha256:86f0ef4639aef0ccceec127c1455bec11ad7821e5b9da6b45de080d8dd63d836",
+  "authority_lock_digest": "sha256:3e21c001526a260e711f5b3c95ecc6cce76dc525317d71115bdaaf7f06d035de",
   "target_sets": [
     { "id": "authority", "title": "一次資料と公開Surface Inventory", "sequence": 1, "completion_required": true, "exit_criteria": ["対象Versionと一次資料のDigestが固定されていること", "Compilerとstdlibの対象Surfaceを機械的にInventoryできること"] },
     { "id": "semantics", "title": "言語Semanticsと型System", "sequence": 2, "completion_required": true, "exit_criteria": ["言語Semanticsを正常系と境界値のOracleで説明できること", "型Systemのvariance、Nothing、reified境界を実行またはcompileで検証できること"] },
@@ -20,6 +20,8 @@
   ],
   "targets": [
     { "id": "authority.source-lock", "title": "Kotlin 2.4.10 Authority Lock", "target_set": "authority", "kind": "compatibility", "requirement": "required", "state": "covered", "rationale": "再現対象を移動する最新版ではなく固定VersionとDigestへ束縛するために必要である。", "claim_ids": ["authority.source-lock-matches"], "evidence_ids": ["authority.source-lock-validation"], "exclusion": null },
+    { "id": "authority.locator-extraction", "title": "Authority本文Locator抽出とReview", "target_set": "authority", "kind": "capability", "requirement": "required", "state": "partial", "rationale": "既存reference edge分類とAuthority本文全体の抽出を分離し、本文を保存せず未取得・stale・Human reviewを検証するために必要である。", "claim_ids": ["authority.locator-inventory-is-copyright-safe-and-incomplete"], "evidence_ids": ["authority.locator-validation"], "exclusion": null },
+    { "id": "authority.body-denominator", "title": "Authority unique documentとraw anchor候補", "target_set": "authority", "kind": "capability", "requirement": "required", "state": "partial", "rationale": "固定Git tree全体を本文非保存のraw anchor候補として列挙し、人手decision前にSemantic SurfaceやDepthへ算入しないために必要である。", "claim_ids": ["authority.raw-anchor-denominator-is-pending-human"], "evidence_ids": ["authority.body-inventory-validation"], "exclusion": null },
     { "id": "inventory.kotlin-public-surface", "title": "Compilerとstdlib公開Surface Inventory", "target_set": "authority", "kind": "capability", "requirement": "required", "state": "covered", "rationale": "固定ArtifactのClassとPackageを自動列挙し未分類Surfaceを検知するために必要である。", "claim_ids": ["inventory.locked-surface-enumerated"], "evidence_ids": ["inventory.public-surface"], "exclusion": null },
     { "id": "semantics.language-core", "title": "言語Semantics実行Oracle", "target_set": "semantics", "kind": "concept", "requirement": "required", "state": "covered", "rationale": "sealed型、smart cast、delegate、Sequenceを構文説明ではなく実行結果で検証する必要がある。", "claim_ids": ["semantics.exhaustive-and-lazy"], "evidence_ids": ["semantics.language-types"], "exclusion": null },
     { "id": "semantics.type-system", "title": "型System境界", "target_set": "semantics", "kind": "capability", "requirement": "required", "state": "covered", "rationale": "variance、Nothing、reified型はAPI安全性とRuntime型判断の基礎なのでcompileと実行の両面が必要である。", "claim_ids": ["types.variance-nothing-reified"], "evidence_ids": ["semantics.language-types"], "exclusion": null },

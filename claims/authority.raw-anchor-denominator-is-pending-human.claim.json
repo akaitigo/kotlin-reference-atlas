@@ -1,0 +1,28 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "authority.body-denominator",
+  "id": "authority.raw-anchor-denominator-is-pending-human",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "固定Git treeからstable IDを再計算し、7 unique document・全raw anchor pending-human・Surface昇格0・Depth credit 0・専用baseline非後退を検証すること"
+      ],
+      "id": "authority.raw-anchor-denominator-and-promotion-boundary",
+      "statement": "固定Git treeからstable IDを再計算し、7 unique document・全raw anchor pending-human・Surface昇格0・Depth credit 0・専用baseline非後退を検証すること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-spec-snapshot",
+    "kotlin-docs-snapshot",
+    "kotlin-keep-snapshot",
+    "kotlin-compiler-source-2.4.10",
+    "kotlin-stdlib-source-2.4.10",
+    "kotlin-native-source-2.4.10",
+    "kotlinx-coroutines-source-1.11.0",
+    "kotlinx-serialization-source-snapshot",
+    "gradle-source-9.5.0"
+  ],
+  "statement": "9 Kotlin Authority Sourceを7 unique Git documentへ正規化し、固定selectorで列挙したraw anchor候補は全件pending-humanとし、decision前はSemantic Surface・Atomic behavior・Depth達成へ算入しない。",
+  "status": "accepted"
+}

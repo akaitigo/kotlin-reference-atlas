@@ -1,0 +1,20 @@
+schema_version: 2
+atlas_id: kotlin-reference-atlas
+baseline:
+  path: baselines/definitive-c0e9b1c.non-regression-baseline.json
+  digest: sha256:327a2e2cf6ba7fb3688fc9635da5fd04e72b741b1ee230a47963175d8d8a8e32
+replacements:
+  - collection: tests_labs
+    old_id: test-harness:scripts/verify.py
+    new_ids: [test-harness:scripts/verify.py]
+    equivalence: equal-or-stronger
+    reason: 既存全Gateを維持した同一HarnessへCore標準非後退とcopyright-safe Authority locator検証を追加する強化である。
+    execution_proof_evidence_ids: [workbench.jvm-runtime]
+    migration_evidence_ids: [evolution.compatibility-migration]
+  - collection: sources
+    old_id: reference-atlas-core-definitive-v2
+    new_ids: [reference-atlas-core-definitive-v2]
+    equivalence: equal-or-stronger
+    reason: Core v2のRuntime代替拒否を維持し、Authority Extraction独立Gateを追加したfeature tipへ固定更新する。
+    execution_proof_evidence_ids: [workbench.jvm-runtime]
+    migration_evidence_ids: [evolution.compatibility-migration]

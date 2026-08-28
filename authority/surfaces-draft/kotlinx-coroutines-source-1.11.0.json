@@ -1,0 +1,51 @@
+{
+  "candidate_surfaces": [
+    {
+      "candidate_behavior_id": "candidate.authority.kotlinx-coroutines-source-1.11.0",
+      "capability_id": "authority.locator-extraction",
+      "claim_id": "authority.locator-inventory-is-copyright-safe-and-incomplete",
+      "classification": "candidate-included-unreviewed",
+      "classification_basis": "domain-contract-projection-unreviewed",
+      "context_digest": null,
+      "context_end": null,
+      "context_start": null,
+      "context_unit": null,
+      "domain_reference_metadata_digest": "sha256:5c05359e10f2714bc7142bc2ec6ad96d84c77ed0cea1f7b07857c04f2d9c8c53",
+      "edge_id": "edge.authority.kotlinx-coroutines-source-1.11.0",
+      "heading_digest": null,
+      "locator": "document-root",
+      "locator_status": "not-evaluated-fetch-failed",
+      "pattern_id": "authority/kotlinx-coroutines-source-1-11-0",
+      "pattern_kind": "atomic",
+      "reference_url": "https://github.com/Kotlin/kotlinx.coroutines/commit/8564f65764d3d05893cec026c6e94250e2b23874",
+      "source_id": "kotlinx-coroutines-source-1.11.0",
+      "surface_ids": [
+        "provenance-rights"
+      ],
+      "target_id": "authority.locator-extraction",
+      "variant_ids": [
+        "variant.authority.kotlinx-coroutines-source-1.11.0.locked"
+      ]
+    }
+  ],
+  "extraction": {
+    "body_storage": "digest-and-locator-context-digest-only",
+    "method": "locked-body-locator-context-digest",
+    "review_status": "automated-unreviewed",
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v1"
+  },
+  "fetch": {
+    "content_type": null,
+    "error_digest": "sha256:581eeafec0471bc5b9583c7b97d45c9e994116e7aeea6f0c1f7307e174a0b705",
+    "fetched_bytes": null,
+    "fetched_digest": null,
+    "final_url": null,
+    "http_status": null,
+    "locked_digest_match": false,
+    "status": "failed"
+  },
+  "locked_source_digest": "sha256:ff25c4fd2855309cc047a17136f350579a3561e58c10515251063b81b8b8afef",
+  "schema_version": 1,
+  "source_id": "kotlinx-coroutines-source-1.11.0",
+  "source_url": "https://github.com/Kotlin/kotlinx.coroutines/commit/8564f65764d3d05893cec026c6e94250e2b23874"
+}

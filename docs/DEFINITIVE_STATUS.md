@@ -30,7 +30,9 @@ JVM実Runtime Test 8件と集約Claim／Artifact Evidenceは接続済みです�
 
 FE側の判定は1軸satisfied、17軸partialで`incomplete`です。KotlinはFEのTarget／Test／Capture等の絶対件数や比率を閾値にせず、69 Authority由来Behaviorと適用Scenario／Runtime／Profileを母集団にします。現在のKotlin判定も1軸satisfied、17軸partial、30件の軸別Gap参照です。`scripts/verify_fe_parity.py`は18軸ID、正本commitとdigest、Kotlin denominator、Behavior×Scenario×Profile×Proof×専用Artifact粒度、Evidence、Gap、非後退を検証し、Gapがある状態での`complete`またはCertificate発行を拒否します。
 
-Authority locator抽出の方法論は`frontend-behavior-atlas` commit `cabf687bab769b17928d950acc416f3f77eb4ca3`へ別途digest固定しています。`authority/locator-extraction.json`は第三者本文を保存せず、URL、Source metadata、digest、locator offsetだけを許可します。現状は69件の既存reference edge分類に対し、本文全体の抽出候補0、Source body評価deferred 9、stale 0、Human review 0です。`scripts/verify_authority_locators.py`は本文field混入を拒否し、この未完状態を再集計します。本文全体のSurface denominatorが閉じるまで`authority-body-digestion`は`partial`です。
+Authority locator抽出の方法論は`frontend-behavior-atlas` commit `cabf687bab769b17928d950acc416f3f77eb4ca3`へdigest固定し、Core v2はcommit `1ea027babf3a8d6720ac617c56988e447695ba63`の独立Authority Extraction Gateを使用します。`authority/locator-extraction.json`とCore用`authority/extraction.snapshot.json`は第三者本文を保存せず、URL、Source metadata、digest、locator metadataだけを許可します。既存69 reference edge分類とAuthority本文全体の網羅抽出は別判定です。
+
+Authority denominator方式は`frontend-behavior-atlas` commit `841ec2fa399606a10305021a8bcd396713b8cee5`へ別途digest固定しています。Kotlinでは9 Sourceを7 unique Git documentへ正規化し、固定commit treeの`repository-root`と全`tracked-blob`から146146 raw anchor候補を列挙しました。本文は取得・保存せず、stable ID、tree/source/tool digest、stale境界を保持します。候補は全件`pending-human`、Human review 0、Surface昇格0です。専用baselineは全stable IDを固定し、Mappingなしの削除・置換を拒否します。raw anchor件数はSemantic Surface、Atomic behavior、18 Depth軸の達成へ算入しません。
 
 ## Completion禁止条件
 
@@ -47,6 +49,8 @@ Authority locator抽出の方法論は`frontend-behavior-atlas` commit `cabf687b
 ## 非後退条件
 
 公開main `e42f23d`をBaselineとして、28 Target、25 Claim、27 Proof、24 Evidence、8 Source、18 Skill Eval、34実行Test case、56 Assertion、JVM／JS／Wasm／Native compile task、macOS／Ubuntu CIを維持します。`scripts/verify_non_regression.py`が削除、格下げ、skip、Scope外退避、Evidence command置換を検出した場合、Definitive作業は未完のまま失敗します。
+
+Core v2標準の`non-regression.yaml`は、この公開main非後退を通過したDCO commit `c0e9b1c60768f606221f6a3ef0556052a8b5d0e9`を追加anchorとして固定します。Core生成baselineは29 Claim、31 Proof、28 Evidence、18 Source、21 Skill Eval、30 Targetを保持し、同一Harnessの変更には実Runtime ProofとMigration Evidenceを要求します。公開main baselineを置換するものではなく、二層を両方通します。
 
 ## 既知の外部条件
 

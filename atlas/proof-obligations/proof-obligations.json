@@ -4,6 +4,7 @@
   "proof_obligations": [
     { "id": "authority.digest-equality", "oracle_ja": "SHA-256を再計算しCoverage値と完全一致すること", "lab": "scripts/verify.py" },
     { "id": "authority.locator-storage-and-incompleteness", "oracle_ja": "本文fieldを再帰的に拒否し、9 Sourceのdeferred、69 reference edge、0 exhaustive Surface、0 Human reviewを実体から再集計すること", "lab": "scripts/verify_authority_locators.py" },
+    { "id": "authority.raw-anchor-denominator-and-promotion-boundary", "oracle_ja": "固定Git treeからstable IDを再計算し、7 unique document・全raw anchor pending-human・Surface昇格0・Depth credit 0・専用baseline非後退を検証すること", "lab": "scripts/verify_authority_body_inventory.py" },
     { "id": "inventory.artifact-enumeration", "oracle_ja": "固定stdlibとCompiler ArtifactのDigest、Class数、Package数がInventoryへ記録されること", "lab": "scripts/inventory.py" },
     { "id": "semantics.language-oracles", "oracle_ja": "sealed分岐、smart cast、delegate、Sequenceの全JUnit Oracleがpassすること", "lab": "labs/semantics" },
     { "id": "types.runtime-and-compile-oracles", "oracle_ja": "variance、Nothing、reified型のcompileとruntime assertionがpassすること", "lab": "labs/semantics" },

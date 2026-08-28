@@ -1,6 +1,6 @@
 {
   "artifact": {
-    "digest": "sha256:7b5f6e5d000bb3141a8a64717b8977df40a649fc577ec5ca5821d377b911577a",
+    "digest": "sha256:1c0ede19075e488e444b866b859ef9aab2746726ecc590b6e2fcf9ffb5eb5e8b",
     "media_type": "application/json",
     "size_bytes": 453,
     "uri": "evidence/artifacts/manifest-validation.json"
@@ -15,13 +15,13 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:566dbe3b191fc911882faa367394a507a5b8f08913d10eb54007294a52eb4da8",
+  "harness_digest": "sha256:39c228e102abd9d21036a900b7bad2d9575f06eec297796914ed230143f2f3f5",
   "harness_path": "atlas/capabilities/capabilities.json",
   "id": "authority.source-lock-validation",
   "kind": "conformance",
   "producer": "kotlin-atlas-verifier",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:86f0ef4639aef0ccceec127c1455bec11ad7821e5b9da6b45de080d8dd63d836",
+  "source_digest": "sha256:3e21c001526a260e711f5b3c95ecc6cce76dc525317d71115bdaaf7f06d035de",
   "verdict": "pass"
 }

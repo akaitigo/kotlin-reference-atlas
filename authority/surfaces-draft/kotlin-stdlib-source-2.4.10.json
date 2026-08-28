@@ -1,0 +1,51 @@
+{
+  "candidate_surfaces": [
+    {
+      "candidate_behavior_id": "candidate.authority.kotlin-stdlib-source-2.4.10",
+      "capability_id": "authority.locator-extraction",
+      "claim_id": "authority.locator-inventory-is-copyright-safe-and-incomplete",
+      "classification": "candidate-included-unreviewed",
+      "classification_basis": "domain-contract-projection-unreviewed",
+      "context_digest": null,
+      "context_end": null,
+      "context_start": null,
+      "context_unit": null,
+      "domain_reference_metadata_digest": "sha256:22e810e7aeba647427c295f24aa6a22a1ce191dd6525e63580b310d7ff19adee",
+      "edge_id": "edge.authority.kotlin-stdlib-source-2.4.10",
+      "heading_digest": null,
+      "locator": "document-root",
+      "locator_status": "not-evaluated-fetch-failed",
+      "pattern_id": "authority/kotlin-stdlib-source-2-4-10",
+      "pattern_kind": "atomic",
+      "reference_url": "https://github.com/JetBrains/kotlin/commit/5687445832cd835b4509b9fbc264cdf1a8201093",
+      "source_id": "kotlin-stdlib-source-2.4.10",
+      "surface_ids": [
+        "provenance-rights"
+      ],
+      "target_id": "authority.locator-extraction",
+      "variant_ids": [
+        "variant.authority.kotlin-stdlib-source-2.4.10.locked"
+      ]
+    }
+  ],
+  "extraction": {
+    "body_storage": "digest-and-locator-context-digest-only",
+    "method": "locked-body-locator-context-digest",
+    "review_status": "automated-unreviewed",
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v1"
+  },
+  "fetch": {
+    "content_type": null,
+    "error_digest": "sha256:139ee0bea573582fc942339fa908118f3d7270cd41ac4f1f4ddd83c18e3324a5",
+    "fetched_bytes": null,
+    "fetched_digest": null,
+    "final_url": null,
+    "http_status": null,
+    "locked_digest_match": false,
+    "status": "failed"
+  },
+  "locked_source_digest": "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902",
+  "schema_version": 1,
+  "source_id": "kotlin-stdlib-source-2.4.10",
+  "source_url": "https://github.com/JetBrains/kotlin/commit/5687445832cd835b4509b9fbc264cdf1a8201093"
+}

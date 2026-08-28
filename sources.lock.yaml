@@ -19,10 +19,10 @@
       "id": "reference-atlas-core-definitive-v2",
       "kind": "source",
       "title": "Reference Atlas Core Definitive Gate v2",
-      "url": "https://github.com/akaitigo/reference-atlas-core/commit/219dee20e23811195f541bbce71a730237a27231",
-      "version": "git:219dee20e23811195f541bbce71a730237a27231",
+      "url": "https://github.com/akaitigo/reference-atlas-core/commit/1ea027babf3a8d6720ac617c56988e447695ba63",
+      "version": "git:1ea027babf3a8d6720ac617c56988e447695ba63",
       "retrieved_at": "2026-08-28",
-      "digest": "sha256:dbbed6954c09e887e8a6717039ed64f9fa1fbc250ef678929082c2331e6aa0e4",
+      "digest": "sha256:e44891f765150a0c84c38cdf09483df4e49c146b360a8acb324d040ac89aff69",
       "license": "Apache-2.0",
       "redistribution": "metadata-only"
     },

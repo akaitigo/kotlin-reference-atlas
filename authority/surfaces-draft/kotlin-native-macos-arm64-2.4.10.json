@@ -1,0 +1,51 @@
+{
+  "candidate_surfaces": [
+    {
+      "candidate_behavior_id": "candidate.authority.kotlin-native-macos-arm64-2.4.10",
+      "capability_id": "authority.locator-extraction",
+      "claim_id": "authority.locator-inventory-is-copyright-safe-and-incomplete",
+      "classification": "candidate-included-unreviewed",
+      "classification_basis": "domain-contract-projection-unreviewed",
+      "context_digest": null,
+      "context_end": null,
+      "context_start": null,
+      "context_unit": null,
+      "domain_reference_metadata_digest": "sha256:5e7d2e11fb772cb9bf8ac1bc40baf1880f5d1f03ff60112db53a6d7ac0d213b8",
+      "edge_id": "edge.authority.kotlin-native-macos-arm64-2.4.10",
+      "heading_digest": null,
+      "locator": "document-root",
+      "locator_status": "not-evaluated-fetch-failed",
+      "pattern_id": "authority/kotlin-native-macos-arm64-2-4-10",
+      "pattern_kind": "atomic",
+      "reference_url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-native-prebuilt/2.4.10/kotlin-native-prebuilt-2.4.10-macos-aarch64.tar.gz",
+      "source_id": "kotlin-native-macos-arm64-2.4.10",
+      "surface_ids": [
+        "provenance-rights"
+      ],
+      "target_id": "authority.locator-extraction",
+      "variant_ids": [
+        "variant.authority.kotlin-native-macos-arm64-2.4.10.locked"
+      ]
+    }
+  ],
+  "extraction": {
+    "body_storage": "digest-and-locator-context-digest-only",
+    "method": "locked-body-locator-context-digest",
+    "review_status": "automated-unreviewed",
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v1"
+  },
+  "fetch": {
+    "content_type": null,
+    "error_digest": "sha256:6bcae5de29d549a9cf20b6935d9bb7d1c0e470ff63b382597c0718655287625d",
+    "fetched_bytes": null,
+    "fetched_digest": null,
+    "final_url": null,
+    "http_status": null,
+    "locked_digest_match": false,
+    "status": "failed"
+  },
+  "locked_source_digest": "sha256:55ded039bb56a69aec9df354a92b42df9e916104e3c53d8d9852d9cc6617ed9d",
+  "schema_version": 1,
+  "source_id": "kotlin-native-macos-arm64-2.4.10",
+  "source_url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-native-prebuilt/2.4.10/kotlin-native-prebuilt-2.4.10-macos-aarch64.tar.gz"
+}

@@ -21,6 +21,26 @@
       ]
     },
     {
+      "digest": "sha256:6283b4d8696c390e7899a7d14b96f2dadeb591e56d6d12b5d6d3bcc4d3d3da2b",
+      "generated_by": "python3 scripts/verify_authority_body_inventory.py",
+      "kind": "generated",
+      "license": "Apache-2.0",
+      "path": "evidence/artifacts/authority-body-inventory-validation.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
+      "digest": "sha256:57b1dce59189963c5fbb527ee4279f5ce781102859d2d51a386f504bfdb8ce94",
+      "generated_by": "python3 scripts/generate_authority_locators.py && python3 scripts/verify_authority_locators.py",
+      "kind": "generated",
+      "license": "Apache-2.0",
+      "path": "evidence/artifacts/authority-locator-validation.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
       "digest": "sha256:3ccc910e53ecc505a50f522eb7baf59809a6d2b4f54fd1d45b6e73e06ae5cb9a",
       "generated_by": "python3 scripts/inspect_bytecode.py",
       "kind": "generated",
@@ -61,7 +81,7 @@
       ]
     },
     {
-      "digest": "sha256:7b5f6e5d000bb3141a8a64717b8977df40a649fc577ec5ca5821d377b911577a",
+      "digest": "sha256:1c0ede19075e488e444b866b859ef9aab2746726ecc590b6e2fcf9ffb5eb5e8b",
       "generated_by": "atlas validate atlas.yaml mastery.yaml coverage.yaml sources.lock.yaml skill.package.yaml && atlas audit .",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -71,7 +91,7 @@
       ]
     },
     {
-      "digest": "sha256:89bcc4987f563c32f1e78aee03ed4bdfef5a65b955004a64d1b753b7521c0269",
+      "digest": "sha256:59aad693ca0be3bac274347376de0f4b9a074eefdf3c568cf6355ea57ef6572f",
       "generated_by": "python3 scripts/verify_non_regression.py",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -101,7 +121,7 @@
       ]
     },
     {
-      "digest": "sha256:0d43fdf5408420e0c9ae50eaec68af5fb285753be3dc79d6c4569b61fd7bae51",
+      "digest": "sha256:3707364314ccd05a69276711292fb40013f5030a0d6f7260aa228b0f22bad218",
       "generated_by": "python3 scripts/verify.py",
       "kind": "generated",
       "license": "Apache-2.0",

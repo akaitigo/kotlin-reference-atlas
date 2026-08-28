@@ -3,9 +3,11 @@ atlas_id: kotlin-reference-atlas
 epoch: "2026-08-28"
 completion_class: subject-definitive
 surface_inventory: surface.inventory.yaml
+authority_extraction: authority/extraction.snapshot.json
 verification_matrix: verification.matrix.yaml
 depth_parity: depth.parity.yaml
 skill_eval: evals/kotlin-reference-router.definitive-skill-eval.json
+non_regression: non-regression.yaml
 certificate: evidence/definitive-certificate.json
 historical_certificates:
   - path: evidence/history/v0.2.0/completion-certificate.json

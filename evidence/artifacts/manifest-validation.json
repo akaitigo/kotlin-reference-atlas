@@ -3,7 +3,7 @@
   "audit_output": "最終GateでCore auditを再実行する",
   "authority_artifacts": 9,
   "authority_behaviors": 69,
-  "authority_lock_digest": "sha256:55e1c7c88ce3365af3be0fff625230cd7906e641b1548706b64bece274ba46b4",
+  "authority_lock_digest": "sha256:3e21c001526a260e711f5b3c95ecc6cce76dc525317d71115bdaaf7f06d035de",
   "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
   "epoch": "2026-08-28",
   "mastery_outcomes": 8,

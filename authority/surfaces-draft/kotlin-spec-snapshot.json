@@ -1,0 +1,51 @@
+{
+  "candidate_surfaces": [
+    {
+      "candidate_behavior_id": "candidate.authority.kotlin-spec-snapshot",
+      "capability_id": "authority.locator-extraction",
+      "claim_id": "authority.locator-inventory-is-copyright-safe-and-incomplete",
+      "classification": "candidate-included-unreviewed",
+      "classification_basis": "domain-contract-projection-unreviewed",
+      "context_digest": null,
+      "context_end": null,
+      "context_start": null,
+      "context_unit": null,
+      "domain_reference_metadata_digest": "sha256:3104127fcccd8b6dc48a4559633e41fd35e6f66d56ae340ca1388d6cf57d5be4",
+      "edge_id": "edge.authority.kotlin-spec-snapshot",
+      "heading_digest": null,
+      "locator": "document-root",
+      "locator_status": "not-evaluated-fetch-failed",
+      "pattern_id": "authority/kotlin-spec-snapshot",
+      "pattern_kind": "atomic",
+      "reference_url": "https://github.com/Kotlin/kotlin-spec/commit/2f7aa0524ec27e788dfacd550f144809f2e0254c",
+      "source_id": "kotlin-spec-snapshot",
+      "surface_ids": [
+        "provenance-rights"
+      ],
+      "target_id": "authority.locator-extraction",
+      "variant_ids": [
+        "variant.authority.kotlin-spec-snapshot.locked"
+      ]
+    }
+  ],
+  "extraction": {
+    "body_storage": "digest-and-locator-context-digest-only",
+    "method": "locked-body-locator-context-digest",
+    "review_status": "automated-unreviewed",
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v1"
+  },
+  "fetch": {
+    "content_type": null,
+    "error_digest": "sha256:2ce75f8299cf926ffe2e023be01d3a04f7ae31c25f7523cbbbcedec50ee7ec45",
+    "fetched_bytes": null,
+    "fetched_digest": null,
+    "final_url": null,
+    "http_status": null,
+    "locked_digest_match": false,
+    "status": "failed"
+  },
+  "locked_source_digest": "sha256:2f54cc199a31ef55ccce24d1c068235be46d1f74f48d84a8230929d4a6184af4",
+  "schema_version": 1,
+  "source_id": "kotlin-spec-snapshot",
+  "source_url": "https://github.com/Kotlin/kotlin-spec/commit/2f7aa0524ec27e788dfacd550f144809f2e0254c"
+}

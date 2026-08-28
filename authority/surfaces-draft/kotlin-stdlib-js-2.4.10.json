@@ -1,0 +1,51 @@
+{
+  "candidate_surfaces": [
+    {
+      "candidate_behavior_id": "candidate.authority.kotlin-stdlib-js-2.4.10",
+      "capability_id": "authority.locator-extraction",
+      "claim_id": "authority.locator-inventory-is-copyright-safe-and-incomplete",
+      "classification": "candidate-included-unreviewed",
+      "classification_basis": "domain-contract-projection-unreviewed",
+      "context_digest": null,
+      "context_end": null,
+      "context_start": null,
+      "context_unit": null,
+      "domain_reference_metadata_digest": "sha256:79f7f9073fb794ac3598e10fa6056dde0698507a9f1b53dd217b3fc266063e45",
+      "edge_id": "edge.authority.kotlin-stdlib-js-2.4.10",
+      "heading_digest": null,
+      "locator": "document-root",
+      "locator_status": "not-evaluated-fetch-failed",
+      "pattern_id": "authority/kotlin-stdlib-js-2-4-10",
+      "pattern_kind": "atomic",
+      "reference_url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-js/2.4.10/kotlin-stdlib-js-2.4.10.klib",
+      "source_id": "kotlin-stdlib-js-2.4.10",
+      "surface_ids": [
+        "provenance-rights"
+      ],
+      "target_id": "authority.locator-extraction",
+      "variant_ids": [
+        "variant.authority.kotlin-stdlib-js-2.4.10.locked"
+      ]
+    }
+  ],
+  "extraction": {
+    "body_storage": "digest-and-locator-context-digest-only",
+    "method": "locked-body-locator-context-digest",
+    "review_status": "automated-unreviewed",
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v1"
+  },
+  "fetch": {
+    "content_type": null,
+    "error_digest": "sha256:d711d30035075f7b2a1ce9ac0075b69c2de314305fe3669f5adfc79303295dd0",
+    "fetched_bytes": null,
+    "fetched_digest": null,
+    "final_url": null,
+    "http_status": null,
+    "locked_digest_match": false,
+    "status": "failed"
+  },
+  "locked_source_digest": "sha256:1b8208cd3ec7c6106261fd1f4b37ea11a075ea07d9e5a2231326a5703038a632",
+  "schema_version": 1,
+  "source_id": "kotlin-stdlib-js-2.4.10",
+  "source_url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-js/2.4.10/kotlin-stdlib-js-2.4.10.klib"
+}
