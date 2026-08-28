@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: akaitigo/reference-atlas-core
-          ref: d5c0a6ce757fd5f43af837edd26f55c7325b811e
+          ref: b32f6afe888e2e07eef0e2e016f6f7d139582159
           path: .atlas-core
 
       - name: JDK 17を設定
