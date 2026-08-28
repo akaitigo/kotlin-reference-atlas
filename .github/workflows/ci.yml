@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Subject Atlasをcheckout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Reference Atlas Core v1を固定commitでcheckout
         uses: actions/checkout@v4

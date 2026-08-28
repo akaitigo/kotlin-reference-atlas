@@ -31,7 +31,7 @@
       ]
     },
     {
-      "digest": "sha256:90f81b6f6f115530a37f1c4e73a8e9f42da07ec8fd717ec3d8372bb7cb4ae406",
+      "digest": "sha256:600848bc6d3603a51cb0b48287556dd981fb1cc016df7d358f0341e8ef7eb025",
       "generated_by": "scripts/container-verify.sh",
       "kind": "generated",
       "license": "Apache-2.0",
