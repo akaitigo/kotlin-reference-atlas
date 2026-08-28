@@ -1,8 +1,8 @@
 # Kotlin 技術実証アトラス
 
-`kotlin-reference-atlas` は、Kotlinの仕様・実装・Build・並行処理・相互運用に関する技術的主張を、固定した一次資料と再実行可能なEvidenceへ接続するRepositoryです。
+`kotlin-reference-atlas` は、Kotlinの言語Semanticsと型、Coroutine/Flow、JVM/Native/JS/Wasm、Interop、Compiler/Runtime、Gradle/Toolchain、Testing、Performance、Security、Failure/Debugging、Compatibility/Migration、Operationsに関する技術的主張を、固定した一次資料と再実行可能なEvidenceへ接続するRepositoryです。
 
-初回Coverage Epochは `2026-08-28`、対象製品VersionはKotlin `2.4.10`です。現時点の対象はKotlin/JVM、Gradle 9.5.0、kotlinx.coroutines 1.11.0、Java consumer境界です。Kotlin全体の最終構想は維持しますが、未検証領域を完成済みとは扱いません。
+Coverage Epochは `2026-08-28`、対象製品VersionはKotlin `2.4.10`、Gradle `9.5.0`、kotlinx.coroutines `1.11.0`です。実行対象はJVM、Node.js上のKotlin/JSとKotlin/Wasm、macOS arm64向けNative KLIB、Java consumer境界です。
 
 ## 検証
 
@@ -16,13 +16,13 @@ python3 scripts/verify.py
 
 ## 状態
 
-`status: incomplete` です。Local profileのLabsとSkill Evalは実装しますが、Container profile、Kotlin公開Surface全Inventory、KMP／Native／JS／Wasm、完全なSBOM、署名済みCompletion Certificateは未完了です。
+Required Coverageは`covered`または再評価日付き`infeasible`で閉じています。Native executable実行だけはFull Xcode不在のため`infeasible`で、Native test KLIB compileを代替Evidenceとします。Completion CertificateとRelease固定が完了するまで`status: incomplete`を維持します。
 
 ## 正本
 
 - Manifest：`atlas.yaml`、`mastery.yaml`、`sources.lock.yaml`、`coverage.yaml`、`skill.package.yaml`
 - Capability／Claim：`atlas/`
-- 実行証拠：`labs/`、`scripts/verify.py`、`evidence/`
+- 実行証拠：`labs/`、`scripts/verify.py`、`scripts/inventory.py`、`scripts/inspect_bytecode.py`、`scripts/generate_sbom.py`、`evidence/`
 - Agent Router：`.agents/skills/kotlin-reference-router/SKILL.md`
 - 移行対応：`migrations/core-v1.yaml`
 

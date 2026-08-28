@@ -5,13 +5,13 @@
   "promise": "Kotlinについて、初学者が言語とPlatformの原理を理解し、実務者が方式を選び構築し、運用者が観測・診断・復旧し、保守者が互換性を守って進化させ、Agentへ安全に委任できるまでを、固定した一次資料と再実行可能な証拠へ接続して提供する。",
   "audiences": ["learner", "practitioner", "architect", "operator", "maintainer", "reviewer", "educator", "agent"],
   "outcomes": [
-    { "id": "understand", "title": "Kotlinの原理、機構、境界を説明できる", "target_sets": ["authority", "language-platform", "concurrency"] },
-    { "id": "choose", "title": "制約とEvidenceから方式を選択できる", "target_sets": ["language-platform", "build-tooling", "concurrency"] },
-    { "id": "build", "title": "Kotlin実装とBuildを構築・統合できる", "target_sets": ["language-platform", "build-tooling", "concurrency"] },
-    { "id": "verify", "title": "技術的主張を試験と証拠で検証できる", "target_sets": ["authority", "language-platform", "build-tooling", "concurrency", "operation"] },
-    { "id": "operate", "title": "Kotlin成果物を観測し安全に運用できる", "target_sets": ["concurrency", "operation", "publication"] },
-    { "id": "troubleshoot", "title": "失敗を再現し診断・復旧できる", "target_sets": ["build-tooling", "concurrency", "operation"] },
-    { "id": "evolve", "title": "互換性を保って移行・進化・廃止できる", "target_sets": ["authority", "language-platform", "build-tooling", "publication"] },
+    { "id": "understand", "title": "Kotlinの原理、機構、境界を説明できる", "target_sets": ["authority", "semantics", "platforms", "compiler-runtime", "concurrency"] },
+    { "id": "choose", "title": "制約とEvidenceから方式を選択できる", "target_sets": ["semantics", "platforms", "interop", "build-tooling", "concurrency", "performance-security"] },
+    { "id": "build", "title": "Kotlin実装とBuildを構築・統合できる", "target_sets": ["semantics", "platforms", "interop", "compiler-runtime", "build-tooling", "concurrency"] },
+    { "id": "verify", "title": "技術的主張を試験と証拠で検証できる", "target_sets": ["authority", "semantics", "platforms", "interop", "compiler-runtime", "build-tooling", "concurrency", "quality", "performance-security", "evolution", "operation"] },
+    { "id": "operate", "title": "Kotlin成果物を観測し安全に運用できる", "target_sets": ["build-tooling", "concurrency", "quality", "performance-security", "operation", "publication"] },
+    { "id": "troubleshoot", "title": "失敗を再現し診断・復旧できる", "target_sets": ["compiler-runtime", "build-tooling", "concurrency", "quality", "operation"] },
+    { "id": "evolve", "title": "互換性を保って移行・進化・廃止できる", "target_sets": ["authority", "semantics", "platforms", "interop", "build-tooling", "evolution", "publication"] },
     { "id": "delegate", "title": "Agentへ安全に委任しEvidenceでReviewできる", "target_sets": ["skill", "publication"] }
   ],
   "surfaces": [
@@ -20,7 +20,7 @@
       "title": "定義・目的・境界",
       "applicability": "required",
       "rationale": "Kotlin本体、公式基盤、周辺Framework、Platform別領域の境界を誤らず入口を選ぶために必要である。",
-      "target_sets": ["authority", "language-platform"],
+      "target_sets": ["authority", "semantics", "platforms"],
       "required_deliverables": ["concept", "decision"]
     },
     {
@@ -28,7 +28,7 @@
       "title": "言語原理・Runtime機構・Invariant",
       "applicability": "required",
       "rationale": "構文例だけでなく型表現、boxing、Coroutine階層、Compiler挙動の理由を説明するために必要である。",
-      "target_sets": ["language-platform", "concurrency"],
+      "target_sets": ["semantics", "platforms", "compiler-runtime", "concurrency"],
       "required_deliverables": ["concept", "lab"]
     },
     {
@@ -36,7 +36,7 @@
       "title": "Architecture・API・Build設計",
       "applicability": "required",
       "rationale": "言語機能、Module、Dependency、非同期境界、公開APIを保守可能な構造へ分解するために必要である。",
-      "target_sets": ["language-platform", "build-tooling", "concurrency"],
+      "target_sets": ["semantics", "platforms", "interop", "compiler-runtime", "build-tooling", "concurrency"],
       "required_deliverables": ["decision", "reference-implementation"]
     },
     {
@@ -44,7 +44,7 @@
       "title": "実装・構築・統合",
       "applicability": "required",
       "rationale": "説明した設計をKotlin source、Gradle build、相互運用consumerとして実際に構築するために必要である。",
-      "target_sets": ["language-platform", "build-tooling", "concurrency"],
+      "target_sets": ["semantics", "platforms", "interop", "compiler-runtime", "build-tooling", "concurrency"],
       "required_deliverables": ["reference-implementation", "lab"]
     },
     {
@@ -52,7 +52,7 @@
       "title": "試験・検証・Evidence",
       "applicability": "required",
       "rationale": "Compile、Runtime、失敗、相互運用、Buildの主張を反復可能なOracleで反証可能にするために必要である。",
-      "target_sets": ["authority", "language-platform", "build-tooling", "concurrency", "operation"],
+      "target_sets": ["authority", "semantics", "platforms", "interop", "compiler-runtime", "build-tooling", "concurrency", "quality", "performance-security", "evolution", "operation"],
       "required_deliverables": ["test", "evidence"]
     },
     {
@@ -60,7 +60,7 @@
       "title": "失敗・診断・回復",
       "applicability": "required",
       "rationale": "Compile failure、Dependency failure、Cancellation、Interop failureから安全に診断・復旧するために必要である。",
-      "target_sets": ["build-tooling", "concurrency", "operation"],
+      "target_sets": ["compiler-runtime", "build-tooling", "concurrency", "quality", "operation"],
       "required_deliverables": ["failure-catalog", "runbook", "evidence"]
     },
     {
@@ -68,7 +68,7 @@
       "title": "運用・Observability",
       "applicability": "required",
       "rationale": "BuildとRuntimeの状態、Coroutine failure、Version driftを観測し再現手順へ戻すために必要である。",
-      "target_sets": ["concurrency", "operation"],
+      "target_sets": ["build-tooling", "concurrency", "quality", "operation"],
       "required_deliverables": ["runbook", "evidence"]
     },
     {
@@ -76,7 +76,7 @@
       "title": "Security・Privacy・Safety",
       "applicability": "required",
       "rationale": "Dependency supply chain、相互運用境界、並行処理、公開成果物を安全に扱う判断が必要である。",
-      "target_sets": ["language-platform", "build-tooling", "concurrency", "publication"],
+      "target_sets": ["platforms", "interop", "build-tooling", "concurrency", "performance-security", "operation", "publication"],
       "required_deliverables": ["security-review", "test"]
     },
     {
@@ -84,7 +84,7 @@
       "title": "性能・容量・Build Cost",
       "applicability": "required",
       "rationale": "Allocation、Coroutine、Compiler、Gradle configurationのCostを測定し設計判断へ戻すために必要である。",
-      "target_sets": ["language-platform", "build-tooling", "concurrency", "operation"],
+      "target_sets": ["semantics", "platforms", "compiler-runtime", "build-tooling", "concurrency", "performance-security", "operation"],
       "required_deliverables": ["benchmark", "evidence"]
     },
     {
@@ -92,7 +92,7 @@
       "title": "互換性・相互運用・Integration",
       "applicability": "required",
       "rationale": "Kotlin、JVM、Java、Gradleと将来の各Platform consumerから見える契約差を検証するために必要である。",
-      "target_sets": ["authority", "language-platform", "build-tooling"],
+      "target_sets": ["authority", "platforms", "interop", "compiler-runtime", "build-tooling", "evolution"],
       "required_deliverables": ["test", "evidence"]
     },
     {
@@ -100,7 +100,7 @@
       "title": "移行・進化・廃止",
       "applicability": "required",
       "rationale": "Kotlin、KGP、Gradle、Library、言語機能の更新時にsource、binary、behavioral compatibilityを守るために必要である。",
-      "target_sets": ["authority", "language-platform", "build-tooling", "publication"],
+      "target_sets": ["authority", "semantics", "platforms", "interop", "build-tooling", "evolution", "publication"],
       "required_deliverables": ["migration-guide", "test"]
     },
     {
@@ -108,7 +108,7 @@
       "title": "選択・比較・Trade-off",
       "applicability": "required",
       "rationale": "類似する言語機能、並行処理方式、Build構成を条件、失敗、性能Costから比較するために必要である。",
-      "target_sets": ["language-platform", "build-tooling", "concurrency", "operation"],
+      "target_sets": ["semantics", "platforms", "compiler-runtime", "build-tooling", "concurrency", "quality", "performance-security", "evolution", "operation"],
       "required_deliverables": ["decision", "benchmark"]
     },
     {

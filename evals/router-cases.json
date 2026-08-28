@@ -1,10 +1,22 @@
 {
   "schema_version": 1,
   "cases": [
+    { "id": "semantics-design", "query": "sealed型とsmart castの設計をレビューしたい", "expected_disposition": "covered", "expected_capability_id": "semantics.language-core", "expected_outcome": "understand", "expected_surface": "foundations-mechanics" },
+    { "id": "types-implement", "query": "varianceとreifiedを使う型システム境界を実装したい", "expected_disposition": "covered", "expected_capability_id": "semantics.type-system", "expected_outcome": "build", "expected_surface": "implementation-construction" },
     { "id": "jvm-value-class", "query": "JVMのvalue classがboxingされる境界をレビューしたい", "expected_disposition": "covered", "expected_capability_id": "jvm.value-class-boundary", "expected_outcome": "understand", "expected_surface": "foundations-mechanics" },
-    { "id": "gradle-testkit", "query": "Gradle pluginをTestKitのconsumer buildで検証したい", "expected_disposition": "covered", "expected_capability_id": "gradle.plugin-consumer", "expected_outcome": "build", "expected_surface": "implementation-construction" },
-    { "id": "coroutine-cancellation", "query": "Coroutineの子失敗と兄弟キャンセル、例外伝播を診断したい", "expected_disposition": "covered", "expected_capability_id": "coroutines.structured-cancellation", "expected_outcome": "troubleshoot", "expected_surface": "failure-recovery" },
+    { "id": "multiplatform-review", "query": "commonTestをJVMとJSとWasmで実行してMultiplatform互換性を確認したい", "expected_disposition": "covered", "expected_capability_id": "platform.multiplatform-runtime", "expected_outcome": "verify", "expected_surface": "compatibility-integration" },
+    { "id": "native-compile", "query": "macosArm64のNative KLIB compileを検証したい", "expected_disposition": "covered", "expected_capability_id": "platform.native-compile", "expected_outcome": "build", "expected_surface": "implementation-construction" },
     { "id": "java-interop", "query": "JavaからKotlin APIのJvmOverloadsとThrowsを呼びたい", "expected_disposition": "covered", "expected_capability_id": "interop.java-consumer", "expected_outcome": "verify", "expected_surface": "compatibility-integration" },
+    { "id": "compiler-bytecode", "query": "javapでsuspendのContinuation signatureとbytecodeをレビューしたい", "expected_disposition": "covered", "expected_capability_id": "compiler.jvm-bytecode", "expected_outcome": "troubleshoot", "expected_surface": "failure-recovery" },
+    { "id": "gradle-testkit", "query": "Gradle pluginをTestKitのconsumer buildで検証したい", "expected_disposition": "covered", "expected_capability_id": "gradle.plugin-consumer", "expected_outcome": "build", "expected_surface": "implementation-construction" },
+    { "id": "toolchain-security", "query": "Gradle dependency lockとverification metadataでsupply chainを監査したい", "expected_disposition": "covered", "expected_capability_id": "gradle.toolchain-lock", "expected_outcome": "operate", "expected_surface": "security-privacy-safety" },
+    { "id": "coroutine-cancellation", "query": "Coroutineの子失敗と兄弟キャンセル、例外伝播を診断したい", "expected_disposition": "covered", "expected_capability_id": "coroutines.structured-cancellation", "expected_outcome": "troubleshoot", "expected_surface": "failure-recovery" },
+    { "id": "flow-diagnose", "query": "Flowのretry再収集とStateFlow、collector cancellationを診断したい", "expected_disposition": "covered", "expected_capability_id": "flow.pipeline-semantics", "expected_outcome": "troubleshoot", "expected_surface": "failure-recovery" },
+    { "id": "performance-review", "query": "benchmarkのsampleとmedianでKotlin性能計測をレビューしたい", "expected_disposition": "covered", "expected_capability_id": "performance.measurement-harness", "expected_outcome": "verify", "expected_surface": "performance-capacity-cost" },
+    { "id": "security-review", "query": "path traversalとallowlist、secret比較のSecurity Reviewをしたい", "expected_disposition": "covered", "expected_capability_id": "security.input-boundaries", "expected_outcome": "verify", "expected_surface": "security-privacy-safety" },
+    { "id": "migration", "query": "schema version 1から2へのcompatibility migrationを実装したい", "expected_disposition": "covered", "expected_capability_id": "evolution.schema-migration", "expected_outcome": "evolve", "expected_surface": "migration-evolution-deprecation" },
+    { "id": "operation-recovery", "query": "degraded状態からrecoveryするlifecycle Runbookを検証したい", "expected_disposition": "covered", "expected_capability_id": "operation.lifecycle-recovery", "expected_outcome": "operate", "expected_surface": "operations-observability" },
+    { "id": "sbom-review", "query": "SPDX SBOMがtransitive dependencyとpackage-lockを閉じるかReviewしたい", "expected_disposition": "covered", "expected_capability_id": "publication.complete-sbom", "expected_outcome": "delegate", "expected_surface": "provenance-rights" },
     { "id": "swift-export-gap", "query": "Kotlin NativeのSwift Exportを本番導入したい", "expected_disposition": "gap" },
     { "id": "ktor-gap", "query": "Ktor serverの全APIを監査したい", "expected_disposition": "gap" }
   ]

@@ -10,8 +10,8 @@ permissions:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
+    runs-on: macos-14
+    timeout-minutes: 45
     steps:
       - name: Subject Atlasをcheckout
         uses: actions/checkout@v4
@@ -32,6 +32,11 @@ jobs:
       - name: Gradle cacheを設定
         uses: gradle/actions/setup-gradle@v4
 
+      - name: Node 25を設定
+        uses: actions/setup-node@v4
+        with:
+          node-version: "25.2.1"
+
       - name: Core Schemaでatlas validate
         env:
           ATLAS_CORE_DIR: ${{ github.workspace }}/.atlas-core
@@ -45,4 +50,14 @@ jobs:
       - name: Local profileの実装Gateを検証
         env:
           ATLAS_CORE_DIR: ${{ github.workspace }}/.atlas-core
-        run: python3 scripts/verify.py
+        run: python3 scripts/verify.py --skip-container
+
+  container:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Subject Atlasをcheckout
+        uses: actions/checkout@v4
+
+      - name: Container profileをnetworkなしで再実行
+        run: scripts/container-verify.sh

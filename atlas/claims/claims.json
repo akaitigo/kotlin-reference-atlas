@@ -2,61 +2,30 @@
   "schema_version": 1,
   "atlas_id": "kotlin-reference-atlas",
   "claims": [
-    {
-      "id": "authority.source-lock-matches",
-      "capability_id": "authority.lock",
-      "statement_ja": "Coverage Manifestのauthority_lock_digestはsources.lock.yamlのbyte digestと一致する。",
-      "authority_source_ids": ["reference-atlas-core-v1"],
-      "proof_obligation_ids": ["authority.digest-equality"]
-    },
-    {
-      "id": "jvm.value-class-generic-boxing",
-      "capability_id": "jvm.value-class-boundary",
-      "statement_ja": "value classはsource-levelで別型を提供し、Anyを受けるgeneric境界ではwrapper objectとして観測される。",
-      "authority_source_ids": ["kotlin-compiler-2.4.10"],
-      "proof_obligation_ids": ["jvm.compile-type-separation", "jvm.runtime-generic-boxing"]
-    },
-    {
-      "id": "gradle.plugin-registers-probe-task",
-      "capability_id": "gradle.plugin-consumer",
-      "statement_ja": "Plugin ID dev.akaitigo.kotlin-atlas-probeを適用したconsumer buildはatlasProbe taskを実行できる。",
-      "authority_source_ids": ["gradle-9.5.0", "kotlin-compiler-2.4.10"],
-      "proof_obligation_ids": ["gradle.testkit-consumer"]
-    },
-    {
-      "id": "coroutines.child-failure-cancels-sibling",
-      "capability_id": "coroutines.structured-cancellation",
-      "statement_ja": "coroutineScope内の子Coroutine失敗は待機中の兄弟をcancelし、元の例外を親callerへ伝播する。",
-      "authority_source_ids": ["kotlinx-coroutines-core-jvm-1.11.0"],
-      "proof_obligation_ids": ["coroutines.sibling-finally", "coroutines.parent-exception"]
-    },
-    {
-      "id": "interop.java-overloads-and-throws",
-      "capability_id": "interop.java-consumer",
-      "statement_ja": "@JvmOverloadsで生成したoverloadと@Throwsで宣言した例外をJava source consumerがcompileし実行できる。",
-      "authority_source_ids": ["kotlin-compiler-2.4.10"],
-      "proof_obligation_ids": ["interop.java-source-consumer"]
-    },
-    {
-      "id": "operation.local-suite-reproducible",
-      "capability_id": "authority.lock",
-      "statement_ja": "Local profileでManifest、Lab、Skill、Rightsの全実装Gateを一Commandから再実行し正規化Artifactを生成できる。",
-      "authority_source_ids": ["reference-atlas-core-v1"],
-      "proof_obligation_ids": ["operation.single-entrypoint"]
-    },
-    {
-      "id": "skill.router-respects-coverage",
-      "capability_id": "skill.coverage-router",
-      "statement_ja": "RouterはCoverage内CapabilityへRouteし、Coverage外質問にはgapを返す。",
-      "authority_source_ids": ["reference-atlas-core-v1"],
-      "proof_obligation_ids": ["skill.route-and-gap-cases"]
-    },
-    {
-      "id": "publication.required-rights-files-present",
-      "capability_id": "authority.lock",
-      "statement_ja": "Apache-2.0 License、NOTICE、第三者Manifest、直接依存SBOMが存在し相互に整合する。",
-      "authority_source_ids": ["reference-atlas-core-v1"],
-      "proof_obligation_ids": ["publication.metadata-gate"]
-    }
+    { "id": "authority.source-lock-matches", "capability_id": "authority.lock", "statement_ja": "Coverage Manifestのauthority_lock_digestはsources.lock.yamlのbyte digestと一致する。", "authority_source_ids": ["reference-atlas-core-v1"], "proof_obligation_ids": ["authority.digest-equality"] },
+    { "id": "inventory.locked-surface-enumerated", "capability_id": "inventory.public-surface", "statement_ja": "固定Compilerとstdlib ArtifactのClass entry、Package、Digestを決定論的にInventoryできる。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["inventory.artifact-enumeration"] },
+    { "id": "semantics.exhaustive-and-lazy", "capability_id": "semantics.language-core", "statement_ja": "sealed型のexhaustive分岐、smart cast、delegate初期化、Sequence変換を実行可能なOracleで確認できる。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["semantics.language-oracles"] },
+    { "id": "types.variance-nothing-reified", "capability_id": "semantics.type-system", "statement_ja": "declaration-site variance、Nothingのsubtyping、reified runtime tokenが期待する型境界を保つ。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["types.runtime-and-compile-oracles"] },
+    { "id": "jvm.value-class-generic-boxing", "capability_id": "jvm.value-class-boundary", "statement_ja": "value classはsource-levelで別型を提供し、Anyを受けるgeneric境界ではwrapper objectとして観測される。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["jvm.compile-type-separation", "jvm.runtime-generic-boxing"] },
+    { "id": "platform.jvm-js-wasm-contract", "capability_id": "platform.multiplatform-runtime", "statement_ja": "同じcommonTestがJVM、Node.js上のJS、Node.js上のWasmで実行され、各actual実装へLinkする。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["platform.jvm-js-wasm-tests"] },
+    { "id": "platform.native-test-klib", "capability_id": "platform.native-compile", "statement_ja": "macOS arm64 Native向けcommonTestとactual実装がtest KLIBまでcompileする。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["platform.native-klib-compile"] },
+    { "id": "interop.java-overloads-and-throws", "capability_id": "interop.java-consumer", "statement_ja": "@JvmOverloadsで生成したoverloadと@Throwsで宣言した例外をJava source consumerがcompileし実行できる。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["interop.java-source-consumer"] },
+    { "id": "compiler.runtime-shapes-observable", "capability_id": "compiler.runtime-shapes", "statement_ja": "data class、capturing lambda、reified filter、suspend continuationのRuntime挙動を観測できる。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["compiler.runtime-tests"] },
+    { "id": "compiler.bytecode-state-machine", "capability_id": "compiler.jvm-bytecode", "statement_ja": "javap出力にdata class生成Member、captured field、suspend Continuation signatureが存在する。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["compiler.javap-inspection"] },
+    { "id": "gradle.plugin-registers-probe-task", "capability_id": "gradle.plugin-consumer", "statement_ja": "Plugin ID dev.akaitigo.kotlin-atlas-probeを適用したconsumer buildはatlasProbe taskを実行できる。", "authority_source_ids": ["gradle-9.5.0", "kotlin-compiler-2.4.10"], "proof_obligation_ids": ["gradle.testkit-consumer"] },
+    { "id": "gradle.toolchain-and-artifacts-locked", "capability_id": "gradle.toolchain-lock", "statement_ja": "Gradle Wrapper、全Project dependency lock、Artifact checksumが固定される。", "authority_source_ids": ["gradle-9.5.0", "kotlin-compiler-2.4.10"], "proof_obligation_ids": ["gradle.lock-and-verification"] },
+    { "id": "coroutines.child-failure-cancels-sibling", "capability_id": "coroutines.structured-cancellation", "statement_ja": "coroutineScope内の子Coroutine失敗は待機中の兄弟をcancelし、元の例外を親callerへ伝播する。", "authority_source_ids": ["kotlinx-coroutines-core-jvm-1.11.0"], "proof_obligation_ids": ["coroutines.sibling-finally", "coroutines.parent-exception"] },
+    { "id": "flow.retry-state-cancellation", "capability_id": "flow.pipeline-semantics", "statement_ja": "cold Flowの順序、retryによる再収集、StateFlow最新値、collector cancellationのcleanupを再現できる。", "authority_source_ids": ["kotlinx-coroutines-core-jvm-1.11.0"], "proof_obligation_ids": ["flow.pipeline-tests"] },
+    { "id": "testing.cross-surface-oracles", "capability_id": "quality.testing-oracles", "statement_ja": "正常、拒否、失敗、回復、互換性、Platform差を複数Test suiteのOracleで検証する。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["testing.multi-suite-pass"] },
+    { "id": "performance.harness-reports-median", "capability_id": "performance.measurement-harness", "statement_ja": "性能Harnessは複数sampleから正のMedian、sample数、結果checksumを生成する。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["performance.measurement-test"] },
+    { "id": "security.boundaries-reject-unsafe-input", "capability_id": "security.input-boundaries", "statement_ja": "非HTTPS、非許可Host、User info、Path traversalを拒否し、Secret byte列をMessageDigest.isEqualで比較する。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["security.negative-tests"] },
+    { "id": "failure.diagnostic-preserves-cause", "capability_id": "failure.diagnostics", "statement_ja": "Failure分類は入力・状態・予期せぬ失敗を区別し、root cause型を失わない。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["failure.diagnostic-test"] },
+    { "id": "migration.v1-v2-compatible", "capability_id": "evolution.schema-migration", "statement_ja": "Version 1と2を現行Modelへ移行し、未知Versionをsilent fallbackせず拒否する。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["migration.compatibility-test"] },
+    { "id": "operation.lifecycle-recovers", "capability_id": "operation.lifecycle-recovery", "statement_ja": "Service lifecycleはSTARTING、READY、DEGRADED、回復、STOPPEDの許可遷移を実行できる。", "authority_source_ids": ["kotlin-compiler-2.4.10"], "proof_obligation_ids": ["operation.lifecycle-test"] },
+    { "id": "operation.local-suite-reproducible", "capability_id": "operation.reproducible-profiles", "statement_ja": "Local profileでManifest、全Platform Lab、Skill、RightsのGateを一Commandから再実行し正規化Artifactを生成できる。", "authority_source_ids": ["reference-atlas-core-v1"], "proof_obligation_ids": ["operation.single-entrypoint"] },
+    { "id": "operation.container-suite-reproducible", "capability_id": "operation.reproducible-profiles", "statement_ja": "Container profileでHostのGradle cacheから独立してJVM必須Gateを再実行できる。", "authority_source_ids": ["reference-atlas-core-v1", "gradle-9.5.0"], "proof_obligation_ids": ["operation.container-entrypoint"] },
+    { "id": "publication.required-rights-files-present", "capability_id": "authority.lock", "statement_ja": "Apache-2.0 License、NOTICE、第三者Manifest、SPDX SBOMが存在し相互に整合する。", "authority_source_ids": ["reference-atlas-core-v1"], "proof_obligation_ids": ["publication.metadata-gate"] },
+    { "id": "publication.transitive-sbom-from-locks", "capability_id": "publication.complete-sbom", "statement_ja": "全Gradle lockとnpm package-lockのComponentがRoot SPDX SBOMへ決定論的に反映される。", "authority_source_ids": ["reference-atlas-core-v1", "gradle-9.5.0"], "proof_obligation_ids": ["publication.sbom-lock-closure"] },
+    { "id": "skill.router-respects-coverage", "capability_id": "skill.coverage-router", "statement_ja": "RouterはCoverage内CapabilityへRouteし、Coverage外質問にはgapを返す。", "authority_source_ids": ["reference-atlas-core-v1"], "proof_obligation_ids": ["skill.route-and-gap-cases"] }
   ]
 }

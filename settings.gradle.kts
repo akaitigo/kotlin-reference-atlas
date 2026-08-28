@@ -16,7 +16,12 @@ rootProject.name = "kotlin-reference-atlas"
 
 include(
     ":labs:jvm",
+    ":labs:semantics",
     ":labs:coroutines",
+    ":labs:flow",
     ":labs:interop",
     ":labs:gradle-plugin",
+    ":labs:multiplatform",
+    ":labs:compiler-runtime",
+    ":labs:engineering",
 )

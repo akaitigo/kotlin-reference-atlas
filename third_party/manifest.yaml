@@ -6,6 +6,8 @@
     { "id": "kotlin", "version": "2.4.10", "license": "Apache-2.0", "usage": "compiler, Gradle plugin, standard library", "redistribution": "not-bundled", "source": "https://github.com/JetBrains/kotlin" },
     { "id": "gradle", "version": "9.5.0", "license": "Apache-2.0", "usage": "build tool, Wrapper, TestKit", "redistribution": "wrapper-only", "source": "https://github.com/gradle/gradle" },
     { "id": "kotlinx-coroutines", "version": "1.11.0", "license": "Apache-2.0", "usage": "structured concurrency Lab", "redistribution": "not-bundled", "source": "https://github.com/Kotlin/kotlinx.coroutines" },
-    { "id": "junit", "version": "5.10.5", "license": "EPL-2.0", "usage": "JVM test engine", "redistribution": "not-bundled", "source": "https://github.com/junit-team/junit5" }
+    { "id": "junit", "version": "5.10.5", "license": "EPL-2.0", "usage": "JVM test engine", "redistribution": "not-bundled", "source": "https://github.com/junit-team/junit5" },
+    { "id": "nodejs", "version": "25.2.1", "license": "MIT", "usage": "Kotlin JS and Wasm test runtime", "redistribution": "not-bundled", "source": "https://github.com/nodejs/node" },
+    { "id": "eclipse-temurin", "version": "17", "license": "GPL-2.0-with-classpath-exception", "usage": "gradle:9.5.0-jdk17 container JVM", "redistribution": "container-base-only", "source": "https://github.com/adoptium/temurin-build" }
   ]
 }

@@ -2,223 +2,50 @@
   "schema_version": 1,
   "atlas_id": "kotlin-reference-atlas",
   "epoch": "2026-08-28",
-  "authority_lock_digest": "sha256:656a3c4f0687029c7b4113a2cd36b1640251da05b986900a2dddba4e299e2b33",
+  "authority_lock_digest": "sha256:fd978b99941851cad91ebff64e37463dda21984a9cd14b2520cc0c68e2ab2f10",
   "target_sets": [
-    {
-      "id": "authority",
-      "title": "一次資料と対象Version",
-      "sequence": 1,
-      "completion_required": true,
-      "exit_criteria": [
-        "対象Versionと一次資料のDigestが固定されていること",
-        "Coverage ManifestがAuthority LockのDigestを参照すること"
-      ]
-    },
-    {
-      "id": "language-platform",
-      "title": "Kotlin/JVMとJava境界",
-      "sequence": 2,
-      "completion_required": true,
-      "exit_criteria": [
-        "JVM固有の型表現を実行可能なOracleで検証できること",
-        "Java consumerから公開APIの境界を検証できること"
-      ]
-    },
-    {
-      "id": "build-tooling",
-      "title": "Gradle BuildとPlugin",
-      "sequence": 3,
-      "completion_required": true,
-      "exit_criteria": [
-        "固定Gradle Wrapperで全Labを再実行できること",
-        "Gradle TestKit consumer buildでPlugin契約を検証できること"
-      ]
-    },
-    {
-      "id": "concurrency",
-      "title": "Coroutine並行処理",
-      "sequence": 4,
-      "completion_required": true,
-      "exit_criteria": [
-        "Cancellationと例外伝播を決定論的に検証できること",
-        "失敗時にも子Coroutineが残存しないこと"
-      ]
-    },
-    {
-      "id": "operation",
-      "title": "再実行可能性と環境",
-      "sequence": 5,
-      "completion_required": true,
-      "exit_criteria": [
-        "Local profileから正規化されたEvidenceを再生成できること",
-        "Required profileごとの結果と未完了理由が記録されること"
-      ]
-    },
-    {
-      "id": "skill",
-      "title": "Agent Router Skill",
-      "sequence": 6,
-      "completion_required": true,
-      "exit_criteria": [
-        "RouterがCoverage内CapabilityとGapを区別すること",
-        "全Eval caseが文言一致ではなく選択結果で合格すること"
-      ]
-    },
-    {
-      "id": "publication",
-      "title": "権利と公開可能性",
-      "sequence": 7,
-      "completion_required": true,
-      "exit_criteria": [
-        "License、NOTICE、第三者Manifest、SBOMが整合すること",
-        "Completion Certificateの発行前に秘密とProvenance Gateが通ること"
-      ]
-    }
+    { "id": "authority", "title": "一次資料と公開Surface Inventory", "sequence": 1, "completion_required": true, "exit_criteria": ["対象Versionと一次資料のDigestが固定されていること", "Compilerとstdlibの対象Surfaceを機械的にInventoryできること"] },
+    { "id": "semantics", "title": "言語Semanticsと型System", "sequence": 2, "completion_required": true, "exit_criteria": ["言語Semanticsを正常系と境界値のOracleで説明できること", "型Systemのvariance、Nothing、reified境界を実行またはcompileで検証できること"] },
+    { "id": "platforms", "title": "JVM、Native、JS、Wasm Platform", "sequence": 3, "completion_required": true, "exit_criteria": ["JVM、JS、Wasmで共通Contractを実行できること", "Nativeのcompileと実行可否をToolchain Evidenceへ結び付けること"] },
+    { "id": "interop", "title": "JavaとPlatform相互運用", "sequence": 4, "completion_required": true, "exit_criteria": ["Java source consumerから公開APIをcompile・実行できること", "expectとactualのPlatform境界を各Targetで検証できること"] },
+    { "id": "compiler-runtime", "title": "Compiler生成物とRuntime形状", "sequence": 5, "completion_required": true, "exit_criteria": ["主要言語構造のRuntime挙動をTestできること", "JVM bytecodeとsuspend変換をCompiler生成物から検査できること"] },
+    { "id": "build-tooling", "title": "Gradle、Toolchain、Dependency供給網", "sequence": 6, "completion_required": true, "exit_criteria": ["固定Wrapperで全Labを再実行できること", "Plugin consumer、Dependency Lock、Artifact checksumを検証できること"] },
+    { "id": "concurrency", "title": "CoroutineとFlow", "sequence": 7, "completion_required": true, "exit_criteria": ["Cancellationと例外伝播を決定論的に検証できること", "Flowの収集、retry、State、cleanupを再現できること"] },
+    { "id": "quality", "title": "Testing、Failure、Debugging", "sequence": 8, "completion_required": true, "exit_criteria": ["正常、拒否、失敗、回復をTest Oracleで覆うこと", "診断情報がFailure categoryとroot causeを保持すること"] },
+    { "id": "performance-security", "title": "PerformanceとSecurity", "sequence": 9, "completion_required": true, "exit_criteria": ["性能値を比較可能なSample、Median、checksumで記録すること", "危険入力とSupply-chain driftをnegative Gateで拒否すること"] },
+    { "id": "evolution", "title": "Compatibility、Migration、Deprecation", "sequence": 10, "completion_required": true, "exit_criteria": ["旧Versionから現行Modelへ移行できること", "未知Versionを拒否しsilent incompatibilityを起こさないこと"] },
+    { "id": "operation", "title": "再実行、Observability、Recovery", "sequence": 11, "completion_required": true, "exit_criteria": ["LocalとContainer profileでEvidenceを再生成できること", "Lifecycleの劣化、回復、停止をRunbookとTestへ接続すること"] },
+    { "id": "skill", "title": "Agent Router Skill", "sequence": 12, "completion_required": true, "exit_criteria": ["RouterがCoverage内CapabilityとGapを区別すること", "設計、実装、診断、移行、ReviewをOutcomeとSurfaceへRouteすること"] },
+    { "id": "publication", "title": "権利、SBOM、公開可能性", "sequence": 13, "completion_required": true, "exit_criteria": ["License、NOTICE、第三者Manifest、transitive SBOMが整合すること", "Completion Certificate前にProvenanceと秘密検査が通ること"] }
   ],
   "targets": [
-    {
-      "id": "authority.source-lock",
-      "title": "Kotlin 2.4.10 Authority Lock",
-      "target_set": "authority",
-      "kind": "compatibility",
-      "requirement": "required",
-      "state": "covered",
-      "rationale": "再現対象を移動する最新版ではなく固定VersionとDigestへ束縛するために必要である。",
-      "claim_ids": ["authority.source-lock-matches"],
-      "evidence_ids": ["authority.source-lock-validation"],
-      "exclusion": null
-    },
-    {
-      "id": "language.jvm-value-class-boundary",
-      "title": "JVM value class境界",
-      "target_set": "language-platform",
-      "kind": "capability",
-      "requirement": "required",
-      "state": "covered",
-      "rationale": "型安全な識別子の設計判断にはsource-level分離とboxing境界の両方を確認する必要がある。",
-      "claim_ids": ["jvm.value-class-generic-boxing"],
-      "evidence_ids": ["jvm.value-class-boundary"],
-      "exclusion": null
-    },
-    {
-      "id": "interop.java-consumer",
-      "title": "Java consumer契約",
-      "target_set": "language-platform",
-      "kind": "compatibility",
-      "requirement": "required",
-      "state": "covered",
-      "rationale": "Kotlin側だけのTestではJavaから見えるoverloadとchecked exception宣言を証明できない。",
-      "claim_ids": ["interop.java-overloads-and-throws"],
-      "evidence_ids": ["interop.java-consumer"],
-      "exclusion": null
-    },
-    {
-      "id": "build.gradle-plugin-consumer",
-      "title": "Gradle Plugin consumer build",
-      "target_set": "build-tooling",
-      "kind": "construction",
-      "requirement": "required",
-      "state": "covered",
-      "rationale": "Plugin実装単体ではなく独立consumer buildからPlugin IDとTask契約を検証する必要がある。",
-      "claim_ids": ["gradle.plugin-registers-probe-task"],
-      "evidence_ids": ["gradle.plugin-consumer"],
-      "exclusion": null
-    },
-    {
-      "id": "concurrency.structured-cancellation",
-      "title": "Structured concurrencyの失敗伝播",
-      "target_set": "concurrency",
-      "kind": "failure",
-      "requirement": "required",
-      "state": "covered",
-      "rationale": "子の失敗が兄弟をcancelし親へ伝播する性質は業務Coroutineのresource安全性に直結する。",
-      "claim_ids": ["coroutines.child-failure-cancels-sibling"],
-      "evidence_ids": ["coroutines.failure-propagation"],
-      "exclusion": null
-    },
-    {
-      "id": "operation.local-evidence",
-      "title": "Local profile Evidence再生成",
-      "target_set": "operation",
-      "kind": "operation",
-      "requirement": "required",
-      "state": "covered",
-      "rationale": "固定Harnessから正規化ArtifactとDigest付きEvidenceを再生成できることがLocal検証の前提である。",
-      "claim_ids": ["operation.local-suite-reproducible"],
-      "evidence_ids": ["operation.local-verification"],
-      "exclusion": null
-    },
-    {
-      "id": "operation.container-evidence",
-      "title": "Container profile Evidence再生成",
-      "target_set": "operation",
-      "kind": "operation",
-      "requirement": "required",
-      "state": "planned",
-      "rationale": "Host固有cacheやtoolchain状態から独立した再現性を確認するためContainer profileが必要である。",
-      "claim_ids": [],
-      "evidence_ids": [],
-      "exclusion": null
-    },
-    {
-      "id": "skill.router-evaluation",
-      "title": "Kotlin Router Skill評価",
-      "target_set": "skill",
-      "kind": "skill",
-      "requirement": "required",
-      "state": "covered",
-      "rationale": "RouterがCapabilityを捏造せずCoverage gapを返すことを反復可能なcaseで検証する必要がある。",
-      "claim_ids": ["skill.router-respects-coverage"],
-      "evidence_ids": ["skill.router-evaluation"],
-      "exclusion": null
-    },
-    {
-      "id": "publication.rights-metadata",
-      "title": "Licenseと第三者Metadata",
-      "target_set": "publication",
-      "kind": "security",
-      "requirement": "required",
-      "state": "covered",
-      "rationale": "独自成果物と第三者依存の権利を分離し公開可否を機械的に判定するために必要である。",
-      "claim_ids": ["publication.required-rights-files-present"],
-      "evidence_ids": ["publication.rights-metadata"],
-      "exclusion": null
-    },
-    {
-      "id": "publication.complete-sbom",
-      "title": "完全なDependency SBOM",
-      "target_set": "publication",
-      "kind": "security",
-      "requirement": "required",
-      "state": "partial",
-      "rationale": "直接依存のCycloneDX metadataは存在するが全transitive artifactの自動閉包と差分Gateが未完了である。",
-      "claim_ids": [],
-      "evidence_ids": [],
-      "exclusion": null
-    },
-    {
-      "id": "inventory.kotlin-public-surface",
-      "title": "Kotlin公開Surface Inventory閉包",
-      "target_set": "authority",
-      "kind": "capability",
-      "requirement": "required",
-      "state": "partial",
-      "rationale": "従来構想の全機能追跡を維持するが、Compiler registryとstdlib宣言の自動Inventoryは未実装である。",
-      "claim_ids": [],
-      "evidence_ids": [],
-      "exclusion": null
-    },
-    {
-      "id": "reference-system.automation-workbench",
-      "title": "Automation Workbench reference system",
-      "target_set": "language-platform",
-      "kind": "construction",
-      "requirement": "recommended",
-      "state": "planned",
-      "rationale": "以前の実用Reference構想を維持するが、Claim/Evidence基盤の確立後に自然な機能統合として実装する。",
-      "claim_ids": [],
-      "evidence_ids": [],
-      "exclusion": null
-    }
+    { "id": "authority.source-lock", "title": "Kotlin 2.4.10 Authority Lock", "target_set": "authority", "kind": "compatibility", "requirement": "required", "state": "covered", "rationale": "再現対象を移動する最新版ではなく固定VersionとDigestへ束縛するために必要である。", "claim_ids": ["authority.source-lock-matches"], "evidence_ids": ["authority.source-lock-validation"], "exclusion": null },
+    { "id": "inventory.kotlin-public-surface", "title": "Compilerとstdlib公開Surface Inventory", "target_set": "authority", "kind": "capability", "requirement": "required", "state": "covered", "rationale": "固定ArtifactのClassとPackageを自動列挙し未分類Surfaceを検知するために必要である。", "claim_ids": ["inventory.locked-surface-enumerated"], "evidence_ids": ["inventory.public-surface"], "exclusion": null },
+    { "id": "semantics.language-core", "title": "言語Semantics実行Oracle", "target_set": "semantics", "kind": "concept", "requirement": "required", "state": "covered", "rationale": "sealed型、smart cast、delegate、Sequenceを構文説明ではなく実行結果で検証する必要がある。", "claim_ids": ["semantics.exhaustive-and-lazy"], "evidence_ids": ["semantics.language-types"], "exclusion": null },
+    { "id": "semantics.type-system", "title": "型System境界", "target_set": "semantics", "kind": "capability", "requirement": "required", "state": "covered", "rationale": "variance、Nothing、reified型はAPI安全性とRuntime型判断の基礎なのでcompileと実行の両面が必要である。", "claim_ids": ["types.variance-nothing-reified"], "evidence_ids": ["semantics.language-types"], "exclusion": null },
+    { "id": "platform.jvm-value-class-boundary", "title": "JVM value class境界", "target_set": "platforms", "kind": "capability", "requirement": "required", "state": "covered", "rationale": "型安全な識別子の設計判断にはsource-level分離とboxing境界の両方を確認する必要がある。", "claim_ids": ["jvm.value-class-generic-boxing"], "evidence_ids": ["jvm.value-class-boundary"], "exclusion": null },
+    { "id": "platform.jvm-js-wasm-runtime", "title": "JVM、JS、Wasm共通Contract", "target_set": "platforms", "kind": "compatibility", "requirement": "required", "state": "covered", "rationale": "Multiplatformの移植性は同じcommonTestを三つのRuntimeで実行して初めて証明できる。", "claim_ids": ["platform.jvm-js-wasm-contract"], "evidence_ids": ["platform.multiplatform-runtime"], "exclusion": null },
+    { "id": "platform.native-compile", "title": "macOS arm64 Native KLIB", "target_set": "platforms", "kind": "compatibility", "requirement": "required", "state": "covered", "rationale": "Native actualとcommonTestがNative compiler frontend/backendを通ることを固定Artifactで確認する必要がある。", "claim_ids": ["platform.native-test-klib"], "evidence_ids": ["platform.native-compile"], "exclusion": null },
+    { "id": "platform.native-runtime", "title": "macOS arm64 Native executable実行", "target_set": "platforms", "kind": "operation", "requirement": "required", "state": "infeasible", "rationale": "Native executable linkと実行にはApple SDKを含むFull Xcode toolchainが必要であり、現在のHostにはCommand Line Toolsしかない。", "claim_ids": [], "evidence_ids": [], "exclusion": { "reason": "xcrun xcodebuild -versionがFull Xcode未導入で失敗するため、test KLIB compileまでを代替Evidenceとする。Full Xcode利用可能時に再評価する。", "reviewed_at": "2026-11-30" } },
+    { "id": "interop.java-consumer", "title": "Java consumer契約", "target_set": "interop", "kind": "compatibility", "requirement": "required", "state": "covered", "rationale": "Kotlin側だけのTestではJavaから見えるoverloadとchecked exception宣言を証明できない。", "claim_ids": ["interop.java-overloads-and-throws"], "evidence_ids": ["interop.java-consumer"], "exclusion": null },
+    { "id": "interop.expect-actual", "title": "expect/actual Platform境界", "target_set": "interop", "kind": "compatibility", "requirement": "required", "state": "covered", "rationale": "Platform固有実装がcommon契約へ正しくLinkされることを各Targetのcompileと実行で検証する必要がある。", "claim_ids": ["platform.jvm-js-wasm-contract", "platform.native-test-klib"], "evidence_ids": ["platform.multiplatform-runtime", "platform.native-compile"], "exclusion": null },
+    { "id": "compiler.runtime-shapes", "title": "CompilerとRuntime形状", "target_set": "compiler-runtime", "kind": "capability", "requirement": "required", "state": "covered", "rationale": "data class、lambda、inline/reified、suspendがRuntimeで示す形状を実測する必要がある。", "claim_ids": ["compiler.runtime-shapes-observable"], "evidence_ids": ["compiler.runtime-shapes"], "exclusion": null },
+    { "id": "compiler.jvm-bytecode", "title": "JVM bytecode検査", "target_set": "compiler-runtime", "kind": "compatibility", "requirement": "required", "state": "covered", "rationale": "Source testだけでは生成MemberとContinuation signatureを確認できないためjavap検査が必要である。", "claim_ids": ["compiler.bytecode-state-machine"], "evidence_ids": ["compiler.bytecode-inspection"], "exclusion": null },
+    { "id": "build.gradle-plugin-consumer", "title": "Gradle Plugin consumer build", "target_set": "build-tooling", "kind": "construction", "requirement": "required", "state": "covered", "rationale": "Plugin実装単体ではなく独立consumer buildからPlugin IDとTask契約を検証する必要がある。", "claim_ids": ["gradle.plugin-registers-probe-task"], "evidence_ids": ["gradle.plugin-consumer"], "exclusion": null },
+    { "id": "build.toolchain-lock", "title": "Gradle ToolchainとSupply-chain Lock", "target_set": "build-tooling", "kind": "security", "requirement": "required", "state": "covered", "rationale": "Wrapper、全Project lockfile、Artifact checksumを固定しDependency driftを拒否する必要がある。", "claim_ids": ["gradle.toolchain-and-artifacts-locked"], "evidence_ids": ["build.toolchain-lock"], "exclusion": null },
+    { "id": "concurrency.structured-cancellation", "title": "Structured concurrencyの失敗伝播", "target_set": "concurrency", "kind": "failure", "requirement": "required", "state": "covered", "rationale": "子の失敗が兄弟をcancelし親へ伝播する性質は業務Coroutineのresource安全性に直結する。", "claim_ids": ["coroutines.child-failure-cancels-sibling"], "evidence_ids": ["coroutines.failure-propagation"], "exclusion": null },
+    { "id": "concurrency.flow-pipelines", "title": "Flow収集、retry、State、cancel", "target_set": "concurrency", "kind": "capability", "requirement": "required", "state": "covered", "rationale": "Flowのcold性、再収集、状態共有、cancellation cleanupを独立したOracleで確認する必要がある。", "claim_ids": ["flow.retry-state-cancellation"], "evidence_ids": ["flow.pipeline-semantics"], "exclusion": null },
+    { "id": "quality.testing-oracles", "title": "全Surface Test Oracle", "target_set": "quality", "kind": "capability", "requirement": "required", "state": "covered", "rationale": "正常、拒否、失敗、回復、互換性とPlatform差を一つのhappy pathに偏らず検証する必要がある。", "claim_ids": ["testing.cross-surface-oracles"], "evidence_ids": ["quality.testing-oracles"], "exclusion": null },
+    { "id": "quality.failure-debugging", "title": "Failure分類とDebug情報", "target_set": "quality", "kind": "failure", "requirement": "required", "state": "covered", "rationale": "復旧判断に必要なcategoryとroot causeを例外変換時に失わないことを検証する必要がある。", "claim_ids": ["failure.diagnostic-preserves-cause"], "evidence_ids": ["failure.debugging"], "exclusion": null },
+    { "id": "performance.measurement-harness", "title": "性能Measurement Harness", "target_set": "performance-security", "kind": "performance", "requirement": "required", "state": "covered", "rationale": "単発時間や優劣断定ではなく複数sample、Median、checksumを再生成して比較可能にする必要がある。", "claim_ids": ["performance.harness-reports-median"], "evidence_ids": ["performance.measurement"], "exclusion": null },
+    { "id": "security.input-boundaries", "title": "入力境界とSecret比較", "target_set": "performance-security", "kind": "security", "requirement": "required", "state": "covered", "rationale": "URI allowlist、Path traversal、Secret比較を防御的negative testで実証する必要がある。", "claim_ids": ["security.boundaries-reject-unsafe-input"], "evidence_ids": ["security.boundaries"], "exclusion": null },
+    { "id": "evolution.compatibility-migration", "title": "Versioned data Migration", "target_set": "evolution", "kind": "migration", "requirement": "required", "state": "covered", "rationale": "旧Schema受理、現行Schema受理、未知Schema拒否を同じ互換性Harnessで検証する必要がある。", "claim_ids": ["migration.v1-v2-compatible"], "evidence_ids": ["evolution.compatibility-migration"], "exclusion": null },
+    { "id": "operation.lifecycle-recovery", "title": "Lifecycle劣化・回復・停止", "target_set": "operation", "kind": "operation", "requirement": "required", "state": "covered", "rationale": "Operational stateの遷移をRunbookだけでなく実行可能な状態機械で検証する必要がある。", "claim_ids": ["operation.lifecycle-recovers"], "evidence_ids": ["operation.lifecycle-recovery"], "exclusion": null },
+    { "id": "operation.local-evidence", "title": "Local profile Evidence再生成", "target_set": "operation", "kind": "operation", "requirement": "required", "state": "covered", "rationale": "固定Harnessから正規化ArtifactとDigest付きEvidenceを再生成できることがLocal検証の前提である。", "claim_ids": ["operation.local-suite-reproducible"], "evidence_ids": ["operation.local-verification"], "exclusion": null },
+    { "id": "operation.container-evidence", "title": "Container profile Evidence再生成", "target_set": "operation", "kind": "operation", "requirement": "required", "state": "covered", "rationale": "Host固有cacheやtoolchain状態から独立したJVM必須Gateの再現性を確認するためContainer profileが必要である。", "claim_ids": ["operation.container-suite-reproducible"], "evidence_ids": ["operation.container-verification"], "exclusion": null },
+    { "id": "skill.router-evaluation", "title": "Kotlin Router Skill評価", "target_set": "skill", "kind": "skill", "requirement": "required", "state": "covered", "rationale": "RouterがCapabilityを捏造せず設計、実装、診断、移行、ReviewとGapを区別する必要がある。", "claim_ids": ["skill.router-respects-coverage"], "evidence_ids": ["skill.router-evaluation"], "exclusion": null },
+    { "id": "publication.rights-metadata", "title": "Licenseと第三者Metadata", "target_set": "publication", "kind": "security", "requirement": "required", "state": "covered", "rationale": "独自成果物と第三者依存の権利を分離し公開可否を機械的に判定するために必要である。", "claim_ids": ["publication.required-rights-files-present"], "evidence_ids": ["publication.rights-metadata"], "exclusion": null },
+    { "id": "publication.complete-sbom", "title": "Gradleとnpmのtransitive SPDX SBOM", "target_set": "publication", "kind": "security", "requirement": "required", "state": "covered", "rationale": "直接依存だけでなく全Gradle lockとnpm package-lockの閉包を公開Artifactへ反映する必要がある。", "claim_ids": ["publication.transitive-sbom-from-locks"], "evidence_ids": ["publication.complete-sbom"], "exclusion": null },
+    { "id": "reference-system.automation-workbench", "title": "Automation Workbench reference system", "target_set": "semantics", "kind": "construction", "requirement": "recommended", "state": "planned", "rationale": "複数Capabilityを統合する実用Referenceは有用だが、個別Mastery SurfaceのClosureとは独立して扱う。", "claim_ids": [], "evidence_ids": [], "exclusion": null }
   ]
 }

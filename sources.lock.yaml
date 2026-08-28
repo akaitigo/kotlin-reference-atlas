@@ -38,6 +38,50 @@
       "redistribution": "link-only"
     },
     {
+      "id": "kotlin-stdlib-jvm-2.4.10",
+      "kind": "source",
+      "title": "Kotlin stdlib JVM 2.4.10",
+      "url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.4.10/kotlin-stdlib-2.4.10.jar",
+      "version": "2.4.10",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:4ec0293bc3751423b203f1d8493251c57c42e73eb6377a6b8560d0974ff0a6df",
+      "license": "Apache-2.0",
+      "redistribution": "link-only"
+    },
+    {
+      "id": "kotlin-stdlib-js-2.4.10",
+      "kind": "source",
+      "title": "Kotlin stdlib JS KLIB 2.4.10",
+      "url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-js/2.4.10/kotlin-stdlib-js-2.4.10.klib",
+      "version": "2.4.10",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:1b8208cd3ec7c6106261fd1f4b37ea11a075ea07d9e5a2231326a5703038a632",
+      "license": "Apache-2.0",
+      "redistribution": "link-only"
+    },
+    {
+      "id": "kotlin-stdlib-wasm-js-2.4.10",
+      "kind": "source",
+      "title": "Kotlin stdlib Wasm JS KLIB 2.4.10",
+      "url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-wasm-js/2.4.10/kotlin-stdlib-wasm-js-2.4.10.klib",
+      "version": "2.4.10",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:4da1327c168060f0f4a08f41f2e9db9ec76f161cc5765470a03a7c7e0f815925",
+      "license": "Apache-2.0",
+      "redistribution": "link-only"
+    },
+    {
+      "id": "kotlin-native-macos-arm64-2.4.10",
+      "kind": "source",
+      "title": "Kotlin Native macOS arm64 prebuilt 2.4.10",
+      "url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-native-prebuilt/2.4.10/kotlin-native-prebuilt-2.4.10-macos-aarch64.tar.gz",
+      "version": "2.4.10",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:55ded039bb56a69aec9df354a92b42df9e916104e3c53d8d9852d9cc6617ed9d",
+      "license": "Apache-2.0",
+      "redistribution": "link-only"
+    },
+    {
       "id": "kotlinx-coroutines-core-jvm-1.11.0",
       "kind": "source",
       "title": "kotlinx-coroutines-core-jvm 1.11.0",

@@ -21,10 +21,10 @@ Authority Source
 ## Archetype Overlay
 
 - `product`: Kotlin 2.4.10、Gradle 9.5.0、kotlinx.coroutines 1.11.0という固定製品Versionを検証する。
-- `language-platform`: Kotlin/JVMの言語・Platform SurfaceとJava境界を検証する。
+- `language-platform`: Kotlinの言語Semantics、JVM/JS/Wasm/Native Platform Surface、Javaとexpect/actual境界を検証する。
 
 Kotlin固有情報をCore Schemaへ追加しません。Capability、Claim、Lab、Migration mappingとしてこのRepository内に保持します。
 
 ## 実行境界
 
-Local profileはGradle Wrapperから4つのLabを実行します。Container profileはRequiredですが未実装であり、Completionを阻止します。外部Service、Cloud Asset、Credentialは使用しません。
+Local profileはGradle Wrapperから9 Labを実行し、JVM/JS/Wasm runtimeとNative test KLIB compile、Inventory、bytecode、SBOMを生成します。Container profileは固定Gradle 9.5/JDK17 image内でJVM必須Labをbuild時に取得し、networkなしで再実行します。外部Service、Cloud Asset、Credentialは使用しません。

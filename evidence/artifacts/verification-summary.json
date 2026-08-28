@@ -1,16 +1,16 @@
 {
   "atlas_id": "kotlin-reference-atlas",
   "completion_gaps": [
-    "operation.container-evidence",
-    "publication.complete-sbom",
-    "inventory.kotlin-public-surface",
-    "reference-system.automation-workbench",
+    "platform.native-runtime: Full Xcode unavailable",
+    "reference-system.automation-workbench (recommended)",
     "evidence/completion-certificate.json",
-    "reference-atlas-core fixed release tag",
+    "local release tag",
     "github-hosted CI execution"
   ],
   "epoch": "2026-08-28",
   "implementation_gates": {
+    "container": "pass",
+    "deep_artifacts": "pass",
     "labs": "pass",
     "manifest": "pass",
     "mastery_audit": "pass",

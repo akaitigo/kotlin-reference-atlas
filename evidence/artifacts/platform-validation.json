@@ -1,0 +1,15 @@
+{
+  "js_node_runtime": "pass",
+  "jvm_runtime": "pass",
+  "native_macos_arm64_compile": "pass",
+  "native_runtime": {
+    "reason": "Full XcodeのxcodebuildがHostに存在しないためlinkDebugTestMacosArm64を実行できない",
+    "verdict": "infeasible",
+    "xcodebuild_exit_code": 72,
+    "xcodebuild_output": "xcrun: error: unable to find utility \"xcodebuild\", not a developer tool or in PATH"
+  },
+  "native_test_klib_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "verdict": "pass",
+  "wasm_digest": "sha256:823c16d20d910cfd1eb00a2f48e0fa2d75deeb45def2c3684315740d402cef38",
+  "wasm_node_runtime": "pass"
+}

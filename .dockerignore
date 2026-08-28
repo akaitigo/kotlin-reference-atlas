@@ -1,0 +1,7 @@
+.git
+.atlas-core
+.gradle
+.cache
+**/build
+evidence
+atlas/inventory

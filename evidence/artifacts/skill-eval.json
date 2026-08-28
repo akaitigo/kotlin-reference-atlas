@@ -1,7 +1,53 @@
 {
-  "case_count": 6,
+  "case_count": 18,
   "pass_rate": 1.0,
   "results": [
+    {
+      "actual_capability_id": "semantics.language-core",
+      "actual_disposition": "covered",
+      "id": "semantics-design",
+      "outcome_ids": [
+        "build",
+        "choose",
+        "evolve",
+        "understand",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "architecture-design",
+        "decision-comparison",
+        "foundations-mechanics",
+        "implementation-construction",
+        "migration-evolution-deprecation",
+        "orientation-scope",
+        "performance-capacity-cost",
+        "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": "semantics.type-system",
+      "actual_disposition": "covered",
+      "id": "types-implement",
+      "outcome_ids": [
+        "build",
+        "choose",
+        "evolve",
+        "understand",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "architecture-design",
+        "decision-comparison",
+        "foundations-mechanics",
+        "implementation-construction",
+        "migration-evolution-deprecation",
+        "orientation-scope",
+        "performance-capacity-cost",
+        "testing-verification"
+      ]
+    },
     {
       "actual_capability_id": "jvm.value-class-boundary",
       "actual_disposition": "covered",
@@ -28,6 +74,98 @@
       ]
     },
     {
+      "actual_capability_id": "platform.multiplatform-runtime",
+      "actual_disposition": "covered",
+      "id": "multiplatform-review",
+      "outcome_ids": [
+        "build",
+        "choose",
+        "evolve",
+        "understand",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "architecture-design",
+        "compatibility-integration",
+        "decision-comparison",
+        "foundations-mechanics",
+        "implementation-construction",
+        "migration-evolution-deprecation",
+        "orientation-scope",
+        "performance-capacity-cost",
+        "security-privacy-safety",
+        "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": "platform.native-compile",
+      "actual_disposition": "covered",
+      "id": "native-compile",
+      "outcome_ids": [
+        "build",
+        "choose",
+        "evolve",
+        "understand",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "architecture-design",
+        "compatibility-integration",
+        "decision-comparison",
+        "foundations-mechanics",
+        "implementation-construction",
+        "migration-evolution-deprecation",
+        "orientation-scope",
+        "performance-capacity-cost",
+        "security-privacy-safety",
+        "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": "interop.java-consumer",
+      "actual_disposition": "covered",
+      "id": "java-interop",
+      "outcome_ids": [
+        "build",
+        "choose",
+        "evolve",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "architecture-design",
+        "compatibility-integration",
+        "implementation-construction",
+        "migration-evolution-deprecation",
+        "security-privacy-safety",
+        "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": "compiler.jvm-bytecode",
+      "actual_disposition": "covered",
+      "id": "compiler-bytecode",
+      "outcome_ids": [
+        "build",
+        "troubleshoot",
+        "understand",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "architecture-design",
+        "compatibility-integration",
+        "decision-comparison",
+        "failure-recovery",
+        "foundations-mechanics",
+        "implementation-construction",
+        "performance-capacity-cost",
+        "testing-verification"
+      ]
+    },
+    {
       "actual_capability_id": "gradle.plugin-consumer",
       "actual_disposition": "covered",
       "id": "gradle-testkit",
@@ -35,6 +173,7 @@
         "build",
         "choose",
         "evolve",
+        "operate",
         "troubleshoot",
         "verify"
       ],
@@ -46,6 +185,33 @@
         "failure-recovery",
         "implementation-construction",
         "migration-evolution-deprecation",
+        "operations-observability",
+        "performance-capacity-cost",
+        "security-privacy-safety",
+        "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": "gradle.toolchain-lock",
+      "actual_disposition": "covered",
+      "id": "toolchain-security",
+      "outcome_ids": [
+        "build",
+        "choose",
+        "evolve",
+        "operate",
+        "troubleshoot",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "architecture-design",
+        "compatibility-integration",
+        "decision-comparison",
+        "failure-recovery",
+        "implementation-construction",
+        "migration-evolution-deprecation",
+        "operations-observability",
         "performance-capacity-cost",
         "security-privacy-safety",
         "testing-verification"
@@ -77,28 +243,113 @@
       ]
     },
     {
-      "actual_capability_id": "interop.java-consumer",
+      "actual_capability_id": "flow.pipeline-semantics",
       "actual_disposition": "covered",
-      "id": "java-interop",
+      "id": "flow-diagnose",
       "outcome_ids": [
         "build",
         "choose",
-        "evolve",
+        "operate",
+        "troubleshoot",
         "understand",
         "verify"
       ],
       "pass": true,
       "surface_ids": [
         "architecture-design",
-        "compatibility-integration",
         "decision-comparison",
+        "failure-recovery",
         "foundations-mechanics",
         "implementation-construction",
-        "migration-evolution-deprecation",
-        "orientation-scope",
+        "operations-observability",
         "performance-capacity-cost",
         "security-privacy-safety",
         "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": "performance.measurement-harness",
+      "actual_disposition": "covered",
+      "id": "performance-review",
+      "outcome_ids": [
+        "choose",
+        "operate",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "decision-comparison",
+        "performance-capacity-cost",
+        "security-privacy-safety",
+        "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": "security.input-boundaries",
+      "actual_disposition": "covered",
+      "id": "security-review",
+      "outcome_ids": [
+        "choose",
+        "operate",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "decision-comparison",
+        "performance-capacity-cost",
+        "security-privacy-safety",
+        "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": "evolution.schema-migration",
+      "actual_disposition": "covered",
+      "id": "migration",
+      "outcome_ids": [
+        "evolve",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "compatibility-integration",
+        "decision-comparison",
+        "migration-evolution-deprecation",
+        "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": "operation.lifecycle-recovery",
+      "actual_disposition": "covered",
+      "id": "operation-recovery",
+      "outcome_ids": [
+        "operate",
+        "troubleshoot",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "decision-comparison",
+        "failure-recovery",
+        "operations-observability",
+        "performance-capacity-cost",
+        "security-privacy-safety",
+        "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": "publication.complete-sbom",
+      "actual_disposition": "covered",
+      "id": "sbom-review",
+      "outcome_ids": [
+        "delegate",
+        "evolve",
+        "operate"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "migration-evolution-deprecation",
+        "provenance-rights",
+        "security-privacy-safety"
       ]
     },
     {

@@ -1,0 +1,26 @@
+{
+  "artifact": {
+    "digest": "sha256:fc213e8b3f6831c1d4da8b3d90278e22262cd663c496490d96a1ae8817865dbe",
+    "media_type": "application/json",
+    "size_bytes": 14835,
+    "uri": "evidence/artifacts/container-verification.json"
+  },
+  "atlas_id": "kotlin-reference-atlas",
+  "claim_ids": [
+    "operation.container-suite-reproducible"
+  ],
+  "command": "scripts/container-verify.sh",
+  "created_at": "2026-08-28T00:00:00+09:00",
+  "environment": {
+    "manifest_digest": "sha256:0edb538dff8c0614f95c2cad31f767737a650debec84813302dab379b224b051",
+    "profile": "container"
+  },
+  "harness_digest": "sha256:a206d716341436fa2dace9ee9b850482bbe240c4a61b2a8ea3bed10716aac7b0",
+  "id": "operation.container-verification",
+  "kind": "conformance",
+  "producer": "docker-gradle",
+  "retention": "git",
+  "schema_version": 1,
+  "source_digest": "sha256:fd978b99941851cad91ebff64e37463dda21984a9cd14b2520cc0c68e2ab2f10",
+  "verdict": "pass"
+}

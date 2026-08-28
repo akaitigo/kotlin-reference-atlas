@@ -1,0 +1,26 @@
+{
+  "artifact": {
+    "digest": "sha256:ffceb25094976bc1be77c809fd6ada42cc47597662b349fcff8be822ad682a92",
+    "media_type": "application/json",
+    "size_bytes": 8559,
+    "uri": "evidence/artifacts/lab-results.json"
+  },
+  "atlas_id": "kotlin-reference-atlas",
+  "claim_ids": [
+    "compiler.runtime-shapes-observable"
+  ],
+  "command": "./gradlew :labs:compiler-runtime:test",
+  "created_at": "2026-08-28T00:00:00+09:00",
+  "environment": {
+    "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
+    "profile": "local"
+  },
+  "harness_digest": "sha256:373eacd9386ed6f612c491e89ab56bcd7f53b5da16c5162dd67c0e44e675a834",
+  "id": "compiler.runtime-shapes",
+  "kind": "test-report",
+  "producer": "gradle-junit",
+  "retention": "git",
+  "schema_version": 1,
+  "source_digest": "sha256:fd978b99941851cad91ebff64e37463dda21984a9cd14b2520cc0c68e2ab2f10",
+  "verdict": "pass"
+}

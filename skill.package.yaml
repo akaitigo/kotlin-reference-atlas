@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "atlas_id": "kotlin-reference-atlas",
-  "atlas_release": "v0.1.0",
+  "atlas_release": "v0.2.0",
   "router": {
     "id": "kotlin-reference-router",
     "path": ".agents/skills/kotlin-reference-router/SKILL.md",

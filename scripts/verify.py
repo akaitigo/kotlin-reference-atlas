@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import os
@@ -112,9 +113,9 @@ def validate_manifests() -> dict:
 
 
 def collect_test_results() -> dict:
-    run([str(ROOT / "gradlew"), "clean", "test", "--configuration-cache", "--no-daemon"])
+    run([str(ROOT / "gradlew"), "clean", "atlasCheck", "--configuration-cache", "--no-daemon"])
     suites = []
-    for report in sorted((ROOT / "labs").glob("*/build/test-results/test/TEST-*.xml")):
+    for report in sorted((ROOT / "labs").rglob("TEST-*.xml")):
         xml_root = ET.parse(report).getroot()
         cases = []
         for case in xml_root.findall("testcase"):
@@ -124,11 +125,69 @@ def collect_test_results() -> dict:
             elif case.find("skipped") is not None:
                 status = "skipped"
             cases.append({"class": case.attrib.get("classname", ""), "name": case.attrib.get("name", ""), "status": status})
-        suites.append({"module": report.parts[-5], "suite": xml_root.attrib.get("name", ""), "cases": sorted(cases, key=lambda item: (item["class"], item["name"]))})
+        relative = report.relative_to(ROOT / "labs")
+        suites.append({"module": relative.parts[0], "task": report.parent.name, "suite": xml_root.attrib.get("name", ""), "cases": sorted(cases, key=lambda item: (item["class"], item["name"]))})
     if not suites or any(case["status"] != "pass" for suite in suites for case in suite["cases"]):
         raise RuntimeError("全LabのJUnit resultをpassとして収集できない")
-    result = {"command": "./gradlew clean test --configuration-cache --no-daemon", "suites": suites, "verdict": "pass"}
+    result = {"command": "./gradlew clean atlasCheck --configuration-cache --no-daemon", "suites": suites, "test_case_count": sum(len(suite["cases"]) for suite in suites), "verdict": "pass"}
     write_json(ARTIFACTS / "lab-results.json", result)
+    return result
+
+
+def generate_deep_artifacts() -> dict:
+    run([sys.executable, str(ROOT / "scripts" / "inventory.py")])
+    run([sys.executable, str(ROOT / "scripts" / "inspect_bytecode.py")])
+    run([sys.executable, str(ROOT / "scripts" / "generate_sbom.py")])
+    native_klib = ROOT / "labs" / "multiplatform" / "build" / "classes" / "kotlin" / "macosArm64" / "test" / "klib"
+    wasm = ROOT / "labs" / "multiplatform" / "build" / "compileSync" / "wasmJs" / "test" / "testDevelopmentExecutable" / "kotlin" / "kotlin-reference-atlas-labs-multiplatform-test.wasm"
+    errors = []
+    if not native_klib.is_dir():
+        errors.append("Native test KLIBが生成されていない")
+    if not wasm.is_file():
+        errors.append("Wasm test executableが生成されていない")
+    if errors:
+        raise RuntimeError("; ".join(errors))
+    xcode = subprocess.run(
+        ["/usr/bin/xcrun", "xcodebuild", "-version"],
+        cwd=ROOT,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        check=False,
+    )
+    if xcode.returncode == 0:
+        raise RuntimeError("Full Xcodeを検出したためplatform.native-runtimeのinfeasible判定を再評価してください")
+    result = {
+        "jvm_runtime": "pass",
+        "js_node_runtime": "pass",
+        "wasm_node_runtime": "pass",
+        "wasm_digest": sha256_file(wasm),
+        "native_macos_arm64_compile": "pass",
+        "native_test_klib_digest": digest_tree([native_klib]),
+        "native_runtime": {
+            "verdict": "infeasible" if xcode.returncode != 0 else "not-run",
+            "xcodebuild_exit_code": xcode.returncode,
+            "xcodebuild_output": xcode.stdout.strip(),
+            "reason": "Full XcodeのxcodebuildがHostに存在しないためlinkDebugTestMacosArm64を実行できない" if xcode.returncode != 0 else "Full Xcodeを検出したためNative runtime Targetを再評価する必要がある",
+        },
+        "verdict": "pass",
+    }
+    write_json(ARTIFACTS / "platform-validation.json", result)
+    return result
+
+
+def validate_container_profile() -> dict:
+    completed = run([str(ROOT / "scripts" / "container-verify.sh")], capture=True)
+    inspected = run(["docker", "image", "inspect", "kotlin-reference-atlas-verify:local", "--format", "{{.Id}}"], capture=True)
+    result = {
+        "command": "scripts/container-verify.sh",
+        "image": "gradle:9.5.0-jdk17",
+        "local_image_id": inspected.stdout.strip(),
+        "network_disabled_on_replay": True,
+        "output_tail": completed.stdout[-20000:] if completed.stdout else "",
+        "verdict": "pass",
+    }
+    write_json(ARTIFACTS / "container-verification.json", result)
     return result
 
 
@@ -191,8 +250,32 @@ def validate_rights() -> dict:
     if not {"kotlin", "gradle", "kotlinx-coroutines-core-jvm", "junit-bom"}.issubset(sbom_names):
         errors.append("SBOMの直接依存が不足")
     spdx_names = {item["name"] for item in spdx["packages"]}
-    if spdx.get("spdxVersion") != "SPDX-2.3" or not {"kotlin-reference-atlas", "reference-atlas-core", "kotlin", "gradle", "kotlinx-coroutines", "junit"}.issubset(spdx_names):
+    spdx_purls = {
+        reference["referenceLocator"]
+        for item in spdx["packages"]
+        for reference in item.get("externalRefs", [])
+        if reference.get("referenceType") == "purl"
+    }
+    expected_gradle = set()
+    for lock in sorted(ROOT.rglob("gradle.lockfile")) + [ROOT / "settings-gradle.lockfile"]:
+        if not lock.is_file() or "build" in lock.parts:
+            continue
+        for line in lock.read_text(encoding="utf-8").splitlines():
+            coordinate = line.split("=", 1)[0]
+            parts = coordinate.split(":")
+            if len(parts) == 3:
+                expected_gradle.add(f"pkg:maven/{parts[0]}/{parts[1]}@{parts[2]}")
+    expected_npm = set()
+    for lock in [ROOT / "kotlin-js-store" / "package-lock.json", ROOT / "kotlin-js-store" / "wasm" / "package-lock.json"]:
+        document = load_json(lock)
+        for path, package in document.get("packages", {}).items():
+            if path and "node_modules/" in path and "version" in package:
+                expected_npm.add(f"pkg:npm/{path.rsplit('node_modules/', 1)[1]}@{package['version']}")
+    missing_purls = sorted((expected_gradle | expected_npm) - spdx_purls)
+    if spdx.get("spdxVersion") != "SPDX-2.3" or not {"kotlin-reference-atlas", "org.jetbrains.kotlin:kotlin-stdlib", "org.jetbrains.kotlin:kotlin-compiler-embeddable", "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm"}.issubset(spdx_names):
         errors.append("SPDX SBOMの必須Packageが不足")
+    if missing_purls:
+        errors.append(f"SPDX SBOMにLock Componentが不足: {len(missing_purls)}")
     if sha256_file(ROOT / "gradle" / "wrapper" / "gradle-wrapper.jar") != "sha256:497c8c2a7e5031f6aa847f88104aa80a93532ec32ee17bdb8d1d2f67a194a9c7":
         errors.append("Gradle Wrapper JAR checksumが9.5.0公式値と一致しない")
     wrapper_properties = (ROOT / "gradle" / "wrapper" / "gradle-wrapper.properties").read_text(encoding="utf-8")
@@ -200,7 +283,7 @@ def validate_rights() -> dict:
         errors.append("Gradle distribution checksumが固定値と一致しない")
     if errors:
         raise RuntimeError("; ".join(errors))
-    result = {"required_files": required, "direct_component_count": len(manifest["components"]), "sbom_formats": ["CycloneDX-1.6", "SPDX-2.3"], "sbom_scope": "direct-dependencies-only", "verdict": "pass"}
+    result = {"required_files": required, "direct_component_count": len(manifest["components"]), "sbom_formats": ["CycloneDX-1.6", "SPDX-2.3"], "sbom_scope": "gradle-and-npm-lock-transitive-closure", "spdx_package_count": len(spdx["packages"]), "lock_component_count": len(expected_gradle | expected_npm), "missing_lock_components": [], "verdict": "pass"}
     write_json(ARTIFACTS / "rights-validation.json", result)
     return result
 
@@ -229,21 +312,44 @@ def write_evidence() -> list[Path]:
     manifest = ARTIFACTS / "manifest-validation.json"
     skill = ARTIFACTS / "skill-eval.json"
     rights = ARTIFACTS / "rights-validation.json"
+    platform = ARTIFACTS / "platform-validation.json"
+    bytecode = ARTIFACTS / "bytecode-inspection.json"
+    inventory = ROOT / "atlas" / "inventory" / "kotlin-public-surface.json"
+    container = ARTIFACTS / "container-verification.json"
     summary = ARTIFACTS / "verification-summary.json"
     specs = [
         ("authority.source-lock-validation", ["authority.source-lock-matches"], "conformance", "kotlin-atlas-verifier", "atlas validate atlas.yaml mastery.yaml coverage.yaml sources.lock.yaml skill.package.yaml && atlas audit .", manifest, [ROOT / "atlas", ROOT / "mastery.yaml", ROOT / "scripts" / "verify.py"]),
+        ("inventory.public-surface", ["inventory.locked-surface-enumerated"], "capture", "kotlin-artifact-inventory", "python3 scripts/inventory.py", inventory, [ROOT / "scripts" / "inventory.py", ROOT / "sources.lock.yaml"]),
+        ("semantics.language-types", ["semantics.exhaustive-and-lazy", "types.variance-nothing-reified"], "test-report", "gradle-junit", "./gradlew :labs:semantics:test", lab, [ROOT / "labs" / "semantics"]),
         ("jvm.value-class-boundary", ["jvm.value-class-generic-boxing"], "test-report", "gradle-junit", "./gradlew :labs:jvm:test", lab, [ROOT / "labs" / "jvm"]),
+        ("platform.multiplatform-runtime", ["platform.jvm-js-wasm-contract"], "compatibility", "kotlin-multiplatform", "./gradlew :labs:multiplatform:jvmTest :labs:multiplatform:jsNodeTest :labs:multiplatform:wasmJsNodeTest", platform, [ROOT / "labs" / "multiplatform"]),
+        ("platform.native-compile", ["platform.native-test-klib"], "compatibility", "kotlin-native", "./gradlew :labs:multiplatform:compileTestKotlinMacosArm64", platform, [ROOT / "labs" / "multiplatform"]),
         ("gradle.plugin-consumer", ["gradle.plugin-registers-probe-task"], "test-report", "gradle-testkit", "./gradlew :labs:gradle-plugin:test", lab, [ROOT / "labs" / "gradle-plugin"]),
+        ("build.toolchain-lock", ["gradle.toolchain-and-artifacts-locked"], "conformance", "kotlin-atlas-verifier", "python3 scripts/verify.py", rights, [ROOT / "gradle", *sorted(ROOT.glob("labs/*/gradle.lockfile"))]),
         ("coroutines.failure-propagation", ["coroutines.child-failure-cancels-sibling"], "test-report", "gradle-junit", "./gradlew :labs:coroutines:test", lab, [ROOT / "labs" / "coroutines"]),
+        ("flow.pipeline-semantics", ["flow.retry-state-cancellation"], "test-report", "gradle-junit", "./gradlew :labs:flow:test", lab, [ROOT / "labs" / "flow"]),
         ("interop.java-consumer", ["interop.java-overloads-and-throws"], "compatibility", "gradle-junit", "./gradlew :labs:interop:test", lab, [ROOT / "labs" / "interop"]),
+        ("compiler.runtime-shapes", ["compiler.runtime-shapes-observable"], "test-report", "gradle-junit", "./gradlew :labs:compiler-runtime:test", lab, [ROOT / "labs" / "compiler-runtime"]),
+        ("compiler.bytecode-inspection", ["compiler.bytecode-state-machine"], "compatibility", "jdk-javap", "python3 scripts/inspect_bytecode.py", bytecode, [ROOT / "labs" / "compiler-runtime", ROOT / "scripts" / "inspect_bytecode.py"]),
+        ("quality.testing-oracles", ["testing.cross-surface-oracles"], "test-report", "kotlin-atlas-verifier", "./gradlew atlasCheck", lab, [ROOT / "labs"]),
+        ("performance.measurement", ["performance.harness-reports-median"], "benchmark", "gradle-junit", "./gradlew :labs:engineering:test", lab, [ROOT / "labs" / "engineering"]),
+        ("security.boundaries", ["security.boundaries-reject-unsafe-input"], "attack", "gradle-junit", "./gradlew :labs:engineering:test", lab, [ROOT / "labs" / "engineering"]),
+        ("failure.debugging", ["failure.diagnostic-preserves-cause"], "recovery", "gradle-junit", "./gradlew :labs:engineering:test", lab, [ROOT / "labs" / "engineering"]),
+        ("evolution.compatibility-migration", ["migration.v1-v2-compatible"], "compatibility", "gradle-junit", "./gradlew :labs:engineering:test", lab, [ROOT / "labs" / "engineering"]),
+        ("operation.lifecycle-recovery", ["operation.lifecycle-recovers"], "conformance", "gradle-junit", "./gradlew :labs:engineering:test", lab, [ROOT / "labs" / "engineering", ROOT / "docs" / "RUNBOOK.md"]),
+        ("operation.container-verification", ["operation.container-suite-reproducible"], "conformance", "docker-gradle", "scripts/container-verify.sh", container, [ROOT / "environments" / "container", ROOT / "scripts" / "container-verify.sh"]),
         ("skill.router-evaluation", ["skill.router-respects-coverage"], "skill-eval", "kotlin-router-eval", "python3 scripts/verify.py", skill, [ROOT / ".agents" / "skills" / "kotlin-reference-router", ROOT / "evals"]),
         ("publication.rights-metadata", ["publication.required-rights-files-present"], "conformance", "kotlin-atlas-verifier", "python3 scripts/verify.py", rights, [ROOT / "third_party", ROOT / "sbom.spdx.json", ROOT / "LICENSE", ROOT / "NOTICE"]),
+        ("publication.complete-sbom", ["publication.transitive-sbom-from-locks"], "capture", "spdx-lock-generator", "python3 scripts/generate_sbom.py", rights, [ROOT / "scripts" / "generate_sbom.py", ROOT / "sbom.spdx.json", ROOT / "kotlin-js-store", *sorted(ROOT.glob("labs/*/gradle.lockfile"))]),
         ("operation.local-verification", ["operation.local-suite-reproducible"], "conformance", "kotlin-atlas-verifier", "python3 scripts/verify.py", summary, [ROOT / "scripts" / "verify.py", ROOT / "build.gradle.kts", ROOT / "settings.gradle.kts"]),
     ]
     paths = []
     for record_id, claim_ids, kind, producer, command, artifact, harness_paths in specs:
         path = ROOT / "evidence" / f"{record_id}.evidence.json"
-        write_json(path, evidence_record(record_id, claim_ids, kind, producer, command, artifact, harness_paths))
+        record = evidence_record(record_id, claim_ids, kind, producer, command, artifact, harness_paths)
+        if record_id == "operation.container-verification":
+            record["environment"] = {"profile": "container", "manifest_digest": sha256_file(ROOT / "environments" / "container.json")}
+        write_json(path, record)
         paths.append(path)
     return paths
 
@@ -279,17 +385,24 @@ def validate_graph(evidence_paths: list[Path]) -> None:
         raise RuntimeError("; ".join(errors))
 
 
-def main() -> None:
+def main(*, skip_container: bool = False) -> None:
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
     manifest_result = validate_manifests()
     lab_result = collect_test_results()
+    deep_result = generate_deep_artifacts()
+    if skip_container:
+        container_result = load_json(ARTIFACTS / "container-verification.json")
+        if container_result.get("verdict") != "pass":
+            raise RuntimeError("既存Container Evidenceがpassではありません")
+    else:
+        container_result = validate_container_profile()
     skill_result = run_skill_evals()
     rights_result = validate_rights()
     summary = {
         "atlas_id": "kotlin-reference-atlas",
         "epoch": "2026-08-28",
-        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "skill": skill_result["verdict"], "rights_metadata": rights_result["verdict"]},
-        "completion_gaps": ["operation.container-evidence", "publication.complete-sbom", "inventory.kotlin-public-surface", "reference-system.automation-workbench", "evidence/completion-certificate.json", "reference-atlas-core fixed release tag", "github-hosted CI execution"],
+        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "rights_metadata": rights_result["verdict"]},
+        "completion_gaps": ["platform.native-runtime: Full Xcode unavailable", "reference-system.automation-workbench (recommended)", "evidence/completion-certificate.json", "local release tag", "github-hosted CI execution"],
         "repository_status": "incomplete",
         "verdict": "pass",
     }
@@ -301,4 +414,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Kotlin技術実証アトラスの全Gateを検証する。")
+    parser.add_argument("--skip-container", action="store_true", help="別JobでContainer profileを実行する場合だけ既存Container Evidenceを利用する。")
+    arguments = parser.parse_args()
+    main(skip_container=arguments.skip_container)

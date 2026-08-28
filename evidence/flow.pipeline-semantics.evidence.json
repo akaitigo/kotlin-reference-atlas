@@ -1,0 +1,26 @@
+{
+  "artifact": {
+    "digest": "sha256:ffceb25094976bc1be77c809fd6ada42cc47597662b349fcff8be822ad682a92",
+    "media_type": "application/json",
+    "size_bytes": 8559,
+    "uri": "evidence/artifacts/lab-results.json"
+  },
+  "atlas_id": "kotlin-reference-atlas",
+  "claim_ids": [
+    "flow.retry-state-cancellation"
+  ],
+  "command": "./gradlew :labs:flow:test",
+  "created_at": "2026-08-28T00:00:00+09:00",
+  "environment": {
+    "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
+    "profile": "local"
+  },
+  "harness_digest": "sha256:f6d1a4b0bae66421ef1a31a90097ee6da6ac50f0c07385f8c5f2b8354aafca28",
+  "id": "flow.pipeline-semantics",
+  "kind": "test-report",
+  "producer": "gradle-junit",
+  "retention": "git",
+  "schema_version": 1,
+  "source_digest": "sha256:fd978b99941851cad91ebff64e37463dda21984a9cd14b2520cc0c68e2ab2f10",
+  "verdict": "pass"
+}

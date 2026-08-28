@@ -2,47 +2,28 @@
   "schema_version": 1,
   "atlas_id": "kotlin-reference-atlas",
   "capabilities": [
-    {
-      "id": "authority.lock",
-      "title_ja": "一次資料Lock",
-      "verdict": "default",
-      "source_ids": ["reference-atlas-core-v1", "kotlin-compiler-2.4.10", "gradle-9.5.0", "kotlinx-coroutines-core-jvm-1.11.0"],
-      "lab": "scripts/verify.py"
-    },
-    {
-      "id": "jvm.value-class-boundary",
-      "title_ja": "JVM value classの型とboxing境界",
-      "verdict": "conditional",
-      "source_ids": ["kotlin-compiler-2.4.10"],
-      "lab": "labs/jvm"
-    },
-    {
-      "id": "gradle.plugin-consumer",
-      "title_ja": "Gradle Plugin consumer契約",
-      "verdict": "default",
-      "source_ids": ["gradle-9.5.0", "kotlin-compiler-2.4.10"],
-      "lab": "labs/gradle-plugin"
-    },
-    {
-      "id": "coroutines.structured-cancellation",
-      "title_ja": "Structured concurrencyのcancelと例外伝播",
-      "verdict": "default",
-      "source_ids": ["kotlinx-coroutines-core-jvm-1.11.0"],
-      "lab": "labs/coroutines"
-    },
-    {
-      "id": "interop.java-consumer",
-      "title_ja": "Java consumerから見たKotlin API",
-      "verdict": "boundary-only",
-      "source_ids": ["kotlin-compiler-2.4.10"],
-      "lab": "labs/interop"
-    },
-    {
-      "id": "skill.coverage-router",
-      "title_ja": "Coverage準拠Router",
-      "verdict": "default",
-      "source_ids": ["reference-atlas-core-v1"],
-      "lab": "evals"
-    }
+    { "id": "authority.lock", "title_ja": "一次資料とToolchainの固定", "verdict": "default", "source_ids": ["reference-atlas-core-v1", "kotlin-compiler-2.4.10", "gradle-9.5.0", "kotlinx-coroutines-core-jvm-1.11.0"], "lab": "scripts/verify.py" },
+    { "id": "inventory.public-surface", "title_ja": "Compilerとstdlibの公開Surface Inventory", "verdict": "default", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "scripts/inventory.py" },
+    { "id": "semantics.language-core", "title_ja": "Nullability、sealed型、smart cast、delegate、Sequence", "verdict": "default", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/semantics" },
+    { "id": "semantics.type-system", "title_ja": "Variance、Nothing、reified型", "verdict": "default", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/semantics" },
+    { "id": "jvm.value-class-boundary", "title_ja": "JVM value classの型とboxing境界", "verdict": "conditional", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/jvm" },
+    { "id": "platform.multiplatform-runtime", "title_ja": "JVM、JS、Wasmの共通Contract実行", "verdict": "default", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/multiplatform" },
+    { "id": "platform.native-compile", "title_ja": "macOS arm64 Native actualとtest KLIB compile", "verdict": "boundary-only", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/multiplatform" },
+    { "id": "interop.java-consumer", "title_ja": "Java consumerから見たKotlin API", "verdict": "boundary-only", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/interop" },
+    { "id": "compiler.runtime-shapes", "title_ja": "data class、inline/reified、lambda、suspendのRuntime形状", "verdict": "conditional", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/compiler-runtime" },
+    { "id": "compiler.jvm-bytecode", "title_ja": "JVM bytecodeとCoroutine state machine検査", "verdict": "boundary-only", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "scripts/inspect_bytecode.py" },
+    { "id": "gradle.plugin-consumer", "title_ja": "Gradle Plugin consumer契約", "verdict": "default", "source_ids": ["gradle-9.5.0", "kotlin-compiler-2.4.10"], "lab": "labs/gradle-plugin" },
+    { "id": "gradle.toolchain-lock", "title_ja": "Wrapper、Dependency Lock、Artifact検証", "verdict": "default", "source_ids": ["gradle-9.5.0", "kotlin-compiler-2.4.10"], "lab": "scripts/verify.py" },
+    { "id": "coroutines.structured-cancellation", "title_ja": "Structured concurrencyのcancelと例外伝播", "verdict": "default", "source_ids": ["kotlinx-coroutines-core-jvm-1.11.0"], "lab": "labs/coroutines" },
+    { "id": "flow.pipeline-semantics", "title_ja": "Flowのcold stream、retry、StateFlow、cancellation", "verdict": "default", "source_ids": ["kotlinx-coroutines-core-jvm-1.11.0"], "lab": "labs/flow" },
+    { "id": "quality.testing-oracles", "title_ja": "境界値、失敗、Platform横断Test Oracle", "verdict": "default", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs" },
+    { "id": "performance.measurement-harness", "title_ja": "複数SampleのMedian性能計測Harness", "verdict": "conditional", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/engineering" },
+    { "id": "security.input-boundaries", "title_ja": "URI、Path、Secret比較の防御境界", "verdict": "default", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/engineering" },
+    { "id": "failure.diagnostics", "title_ja": "Failure分類とCause保持", "verdict": "default", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/engineering" },
+    { "id": "evolution.schema-migration", "title_ja": "Versioned dataの互換Migration", "verdict": "default", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/engineering" },
+    { "id": "operation.lifecycle-recovery", "title_ja": "Service lifecycleの劣化・回復・停止", "verdict": "default", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/engineering" },
+    { "id": "operation.reproducible-profiles", "title_ja": "LocalとContainer profileのEvidence再生成", "verdict": "default", "source_ids": ["reference-atlas-core-v1", "gradle-9.5.0"], "lab": "scripts/verify.py" },
+    { "id": "publication.complete-sbom", "title_ja": "Gradleとnpm lockから生成するtransitive SPDX SBOM", "verdict": "default", "source_ids": ["reference-atlas-core-v1", "gradle-9.5.0"], "lab": "scripts/generate_sbom.py" },
+    { "id": "skill.coverage-router", "title_ja": "Coverage準拠Router", "verdict": "default", "source_ids": ["reference-atlas-core-v1"], "lab": "evals" }
   ]
 }

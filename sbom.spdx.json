@@ -1,82 +1,3465 @@
 {
-  "spdxVersion": "SPDX-2.3",
-  "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "name": "kotlin-reference-atlas-0.1.0",
-  "documentNamespace": "https://github.com/akaitigo/kotlin-reference-atlas/sbom/0.1.0/2026-08-28",
+  "annotations": [
+    {
+      "annotationDate": "2026-08-28T00:00:00Z",
+      "annotationType": "OTHER",
+      "annotator": "Tool: scripts/generate_sbom.py",
+      "comment": "Gradle/npm lock closure components=149 sha256=2b3508842c097799f82505fc7e5ff449d40492484ad66891285d0124663665d8"
+    }
+  ],
   "creationInfo": {
-    "created": "2026-08-28T00:00:00+09:00",
-    "creators": ["Organization: akaitigo", "Tool: kotlin-reference-atlas-verifier-0.1.0"]
+    "created": "2026-08-28T00:00:00Z",
+    "creators": [
+      "Tool: scripts/generate_sbom.py"
+    ]
   },
-  "documentDescribes": ["SPDXRef-Package-kotlin-reference-atlas"],
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-Package-kotlin-reference-atlas"
+  ],
+  "documentNamespace": "https://github.com/akaitigo/kotlin-reference-atlas/sbom/2026-08-28/2b3508842c097799f82505fc7e5ff449d40492484ad66891285d0124663665d8",
+  "name": "kotlin-reference-atlas-transitive-sbom",
   "packages": [
     {
-      "name": "kotlin-reference-atlas",
       "SPDXID": "SPDXRef-Package-kotlin-reference-atlas",
-      "versionInfo": "0.1.0",
+      "copyrightText": "Copyright 2026 Nakayama Ryusei",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
       "licenseConcluded": "Apache-2.0",
       "licenseDeclared": "Apache-2.0",
-      "copyrightText": "Copyright 2026 akaitigo"
+      "name": "kotlin-reference-atlas",
+      "versionInfo": "0.2.0"
     },
     {
-      "name": "reference-atlas-core",
-      "SPDXID": "SPDXRef-Package-reference-atlas-core",
-      "versionInfo": "d5c0a6ce757fd5f43af837edd26f55c7325b811e",
-      "downloadLocation": "https://github.com/akaitigo/reference-atlas-core",
+      "SPDXID": "SPDXRef-Package-4faa13a12d1130503617",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/com.github.ben-manes.caffeine/caffeine@2.9.3",
+          "referenceType": "purl"
+        }
+      ],
       "filesAnalyzed": false,
-      "licenseConcluded": "Apache-2.0",
-      "licenseDeclared": "Apache-2.0",
-      "copyrightText": "NOASSERTION"
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "com.github.ben-manes.caffeine:caffeine",
+      "versionInfo": "2.9.3"
     },
     {
-      "name": "kotlin",
-      "SPDXID": "SPDXRef-Package-kotlin",
-      "versionInfo": "2.4.10",
-      "downloadLocation": "https://github.com/JetBrains/kotlin",
+      "SPDXID": "SPDXRef-Package-ffe7bb907fde62ec9468",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/com.google.errorprone/error_prone_annotations@2.28.0",
+          "referenceType": "purl"
+        }
+      ],
       "filesAnalyzed": false,
-      "licenseConcluded": "Apache-2.0",
-      "licenseDeclared": "Apache-2.0",
-      "copyrightText": "NOASSERTION"
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "com.google.errorprone:error_prone_annotations",
+      "versionInfo": "2.28.0"
     },
     {
-      "name": "gradle",
-      "SPDXID": "SPDXRef-Package-gradle",
-      "versionInfo": "9.5.0",
-      "downloadLocation": "https://github.com/gradle/gradle",
+      "SPDXID": "SPDXRef-Package-8344881a0ce27e5de6c2",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/io.opentelemetry/opentelemetry-api@1.41.0",
+          "referenceType": "purl"
+        }
+      ],
       "filesAnalyzed": false,
-      "licenseConcluded": "Apache-2.0",
-      "licenseDeclared": "Apache-2.0",
-      "copyrightText": "NOASSERTION"
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "io.opentelemetry:opentelemetry-api",
+      "versionInfo": "1.41.0"
     },
     {
-      "name": "kotlinx-coroutines",
-      "SPDXID": "SPDXRef-Package-kotlinx-coroutines",
-      "versionInfo": "1.11.0",
-      "downloadLocation": "https://github.com/Kotlin/kotlinx.coroutines",
+      "SPDXID": "SPDXRef-Package-b7eae8b03d2b7f90b448",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/io.opentelemetry/opentelemetry-context@1.41.0",
+          "referenceType": "purl"
+        }
+      ],
       "filesAnalyzed": false,
-      "licenseConcluded": "Apache-2.0",
-      "licenseDeclared": "Apache-2.0",
-      "copyrightText": "NOASSERTION"
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "io.opentelemetry:opentelemetry-context",
+      "versionInfo": "1.41.0"
     },
     {
-      "name": "junit",
-      "SPDXID": "SPDXRef-Package-junit",
-      "versionInfo": "5.10.5",
-      "downloadLocation": "https://github.com/junit-team/junit5",
+      "SPDXID": "SPDXRef-Package-7331587508d3f1055b97",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.apiguardian/apiguardian-api@1.1.2",
+          "referenceType": "purl"
+        }
+      ],
       "filesAnalyzed": false,
-      "licenseConcluded": "EPL-2.0",
-      "licenseDeclared": "EPL-2.0",
-      "copyrightText": "NOASSERTION"
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.apiguardian:apiguardian-api",
+      "versionInfo": "1.1.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-494a20eab86e6813c749",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.checkerframework/checker-qual@3.43.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.checkerframework:checker-qual",
+      "versionInfo": "3.43.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-2f6c12e4a1e9016b54c6",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-api@2.4.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-build-tools-api",
+      "versionInfo": "2.4.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-a00b87217c357659b9e5",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-api@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-build-tools-api",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-c8fec8ca3aa25bde54fe",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-compat@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-build-tools-compat",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-de5cf79ee86507897bd6",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-cri-impl@2.4.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-build-tools-cri-impl",
+      "versionInfo": "2.4.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-3ab80748b7eab845c94a",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-cri-impl@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-build-tools-cri-impl",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-b4da255ac72f1be9b4a0",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-impl@2.4.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-build-tools-impl",
+      "versionInfo": "2.4.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-3ae7f600407dfe0845d3",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-impl@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-build-tools-impl",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-49c014cffb5331d471bf",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-compiler-embeddable@2.4.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-compiler-embeddable",
+      "versionInfo": "2.4.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-2e735a53ec84c74bb7f3",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-compiler-embeddable@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-compiler-embeddable",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-bc26d9d52af779d1cc85",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-compiler-runner@2.4.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-compiler-runner",
+      "versionInfo": "2.4.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-c5231a32aa52883ec3c4",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-compiler-runner@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-compiler-runner",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-a52361f54e6075f7eae9",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-daemon-client@2.4.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-daemon-client",
+      "versionInfo": "2.4.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-64a42fa45ff4da8a041d",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-daemon-client@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-daemon-client",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-069a7edd3f1e66019505",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-daemon-embeddable@2.4.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-daemon-embeddable",
+      "versionInfo": "2.4.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-015d74ac11b1edf588b8",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-daemon-embeddable@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-daemon-embeddable",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-c9d58524415b2b53be8c",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-dom-api-compat@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-dom-api-compat",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-3a771a4b9d782e09a2d5",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-klib-commonizer-embeddable@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-f39e6518dc07091ad3c7",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-native-prebuilt@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-native-prebuilt",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-7f1354adb152d9988d03",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@1.6.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-reflect",
+      "versionInfo": "1.6.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-16a4dfb5cc05b51903f0",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-script-runtime@2.4.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-script-runtime",
+      "versionInfo": "2.4.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-0b7a2e8e2dfba8d42e31",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-script-runtime@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-script-runtime",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-4a1fdba308d6a0550dbf",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-scripting-common@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-scripting-common",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-b0d1686d2d9ac737074b",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-scripting-compiler-embeddable@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-e41888c9717c3cf74140",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-scripting-compiler-impl-embeddable@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-333261a377b0f38eb2ab",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-scripting-jvm@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-scripting-jvm",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-a91e632426af32938d26",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-js@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-js",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-7dac13424fb4612ec464",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-wasm-js@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-wasm-js",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-ef297a59ae209ce0d6b7",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.4.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-stdlib",
+      "versionInfo": "2.4.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-499b92d2d8b281ec2150",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-stdlib",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-5ec3212fcb64645fab86",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-test-js@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-test-js",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-507a558c9614b27a2890",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-test-junit5@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-test-junit5",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-1aa25c29cae6648c305b",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-test-wasm-js@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-test-wasm-js",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-d7fafb7530260a8a98c5",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-test@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-test",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-defef68d31ee81d46c14",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-tooling-core@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:kotlin-tooling-core",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-63051405cb6eb0e952a3",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/swift-export-embeddable@2.4.10",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlin:swift-export-embeddable",
+      "versionInfo": "2.4.10"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-6e5096a844b12312a6d5",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-bom@1.11.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-bom",
+      "versionInfo": "1.11.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-ad45778dbf90ce1e47ae",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm@1.11.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm",
+      "versionInfo": "1.11.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-c687c7baab836303c61e",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm@1.8.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm",
+      "versionInfo": "1.8.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-6f35e01ad8aff608d793",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-core@1.11.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-core",
+      "versionInfo": "1.11.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-acf7976ccb7af7990578",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-serialization-bom@1.7.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlinx:kotlinx-serialization-bom",
+      "versionInfo": "1.7.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-8fdeac34c2ec2b534f4d",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-serialization-core-jvm@1.7.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm",
+      "versionInfo": "1.7.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-8c22b1a95fbed9cefc5d",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains/annotations@13.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains:annotations",
+      "versionInfo": "13.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-8783fb2446bd2db66924",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.jetbrains/annotations@23.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.jetbrains:annotations",
+      "versionInfo": "23.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-e352e71e07c1b1100a6d",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit.jupiter/junit-jupiter-api@5.10.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit.jupiter:junit-jupiter-api",
+      "versionInfo": "5.10.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-0ac8c600768c5f8a672e",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit.jupiter/junit-jupiter-api@5.10.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit.jupiter:junit-jupiter-api",
+      "versionInfo": "5.10.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-db7e83721f39f90ab62f",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit.jupiter/junit-jupiter-engine@5.10.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit.jupiter:junit-jupiter-engine",
+      "versionInfo": "5.10.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-f5b58236ea6ced724b5c",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit.jupiter/junit-jupiter-engine@5.10.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit.jupiter:junit-jupiter-engine",
+      "versionInfo": "5.10.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-835f84a4f9ca922a405d",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit.jupiter/junit-jupiter-params@5.10.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit.jupiter:junit-jupiter-params",
+      "versionInfo": "5.10.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-da849a6097cfef9c0403",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit.jupiter/junit-jupiter@5.10.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit.jupiter:junit-jupiter",
+      "versionInfo": "5.10.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-06d326506b4bea88adcb",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit.platform/junit-platform-commons@1.10.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit.platform:junit-platform-commons",
+      "versionInfo": "1.10.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-212fe15baa7241793665",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit.platform/junit-platform-commons@1.10.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit.platform:junit-platform-commons",
+      "versionInfo": "1.10.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-638a44a2cb18f5b79e22",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit.platform/junit-platform-engine@1.10.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit.platform:junit-platform-engine",
+      "versionInfo": "1.10.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-108b93d0526db8d3b262",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit.platform/junit-platform-engine@1.10.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit.platform:junit-platform-engine",
+      "versionInfo": "1.10.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-517b8c20d75bc8e30850",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit.platform/junit-platform-launcher@1.10.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit.platform:junit-platform-launcher",
+      "versionInfo": "1.10.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-0c558b2a50111c32ca01",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit.platform/junit-platform-launcher@1.10.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit.platform:junit-platform-launcher",
+      "versionInfo": "1.10.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-77c1ae5857a8d32c0cf0",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit/junit-bom@5.10.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit:junit-bom",
+      "versionInfo": "5.10.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-252f05c02d814b4c05ba",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.junit/junit-bom@5.10.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.junit:junit-bom",
+      "versionInfo": "5.10.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-5b543ce37856670e7b64",
+      "comment": "gradle lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:maven/org.opentest4j/opentest4j@1.3.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "org.opentest4j:opentest4j",
+      "versionInfo": "1.3.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-59028832ca2623da0ae9",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/@isaacs/cliui@8.0.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "@isaacs/cliui",
+      "versionInfo": "8.0.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-6f83acdea97b79c0ef84",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/@pkgjs/parseargs@0.11.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "@pkgjs/parseargs",
+      "versionInfo": "0.11.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-6bce4efe9a20ebd38646",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/ansi-regex@5.0.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "ansi-regex",
+      "versionInfo": "5.0.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-631ff3cbc4ad86691088",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/ansi-regex@6.3.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "ansi-regex",
+      "versionInfo": "6.3.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-bf601b237f767abc41be",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/ansi-styles@4.3.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "ansi-styles",
+      "versionInfo": "4.3.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-770014758b91fd6d0f63",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/ansi-styles@6.2.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "ansi-styles",
+      "versionInfo": "6.2.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-399f6cf9ddf3d48a52b5",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/argparse@2.0.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "argparse",
+      "versionInfo": "2.0.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-e01b4e5a5ae2db64d4c4",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/balanced-match@1.0.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "balanced-match",
+      "versionInfo": "1.0.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-35884d19207ebd889888",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/brace-expansion@2.1.4",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "brace-expansion",
+      "versionInfo": "2.1.4"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-b88843bc75e9071afe17",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/browser-stdout@1.3.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "browser-stdout",
+      "versionInfo": "1.3.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-e4c0a17f2567d10cb311",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/buffer-from@1.1.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "buffer-from",
+      "versionInfo": "1.1.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-e2b70a0ee1de80a60b9f",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/camelcase@6.3.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "camelcase",
+      "versionInfo": "6.3.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-49a5e90c594b83c29724",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/chalk@4.1.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "chalk",
+      "versionInfo": "4.1.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-8616f2d6d2633e20e6ec",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/chokidar@4.0.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "chokidar",
+      "versionInfo": "4.0.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-ab6ba917906f8a1592fb",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/cliui@8.0.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "cliui",
+      "versionInfo": "8.0.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-aeeb5e0167993eff3518",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/color-convert@2.0.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "color-convert",
+      "versionInfo": "2.0.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-7d567a0f446333fac6be",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/color-name@1.1.4",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "color-name",
+      "versionInfo": "1.1.4"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-ed4ad5fb79ff4b349ee4",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/cross-spawn@7.0.6",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "cross-spawn",
+      "versionInfo": "7.0.6"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-82131a0549135bd3949f",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/debug@4.4.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "debug",
+      "versionInfo": "4.4.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-de6af2b62b933df86f1f",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/decamelize@4.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "decamelize",
+      "versionInfo": "4.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-0f7c893d1a39ff638b5f",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/diff@7.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "diff",
+      "versionInfo": "7.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-b497f50a6c77a10a4ae1",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/eastasianwidth@0.2.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "eastasianwidth",
+      "versionInfo": "0.2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-eb22eee27a31be5add85",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/emoji-regex@8.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "emoji-regex",
+      "versionInfo": "8.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-5ea51561a5969ebde8f3",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/emoji-regex@9.2.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "emoji-regex",
+      "versionInfo": "9.2.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-afa87c733f96bafe2e93",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/escalade@3.2.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "escalade",
+      "versionInfo": "3.2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-9317176d5fcba56896ae",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/escape-string-regexp@4.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "escape-string-regexp",
+      "versionInfo": "4.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-650ec676cd04bae2aaab",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/find-up@5.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "find-up",
+      "versionInfo": "5.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-c52fb7af8b469829f187",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/flat@5.0.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "flat",
+      "versionInfo": "5.0.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-48ea855cf74b34659fcd",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/foreground-child@3.3.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "foreground-child",
+      "versionInfo": "3.3.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-c7068bd4f798ce41ec7b",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/format-util@1.0.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "format-util",
+      "versionInfo": "1.0.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-bae2cc7e4d9d636dd199",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/get-caller-file@2.0.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "get-caller-file",
+      "versionInfo": "2.0.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-f21c4139ab2215001a11",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/glob@10.5.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "glob",
+      "versionInfo": "10.5.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-e4ba897e2fba4c39ec1f",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/has-flag@4.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "has-flag",
+      "versionInfo": "4.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-485e5b62261832012bb3",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/he@1.2.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "he",
+      "versionInfo": "1.2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-111d893f3b7322f2b0bf",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/is-fullwidth-code-point@3.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "is-fullwidth-code-point",
+      "versionInfo": "3.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-e5eeca8f4d0a52135d2e",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/is-path-inside@3.0.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "is-path-inside",
+      "versionInfo": "3.0.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-46c8be473cbd147ed479",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/is-plain-obj@2.1.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "is-plain-obj",
+      "versionInfo": "2.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-7a98072cc20f4acb3de8",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/is-unicode-supported@0.1.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "is-unicode-supported",
+      "versionInfo": "0.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-57c33b21493e99f13964",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/isexe@2.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "isexe",
+      "versionInfo": "2.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-0dd60f84e64bc4bba0c1",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/jackspeak@3.4.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "jackspeak",
+      "versionInfo": "3.4.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-fba372f08ca82eef612f",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/js-yaml@4.3.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "js-yaml",
+      "versionInfo": "4.3.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-d32bde122d7b2e58138c",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/kotlin-web-helpers@3.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "kotlin-web-helpers",
+      "versionInfo": "3.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-ede690d6daa058001890",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/locate-path@6.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "locate-path",
+      "versionInfo": "6.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-1e4830b417d7c7fe77bd",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/log-symbols@4.1.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "log-symbols",
+      "versionInfo": "4.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-b6f8854624dd7b97591e",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/lru-cache@10.4.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "lru-cache",
+      "versionInfo": "10.4.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-cb169db55af98d0191dc",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/minimatch@9.0.9",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "minimatch",
+      "versionInfo": "9.0.9"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-13a1a8660459c5b5a033",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/minipass@7.1.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "minipass",
+      "versionInfo": "7.1.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-87cb5530ff7bb134c7b2",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/mocha@11.7.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "mocha",
+      "versionInfo": "11.7.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-8f9a0f49530faa3b9b70",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/ms@2.1.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "ms",
+      "versionInfo": "2.1.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-46e75d2e83c03a21b4ce",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/p-limit@3.1.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "p-limit",
+      "versionInfo": "3.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-648ce2b7a299928875b4",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/p-locate@5.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "p-locate",
+      "versionInfo": "5.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-8948b881f250c2542f73",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/package-json-from-dist@1.0.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "package-json-from-dist",
+      "versionInfo": "1.0.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-04a52c47334be175daf7",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/path-exists@4.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "path-exists",
+      "versionInfo": "4.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-a29e80bd108a03d4641e",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/path-key@3.1.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "path-key",
+      "versionInfo": "3.1.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-379d58fdf230ac1ce68e",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/path-scurry@1.11.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "path-scurry",
+      "versionInfo": "1.11.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-a88a90f108bb49f62a8e",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/picocolors@1.1.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "picocolors",
+      "versionInfo": "1.1.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-e3624ed6649b3728a7b0",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/randombytes@2.1.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "randombytes",
+      "versionInfo": "2.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-4b938b539e398f1bf121",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/readdirp@4.1.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "readdirp",
+      "versionInfo": "4.1.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-a7e9ba0772c2426d52ef",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/require-directory@2.1.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "require-directory",
+      "versionInfo": "2.1.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-670ee7452f225ad20135",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/safe-buffer@5.2.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "safe-buffer",
+      "versionInfo": "5.2.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-3c9807270d747e7b2833",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/serialize-javascript@6.0.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "serialize-javascript",
+      "versionInfo": "6.0.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-3c85eb1a66c817b76046",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/shebang-command@2.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "shebang-command",
+      "versionInfo": "2.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-467600a9b54d94bdaa34",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/shebang-regex@3.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "shebang-regex",
+      "versionInfo": "3.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-b6a148660929dd7ec1ce",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/signal-exit@4.1.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "signal-exit",
+      "versionInfo": "4.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-1aa64a7690f9cba98ecc",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/source-map-support@0.5.21",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "source-map-support",
+      "versionInfo": "0.5.21"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-f6a70491d5885f99f5be",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/source-map@0.6.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "source-map",
+      "versionInfo": "0.6.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-6da8179d4a10f7daeb95",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/string-width-cjs@4.2.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "string-width-cjs",
+      "versionInfo": "4.2.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-c6e572a5fbc8a128f426",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/string-width@4.2.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "string-width",
+      "versionInfo": "4.2.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-70ffe711c63be23a6bc8",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/string-width@5.1.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "string-width",
+      "versionInfo": "5.1.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-a78dddc37596c1a51ee8",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/strip-ansi-cjs@6.0.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "strip-ansi-cjs",
+      "versionInfo": "6.0.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-66cba6b944ce65d88ff9",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/strip-ansi@6.0.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "strip-ansi",
+      "versionInfo": "6.0.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-c7dbc278d99999553be6",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/strip-ansi@7.2.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "strip-ansi",
+      "versionInfo": "7.2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-e29c9f2dc5a971e33b32",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/strip-json-comments@3.1.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "strip-json-comments",
+      "versionInfo": "3.1.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-53e54b036f83f436b817",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/supports-color@7.2.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "supports-color",
+      "versionInfo": "7.2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-c34481d6876e7e186eea",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/supports-color@8.1.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "supports-color",
+      "versionInfo": "8.1.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-cc8746e214bd8f998948",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/which@2.0.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "which",
+      "versionInfo": "2.0.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-4b9f949d6cecd042d431",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/workerpool@9.3.4",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "workerpool",
+      "versionInfo": "9.3.4"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-39d47ba1b2454470a8a9",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/wrap-ansi-cjs@7.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "wrap-ansi-cjs",
+      "versionInfo": "7.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-8b7eba6d39ce7433bbae",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/wrap-ansi@7.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "wrap-ansi",
+      "versionInfo": "7.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-dbc2fd29e6bbe1536f15",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/wrap-ansi@8.1.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "wrap-ansi",
+      "versionInfo": "8.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-3c0e79e2a41f2a0b3143",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/y18n@5.0.8",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "y18n",
+      "versionInfo": "5.0.8"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-4f6ecaa8bec002b95caa",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/yargs-parser@21.1.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "yargs-parser",
+      "versionInfo": "21.1.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-a78158069fbb26020706",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/yargs-unparser@2.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "yargs-unparser",
+      "versionInfo": "2.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-5452c22037973b0c7fc8",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/yargs@17.7.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "yargs",
+      "versionInfo": "17.7.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-63dd14f733935ee42de2",
+      "comment": "npm lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:npm/yocto-queue@0.1.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "yocto-queue",
+      "versionInfo": "0.1.0"
     }
   ],
   "relationships": [
-    { "spdxElementId": "SPDXRef-DOCUMENT", "relationshipType": "DESCRIBES", "relatedSpdxElement": "SPDXRef-Package-kotlin-reference-atlas" },
-    { "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-reference-atlas-core" },
-    { "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-kotlin" },
-    { "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-gradle" },
-    { "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-kotlinx-coroutines" },
-    { "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-junit" }
-  ]
+    {
+      "relatedSpdxElement": "SPDXRef-Package-4faa13a12d1130503617",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-ffe7bb907fde62ec9468",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-8344881a0ce27e5de6c2",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-b7eae8b03d2b7f90b448",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-7331587508d3f1055b97",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-494a20eab86e6813c749",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-2f6c12e4a1e9016b54c6",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-a00b87217c357659b9e5",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-c8fec8ca3aa25bde54fe",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-de5cf79ee86507897bd6",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-3ab80748b7eab845c94a",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-b4da255ac72f1be9b4a0",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-3ae7f600407dfe0845d3",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-49c014cffb5331d471bf",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-2e735a53ec84c74bb7f3",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-bc26d9d52af779d1cc85",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-c5231a32aa52883ec3c4",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-a52361f54e6075f7eae9",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-64a42fa45ff4da8a041d",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-069a7edd3f1e66019505",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-015d74ac11b1edf588b8",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-c9d58524415b2b53be8c",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-3a771a4b9d782e09a2d5",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-f39e6518dc07091ad3c7",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-7f1354adb152d9988d03",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-16a4dfb5cc05b51903f0",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-0b7a2e8e2dfba8d42e31",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-4a1fdba308d6a0550dbf",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-b0d1686d2d9ac737074b",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-e41888c9717c3cf74140",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-333261a377b0f38eb2ab",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-a91e632426af32938d26",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-7dac13424fb4612ec464",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-ef297a59ae209ce0d6b7",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-499b92d2d8b281ec2150",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-5ec3212fcb64645fab86",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-507a558c9614b27a2890",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-1aa25c29cae6648c305b",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-d7fafb7530260a8a98c5",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-defef68d31ee81d46c14",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-63051405cb6eb0e952a3",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-6e5096a844b12312a6d5",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-ad45778dbf90ce1e47ae",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-c687c7baab836303c61e",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-6f35e01ad8aff608d793",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-acf7976ccb7af7990578",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-8fdeac34c2ec2b534f4d",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-8c22b1a95fbed9cefc5d",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-8783fb2446bd2db66924",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-e352e71e07c1b1100a6d",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-0ac8c600768c5f8a672e",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-db7e83721f39f90ab62f",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-f5b58236ea6ced724b5c",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-835f84a4f9ca922a405d",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-da849a6097cfef9c0403",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-06d326506b4bea88adcb",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-212fe15baa7241793665",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-638a44a2cb18f5b79e22",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-108b93d0526db8d3b262",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-517b8c20d75bc8e30850",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-0c558b2a50111c32ca01",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-77c1ae5857a8d32c0cf0",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-252f05c02d814b4c05ba",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-5b543ce37856670e7b64",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-59028832ca2623da0ae9",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-6f83acdea97b79c0ef84",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-6bce4efe9a20ebd38646",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-631ff3cbc4ad86691088",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-bf601b237f767abc41be",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-770014758b91fd6d0f63",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-399f6cf9ddf3d48a52b5",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-e01b4e5a5ae2db64d4c4",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-35884d19207ebd889888",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-b88843bc75e9071afe17",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-e4c0a17f2567d10cb311",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-e2b70a0ee1de80a60b9f",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-49a5e90c594b83c29724",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-8616f2d6d2633e20e6ec",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-ab6ba917906f8a1592fb",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-aeeb5e0167993eff3518",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-7d567a0f446333fac6be",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-ed4ad5fb79ff4b349ee4",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-82131a0549135bd3949f",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-de6af2b62b933df86f1f",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-0f7c893d1a39ff638b5f",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-b497f50a6c77a10a4ae1",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-eb22eee27a31be5add85",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-5ea51561a5969ebde8f3",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-afa87c733f96bafe2e93",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-9317176d5fcba56896ae",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-650ec676cd04bae2aaab",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-c52fb7af8b469829f187",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-48ea855cf74b34659fcd",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-c7068bd4f798ce41ec7b",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-bae2cc7e4d9d636dd199",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-f21c4139ab2215001a11",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-e4ba897e2fba4c39ec1f",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-485e5b62261832012bb3",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-111d893f3b7322f2b0bf",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-e5eeca8f4d0a52135d2e",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-46c8be473cbd147ed479",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-7a98072cc20f4acb3de8",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-57c33b21493e99f13964",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-0dd60f84e64bc4bba0c1",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-fba372f08ca82eef612f",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-d32bde122d7b2e58138c",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-ede690d6daa058001890",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-1e4830b417d7c7fe77bd",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-b6f8854624dd7b97591e",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-cb169db55af98d0191dc",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-13a1a8660459c5b5a033",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-87cb5530ff7bb134c7b2",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-8f9a0f49530faa3b9b70",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-46e75d2e83c03a21b4ce",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-648ce2b7a299928875b4",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-8948b881f250c2542f73",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-04a52c47334be175daf7",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-a29e80bd108a03d4641e",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-379d58fdf230ac1ce68e",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-a88a90f108bb49f62a8e",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-e3624ed6649b3728a7b0",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-4b938b539e398f1bf121",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-a7e9ba0772c2426d52ef",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-670ee7452f225ad20135",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-3c9807270d747e7b2833",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-3c85eb1a66c817b76046",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-467600a9b54d94bdaa34",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-b6a148660929dd7ec1ce",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-1aa64a7690f9cba98ecc",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-f6a70491d5885f99f5be",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-6da8179d4a10f7daeb95",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-c6e572a5fbc8a128f426",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-70ffe711c63be23a6bc8",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-a78dddc37596c1a51ee8",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-66cba6b944ce65d88ff9",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-c7dbc278d99999553be6",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-e29c9f2dc5a971e33b32",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-53e54b036f83f436b817",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-c34481d6876e7e186eea",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-cc8746e214bd8f998948",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-4b9f949d6cecd042d431",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-39d47ba1b2454470a8a9",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-8b7eba6d39ce7433bbae",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-dbc2fd29e6bbe1536f15",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-3c0e79e2a41f2a0b3143",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-4f6ecaa8bec002b95caa",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-a78158069fbb26020706",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-5452c22037973b0c7fc8",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-63dd14f733935ee42de2",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    }
+  ],
+  "spdxVersion": "SPDX-2.3"
 }

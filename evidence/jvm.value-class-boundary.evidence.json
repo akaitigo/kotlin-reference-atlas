@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:50ccaeef0a501a25326d612861b1e2929d2ccf3a1a118750231a320f6e3cd983",
+    "digest": "sha256:ffceb25094976bc1be77c809fd6ada42cc47597662b349fcff8be822ad682a92",
     "media_type": "application/json",
-    "size_bytes": 1801,
+    "size_bytes": 8559,
     "uri": "evidence/artifacts/lab-results.json"
   },
   "atlas_id": "kotlin-reference-atlas",
@@ -12,15 +12,15 @@
   "command": "./gradlew :labs:jvm:test",
   "created_at": "2026-08-28T00:00:00+09:00",
   "environment": {
-    "manifest_digest": "sha256:7dd6e45eb3a5a22cb9948e0d88ff03596474796978625984269a49bbab44dc97",
+    "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:fa000cb3b1d143b580d2607acbf5b9cecc350b110374c9afe3c730a01490282d",
+  "harness_digest": "sha256:c1e87bc94534898d959d0290ac549ecec71f9e2884c0eee57c7bc7e971319a5f",
   "id": "jvm.value-class-boundary",
   "kind": "test-report",
   "producer": "gradle-junit",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:656a3c4f0687029c7b4113a2cd36b1640251da05b986900a2dddba4e299e2b33",
+  "source_digest": "sha256:fd978b99941851cad91ebff64e37463dda21984a9cd14b2520cc0c68e2ab2f10",
   "verdict": "pass"
 }

@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:c70961ed94357a371e3b1a49447e4b5ddebd3602860abec17ff6419f097927d6",
+    "digest": "sha256:b31ae4ec4803cb69cd1ec4ce19ae42b457e6d5d71bf1aa7afde578ad31f4387c",
     "media_type": "application/json",
-    "size_bytes": 543,
+    "size_bytes": 650,
     "uri": "evidence/artifacts/rights-validation.json"
   },
   "atlas_id": "kotlin-reference-atlas",
@@ -12,15 +12,15 @@
   "command": "python3 scripts/verify.py",
   "created_at": "2026-08-28T00:00:00+09:00",
   "environment": {
-    "manifest_digest": "sha256:7dd6e45eb3a5a22cb9948e0d88ff03596474796978625984269a49bbab44dc97",
+    "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:b69d1a449b353e602454ad483fe5d590374a913df05fa86293903c1b13064c13",
+  "harness_digest": "sha256:bffc703dbfc0c4f8d3a95f65d0066c82f8d47ccdfc5324871989feadf5945778",
   "id": "publication.rights-metadata",
   "kind": "conformance",
   "producer": "kotlin-atlas-verifier",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:656a3c4f0687029c7b4113a2cd36b1640251da05b986900a2dddba4e299e2b33",
+  "source_digest": "sha256:fd978b99941851cad91ebff64e37463dda21984a9cd14b2520cc0c68e2ab2f10",
   "verdict": "pass"
 }

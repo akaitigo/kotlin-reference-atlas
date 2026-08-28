@@ -1,5 +1,7 @@
 {
-  "direct_component_count": 5,
+  "direct_component_count": 7,
+  "lock_component_count": 149,
+  "missing_lock_components": [],
   "required_files": [
     "LICENSE",
     "NOTICE",
@@ -18,6 +20,7 @@
     "CycloneDX-1.6",
     "SPDX-2.3"
   ],
-  "sbom_scope": "direct-dependencies-only",
+  "sbom_scope": "gradle-and-npm-lock-transitive-closure",
+  "spdx_package_count": 150,
   "verdict": "pass"
 }

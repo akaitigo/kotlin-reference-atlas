@@ -16,11 +16,11 @@
   "authority": { "lockfile": "sources.lock.yaml", "policy": "primary-first" },
   "mastery": { "manifest": "mastery.yaml", "contract_version": "1.0.0" },
   "scope": {
-    "statement": "Kotlin 2.4.10を基準に、Kotlin/JVM、Gradle、structured concurrency、Java相互運用の設計判断と挙動を再実行可能なLabとEvidenceで実証する。",
+    "statement": "Kotlin 2.4.10を基準に、言語Semanticsと型、Coroutine/Flow、JVM/Native/JS/Wasm、Interop、Compiler/Runtime、Gradle/Toolchain、Testing、Performance、Security、Failure/Debugging、Compatibility/Migration、Operations、Agent Skillを再実行可能なLabとEvidenceで実証する。",
     "exclusions": [
-      "Android、Kotlin/Native、Kotlin/JS、Kotlin/Wasm、Apple相互運用は本Coverage Epochの必須完了対象に含めない。",
-      "Ktor、Spring、Compose等の第三者または周辺Frameworkの全公開API閉包は対象に含めない。",
-      "Kotlin 2.4.10より前の全Version再現は行わず、現行移行判断に必要なfixtureだけを将来追加する。"
+      "Android SDK、Ktor、Spring、Compose等の第三者または周辺Framework固有APIはKotlin本体の決定版責任から分離する。",
+      "Full Xcodeを必要とするNative executable実行とSwift Export consumerは現在のHost Toolchainではinfeasibleとし、Native test KLIB compileを代替Evidenceとして明示する。",
+      "Kotlin 2.4.10より前の全Versionを再現せず、互換性と移行Contractを立証するversioned fixtureを対象にする。"
     ]
   },
   "requires": ["reference-atlas-core"],

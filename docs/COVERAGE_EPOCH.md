@@ -11,13 +11,13 @@
 
 ## 今回閉じる範囲
 
-- JVM value classのsource-level型分離とgeneric境界のboxing
-- Gradle Pluginの登録TaskをGradle TestKit consumer buildから実行
-- structured concurrencyにおける子失敗、兄弟cancel、親への例外伝播
-- Kotlin APIをJava consumerから呼び出すoverloadとchecked exception宣言
-- Router SkillのCapability選択とCoverage gap応答
-- Manifest、License、NOTICE、第三者ManifestのLocal gate
+- 言語Semantics、型System、JVM value class、Compiler/Runtime形状とbytecode
+- structured concurrency、Flowのretry/State/cancellation
+- JVM/JS/Wasm runtime、Native test KLIB compile、Java consumer、expect/actual
+- Gradle Plugin consumer、Toolchain Lock、Testing、Performance、Security、Failure/Debugging
+- Compatibility/Migration、Lifecycle/Recovery、Local/Container profile
+- Compiler/stdlib Inventory、transitive SPDX SBOM、Router Skill Eval
 
-## 未完了
+## Infeasibleと対象外
 
-Kotlin言語・stdlib公開Surface全Inventory、Compiler diagnostics全件、KMP、Native、JS、Wasm、Android、Apple、TypeScript/C相互運用、KSP、Compiler Plugin、Benchmark、Container profile、完全SBOM、Release署名は後続EpochまたはTarget Setで閉じます。
+Full Xcode不在によりmacOS arm64 Native executable実行とSwift Export consumerは`infeasible`です。Android SDK、Ktor、Spring、Compose等のFramework固有Surface、KSP/第三者Compiler Plugin固有APIはKotlin本体の責任から分離します。

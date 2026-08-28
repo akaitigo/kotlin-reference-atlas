@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "profile": "container",
+  "base_image": "gradle:9.5.0-jdk17",
+  "base_image_digest": "sha256:dfb52c9c5247cf6129770cd60597bbc1e67cdcfb7fd3691ed450d1c60737ea9e",
+  "jdk_toolchain": 17,
+  "gradle": "9.5.0",
+  "network_on_replay": "none",
+  "scope": "jvm-required-labs"
+}

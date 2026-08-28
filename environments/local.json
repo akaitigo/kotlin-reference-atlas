@@ -5,5 +5,8 @@
   "kotlin": "2.4.10",
   "gradle": "9.5.0",
   "kotlinx_coroutines": "1.11.0",
+  "node": "25.2.1",
+  "native_target": "macosArm64-test-klib",
+  "docker": "29.1.2",
   "network_required_after_dependency_resolution": false
 }

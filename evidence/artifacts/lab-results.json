@@ -1,6 +1,33 @@
 {
-  "command": "./gradlew clean test --configuration-cache --no-daemon",
+  "command": "./gradlew clean atlasCheck --configuration-cache --no-daemon",
   "suites": [
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.runtime.RuntimeShapesTest",
+          "name": "capturing lambda preserves lexical value()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.runtime.RuntimeShapesTest",
+          "name": "data class supplies component copy equality and defaults()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.runtime.RuntimeShapesTest",
+          "name": "reified filter keeps runtime-compatible values()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.runtime.RuntimeShapesTest",
+          "name": "suspend continuation resumes exactly once()",
+          "status": "pass"
+        }
+      ],
+      "module": "compiler-runtime",
+      "suite": "dev.akaitigo.kotlinatlas.runtime.RuntimeShapesTest",
+      "task": "test"
+    },
     {
       "cases": [
         {
@@ -10,7 +37,82 @@
         }
       ],
       "module": "coroutines",
-      "suite": "dev.akaitigo.kotlinatlas.coroutines.FailurePropagationTest"
+      "suite": "dev.akaitigo.kotlinatlas.coroutines.FailurePropagationTest",
+      "task": "test"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.engineering.EngineeringTest",
+          "name": "constant-time primitive reports equality without text conversion()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.engineering.EngineeringTest",
+          "name": "failure classification preserves causal type for debugging()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.engineering.EngineeringTest",
+          "name": "migration accepts v1 and v2 and rejects unknown schema()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.engineering.EngineeringTest",
+          "name": "operation lifecycle supports failure recovery and stop()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.engineering.EngineeringTest",
+          "name": "path traversal cannot escape operation root()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.engineering.EngineeringTest",
+          "name": "performance harness emits finite median checksum and sample count()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.engineering.EngineeringTest",
+          "name": "security boundary only permits https allowlist without user info()",
+          "status": "pass"
+        }
+      ],
+      "module": "engineering",
+      "suite": "dev.akaitigo.kotlinatlas.engineering.EngineeringTest",
+      "task": "test"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.flow.FlowPipelinesTest",
+          "name": "cancellation is not converted into a domain value()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.flow.FlowPipelinesTest",
+          "name": "cold flow preserves normalized order()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.flow.FlowPipelinesTest",
+          "name": "collector cancellation runs upstream finally()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.flow.FlowPipelinesTest",
+          "name": "retry re-collects upstream until success()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.flow.FlowPipelinesTest",
+          "name": "state flow exposes latest state to a new consumer()",
+          "status": "pass"
+        }
+      ],
+      "module": "flow",
+      "suite": "dev.akaitigo.kotlinatlas.flow.FlowPipelinesTest",
+      "task": "test"
     },
     {
       "cases": [
@@ -21,7 +123,8 @@
         }
       ],
       "module": "gradle-plugin",
-      "suite": "dev.akaitigo.kotlinatlas.gradle.AtlasProbePluginTest"
+      "suite": "dev.akaitigo.kotlinatlas.gradle.AtlasProbePluginTest",
+      "task": "test"
     },
     {
       "cases": [
@@ -37,7 +140,8 @@
         }
       ],
       "module": "interop",
-      "suite": "dev.akaitigo.kotlinatlas.interop.JavaConsumerTest"
+      "suite": "dev.akaitigo.kotlinatlas.interop.JavaConsumerTest",
+      "task": "test"
     },
     {
       "cases": [
@@ -53,8 +157,98 @@
         }
       ],
       "module": "jvm",
-      "suite": "dev.akaitigo.kotlinatlas.jvm.ValueClassBoundaryTest"
+      "suite": "dev.akaitigo.kotlinatlas.jvm.ValueClassBoundaryTest",
+      "task": "test"
+    },
+    {
+      "cases": [
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.platform.PlatformContractTest",
+          "name": "common_semantics_are_deterministic[js, node]",
+          "status": "pass"
+        },
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.platform.PlatformContractTest",
+          "name": "platform_actual_is_linked_and_executed[js, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "multiplatform",
+      "suite": "jsNodeTest.dev.akaitigo.kotlinatlas.platform.PlatformContractTest",
+      "task": "jsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.platform.PlatformContractTest",
+          "name": "common_semantics_are_deterministic()[jvm]",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.platform.PlatformContractTest",
+          "name": "platform_actual_is_linked_and_executed()[jvm]",
+          "status": "pass"
+        }
+      ],
+      "module": "multiplatform",
+      "suite": "PlatformContractTest[jvm]",
+      "task": "jvmTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.platform.PlatformContractTest",
+          "name": "common_semantics_are_deterministic[wasmJs, node]",
+          "status": "pass"
+        },
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.platform.PlatformContractTest",
+          "name": "platform_actual_is_linked_and_executed[wasmJs, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "multiplatform",
+      "suite": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.platform.PlatformContractTest",
+      "task": "wasmJsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.semantics.SemanticsTest",
+          "name": "declaration-site variance permits safe producer and consumer substitution()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.semantics.SemanticsTest",
+          "name": "lazy delegate initializes once()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.semantics.SemanticsTest",
+          "name": "nothing failure is covariant with successful result type()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.semantics.SemanticsTest",
+          "name": "reified parameter preserves runtime type token()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.semantics.SemanticsTest",
+          "name": "sealed result is exhaustively interpreted and smart-cast()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.semantics.SemanticsTest",
+          "name": "sequence remains lazy until terminal operation()",
+          "status": "pass"
+        }
+      ],
+      "module": "semantics",
+      "suite": "dev.akaitigo.kotlinatlas.semantics.SemanticsTest",
+      "task": "test"
     }
   ],
+  "test_case_count": 34,
   "verdict": "pass"
 }
