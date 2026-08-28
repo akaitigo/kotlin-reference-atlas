@@ -22,7 +22,9 @@ v0.2.0は固定した28 Target、8 Source、Local／Container profileに対す�
 - bounded Channelのbackpressureとclose後拒否
 - Workflow IDによる重複実行の冪等化
 
-JVM実Runtime Test 8件と集約Claim／Artifact Evidenceは接続済みです。実行時traceは正常、境界、拒否、障害、回復の8行を保存し、Strict／Normalize、bounded retry、idempotent replay、bounded Channel、cancellationの観測結果を含みます。ただし、5 Behaviorそれぞれの専用Claim／10 Scenario Proof、JS／Wasm／Native実Runtime、全Outcome／SurfaceのDefinitive Skill Evalへ未接続のため`partial`です。
+JVM実Runtime Test 8件と集約Claim／Artifact Evidenceは接続済みです。実行時traceは正常、境界、拒否、障害、回復の8行を保存し、Strict／Normalize、bounded retry、idempotent replay、bounded Channel、cancellationの観測結果を含みます。ただし、5 Behaviorそれぞれの専用Claim／10 Scenario Proof、JS／Wasm／Native実Runtimeが未接続のため`partial`です。
+
+Kotlin RouterはFE commit `8a9e34a89a55cc53702032783c06ede7246a286f`の方式をdigest固定し、8 Outcome×14 Surfaceの112 cellをKotlin固有Target setへ評価します。90 cellはcovered Targetの実装file、Authority Source、Claim、Evidence record、Artifact digestへ束縛し、22 cellはOutcomeとSurfaceのTarget setが交差しない`mastery-routing-gap`として隠さず記録します。変更権限、人手Authority decision、stale relock、曖昧／未知Query、Native runtime stateもfail-closedで検査します。独立Agent Forward Evalを含めてRouter契約がpassしても、Target／Depth／Runtime closureまたはCompletion Certificateを意味しません。
 
 ## Kotlin Depth Parity
 

@@ -15,7 +15,7 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:d6091ded3860d5e790f9d85366a330dbd46a05f08724f3e60374402f7364b844",
+  "harness_digest": "sha256:228d98bfc3dc1f06afe05999fa981dbfe40e6e28fc2a0f20c19de6375e6a1f37",
   "harness_path": "docs/RUNBOOK.md",
   "id": "operation.lifecycle-recovery",
   "kind": "conformance",

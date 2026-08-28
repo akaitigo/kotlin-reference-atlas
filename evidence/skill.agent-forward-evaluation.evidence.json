@@ -1,15 +1,15 @@
 {
   "artifact": {
-    "digest": "sha256:83c6db28f83f4c44743c989ea622b9d811bcf2042edc3fa96951fb8bbb66baaf",
+    "digest": "sha256:a50e24c8346bd152be2d48a70bb662e3fd9828094fafe44e795fbac4e8e808c0",
     "media_type": "application/json",
-    "size_bytes": 3887,
-    "uri": "evals/kotlin-reference-router.skill-eval.json"
+    "size_bytes": 119503,
+    "uri": "evals/kotlin-reference-router.agent-forward-eval.json"
   },
   "atlas_id": "kotlin-reference-atlas",
   "claim_ids": [
-    "skill.router-respects-coverage"
+    "skill.definitive-routing-is-bounded"
   ],
-  "command": "python3 scripts/verify.py",
+  "command": "independent subagent forwarded Router scenarios",
   "created_at": "2026-08-28T00:00:00+09:00",
   "environment": {
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
@@ -17,9 +17,9 @@
   },
   "harness_digest": "sha256:6ed0ef4d9b441bc788268516cbe50d6b08b8c487b7bee31a67e500843ce1bfed",
   "harness_path": ".agents/skills/kotlin-reference-router/SKILL.md",
-  "id": "skill.router-evaluation",
+  "id": "skill.agent-forward-evaluation",
   "kind": "skill-eval",
-  "producer": "kotlin-router-eval",
+  "producer": "independent-agent-forward-eval",
   "retention": "git",
   "schema_version": 1,
   "source_digest": "sha256:3e21c001526a260e711f5b3c95ecc6cce76dc525317d71115bdaaf7f06d035de",

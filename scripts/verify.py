@@ -322,6 +322,115 @@ def run_skill_evals() -> dict:
         ],
     }
     write_json(ROOT / "evals" / "kotlin-reference-router.skill-eval.json", entity)
+    legacy_evidence = evidence_record(
+        "skill.router-evaluation", ["skill.router-respects-coverage"], "skill-eval", "kotlin-router-eval",
+        "python3 scripts/verify.py", ROOT / "evals" / "kotlin-reference-router.skill-eval.json",
+        [ROOT / ".agents" / "skills" / "kotlin-reference-router", ROOT / "evals"],
+    )
+    write_json(ROOT / "evidence" / "skill.router-evaluation.evidence.json", legacy_evidence)
+    forward_eval = ROOT / "evals" / "kotlin-reference-router.agent-forward-eval.json"
+    if forward_eval.is_file():
+        forward_evidence = evidence_record(
+            "skill.agent-forward-evaluation", ["skill.definitive-routing-is-bounded"], "skill-eval", "independent-agent-forward-eval",
+            "independent subagent forwarded Router scenarios", forward_eval,
+            [ROOT / ".agents" / "skills" / "kotlin-reference-router", forward_eval],
+        )
+        write_json(ROOT / "evidence" / "skill.agent-forward-evaluation.evidence.json", forward_evidence)
+    return result
+
+
+def validate_definitive_skill_eval() -> dict:
+    run([sys.executable, str(ROOT / "scripts" / "generate_definitive_skill_eval.py")])
+    schema_entity = load_json(ROOT / "evals" / "kotlin-reference-router.definitive-skill-eval.json")
+    entity = load_json(ROOT / "evals" / "kotlin-reference-router.definitive-skill-eval-report.json")
+    mastery = load_json(ROOT / "mastery.yaml")
+    coverage = load_json(ROOT / "coverage.yaml")
+    sources = {item["id"]: item for item in load_json(ROOT / "sources.lock.yaml")["sources"]}
+    errors = []
+    summary = entity.get("summary", {})
+    matrix = entity.get("matrix", [])
+    boundaries = entity.get("boundary_cases", [])
+    inventory = entity.get("target_state_inventory", [])
+    if entity.get("status") != "incomplete" or load_json(ROOT / "atlas.yaml").get("status") != "incomplete":
+        errors.append("Matrix passからcompleteへ昇格している")
+    if summary.get("outcome_count") != 8 or len(mastery["outcomes"]) != 8:
+        errors.append("Outcomeが8件ではない")
+    if summary.get("surface_count") != 14 or len(mastery["surfaces"]) != 14:
+        errors.append("Surfaceが14件ではない")
+    if len(matrix) != 112 or summary.get("matrix_cell_count") != 112:
+        errors.append("8 Outcome×14 Surfaceの112-cell Matrixではない")
+    if schema_entity.get("schema_version") != 2 or len(schema_entity.get("cases", [])) != 123:
+        errors.append("Core v2 Skill Eval Schema case集合が旧3件＋追加120件ではない")
+    if not summary.get("matrix_contract_pass") or any(item.get("result") != "pass" for item in matrix):
+        errors.append("Matrix契約に失敗Cellがある")
+    if summary.get("routing_gap_count", 0) <= 0:
+        errors.append("Mastery routing gapを隠している")
+    expected_boundary_codes = {
+        "ambiguous-query", "unknown-query", "unauthorized-mutation", "external-human-decision-required",
+        "stale-source-relock-explicit-procedure-required", "target-not-covered", "mastery-routing-gap",
+    }
+    actual_boundary_codes = {item.get("actual", {}).get("reason_code") for item in boundaries if item.get("result") == "pass"}
+    if actual_boundary_codes != expected_boundary_codes:
+        errors.append("fail-closed境界Caseが不足または不一致")
+    target_projection = {(item["id"], item["state"], item["requirement"]) for item in coverage["targets"]}
+    inventory_projection = {(item["id"], item["state"], item["requirement"]) for item in inventory}
+    if target_projection != inventory_projection:
+        errors.append("全Target state InventoryがCoverageと一致しない")
+    for cell in matrix:
+        route = cell.get("route", {})
+        if route.get("disposition") != "covered":
+            if route.get("reason_code") != "mastery-routing-gap":
+                errors.append(f"{cell.get('id')}: gapがMastery契約外の理由")
+            continue
+        if route.get("target_state") != "covered" or not route.get("target_set_allowed"):
+            errors.append(f"{cell.get('id')}: covered RouteのTarget state不正")
+        if not route.get("implementation_bindings") or not route.get("source_bindings") or not route.get("evidence_bindings"):
+            errors.append(f"{cell.get('id')}: implementation/source/evidence binding不足")
+        mutation = route.get("mutation", {})
+        if mutation.get("required") and not mutation.get("authorized"):
+            errors.append(f"{cell.get('id')}: mutation authorization不足")
+        for source in route.get("source_bindings", []):
+            locked = sources.get(source.get("id"))
+            if locked is None or source.get("digest") != locked.get("digest") or source.get("url") != locked.get("url"):
+                errors.append(f"{cell.get('id')}: Source binding不一致")
+        for evidence in route.get("evidence_bindings", []):
+            artifact = evidence.get("artifact", {})
+            artifact_path = ROOT / artifact.get("path", "")
+            if not artifact_path.is_file() or sha256_file(artifact_path) != artifact.get("digest"):
+                errors.append(f"{cell.get('id')}: Evidence artifact binding不一致")
+    forward = entity.get("independent_agent_forward_eval", {})
+    required_forward_dimensions = {
+        "outcome_surface_forwarding", "mutation_authorization", "human_authority_stop", "stale_relock_stop",
+        "ambiguous_unknown_fail_closed", "source_binding", "routing_gap", "all_target_states",
+    }
+    dimensions = forward.get("coverage_dimensions", {})
+    if forward.get("verdict") != "pass" or forward.get("completion_claim") is not False:
+        errors.append("独立Agent Forward Evalがpassでないかcompletionを主張している")
+    if forward.get("evaluated_by", {}).get("kind") != "independent-subagent":
+        errors.append("Forward Evalの独立Evaluator識別子がない")
+    if forward.get("target_state_counts") != summary.get("target_state_counts") or sum(forward.get("target_state_counts", {}).values()) != len(coverage["targets"]):
+        errors.append("Forward Evalの全Target state照合が現行Coverageと一致しない")
+    passing_dimensions = {
+        key for key, value in dimensions.items()
+        if value == "pass" or (isinstance(value, dict) and value.get("status") == "pass")
+    }
+    if not required_forward_dimensions.issubset(passing_dimensions):
+        errors.append("Forward Evalの必須評価Dimensionが不足")
+    if len(forward.get("scenarios", [])) < 8 or any(not item.get("pass") for item in forward.get("scenarios", [])):
+        errors.append("Forward Eval Scenarioが不足または失敗")
+    if errors:
+        raise RuntimeError("Definitive Skill Eval失敗: " + "; ".join(sorted(set(errors))))
+    result = {
+        "matrix_cell_count": len(matrix),
+        "routed_cell_count": summary["routed_cell_count"],
+        "routing_gap_count": summary["routing_gap_count"],
+        "target_state_counts": summary["target_state_counts"],
+        "boundary_case_count": len(boundaries),
+        "independent_agent_scenario_count": len(forward["scenarios"]),
+        "completion_claim": False,
+        "verdict": "pass-bounded-incomplete",
+    }
+    write_json(ARTIFACTS / "definitive-skill-eval-validation.json", result)
     return result
 
 
@@ -575,6 +684,7 @@ def write_evidence() -> list[Path]:
         ("operation.lifecycle-recovery", ["operation.lifecycle-recovers"], "conformance", "gradle-junit", "./gradlew :labs:engineering:test", lab, [ROOT / "labs" / "engineering", ROOT / "docs" / "RUNBOOK.md"]),
         ("operation.container-verification", ["operation.container-suite-reproducible"], "conformance", "docker-gradle", "scripts/container-verify.sh", container, [ROOT / "environments" / "container", ROOT / "scripts" / "container-verify.sh"]),
         ("skill.router-evaluation", ["skill.router-respects-coverage"], "skill-eval", "kotlin-router-eval", "python3 scripts/verify.py", skill, [ROOT / ".agents" / "skills" / "kotlin-reference-router", ROOT / "evals"]),
+        ("skill.agent-forward-evaluation", ["skill.definitive-routing-is-bounded"], "skill-eval", "independent-agent-forward-eval", "independent subagent forwarded Router scenarios", ROOT / "evals" / "kotlin-reference-router.agent-forward-eval.json", [ROOT / ".agents" / "skills" / "kotlin-reference-router", ROOT / "evals" / "kotlin-reference-router.agent-forward-eval.json"]),
         ("publication.rights-metadata", ["publication.required-rights-files-present"], "conformance", "kotlin-atlas-verifier", "python3 scripts/verify.py", rights, [ROOT / "third_party", ROOT / "sbom.spdx.json", ROOT / "LICENSE", ROOT / "NOTICE"]),
         ("publication.complete-sbom", ["publication.transitive-sbom-from-locks"], "capture", "spdx-lock-generator", "python3 scripts/generate_sbom.py", rights, [ROOT / "scripts" / "generate_sbom.py", ROOT / "sbom.spdx.json", ROOT / "kotlin-js-store", *sorted(ROOT.glob("labs/*/gradle.lockfile"))]),
         ("operation.local-verification", ["operation.local-suite-reproducible"], "conformance", "kotlin-atlas-verifier", "python3 scripts/verify.py", summary, [ROOT / "scripts" / "verify.py", ROOT / "build.gradle.kts", ROOT / "settings.gradle.kts"]),
@@ -639,6 +749,7 @@ def write_provenance(evidence_paths: list[Path]) -> Path:
         "evidence/artifacts/lab-results.json": "test-report",
         "evidence/artifacts/skill-eval.json": "skill-eval",
         "evals/kotlin-reference-router.skill-eval.json": "skill-eval",
+        "evals/kotlin-reference-router.agent-forward-eval.json": "skill-eval",
         "sbom.spdx.json": "sbom",
     }
     for evidence_path in evidence_paths:
@@ -661,6 +772,20 @@ def write_provenance(evidence_paths: list[Path]) -> Path:
         "source_ids": ["reference-atlas-core-v1"],
         "generated_by": "python3 scripts/generate_sbom.py",
     }
+    for relative in [
+        "evals/kotlin-reference-router.definitive-skill-eval.json",
+        "evals/kotlin-reference-router.definitive-skill-eval-report.json",
+        "baseline/fe-definitive-skill-eval-reference-v1.json",
+    ]:
+        artifact = ROOT / relative
+        records[relative] = {
+            "path": relative,
+            "digest": sha256_file(artifact),
+            "kind": "skill-eval" if relative.startswith("evals/") else "document",
+            "license": "Apache-2.0",
+            "source_ids": ["reference-atlas-core-definitive-v2"],
+            "generated_by": "python3 scripts/generate_definitive_skill_eval.py" if relative.startswith("evals/") else "manual digest lock from FE reference commit",
+        }
     path = ROOT / "provenance.yaml"
     write_json(path, {
         "schema_version": 1,
@@ -772,6 +897,7 @@ def main(*, skip_container: bool = False) -> None:
     else:
         container_result = validate_container_profile()
     skill_result = run_skill_evals()
+    definitive_skill_result = validate_definitive_skill_eval()
     rights_result = validate_rights()
     non_regression_result = validate_non_regression()
     authority_locator_result = validate_authority_locators()
@@ -783,7 +909,8 @@ def main(*, skip_container: bool = False) -> None:
     summary = {
         "atlas_id": "kotlin-reference-atlas",
         "epoch": "2026-08-28",
-        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "definitive": "expected-incomplete"},
+        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "definitive_skill": definitive_skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "definitive": "expected-incomplete"},
+        "definitive_skill_eval": definitive_skill_result,
         "kotlin_depth_parity": {"axis_count": fe_parity_result["axis_count"], "status_counts": fe_parity_result["status_counts"], "total_axis_gaps": fe_parity_result["total_axis_gaps"], "all_axes_closed": fe_parity_result["all_axes_closed"], "reference_commit": fe_parity_result["reference_commit"]},
         "completion_class": "incomplete",
         "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
@@ -795,7 +922,7 @@ def main(*, skip_container: bool = False) -> None:
         "completion_gaps": [
             "146146 raw anchor候補は全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
             "69 Authority由来Behaviorに対する専用Claim/Proofと18 AxisのScenario Matrixが未閉鎖",
-            "8 Outcomeと14 Surfaceを網羅するDefinitive Skill Evalが未閉鎖",
+            "112-cell Router契約と独立Agent Forward Evalはpassだが22 Mastery routing gapが未閉鎖",
             "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖",
         ],
         "recorded_infeasible": ["platform.native-runtime: Full Xcode unavailable; KLIB compileはRuntime Evidenceの代替ではない"] if deep_result["native_runtime"]["verdict"] == "infeasible" else [],

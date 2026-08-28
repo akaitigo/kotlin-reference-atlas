@@ -59,16 +59,30 @@
   "completion_gaps": [
     "146146 raw anchor候補は全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
     "69 Authority由来Behaviorに対する専用Claim/Proofと18 AxisのScenario Matrixが未閉鎖",
-    "8 Outcomeと14 Surfaceを網羅するDefinitive Skill Evalが未閉鎖",
+    "112-cell Router契約と独立Agent Forward Evalはpassだが22 Mastery routing gapが未閉鎖",
     "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖"
   ],
+  "definitive_skill_eval": {
+    "boundary_case_count": 7,
+    "completion_claim": false,
+    "independent_agent_scenario_count": 23,
+    "matrix_cell_count": 112,
+    "routed_cell_count": 90,
+    "routing_gap_count": 22,
+    "target_state_counts": {
+      "covered": 28,
+      "infeasible": 1,
+      "partial": 4
+    },
+    "verdict": "pass-bounded-incomplete"
+  },
   "epoch": "2026-08-28",
   "gap_ledger": {
     "gap_count": 30,
     "state_counts": {
       "blocked": 3,
-      "open": 13,
-      "partial": 14
+      "open": 12,
+      "partial": 15
     }
   },
   "implementation_gates": {
@@ -78,6 +92,7 @@
     "container": "pass",
     "deep_artifacts": "pass",
     "definitive": "expected-incomplete",
+    "definitive_skill": "pass-bounded-incomplete",
     "kotlin_depth_parity": "incomplete",
     "labs": "pass",
     "manifest": "pass",

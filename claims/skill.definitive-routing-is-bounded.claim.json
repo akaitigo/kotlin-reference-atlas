@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "skill.coverage-router",
+  "id": "skill.definitive-routing-is-bounded",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "112-cell Matrix、mutation authorization、人手Authority／stale relock停止、曖昧・未知Query fail-closed、Source／Evidence binding、全Target state、独立Agent Forward Evalが期待契約と一致し、Repository completionを主張しないこと"
+      ],
+      "id": "skill.definitive-route-forward-contract",
+      "statement": "112-cell Matrix、mutation authorization、人手Authority／stale relock停止、曖昧・未知Query fail-closed、Source／Evidence binding、全Target state、独立Agent Forward Evalが期待契約と一致し、Repository completionを主張しないこと"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "reference-atlas-core-definitive-v2"
+  ],
+  "statement": "Routerは8 Outcome×14 Surfaceを実Target、実装Variant、Authority Source、Claim、Evidenceへ束縛し、変更権限、人手Authority、stale relock、曖昧・未知Query、非covered Targetではfail-closedする。MatrixまたはForward Evalのpass単独はcompletionを意味しない。",
+  "status": "accepted"
+}

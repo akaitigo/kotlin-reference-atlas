@@ -31,6 +31,7 @@
     { "id": "publication.metadata-gate", "oracle_ja": "必須Rights fileと依存Componentが欠落していないこと", "lab": "scripts/verify.py" },
     { "id": "publication.sbom-lock-closure", "oracle_ja": "Gradle/npm lockの全一意ComponentがSPDX Packageに存在すること", "lab": "scripts/generate_sbom.py" },
     { "id": "skill.route-and-gap-cases", "oracle_ja": "設計、実装、診断、移行、Review、Gapの全Eval caseが期待Routeと一致すること", "lab": "evals" },
+    { "id": "skill.definitive-route-forward-contract", "oracle_ja": "112-cell Matrix、mutation authorization、人手Authority／stale relock停止、曖昧・未知Query fail-closed、Source／Evidence binding、全Target state、独立Agent Forward Evalが期待契約と一致し、Repository completionを主張しないこと", "lab": "evals" },
     { "id": "workbench.jvm.normal-boundary-rejection-failure-recovery", "oracle_ja": "8件のJVM Testが正常、境界、拒否、障害、回復、Coroutine context/cancellation、bounded backpressure、Strict/Normalize比較を実Runtimeで検証すること", "lab": "reference-systems/automation-workbench" },
     { "id": "quality.public-main-baseline-gate", "oracle_ja": "origin/main e42f23d由来BaselineのID、固定Source、Test/Assertion、実行Task、Evidence command、Skill Eval期待値、CI tokenがすべて同等以上であること", "lab": "scripts/verify_non_regression.py" },
     { "id": "quality.kotlin-depth-parity-incomplete-gate", "oracle_ja": "FE正本commitと18 Axisを固定し、Kotlinの69 Behaviorと固有Runtime/Profile denominatorへ写像し、Gap残存中はstatus=incompleteかつDefinitive Certificate不在であること", "lab": "scripts/verify_fe_parity.py" }

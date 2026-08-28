@@ -11,6 +11,46 @@
       ]
     },
     {
+      "digest": "sha256:d9e8b5d926904940052ab83572f480e68a89cf6081d9e94d54938488d6a7264e",
+      "generated_by": "manual digest lock from FE reference commit",
+      "kind": "document",
+      "license": "Apache-2.0",
+      "path": "baseline/fe-definitive-skill-eval-reference-v1.json",
+      "source_ids": [
+        "reference-atlas-core-definitive-v2"
+      ]
+    },
+    {
+      "digest": "sha256:a50e24c8346bd152be2d48a70bb662e3fd9828094fafe44e795fbac4e8e808c0",
+      "generated_by": "independent subagent forwarded Router scenarios",
+      "kind": "skill-eval",
+      "license": "Apache-2.0",
+      "path": "evals/kotlin-reference-router.agent-forward-eval.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
+      "digest": "sha256:0a5acd344f84e7fd0f533b690866a69fe6362c987f2fd73b9f08eb13754ed138",
+      "generated_by": "python3 scripts/generate_definitive_skill_eval.py",
+      "kind": "skill-eval",
+      "license": "Apache-2.0",
+      "path": "evals/kotlin-reference-router.definitive-skill-eval-report.json",
+      "source_ids": [
+        "reference-atlas-core-definitive-v2"
+      ]
+    },
+    {
+      "digest": "sha256:775b03d82c27ba2aa2fbb3c9b2e6b964b6fd478055202a41712133631f19dd04",
+      "generated_by": "python3 scripts/generate_definitive_skill_eval.py",
+      "kind": "skill-eval",
+      "license": "Apache-2.0",
+      "path": "evals/kotlin-reference-router.definitive-skill-eval.json",
+      "source_ids": [
+        "reference-atlas-core-definitive-v2"
+      ]
+    },
+    {
       "digest": "sha256:83c6db28f83f4c44743c989ea622b9d811bcf2042edc3fa96951fb8bbb66baaf",
       "generated_by": "python3 scripts/verify.py",
       "kind": "skill-eval",
@@ -61,7 +101,7 @@
       ]
     },
     {
-      "digest": "sha256:e13a9a5300d27ebe99e1101a84b1d701fc73b3ffae65d58910dd7eb2c896ea81",
+      "digest": "sha256:6bfe7cd1204996962141cff01d77f2859962110c5fd4b9a441d28dc55bfb94c6",
       "generated_by": "scripts/container-verify.sh",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -101,7 +141,7 @@
       ]
     },
     {
-      "digest": "sha256:b7a4959210e00bfd881abf9e0fb0476e15b1aec59ad31afc840bdf83af583918",
+      "digest": "sha256:1f50c2616fbca4a5af60cedb0a0cfa7ea8f41b1ecee4b53c8cfbeff7fd38480c",
       "generated_by": "python3 scripts/verify_non_regression.py",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -131,7 +171,7 @@
       ]
     },
     {
-      "digest": "sha256:e8a083399158ed0839f5a3adbbf8603fc0fc73c995de8d3049f5bf83134770d0",
+      "digest": "sha256:470e87fa2f16c8ecddaff897f5fcd9619ea97c3542bf369bace1d7d9f1b05fce",
       "generated_by": "python3 scripts/verify.py",
       "kind": "generated",
       "license": "Apache-2.0",

@@ -224,13 +224,13 @@ gaps:
       - daemon/process leak、cache corruption、resource exhaustion、health/metrics/log correlation、backup/restore相当のbuild artifact回復Runbookと実証
   - id: skill.definitive-behavior-routing
     area: agent-skill
-    state: open
+    state: partial
     target_ids: [skill.router-evaluation, reference-system.automation-workbench]
     authority_ids: [reference-atlas-core-v1]
-    current_evidence_ids: [skill.router-evaluation]
+    current_evidence_ids: [skill.router-evaluation, skill.agent-forward-evaluation]
     missing:
-      - 8 Outcome・14 Surface・各Behavior・5 Scenario・実Runtime・Gapを辿るDefinitive Skill Eval
-      - Native compileとruntimeを混同しない拒否Case、比較VariantとArtifact提示Case
+      - 22 Mastery routing gapを閉じ、各Authority昇格Behaviorと5 Scenarioへ専用Routeを接続する
+      - Router Matrix／Forward EvalをBehavior別実Runtime Proofの代替にしない
   - id: reference-system.cross-platform-integration
     area: integrated-reference-system
     state: partial

@@ -1,0 +1,3562 @@
+{
+  "completion_claim": false,
+  "coverage_dimensions": {
+    "all_target_states": {
+      "counts_match_coverage": true,
+      "status": "pass",
+      "target_count": 33
+    },
+    "ambiguous_unknown_fail_closed": {
+      "status": "pass"
+    },
+    "human_authority_stop": {
+      "status": "pass"
+    },
+    "mutation_authorization": {
+      "authorized_and_unauthorized_checked": true,
+      "status": "pass"
+    },
+    "outcome_surface_forwarding": {
+      "forward_scenarios": 15,
+      "outcomes_covered": 8,
+      "status": "pass",
+      "surfaces_covered": 14
+    },
+    "routing_gap": {
+      "status": "pass"
+    },
+    "source_binding": {
+      "compiler_runtime_evidence_checked": true,
+      "lock_file": "sources.lock.yaml",
+      "status": "pass"
+    },
+    "stale_relock_stop": {
+      "status": "pass"
+    }
+  },
+  "evaluated_at": "2026-08-28T13:01:49Z",
+  "evaluated_by": {
+    "kind": "independent-subagent",
+    "task_name": "/root/kotlin_router_forward_eval"
+  },
+  "findings": [
+    "8 Outcomeを各1回以上、14 Surfaceを全体で網羅する15件のforward scenarioをCLI subprocessで実行した。",
+    "covered Routeはcoverage.yamlのTarget state、sources.lock.yamlのURL/digest、Evidence recordとArtifact digest、実装binding digestを独立照合した。",
+    "unauthorized mutation、Authority人手判断、stale relock、ambiguous/unknown query、Mastery routing gapはfail-closedで停止した。",
+    "coverage.yamlの33 Targetはcovered 28、partial 4、infeasible 1であり、partialとinfeasibleをcoveredとして扱わないRouteを実測した。",
+    "compiler.runtime-shapes RouteはCompiler/Runtime Lab、Claim、Evidence record、Artifact、Sourceへbindingされた。"
+  ],
+  "id": "kotlin-reference-router.agent-forward-eval.v1",
+  "limitations": [
+    "本Forward EvalはRouterの選択・停止・binding整合を評価するもので、Kotlin/JVM/JS/Wasm/Native Runtime Evidenceそのものを再実行していない。",
+    "Matrix passおよび本Forward Eval passはRepository complete、Mastery complete、Completion Certificateを意味しない。",
+    "Authority review queueの人手decision、stale source relock、partial/infeasible Target、Depth gapは本評価で解消されない。",
+    "実装中working treeのrouter_digestに対する評価であり、Router変更時は再評価が必要である。"
+  ],
+  "outcome_ids": [
+    "understand",
+    "choose",
+    "build",
+    "verify",
+    "operate",
+    "troubleshoot",
+    "evolve",
+    "delegate"
+  ],
+  "router_digest": "sha256:f22f1d5e050bdb9166ff458d744c9dcbec6794d0bfbf6861d37855bf198fb485",
+  "scenarios": [
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "inventory.public-surface",
+        "capability_verdict": "default",
+        "claim_ids": [
+          "inventory.locked-surface-enumerated"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:085426b301ae5609b3e2bec70e7353a7bacea69a1ed41d2c60aff95ebdb1f2af",
+              "path": "atlas/inventory/kotlin-public-surface.json",
+              "size_bytes": 2287792
+            },
+            "claim_ids": [
+              "inventory.locked-surface-enumerated"
+            ],
+            "command": "python3 scripts/inventory.py",
+            "id": "inventory.public-surface",
+            "kind": "capture",
+            "producer": "kotlin-artifact-inventory",
+            "record": {
+              "digest": "sha256:93e4d371e7ae5dfe1f22fe9eab1bc0a980afb13a9ee859398c4024dddf5d3a5a",
+              "path": "evidence/inventory.public-surface.evidence.json",
+              "size_bytes": 970
+            }
+          }
+        ],
+        "evidence_ids": [
+          "inventory.public-surface"
+        ],
+        "implementation_binding_count": 1,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:1a5e822854ec77392731d16021861f24f21ffd518f888f2135e16fe0233ed310",
+            "path": "scripts/inventory.py",
+            "size_bytes": 2794,
+            "variant_id": "scripts/inventory.py"
+          }
+        ],
+        "lab": "scripts/inventory.py",
+        "matched_keywords": [
+          "compiler registry",
+          "inventory",
+          "public surface"
+        ],
+        "mode": "explain",
+        "mutation": {
+          "authorized": false,
+          "required": false,
+          "status": "not-applicable"
+        },
+        "outcome_id": "understand",
+        "query": "inventory public surface compiler registry",
+        "required_deliverables": [
+          "concept",
+          "decision"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+            "id": "kotlin-compiler-2.4.10",
+            "redistribution": "link-only",
+            "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+            "version": "2.4.10"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "orientation-scope",
+        "target_id": "inventory.kotlin-public-surface",
+        "target_requirement": "required",
+        "target_set": "authority",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "inventory public surface compiler registry",
+        "--outcome",
+        "understand",
+        "--surface",
+        "orientation-scope"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query inventory public surface compiler registry --outcome understand --surface orientation-scope",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": false,
+        "outcome_id": "understand",
+        "surface_id": "orientation-scope",
+        "target_id": "inventory.kotlin-public-surface"
+      },
+      "id": "forward-understand-orientation",
+      "pass": true,
+      "query": "inventory public surface compiler registry"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "semantics.type-system",
+        "capability_verdict": "default",
+        "claim_ids": [
+          "types.variance-nothing-reified"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+              "path": "evidence/artifacts/lab-results.json",
+              "size_bytes": 10463
+            },
+            "claim_ids": [
+              "semantics.exhaustive-and-lazy",
+              "types.variance-nothing-reified"
+            ],
+            "command": "./gradlew :labs:semantics:test",
+            "id": "semantics.language-types",
+            "kind": "test-report",
+            "producer": "gradle-junit",
+            "record": {
+              "digest": "sha256:11f3d00be19b83a1c661e5ad0ee294522b053fb1b3e57e655c0abe978b036966",
+              "path": "evidence/semantics.language-types.evidence.json",
+              "size_bytes": 997
+            }
+          }
+        ],
+        "evidence_ids": [
+          "semantics.language-types"
+        ],
+        "implementation_binding_count": 4,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:54929da2003c6f7e59249e88a930c30e1a9ff2fb65c0f97dbb74172752c01292",
+            "path": "labs/semantics/build.gradle.kts",
+            "size_bytes": 350,
+            "variant_id": "labs/semantics:build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/semantics/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs/semantics:gradle.lockfile"
+          },
+          {
+            "digest": "sha256:2eea784bbb2c089c2d889bea586b513b5dd6d8f05d3b66bd6db2cf4609a9ca8b",
+            "path": "labs/semantics/src/main/kotlin/dev/akaitigo/kotlinatlas/semantics/Semantics.kt",
+            "size_bytes": 1133,
+            "variant_id": "labs/semantics:src/main/kotlin/dev/akaitigo/kotlinatlas/semantics/Semantics.kt"
+          },
+          {
+            "digest": "sha256:698677ad9725b5512b0fc9577892a278eb565563f9f30b29b8e7d89c81f51f5c",
+            "path": "labs/semantics/src/test/kotlin/dev/akaitigo/kotlinatlas/semantics/SemanticsTest.kt",
+            "size_bytes": 1876,
+            "variant_id": "labs/semantics:src/test/kotlin/dev/akaitigo/kotlinatlas/semantics/SemanticsTest.kt"
+          }
+        ],
+        "lab": "labs/semantics",
+        "matched_keywords": [
+          "covariance",
+          "reified",
+          "variance"
+        ],
+        "mode": "explain",
+        "mutation": {
+          "authorized": false,
+          "required": false,
+          "status": "not-applicable"
+        },
+        "outcome_id": "understand",
+        "query": "variance reified covariance",
+        "required_deliverables": [
+          "concept",
+          "lab"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+            "id": "kotlin-compiler-2.4.10",
+            "redistribution": "link-only",
+            "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+            "version": "2.4.10"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "foundations-mechanics",
+        "target_id": "semantics.type-system",
+        "target_requirement": "required",
+        "target_set": "semantics",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "variance reified covariance",
+        "--outcome",
+        "understand",
+        "--surface",
+        "foundations-mechanics"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query variance reified covariance --outcome understand --surface foundations-mechanics",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": false,
+        "outcome_id": "understand",
+        "surface_id": "foundations-mechanics",
+        "target_id": "semantics.type-system"
+      },
+      "id": "forward-understand-foundations",
+      "pass": true,
+      "query": "variance reified covariance"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "gradle.plugin-consumer",
+        "capability_verdict": "default",
+        "claim_ids": [
+          "gradle.plugin-registers-probe-task"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+              "path": "evidence/artifacts/lab-results.json",
+              "size_bytes": 10463
+            },
+            "claim_ids": [
+              "gradle.plugin-registers-probe-task"
+            ],
+            "command": "./gradlew :labs:gradle-plugin:test",
+            "id": "gradle.plugin-consumer",
+            "kind": "test-report",
+            "producer": "gradle-testkit",
+            "record": {
+              "digest": "sha256:f99347dc17855fcbc1e12c26e66e2b59e56143a64835a3bc2354501ee52da216",
+              "path": "evidence/gradle.plugin-consumer.evidence.json",
+              "size_bytes": 972
+            }
+          }
+        ],
+        "evidence_ids": [
+          "gradle.plugin-consumer"
+        ],
+        "implementation_binding_count": 4,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:89ba61d349973b22ed8bf6b6dbe19883f3c9897a60ac86454f8e3c47222ac962",
+            "path": "labs/gradle-plugin/build.gradle.kts",
+            "size_bytes": 807,
+            "variant_id": "labs/gradle-plugin:build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/gradle-plugin/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs/gradle-plugin:gradle.lockfile"
+          },
+          {
+            "digest": "sha256:a7bafddc9e54a73f8ee276081e8706d7d9d1400157701f71eef362934d96339d",
+            "path": "labs/gradle-plugin/src/main/kotlin/dev/akaitigo/kotlinatlas/gradle/AtlasProbePlugin.kt",
+            "size_bytes": 529,
+            "variant_id": "labs/gradle-plugin:src/main/kotlin/dev/akaitigo/kotlinatlas/gradle/AtlasProbePlugin.kt"
+          },
+          {
+            "digest": "sha256:63026042ab260b35acdb2a51352cd79898dc71a5355fdf5f3f8a749501333c1c",
+            "path": "labs/gradle-plugin/src/test/kotlin/dev/akaitigo/kotlinatlas/gradle/AtlasProbePluginTest.kt",
+            "size_bytes": 1147,
+            "variant_id": "labs/gradle-plugin:src/test/kotlin/dev/akaitigo/kotlinatlas/gradle/AtlasProbePluginTest.kt"
+          }
+        ],
+        "lab": "labs/gradle-plugin",
+        "matched_keywords": [
+          "consumer build",
+          "gradle",
+          "plugin",
+          "testkit"
+        ],
+        "mode": "compare",
+        "mutation": {
+          "authorized": false,
+          "required": false,
+          "status": "not-applicable"
+        },
+        "outcome_id": "choose",
+        "query": "gradle plugin testkit consumer build",
+        "required_deliverables": [
+          "decision",
+          "reference-implementation"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:553c78f50dafcd54d65b9a444649057857469edf836431389695608536d6b746",
+            "id": "gradle-9.5.0",
+            "redistribution": "link-only",
+            "url": "https://services.gradle.org/distributions/gradle-9.5.0-bin.zip",
+            "version": "9.5.0"
+          },
+          {
+            "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+            "id": "kotlin-compiler-2.4.10",
+            "redistribution": "link-only",
+            "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+            "version": "2.4.10"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "architecture-design",
+        "target_id": "build.gradle-plugin-consumer",
+        "target_requirement": "required",
+        "target_set": "build-tooling",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "gradle plugin testkit consumer build",
+        "--outcome",
+        "choose",
+        "--surface",
+        "architecture-design"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query gradle plugin testkit consumer build --outcome choose --surface architecture-design",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": false,
+        "outcome_id": "choose",
+        "surface_id": "architecture-design",
+        "target_id": "build.gradle-plugin-consumer"
+      },
+      "id": "forward-choose-architecture",
+      "pass": true,
+      "query": "gradle plugin testkit consumer build"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "interop.java-consumer",
+        "capability_verdict": "boundary-only",
+        "claim_ids": [
+          "interop.java-overloads-and-throws"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+              "path": "evidence/artifacts/lab-results.json",
+              "size_bytes": 10463
+            },
+            "claim_ids": [
+              "interop.java-overloads-and-throws"
+            ],
+            "command": "./gradlew :labs:interop:test",
+            "id": "interop.java-consumer",
+            "kind": "compatibility",
+            "producer": "gradle-junit",
+            "record": {
+              "digest": "sha256:d4b383f495134f7440346dcd1dcd20d0515dd431551c2d26af4a6ee619740de8",
+              "path": "evidence/interop.java-consumer.evidence.json",
+              "size_bytes": 958
+            }
+          }
+        ],
+        "evidence_ids": [
+          "interop.java-consumer"
+        ],
+        "implementation_binding_count": 4,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:f26b5c437ce7d27851d2146bce47c874b7d04de9c7ed990258871bf4601261eb",
+            "path": "labs/interop/build.gradle.kts",
+            "size_bytes": 386,
+            "variant_id": "labs/interop:build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/interop/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs/interop:gradle.lockfile"
+          },
+          {
+            "digest": "sha256:15ea56d848458ac49358fd1575dc53f2d234d487a4c932ca17a2084ceea0884d",
+            "path": "labs/interop/src/main/kotlin/dev/akaitigo/kotlinatlas/interop/AtlasApi.kt",
+            "size_bytes": 382,
+            "variant_id": "labs/interop:src/main/kotlin/dev/akaitigo/kotlinatlas/interop/AtlasApi.kt"
+          },
+          {
+            "digest": "sha256:c9a86c408dc5727bf072dc381232b1a481afff1bc47edd21621367e3457f7957",
+            "path": "labs/interop/src/test/java/dev/akaitigo/kotlinatlas/interop/JavaConsumerTest.java",
+            "size_bytes": 674,
+            "variant_id": "labs/interop:src/test/java/dev/akaitigo/kotlinatlas/interop/JavaConsumerTest.java"
+          }
+        ],
+        "lab": "labs/interop",
+        "matched_keywords": [
+          "interop",
+          "java",
+          "jvmoverloads",
+          "throws"
+        ],
+        "mode": "implement",
+        "mutation": {
+          "authorized": true,
+          "required": true,
+          "status": "authorized"
+        },
+        "outcome_id": "build",
+        "query": "java interop jvmoverloads throws",
+        "required_deliverables": [
+          "reference-implementation",
+          "lab"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+            "id": "kotlin-compiler-2.4.10",
+            "redistribution": "link-only",
+            "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+            "version": "2.4.10"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "implementation-construction",
+        "target_id": "interop.java-consumer",
+        "target_requirement": "required",
+        "target_set": "interop",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "java interop jvmoverloads throws",
+        "--outcome",
+        "build",
+        "--surface",
+        "implementation-construction",
+        "--authorized-change"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query java interop jvmoverloads throws --outcome build --surface implementation-construction --authorized-change",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": true,
+        "outcome_id": "build",
+        "surface_id": "implementation-construction",
+        "target_id": "interop.java-consumer"
+      },
+      "id": "forward-build-implementation",
+      "pass": true,
+      "query": "java interop jvmoverloads throws"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "quality.testing-oracles",
+        "capability_verdict": "default",
+        "claim_ids": [
+          "testing.cross-surface-oracles"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+              "path": "evidence/artifacts/lab-results.json",
+              "size_bytes": 10463
+            },
+            "claim_ids": [
+              "testing.cross-surface-oracles"
+            ],
+            "command": "./gradlew atlasCheck",
+            "id": "quality.testing-oracles",
+            "kind": "test-report",
+            "producer": "kotlin-atlas-verifier",
+            "record": {
+              "digest": "sha256:403de232a55bed78f4ab220bbd6d73ccaaf71a3d503046e5baa7bc6a61f2fb6b",
+              "path": "evidence/quality.testing-oracles.evidence.json",
+              "size_bytes": 964
+            }
+          }
+        ],
+        "evidence_ids": [
+          "quality.testing-oracles"
+        ],
+        "implementation_binding_count": 40,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:fa6641ce4ffd67e9b91894f8d6690c429d3e39d7f944398aaa404a91c26d4969",
+            "path": "labs/compiler-runtime/build.gradle.kts",
+            "size_bytes": 327,
+            "variant_id": "labs:compiler-runtime/build.gradle.kts"
+          },
+          {
+            "digest": "sha256:f61ba804bc620756f907b4cc288f1c4dd6d0531418529983c1cb19531f49a01c",
+            "path": "labs/compiler-runtime/gradle.lockfile",
+            "size_bytes": 5331,
+            "variant_id": "labs:compiler-runtime/gradle.lockfile"
+          },
+          {
+            "digest": "sha256:007c06e3f328c670ce4b8cbf52708e953779d5a77c039823d4be9c9b01119b4c",
+            "path": "labs/compiler-runtime/src/main/kotlin/dev/akaitigo/kotlinatlas/runtime/RuntimeShapes.kt",
+            "size_bytes": 519,
+            "variant_id": "labs:compiler-runtime/src/main/kotlin/dev/akaitigo/kotlinatlas/runtime/RuntimeShapes.kt"
+          },
+          {
+            "digest": "sha256:324253f2132249dbfe621a0b18eb3ac08fd0f8801cd3cdf8d3c6c03275051b68",
+            "path": "labs/compiler-runtime/src/test/kotlin/dev/akaitigo/kotlinatlas/runtime/RuntimeShapesTest.kt",
+            "size_bytes": 1116,
+            "variant_id": "labs:compiler-runtime/src/test/kotlin/dev/akaitigo/kotlinatlas/runtime/RuntimeShapesTest.kt"
+          },
+          {
+            "digest": "sha256:d925a9ef420775baaa112e2be32e395e456add65a18c7e6cf43e65e7f38ab691",
+            "path": "labs/coroutines/build.gradle.kts",
+            "size_bytes": 427,
+            "variant_id": "labs:coroutines/build.gradle.kts"
+          },
+          {
+            "digest": "sha256:f61ba804bc620756f907b4cc288f1c4dd6d0531418529983c1cb19531f49a01c",
+            "path": "labs/coroutines/gradle.lockfile",
+            "size_bytes": 5331,
+            "variant_id": "labs:coroutines/gradle.lockfile"
+          },
+          {
+            "digest": "sha256:58e9b0ce4829ad0a88eb2fdabba7d8ccb4ade05baeb2f44e2c2757cc6020070b",
+            "path": "labs/coroutines/src/main/kotlin/dev/akaitigo/kotlinatlas/coroutines/FailurePropagation.kt",
+            "size_bytes": 649,
+            "variant_id": "labs:coroutines/src/main/kotlin/dev/akaitigo/kotlinatlas/coroutines/FailurePropagation.kt"
+          },
+          {
+            "digest": "sha256:ac94e9fb7fdd1981a5748d1a03190ad0bfd892d7af47de17239063db5f4722d6",
+            "path": "labs/coroutines/src/test/kotlin/dev/akaitigo/kotlinatlas/coroutines/FailurePropagationTest.kt",
+            "size_bytes": 681,
+            "variant_id": "labs:coroutines/src/test/kotlin/dev/akaitigo/kotlinatlas/coroutines/FailurePropagationTest.kt"
+          },
+          {
+            "digest": "sha256:70d6dca058f6ab7af86e9f20905ecc58cf1006bfe15d3a7fb33ed92d4432515d",
+            "path": "labs/engineering/build.gradle.kts",
+            "size_bytes": 286,
+            "variant_id": "labs:engineering/build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/engineering/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs:engineering/gradle.lockfile"
+          },
+          {
+            "digest": "sha256:159d4aad4efc19fc536e0e5871a2d07aa21a80ec609d26eb755b2c3b1b956020",
+            "path": "labs/engineering/src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt",
+            "size_bytes": 2704,
+            "variant_id": "labs:engineering/src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt"
+          },
+          {
+            "digest": "sha256:a99c6712569f01a0cef6243485223adb02b167529a7edaeecbcf85d4cf3ae506",
+            "path": "labs/engineering/src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt",
+            "size_bytes": 3073,
+            "variant_id": "labs:engineering/src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt"
+          },
+          {
+            "digest": "sha256:fa6641ce4ffd67e9b91894f8d6690c429d3e39d7f944398aaa404a91c26d4969",
+            "path": "labs/flow/build.gradle.kts",
+            "size_bytes": 327,
+            "variant_id": "labs:flow/build.gradle.kts"
+          },
+          {
+            "digest": "sha256:f61ba804bc620756f907b4cc288f1c4dd6d0531418529983c1cb19531f49a01c",
+            "path": "labs/flow/gradle.lockfile",
+            "size_bytes": 5331,
+            "variant_id": "labs:flow/gradle.lockfile"
+          },
+          {
+            "digest": "sha256:8c52aa97e167b1d4662d1f68150acfba4fc341c6ec79cb30808f818b1862d6d0",
+            "path": "labs/flow/src/main/kotlin/dev/akaitigo/kotlinatlas/flow/FlowPipelines.kt",
+            "size_bytes": 558,
+            "variant_id": "labs:flow/src/main/kotlin/dev/akaitigo/kotlinatlas/flow/FlowPipelines.kt"
+          },
+          {
+            "digest": "sha256:87701cdabd203a7c2881c14124faabbb3410150703a29f3379ecce3838539f63",
+            "path": "labs/flow/src/test/kotlin/dev/akaitigo/kotlinatlas/flow/FlowPipelinesTest.kt",
+            "size_bytes": 1970,
+            "variant_id": "labs:flow/src/test/kotlin/dev/akaitigo/kotlinatlas/flow/FlowPipelinesTest.kt"
+          },
+          {
+            "digest": "sha256:89ba61d349973b22ed8bf6b6dbe19883f3c9897a60ac86454f8e3c47222ac962",
+            "path": "labs/gradle-plugin/build.gradle.kts",
+            "size_bytes": 807,
+            "variant_id": "labs:gradle-plugin/build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/gradle-plugin/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs:gradle-plugin/gradle.lockfile"
+          },
+          {
+            "digest": "sha256:a7bafddc9e54a73f8ee276081e8706d7d9d1400157701f71eef362934d96339d",
+            "path": "labs/gradle-plugin/src/main/kotlin/dev/akaitigo/kotlinatlas/gradle/AtlasProbePlugin.kt",
+            "size_bytes": 529,
+            "variant_id": "labs:gradle-plugin/src/main/kotlin/dev/akaitigo/kotlinatlas/gradle/AtlasProbePlugin.kt"
+          },
+          {
+            "digest": "sha256:63026042ab260b35acdb2a51352cd79898dc71a5355fdf5f3f8a749501333c1c",
+            "path": "labs/gradle-plugin/src/test/kotlin/dev/akaitigo/kotlinatlas/gradle/AtlasProbePluginTest.kt",
+            "size_bytes": 1147,
+            "variant_id": "labs:gradle-plugin/src/test/kotlin/dev/akaitigo/kotlinatlas/gradle/AtlasProbePluginTest.kt"
+          },
+          {
+            "digest": "sha256:f26b5c437ce7d27851d2146bce47c874b7d04de9c7ed990258871bf4601261eb",
+            "path": "labs/interop/build.gradle.kts",
+            "size_bytes": 386,
+            "variant_id": "labs:interop/build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/interop/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs:interop/gradle.lockfile"
+          },
+          {
+            "digest": "sha256:15ea56d848458ac49358fd1575dc53f2d234d487a4c932ca17a2084ceea0884d",
+            "path": "labs/interop/src/main/kotlin/dev/akaitigo/kotlinatlas/interop/AtlasApi.kt",
+            "size_bytes": 382,
+            "variant_id": "labs:interop/src/main/kotlin/dev/akaitigo/kotlinatlas/interop/AtlasApi.kt"
+          },
+          {
+            "digest": "sha256:c9a86c408dc5727bf072dc381232b1a481afff1bc47edd21621367e3457f7957",
+            "path": "labs/interop/src/test/java/dev/akaitigo/kotlinatlas/interop/JavaConsumerTest.java",
+            "size_bytes": 674,
+            "variant_id": "labs:interop/src/test/java/dev/akaitigo/kotlinatlas/interop/JavaConsumerTest.java"
+          },
+          {
+            "digest": "sha256:f26b5c437ce7d27851d2146bce47c874b7d04de9c7ed990258871bf4601261eb",
+            "path": "labs/jvm/build.gradle.kts",
+            "size_bytes": 386,
+            "variant_id": "labs:jvm/build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/jvm/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs:jvm/gradle.lockfile"
+          },
+          {
+            "digest": "sha256:1a84da268986b9b589aff5543bfbbdd9fbbdd3959716e1ed530115bd9239c36f",
+            "path": "labs/jvm/src/main/kotlin/dev/akaitigo/kotlinatlas/jvm/Identifiers.kt",
+            "size_bytes": 329,
+            "variant_id": "labs:jvm/src/main/kotlin/dev/akaitigo/kotlinatlas/jvm/Identifiers.kt"
+          },
+          {
+            "digest": "sha256:a612d5a92f558c062ecde4760730595fbc3692d3a232e51733ce5f9d1ce9454a",
+            "path": "labs/jvm/src/test/kotlin/dev/akaitigo/kotlinatlas/jvm/ValueClassBoundaryTest.kt",
+            "size_bytes": 571,
+            "variant_id": "labs:jvm/src/test/kotlin/dev/akaitigo/kotlinatlas/jvm/ValueClassBoundaryTest.kt"
+          },
+          {
+            "digest": "sha256:08af5e1d8a7cf85040f5c99bbb66420cc3ae74c6497f273873bc4f085c52940f",
+            "path": "labs/multiplatform/build.gradle.kts",
+            "size_bytes": 320,
+            "variant_id": "labs:multiplatform/build.gradle.kts"
+          },
+          {
+            "digest": "sha256:a8b146aac8af61e649733a338823b47b81645968f45ffce25cd1402b739beff8",
+            "path": "labs/multiplatform/gradle.lockfile",
+            "size_bytes": 11670,
+            "variant_id": "labs:multiplatform/gradle.lockfile"
+          },
+          {
+            "digest": "sha256:26982b255f589ab68d7963a68fa902f8f46f5d3283b12923c3356a456dfe2db9",
+            "path": "labs/multiplatform/src/commonMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformContract.kt",
+            "size_bytes": 325,
+            "variant_id": "labs:multiplatform/src/commonMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformContract.kt"
+          },
+          {
+            "digest": "sha256:2b2076865b613bc18229feef5d16df2775e2e2d5bf87dfcd25749cfa1b862e98",
+            "path": "labs/multiplatform/src/commonTest/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformContractTest.kt",
+            "size_bytes": 542,
+            "variant_id": "labs:multiplatform/src/commonTest/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformContractTest.kt"
+          },
+          {
+            "digest": "sha256:b8780afbffd830f77e2615680249271c7892a52a143e3b3c8caaa28837be4ad2",
+            "path": "labs/multiplatform/src/jsMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformJs.kt",
+            "size_bytes": 121,
+            "variant_id": "labs:multiplatform/src/jsMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformJs.kt"
+          },
+          {
+            "digest": "sha256:8d370974c7f6865684eb77fbbfdc33cd5bec5ef7fddc402b28a40cca33663e7b",
+            "path": "labs/multiplatform/src/jvmMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformJvm.kt",
+            "size_bytes": 122,
+            "variant_id": "labs:multiplatform/src/jvmMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformJvm.kt"
+          },
+          {
+            "digest": "sha256:ed1b58dc587e8f8ef77c58ef6911a808fc04db193dbad3a2da315252148a54ec",
+            "path": "labs/multiplatform/src/macosArm64Main/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformNative.kt",
+            "size_bytes": 130,
+            "variant_id": "labs:multiplatform/src/macosArm64Main/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformNative.kt"
+          },
+          {
+            "digest": "sha256:bc65360d8b55daa200bc568c73040fe91c180e37e87bd958f9334e10b9a00aa2",
+            "path": "labs/multiplatform/src/wasmJsMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformWasm.kt",
+            "size_bytes": 126,
+            "variant_id": "labs:multiplatform/src/wasmJsMain/kotlin/dev/akaitigo/kotlinatlas/platform/PlatformWasm.kt"
+          },
+          {
+            "digest": "sha256:54929da2003c6f7e59249e88a930c30e1a9ff2fb65c0f97dbb74172752c01292",
+            "path": "labs/semantics/build.gradle.kts",
+            "size_bytes": 350,
+            "variant_id": "labs:semantics/build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/semantics/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs:semantics/gradle.lockfile"
+          },
+          {
+            "digest": "sha256:2eea784bbb2c089c2d889bea586b513b5dd6d8f05d3b66bd6db2cf4609a9ca8b",
+            "path": "labs/semantics/src/main/kotlin/dev/akaitigo/kotlinatlas/semantics/Semantics.kt",
+            "size_bytes": 1133,
+            "variant_id": "labs:semantics/src/main/kotlin/dev/akaitigo/kotlinatlas/semantics/Semantics.kt"
+          },
+          {
+            "digest": "sha256:698677ad9725b5512b0fc9577892a278eb565563f9f30b29b8e7d89c81f51f5c",
+            "path": "labs/semantics/src/test/kotlin/dev/akaitigo/kotlinatlas/semantics/SemanticsTest.kt",
+            "size_bytes": 1876,
+            "variant_id": "labs:semantics/src/test/kotlin/dev/akaitigo/kotlinatlas/semantics/SemanticsTest.kt"
+          }
+        ],
+        "lab": "labs",
+        "matched_keywords": [
+          "negative test",
+          "test oracle",
+          "testing"
+        ],
+        "mode": "review",
+        "mutation": {
+          "authorized": false,
+          "required": false,
+          "status": "not-applicable"
+        },
+        "outcome_id": "verify",
+        "query": "testing test oracle negative test",
+        "required_deliverables": [
+          "test",
+          "evidence"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+            "id": "kotlin-compiler-2.4.10",
+            "redistribution": "link-only",
+            "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+            "version": "2.4.10"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "testing-verification",
+        "target_id": "quality.testing-oracles",
+        "target_requirement": "required",
+        "target_set": "quality",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "testing test oracle negative test",
+        "--outcome",
+        "verify",
+        "--surface",
+        "testing-verification"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query testing test oracle negative test --outcome verify --surface testing-verification",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": false,
+        "outcome_id": "verify",
+        "surface_id": "testing-verification",
+        "target_id": "quality.testing-oracles"
+      },
+      "id": "forward-verify-testing",
+      "pass": true,
+      "query": "testing test oracle negative test"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "failure.diagnostics",
+        "capability_verdict": "default",
+        "claim_ids": [
+          "failure.diagnostic-preserves-cause"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+              "path": "evidence/artifacts/lab-results.json",
+              "size_bytes": 10463
+            },
+            "claim_ids": [
+              "failure.diagnostic-preserves-cause"
+            ],
+            "command": "./gradlew :labs:engineering:test",
+            "id": "failure.debugging",
+            "kind": "recovery",
+            "producer": "gradle-junit",
+            "record": {
+              "digest": "sha256:685d86a0bf73dd1fb485681579c4ccd409614fd1fa4908275c04e69f4f5bb943",
+              "path": "evidence/failure.debugging.evidence.json",
+              "size_bytes": 958
+            }
+          }
+        ],
+        "evidence_ids": [
+          "failure.debugging"
+        ],
+        "implementation_binding_count": 4,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:70d6dca058f6ab7af86e9f20905ecc58cf1006bfe15d3a7fb33ed92d4432515d",
+            "path": "labs/engineering/build.gradle.kts",
+            "size_bytes": 286,
+            "variant_id": "labs/engineering:build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/engineering/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs/engineering:gradle.lockfile"
+          },
+          {
+            "digest": "sha256:159d4aad4efc19fc536e0e5871a2d07aa21a80ec609d26eb755b2c3b1b956020",
+            "path": "labs/engineering/src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt",
+            "size_bytes": 2704,
+            "variant_id": "labs/engineering:src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt"
+          },
+          {
+            "digest": "sha256:a99c6712569f01a0cef6243485223adb02b167529a7edaeecbcf85d4cf3ae506",
+            "path": "labs/engineering/src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt",
+            "size_bytes": 3073,
+            "variant_id": "labs/engineering:src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt"
+          }
+        ],
+        "lab": "labs/engineering",
+        "matched_keywords": [
+          "debug",
+          "diagnostic",
+          "failure category",
+          "root cause"
+        ],
+        "mode": "diagnose",
+        "mutation": {
+          "authorized": true,
+          "required": true,
+          "status": "authorized"
+        },
+        "outcome_id": "troubleshoot",
+        "query": "debug diagnostic root cause failure category",
+        "required_deliverables": [
+          "failure-catalog",
+          "runbook",
+          "evidence"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+            "id": "kotlin-compiler-2.4.10",
+            "redistribution": "link-only",
+            "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+            "version": "2.4.10"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "failure-recovery",
+        "target_id": "quality.failure-debugging",
+        "target_requirement": "required",
+        "target_set": "quality",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "debug diagnostic root cause failure category",
+        "--outcome",
+        "troubleshoot",
+        "--surface",
+        "failure-recovery",
+        "--authorized-change"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query debug diagnostic root cause failure category --outcome troubleshoot --surface failure-recovery --authorized-change",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": true,
+        "outcome_id": "troubleshoot",
+        "surface_id": "failure-recovery",
+        "target_id": "quality.failure-debugging"
+      },
+      "id": "forward-troubleshoot-failure",
+      "pass": true,
+      "query": "debug diagnostic root cause failure category"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "operation.lifecycle-recovery",
+        "capability_verdict": "default",
+        "claim_ids": [
+          "operation.lifecycle-recovers"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+              "path": "evidence/artifacts/lab-results.json",
+              "size_bytes": 10463
+            },
+            "claim_ids": [
+              "operation.lifecycle-recovers"
+            ],
+            "command": "./gradlew :labs:engineering:test",
+            "id": "operation.lifecycle-recovery",
+            "kind": "conformance",
+            "producer": "gradle-junit",
+            "record": {
+              "digest": "sha256:c078ec5d79d5fa3abe18a864d33f2cd071c884b65c79f3ea3719bd6f1fbcf9b8",
+              "path": "evidence/operation.lifecycle-recovery.evidence.json",
+              "size_bytes": 948
+            }
+          }
+        ],
+        "evidence_ids": [
+          "operation.lifecycle-recovery"
+        ],
+        "implementation_binding_count": 4,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:70d6dca058f6ab7af86e9f20905ecc58cf1006bfe15d3a7fb33ed92d4432515d",
+            "path": "labs/engineering/build.gradle.kts",
+            "size_bytes": 286,
+            "variant_id": "labs/engineering:build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/engineering/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs/engineering:gradle.lockfile"
+          },
+          {
+            "digest": "sha256:159d4aad4efc19fc536e0e5871a2d07aa21a80ec609d26eb755b2c3b1b956020",
+            "path": "labs/engineering/src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt",
+            "size_bytes": 2704,
+            "variant_id": "labs/engineering:src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt"
+          },
+          {
+            "digest": "sha256:a99c6712569f01a0cef6243485223adb02b167529a7edaeecbcf85d4cf3ae506",
+            "path": "labs/engineering/src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt",
+            "size_bytes": 3073,
+            "variant_id": "labs/engineering:src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt"
+          }
+        ],
+        "lab": "labs/engineering",
+        "matched_keywords": [
+          "degraded",
+          "lifecycle",
+          "operations",
+          "recovery",
+          "runbook"
+        ],
+        "mode": "operate",
+        "mutation": {
+          "authorized": true,
+          "required": true,
+          "status": "authorized"
+        },
+        "outcome_id": "operate",
+        "query": "operations lifecycle degraded recovery runbook",
+        "required_deliverables": [
+          "runbook",
+          "evidence"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+            "id": "kotlin-compiler-2.4.10",
+            "redistribution": "link-only",
+            "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+            "version": "2.4.10"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "operations-observability",
+        "target_id": "operation.lifecycle-recovery",
+        "target_requirement": "required",
+        "target_set": "operation",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "operations lifecycle degraded recovery runbook",
+        "--outcome",
+        "operate",
+        "--surface",
+        "operations-observability",
+        "--authorized-change"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query operations lifecycle degraded recovery runbook --outcome operate --surface operations-observability --authorized-change",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": true,
+        "outcome_id": "operate",
+        "surface_id": "operations-observability",
+        "target_id": "operation.lifecycle-recovery"
+      },
+      "id": "forward-operate-observability",
+      "pass": true,
+      "query": "operations lifecycle degraded recovery runbook"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "security.input-boundaries",
+        "capability_verdict": "default",
+        "claim_ids": [
+          "security.boundaries-reject-unsafe-input"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+              "path": "evidence/artifacts/lab-results.json",
+              "size_bytes": 10463
+            },
+            "claim_ids": [
+              "security.boundaries-reject-unsafe-input"
+            ],
+            "command": "./gradlew :labs:engineering:test",
+            "id": "security.boundaries",
+            "kind": "attack",
+            "producer": "gradle-junit",
+            "record": {
+              "digest": "sha256:3628baa8f686923769bb0e305ceb07f200b169bfc2d35affa0c3bef9514d5d14",
+              "path": "evidence/security.boundaries.evidence.json",
+              "size_bytes": 963
+            }
+          }
+        ],
+        "evidence_ids": [
+          "security.boundaries"
+        ],
+        "implementation_binding_count": 4,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:70d6dca058f6ab7af86e9f20905ecc58cf1006bfe15d3a7fb33ed92d4432515d",
+            "path": "labs/engineering/build.gradle.kts",
+            "size_bytes": 286,
+            "variant_id": "labs/engineering:build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/engineering/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs/engineering:gradle.lockfile"
+          },
+          {
+            "digest": "sha256:159d4aad4efc19fc536e0e5871a2d07aa21a80ec609d26eb755b2c3b1b956020",
+            "path": "labs/engineering/src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt",
+            "size_bytes": 2704,
+            "variant_id": "labs/engineering:src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt"
+          },
+          {
+            "digest": "sha256:a99c6712569f01a0cef6243485223adb02b167529a7edaeecbcf85d4cf3ae506",
+            "path": "labs/engineering/src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt",
+            "size_bytes": 3073,
+            "variant_id": "labs/engineering:src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt"
+          }
+        ],
+        "lab": "labs/engineering",
+        "matched_keywords": [
+          "allowlist",
+          "constant time",
+          "path traversal",
+          "security"
+        ],
+        "mode": "review",
+        "mutation": {
+          "authorized": false,
+          "required": false,
+          "status": "not-applicable"
+        },
+        "outcome_id": "verify",
+        "query": "security path traversal allowlist constant time",
+        "required_deliverables": [
+          "security-review",
+          "test"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+            "id": "kotlin-compiler-2.4.10",
+            "redistribution": "link-only",
+            "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+            "version": "2.4.10"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "security-privacy-safety",
+        "target_id": "security.input-boundaries",
+        "target_requirement": "required",
+        "target_set": "performance-security",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "security path traversal allowlist constant time",
+        "--outcome",
+        "verify",
+        "--surface",
+        "security-privacy-safety"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query security path traversal allowlist constant time --outcome verify --surface security-privacy-safety",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": false,
+        "outcome_id": "verify",
+        "surface_id": "security-privacy-safety",
+        "target_id": "security.input-boundaries"
+      },
+      "id": "forward-verify-security",
+      "pass": true,
+      "query": "security path traversal allowlist constant time"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "performance.measurement-harness",
+        "capability_verdict": "conditional",
+        "claim_ids": [
+          "performance.harness-reports-median"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+              "path": "evidence/artifacts/lab-results.json",
+              "size_bytes": 10463
+            },
+            "claim_ids": [
+              "performance.harness-reports-median"
+            ],
+            "command": "./gradlew :labs:engineering:test",
+            "id": "performance.measurement",
+            "kind": "benchmark",
+            "producer": "gradle-junit",
+            "record": {
+              "digest": "sha256:3408271e016a182cfc764e335ae7f4c217bddcb217ce38516f1914738b8d0957",
+              "path": "evidence/performance.measurement.evidence.json",
+              "size_bytes": 965
+            }
+          }
+        ],
+        "evidence_ids": [
+          "performance.measurement"
+        ],
+        "implementation_binding_count": 4,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:70d6dca058f6ab7af86e9f20905ecc58cf1006bfe15d3a7fb33ed92d4432515d",
+            "path": "labs/engineering/build.gradle.kts",
+            "size_bytes": 286,
+            "variant_id": "labs/engineering:build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/engineering/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs/engineering:gradle.lockfile"
+          },
+          {
+            "digest": "sha256:159d4aad4efc19fc536e0e5871a2d07aa21a80ec609d26eb755b2c3b1b956020",
+            "path": "labs/engineering/src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt",
+            "size_bytes": 2704,
+            "variant_id": "labs/engineering:src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt"
+          },
+          {
+            "digest": "sha256:a99c6712569f01a0cef6243485223adb02b167529a7edaeecbcf85d4cf3ae506",
+            "path": "labs/engineering/src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt",
+            "size_bytes": 3073,
+            "variant_id": "labs/engineering:src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt"
+          }
+        ],
+        "lab": "labs/engineering",
+        "matched_keywords": [
+          "benchmark",
+          "median",
+          "performance"
+        ],
+        "mode": "compare",
+        "mutation": {
+          "authorized": false,
+          "required": false,
+          "status": "not-applicable"
+        },
+        "outcome_id": "choose",
+        "query": "performance benchmark median",
+        "required_deliverables": [
+          "benchmark",
+          "evidence"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+            "id": "kotlin-compiler-2.4.10",
+            "redistribution": "link-only",
+            "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+            "version": "2.4.10"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "performance-capacity-cost",
+        "target_id": "performance.measurement-harness",
+        "target_requirement": "required",
+        "target_set": "performance-security",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "performance benchmark median",
+        "--outcome",
+        "choose",
+        "--surface",
+        "performance-capacity-cost"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query performance benchmark median --outcome choose --surface performance-capacity-cost",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": false,
+        "outcome_id": "choose",
+        "surface_id": "performance-capacity-cost",
+        "target_id": "performance.measurement-harness"
+      },
+      "id": "forward-choose-performance",
+      "pass": true,
+      "query": "performance benchmark median"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "interop.java-consumer",
+        "capability_verdict": "boundary-only",
+        "claim_ids": [
+          "interop.java-overloads-and-throws"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+              "path": "evidence/artifacts/lab-results.json",
+              "size_bytes": 10463
+            },
+            "claim_ids": [
+              "interop.java-overloads-and-throws"
+            ],
+            "command": "./gradlew :labs:interop:test",
+            "id": "interop.java-consumer",
+            "kind": "compatibility",
+            "producer": "gradle-junit",
+            "record": {
+              "digest": "sha256:d4b383f495134f7440346dcd1dcd20d0515dd431551c2d26af4a6ee619740de8",
+              "path": "evidence/interop.java-consumer.evidence.json",
+              "size_bytes": 958
+            }
+          }
+        ],
+        "evidence_ids": [
+          "interop.java-consumer"
+        ],
+        "implementation_binding_count": 4,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:f26b5c437ce7d27851d2146bce47c874b7d04de9c7ed990258871bf4601261eb",
+            "path": "labs/interop/build.gradle.kts",
+            "size_bytes": 386,
+            "variant_id": "labs/interop:build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/interop/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs/interop:gradle.lockfile"
+          },
+          {
+            "digest": "sha256:15ea56d848458ac49358fd1575dc53f2d234d487a4c932ca17a2084ceea0884d",
+            "path": "labs/interop/src/main/kotlin/dev/akaitigo/kotlinatlas/interop/AtlasApi.kt",
+            "size_bytes": 382,
+            "variant_id": "labs/interop:src/main/kotlin/dev/akaitigo/kotlinatlas/interop/AtlasApi.kt"
+          },
+          {
+            "digest": "sha256:c9a86c408dc5727bf072dc381232b1a481afff1bc47edd21621367e3457f7957",
+            "path": "labs/interop/src/test/java/dev/akaitigo/kotlinatlas/interop/JavaConsumerTest.java",
+            "size_bytes": 674,
+            "variant_id": "labs/interop:src/test/java/dev/akaitigo/kotlinatlas/interop/JavaConsumerTest.java"
+          }
+        ],
+        "lab": "labs/interop",
+        "matched_keywords": [
+          "interop",
+          "java",
+          "jvmoverloads",
+          "throws"
+        ],
+        "mode": "review",
+        "mutation": {
+          "authorized": false,
+          "required": false,
+          "status": "not-applicable"
+        },
+        "outcome_id": "verify",
+        "query": "java interop jvmoverloads throws",
+        "required_deliverables": [
+          "test",
+          "evidence"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+            "id": "kotlin-compiler-2.4.10",
+            "redistribution": "link-only",
+            "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+            "version": "2.4.10"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "compatibility-integration",
+        "target_id": "interop.java-consumer",
+        "target_requirement": "required",
+        "target_set": "interop",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "java interop jvmoverloads throws",
+        "--outcome",
+        "verify",
+        "--surface",
+        "compatibility-integration"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query java interop jvmoverloads throws --outcome verify --surface compatibility-integration",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": false,
+        "outcome_id": "verify",
+        "surface_id": "compatibility-integration",
+        "target_id": "interop.java-consumer"
+      },
+      "id": "forward-verify-compatibility",
+      "pass": true,
+      "query": "java interop jvmoverloads throws"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "evolution.schema-migration",
+        "capability_verdict": "default",
+        "claim_ids": [
+          "migration.v1-v2-compatible"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+              "path": "evidence/artifacts/lab-results.json",
+              "size_bytes": 10463
+            },
+            "claim_ids": [
+              "migration.v1-v2-compatible"
+            ],
+            "command": "./gradlew :labs:engineering:test",
+            "id": "evolution.compatibility-migration",
+            "kind": "compatibility",
+            "producer": "gradle-junit",
+            "record": {
+              "digest": "sha256:656a1964a63200a7ecd2cc049dc85f888df12b56ba8e0b972d9589b659359a34",
+              "path": "evidence/evolution.compatibility-migration.evidence.json",
+              "size_bytes": 1077
+            }
+          }
+        ],
+        "evidence_ids": [
+          "evolution.compatibility-migration"
+        ],
+        "implementation_binding_count": 4,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:70d6dca058f6ab7af86e9f20905ecc58cf1006bfe15d3a7fb33ed92d4432515d",
+            "path": "labs/engineering/build.gradle.kts",
+            "size_bytes": 286,
+            "variant_id": "labs/engineering:build.gradle.kts"
+          },
+          {
+            "digest": "sha256:7166dd0eca6a3ad8d0e19e24d12bafa8a85aad447df209d530f4ec8d6c7298ee",
+            "path": "labs/engineering/gradle.lockfile",
+            "size_bytes": 4908,
+            "variant_id": "labs/engineering:gradle.lockfile"
+          },
+          {
+            "digest": "sha256:159d4aad4efc19fc536e0e5871a2d07aa21a80ec609d26eb755b2c3b1b956020",
+            "path": "labs/engineering/src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt",
+            "size_bytes": 2704,
+            "variant_id": "labs/engineering:src/main/kotlin/dev/akaitigo/kotlinatlas/engineering/Engineering.kt"
+          },
+          {
+            "digest": "sha256:a99c6712569f01a0cef6243485223adb02b167529a7edaeecbcf85d4cf3ae506",
+            "path": "labs/engineering/src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt",
+            "size_bytes": 3073,
+            "variant_id": "labs/engineering:src/test/kotlin/dev/akaitigo/kotlinatlas/engineering/EngineeringTest.kt"
+          }
+        ],
+        "lab": "labs/engineering",
+        "matched_keywords": [
+          "compatibility",
+          "deprecation",
+          "migration",
+          "schema version"
+        ],
+        "mode": "migrate",
+        "mutation": {
+          "authorized": true,
+          "required": true,
+          "status": "authorized"
+        },
+        "outcome_id": "evolve",
+        "query": "migration compatibility schema version deprecation",
+        "required_deliverables": [
+          "migration-guide",
+          "test"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+            "id": "kotlin-compiler-2.4.10",
+            "redistribution": "link-only",
+            "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+            "version": "2.4.10"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "migration-evolution-deprecation",
+        "target_id": "evolution.compatibility-migration",
+        "target_requirement": "required",
+        "target_set": "evolution",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "migration compatibility schema version deprecation",
+        "--outcome",
+        "evolve",
+        "--surface",
+        "migration-evolution-deprecation",
+        "--authorized-change"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query migration compatibility schema version deprecation --outcome evolve --surface migration-evolution-deprecation --authorized-change",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": true,
+        "outcome_id": "evolve",
+        "surface_id": "migration-evolution-deprecation",
+        "target_id": "evolution.compatibility-migration"
+      },
+      "id": "forward-evolve-migration",
+      "pass": true,
+      "query": "migration compatibility schema version deprecation"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "coroutines.structured-cancellation",
+        "capability_verdict": "default",
+        "claim_ids": [
+          "coroutines.child-failure-cancels-sibling"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+              "path": "evidence/artifacts/lab-results.json",
+              "size_bytes": 10463
+            },
+            "claim_ids": [
+              "coroutines.child-failure-cancels-sibling"
+            ],
+            "command": "./gradlew :labs:coroutines:test",
+            "id": "coroutines.failure-propagation",
+            "kind": "test-report",
+            "producer": "gradle-junit",
+            "record": {
+              "digest": "sha256:7f03782a765ad90c630661ac16b1acfd98cd743d9ced64bbef48e851d6787b08",
+              "path": "evidence/coroutines.failure-propagation.evidence.json",
+              "size_bytes": 978
+            }
+          }
+        ],
+        "evidence_ids": [
+          "coroutines.failure-propagation"
+        ],
+        "implementation_binding_count": 4,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:d925a9ef420775baaa112e2be32e395e456add65a18c7e6cf43e65e7f38ab691",
+            "path": "labs/coroutines/build.gradle.kts",
+            "size_bytes": 427,
+            "variant_id": "labs/coroutines:build.gradle.kts"
+          },
+          {
+            "digest": "sha256:f61ba804bc620756f907b4cc288f1c4dd6d0531418529983c1cb19531f49a01c",
+            "path": "labs/coroutines/gradle.lockfile",
+            "size_bytes": 5331,
+            "variant_id": "labs/coroutines:gradle.lockfile"
+          },
+          {
+            "digest": "sha256:58e9b0ce4829ad0a88eb2fdabba7d8ccb4ade05baeb2f44e2c2757cc6020070b",
+            "path": "labs/coroutines/src/main/kotlin/dev/akaitigo/kotlinatlas/coroutines/FailurePropagation.kt",
+            "size_bytes": 649,
+            "variant_id": "labs/coroutines:src/main/kotlin/dev/akaitigo/kotlinatlas/coroutines/FailurePropagation.kt"
+          },
+          {
+            "digest": "sha256:ac94e9fb7fdd1981a5748d1a03190ad0bfd892d7af47de17239063db5f4722d6",
+            "path": "labs/coroutines/src/test/kotlin/dev/akaitigo/kotlinatlas/coroutines/FailurePropagationTest.kt",
+            "size_bytes": 681,
+            "variant_id": "labs/coroutines:src/test/kotlin/dev/akaitigo/kotlinatlas/coroutines/FailurePropagationTest.kt"
+          }
+        ],
+        "lab": "labs/coroutines",
+        "matched_keywords": [
+          "cancel",
+          "cancellation",
+          "coroutine",
+          "structured concurrency"
+        ],
+        "mode": "compare",
+        "mutation": {
+          "authorized": false,
+          "required": false,
+          "status": "not-applicable"
+        },
+        "outcome_id": "choose",
+        "query": "coroutine cancellation structured concurrency",
+        "required_deliverables": [
+          "decision",
+          "benchmark"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:d1d75aa01dffbb4d1c520e67e4c4e7f5f6174718e7cb4632412503f2f0e604fa",
+            "id": "kotlinx-coroutines-core-jvm-1.11.0",
+            "redistribution": "link-only",
+            "url": "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.11.0/kotlinx-coroutines-core-jvm-1.11.0.jar",
+            "version": "1.11.0"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "decision-comparison",
+        "target_id": "concurrency.structured-cancellation",
+        "target_requirement": "required",
+        "target_set": "concurrency",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "coroutine cancellation structured concurrency",
+        "--outcome",
+        "choose",
+        "--surface",
+        "decision-comparison"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query coroutine cancellation structured concurrency --outcome choose --surface decision-comparison",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": false,
+        "outcome_id": "choose",
+        "surface_id": "decision-comparison",
+        "target_id": "concurrency.structured-cancellation"
+      },
+      "id": "forward-choose-decision",
+      "pass": true,
+      "query": "coroutine cancellation structured concurrency"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "inventory.public-surface",
+        "capability_verdict": "default",
+        "claim_ids": [
+          "inventory.locked-surface-enumerated"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:085426b301ae5609b3e2bec70e7353a7bacea69a1ed41d2c60aff95ebdb1f2af",
+              "path": "atlas/inventory/kotlin-public-surface.json",
+              "size_bytes": 2287792
+            },
+            "claim_ids": [
+              "inventory.locked-surface-enumerated"
+            ],
+            "command": "python3 scripts/inventory.py",
+            "id": "inventory.public-surface",
+            "kind": "capture",
+            "producer": "kotlin-artifact-inventory",
+            "record": {
+              "digest": "sha256:93e4d371e7ae5dfe1f22fe9eab1bc0a980afb13a9ee859398c4024dddf5d3a5a",
+              "path": "evidence/inventory.public-surface.evidence.json",
+              "size_bytes": 970
+            }
+          }
+        ],
+        "evidence_ids": [
+          "inventory.public-surface"
+        ],
+        "implementation_binding_count": 1,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:1a5e822854ec77392731d16021861f24f21ffd518f888f2135e16fe0233ed310",
+            "path": "scripts/inventory.py",
+            "size_bytes": 2794,
+            "variant_id": "scripts/inventory.py"
+          }
+        ],
+        "lab": "scripts/inventory.py",
+        "matched_keywords": [
+          "compiler registry",
+          "inventory",
+          "public surface"
+        ],
+        "mode": "review",
+        "mutation": {
+          "authorized": false,
+          "required": false,
+          "status": "not-applicable"
+        },
+        "outcome_id": "verify",
+        "query": "inventory public surface compiler registry",
+        "required_deliverables": [
+          "provenance-record",
+          "evidence"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+            "id": "kotlin-compiler-2.4.10",
+            "redistribution": "link-only",
+            "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+            "version": "2.4.10"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "provenance-rights",
+        "target_id": "inventory.kotlin-public-surface",
+        "target_requirement": "required",
+        "target_set": "authority",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "inventory public surface compiler registry",
+        "--outcome",
+        "verify",
+        "--surface",
+        "provenance-rights"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query inventory public surface compiler registry --outcome verify --surface provenance-rights",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": false,
+        "outcome_id": "verify",
+        "surface_id": "provenance-rights",
+        "target_id": "inventory.kotlin-public-surface"
+      },
+      "id": "forward-verify-provenance",
+      "pass": true,
+      "query": "inventory public surface compiler registry"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "skill.coverage-router",
+        "capability_verdict": "default",
+        "claim_ids": [
+          "skill.router-respects-coverage"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:83c6db28f83f4c44743c989ea622b9d811bcf2042edc3fa96951fb8bbb66baaf",
+              "path": "evals/kotlin-reference-router.skill-eval.json",
+              "size_bytes": 3887
+            },
+            "claim_ids": [
+              "skill.router-respects-coverage"
+            ],
+            "command": "python3 scripts/verify.py",
+            "id": "skill.router-evaluation",
+            "kind": "skill-eval",
+            "producer": "kotlin-router-eval",
+            "record": {
+              "digest": "sha256:9804ad313c07affba2a869d0836ab15e7f6a1f7dbea2933d663169cbb90a8b1a",
+              "path": "evidence/skill.router-evaluation.evidence.json",
+              "size_bytes": 984
+            }
+          }
+        ],
+        "evidence_ids": [
+          "skill.router-evaluation"
+        ],
+        "implementation_binding_count": 5,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:61c383294b9060bf6cb08f5b0569542942a910eb4418fc07b5a846f3ad09810d",
+            "path": "evals/kotlin-reference-router.agent-forward-eval.json",
+            "size_bytes": 119352,
+            "variant_id": "evals:kotlin-reference-router.agent-forward-eval.json"
+          },
+          {
+            "digest": "sha256:71168b0d7053acb2c706b182a30b783addfa64ce591d79c456fe3f7be8612f38",
+            "path": "evals/kotlin-reference-router.definitive-skill-eval-report.json",
+            "size_bytes": 592818,
+            "variant_id": "evals:kotlin-reference-router.definitive-skill-eval-report.json"
+          },
+          {
+            "digest": "sha256:775b03d82c27ba2aa2fbb3c9b2e6b964b6fd478055202a41712133631f19dd04",
+            "path": "evals/kotlin-reference-router.definitive-skill-eval.json",
+            "size_bytes": 50610,
+            "variant_id": "evals:kotlin-reference-router.definitive-skill-eval.json"
+          },
+          {
+            "digest": "sha256:83c6db28f83f4c44743c989ea622b9d811bcf2042edc3fa96951fb8bbb66baaf",
+            "path": "evals/kotlin-reference-router.skill-eval.json",
+            "size_bytes": 3887,
+            "variant_id": "evals:kotlin-reference-router.skill-eval.json"
+          },
+          {
+            "digest": "sha256:41e49d23d565d8f49d0fe95c88dbfddd44fa90452338807a511769a1b1d13846",
+            "path": "evals/router-cases.json",
+            "size_bytes": 4821,
+            "variant_id": "evals:router-cases.json"
+          }
+        ],
+        "lab": "evals",
+        "matched_keywords": [
+          "agent routing contract",
+          "kotlin router skill eval"
+        ],
+        "mode": "delegate",
+        "mutation": {
+          "authorized": true,
+          "required": true,
+          "status": "authorized"
+        },
+        "outcome_id": "delegate",
+        "query": "kotlin router skill eval agent routing contract",
+        "required_deliverables": [
+          "skill-reference",
+          "skill-eval"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:67120b38028fa871625f370f3688e52a4963df1f318d6e4b30a1cb6b8accbc38",
+            "id": "reference-atlas-core-v1",
+            "redistribution": "metadata-only",
+            "url": "https://github.com/akaitigo/reference-atlas-core/commit/d5c0a6ce757fd5f43af837edd26f55c7325b811e",
+            "version": "git:d5c0a6ce757fd5f43af837edd26f55c7325b811e"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "agent-skill",
+        "target_id": "skill.router-evaluation",
+        "target_requirement": "required",
+        "target_set": "skill",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "kotlin router skill eval agent routing contract",
+        "--outcome",
+        "delegate",
+        "--surface",
+        "agent-skill",
+        "--authorized-change"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query kotlin router skill eval agent routing contract --outcome delegate --surface agent-skill --authorized-change",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": true,
+        "outcome_id": "delegate",
+        "surface_id": "agent-skill",
+        "target_id": "skill.router-evaluation"
+      },
+      "id": "forward-delegate-agent-skill",
+      "pass": true,
+      "query": "kotlin router skill eval agent routing contract"
+    },
+    {
+      "actual": {
+        "authority_review": {
+          "human_semantic_decision_requested": false,
+          "stale_relock_requested": false,
+          "status": "not-requested"
+        },
+        "capability_id": "compiler.runtime-shapes",
+        "capability_verdict": "conditional",
+        "claim_ids": [
+          "compiler.runtime-shapes-observable"
+        ],
+        "completion_semantics": "このRouteのpassはRepositoryまたはMastery completionを意味しない。",
+        "disposition": "covered",
+        "evidence_bindings": [
+          {
+            "artifact": {
+              "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+              "path": "evidence/artifacts/lab-results.json",
+              "size_bytes": 10463
+            },
+            "claim_ids": [
+              "compiler.runtime-shapes-observable"
+            ],
+            "command": "./gradlew :labs:compiler-runtime:test",
+            "id": "compiler.runtime-shapes",
+            "kind": "test-report",
+            "producer": "gradle-junit",
+            "record": {
+              "digest": "sha256:d3b9cb05d15882387b9f4ff79d6a16760e3bf7806096add47c392324da6d3e8a",
+              "path": "evidence/compiler.runtime-shapes.evidence.json",
+              "size_bytes": 977
+            }
+          }
+        ],
+        "evidence_ids": [
+          "compiler.runtime-shapes"
+        ],
+        "implementation_binding_count": 4,
+        "implementation_bindings": [
+          {
+            "digest": "sha256:fa6641ce4ffd67e9b91894f8d6690c429d3e39d7f944398aaa404a91c26d4969",
+            "path": "labs/compiler-runtime/build.gradle.kts",
+            "size_bytes": 327,
+            "variant_id": "labs/compiler-runtime:build.gradle.kts"
+          },
+          {
+            "digest": "sha256:f61ba804bc620756f907b4cc288f1c4dd6d0531418529983c1cb19531f49a01c",
+            "path": "labs/compiler-runtime/gradle.lockfile",
+            "size_bytes": 5331,
+            "variant_id": "labs/compiler-runtime:gradle.lockfile"
+          },
+          {
+            "digest": "sha256:007c06e3f328c670ce4b8cbf52708e953779d5a77c039823d4be9c9b01119b4c",
+            "path": "labs/compiler-runtime/src/main/kotlin/dev/akaitigo/kotlinatlas/runtime/RuntimeShapes.kt",
+            "size_bytes": 519,
+            "variant_id": "labs/compiler-runtime:src/main/kotlin/dev/akaitigo/kotlinatlas/runtime/RuntimeShapes.kt"
+          },
+          {
+            "digest": "sha256:324253f2132249dbfe621a0b18eb3ac08fd0f8801cd3cdf8d3c6c03275051b68",
+            "path": "labs/compiler-runtime/src/test/kotlin/dev/akaitigo/kotlinatlas/runtime/RuntimeShapesTest.kt",
+            "size_bytes": 1116,
+            "variant_id": "labs/compiler-runtime:src/test/kotlin/dev/akaitigo/kotlinatlas/runtime/RuntimeShapesTest.kt"
+          }
+        ],
+        "lab": "labs/compiler-runtime",
+        "matched_keywords": [
+          "capturing lambda",
+          "data class",
+          "runtime shape",
+          "suspend continuation"
+        ],
+        "mode": "review",
+        "mutation": {
+          "authorized": false,
+          "required": false,
+          "status": "not-applicable"
+        },
+        "outcome_id": "verify",
+        "query": "data class capturing lambda suspend continuation runtime shape",
+        "required_deliverables": [
+          "concept",
+          "lab"
+        ],
+        "schema_version": 2,
+        "source_bindings": [
+          {
+            "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+            "id": "kotlin-compiler-2.4.10",
+            "redistribution": "link-only",
+            "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+            "version": "2.4.10"
+          }
+        ],
+        "status": "bounded-route",
+        "stop_conditions": [],
+        "surface_id": "foundations-mechanics",
+        "target_id": "compiler.runtime-shapes",
+        "target_requirement": "required",
+        "target_set": "compiler-runtime",
+        "target_set_allowed": true,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "data class capturing lambda suspend continuation runtime shape",
+        "--outcome",
+        "verify",
+        "--surface",
+        "foundations-mechanics"
+      ],
+      "checks": [
+        {
+          "id": "process-json",
+          "pass": true
+        },
+        {
+          "id": "covered-disposition",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-binding",
+          "pass": true
+        },
+        {
+          "id": "target-set-allowed",
+          "pass": true
+        },
+        {
+          "id": "target-state-covered",
+          "pass": true
+        },
+        {
+          "id": "coverage-manifest-state-match",
+          "pass": true
+        },
+        {
+          "id": "mutation-authorization",
+          "pass": true
+        },
+        {
+          "id": "source-lock-binding",
+          "pass": true
+        },
+        {
+          "id": "evidence-record-artifact-binding",
+          "pass": true
+        },
+        {
+          "id": "implementation-variant-binding",
+          "pass": true
+        },
+        {
+          "id": "no-completion-claim",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query data class capturing lambda suspend continuation runtime shape --outcome verify --surface foundations-mechanics",
+      "expected": {
+        "disposition": "covered",
+        "mutation_authorized": false,
+        "outcome_id": "verify",
+        "surface_id": "foundations-mechanics",
+        "target_id": "compiler.runtime-shapes"
+      },
+      "id": "forward-verify-compiler-runtime",
+      "pass": true,
+      "query": "data class capturing lambda suspend continuation runtime shape"
+    },
+    {
+      "actual": {
+        "disposition": "gap",
+        "mutation": {
+          "authorized": false,
+          "required": true,
+          "status": "blocked"
+        },
+        "outcome_id": "build",
+        "query": "variance reified",
+        "reason_code": "unauthorized-mutation",
+        "reason_ja": "変更を伴うOutcomeだが、変更対象と権限が明示されていない。",
+        "schema_version": 2,
+        "stop_conditions": [
+          "explicit-mutation-authorization-required"
+        ],
+        "surface_id": "implementation-construction"
+      },
+      "args": [
+        "--query",
+        "variance reified",
+        "--outcome",
+        "build",
+        "--surface",
+        "implementation-construction"
+      ],
+      "checks": [
+        {
+          "id": "gap-disposition",
+          "pass": true
+        },
+        {
+          "id": "reason-code",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query variance reified --outcome build --surface implementation-construction",
+      "expected": {
+        "disposition": "gap",
+        "reason_code": "unauthorized-mutation"
+      },
+      "id": "boundary-unauthorized-mutation",
+      "pass": true,
+      "query": "variance reified"
+    },
+    {
+      "actual": {
+        "disposition": "gap",
+        "outcome_id": "understand",
+        "query": "authority review queue",
+        "reason_code": "external-human-decision-required",
+        "reason_ja": "Authority本文の意味判断とSemantic Surfaceへの昇格は人手Reviewが必要である。",
+        "schema_version": 2,
+        "stop_conditions": [
+          "human-authority-review-required"
+        ],
+        "surface_id": "orientation-scope"
+      },
+      "args": [
+        "--query",
+        "authority review queue",
+        "--outcome",
+        "understand",
+        "--surface",
+        "orientation-scope",
+        "--authority-semantic-decision"
+      ],
+      "checks": [
+        {
+          "id": "gap-disposition",
+          "pass": true
+        },
+        {
+          "id": "reason-code",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query authority review queue --outcome understand --surface orientation-scope --authority-semantic-decision",
+      "expected": {
+        "disposition": "gap",
+        "reason_code": "external-human-decision-required"
+      },
+      "id": "boundary-human-authority-stop",
+      "pass": true,
+      "query": "authority review queue"
+    },
+    {
+      "actual": {
+        "disposition": "gap",
+        "outcome_id": "evolve",
+        "query": "authority locator",
+        "reason_code": "stale-source-relock-explicit-procedure-required",
+        "reason_ja": "stale Sourceの再固定は明示手順と人手確認なしに進めない。",
+        "schema_version": 2,
+        "stop_conditions": [
+          "stale-source-hold",
+          "explicit-relock-procedure-required"
+        ],
+        "surface_id": "provenance-rights"
+      },
+      "args": [
+        "--query",
+        "authority locator",
+        "--outcome",
+        "evolve",
+        "--surface",
+        "provenance-rights",
+        "--authorized-change",
+        "--stale-source-relock"
+      ],
+      "checks": [
+        {
+          "id": "gap-disposition",
+          "pass": true
+        },
+        {
+          "id": "reason-code",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query authority locator --outcome evolve --surface provenance-rights --authorized-change --stale-source-relock",
+      "expected": {
+        "disposition": "gap",
+        "reason_code": "stale-source-relock-explicit-procedure-required"
+      },
+      "id": "boundary-stale-relock-stop",
+      "pass": true,
+      "query": "authority locator"
+    },
+    {
+      "actual": {
+        "candidate_capability_ids": [
+          "semantics.language-core",
+          "semantics.type-system"
+        ],
+        "disposition": "gap",
+        "outcome_id": "understand",
+        "query": "sealed variance",
+        "reason_code": "ambiguous-query",
+        "reason_ja": "複数Capabilityが同じ確度で一致したため、対象を推測せず停止する。",
+        "schema_version": 2,
+        "stop_conditions": [
+          "query-clarification-required"
+        ],
+        "surface_id": "foundations-mechanics"
+      },
+      "args": [
+        "--query",
+        "sealed variance",
+        "--outcome",
+        "understand",
+        "--surface",
+        "foundations-mechanics"
+      ],
+      "checks": [
+        {
+          "id": "gap-disposition",
+          "pass": true
+        },
+        {
+          "id": "reason-code",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query sealed variance --outcome understand --surface foundations-mechanics",
+      "expected": {
+        "disposition": "gap",
+        "reason_code": "ambiguous-query"
+      },
+      "id": "boundary-ambiguous-query",
+      "pass": true,
+      "query": "sealed variance"
+    },
+    {
+      "actual": {
+        "disposition": "gap",
+        "outcome_id": "understand",
+        "query": "未登録Frameworkの全APIを自動変更する",
+        "reason_code": "unknown-query",
+        "reason_ja": "現在のCoverage Epochに一致する検証済みCapabilityがない。",
+        "schema_version": 2,
+        "stop_conditions": [
+          "coverage-extension-or-query-clarification-required"
+        ],
+        "surface_id": "orientation-scope"
+      },
+      "args": [
+        "--query",
+        "未登録Frameworkの全APIを自動変更する",
+        "--outcome",
+        "understand",
+        "--surface",
+        "orientation-scope"
+      ],
+      "checks": [
+        {
+          "id": "gap-disposition",
+          "pass": true
+        },
+        {
+          "id": "reason-code",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query 未登録Frameworkの全APIを自動変更する --outcome understand --surface orientation-scope",
+      "expected": {
+        "disposition": "gap",
+        "reason_code": "unknown-query"
+      },
+      "id": "boundary-unknown-query",
+      "pass": true,
+      "query": "未登録Frameworkの全APIを自動変更する"
+    },
+    {
+      "actual": {
+        "capability_id": "inventory.public-surface",
+        "disposition": "gap",
+        "outcome_id": "delegate",
+        "query": "inventory public surface",
+        "reason_code": "mastery-routing-gap",
+        "reason_ja": "選択したTarget setは指定OutcomeのMastery契約に含まれない。",
+        "schema_version": 2,
+        "surface_id": "orientation-scope",
+        "target_id": "inventory.kotlin-public-surface",
+        "target_set": "authority",
+        "target_set_allowed": false,
+        "target_state": "covered"
+      },
+      "args": [
+        "--query",
+        "inventory public surface",
+        "--outcome",
+        "delegate",
+        "--surface",
+        "orientation-scope",
+        "--authorized-change"
+      ],
+      "checks": [
+        {
+          "id": "gap-disposition",
+          "pass": true
+        },
+        {
+          "id": "reason-code",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query inventory public surface --outcome delegate --surface orientation-scope --authorized-change",
+      "expected": {
+        "disposition": "gap",
+        "reason_code": "mastery-routing-gap"
+      },
+      "id": "boundary-mastery-routing-gap",
+      "pass": true,
+      "query": "inventory public surface"
+    },
+    {
+      "actual": {
+        "capability_id": "authority.body-denominator",
+        "disposition": "gap",
+        "evidence_ids": [
+          "authority.body-inventory-validation",
+          "authority.review-queue-validation"
+        ],
+        "outcome_id": "understand",
+        "query": "authority review queue",
+        "reason_code": "target-not-covered",
+        "reason_ja": "一致したTargetはpartialで、検証済みとして利用できない。",
+        "schema_version": 2,
+        "surface_id": "orientation-scope",
+        "target_id": "authority.body-denominator",
+        "target_requirement": "required",
+        "target_set": "authority",
+        "target_set_allowed": true,
+        "target_state": "partial"
+      },
+      "args": [
+        "--query",
+        "authority review queue",
+        "--outcome",
+        "understand",
+        "--surface",
+        "orientation-scope"
+      ],
+      "checks": [
+        {
+          "id": "gap-disposition",
+          "pass": true
+        },
+        {
+          "id": "reason-code",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-state",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query authority review queue --outcome understand --surface orientation-scope",
+      "expected": {
+        "disposition": "gap",
+        "reason_code": "target-not-covered",
+        "target_state": "partial"
+      },
+      "id": "boundary-partial-target-state",
+      "pass": true,
+      "query": "authority review queue"
+    },
+    {
+      "actual": {
+        "capability_id": "platform.native-compile",
+        "disposition": "gap",
+        "evidence_ids": [],
+        "outcome_id": "verify",
+        "query": "native runtime xcodebuild",
+        "reason_code": "target-not-covered",
+        "reason_ja": "一致したTargetはinfeasibleで、検証済みとして利用できない。",
+        "schema_version": 2,
+        "surface_id": "compatibility-integration",
+        "target_id": "platform.native-runtime",
+        "target_requirement": "required",
+        "target_set": "platforms",
+        "target_set_allowed": true,
+        "target_state": "infeasible"
+      },
+      "args": [
+        "--query",
+        "native runtime xcodebuild",
+        "--outcome",
+        "verify",
+        "--surface",
+        "compatibility-integration"
+      ],
+      "checks": [
+        {
+          "id": "gap-disposition",
+          "pass": true
+        },
+        {
+          "id": "reason-code",
+          "pass": true
+        },
+        {
+          "id": "outcome-binding",
+          "pass": true
+        },
+        {
+          "id": "surface-binding",
+          "pass": true
+        },
+        {
+          "id": "target-state",
+          "pass": true
+        }
+      ],
+      "command": "python3 .agents/skills/kotlin-reference-router/scripts/route.py --query native runtime xcodebuild --outcome verify --surface compatibility-integration",
+      "expected": {
+        "disposition": "gap",
+        "reason_code": "target-not-covered",
+        "target_state": "infeasible"
+      },
+      "id": "boundary-infeasible-target-state",
+      "pass": true,
+      "query": "native runtime xcodebuild"
+    }
+  ],
+  "schema_version": 1,
+  "surface_ids": [
+    "orientation-scope",
+    "foundations-mechanics",
+    "architecture-design",
+    "implementation-construction",
+    "testing-verification",
+    "failure-recovery",
+    "operations-observability",
+    "security-privacy-safety",
+    "performance-capacity-cost",
+    "compatibility-integration",
+    "migration-evolution-deprecation",
+    "decision-comparison",
+    "provenance-rights",
+    "agent-skill"
+  ],
+  "target_state_counts": {
+    "covered": 28,
+    "infeasible": 1,
+    "partial": 4
+  },
+  "target_state_inventory": [
+    {
+      "id": "authority.source-lock",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "authority"
+    },
+    {
+      "id": "authority.locator-extraction",
+      "requirement": "required",
+      "state": "partial",
+      "target_set": "authority"
+    },
+    {
+      "id": "authority.body-denominator",
+      "requirement": "required",
+      "state": "partial",
+      "target_set": "authority"
+    },
+    {
+      "id": "inventory.kotlin-public-surface",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "authority"
+    },
+    {
+      "id": "semantics.language-core",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "semantics"
+    },
+    {
+      "id": "semantics.type-system",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "semantics"
+    },
+    {
+      "id": "platform.jvm-value-class-boundary",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "platforms"
+    },
+    {
+      "id": "platform.jvm-js-wasm-runtime",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "platforms"
+    },
+    {
+      "id": "platform.native-compile",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "platforms"
+    },
+    {
+      "id": "platform.native-runtime",
+      "requirement": "required",
+      "state": "infeasible",
+      "target_set": "platforms"
+    },
+    {
+      "id": "interop.java-consumer",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "interop"
+    },
+    {
+      "id": "interop.expect-actual",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "interop"
+    },
+    {
+      "id": "compiler.runtime-shapes",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "compiler-runtime"
+    },
+    {
+      "id": "compiler.jvm-bytecode",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "compiler-runtime"
+    },
+    {
+      "id": "build.gradle-plugin-consumer",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "build-tooling"
+    },
+    {
+      "id": "build.toolchain-lock",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "build-tooling"
+    },
+    {
+      "id": "concurrency.structured-cancellation",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "concurrency"
+    },
+    {
+      "id": "concurrency.flow-pipelines",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "concurrency"
+    },
+    {
+      "id": "quality.testing-oracles",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "quality"
+    },
+    {
+      "id": "quality.failure-debugging",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "quality"
+    },
+    {
+      "id": "quality.public-main-non-regression",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "quality"
+    },
+    {
+      "id": "quality.kotlin-depth-parity-gate",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "quality"
+    },
+    {
+      "id": "performance.measurement-harness",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "performance-security"
+    },
+    {
+      "id": "security.input-boundaries",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "performance-security"
+    },
+    {
+      "id": "evolution.compatibility-migration",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "evolution"
+    },
+    {
+      "id": "operation.lifecycle-recovery",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "operation"
+    },
+    {
+      "id": "operation.local-evidence",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "operation"
+    },
+    {
+      "id": "operation.container-evidence",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "operation"
+    },
+    {
+      "id": "skill.router-evaluation",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "skill"
+    },
+    {
+      "id": "skill.definitive-forward-evaluation",
+      "requirement": "required",
+      "state": "partial",
+      "target_set": "skill"
+    },
+    {
+      "id": "publication.rights-metadata",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "publication"
+    },
+    {
+      "id": "publication.complete-sbom",
+      "requirement": "required",
+      "state": "covered",
+      "target_set": "publication"
+    },
+    {
+      "id": "reference-system.automation-workbench",
+      "requirement": "recommended",
+      "state": "partial",
+      "target_set": "semantics"
+    }
+  ],
+  "verdict": "pass"
+}

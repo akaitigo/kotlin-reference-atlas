@@ -1,6 +1,6 @@
 {
   "active_definitive_certificate": null,
-  "base_audit": "監査済み: kotlin-reference-atlas completion_class=incomplete manifest_status=incomplete mastery=14 target_sets=13 targets=32 claims=30 evidence=30 open_required=2",
+  "base_audit": "監査済み: kotlin-reference-atlas completion_class=incomplete manifest_status=incomplete mastery=14 target_sets=13 targets=33 claims=31 evidence=31 open_required=3",
   "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
   "completion_class": "incomplete",
   "definitive_audit_exit_code": 1,

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "fe-definitive-skill-eval-reference-v1",
+  "repository": "frontend-behavior-atlas",
+  "commit": "8a9e34a89a55cc53702032783c06ede7246a286f",
+  "adaptation_rule_ja": "方式と検証粒度をKotlin固有denominatorへ写像し、FEの絶対件数や達成状態は転用しない。",
+  "artifacts": [
+    {"path": "scripts/lib/definitive-skill-eval.ts", "sha256": "8209f3deb47eff03a2f88822a7a2af52dd9a3a3d44b74e88e42e84e2c3d1b5b6"},
+    {"path": ".agents/skills/fe-behavior-advisor/scripts/advisor-router.mjs", "sha256": "993326210fecfafa4843d9c11929cddc5bd93c2c9fac6c85a79b9dcf43120c07"},
+    {"path": ".agents/skills/fe-behavior-advisor/references/mastery-contract.json", "sha256": "f2d6ec5bc979cacaee6a8086654449b739d1b88a36134ea8c72b109baf5f376e"},
+    {"path": "evals/fe-behavior-advisor.definitive-skill-eval.json", "sha256": "566c9f3cea248f49c24f769c88695b10c15bbdb956c08bcfa68dbe7e96c18d0a"},
+    {"path": ".agents/skills/fe-behavior-advisor/SKILL.md", "sha256": "f75c967091762dda6b9da253da969436cbad0f6f8b0855e3b8e71e3c930a59a2"}
+  ]
+}
