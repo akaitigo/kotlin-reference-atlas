@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "fe-depth-reference-v1",
+  "repository": "frontend-behavior-atlas",
+  "git_commit": "4a0b2df8e2091a963bd0e0e1bbccef9c84b49a45",
+  "classification": "portable-depth-reference-not-kotlin-completion-authority",
+  "frontend_status": "incomplete",
+  "frontend_completion_claim": "neither-bounded-complete-nor-subject-definitive",
+  "denominator_policy": {
+    "source": "authority-derived-subject-surface-inventory",
+    "transplant_absolute_counts": false,
+    "kotlin_uses_own_denominator": true
+  },
+  "frontend_summary": {"satisfied": 1, "partial": 17, "missing": 0},
+  "artifacts": {
+    "FE_DEPTH_REFERENCE.json": "sha256:2452696f9807b7d4a8ffb22b3ba37f079a25a34ac2370d78423445b96064582a",
+    "docs/DEFINITIVE_GATE_V2_REFERENCE.md": "sha256:280a398ed1251438ad244e999c9c9cef9b0b6b78217db82e2b55ef882306d241",
+    "fixtures/definitive-gate-v2/authority-surface-inventory.fixture.json": "sha256:01c29cdd29f61968b06791edf3d0d0674462d279422bd312d523ab7964e2a1e4",
+    "fixtures/definitive-gate-v2/variant-comparison.fixture.json": "sha256:2964d596201033761c083d06dc705d21a428de043a91a0f1e71e7d5b841f59d3",
+    "fixtures/definitive-gate-v2/profile-incompatibility.fixture.json": "sha256:95c07992da4b78db5c5551d7ed0c4425668dde9188c0acb53c3b76b17a91e364",
+    "fixtures/definitive-gate-v2/evidence-granularity.fixture.json": "sha256:94506646f1e30429cb84a87927e1af7e1e890d401efd0335ebf911aed6f85126",
+    "baselines/definitive-gate-v2.json": "sha256:b6685fac1e11429ed7c203e35aac55c7a82c276dc32aadb97f225af801c3bb67",
+    "artifacts/non-regression-report.json": "sha256:ea14a6b00c827c21fd90dbef23d6fd1e85cf81e4e8a65697a507af97d371bc66"
+  },
+  "proof_unit": "one authority-derived atomic behavior × one applicable required scenario × one required runtime/platform profile × one falsifiable proof × one dedicated artifact",
+  "axes": [
+    {"id":"authority-body-digestion","portable_criterion":"対象分野の母集団を自己申告Scopeではなく一次資料本文または固定Surface Artifactから導き、全本文をDigest固定し、Locator単位で分類・Reviewする。","denominator":"authority sources and extracted surfaces","reference_check_ids":["authority.body-lock","authority.pattern-connectivity","authority.surface-extraction","authority.human-review"]},
+    {"id":"surface-atomic-behavior-variant","portable_criterion":"Authority Surfaceを一意なAtomic behavior、Target、Claimへ接続し、同じObservable Contractの実装差だけをVariantとして比較する。","denominator":"authority-derived atomic behaviors","reference_check_ids":["behavior.observable-contract","behavior.multi-variant","behavior.target-mapping","behavior.authority-atomicity"]},
+    {"id":"real-runtime-lab","portable_criterion":"各Behaviorを対象Runtime/Platform上で起動・操作・破棄し、Source/Harness digestと実Versionを記録する。Mock/static fixtureは実Runtime Profileの代替にしない。","denominator":"required behavior × runtime profile","reference_check_ids":["runtime.lab-entry","runtime.browser-proof","runtime.source-binding","runtime.external-boundaries"]},
+    {"id":"scenario-normal","portable_criterion":"各Authority由来Atomic behaviorについてScenarioを明示分類し、反証可能な専用Oracle、実Runtime Profile、専用Artifactを一対一で接続する。","denominator":"authority-derived atomic behaviors","reference_check_ids":["scenario-normal.bounded-run","scenario-normal.dedicated-row"]},
+    {"id":"scenario-boundary","portable_criterion":"各Authority由来Atomic behaviorについてScenarioを明示分類し、反証可能な専用Oracle、実Runtime Profile、専用Artifactを一対一で接続する。","denominator":"authority-derived atomic behaviors","reference_check_ids":["scenario-boundary.bounded-signal","scenario-boundary.dedicated-row"]},
+    {"id":"scenario-refusal","portable_criterion":"各Authority由来Atomic behaviorについてScenarioを明示分類し、反証可能な専用Oracle、実Runtime Profile、専用Artifactを一対一で接続する。","denominator":"authority-derived atomic behaviors","reference_check_ids":["scenario-refusal.bounded-signal","scenario-refusal.dedicated-row"]},
+    {"id":"scenario-failure","portable_criterion":"各Authority由来Atomic behaviorについてScenarioを明示分類し、反証可能な専用Oracle、実Runtime Profile、専用Artifactを一対一で接続する。","denominator":"authority-derived atomic behaviors","reference_check_ids":["scenario-failure.bounded-signal","scenario-failure.dedicated-row"]},
+    {"id":"scenario-recovery","portable_criterion":"各Authority由来Atomic behaviorについてScenarioを明示分類し、反証可能な専用Oracle、実Runtime Profile、専用Artifactを一対一で接続する。","denominator":"authority-derived atomic behaviors","reference_check_ids":["scenario-recovery.bounded-signal","scenario-recovery.dedicated-row"]},
+    {"id":"scenario-migration","portable_criterion":"各Authority由来Atomic behaviorについてScenarioを明示分類し、反証可能な専用Oracle、実Runtime Profile、専用Artifactを一対一で接続する。","denominator":"authority-derived atomic behaviors","reference_check_ids":["scenario-migration.bounded-signal","scenario-migration.dedicated-row"]},
+    {"id":"scenario-operations","portable_criterion":"各Authority由来Atomic behaviorについてScenarioを明示分類し、反証可能な専用Oracle、実Runtime Profile、専用Artifactを一対一で接続する。","denominator":"authority-derived atomic behaviors","reference_check_ids":["scenario-operations.bounded-signal","scenario-operations.dedicated-row"]},
+    {"id":"scenario-security","portable_criterion":"各Authority由来Atomic behaviorについてScenarioを明示分類し、反証可能な専用Oracle、実Runtime Profile、専用Artifactを一対一で接続する。","denominator":"authority-derived atomic behaviors","reference_check_ids":["scenario-security.bounded-signal","scenario-security.dedicated-row"]},
+    {"id":"scenario-performance","portable_criterion":"各Atomic behaviorへ代表Workload、環境、分布、予算、劣化戦略を接続し、全Variantを同じOracleで測定する。","denominator":"required behavior × variant × workload/profile","reference_check_ids":["performance.variant-benchmark","performance.capacity-energy","performance.dedicated-row"]},
+    {"id":"scenario-compatibility","portable_criterion":"必要Platform/Profileを根拠から列挙し、各Atomic behaviorの正常・劣化・非対応境界を実Runtimeで区別して証明する。","denominator":"required behavior × browser/platform/profile","reference_check_ids":["compatibility.desktop-engines","compatibility.local-container","compatibility.external-matrix","compatibility.dedicated-row"]},
+    {"id":"artifact-trace","portable_criterion":"各Required ScenarioのOracle結果を専用Artifactへ固定し、Source/Harness/Runtime/Platform/Version/Attemptと追跡可能にする。","denominator":"required scenario rows","reference_check_ids":["artifact.visual","artifact.execution","artifact.trace","artifact.unique-binding"]},
+    {"id":"integrated-reference-system","portable_criterion":"Architecture/Integration Surfaceが存在する分野では、複数Atomic behaviorを実際の責任境界で接続した統合SystemとCross-behavior failure/recoveryを証明する。","denominator":"authority-derived architecture and integration surfaces","reference_check_ids":["reference.composition-contract","reference.runner-catalog","reference.system-manifest","reference.cross-behavior-proof"]},
+    {"id":"skill-eval","portable_criterion":"Skillが8 Outcome、14 Surface、曖昧Query、Coverage Gap、権限境界、実装・診断・移行・Reviewを実行Evidence付きで扱う。","denominator":"outcome × surface × risk/coverage-gap classes","reference_check_ids":["skill.router-categories","skill.single-router","skill.surface-matrix","skill.agent-execution"]},
+    {"id":"rights-provenance","portable_criterion":"Code、Asset、Authority、Dependency、Brand/Similarity、再配布義務を別々に追跡し、不明または人手判断待ちなら公開をFail closedにする。","denominator":"all repository and transitive publication artifacts","reference_check_ids":["rights.automated-inventory","rights.implementation-provenance","rights.human-obligations","rights.human-brand-similarity"]},
+    {"id":"non-regression-gate","portable_criterion":"公開mainの能力をID集合、Runtime Contract、Assertion、予算、Profile、Version、CI、Evidenceで固定し、置換には一対一以上のMapping、実行Proof、Migration Evidenceを要求する。","denominator":"tracked baseline capability identities","reference_check_ids":["non-regression.identity-floor","non-regression.no-weaken","non-regression.migration-contract","non-regression.ci"]}
+  ]
+}

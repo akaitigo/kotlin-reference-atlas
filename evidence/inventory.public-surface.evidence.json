@@ -22,6 +22,6 @@
   "producer": "kotlin-artifact-inventory",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:fd978b99941851cad91ebff64e37463dda21984a9cd14b2520cc0c68e2ab2f10",
+  "source_digest": "sha256:55e1c7c88ce3365af3be0fff625230cd7906e641b1548706b64bece274ba46b4",
   "verdict": "pass"
 }

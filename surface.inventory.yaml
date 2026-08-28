@@ -1,0 +1,1151 @@
+schema_version: 2
+atlas_id: kotlin-reference-atlas
+epoch: '2026-08-28'
+authority_lock_digest: sha256:55e1c7c88ce3365af3be0fff625230cd7906e641b1548706b64bece274ba46b4
+authority_artifacts:
+- id: gradle
+  source_id: gradle-source-9.5.0
+  path: authority/surfaces/gradle.authority-surfaces.yaml
+  digest: sha256:2b16721ff5dec81aaf0ebf9acf73c41fd1e0f37838bca249a86dd319cf0e2d6d
+- id: kotlin-compiler
+  source_id: kotlin-compiler-source-2.4.10
+  path: authority/surfaces/kotlin-compiler.authority-surfaces.yaml
+  digest: sha256:c79ad99942a6ba91b84a72b86af0880a75397b054f17d1c277be6e24cac0cb58
+- id: kotlin-docs
+  source_id: kotlin-docs-snapshot
+  path: authority/surfaces/kotlin-docs.authority-surfaces.yaml
+  digest: sha256:cf2257b084add2df25023ca5cfeb83a8d83b44921932eb8962f14dcfdc55a0e4
+- id: kotlin-keep
+  source_id: kotlin-keep-snapshot
+  path: authority/surfaces/kotlin-keep.authority-surfaces.yaml
+  digest: sha256:ae58aac1ce12795815060cd166cda97920ab5acfcb9c472b9067ed003285c7d6
+- id: kotlin-native
+  source_id: kotlin-native-source-2.4.10
+  path: authority/surfaces/kotlin-native.authority-surfaces.yaml
+  digest: sha256:7718d456c71af37cb8c092c9027a7aa5f80b1b77a160df506460a629a178a627
+- id: kotlin-spec
+  source_id: kotlin-spec-snapshot
+  path: authority/surfaces/kotlin-spec.authority-surfaces.yaml
+  digest: sha256:dd99046f3e796bdf35a0a31ee2f405e27b673e989c29f9ed19593af7e9b7bdb3
+- id: kotlin-stdlib
+  source_id: kotlin-stdlib-source-2.4.10
+  path: authority/surfaces/kotlin-stdlib.authority-surfaces.yaml
+  digest: sha256:56e22ffb299b046d42e4467ca52d7da9945f986f8c694448ce869984a89db6eb
+- id: kotlinx-coroutines
+  source_id: kotlinx-coroutines-source-1.11.0
+  path: authority/surfaces/kotlinx-coroutines.authority-surfaces.yaml
+  digest: sha256:5c458a926dc229fc9f9d0a8a52aa4992040036a740d2f585bb3f3ecb055d4be1
+- id: kotlinx-serialization
+  source_id: kotlinx-serialization-source-snapshot
+  path: authority/surfaces/kotlinx-serialization.authority-surfaces.yaml
+  digest: sha256:c9ea8350d65971a6227af726e9a7d0d30cf9459d0bfe3fadab70016f64abc6ba
+items:
+- id: inventory.gradle.task-input-output-validation
+  authority_artifact_id: gradle
+  authority_surface_id: gradle.task.validation
+  locator: platforms/core-execution/Work Validation.md
+  kind: behavior
+  capability_id: gradle.tasks
+  behavior_id: gradle.task-input-output-validation
+  target_id: build.toolchain-lock
+  title: Task input/output validation
+  surface_ids:
+  - testing-verification
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - gradle.toolchain-and-artifacts-locked
+- id: inventory.gradle.build-cache-key-reuse
+  authority_artifact_id: gradle
+  authority_surface_id: gradle.build.cache
+  locator: platforms/core-execution/build-cache
+  kind: behavior
+  capability_id: gradle.cache
+  behavior_id: gradle.build-cache-key-reuse
+  target_id: build.toolchain-lock
+  title: Build cache keyと再利用
+  surface_ids:
+  - performance-capacity-cost
+  - operations-observability
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - gradle.toolchain-and-artifacts-locked
+- id: inventory.gradle.configuration-cache-serialization
+  authority_artifact_id: gradle
+  authority_surface_id: gradle.configuration.cache
+  locator: platforms/core-configuration/configuration-cache
+  kind: behavior
+  capability_id: gradle.configuration-cache
+  behavior_id: gradle.configuration-cache-serialization
+  target_id: build.toolchain-lock
+  title: Configuration cache serialization境界
+  surface_ids:
+  - performance-capacity-cost
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - gradle.toolchain-and-artifacts-locked
+- id: inventory.gradle.dependency-verification-tamper
+  authority_artifact_id: gradle
+  authority_surface_id: gradle.dependency.verification
+  locator: platforms/software/dependency-management/src/main/java/org/gradle/api/internal/artifacts/verification
+  kind: behavior
+  capability_id: gradle.supply-chain
+  behavior_id: gradle.dependency-verification-tamper
+  target_id: build.toolchain-lock
+  title: Dependency verificationとtamper拒否
+  surface_ids:
+  - security-privacy-safety
+  - provenance-rights
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - gradle.toolchain-and-artifacts-locked
+- id: inventory.gradle.jvm-toolchain-selection
+  authority_artifact_id: gradle
+  authority_surface_id: gradle.toolchains
+  locator: platforms/jvm/toolchains-jvm
+  kind: capability
+  capability_id: gradle.toolchains
+  behavior_id: gradle.jvm-toolchain-selection
+  target_id: build.toolchain-lock
+  title: JVM toolchain選択と不一致
+  surface_ids:
+  - implementation-construction
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - gradle.toolchain-and-artifacts-locked
+- id: inventory.gradle.plugin-consumer-testkit
+  authority_artifact_id: gradle
+  authority_surface_id: gradle.testkit
+  locator: platforms/extensibility/test-kit
+  kind: capability
+  capability_id: gradle.testkit
+  behavior_id: gradle.plugin-consumer-testkit
+  target_id: build.gradle-plugin-consumer
+  title: Plugin consumer TestKit実行
+  surface_ids:
+  - testing-verification
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - gradle.toolchain-and-artifacts-locked
+- id: inventory.compiler.fir-resolution-diagnostics
+  authority_artifact_id: kotlin-compiler
+  authority_surface_id: compiler.fir.analysis
+  locator: compiler/fir/analysis
+  kind: capability
+  capability_id: compiler.fir
+  behavior_id: compiler.fir-resolution-diagnostics
+  target_id: compiler.runtime-shapes
+  title: FIR resolutionとdiagnostics生成
+  surface_ids:
+  - foundations-mechanics
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - compiler.runtime-shapes-observable
+- id: inventory.compiler.java-nullability-enhancement
+  authority_artifact_id: kotlin-compiler
+  authority_surface_id: compiler.fir.java-enhancement
+  locator: compiler/fir/java
+  kind: behavior
+  capability_id: compiler.java-enhancement
+  behavior_id: compiler.java-nullability-enhancement
+  target_id: interop.java-consumer
+  title: Java annotation型enhancement
+  surface_ids:
+  - compatibility-integration
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - compiler.runtime-shapes-observable
+- id: inventory.compiler.diagnostic-id-location-severity
+  authority_artifact_id: kotlin-compiler
+  authority_surface_id: compiler.diagnostics.tests
+  locator: compiler/testData/diagnostics
+  kind: capability
+  capability_id: compiler.diagnostics
+  behavior_id: compiler.diagnostic-id-location-severity
+  target_id: quality.failure-debugging
+  title: Diagnostic ID・位置・severity fixture
+  surface_ids:
+  - testing-verification
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - compiler.runtime-shapes-observable
+- id: inventory.compiler.jvm-ir-lowering
+  authority_artifact_id: kotlin-compiler
+  authority_surface_id: compiler.ir.backend.jvm
+  locator: compiler/ir/backend.jvm
+  kind: capability
+  capability_id: compiler.jvm-backend
+  behavior_id: compiler.jvm-ir-lowering
+  target_id: compiler.jvm-bytecode
+  title: JVM IR loweringとbytecode形状
+  surface_ids:
+  - foundations-mechanics
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - compiler.bytecode-state-machine
+- id: inventory.compiler.js-ir-export
+  authority_artifact_id: kotlin-compiler
+  authority_surface_id: compiler.ir.backend.js
+  locator: compiler/ir/backend.js
+  kind: capability
+  capability_id: compiler.js-backend
+  behavior_id: compiler.js-ir-export
+  target_id: compiler.runtime-shapes
+  title: JS IR exportとmodule生成
+  surface_ids:
+  - implementation-construction
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - compiler.runtime-shapes-observable
+- id: inventory.compiler.wasm-ir-runtime-link
+  authority_artifact_id: kotlin-compiler
+  authority_surface_id: compiler.ir.backend.wasm
+  locator: compiler/ir/backend.wasm
+  kind: capability
+  capability_id: compiler.wasm-backend
+  behavior_id: compiler.wasm-ir-runtime-link
+  target_id: compiler.runtime-shapes
+  title: Wasm IRとruntime link
+  surface_ids:
+  - implementation-construction
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - compiler.runtime-shapes-observable
+- id: inventory.compiler.incremental-dirty-set
+  authority_artifact_id: kotlin-compiler
+  authority_surface_id: compiler.incremental
+  locator: compiler/incremental-compilation-impl
+  kind: behavior
+  capability_id: compiler.incremental
+  behavior_id: compiler.incremental-dirty-set
+  target_id: build.toolchain-lock
+  title: Incremental dirty setとcache invalidation
+  surface_ids:
+  - performance-capacity-cost
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - compiler.runtime-shapes-observable
+- id: inventory.abi.kotlin-metadata-version
+  authority_artifact_id: kotlin-compiler
+  authority_surface_id: compiler.metadata
+  locator: core/metadata
+  kind: behavior
+  capability_id: compiler.metadata
+  behavior_id: abi.kotlin-metadata-version
+  target_id: evolution.compatibility-migration
+  title: Kotlin metadata versionとreader互換
+  surface_ids:
+  - compatibility-integration
+  - migration-evolution-deprecation
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - evolution.compatibility-migration
+- id: inventory.abi.klib-linkage
+  authority_artifact_id: kotlin-compiler
+  authority_surface_id: compiler.klib
+  locator: compiler/cli/cli-klib
+  kind: capability
+  capability_id: compiler.klib
+  behavior_id: abi.klib-linkage
+  target_id: platform.native-compile
+  title: KLIB metadataとlinkage
+  surface_ids:
+  - compatibility-integration
+  - migration-evolution-deprecation
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - evolution.compatibility-migration
+- id: inventory.gradle.kgp-task-toolchain-model
+  authority_artifact_id: kotlin-compiler
+  authority_surface_id: compiler.gradle.plugin
+  locator: libraries/tools/kotlin-gradle-plugin
+  kind: capability
+  capability_id: tooling.kgp
+  behavior_id: gradle.kgp-task-toolchain-model
+  target_id: build.toolchain-lock
+  title: KGP Task・compilerOptions・toolchain model
+  surface_ids:
+  - architecture-design
+  - implementation-construction
+  - operations-observability
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - gradle.toolchain-and-artifacts-locked
+- id: inventory.nullability.java-platform-type-failures
+  authority_artifact_id: kotlin-docs
+  authority_surface_id: docs.null.java
+  locator: docs/topics/null-safety.md#nullable-types-and-non-nullable-types
+  kind: behavior
+  capability_id: language.nullability
+  behavior_id: nullability.java-platform-type-failures
+  target_id: semantics.type-system
+  title: Java interop由来NPE境界
+  surface_ids:
+  - failure-recovery
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - types.variance-nothing-reified
+- id: inventory.generics.runtime-erasure
+  authority_artifact_id: kotlin-docs
+  authority_surface_id: docs.generics.erasure
+  locator: docs/topics/generics.md#type-erasure
+  kind: behavior
+  capability_id: language.generics
+  behavior_id: generics.runtime-erasure
+  target_id: semantics.type-system
+  title: Generic type erasureとcast制約
+  surface_ids:
+  - foundations-mechanics
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - types.variance-nothing-reified
+- id: inventory.reflection.kclass-ktype-callable
+  authority_artifact_id: kotlin-docs
+  authority_surface_id: docs.reflection.types
+  locator: docs/topics/reflection.md
+  kind: capability
+  capability_id: runtime.reflection
+  behavior_id: reflection.kclass-ktype-callable
+  target_id: compiler.runtime-shapes
+  title: KClass・KType・Callable reflection
+  surface_ids:
+  - implementation-construction
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - compiler.runtime-shapes-observable
+- id: inventory.compiler.k2-diagnostic-migration
+  authority_artifact_id: kotlin-docs
+  authority_surface_id: docs.k2.migration
+  locator: docs/topics/k2-compiler-migration-guide.md
+  kind: behavior
+  capability_id: compiler.k2
+  behavior_id: compiler.k2-diagnostic-migration
+  target_id: quality.failure-debugging
+  title: K2のresolution・diagnostic移行差
+  surface_ids:
+  - failure-recovery
+  - migration-evolution-deprecation
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - compiler.runtime-shapes-observable
+- id: inventory.gradle.incremental-classpath-snapshots
+  authority_artifact_id: kotlin-docs
+  authority_surface_id: docs.gradle.incremental
+  locator: docs/topics/gradle-compilation-and-caches.md#incremental-compilation
+  kind: behavior
+  capability_id: tooling.incremental
+  behavior_id: gradle.incremental-classpath-snapshots
+  target_id: build.toolchain-lock
+  title: Incremental compilationとclasspath snapshot
+  surface_ids:
+  - performance-capacity-cost
+  - operations-observability
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - gradle.toolchain-and-artifacts-locked
+- id: inventory.gradle.build-report-diagnostics
+  authority_artifact_id: kotlin-docs
+  authority_surface_id: docs.gradle.reports
+  locator: docs/topics/gradle-compilation-and-caches.md#build-reports
+  kind: capability
+  capability_id: tooling.diagnostics
+  behavior_id: gradle.build-report-diagnostics
+  target_id: build.toolchain-lock
+  title: Build Reportによるnon-incremental診断
+  surface_ids:
+  - operations-observability
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - gradle.toolchain-and-artifacts-locked
+- id: inventory.mpp.source-set-target-visibility
+  authority_artifact_id: kotlin-docs
+  authority_surface_id: docs.mpp.sourcesets
+  locator: docs/topics/multiplatform/multiplatform-discover-project.md#source-sets
+  kind: behavior
+  capability_id: platform.multiplatform
+  behavior_id: mpp.source-set-target-visibility
+  target_id: interop.expect-actual
+  title: Source setのtarget・dependency・API可視性
+  surface_ids:
+  - architecture-design
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - platform.jvm-js-wasm-contract
+- id: inventory.native.gc-allocator-runtime
+  authority_artifact_id: kotlin-docs
+  authority_surface_id: docs.native.memory
+  locator: docs/topics/native/native-memory-manager.md
+  kind: behavior
+  capability_id: platform.native
+  behavior_id: native.gc-allocator-runtime
+  target_id: platform.native-runtime
+  title: Native GCとallocatorのRuntime特性
+  surface_ids:
+  - performance-capacity-cost
+  - operations-observability
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - platform.native-test-klib
+- id: inventory.interop.c-header-pointer-lifetime
+  authority_artifact_id: kotlin-docs
+  authority_surface_id: docs.native.cinterop
+  locator: docs/topics/native/native-c-interop.md
+  kind: capability
+  capability_id: interop.c
+  behavior_id: interop.c-header-pointer-lifetime
+  target_id: platform.native-runtime
+  title: C header mappingとpointer lifetime
+  surface_ids:
+  - implementation-construction
+  - security-privacy-safety
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - platform.native-test-klib
+- id: inventory.interop.wasm-js-external-boundary
+  authority_artifact_id: kotlin-docs
+  authority_surface_id: docs.wasm.jsinterop
+  locator: docs/topics/wasm/wasm-js-interop.md
+  kind: capability
+  capability_id: interop.wasm
+  behavior_id: interop.wasm-js-external-boundary
+  target_id: platform.jvm-js-wasm-runtime
+  title: Wasm/JS external declaration境界
+  surface_ids:
+  - implementation-construction
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - platform.jvm-js-wasm-contract
+- id: inventory.abi.source-binary-behavioral
+  authority_artifact_id: kotlin-docs
+  authority_surface_id: docs.compatibility.abi
+  locator: docs/topics/api-guidelines-backward-compatibility.md
+  kind: behavior
+  capability_id: evolution.compatibility
+  behavior_id: abi.source-binary-behavioral
+  target_id: evolution.compatibility-migration
+  title: Source・binary・behavioral compatibility
+  surface_ids:
+  - compatibility-integration
+  - migration-evolution-deprecation
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - evolution.compatibility-migration
+- id: inventory.migration.language-api-progressive-version
+  authority_artifact_id: kotlin-docs
+  authority_surface_id: docs.evolution.versions
+  locator: docs/topics/kotlin-evolution-principles.md
+  kind: behavior
+  capability_id: evolution.language
+  behavior_id: migration.language-api-progressive-version
+  target_id: evolution.compatibility-migration
+  title: Language/API/progressive version移行
+  surface_ids:
+  - migration-evolution-deprecation
+  - decision-comparison
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - migration.v1-v2-compatible
+- id: inventory.contracts.effects-calls-in-place
+  authority_artifact_id: kotlin-keep
+  authority_surface_id: keep.contracts
+  locator: proposals/KEEP-0139-kotlin-contracts.md
+  kind: behavior
+  capability_id: language.contracts
+  behavior_id: contracts.effects-calls-in-place
+  target_id: semantics.language-core
+  title: Contract effectとcallsInPlace
+  surface_ids:
+  - foundations-mechanics
+  - testing-verification
+  - security-privacy-safety
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - semantics.exhaustive-and-lazy
+- id: inventory.coroutines.suspension-design
+  authority_artifact_id: kotlin-keep
+  authority_surface_id: keep.coroutines
+  locator: proposals/KEEP-0164-coroutines.md
+  kind: behavior
+  capability_id: language.coroutines
+  behavior_id: coroutines.suspension-design
+  target_id: concurrency.structured-cancellation
+  title: Coroutine suspensionとbuilder設計
+  surface_ids:
+  - foundations-mechanics
+  - architecture-design
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - coroutines.child-failure-cancels-sibling
+- id: inventory.nullability.definitely-non-null-generic
+  authority_artifact_id: kotlin-keep
+  authority_surface_id: keep.definitely-non-null
+  locator: proposals/KEEP-0268-definitely-non-nullable-types.md
+  kind: behavior
+  capability_id: language.nullability
+  behavior_id: nullability.definitely-non-null-generic
+  target_id: semantics.type-system
+  title: Definitely non-nullable generic型
+  surface_ids:
+  - foundations-mechanics
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - types.variance-nothing-reified
+- id: inventory.abi.value-class-boxing-mangling
+  authority_artifact_id: kotlin-keep
+  authority_surface_id: keep.value-classes
+  locator: notes/0001-value-classes.md
+  kind: behavior
+  capability_id: language.value-classes
+  behavior_id: abi.value-class-boxing-mangling
+  target_id: evolution.compatibility-migration
+  title: Value class boxingとname mangling
+  surface_ids:
+  - foundations-mechanics
+  - compatibility-integration
+  - performance-capacity-cost
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - evolution.compatibility-migration
+- id: inventory.migration.context-parameters
+  authority_artifact_id: kotlin-keep
+  authority_surface_id: keep.context
+  locator: proposals/KEEP-0367-context-parameters.md
+  kind: behavior
+  capability_id: language.context
+  behavior_id: migration.context-parameters
+  target_id: evolution.compatibility-migration
+  title: Context parameter resolutionと移行
+  surface_ids:
+  - foundations-mechanics
+  - migration-evolution-deprecation
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - migration.v1-v2-compatible
+- id: inventory.native.gc-cycle-allocation
+  authority_artifact_id: kotlin-native
+  authority_surface_id: native.runtime.gc
+  locator: kotlin-native/runtime/src/gc
+  kind: behavior
+  capability_id: native.runtime
+  behavior_id: native.gc-cycle-allocation
+  target_id: platform.native-runtime
+  title: Native GC cycleとallocation
+  surface_ids:
+  - performance-capacity-cost
+  - operations-observability
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - platform.native-test-klib
+- id: inventory.native.object-lifetime-concurrency
+  authority_artifact_id: kotlin-native
+  authority_surface_id: native.runtime.memory
+  locator: kotlin-native/runtime/src/mm
+  kind: behavior
+  capability_id: native.memory
+  behavior_id: native.object-lifetime-concurrency
+  target_id: platform.native-runtime
+  title: Native object lifetimeとconcurrency
+  surface_ids:
+  - foundations-mechanics
+  - security-privacy-safety
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - platform.native-test-klib
+- id: inventory.interop.c-header-indexing
+  authority_artifact_id: kotlin-native
+  authority_surface_id: native.interop.c
+  locator: kotlin-native/Interop/Indexer
+  kind: capability
+  capability_id: interop.c
+  behavior_id: interop.c-header-indexing
+  target_id: platform.native-runtime
+  title: C header indexとstub生成
+  surface_ids:
+  - implementation-construction
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - platform.native-test-klib
+- id: inventory.interop.swift-export-consumer
+  authority_artifact_id: kotlin-native
+  authority_surface_id: native.interop.swift
+  locator: native/swift/swift-export-standalone
+  kind: capability
+  capability_id: interop.swift
+  behavior_id: interop.swift-export-consumer
+  target_id: platform.native-runtime
+  title: Swift Export consumer契約
+  surface_ids:
+  - implementation-construction
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - platform.native-test-klib
+- id: inventory.native.debug-symbol-stacktrace
+  authority_artifact_id: kotlin-native
+  authority_surface_id: native.debug
+  locator: kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/llvm
+  kind: capability
+  capability_id: native.debug
+  behavior_id: native.debug-symbol-stacktrace
+  target_id: platform.native-runtime
+  title: Native debug symbolとstacktrace
+  surface_ids:
+  - failure-recovery
+  - operations-observability
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - platform.native-test-klib
+- id: inventory.native.klib-version-linkage
+  authority_artifact_id: kotlin-native
+  authority_surface_id: native.klib
+  locator: kotlin-native/shared/src/main/kotlin/org/jetbrains/kotlin/konan/library
+  kind: behavior
+  capability_id: compiler.klib
+  behavior_id: native.klib-version-linkage
+  target_id: platform.native-compile
+  title: Native KLIB versionとlinkage
+  surface_ids:
+  - compatibility-integration
+  - migration-evolution-deprecation
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - platform.native-test-klib
+- id: inventory.types.nullability-universes
+  authority_artifact_id: kotlin-spec
+  authority_surface_id: spec.types.nullability
+  locator: docs/src/md/kotlin.core/type-system.md#nullable-types
+  kind: behavior
+  capability_id: language.types
+  behavior_id: types.nullability-universes
+  target_id: semantics.type-system
+  title: Nullableとnon-nullable型Universe
+  surface_ids:
+  - foundations-mechanics
+  - testing-verification
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - types.variance-nothing-reified
+- id: inventory.types.lub-glb-nothing-any
+  authority_artifact_id: kotlin-spec
+  authority_surface_id: spec.types.lattice
+  locator: docs/src/md/kotlin.core/type-system.md#type-system
+  kind: behavior
+  capability_id: language.types
+  behavior_id: types.lub-glb-nothing-any
+  target_id: semantics.type-system
+  title: LUB・GLB・Nothing・Anyの型Lattice
+  surface_ids:
+  - foundations-mechanics
+  - decision-comparison
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - types.variance-nothing-reified
+- id: inventory.generics.mixed-site-variance
+  authority_artifact_id: kotlin-spec
+  authority_surface_id: spec.types.variance
+  locator: docs/src/md/kotlin.core/type-system.md#mixed-site-variance
+  kind: behavior
+  capability_id: language.generics
+  behavior_id: generics.mixed-site-variance
+  target_id: semantics.type-system
+  title: Declarationとuse-site variance
+  surface_ids:
+  - foundations-mechanics
+  - testing-verification
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - types.variance-nothing-reified
+- id: inventory.compiler.smart-cast-data-flow
+  authority_artifact_id: kotlin-spec
+  authority_surface_id: spec.types.smart-casts
+  locator: docs/src/md/kotlin.core/type-system.md#smart-casts
+  kind: behavior
+  capability_id: compiler.data-flow
+  behavior_id: compiler.smart-cast-data-flow
+  target_id: compiler.runtime-shapes
+  title: Control/data-flowによるsmart cast
+  surface_ids:
+  - foundations-mechanics
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - compiler.runtime-shapes-observable
+- id: inventory.nullability.safe-call-chain
+  authority_artifact_id: kotlin-spec
+  authority_surface_id: spec.expressions.safe-calls
+  locator: docs/src/md/kotlin.core/expressions.md#safe-navigation-operator
+  kind: behavior
+  capability_id: language.nullability
+  behavior_id: nullability.safe-call-chain
+  target_id: semantics.type-system
+  title: Safe call chainの評価Semantics
+  surface_ids:
+  - foundations-mechanics
+  - testing-verification
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - types.variance-nothing-reified
+- id: inventory.semantics.when-exhaustiveness
+  authority_artifact_id: kotlin-spec
+  authority_surface_id: spec.expressions.when
+  locator: docs/src/md/kotlin.core/expressions.md#when-expressions
+  kind: behavior
+  capability_id: language.control-flow
+  behavior_id: semantics.when-exhaustiveness
+  target_id: semantics.language-core
+  title: whenのexhaustivenessと型推論
+  surface_ids:
+  - foundations-mechanics
+  - testing-verification
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - semantics.exhaustive-and-lazy
+- id: inventory.compiler.inline-reified-boundary
+  authority_artifact_id: kotlin-spec
+  authority_surface_id: spec.declarations.inline
+  locator: docs/src/md/kotlin.core/declarations.md#inline-functions
+  kind: behavior
+  capability_id: compiler.inline
+  behavior_id: compiler.inline-reified-boundary
+  target_id: compiler.runtime-shapes
+  title: inline/reifiedの展開と非局所return
+  surface_ids:
+  - foundations-mechanics
+  - performance-capacity-cost
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - compiler.runtime-shapes-observable
+- id: inventory.compiler.overload-resolution
+  authority_artifact_id: kotlin-spec
+  authority_surface_id: spec.overload.resolution
+  locator: docs/src/md/kotlin.core/overload-resolution.md
+  kind: behavior
+  capability_id: compiler.resolution
+  behavior_id: compiler.overload-resolution
+  target_id: compiler.runtime-shapes
+  title: Overload候補集合と優先順位
+  surface_ids:
+  - foundations-mechanics
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - compiler.runtime-shapes-observable
+- id: inventory.coroutines.continuation-state-machine
+  authority_artifact_id: kotlin-spec
+  authority_surface_id: spec.coroutines.continuation
+  locator: docs/src/md/kotlin.core/coroutines.md#continuation-passing-style
+  kind: behavior
+  capability_id: language.coroutines
+  behavior_id: coroutines.continuation-state-machine
+  target_id: concurrency.structured-cancellation
+  title: suspendのContinuation変換
+  surface_ids:
+  - foundations-mechanics
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - coroutines.child-failure-cancels-sibling
+- id: inventory.coroutines.context-interception
+  authority_artifact_id: kotlin-spec
+  authority_surface_id: spec.coroutines.context
+  locator: docs/src/md/kotlin.core/coroutines.md#coroutine-context
+  kind: behavior
+  capability_id: language.coroutines
+  behavior_id: coroutines.context-interception
+  target_id: concurrency.structured-cancellation
+  title: CoroutineContextとContinuationInterceptor
+  surface_ids:
+  - foundations-mechanics
+  - operations-observability
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - coroutines.child-failure-cancels-sibling
+- id: inventory.stdlib.collection-mutation-iteration
+  authority_artifact_id: kotlin-stdlib
+  authority_surface_id: stdlib.collections
+  locator: libraries/stdlib/src/kotlin/collections
+  kind: behavior
+  capability_id: stdlib.collections
+  behavior_id: stdlib.collection-mutation-iteration
+  target_id: semantics.language-core
+  title: Collection mutationとiteration境界
+  surface_ids:
+  - foundations-mechanics
+  - testing-verification
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - semantics.exhaustive-and-lazy
+- id: inventory.stdlib.sequence-laziness
+  authority_artifact_id: kotlin-stdlib
+  authority_surface_id: stdlib.sequences
+  locator: libraries/stdlib/src/kotlin/sequences
+  kind: behavior
+  capability_id: stdlib.sequences
+  behavior_id: stdlib.sequence-laziness
+  target_id: semantics.language-core
+  title: Sequence lazinessとterminal evaluation
+  surface_ids:
+  - foundations-mechanics
+  - performance-capacity-cost
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - semantics.exhaustive-and-lazy
+- id: inventory.stdlib.lazy-thread-safety-modes
+  authority_artifact_id: kotlin-stdlib
+  authority_surface_id: stdlib.lazy
+  locator: libraries/stdlib/src/kotlin/util/LazyJVM.kt
+  kind: behavior
+  capability_id: stdlib.delegates
+  behavior_id: stdlib.lazy-thread-safety-modes
+  target_id: semantics.language-core
+  title: lazy thread-safety mode比較
+  surface_ids:
+  - decision-comparison
+  - performance-capacity-cost
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - semantics.exhaustive-and-lazy
+- id: inventory.reflection.jvm-class-mapping
+  authority_artifact_id: kotlin-stdlib
+  authority_surface_id: stdlib.reflection
+  locator: libraries/stdlib/src/kotlin/jvm/JvmClassMapping.kt
+  kind: behavior
+  capability_id: runtime.reflection
+  behavior_id: reflection.jvm-class-mapping
+  target_id: compiler.runtime-shapes
+  title: KClassとJava Class mapping
+  surface_ids:
+  - compatibility-integration
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - compiler.runtime-shapes-observable
+- id: inventory.stdlib.result-failure-boundary
+  authority_artifact_id: kotlin-stdlib
+  authority_surface_id: stdlib.results
+  locator: libraries/stdlib/src/kotlin/util/Result.kt
+  kind: behavior
+  capability_id: stdlib.result
+  behavior_id: stdlib.result-failure-boundary
+  target_id: semantics.language-core
+  title: Result success/failure境界
+  surface_ids:
+  - architecture-design
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - semantics.exhaustive-and-lazy
+- id: inventory.stdlib.duration-time-source
+  authority_artifact_id: kotlin-stdlib
+  authority_surface_id: stdlib.time
+  locator: libraries/stdlib/src/kotlin/time
+  kind: capability
+  capability_id: stdlib.time
+  behavior_id: stdlib.duration-time-source
+  target_id: semantics.language-core
+  title: DurationとTimeSource測定Semantics
+  surface_ids:
+  - testing-verification
+  - performance-capacity-cost
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - semantics.exhaustive-and-lazy
+- id: inventory.coroutines.job-state-cancellation
+  authority_artifact_id: kotlinx-coroutines
+  authority_surface_id: coroutines.job
+  locator: kotlinx-coroutines-core/common/src/Job.kt
+  kind: behavior
+  capability_id: coroutines.job
+  behavior_id: coroutines.job-state-cancellation
+  target_id: concurrency.structured-cancellation
+  title: Job stateとcancellation伝播
+  surface_ids:
+  - foundations-mechanics
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - coroutines.child-failure-cancels-sibling
+- id: inventory.coroutines.structured-scope-lifetime
+  authority_artifact_id: kotlinx-coroutines
+  authority_surface_id: coroutines.scope
+  locator: kotlinx-coroutines-core/common/src/CoroutineScope.kt
+  kind: behavior
+  capability_id: coroutines.scope
+  behavior_id: coroutines.structured-scope-lifetime
+  target_id: concurrency.structured-cancellation
+  title: Structured scope lifetime
+  surface_ids:
+  - architecture-design
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - coroutines.child-failure-cancels-sibling
+- id: inventory.coroutines.exception-aggregation-handler
+  authority_artifact_id: kotlinx-coroutines
+  authority_surface_id: coroutines.exception
+  locator: kotlinx-coroutines-core/common/src/CoroutineExceptionHandler.common.kt
+  kind: behavior
+  capability_id: coroutines.exceptions
+  behavior_id: coroutines.exception-aggregation-handler
+  target_id: concurrency.structured-cancellation
+  title: Exception aggregationとhandler境界
+  surface_ids:
+  - failure-recovery
+  - operations-observability
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - coroutines.child-failure-cancels-sibling
+- id: inventory.flow.buffer-flowon-fusion
+  authority_artifact_id: kotlinx-coroutines
+  authority_surface_id: flow.context
+  locator: kotlinx-coroutines-core/common/src/flow/operators/Context.kt
+  kind: behavior
+  capability_id: flow.context
+  behavior_id: flow.buffer-flowon-fusion
+  target_id: concurrency.flow-pipelines
+  title: buffer・flowOn・fusion
+  surface_ids:
+  - foundations-mechanics
+  - performance-capacity-cost
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - flow.retry-state-cancellation
+- id: inventory.flow.catch-retry-transparency
+  authority_artifact_id: kotlinx-coroutines
+  authority_surface_id: flow.errors
+  locator: kotlinx-coroutines-core/common/src/flow/operators/Errors.kt
+  kind: behavior
+  capability_id: flow.errors
+  behavior_id: flow.catch-retry-transparency
+  target_id: concurrency.flow-pipelines
+  title: catch・retryとexception transparency
+  surface_ids:
+  - failure-recovery
+  - testing-verification
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - flow.retry-state-cancellation
+- id: inventory.flow.flatmap-concurrency-order
+  authority_artifact_id: kotlinx-coroutines
+  authority_surface_id: flow.merge
+  locator: kotlinx-coroutines-core/common/src/flow/operators/Merge.kt
+  kind: behavior
+  capability_id: flow.merge
+  behavior_id: flow.flatmap-concurrency-order
+  target_id: concurrency.flow-pipelines
+  title: flatMap concurrencyと順序
+  surface_ids:
+  - decision-comparison
+  - performance-capacity-cost
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - flow.retry-state-cancellation
+- id: inventory.flow.shared-replay-buffer-overflow
+  authority_artifact_id: kotlinx-coroutines
+  authority_surface_id: flow.shared
+  locator: kotlinx-coroutines-core/common/src/flow/SharedFlow.kt
+  kind: behavior
+  capability_id: flow.shared
+  behavior_id: flow.shared-replay-buffer-overflow
+  target_id: concurrency.flow-pipelines
+  title: SharedFlow replayとbuffer overflow
+  surface_ids:
+  - architecture-design
+  - failure-recovery
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - flow.retry-state-cancellation
+- id: inventory.flow.state-conflation-equality
+  authority_artifact_id: kotlinx-coroutines
+  authority_surface_id: flow.state
+  locator: kotlinx-coroutines-core/common/src/flow/StateFlow.kt
+  kind: behavior
+  capability_id: flow.state
+  behavior_id: flow.state-conflation-equality
+  target_id: concurrency.flow-pipelines
+  title: StateFlow equality conflation
+  surface_ids:
+  - foundations-mechanics
+  - decision-comparison
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - flow.retry-state-cancellation
+- id: inventory.serialization.descriptor-shape
+  authority_artifact_id: kotlinx-serialization
+  authority_surface_id: serialization.descriptor
+  locator: core/commonMain/src/kotlinx/serialization/descriptors/SerialDescriptor.kt
+  kind: capability
+  capability_id: serialization.schema
+  behavior_id: serialization.descriptor-shape
+  target_id: evolution.compatibility-migration
+  title: SerialDescriptorのschema形状
+  surface_ids:
+  - foundations-mechanics
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - migration.v1-v2-compatible
+- id: inventory.serialization.unknown-key-policy
+  authority_artifact_id: kotlinx-serialization
+  authority_surface_id: serialization.json.unknown
+  locator: docs/json.md#ignoring-unknown-keys
+  kind: behavior
+  capability_id: serialization.json
+  behavior_id: serialization.unknown-key-policy
+  target_id: evolution.compatibility-migration
+  title: Unknown key拒否と許容Policy
+  surface_ids:
+  - failure-recovery
+  - decision-comparison
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - migration.v1-v2-compatible
+- id: inventory.serialization.explicit-null-default
+  authority_artifact_id: kotlinx-serialization
+  authority_surface_id: serialization.json.null
+  locator: docs/json.md#explicit-nulls
+  kind: behavior
+  capability_id: serialization.json
+  behavior_id: serialization.explicit-null-default
+  target_id: evolution.compatibility-migration
+  title: Explicit nullとdefault境界
+  surface_ids:
+  - testing-verification
+  - compatibility-integration
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - migration.v1-v2-compatible
+- id: inventory.serialization.polymorphic-registration
+  authority_artifact_id: kotlinx-serialization
+  authority_surface_id: serialization.polymorphic
+  locator: core/commonMain/src/kotlinx/serialization/PolymorphicSerializer.kt
+  kind: behavior
+  capability_id: serialization.polymorphism
+  behavior_id: serialization.polymorphic-registration
+  target_id: evolution.compatibility-migration
+  title: Polymorphic subtype登録と拒否
+  surface_ids:
+  - architecture-design
+  - security-privacy-safety
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - migration.v1-v2-compatible
+- id: inventory.serialization.malformed-input-diagnostic
+  authority_artifact_id: kotlinx-serialization
+  authority_surface_id: serialization.exceptions
+  locator: core/commonMain/src/kotlinx/serialization/SerializationExceptions.kt
+  kind: behavior
+  capability_id: serialization.failure
+  behavior_id: serialization.malformed-input-diagnostic
+  target_id: evolution.compatibility-migration
+  title: Malformed inputの例外と診断
+  surface_ids:
+  - failure-recovery
+  - security-privacy-safety
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - migration.v1-v2-compatible
+- id: inventory.serialization.binary-api-compatibility
+  authority_artifact_id: kotlinx-serialization
+  authority_surface_id: serialization.compatibility
+  locator: docs/compatibility.md
+  kind: behavior
+  capability_id: serialization.compatibility
+  behavior_id: serialization.binary-api-compatibility
+  target_id: evolution.compatibility-migration
+  title: Serialization runtime/plugin互換境界
+  surface_ids:
+  - compatibility-integration
+  - migration-evolution-deprecation
+  classification: included
+  rationale: 公式一次資料から抽出した適用Behaviorであり、Definitive専用Proofが閉じるまでGapとして保持する。
+  claim_ids:
+  - migration.v1-v2-compatible

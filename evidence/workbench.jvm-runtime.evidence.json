@@ -1,0 +1,29 @@
+{
+  "artifact": {
+    "digest": "sha256:d77dd9177f1f84956a98c73420210663bc1eac200808df4773094be2f4a3f545",
+    "media_type": "application/json",
+    "size_bytes": 3584,
+    "uri": "evidence/artifacts/workbench-jvm-runtime.json"
+  },
+  "atlas_id": "kotlin-reference-atlas",
+  "claim_ids": [
+    "workbench.jvm-integrated-scenarios"
+  ],
+  "command": "./gradlew :reference-systems:automation-workbench:test --rerun-tasks && python3 scripts/capture_workbench.py",
+  "created_at": "2026-08-28T19:41:00+09:00",
+  "environment": {
+    "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
+    "profile": "local"
+  },
+  "execution_mode": "runtime",
+  "harness_digest": "sha256:fb25c70dc678c7e4dba856dafe11b682beffd364badd8b5cf78503a481db2769",
+  "harness_path": "reference-systems/automation-workbench/src/main/kotlin/dev/akaitigo/kotlinatlas/workbench/EvidenceScenarioRunner.kt",
+  "id": "workbench.jvm-runtime",
+  "kind": "conformance",
+  "producer": "scripts/capture_workbench.py",
+  "retention": "git",
+  "runtime_identity": "Homebrew OpenJDK 17.0.17+0 aarch64; Kotlin 2.4.10; kotlinx.coroutines 1.11.0",
+  "schema_version": 1,
+  "source_digest": "sha256:55e1c7c88ce3365af3be0fff625230cd7906e641b1548706b64bece274ba46b4",
+  "verdict": "pass"
+}

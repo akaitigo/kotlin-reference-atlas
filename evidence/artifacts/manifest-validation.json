@@ -1,7 +1,10 @@
 {
   "atlas_id": "kotlin-reference-atlas",
   "audit_output": "最終GateでCore auditを再実行する",
-  "authority_lock_digest": "sha256:fd978b99941851cad91ebff64e37463dda21984a9cd14b2520cc0c68e2ab2f10",
+  "authority_artifacts": 9,
+  "authority_behaviors": 69,
+  "authority_lock_digest": "sha256:55e1c7c88ce3365af3be0fff625230cd7906e641b1548706b64bece274ba46b4",
+  "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
   "epoch": "2026-08-28",
   "mastery_outcomes": 8,
   "mastery_surfaces": 14,

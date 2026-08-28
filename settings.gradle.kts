@@ -24,4 +24,5 @@ include(
     ":labs:multiplatform",
     ":labs:compiler-runtime",
     ":labs:engineering",
+    ":reference-systems:automation-workbench",
 )

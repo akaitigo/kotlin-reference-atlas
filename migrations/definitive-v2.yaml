@@ -1,0 +1,20 @@
+schema_version: 2
+atlas_id: kotlin-reference-atlas
+from: bounded-complete-v1
+to: subject-definitive-v2
+generated_at: "2026-08-28T19:45:00+09:00"
+historical_certificate:
+  path: evidence/history/v0.2.0/completion-certificate.json
+  digest: sha256:bc01f8663533afd9be105e4cfe157d34b561735375c5d51ba38ce8f96493286f
+  classification: bounded-complete
+status: proof-required
+required_actions:
+  - lock-authority-artifacts
+  - classify-all-surfaces
+  - split-behavior-proofs
+  - complete-scenario-matrix
+  - collect-runtime-evidence
+  - add-reference-system-if-applicable
+  - add-comparisons-if-applicable
+  - upgrade-skill-eval
+  - issue-definitive-certificate

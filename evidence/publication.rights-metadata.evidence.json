@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:959e0aae4dc70627c3eab06a435bc96a5993329503b4dfb8b371e9c82c1ec7c9",
+    "digest": "sha256:df09d74809e26ad9c3f73dd88106b36b23fa5ffd4f34149ba2e8c4e5db4d8b2e",
     "media_type": "application/json",
-    "size_bytes": 652,
+    "size_bytes": 714,
     "uri": "evidence/artifacts/rights-validation.json"
   },
   "atlas_id": "kotlin-reference-atlas",
@@ -22,6 +22,6 @@
   "producer": "kotlin-atlas-verifier",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:fd978b99941851cad91ebff64e37463dda21984a9cd14b2520cc0c68e2ab2f10",
+  "source_digest": "sha256:55e1c7c88ce3365af3be0fff625230cd7906e641b1548706b64bece274ba46b4",
   "verdict": "pass"
 }

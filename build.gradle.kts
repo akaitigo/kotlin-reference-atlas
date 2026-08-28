@@ -58,5 +58,7 @@ tasks.register("atlasCheck") {
         ":labs:multiplatform:jsNodeTest",
         ":labs:multiplatform:wasmJsNodeTest",
         ":labs:multiplatform:compileTestKotlinMacosArm64",
+        ":reference-systems:automation-workbench:test",
+        ":reference-systems:automation-workbench:captureRuntimeTrace",
     )
 }

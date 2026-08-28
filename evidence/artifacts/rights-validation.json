@@ -1,5 +1,5 @@
 {
-  "direct_component_count": 153,
+  "direct_component_count": 154,
   "lock_component_count": 149,
   "missing_lock_components": [],
   "required_files": [
@@ -14,7 +14,8 @@
     "labs/jvm/gradle.lockfile",
     "labs/coroutines/gradle.lockfile",
     "labs/interop/gradle.lockfile",
-    "labs/gradle-plugin/gradle.lockfile"
+    "labs/gradle-plugin/gradle.lockfile",
+    "reference-systems/automation-workbench/gradle.lockfile"
   ],
   "sbom_formats": [
     "CycloneDX-1.6",

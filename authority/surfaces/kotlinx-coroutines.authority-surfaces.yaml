@@ -1,0 +1,13 @@
+schema_version: 2
+source_id: kotlinx-coroutines-source-1.11.0
+source_digest: sha256:ff25c4fd2855309cc047a17136f350579a3561e58c10515251063b81b8b8afef
+extraction: {method: machine-readable-primary, tool: git-tree-surface-extractor-v2, reviewed_by: kotlin-atlas-maintainer, reviewed_at: "2026-08-28"}
+surfaces:
+  - {id: coroutines.job, locator: kotlinx-coroutines-core/common/src/Job.kt, kind: behavior, capability_id: coroutines.job, behavior_id: coroutines.job-state-cancellation, title: Job stateとcancellation伝播, surface_ids: [foundations-mechanics, failure-recovery]}
+  - {id: coroutines.scope, locator: kotlinx-coroutines-core/common/src/CoroutineScope.kt, kind: behavior, capability_id: coroutines.scope, behavior_id: coroutines.structured-scope-lifetime, title: Structured scope lifetime, surface_ids: [architecture-design, failure-recovery]}
+  - {id: coroutines.exception, locator: kotlinx-coroutines-core/common/src/CoroutineExceptionHandler.common.kt, kind: behavior, capability_id: coroutines.exceptions, behavior_id: coroutines.exception-aggregation-handler, title: Exception aggregationとhandler境界, surface_ids: [failure-recovery, operations-observability]}
+  - {id: flow.context, locator: kotlinx-coroutines-core/common/src/flow/operators/Context.kt, kind: behavior, capability_id: flow.context, behavior_id: flow.buffer-flowon-fusion, title: buffer・flowOn・fusion, surface_ids: [foundations-mechanics, performance-capacity-cost]}
+  - {id: flow.errors, locator: kotlinx-coroutines-core/common/src/flow/operators/Errors.kt, kind: behavior, capability_id: flow.errors, behavior_id: flow.catch-retry-transparency, title: catch・retryとexception transparency, surface_ids: [failure-recovery, testing-verification]}
+  - {id: flow.merge, locator: kotlinx-coroutines-core/common/src/flow/operators/Merge.kt, kind: behavior, capability_id: flow.merge, behavior_id: flow.flatmap-concurrency-order, title: flatMap concurrencyと順序, surface_ids: [decision-comparison, performance-capacity-cost]}
+  - {id: flow.shared, locator: kotlinx-coroutines-core/common/src/flow/SharedFlow.kt, kind: behavior, capability_id: flow.shared, behavior_id: flow.shared-replay-buffer-overflow, title: SharedFlow replayとbuffer overflow, surface_ids: [architecture-design, failure-recovery]}
+  - {id: flow.state, locator: kotlinx-coroutines-core/common/src/flow/StateFlow.kt, kind: behavior, capability_id: flow.state, behavior_id: flow.state-conflation-equality, title: StateFlow equality conflation, surface_ids: [foundations-mechanics, decision-comparison]}

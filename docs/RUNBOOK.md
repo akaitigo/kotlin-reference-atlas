@@ -7,19 +7,20 @@
 - Git
 - Node.js 25（Kotlin/JS・Wasm実行）
 - Docker 29（Container profile）
-- `reference-atlas-core` commit `d5c0a6ce757fd5f43af837edd26f55c7325b811e`
+- `reference-atlas-core` commit `be19ddaa411fe60dcf12f0f5d457902bb57b9eb3`
 
 ## Execute
 
 ```bash
 PATH="$PWD/bin:$PATH" atlas validate atlas.yaml mastery.yaml coverage.yaml sources.lock.yaml skill.package.yaml
 PATH="$PWD/bin:$PATH" atlas audit .
+PATH="$PWD/bin:$PATH" atlas audit . --gate definitive # 未完中は非0終了
 python3 scripts/verify.py
 ```
 
 ## Verify
 
-終了Code 0、`evidence/artifacts/verification-summary.json`の`verdict: pass`、各`*.evidence.json`の`verdict: pass`を確認します。`atlas audit .`は`open_required=0`でなければなりません。
+`scripts/verify.py`の終了Code 0、`verification-summary.json`の`verdict: implementation-pass-definitive-incomplete`、各bounded `*.evidence.json`の`verdict: pass`を確認します。基礎`atlas audit .`は`completion_class=incomplete`、Definitive auditは非0終了でなければなりません。
 
 個別再実行：
 

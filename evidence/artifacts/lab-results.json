@@ -247,8 +247,55 @@
       "module": "semantics",
       "suite": "dev.akaitigo.kotlinatlas.semantics.SemanticsTest",
       "task": "test"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "boundary policy compares strict rejection with normalization()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "bounded dispatcher exposes backpressure and closed recovery path()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "cancellation is not converted into failure and active gauge recovers()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "duplicate execution returns stored artifact without rerunning step()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "invalid identifier and attempt limit are rejected before execution()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "normal execution emits context attempt and immutable artifact()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "permanent failure is categorized and observable()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "transient failure recovers within bounded retry budget()",
+          "status": "pass"
+        }
+      ],
+      "module": "reference-systems/automation-workbench",
+      "suite": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+      "task": "test"
     }
   ],
-  "test_case_count": 34,
+  "test_case_count": 42,
   "verdict": "pass"
 }

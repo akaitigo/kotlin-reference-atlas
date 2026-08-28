@@ -9,11 +9,11 @@
   "target": {
     "repository_id": "kotlin-reference-atlas",
     "title_ja": "Kotlin 技術実証アトラス",
-    "core_commit": "b32f6afe888e2e07eef0e2e016f6f7d139582159"
+    "core_commit": "be19ddaa411fe60dcf12f0f5d457902bb57b9eb3"
   },
   "mappings": [
     { "from": "kotlin.language.context-parameters", "to": "language.context-parameters", "state": "planned", "note_ja": "従来Claim IDを将来Inventoryへ引き継ぐ。" },
-    { "from": "reference-platform.application.ExecuteWorkflow", "to": "reference-system.automation-workbench", "state": "planned", "note_ja": "実用Reference製品構想を維持する。" },
+    { "from": "reference-platform.application.ExecuteWorkflow", "to": "reference-system.automation-workbench", "state": "adapted", "note_ja": "JVM統合実装と5 Scenario、Coroutine cancellation/context、bounded backpressureの実Runtime Evidenceまで移行した。Platform横断のDefinitive Proofは未完としてGap Ledgerへ維持する。" },
     { "from": "kotlin-concurrency-cancellation-audit", "to": "kotlin-reference-router:review-concurrency", "state": "adapted", "note_ja": "Micro SkillではなくRouter modeへ統合する。" },
     { "from": "kotlin-2.4.10_2026-08-28", "to": "coverage-epoch:2026-08-28", "state": "adapted", "note_ja": "動的最新版ではなく有限Epochとして保持する。" }
   ],

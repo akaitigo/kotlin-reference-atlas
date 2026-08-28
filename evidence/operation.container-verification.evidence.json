@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:600848bc6d3603a51cb0b48287556dd981fb1cc016df7d358f0341e8ef7eb025",
+    "digest": "sha256:e13a9a5300d27ebe99e1101a84b1d701fc73b3ffae65d58910dd7eb2c896ea81",
     "media_type": "application/json",
-    "size_bytes": 14907,
+    "size_bytes": 14812,
     "uri": "evidence/artifacts/container-verification.json"
   },
   "atlas_id": "kotlin-reference-atlas",
@@ -22,6 +22,6 @@
   "producer": "docker-gradle",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:fd978b99941851cad91ebff64e37463dda21984a9cd14b2520cc0c68e2ab2f10",
+  "source_digest": "sha256:55e1c7c88ce3365af3be0fff625230cd7906e641b1548706b64bece274ba46b4",
   "verdict": "pass"
 }

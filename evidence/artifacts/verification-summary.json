@@ -1,22 +1,56 @@
 {
   "atlas_id": "kotlin-reference-atlas",
-  "completion_gaps": [],
+  "authority_surface_inventory": {
+    "artifacts": 9,
+    "behaviors": 69
+  },
+  "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
+  "completion_class": "incomplete",
+  "completion_gaps": [
+    "69 Authority由来Behaviorに対する専用Claim/Proofと18 AxisのScenario Matrixが未閉鎖",
+    "8 Outcomeと14 Surfaceを網羅するDefinitive Skill Evalが未閉鎖",
+    "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖"
+  ],
   "epoch": "2026-08-28",
+  "gap_ledger": {
+    "gap_count": 29,
+    "state_counts": {
+      "blocked": 3,
+      "open": 12,
+      "partial": 14
+    }
+  },
   "implementation_gates": {
     "container": "pass",
     "deep_artifacts": "pass",
+    "definitive": "expected-incomplete",
+    "kotlin_depth_parity": "incomplete",
     "labs": "pass",
     "manifest": "pass",
     "mastery_audit": "pass",
+    "neutral_language": "pass",
+    "non_regression": "pass",
     "rights_metadata": "pass",
     "skill": "pass"
   },
+  "kotlin_depth_parity": {
+    "all_axes_closed": false,
+    "axis_count": 18,
+    "reference_commit": "4a0b2df8e2091a963bd0e0e1bbccef9c84b49a45",
+    "status_counts": {
+      "missing": 0,
+      "partial": 17,
+      "satisfied": 1
+    },
+    "total_axis_gaps": 30
+  },
   "recommended_open": [
-    "reference-system.automation-workbench"
+    "Gap LedgerのBehavior別Proof closure",
+    "Automation WorkbenchのPlatform横断Runtimeと比較Variant"
   ],
   "recorded_infeasible": [
-    "platform.native-runtime: Full Xcode unavailable"
+    "platform.native-runtime: Full Xcode unavailable; KLIB compileはRuntime Evidenceの代替ではない"
   ],
-  "repository_status": "complete",
-  "verdict": "pass"
+  "repository_status": "incomplete",
+  "verdict": "implementation-pass-definitive-incomplete"
 }

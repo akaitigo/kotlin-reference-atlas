@@ -10,6 +10,15 @@
       "version": "b32f6afe888e2e07eef0e2e016f6f7d139582159"
     },
     {
+      "id": "reference-atlas-core-definitive-v2",
+      "kind": "source",
+      "license": "Apache-2.0",
+      "name": "reference-atlas-core",
+      "redistribution": "link-only",
+      "source": "https://github.com/akaitigo/reference-atlas-core",
+      "version": "be19ddaa411fe60dcf12f0f5d457902bb57b9eb3"
+    },
+    {
       "id": "gradle-distribution",
       "kind": "source",
       "license": "Apache-2.0",

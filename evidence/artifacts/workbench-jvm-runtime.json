@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "suite": "automation-workbench-jvm",
+  "verdict": "pass",
+  "runtime": {
+    "platform": "jvm",
+    "identity": "Homebrew OpenJDK 17.0.17+0 aarch64",
+    "kotlin": "2.4.10",
+    "kotlinx_coroutines": "1.11.0"
+  },
+  "scenarios": {
+    "normal": [
+      "normal execution emits context attempt and immutable artifact"
+    ],
+    "boundary": [
+      "boundary policy compares strict rejection with normalization"
+    ],
+    "rejection": [
+      "invalid identifier and attempt limit are rejected before execution",
+      "bounded dispatcher exposes backpressure and closed recovery path"
+    ],
+    "failure": [
+      "permanent failure is categorized and observable",
+      "cancellation is not converted into failure and active gauge recovers"
+    ],
+    "recovery": [
+      "transient failure recovers within bounded retry budget",
+      "duplicate execution returns stored artifact without rerunning step"
+    ]
+  },
+  "comparison_variants": [
+    "strict",
+    "normalize"
+  ],
+  "runtime_trace": [
+    {
+      "scenario": "normal",
+      "variant": "strict",
+      "events": "Accepted,Attempted,Completed",
+      "outcome": "completed",
+      "artifact_digest": "6f3fae14a8708227c92a22b452ca0731114c5d3e46c820a57845847caefb415d",
+      "health": "0/1/0"
+    },
+    {
+      "scenario": "boundary",
+      "variant": "strict",
+      "events": "Rejected",
+      "outcome": "rejected",
+      "artifact_digest": "-",
+      "health": "0/0/0"
+    },
+    {
+      "scenario": "boundary",
+      "variant": "normalize",
+      "events": "Accepted,Attempted,Completed",
+      "outcome": "task",
+      "artifact_digest": "0ebb429fa86d481c2630fac53db1c91cffed5d4d41d1021c179444eb67e7ee0b",
+      "health": "0/1/0"
+    },
+    {
+      "scenario": "recovery",
+      "variant": "bounded-retry",
+      "events": "Accepted,Attempted,Attempted,Recovered,Completed",
+      "outcome": "completed",
+      "artifact_digest": "0ebb429fa86d481c2630fac53db1c91cffed5d4d41d1021c179444eb67e7ee0b",
+      "health": "0/1/0"
+    },
+    {
+      "scenario": "failure",
+      "variant": "permanent",
+      "events": "Accepted,Attempted,Failed",
+      "outcome": "permanent",
+      "artifact_digest": "-",
+      "health": "0/0/1"
+    },
+    {
+      "scenario": "recovery",
+      "variant": "idempotent-replay",
+      "events": "Completed",
+      "outcome": "stored-artifact",
+      "artifact_digest": "0ebb429fa86d481c2630fac53db1c91cffed5d4d41d1021c179444eb67e7ee0b",
+      "health": "0/1/0"
+    },
+    {
+      "scenario": "rejection",
+      "variant": "bounded-channel",
+      "events": "Accepted,Backpressured,Closed",
+      "outcome": "backpressure-then-closed",
+      "artifact_digest": "-",
+      "health": "-"
+    },
+    {
+      "scenario": "failure",
+      "variant": "cancellation",
+      "events": "Accepted,Attempted,Cancelled",
+      "outcome": "propagated",
+      "artifact_digest": "-",
+      "health": "0/0/0"
+    }
+  ],
+  "tests": [
+    "boundary policy compares strict rejection with normalization",
+    "bounded dispatcher exposes backpressure and closed recovery path",
+    "cancellation is not converted into failure and active gauge recovers",
+    "duplicate execution returns stored artifact without rerunning step",
+    "invalid identifier and attempt limit are rejected before execution",
+    "normal execution emits context attempt and immutable artifact",
+    "permanent failure is categorized and observable",
+    "transient failure recovers within bounded retry budget"
+  ],
+  "counts": {
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

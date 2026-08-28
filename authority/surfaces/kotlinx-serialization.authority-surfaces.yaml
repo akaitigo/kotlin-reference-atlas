@@ -1,0 +1,11 @@
+schema_version: 2
+source_id: kotlinx-serialization-source-snapshot
+source_digest: sha256:001b56cf980a08cab723a9081c0b93ce81539c3a2c221f471c03c778ee04c8de
+extraction: {method: machine-readable-primary, tool: git-tree-surface-extractor-v2, reviewed_by: kotlin-atlas-maintainer, reviewed_at: "2026-08-28"}
+surfaces:
+  - {id: serialization.descriptor, locator: core/commonMain/src/kotlinx/serialization/descriptors/SerialDescriptor.kt, kind: capability, capability_id: serialization.schema, behavior_id: serialization.descriptor-shape, title: SerialDescriptorのschema形状, surface_ids: [foundations-mechanics, compatibility-integration]}
+  - {id: serialization.json.unknown, locator: docs/json.md#ignoring-unknown-keys, kind: behavior, capability_id: serialization.json, behavior_id: serialization.unknown-key-policy, title: Unknown key拒否と許容Policy, surface_ids: [failure-recovery, decision-comparison]}
+  - {id: serialization.json.null, locator: docs/json.md#explicit-nulls, kind: behavior, capability_id: serialization.json, behavior_id: serialization.explicit-null-default, title: Explicit nullとdefault境界, surface_ids: [testing-verification, compatibility-integration]}
+  - {id: serialization.polymorphic, locator: core/commonMain/src/kotlinx/serialization/PolymorphicSerializer.kt, kind: behavior, capability_id: serialization.polymorphism, behavior_id: serialization.polymorphic-registration, title: Polymorphic subtype登録と拒否, surface_ids: [architecture-design, security-privacy-safety]}
+  - {id: serialization.exceptions, locator: core/commonMain/src/kotlinx/serialization/SerializationExceptions.kt, kind: behavior, capability_id: serialization.failure, behavior_id: serialization.malformed-input-diagnostic, title: Malformed inputの例外と診断, surface_ids: [failure-recovery, security-privacy-safety]}
+  - {id: serialization.compatibility, locator: docs/compatibility.md, kind: behavior, capability_id: serialization.compatibility, behavior_id: serialization.binary-api-compatibility, title: Serialization runtime/plugin互換境界, surface_ids: [compatibility-integration, migration-evolution-deprecation]}

@@ -10,15 +10,15 @@
   },
   "archetypes": ["product", "language-platform"],
   "stage": 1,
-  "status": "complete",
+  "status": "incomplete",
   "language": { "primary": "ja", "identifiers": "en" },
   "coverage": { "epoch": "2026-08-28", "manifest": "coverage.yaml" },
   "authority": { "lockfile": "sources.lock.yaml", "policy": "primary-first" },
   "mastery": { "manifest": "mastery.yaml", "contract_version": "1.0.0" },
   "scope": {
-    "statement": "Kotlin 2.4.10を基準に、言語Semanticsと型、Coroutine/Flow、JVM/Native/JS/Wasm、Interop、Compiler/Runtime、Gradle/Toolchain、Testing、Performance、Security、Failure/Debugging、Compatibility/Migration、Operations、Agent Skillを再実行可能なLabとEvidenceで実証する。",
+    "statement": "Kotlin 2.4.10を基準に、言語Semanticsと型、Coroutine/Flow、JVM/Native/JS/Wasm、Interop、Compiler/Runtime、Gradle/Toolchain、Testing、Performance、Security、Failure/Debugging、Compatibility/Migration、Operations、Agent SkillをDefinitive Gate v2の細粒度Behavior、実Runtime、比較Variant、Artifact Evidence、Skill Evalで実証する。",
     "exclusions": [
-      "Android SDK、Ktor、Spring、Compose等の第三者または周辺Framework固有APIはKotlin本体の決定版責任から分離する。",
+      "Android SDK、Ktor、Spring、Compose等の第三者または周辺Framework固有APIはKotlin本体の検証範囲から分離する。",
       "Full Xcodeを必要とするNative executable実行とSwift Export consumerは現在のHost Toolchainではinfeasibleとし、Native test KLIB compileを代替Evidenceとして明示する。",
       "Kotlin 2.4.10より前の全Versionを再現せず、互換性と移行Contractを立証するversioned fixtureを対象にする。"
     ]
@@ -34,9 +34,13 @@
     "evals": "evals/"
   },
   "completion": {
-    "policy_version": "1.0.0",
+    "policy_version": "2.0.0",
     "required_profiles": ["local", "container"],
-    "certificate": "evidence/completion-certificate.json"
+    "certificate": "evidence/completion-certificate.json",
+    "definitive": {
+      "manifest": "definitive.yaml",
+      "contract_version": "2.0.0"
+    }
   },
   "license": {
     "default": "Apache-2.0",

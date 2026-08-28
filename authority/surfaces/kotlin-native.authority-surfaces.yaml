@@ -1,0 +1,11 @@
+schema_version: 2
+source_id: kotlin-native-source-2.4.10
+source_digest: sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902
+extraction: {method: machine-readable-primary, tool: git-tree-surface-extractor-v2, reviewed_by: kotlin-atlas-maintainer, reviewed_at: "2026-08-28"}
+surfaces:
+  - {id: native.runtime.gc, locator: kotlin-native/runtime/src/gc, kind: behavior, capability_id: native.runtime, behavior_id: native.gc-cycle-allocation, title: Native GC cycleとallocation, surface_ids: [performance-capacity-cost, operations-observability]}
+  - {id: native.runtime.memory, locator: kotlin-native/runtime/src/mm, kind: behavior, capability_id: native.memory, behavior_id: native.object-lifetime-concurrency, title: Native object lifetimeとconcurrency, surface_ids: [foundations-mechanics, security-privacy-safety]}
+  - {id: native.interop.c, locator: kotlin-native/Interop/Indexer, kind: capability, capability_id: interop.c, behavior_id: interop.c-header-indexing, title: C header indexとstub生成, surface_ids: [implementation-construction, compatibility-integration]}
+  - {id: native.interop.swift, locator: native/swift/swift-export-standalone, kind: capability, capability_id: interop.swift, behavior_id: interop.swift-export-consumer, title: Swift Export consumer契約, surface_ids: [implementation-construction, compatibility-integration]}
+  - {id: native.debug, locator: kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/llvm, kind: capability, capability_id: native.debug, behavior_id: native.debug-symbol-stacktrace, title: Native debug symbolとstacktrace, surface_ids: [failure-recovery, operations-observability]}
+  - {id: native.klib, locator: kotlin-native/shared/src/main/kotlin/org/jetbrains/kotlin/konan/library, kind: behavior, capability_id: compiler.klib, behavior_id: native.klib-version-linkage, title: Native KLIB versionとlinkage, surface_ids: [compatibility-integration, migration-evolution-deprecation]}

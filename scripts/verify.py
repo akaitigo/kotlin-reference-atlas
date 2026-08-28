@@ -15,6 +15,13 @@ from typing import Iterable
 ROOT = Path(__file__).resolve().parents[1]
 CREATED_AT = "2026-08-28T00:00:00+09:00"
 MANIFESTS = ["atlas.yaml", "mastery.yaml", "coverage.yaml", "sources.lock.yaml", "skill.package.yaml"]
+DEFINITIVE_MANIFESTS = [
+    "definitive.yaml",
+    "surface.inventory.yaml",
+    "verification.matrix.yaml",
+    "evals/kotlin-reference-router.definitive-skill-eval.json",
+    "migrations/definitive-v2.yaml",
+]
 ARTIFACTS = ROOT / "evidence" / "artifacts"
 ROUTER = ROOT / ".agents" / "skills" / "kotlin-reference-router" / "scripts" / "route.py"
 
@@ -93,6 +100,24 @@ def run(command: list[str], *, capture: bool = False) -> subprocess.CompletedPro
     return result
 
 
+def run_expect_failure(command: list[str]) -> subprocess.CompletedProcess[str]:
+    print("失敗を期待して実行:", " ".join(command))
+    environment = os.environ.copy()
+    environment.setdefault("GRADLE_USER_HOME", str(ROOT / ".gradle" / "atlas-home"))
+    result = subprocess.run(
+        command,
+        cwd=ROOT,
+        env=environment,
+        check=False,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+    )
+    if result.returncode == 0:
+        raise RuntimeError("未完RepositoryがDefinitive Gateを通過した")
+    return result
+
+
 def detect_full_xcode() -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         ["/usr/bin/xcrun", "xcodebuild", "-version"],
@@ -105,7 +130,8 @@ def detect_full_xcode() -> subprocess.CompletedProcess[str]:
 
 
 def validate_manifests() -> dict:
-    run([str(ROOT / "bin" / "atlas"), "validate", *MANIFESTS])
+    authority_manifests = [path.relative_to(ROOT).as_posix() for path in sorted((ROOT / "authority" / "surfaces").glob("*.yaml"))]
+    run([str(ROOT / "bin" / "atlas"), "validate", *MANIFESTS, *DEFINITIVE_MANIFESTS, *authority_manifests])
     atlas = load_json(ROOT / "atlas.yaml")
     mastery = load_json(ROOT / "mastery.yaml")
     coverage = load_json(ROOT / "coverage.yaml")
@@ -125,6 +151,16 @@ def validate_manifests() -> dict:
         errors.append("Core v1 migrationに未対応source IDがある")
     if migration["target"]["core_commit"] != core_version["commit"]:
         errors.append("MigrationとCore Versionのcommitが一致しない")
+    historical = ROOT / "evidence" / "history" / "v0.2.0" / "completion-certificate.json"
+    if not historical.is_file() or sha256_file(historical) != "sha256:bc01f8663533afd9be105e4cfe157d34b561735375c5d51ba38ce8f96493286f":
+        errors.append("bounded historical Certificateが固定値と一致しない")
+    if (ROOT / "evidence" / "completion-certificate.json").exists():
+        errors.append("bounded historical Certificateをactive Certificateとして扱っている")
+    if atlas["status"] == "incomplete" and (ROOT / "evidence" / "definitive-certificate.json").exists():
+        errors.append("incomplete状態でDefinitive Certificateが存在する")
+    inventory_summary = load_json(ROOT / "atlas" / "definitive" / "inventory-summary.json")
+    if inventory_summary["authority_artifacts"] < 1 or inventory_summary["behaviors"] < 1:
+        errors.append("Authority Surface Inventoryが空")
     if errors:
         raise RuntimeError("; ".join(errors))
     result = {
@@ -133,6 +169,9 @@ def validate_manifests() -> dict:
         "authority_lock_digest": expected_digest,
         "mastery_outcomes": len(mastery["outcomes"]),
         "mastery_surfaces": len(mastery["surfaces"]),
+        "authority_artifacts": inventory_summary["authority_artifacts"],
+        "authority_behaviors": inventory_summary["behaviors"],
+        "bounded_historical_certificate": historical.relative_to(ROOT).as_posix(),
         "audit_output": "最終GateでCore auditを再実行する",
         "verdict": "pass",
     }
@@ -147,7 +186,12 @@ def collect_test_results() -> dict:
     command.extend(["--configuration-cache", "--no-daemon"])
     run(command)
     suites = []
-    for report in sorted((ROOT / "labs").rglob("TEST-*.xml")):
+    reports = [
+        report
+        for root in (ROOT / "labs", ROOT / "reference-systems")
+        for report in root.rglob("TEST-*.xml")
+    ]
+    for report in sorted(reports):
         xml_root = ET.parse(report).getroot()
         cases = []
         for case in xml_root.findall("testcase"):
@@ -157,8 +201,9 @@ def collect_test_results() -> dict:
             elif case.find("skipped") is not None:
                 status = "skipped"
             cases.append({"class": case.attrib.get("classname", ""), "name": case.attrib.get("name", ""), "status": status})
-        relative = report.relative_to(ROOT / "labs")
-        suites.append({"module": relative.parts[0], "task": report.parent.name, "suite": xml_root.attrib.get("name", ""), "cases": sorted(cases, key=lambda item: (item["class"], item["name"]))})
+        relative = report.relative_to(ROOT)
+        module = relative.parts[1] if relative.parts[0] == "labs" else "/".join(relative.parts[:2])
+        suites.append({"module": module, "task": report.parent.name, "suite": xml_root.attrib.get("name", ""), "cases": sorted(cases, key=lambda item: (item["class"], item["name"]))})
     if not suites or any(case["status"] != "pass" for suite in suites for case in suite["cases"]):
         raise RuntimeError("全LabのJUnit resultをpassとして収集できない")
     result = {"command": " ".join(command).replace(str(ROOT / "gradlew"), "./gradlew"), "suites": suites, "test_case_count": sum(len(suite["cases"]) for suite in suites), "verdict": "pass"}
@@ -167,6 +212,7 @@ def collect_test_results() -> dict:
 
 
 def generate_deep_artifacts() -> dict:
+    run([sys.executable, str(ROOT / "scripts" / "capture_workbench.py")])
     run([sys.executable, str(ROOT / "scripts" / "inventory.py")])
     run([sys.executable, str(ROOT / "scripts" / "inspect_bytecode.py")])
     run([sys.executable, str(ROOT / "scripts" / "generate_sbom.py")])
@@ -196,6 +242,7 @@ def generate_deep_artifacts() -> dict:
             "xcodebuild_output": xcode.stdout.strip(),
             "reason": "Full XcodeのxcodebuildがHostに存在しないためlinkDebugTestMacosArm64を実行できない" if xcode.returncode != 0 else "Full Xcode環境でmacosArm64Testを実行した",
         },
+        "native_compile_is_runtime_substitute": False,
         "verdict": "pass",
     }
     write_json(ARTIFACTS / "platform-validation.json", result)
@@ -287,6 +334,7 @@ def validate_rights() -> dict:
         "labs/coroutines/gradle.lockfile",
         "labs/interop/gradle.lockfile",
         "labs/gradle-plugin/gradle.lockfile",
+        "reference-systems/automation-workbench/gradle.lockfile",
     ]
     missing = [path for path in required if not (ROOT / path).is_file()]
     manifest = load_json(ROOT / "third_party" / "manifest.yaml")
@@ -357,6 +405,61 @@ def validate_rights() -> dict:
     return result
 
 
+def validate_non_regression() -> dict:
+    run([sys.executable, str(ROOT / "scripts" / "verify_non_regression.py")])
+    result = load_json(ARTIFACTS / "non-regression.json")
+    if result.get("verdict") != "pass" or result.get("violations"):
+        raise RuntimeError("公開main非後退Gateがpassではない")
+    return result
+
+
+def validate_fe_parity() -> dict:
+    run([sys.executable, str(ROOT / "scripts" / "verify_fe_parity.py")])
+    result = load_json(ARTIFACTS / "kotlin-depth-parity.json")
+    if result.get("violations") or result.get("verdict") not in {"incomplete", "pass"}:
+        raise RuntimeError("Kotlin Depth Parity Gateの状態が不整合")
+    return result
+
+
+def validate_neutral_language() -> dict:
+    listed = subprocess.run(
+        ["git", "ls-files", "-co", "--exclude-standard"],
+        cwd=ROOT,
+        check=True,
+        text=True,
+        stdout=subprocess.PIPE,
+    ).stdout.splitlines()
+    # 検査語そのものを検査実装へ連続して書くと、このファイルが自己検出される。
+    forbidden = ("決定" + "版", "世界" + "一", "唯" + "一", "作者" + "称賛", "最高" + "品質", "推奨" + "したく")
+    namespace = "aka" + "itigo"
+    technical_namespace = (
+        "dev." + namespace,
+        "github.com/" + namespace,
+        '"github": "' + namespace + '"',
+        "Copyright 2026 " + namespace,
+        "/dev/" + namespace + "/",
+        namespace + "/",
+    )
+    violations = []
+    text_suffixes = {".md", ".json", ".yaml", ".yml", ".py", ".kt", ".kts", ".java", ".sh", ".txt"}
+    for relative in listed:
+        if relative == "evidence/artifacts/neutral-language.json":
+            continue
+        path = ROOT / relative
+        if not path.is_file() or (path.suffix not in text_suffixes and path.name not in {"README", "NOTICE", "LICENSE"}) or path.stat().st_size > 2_000_000:
+            continue
+        for number, line in enumerate(path.read_text(encoding="utf-8", errors="replace").splitlines(), start=1):
+            if any(term in line for term in forbidden):
+                violations.append(f"{relative}:{number}:宣伝表現")
+            if namespace in line and not any(marker in line for marker in technical_namespace):
+                violations.append(f"{relative}:{number}:非技術的namespace使用")
+    if violations:
+        raise RuntimeError("中立記述Gate失敗: " + "; ".join(violations))
+    result = {"scanned_files": len(listed) - 1, "forbidden_term_count": len(forbidden), "violations": [], "verdict": "pass"}
+    write_json(ARTIFACTS / "neutral-language.json", result)
+    return result
+
+
 def evidence_record(record_id: str, claim_ids: list[str], kind: str, producer: str, command: str, artifact: Path, harness_paths: list[Path]) -> dict:
     harness = harness_file(harness_paths)
     return {
@@ -388,6 +491,8 @@ def write_evidence() -> list[Path]:
     inventory = ROOT / "atlas" / "inventory" / "kotlin-public-surface.json"
     container = ARTIFACTS / "container-verification.json"
     summary = ARTIFACTS / "verification-summary.json"
+    non_regression = ARTIFACTS / "non-regression.json"
+    fe_parity = ARTIFACTS / "kotlin-depth-parity.json"
     specs = [
         ("authority.source-lock-validation", ["authority.source-lock-matches"], "conformance", "kotlin-atlas-verifier", "atlas validate atlas.yaml mastery.yaml coverage.yaml sources.lock.yaml skill.package.yaml && atlas audit .", manifest, [ROOT / "atlas", ROOT / "mastery.yaml", ROOT / "scripts" / "verify.py"]),
         ("inventory.public-surface", ["inventory.locked-surface-enumerated"], "capture", "kotlin-artifact-inventory", "python3 scripts/inventory.py", inventory, [ROOT / "scripts" / "inventory.py", ROOT / "sources.lock.yaml"]),
@@ -403,6 +508,8 @@ def write_evidence() -> list[Path]:
         ("compiler.runtime-shapes", ["compiler.runtime-shapes-observable"], "test-report", "gradle-junit", "./gradlew :labs:compiler-runtime:test", lab, [ROOT / "labs" / "compiler-runtime"]),
         ("compiler.bytecode-inspection", ["compiler.bytecode-state-machine"], "compatibility", "jdk-javap", "python3 scripts/inspect_bytecode.py", bytecode, [ROOT / "labs" / "compiler-runtime", ROOT / "scripts" / "inspect_bytecode.py"]),
         ("quality.testing-oracles", ["testing.cross-surface-oracles"], "test-report", "kotlin-atlas-verifier", "./gradlew atlasCheck", lab, [ROOT / "labs"]),
+        ("quality.non-regression-baseline", ["quality.public-main-never-regresses"], "compatibility", "kotlin-atlas-baseline-gate", "python3 scripts/verify_non_regression.py", non_regression, [ROOT / "scripts" / "verify_non_regression.py", ROOT / "baseline" / "public-main-v0.2.0.json"]),
+        ("quality.kotlin-depth-parity-gate", ["quality.kotlin-depth-parity-gaps-block-definitive"], "compatibility", "kotlin-depth-parity-gate", "python3 scripts/verify_fe_parity.py", fe_parity, [ROOT / "scripts" / "verify_fe_parity.py", ROOT / "atlas" / "definitive" / "kotlin-depth-parity.json", ROOT / "baseline" / "fe-depth-reference-v1.json"]),
         ("performance.measurement", ["performance.harness-reports-median"], "benchmark", "gradle-junit", "./gradlew :labs:engineering:test", lab, [ROOT / "labs" / "engineering"]),
         ("security.boundaries", ["security.boundaries-reject-unsafe-input"], "attack", "gradle-junit", "./gradlew :labs:engineering:test", lab, [ROOT / "labs" / "engineering"]),
         ("failure.debugging", ["failure.diagnostic-preserves-cause"], "recovery", "gradle-junit", "./gradlew :labs:engineering:test", lab, [ROOT / "labs" / "engineering"]),
@@ -422,6 +529,15 @@ def write_evidence() -> list[Path]:
             record["environment"] = {"profile": "container", "manifest_digest": sha256_file(ROOT / "environments" / "container.json")}
         write_json(path, record)
         paths.append(path)
+    workbench_path = ROOT / "evidence" / "workbench.jvm-runtime.evidence.json"
+    workbench = load_json(workbench_path)
+    workbench["source_digest"] = sha256_file(ROOT / "sources.lock.yaml")
+    workbench["harness_digest"] = sha256_file(ROOT / workbench["harness_path"])
+    workbench_artifact = ROOT / workbench["artifact"]["uri"]
+    workbench["artifact"]["digest"] = sha256_file(workbench_artifact)
+    workbench["artifact"]["size_bytes"] = workbench_artifact.stat().st_size
+    write_json(workbench_path, workbench)
+    paths.append(workbench_path)
     return paths
 
 
@@ -550,6 +666,39 @@ def validate_completion_certificate(evidence_paths: list[Path]) -> dict:
     return result
 
 
+def summarize_gap_ledger() -> dict:
+    gap_count = 0
+    state_counts: dict[str, int] = {}
+    for raw_line in (ROOT / "atlas" / "definitive" / "gap-ledger.yaml").read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if line.startswith("- id:"):
+            gap_count += 1
+        elif line.startswith("state:"):
+            state = line.split(":", 1)[1].strip()
+            state_counts[state] = state_counts.get(state, 0) + 1
+    if gap_count == 0 or sum(state_counts.values()) != gap_count:
+        raise RuntimeError("Gap Ledgerを決定論的に集計できない")
+    return {"gap_count": gap_count, "state_counts": dict(sorted(state_counts.items()))}
+
+
+def audit_definitive_incomplete() -> dict:
+    base = run([str(ROOT / "bin" / "atlas"), "audit", "."], capture=True)
+    definitive = run_expect_failure([str(ROOT / "bin" / "atlas"), "audit", ".", "--gate", "definitive"])
+    if not definitive.stdout or "subject-definitive" not in definitive.stdout:
+        raise RuntimeError("Definitive Gateが未完理由を返さない")
+    result = {
+        "base_audit": base.stdout.strip(),
+        "definitive_audit_exit_code": definitive.returncode,
+        "definitive_audit_output": definitive.stdout.strip(),
+        "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
+        "active_definitive_certificate": None,
+        "completion_class": "incomplete",
+        "verdict": "incomplete",
+    }
+    write_json(ARTIFACTS / "definitive-audit.json", result)
+    return result
+
+
 def main(*, skip_container: bool = False) -> None:
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
     manifest_result = validate_manifests()
@@ -563,18 +712,28 @@ def main(*, skip_container: bool = False) -> None:
         container_result = validate_container_profile()
     skill_result = run_skill_evals()
     rights_result = validate_rights()
+    non_regression_result = validate_non_regression()
+    fe_parity_result = validate_fe_parity()
+    neutral_language_result = validate_neutral_language()
+    gaps = summarize_gap_ledger()
     summary = {
         "atlas_id": "kotlin-reference-atlas",
         "epoch": "2026-08-28",
-        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "rights_metadata": rights_result["verdict"]},
-        "completion_gaps": [] if load_json(ROOT / "atlas.yaml")["status"] == "complete" else [
-            "Core Control Plane v1のthird-party kindにMaven/npmがなく、auditが全Atlasへgo.modを要求する",
-            "Core互換修正後のCompletion Certificateとlocal release tag",
+        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "definitive": "expected-incomplete"},
+        "kotlin_depth_parity": {"axis_count": fe_parity_result["axis_count"], "status_counts": fe_parity_result["status_counts"], "total_axis_gaps": fe_parity_result["total_axis_gaps"], "all_axes_closed": fe_parity_result["all_axes_closed"], "reference_commit": fe_parity_result["reference_commit"]},
+        "completion_class": "incomplete",
+        "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
+        "authority_surface_inventory": {"artifacts": manifest_result["authority_artifacts"], "behaviors": manifest_result["authority_behaviors"]},
+        "gap_ledger": gaps,
+        "completion_gaps": [
+            "69 Authority由来Behaviorに対する専用Claim/Proofと18 AxisのScenario Matrixが未閉鎖",
+            "8 Outcomeと14 Surfaceを網羅するDefinitive Skill Evalが未閉鎖",
+            "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖",
         ],
-        "recorded_infeasible": ["platform.native-runtime: Full Xcode unavailable"] if deep_result["native_runtime"]["verdict"] == "infeasible" else [],
-        "recommended_open": ["reference-system.automation-workbench"],
+        "recorded_infeasible": ["platform.native-runtime: Full Xcode unavailable; KLIB compileはRuntime Evidenceの代替ではない"] if deep_result["native_runtime"]["verdict"] == "infeasible" else [],
+        "recommended_open": ["Gap LedgerのBehavior別Proof closure", "Automation WorkbenchのPlatform横断Runtimeと比較Variant"],
         "repository_status": load_json(ROOT / "atlas.yaml")["status"],
-        "verdict": "pass",
+        "verdict": "implementation-pass-definitive-incomplete",
     }
     write_json(ARTIFACTS / "verification-summary.json", summary)
     claim_paths = write_claims()
@@ -596,8 +755,8 @@ def main(*, skip_container: bool = False) -> None:
         validate_completion_certificate(evidence_paths)
         run([str(ROOT / "bin" / "atlas"), "audit", "."])
     else:
-        run([str(ROOT / "bin" / "atlas"), "audit", "."])
-    print(f"検証完了: all gates passed; repository status={load_json(ROOT / 'atlas.yaml')['status']}.")
+        audit_definitive_incomplete()
+    print(f"検証完了: implementation gates passed; Definitive Gateは期待どおり未完; repository status={load_json(ROOT / 'atlas.yaml')['status']}.")
 
 
 if __name__ == "__main__":

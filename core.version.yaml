@@ -1,8 +1,8 @@
 {
   "repository": "reference-atlas-core",
-  "version": "architecture-v1",
-  "commit": "b32f6afe888e2e07eef0e2e016f6f7d139582159",
-  "archive_sha256": "15360911a1a7b6d6f4772bbaec4280f2990c68645f49ec261db7f0b4836858c5",
+  "version": "definitive-gate-v2",
+  "commit": "be19ddaa411fe60dcf12f0f5d457902bb57b9eb3",
+  "archive_sha256": "2610dae39f7a2299572d614a8e963b4d6406602b92653be1f10586ed75fad7f5",
   "release_state": "commit-pinned",
-  "note_ja": "Control Plane v1とMaven/npm Supply-chain監査を含むCore完成commitを固定する。"
+  "note_ja": "Control Plane v1を維持し、compile-onlyをRuntime Evidenceの代替として拒否するDefinitive Gate v2完成commitを固定する。"
 }

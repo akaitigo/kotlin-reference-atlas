@@ -6,8 +6,8 @@
 
 ## Automation Workbench
 
-以前の設計で定義したAutomation Workbenchは破棄しません。ただし初回Epochで製品実装へ着手するとClaim/Evidence基盤よりDomain codeが先行するため、`reference-system.automation-workbench`を`planned`として保持します。
+以前の設計で定義したAutomation Workbenchは、Definitive v2再監査で統合Reference Systemとして実装を開始しました。`reference-systems/automation-workbench`はJVM上で正常、境界、拒否、障害、回復、backpressure、context、cancellation、Strict／Normalize比較を実行します。全Platform RuntimeとBehavior専用Evidence／Skill Evalへ未接続のため、状態は`partial`です。
 
 ## 完成状態
 
-Local Gateが通ってもContainer profileとInventory Closureが未完了なので、Repository statusは`incomplete`を維持します。
+Local／Containerのbounded実装Gateが通っても、69 Behaviorの10 Scenario Matrix、Platform実Runtime、比較Variant、Definitive Skill Evalが未閉鎖なので、Repository statusは`incomplete`を維持します。

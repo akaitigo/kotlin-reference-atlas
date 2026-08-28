@@ -1,0 +1,36 @@
+{
+  "baseline_commit": "e42f23d616b9172bddc0a35679f111d4aab7e43b",
+  "baseline_id": "public-main-v0.2.0",
+  "baseline_minimum_counts": {
+    "assertions": 56,
+    "capabilities": 23,
+    "ci_jobs": 2,
+    "claims": 25,
+    "evidence": 24,
+    "lab_modules": 9,
+    "proof_obligations": 27,
+    "skill_eval_cases": 18,
+    "sources": 8,
+    "target_sets": 13,
+    "targets": 28,
+    "test_cases": 34,
+    "test_files": 9
+  },
+  "counts": {
+    "baseline_assertions": 56,
+    "baseline_test_annotations": 30,
+    "capabilities": 26,
+    "claims": 28,
+    "evidence": 27,
+    "executed_test_cases": 42,
+    "proof_obligations": 30,
+    "skill_eval_cases": 18,
+    "sources": 18,
+    "target_sets": 13,
+    "targets": 30
+  },
+  "replacements": [],
+  "schema_version": 1,
+  "verdict": "pass",
+  "violations": []
+}
