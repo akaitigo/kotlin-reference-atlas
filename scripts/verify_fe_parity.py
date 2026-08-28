@@ -108,6 +108,8 @@ def main() -> None:
         errors.append("FE正本とKotlin mappingの18 Axis ID集合が一致しない")
     if matrix.get("proof_unit") != reference.get("proof_unit"):
         errors.append("Behavior×Scenario×Profile×Proof×ArtifactのProof粒度が不一致")
+    if matrix.get("closure_proof_unit") != "one authority-derived atomic behavior × one mapped Surface × one required scenario × every applicable implementation/runtime/platform Variant × one first-attempt retry-zero falsifiable proof × dedicated Oracle/Trace/Artifact":
+        errors.append("Surface×Scenario×全Variantの専用Closure Proof粒度が不一致")
     local_reference = verify_local_reference(REFERENCE_ARTIFACTS, errors)
 
     for axis in matrix["axes"]:

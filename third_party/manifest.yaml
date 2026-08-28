@@ -16,7 +16,7 @@
       "name": "reference-atlas-core",
       "redistribution": "link-only",
       "source": "https://github.com/akaitigo/reference-atlas-core",
-      "version": "1ea027babf3a8d6720ac617c56988e447695ba63"
+      "version": "7c9313cfb3e3149af455976228b44bbcb706bf40"
     },
     {
       "id": "gradle-distribution",

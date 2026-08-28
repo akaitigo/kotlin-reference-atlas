@@ -17,7 +17,7 @@ gaps:
       - 9 Authorityの固定本文をcopyright-safeな一時入力として再取得し、digest一致・stale・failedをSource別に評価する
       - 既存69 reference edgeとは別に本文全体からLocator offset候補を抽出し、未分類Surfaceをゼロにする
       - 抽出候補をHuman reviewし、Behavior・Variant・Claim・Proof・Evidenceへ接続する
-      - Queue済み146146 raw anchor候補を件数だけで達成扱いせず、一次資料を確認したHuman decisionとreviewer・time・reason・digest・locator・mapping・result整合後に必要な候補だけをSemantic Surface・Atomic behaviorへ昇格する
+      - Queue済み146393 candidate anchorを件数だけで達成扱いせず、一次資料を確認したHuman decisionとreviewer・time・reason・digest・locator・mapping・result整合後に必要な候補だけをSemantic Surface・Atomic behaviorへ昇格する
   - id: types.subtyping-and-inference
     area: types
     state: partial

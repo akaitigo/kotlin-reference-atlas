@@ -1,0 +1,30 @@
+{
+  "command": "not-run: dedicated Pattern Scenario Variant suites remain planned",
+  "counts": {
+    "failed": 0,
+    "flaky": 0,
+    "passed": 0,
+    "rows": 0,
+    "skipped": 0,
+    "total": 0,
+    "variants": 0
+  },
+  "created_at": "2026-08-28T00:00:00+09:00",
+  "environment": {
+    "architecture": "not-recorded",
+    "build_tool": "not-recorded",
+    "compiler": "not-recorded",
+    "execution": "not-run",
+    "platform": "not-recorded",
+    "retries": 0,
+    "runtime": "not-recorded",
+    "trace_mode": "required-but-not-recorded"
+  },
+  "harness_digest": "sha256:6a0f4925141d36866ffbd9b695655421d7eccbed8237d8b8f192c4b4fefbae12",
+  "id": "kotlin-pattern-scenario-runtime-gap-v1",
+  "profile": "unexecuted-dedicated-runtime-gap",
+  "schema_version": 1,
+  "source_digest": "sha256:8ffcf127bf134d920a2f8b549a322959890d22c215e4a1416a994cc6a5164de4",
+  "status": "failed",
+  "tests": []
+}

@@ -1,0 +1,11 @@
+{
+  "classification": "deterministic-runtime-state-snapshot-not-behavior-proof",
+  "scenario": "boundary",
+  "schema_version": 1,
+  "source_trace": {
+    "bytes": 3400,
+    "digest": "sha256:d29e338204de80dc279b7c9bf6bb0db6eedf302522bdfdcb7b912f16b7006052",
+    "path": "evidence/scenarios/integrated/boundary.trace.json"
+  },
+  "status": "passed"
+}

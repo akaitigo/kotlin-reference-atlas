@@ -1,9 +1,30 @@
 schema_version: 2
 atlas_id: kotlin-reference-atlas
 baseline:
-  path: baselines/definitive-c0e9b1c.non-regression-baseline.json
-  digest: sha256:327a2e2cf6ba7fb3688fc9635da5fd04e72b741b1ee230a47963175d8d8a8e32
+  path: baselines/definitive-c0e9b1c.core-7c9313c.non-regression-baseline.json
+  digest: sha256:45436a7b87f503af252f8e98f96860745cdfeaad80f7a9aa45cb29b8ddf7e9f3
+baseline_upgrade:
+  mode: monotonic-capture-contract-extension
+  from:
+    path: baselines/definitive-c0e9b1c.non-regression-baseline.json
+    digest: sha256:327a2e2cf6ba7fb3688fc9635da5fd04e72b741b1ee230a47963175d8d8a8e32
+  reason: Core 7c9313cのScenario Proof／Closure Plan Collectionを旧全項目を保持した空Collectionとして追加する単調capture契約拡張である。
+  migration_evidence_ids: [evolution.compatibility-migration]
 replacements:
+  - collection: targets
+    old_id: reference-system.automation-workbench
+    new_ids: [reference-system.automation-workbench]
+    equivalence: equal-or-stronger
+    reason: 既存JVM Workbenchを保持し、10 Scenario専用rowと明示Gap Evidenceを追加した同一Targetへ移行する。
+    execution_proof_evidence_ids: [workbench.jvm-runtime]
+    migration_evidence_ids: [evolution.compatibility-migration]
+  - collection: ci_jobs
+    old_id: .github/workflows/ci.yml:validate
+    new_ids: [.github/workflows/ci.yml:validate]
+    equivalence: equal-or-stronger
+    reason: macOS validate JobのPlatformと全Gateを維持し、Core固定commitをd535へ更新してScenario/Trace Gateを追加する。
+    execution_proof_evidence_ids: [workbench.jvm-runtime]
+    migration_evidence_ids: [evolution.compatibility-migration]
   - collection: tests_labs
     old_id: test-harness:scripts/verify.py
     new_ids: [test-harness:scripts/verify.py]
@@ -11,10 +32,17 @@ replacements:
     reason: 既存全Gateを維持した同一HarnessへCore標準非後退とcopyright-safe Authority locator検証を追加する強化である。
     execution_proof_evidence_ids: [workbench.jvm-runtime]
     migration_evidence_ids: [evolution.compatibility-migration]
+  - collection: tests_labs
+    old_id: test-harness:scripts/verify_fe_parity.py
+    new_ids: [test-harness:scripts/verify_fe_parity.py]
+    equivalence: equal-or-stronger
+    reason: 既存18軸Parity検証を維持し、Surface×Scenario×全Variantの専用Closure Proof粒度を追加する。
+    execution_proof_evidence_ids: [workbench.jvm-runtime]
+    migration_evidence_ids: [evolution.compatibility-migration]
   - collection: sources
     old_id: reference-atlas-core-definitive-v2
     new_ids: [reference-atlas-core-definitive-v2]
     equivalence: equal-or-stronger
-    reason: Core v2のRuntime代替拒否を維持し、Authority Extraction独立Gateを追加したfeature tipへ固定更新する。
+    reason: Core v2のRuntime代替拒否とAuthority Gateを維持し、exact Pattern×Scenario×全VariantのScenario/Trace Gateを追加したd535 feature tipへ固定更新する。
     execution_proof_evidence_ids: [workbench.jvm-runtime]
     migration_evidence_ids: [evolution.compatibility-migration]

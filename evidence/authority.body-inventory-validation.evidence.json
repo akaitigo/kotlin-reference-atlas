@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:6283b4d8696c390e7899a7d14b96f2dadeb591e56d6d12b5d6d3bcc4d3d3da2b",
+    "digest": "sha256:a95cddf84c68a98bf877e63ff57e6c75aea054b58bc98f8a569c64dc831dc303",
     "media_type": "application/json",
-    "size_bytes": 839,
+    "size_bytes": 1067,
     "uri": "evidence/artifacts/authority-body-inventory-validation.json"
   },
   "atlas_id": "kotlin-reference-atlas",
@@ -15,13 +15,13 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:ad72b165b842a71461ecb3634883ea1b5c9345e3679fc7cde887814e87966dc8",
+  "harness_digest": "sha256:16b3d36c77ac086559c0fc76274a4c47793c068abb278cd10143365728ff3458",
   "harness_path": "authority/body-inventory.snapshot.json",
   "id": "authority.body-inventory-validation",
   "kind": "capture",
   "producer": "kotlin-authority-body-inventory-verifier",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:3e21c001526a260e711f5b3c95ecc6cce76dc525317d71115bdaaf7f06d035de",
+  "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
   "verdict": "pass"
 }

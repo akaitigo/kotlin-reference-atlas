@@ -6,7 +6,7 @@
 - Gradle: 9.5.0
 - kotlinx.coroutines: 1.11.0
 - JVM bytecode target: 17
-- Reference Atlas Core Definitive Gate v2: `1ea027babf3a8d6720ac617c56988e447695ba63`
+- Reference Atlas Core Definitive Gate v2: `7c9313cfb3e3149af455976228b44bbcb706bf40`
 - Gradle依存: `gradle.lockfile`と`gradle/verification-metadata.xml`でVersionとSHA-256を固定
 
 ## bounded v0.2.0で閉じた範囲
@@ -20,7 +20,7 @@
 
 ## Definitive v2で再開した範囲
 
-公式Spec／Docs／KEEP／Compiler／stdlib／Native runtime／coroutines／serialization／Gradleから既存reference edgeとして69 Behaviorを分類した。これはAuthority本文全体の網羅抽出ではない。9 Sourceを7 unique Git documentへ正規化し、`repository-root`と`tracked-blob`の固定selectorから146146 raw anchor候補を列挙して全件Review Queueへ割り当てたが、全件`pending-human`でありQueue件数はDepth達成へ算入しない。`atlas/definitive/gap-ledger.yaml`の30 Gapを閉じ、Human decision後のSurface昇格、10 Scenario Matrix、実Runtime Evidenceが揃うまでは`incomplete`とする。
+公式Spec／Docs／KEEP／Compiler／stdlib／Native runtime／coroutines／serialization／Gradleから既存reference edgeとして69 Behaviorを分類した。これはAuthority本文全体の網羅抽出ではない。18 Source Lock entryを16 documentへ正規化し、固定selectorから146393 candidate anchorを列挙して全件Review Queueへ割り当てたが、全件`pending-human`でありQueue件数はDepth達成へ算入しない。10 Scenario統合Traceと69×10専用rowは作成済みだが、4590 Surface×Scenario×Variant cellは全て専用実行未閉鎖の明示Gapで、Authority atomic／completion eligibleも0である。690未閉鎖rowはrisk順180 trancheのClosure Planへ固定した。`atlas/definitive/gap-ledger.yaml`の30 Gapを閉じ、Human decision後のSurface昇格と全適用cellの専用実Runtime Evidenceが揃うまでは`incomplete`とする。
 
 ## Blockedと対象外
 

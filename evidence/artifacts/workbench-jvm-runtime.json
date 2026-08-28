@@ -1,117 +1,290 @@
 {
-  "schema_version": 1,
-  "suite": "automation-workbench-jvm",
-  "verdict": "pass",
-  "runtime": {
-    "platform": "jvm",
-    "identity": "Homebrew OpenJDK 17.0.17+0 aarch64",
-    "kotlin": "2.4.10",
-    "kotlinx_coroutines": "1.11.0"
-  },
-  "scenarios": {
-    "normal": [
-      "normal execution emits context attempt and immutable artifact"
-    ],
-    "boundary": [
-      "boundary policy compares strict rejection with normalization"
-    ],
-    "rejection": [
-      "invalid identifier and attempt limit are rejected before execution",
-      "bounded dispatcher exposes backpressure and closed recovery path"
-    ],
-    "failure": [
-      "permanent failure is categorized and observable",
-      "cancellation is not converted into failure and active gauge recovers"
-    ],
-    "recovery": [
-      "transient failure recovers within bounded retry budget",
-      "duplicate execution returns stored artifact without rerunning step"
-    ]
-  },
   "comparison_variants": [
     "strict",
     "normalize"
   ],
-  "runtime_trace": [
+  "counts": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 13
+  },
+  "identity": {
+    "build_tool": {
+      "name": "Gradle Wrapper",
+      "version": "9.5.0"
+    },
+    "compiler": {
+      "backend": "JVM IR",
+      "name": "Kotlin",
+      "version": "2.4.10"
+    },
+    "platform": {
+      "architecture": "arm64",
+      "name": "JVM",
+      "os": "Darwin"
+    },
+    "runtime": {
+      "identity": "openjdk version \"17.0.17\" 2025-10-21",
+      "name": "OpenJDK"
+    }
+  },
+  "integrated_traces": [
     {
+      "digest": "sha256:eb7b7cc2cda50aefc9eed3b5ed9df8345c774485a7306d0d6d9780c7e5241e6d",
+      "path": "evidence/scenarios/integrated/normal.trace.json",
+      "rows": 1,
       "scenario": "normal",
-      "variant": "strict",
-      "events": "Accepted,Attempted,Completed",
-      "outcome": "completed",
-      "artifact_digest": "6f3fae14a8708227c92a22b452ca0731114c5d3e46c820a57845847caefb415d",
-      "health": "0/1/0"
+      "target_ids": [
+        "reference-system.automation-workbench",
+        "semantics.language-core"
+      ]
     },
     {
+      "digest": "sha256:d29e338204de80dc279b7c9bf6bb0db6eedf302522bdfdcb7b912f16b7006052",
+      "path": "evidence/scenarios/integrated/boundary.trace.json",
+      "rows": 2,
       "scenario": "boundary",
-      "variant": "strict",
-      "events": "Rejected",
-      "outcome": "rejected",
-      "artifact_digest": "-",
-      "health": "0/0/0"
+      "target_ids": [
+        "semantics.type-system",
+        "security.input-boundaries"
+      ]
     },
     {
-      "scenario": "boundary",
-      "variant": "normalize",
-      "events": "Accepted,Attempted,Completed",
-      "outcome": "task",
-      "artifact_digest": "0ebb429fa86d481c2630fac53db1c91cffed5d4d41d1021c179444eb67e7ee0b",
-      "health": "0/1/0"
+      "digest": "sha256:6c438efb1236afe46d68c6fdc1742432f0fc9ceb70abc69a8c1aa25c17aca2f8",
+      "path": "evidence/scenarios/integrated/refusal.trace.json",
+      "rows": 1,
+      "scenario": "refusal",
+      "target_ids": [
+        "security.input-boundaries"
+      ]
     },
     {
-      "scenario": "recovery",
-      "variant": "bounded-retry",
-      "events": "Accepted,Attempted,Attempted,Recovered,Completed",
-      "outcome": "completed",
-      "artifact_digest": "0ebb429fa86d481c2630fac53db1c91cffed5d4d41d1021c179444eb67e7ee0b",
-      "health": "0/1/0"
-    },
-    {
+      "digest": "sha256:ccdf7223d76a9557697829f52fc5f60fb165087ab06ae0b86aafb78dede8ff5f",
+      "path": "evidence/scenarios/integrated/failure.trace.json",
+      "rows": 2,
       "scenario": "failure",
-      "variant": "permanent",
-      "events": "Accepted,Attempted,Failed",
-      "outcome": "permanent",
-      "artifact_digest": "-",
-      "health": "0/0/1"
+      "target_ids": [
+        "concurrency.structured-cancellation",
+        "quality.failure-debugging"
+      ]
     },
     {
+      "digest": "sha256:482b2fe4a9e8d048f633e6d4cd5d12a2a62250c5529d8e9c04ec1c068f73ed11",
+      "path": "evidence/scenarios/integrated/recovery.trace.json",
+      "rows": 2,
       "scenario": "recovery",
-      "variant": "idempotent-replay",
-      "events": "Completed",
-      "outcome": "stored-artifact",
-      "artifact_digest": "0ebb429fa86d481c2630fac53db1c91cffed5d4d41d1021c179444eb67e7ee0b",
-      "health": "0/1/0"
+      "target_ids": [
+        "concurrency.flow-pipelines",
+        "operation.lifecycle-recovery"
+      ]
     },
     {
-      "scenario": "rejection",
-      "variant": "bounded-channel",
-      "events": "Accepted,Backpressured,Closed",
-      "outcome": "backpressure-then-closed",
-      "artifact_digest": "-",
-      "health": "-"
+      "digest": "sha256:b47a6c4e57ab9ea83f09197ea5a5cf0a03672cbe22c87572bb99808edc18e741",
+      "path": "evidence/scenarios/integrated/migration.trace.json",
+      "rows": 1,
+      "scenario": "migration",
+      "target_ids": [
+        "evolution.compatibility-migration"
+      ]
     },
     {
-      "scenario": "failure",
-      "variant": "cancellation",
-      "events": "Accepted,Attempted,Cancelled",
-      "outcome": "propagated",
-      "artifact_digest": "-",
-      "health": "0/0/0"
+      "digest": "sha256:c7e553d640d78afea957b497922e78561af59b61753b5b6403658b7e48b41b7f",
+      "path": "evidence/scenarios/integrated/operations.trace.json",
+      "rows": 1,
+      "scenario": "operations",
+      "target_ids": [
+        "operation.lifecycle-recovery",
+        "operation.local-evidence"
+      ]
+    },
+    {
+      "digest": "sha256:1fe9c3fd7c92c06990d27c11a4e844a568dc00efcfd76586a1fbe80b9880b6f2",
+      "path": "evidence/scenarios/integrated/security.trace.json",
+      "rows": 1,
+      "scenario": "security",
+      "target_ids": [
+        "security.input-boundaries",
+        "build.toolchain-lock"
+      ]
+    },
+    {
+      "digest": "sha256:5fa1c97d3eef1fdadb05e43f5758a3cdf13a503c3af459b4073f17d3be036ec1",
+      "path": "evidence/scenarios/integrated/performance.trace.json",
+      "rows": 1,
+      "scenario": "performance",
+      "target_ids": [
+        "performance.measurement-harness"
+      ]
+    },
+    {
+      "digest": "sha256:b3218cb82df5639803fd39493f2a90d0eac7b1e223d6a462c6ba7a59dcd9214d",
+      "path": "evidence/scenarios/integrated/compatibility.trace.json",
+      "rows": 1,
+      "scenario": "compatibility",
+      "target_ids": [
+        "platform.jvm-js-wasm-runtime",
+        "interop.java-consumer"
+      ]
     }
   ],
+  "runtime_trace": [
+    {
+      "artifact_digest": "6f3fae14a8708227c92a22b452ca0731114c5d3e46c820a57845847caefb415d",
+      "events": "Accepted,Attempted,Completed",
+      "health": "0/1/0",
+      "outcome": "completed",
+      "scenario": "normal",
+      "variant": "strict"
+    },
+    {
+      "artifact_digest": "-",
+      "events": "Rejected",
+      "health": "0/0/0",
+      "outcome": "rejected",
+      "scenario": "boundary",
+      "variant": "strict"
+    },
+    {
+      "artifact_digest": "0ebb429fa86d481c2630fac53db1c91cffed5d4d41d1021c179444eb67e7ee0b",
+      "events": "Accepted,Attempted,Completed",
+      "health": "0/1/0",
+      "outcome": "task",
+      "scenario": "boundary",
+      "variant": "normalize"
+    },
+    {
+      "artifact_digest": "0ebb429fa86d481c2630fac53db1c91cffed5d4d41d1021c179444eb67e7ee0b",
+      "events": "Accepted,Attempted,Attempted,Recovered,Completed",
+      "health": "0/1/0",
+      "outcome": "completed",
+      "scenario": "recovery",
+      "variant": "bounded-retry"
+    },
+    {
+      "artifact_digest": "-",
+      "events": "Accepted,Attempted,Failed",
+      "health": "0/0/1",
+      "outcome": "permanent",
+      "scenario": "failure",
+      "variant": "permanent"
+    },
+    {
+      "artifact_digest": "0ebb429fa86d481c2630fac53db1c91cffed5d4d41d1021c179444eb67e7ee0b",
+      "events": "Completed",
+      "health": "0/1/0",
+      "outcome": "stored-artifact",
+      "scenario": "recovery",
+      "variant": "idempotent-replay"
+    },
+    {
+      "artifact_digest": "-",
+      "events": "Accepted,Backpressured,Closed",
+      "health": "-",
+      "outcome": "backpressure-then-closed",
+      "scenario": "refusal",
+      "variant": "bounded-channel"
+    },
+    {
+      "artifact_digest": "-",
+      "events": "Accepted,Attempted,Cancelled",
+      "health": "0/0/0",
+      "outcome": "propagated",
+      "scenario": "failure",
+      "variant": "cancellation"
+    },
+    {
+      "artifact_digest": "388b558b10dfd8596ab3f8d958217a9ccc1b023f24d766da1e4fabc42c87eb9e",
+      "events": "Accepted,Attempted,Completed",
+      "health": "0/1/0",
+      "outcome": "legacy-payload",
+      "scenario": "migration",
+      "variant": "v1-normalize-to-v2"
+    },
+    {
+      "artifact_digest": "0ebb429fa86d481c2630fac53db1c91cffed5d4d41d1021c179444eb67e7ee0b",
+      "events": "Accepted,Attempted,Completed",
+      "health": "0/1/0",
+      "outcome": "quiescent",
+      "scenario": "operations",
+      "variant": "health-gauge"
+    },
+    {
+      "artifact_digest": "-",
+      "events": "RejectedBeforeExecution",
+      "health": "-",
+      "outcome": "IllegalArgumentException",
+      "scenario": "security",
+      "variant": "identifier-boundary"
+    },
+    {
+      "artifact_digest": "-",
+      "events": "Accepted,Backpressured",
+      "health": "-",
+      "outcome": "capacity-1",
+      "scenario": "performance",
+      "variant": "bounded-capacity"
+    },
+    {
+      "artifact_digest": "43a82b8ed77753c1365b3c88555e3dcf0649f19e314e5d2b42fac322a04ca09a",
+      "events": "Accepted,Attempted,Completed",
+      "health": "0/1/0",
+      "outcome": "kotlin-2.4.10:java-17",
+      "scenario": "compatibility",
+      "variant": "jvm-runtime"
+    }
+  ],
+  "scenarios": {
+    "boundary": [
+      "rejected",
+      "task"
+    ],
+    "compatibility": [
+      "kotlin-2.4.10:java-17"
+    ],
+    "failure": [
+      "permanent",
+      "propagated"
+    ],
+    "migration": [
+      "legacy-payload"
+    ],
+    "normal": [
+      "completed"
+    ],
+    "operations": [
+      "quiescent"
+    ],
+    "performance": [
+      "capacity-1"
+    ],
+    "recovery": [
+      "completed",
+      "stored-artifact"
+    ],
+    "refusal": [
+      "backpressure-then-closed"
+    ],
+    "security": [
+      "IllegalArgumentException"
+    ]
+  },
+  "schema_version": 2,
+  "suite": "automation-workbench-jvm",
   "tests": [
     "boundary policy compares strict rejection with normalization",
     "bounded dispatcher exposes backpressure and closed recovery path",
     "cancellation is not converted into failure and active gauge recovers",
+    "compatibility records current JVM execution identity",
     "duplicate execution returns stored artifact without rerunning step",
     "invalid identifier and attempt limit are rejected before execution",
+    "migration normalizes legacy payload into current representation",
     "normal execution emits context attempt and immutable artifact",
+    "operations expose quiescent health after completion",
+    "performance boundary keeps dispatcher capacity finite",
     "permanent failure is categorized and observable",
+    "security rejects traversal shaped workflow identity",
     "transient failure recovers within bounded retry budget"
   ],
-  "counts": {
-    "tests": 8,
-    "failures": 0,
-    "errors": 0,
-    "skipped": 0
-  }
+  "verdict": "pass"
 }

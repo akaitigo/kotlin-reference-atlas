@@ -32,7 +32,8 @@
     "body_storage": "digest-and-locator-context-digest-only",
     "method": "locked-body-locator-context-digest",
     "review_status": "automated-unreviewed",
-    "tool": "kotlin-reference-atlas-core-authority-extractor-v1"
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v1",
+    "tool_digest": "sha256:d8232525954a5629e032aff9dd29ea4efc47b38c14beb1069cf1afa443cb9eff"
   },
   "fetch": {
     "content_type": null,

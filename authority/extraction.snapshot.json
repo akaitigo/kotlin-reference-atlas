@@ -2,12 +2,12 @@
   "atlas_id": "kotlin-reference-atlas",
   "body_storage": "digest-and-locator-context-digest-only",
   "generated_at": "2026-08-28T00:00:00+09:00",
-  "input_digest": "sha256:42853f526b3f6dc3b4359eb10b540335deffda1c21c4274d53f6c0bfde2713c3",
+  "input_digest": "sha256:c1b250330e41104727899e19a830037517c001b66b17f04c144f6ce0d9200300",
   "schema_version": 1,
   "sources": [
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:7409dcaa87f6c196abb67a406485af16d59d67d6f2fbab2f3074d432d53fa31b",
+      "digest": "sha256:1b5a3c3340e87e476bdf932274e8728f5a9fd740ab2e7276ce16baca3aac3116",
       "id": "gradle-9.5.0",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -17,7 +17,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:f76ece009c0038b13a39d5e45c1797b53f3c081fcf3e55d10146b2168ceea1a7",
+      "digest": "sha256:23b2f2e478a442a862bc591f72fe5a9063ce507d8116e3c9c749ffcbe83b27d2",
       "id": "gradle-source-9.5.0",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -27,7 +27,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:0ab80ba7ad3dd9d993200f88459c3e8aaba4410eab33d33557afda80b40e599d",
+      "digest": "sha256:3978ca0228bf25acfbef4fc9acf2af683821a5554bb8bfda7de73450412462a1",
       "id": "kotlin-compiler-2.4.10",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -37,7 +37,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:3c35a06d44b665f21a967b1e132dfcac7d537b77d23fca73369d259995709dc5",
+      "digest": "sha256:66ab2e78debd09d346fb3b0b6c71528e6bf8200ce1e5beb5e206f9a110b7cff3",
       "id": "kotlin-compiler-source-2.4.10",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -47,7 +47,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:172e4d8dda9ef17eef0f7a579faa0ab290762e3b96f768ebb34f07815c24f63a",
+      "digest": "sha256:b1f4cda21cfebd1f982ec257a82b9fe7158df2edb5b229c0b916a521676e61ac",
       "id": "kotlin-docs-snapshot",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -57,7 +57,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:5bdb003ebec9e50e5df6b1e4be1e87804ef58268570b5ec2d87b2073aa660b3b",
+      "digest": "sha256:3efa7c232df4bc4a6baf5df6a3e4daa4a3effea46c78c0f3601f4bd2b3bb1660",
       "id": "kotlin-keep-snapshot",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -67,7 +67,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:e97cc6d6658191f78eb03f50b767568194b42aad9fcfec4ecb651b1114fe4e61",
+      "digest": "sha256:4d4c2328801f4cfaecfc40acc60f08f2a6372abc466c91cbbf15cb5587df0557",
       "id": "kotlin-native-macos-arm64-2.4.10",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -77,7 +77,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:b79787b59bb48c2ac703d6bc94c30d3151e9a1bd60862edfa77ae0766a981288",
+      "digest": "sha256:346316c8d80a6c89811b71e4abd4d4c7869e024b71f293d29ba7aa2e80b1867c",
       "id": "kotlin-native-source-2.4.10",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -87,7 +87,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:a0eb409b7d246529071da095bf224d320b84357f0dd0c83036fe2afd01d14340",
+      "digest": "sha256:302cbe3e5c41362df12907d4c550dfd3331259aee308865fa80a886febbfa30e",
       "id": "kotlin-spec-snapshot",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -97,7 +97,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:ab853bbd42e064c6af7c93bdefd96d2c5f10608df864de0200a4908c2fa2c697",
+      "digest": "sha256:4c3e83b39a59ceed9449e6d784281f38e6de5b962f279b0caf7c16f75fa62908",
       "id": "kotlin-stdlib-js-2.4.10",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -107,7 +107,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:bb5e2679323d5545848397eb1d6b8751954c0eb5b0e7ec54ffc59c6fa120f64f",
+      "digest": "sha256:afa420adeb6d7230cfe7cb05fa78167a936c7b7ee61d951ef332744a31944942",
       "id": "kotlin-stdlib-jvm-2.4.10",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -117,7 +117,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:047e1f31b3eff0d3dfafde975b78d34a79232cc1ff634c7166e0cf3c129ad27e",
+      "digest": "sha256:b948c73584eb785d1670a1ef96f0b1ceaacfae6e72aabe9e361b6e8fa281adcc",
       "id": "kotlin-stdlib-source-2.4.10",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -127,7 +127,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:c3cfe054120291d417e176e5d4ed48eb3ad4bc1de627fc35f812fca821d011b7",
+      "digest": "sha256:6c32e24e53db51e771d0993cc45c5e19290fb23d2b8e9440f5c7df3b121c6910",
       "id": "kotlin-stdlib-wasm-js-2.4.10",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -137,7 +137,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:6d01a2cdbe369b8dd96a1e04dc0fb1b8258b183cc963b6aff70747f98b8b40ce",
+      "digest": "sha256:0dfc86f4838dbf441e6fdc36570141ea2c89f113a1026a1d038a286e1eb8b663",
       "id": "kotlinx-coroutines-core-jvm-1.11.0",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -147,7 +147,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:2887b463b11cd5ace207fdd0ed511b15dbe4cb7b3383cd2e13a03c4ce018e696",
+      "digest": "sha256:b83404d345169a21166a58d4ad0bab776398b2a231fbe53722114e5f084e2484",
       "id": "kotlinx-coroutines-source-1.11.0",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -157,7 +157,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:2e4088e7ec12dbdda013cb2a0c698d15011e237b1c81599da6c10866f59d6d98",
+      "digest": "sha256:b96efd6ecaf13537e8eab338fbf86a6c217e0858de186afa518a93c6877fe570",
       "id": "kotlinx-serialization-source-snapshot",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -167,7 +167,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:bf1ebc839a1cd766f5c69260aa308e6e3ac3bcf4380efb5fcaddaab2e6f1a42a",
+      "digest": "sha256:cdb0dcf67be9231a5e41a93d849de3363f95d73f8dc012f90671584b380d83ec",
       "id": "reference-atlas-core-definitive-v2",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -177,7 +177,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:54de0bce03b36cdb5710d0b0127139e3dcaa4504d88fd3643e3c1e846aaf2223",
+      "digest": "sha256:68b6c92ecfbcb02647a02ee8a222146c1ae3d0d596b79f5895a1f55dd46e597b",
       "id": "reference-atlas-core-v1",
       "locator_status": {
         "not-evaluated-fetch-failed": 1
@@ -202,5 +202,6 @@
     "reference_edges_classified": 0,
     "root_locators": 0,
     "unclassified_reference_edges": 18
-  }
+  },
+  "tool_digest": "sha256:d8232525954a5629e032aff9dd29ea4efc47b38c14beb1069cf1afa443cb9eff"
 }

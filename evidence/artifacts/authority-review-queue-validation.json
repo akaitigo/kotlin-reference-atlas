@@ -13,27 +13,27 @@
   "schema_version": 1,
   "summary": {
     "authority_semantics_exhaustive": false,
+    "batches": 143,
+    "candidate_clusters": 9758,
+    "clustered_anchors": 43126,
     "decisions": 0,
-    "eligible_documents": 7,
+    "deferred": 0,
+    "eligible_documents": 16,
     "excluded": 0,
     "human_reviewed": 0,
     "included": 0,
     "merged": 0,
-    "pending_human": 146146,
-    "promoted_items": 0,
-    "queued_anchors": 146146,
-    "raw_anchors": 146146,
+    "pending_human": 146393,
+    "priority_counts": {
+      "0": 16,
+      "1": 92991,
+      "2": 53386
+    },
+    "queue_counts_as_depth_achievement": false,
+    "queued_anchors": 146393,
     "split": 0,
-    "stale_anchor_holds": 0,
     "stale_document_holds": 0,
-    "suggested_batches": 135,
-    "suggested_candidate_clusters": 9720,
-    "suggested_clustered_anchors": 43018,
-    "suggested_priority_counts": {
-      "0": 7,
-      "1": 92869,
-      "2": 53270
-    }
+    "unavailable_document_holds": 0
   },
   "verdict": "pass",
   "violations": []

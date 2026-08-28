@@ -10,14 +10,14 @@
       "context_end": null,
       "context_start": null,
       "context_unit": null,
-      "domain_reference_metadata_digest": "sha256:edd9dff31f02f3ca7f1b4a3c81c2749a65a5848a22fa7cd0529aed80a3094814",
+      "domain_reference_metadata_digest": "sha256:9fdfdd0d15526e4d3a703549396ece976b06a2b5af2008d58f53aca384065cc1",
       "edge_id": "edge.authority.reference-atlas-core-definitive-v2",
       "heading_digest": null,
       "locator": "document-root",
       "locator_status": "not-evaluated-fetch-failed",
       "pattern_id": "authority/reference-atlas-core-definitive-v2",
       "pattern_kind": "atomic",
-      "reference_url": "https://github.com/akaitigo/reference-atlas-core/commit/1ea027babf3a8d6720ac617c56988e447695ba63",
+      "reference_url": "https://github.com/akaitigo/reference-atlas-core/commit/7c9313cfb3e3149af455976228b44bbcb706bf40",
       "source_id": "reference-atlas-core-definitive-v2",
       "surface_ids": [
         "provenance-rights"
@@ -32,7 +32,8 @@
     "body_storage": "digest-and-locator-context-digest-only",
     "method": "locked-body-locator-context-digest",
     "review_status": "automated-unreviewed",
-    "tool": "kotlin-reference-atlas-core-authority-extractor-v1"
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v1",
+    "tool_digest": "sha256:d8232525954a5629e032aff9dd29ea4efc47b38c14beb1069cf1afa443cb9eff"
   },
   "fetch": {
     "content_type": null,
@@ -44,8 +45,8 @@
     "locked_digest_match": false,
     "status": "failed"
   },
-  "locked_source_digest": "sha256:e44891f765150a0c84c38cdf09483df4e49c146b360a8acb324d040ac89aff69",
+  "locked_source_digest": "sha256:bc36ad66c1b18658beeb06b096419a3688de8f25a075069d105528cdb8117ba0",
   "schema_version": 1,
   "source_id": "reference-atlas-core-definitive-v2",
-  "source_url": "https://github.com/akaitigo/reference-atlas-core/commit/1ea027babf3a8d6720ac617c56988e447695ba63"
+  "source_url": "https://github.com/akaitigo/reference-atlas-core/commit/7c9313cfb3e3149af455976228b44bbcb706bf40"
 }

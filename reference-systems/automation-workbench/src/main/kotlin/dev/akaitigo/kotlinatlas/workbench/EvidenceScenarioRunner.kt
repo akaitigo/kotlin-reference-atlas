@@ -84,7 +84,7 @@ fun main(arguments: Array<String>) = runBlocking {
     dispatcher.receive()
     dispatcher.close()
     val closedDispatch = dispatcher.submit(request("dispatch-closed", "c"))
-    traces += Trace("rejection", "bounded-channel", "$firstDispatch,$secondDispatch,$closedDispatch", "backpressure-then-closed")
+    traces += Trace("refusal", "bounded-channel", "$firstDispatch,$secondDispatch,$closedDispatch", "backpressure-then-closed")
 
     val entered = CompletableDeferred<Unit>()
     val cancellation = AutomationWorkbench(
@@ -103,6 +103,29 @@ fun main(arguments: Array<String>) = runBlocking {
     job.cancelAndJoin()
     check(job.isCancelled && cancellation.health() == WorkbenchHealth(0, 0, 0))
     traces += Trace("failure", "cancellation", "Accepted,Attempted,Cancelled", "propagated", health = health(cancellation))
+
+    val migrated = AutomationWorkbench(echoStep(), clock = fixedClock)
+    val legacyEvents = migrated.execute(request("migration", " Legacy-Payload "), InputPolicy.NORMALIZE)
+    val legacyArtifact = (legacyEvents.last() as WorkbenchEvent.Completed).artifact
+    traces += Trace("migration", "v1-normalize-to-v2", names(legacyEvents), legacyArtifact.normalizedPayload, legacyArtifact.digest, health(migrated))
+
+    val operational = AutomationWorkbench(echoStep(), clock = fixedClock)
+    val operationalEvents = operational.execute(request("operations", "task"), InputPolicy.STRICT)
+    traces += Trace("operations", "health-gauge", names(operationalEvents), "quiescent", (operationalEvents.last() as WorkbenchEvent.Completed).artifact.digest, health(operational))
+
+    val securityOutcome = runCatching { WorkflowId.parse("../escape") }.exceptionOrNull()!!::class.simpleName ?: "Unknown"
+    traces += Trace("security", "identifier-boundary", "RejectedBeforeExecution", securityOutcome)
+
+    val performanceDispatcher = BoundedDispatcher(capacity = 1)
+    val performanceFirst = performanceDispatcher.submit(request("performance-first", "a"))
+    val performanceSecond = performanceDispatcher.submit(request("performance-second", "b"))
+    traces += Trace("performance", "bounded-capacity", "$performanceFirst,$performanceSecond", "capacity-1")
+
+    val compatibilityRuntime = "java-${Runtime.version().feature()}"
+    val compatibility = AutomationWorkbench(echoStep(compatibilityRuntime), clock = fixedClock)
+    val compatibilityEvents = compatibility.execute(request("compatibility", "kotlin-2.4.10"), InputPolicy.STRICT)
+    val compatibilityArtifact = (compatibilityEvents.last() as WorkbenchEvent.Completed).artifact
+    traces += Trace("compatibility", "jvm-runtime", names(compatibilityEvents), compatibilityArtifact.normalizedPayload, compatibilityArtifact.digest, health(compatibility))
 
     val content = buildString {
         appendLine("scenario\tvariant\tevents\toutcome\tartifact_digest\thealth")

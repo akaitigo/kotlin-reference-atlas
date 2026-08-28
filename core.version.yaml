@@ -1,8 +1,8 @@
 {
   "repository": "reference-atlas-core",
   "version": "definitive-gate-v2",
-  "commit": "1ea027babf3a8d6720ac617c56988e447695ba63",
-  "archive_sha256": "e44891f765150a0c84c38cdf09483df4e49c146b360a8acb324d040ac89aff69",
+  "commit": "7c9313cfb3e3149af455976228b44bbcb706bf40",
+  "archive_sha256": "bc36ad66c1b18658beeb06b096419a3688de8f25a075069d105528cdb8117ba0",
   "release_state": "commit-pinned",
-  "note_ja": "Control Plane v1とRuntime代替拒否を維持し、Authority Locator Extractionを独立監査するDefinitive Gate v2 feature tipを固定する。"
+  "note_ja": "Control Plane v1、Authority Locator Extraction、Runtime代替拒否、旧bounded Certificate履歴を維持するDefinitive Gate v2確定tipを固定する。"
 }

@@ -1,0 +1,141 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "authority_source": {
+    "artifact_digest": "sha256:7718d456c71af37cb8c092c9027a7aa5f80b1b77a160df506460a629a178a627",
+    "artifact_digest_verified": true,
+    "artifact_id": "kotlin-native",
+    "artifact_path": "authority/surfaces/kotlin-native.authority-surfaces.yaml",
+    "locator": "kotlin-native/runtime/src/gc",
+    "source_id": "kotlin-native-source-2.4.10",
+    "surface_id": "native.runtime.gc"
+  },
+  "behavior_id": "native.gc-cycle-allocation",
+  "behavior_scope": "authority-inventory-candidate-not-human-reviewed-atomic",
+  "candidate_evidence": [],
+  "capability_id": "native.runtime",
+  "claim_ids": [
+    "platform.native-test-klib"
+  ],
+  "closure": {
+    "all_surface_scenario_variants_closed": false,
+    "authority_atomic_binding": false,
+    "behavior_specific_evidence": false,
+    "completion_eligible": false,
+    "dedicated_artifact": true,
+    "dedicated_oracle_trace_artifact_all_variants": false,
+    "dedicated_row": true,
+    "retained_identity": false,
+    "retry_zero_all_variants": false,
+    "scenario_applicable": true,
+    "unrelated_metadata_reuse_blocked": true
+  },
+  "gaps": [
+    "All 2 Surface×Scenario×Variant closure cells remain explicit gaps.",
+    "The mapped Claim is shared by multiple Authority inventory Behaviors and is not a dedicated Behavior proof.",
+    "No human-reviewed Authority anchor decision binds this Atomic behavior; completion credit is zero."
+  ],
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "id": "proof.behavior.native.gc-cycle-allocation.operations",
+  "integrated_reference": {
+    "manifest": {
+      "bytes": 33851,
+      "digest": "sha256:3abe4aa0f98c9daeb03e843125c81a68e235a19f9a87748e6ee45ca01f13dcbd",
+      "path": "integrations/reference-system/manifest.json"
+    },
+    "results": {
+      "bytes": 3983,
+      "digest": "sha256:a5946653c7a1707849cdd300c784228c7dca2762d206de6fcfb609853c5b834a",
+      "path": "evidence/scenarios/reference-system-results.json"
+    },
+    "reuse_as_behavior_specific_proof": false,
+    "target_mapped": false,
+    "trace": {
+      "digest": "sha256:c7e553d640d78afea957b497922e78561af59b61753b5b6403658b7e48b41b7f",
+      "path": "evidence/scenarios/integrated/operations.trace.json",
+      "rows": 1
+    }
+  },
+  "inventory_id": "inventory.native.gc-cycle-allocation",
+  "required_variants": [
+    "kotlin-2.4.10-native-macos-arm64-runtime"
+  ],
+  "scenario": "operations",
+  "schema_version": 1,
+  "specific_evidence": [],
+  "status": "explicit-gap",
+  "surface_ids": [
+    "performance-capacity-cost",
+    "operations-observability"
+  ],
+  "surface_scenario_variant_proofs": [
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.native.gc-cycle-allocation.performance-capacity-cost.operations.kotlin-2.4.10-native-macos-arm64-runtime",
+      "scenario": "operations",
+      "status": "explicit-gap",
+      "surface_id": "performance-capacity-cost",
+      "variant_id": "kotlin-2.4.10-native-macos-arm64-runtime"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.native.gc-cycle-allocation.operations-observability.operations.kotlin-2.4.10-native-macos-arm64-runtime",
+      "scenario": "operations",
+      "status": "explicit-gap",
+      "surface_id": "operations-observability",
+      "variant_id": "kotlin-2.4.10-native-macos-arm64-runtime"
+    }
+  ],
+  "target_id": "platform.native-runtime"
+}

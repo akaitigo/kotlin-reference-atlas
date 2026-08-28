@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+    "digest": "sha256:a07cab4cbf850ab792c87c92be20e533d8cd91be6b1f810b22aadaa694bd30fe",
     "media_type": "application/json",
-    "size_bytes": 10463,
+    "size_bytes": 11498,
     "uri": "evidence/artifacts/lab-results.json"
   },
   "atlas_id": "kotlin-reference-atlas",
@@ -15,13 +15,13 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:228d98bfc3dc1f06afe05999fa981dbfe40e6e28fc2a0f20c19de6375e6a1f37",
+  "harness_digest": "sha256:30807573610951fbd53ed562966c88cef3166b6359dcbfc086d71087955b945d",
   "harness_path": "docs/RUNBOOK.md",
   "id": "operation.lifecycle-recovery",
   "kind": "conformance",
   "producer": "gradle-junit",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:3e21c001526a260e711f5b3c95ecc6cce76dc525317d71115bdaaf7f06d035de",
+  "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
   "verdict": "pass"
 }

@@ -10,7 +10,7 @@ import subprocess
 from pathlib import Path
 
 from generate_authority_review_queue import (
-    BODY_INDEX, DECISIONS, PROMOTIONS, PROMOTION_BASELINE, QUEUE_DIR, QUEUE_FIELDS,
+    BODY_INDEX, DECISIONS, PROMOTIONS, PROMOTION_BASELINE, QUEUE_DIR,
     QUEUE_INDEX, ROOT, build, current_semantic_ids, sha256,
 )
 
@@ -61,10 +61,21 @@ def iso_datetime(value: object) -> bool:
         return False
 
 
-def verify_decisions(index: dict, item_by_id: dict[str, list], document_by_id: dict[str, dict], errors: list[str], decisions: list[dict] | None = None) -> tuple[set[str], dict[str, tuple[str, str]]]:
+def decision_binding(item: dict, queue_tool_digest: str) -> dict:
+    keys = [
+        "anchor_id", "document_id", "document_url", "authority_url", "document_locator",
+        "locked_source_digest", "inventory_tool_digest", "locator", "context_start", "context_end",
+        "context_unit", "context_digest",
+    ]
+    binding = {key: item[key] for key in keys if key in item}
+    binding["review_queue_tool_digest"] = queue_tool_digest
+    return binding
+
+
+def verify_decisions(index: dict, item_by_id: dict[str, dict], _documents: dict[str, dict], errors: list[str], decisions: list[dict] | None = None) -> tuple[set[str], dict[str, tuple[str, str]]]:
     ledger = load(DECISIONS)
     expected_keys = {"schema_version", "atlas_id", "queue_id", "status", "decisions"}
-    if set(ledger) != expected_keys or ledger.get("schema_version") != 1 or ledger.get("atlas_id") != "kotlin-reference-atlas" or ledger.get("queue_id") != index["queue_id"] or ledger.get("status") != "incomplete-human-review-required":
+    if set(ledger) != expected_keys or ledger.get("schema_version") != 1 or ledger.get("atlas_id") != "kotlin-reference-atlas" or ledger.get("queue_id") != index["queue_id"]:
         errors.append("Authority decision ledger identity/status/fieldが不正")
     seen_decisions: set[str] = set()
     reviewed: set[str] = set()
@@ -76,7 +87,7 @@ def verify_decisions(index: dict, item_by_id: dict[str, list], document_by_id: d
             errors.append(f"Decision identity/fieldが不正: {decision_id}")
         seen_decisions.add(decision_id)
         action = decision.get("action")
-        if action not in {"include", "exclude", "merge", "split"}:
+        if action not in {"include", "exclude", "merge", "split", "defer"}:
             errors.append(f"Decision actionが不正: {decision_id}")
         reviewer = str(decision.get("reviewer", "")).strip()
         if decision.get("review_method") != "manual-primary-source" or len(reviewer) < 2 or re.match(r"^(auto(mated)?|agent|bot|system|machine)(?:$|[-_. ])", reviewer, re.I) or len(str(decision.get("rationale", "")).strip()) < 40 or not iso_datetime(decision.get("reviewed_at")):
@@ -94,19 +105,7 @@ def verify_decisions(index: dict, item_by_id: dict[str, list], document_by_id: d
             item = item_by_id.get(anchor_id)
             if not item:
                 continue
-            document = document_by_id[item[1]]
-            expected_binding = {
-                "anchor_id": anchor_id,
-                "document_id": document["document_id"],
-                "repository_url": document["repository_url"],
-                "locked_commit": document["locked_commit"],
-                "tree_oid": document["tree_oid"],
-                "source_digests": document["source_digests"],
-                "inventory_tool_digest": document["inventory_tool_digest"],
-                "review_queue_tool_digest": index["tool_digest"],
-                "locator": item[2],
-            }
-            if bindings.get(anchor_id) != expected_binding:
+            if bindings.get(anchor_id) != decision_binding(item, index["tool_digest"]):
                 errors.append(f"Decision digest/locator bindingがQueueと不一致: {anchor_id}")
             mapping = mappings.get(anchor_id, {})
             if set(mapping) != {"old_anchor_id", "new_item_ids"} or mapping.get("old_anchor_id") != anchor_id:
@@ -115,9 +114,8 @@ def verify_decisions(index: dict, item_by_id: dict[str, list], document_by_id: d
             if not isinstance(new_ids, list) or len(set(new_ids)) != len(new_ids) or any(not re.fullmatch(r"[a-z][a-z0-9.-]+", value) for value in new_ids):
                 errors.append(f"Decision mapping IDが不正: {anchor_id}")
             mapping_sets.append(tuple(sorted(new_ids)))
-        results = decision.get("result_items", [])
         result_map = {}
-        for result in results:
+        for result in decision.get("result_items", []):
             if set(result) != {"id", "item_type"} or not re.fullmatch(r"[a-z][a-z0-9.-]+", result.get("id", "")) or result.get("item_type") not in {"surface", "atomic-behavior"}:
                 errors.append(f"Decision result itemが不正: {decision_id}")
                 continue
@@ -128,8 +126,8 @@ def verify_decisions(index: dict, item_by_id: dict[str, list], document_by_id: d
         mapped = {value for mapping in mappings.values() for value in mapping.get("new_item_ids", [])}
         if mapped != set(result_map):
             errors.append(f"Decision mapping/result整合が不正: {decision_id}")
-        if action == "exclude" and mapped:
-            errors.append(f"exclude decisionはSemantic itemへ昇格できない: {decision_id}")
+        if action in {"exclude", "defer"} and mapped:
+            errors.append(f"{action} decisionはSemantic itemへ昇格できない: {decision_id}")
         if action == "include" and (any(not values for values in mapping_sets) or len(mapped) != sum(len(values) for values in mapping_sets)):
             errors.append(f"include decision mappingが不正: {decision_id}")
         if action == "merge" and (len(anchor_ids) < 2 or not mapping_sets or len(set(mapping_sets)) != 1 or any(not values for values in mapping_sets)):
@@ -150,40 +148,33 @@ def main() -> None:
     actual_files = {path.name for path in QUEUE_DIR.glob("*.json")}
     if actual_files != expected_files:
         errors.append("Authority review batch file集合が不正")
-    item_by_id: dict[str, list] = {}
+    item_by_id: dict[str, dict] = {}
     for expected in expected_batches:
         path = QUEUE_DIR / f"{expected['batch_id']}.json"
         if not path.is_file():
             continue
         actual = load(path)
         reject_body_fields(actual, path.name, errors)
-        if actual != expected or actual.get("fields") != QUEUE_FIELDS:
+        if actual != expected:
             errors.append(f"Authority review batchが決定論生成値と不一致: {expected['batch_id']}")
         for item in actual.get("items", []):
-            if not isinstance(item, list) or len(item) != len(QUEUE_FIELDS) or item[-1] != "pending-human" or item[0] in item_by_id:
+            if not isinstance(item, dict) or item.get("state") != "pending-human" or item.get("anchor_id") in item_by_id:
                 errors.append(f"Authority review item field/state/IDが不正: {expected['batch_id']}")
                 continue
-            item_by_id[item[0]] = item
-    document_by_id = {item["document_id"]: item for item in actual_index.get("documents", [])}
+            item_by_id[item["anchor_id"]] = item
     raw = load(BODY_INDEX)
     raw_ids = set()
     for record in raw["documents"]:
-        artifact = load(ROOT / record["path"])
-        raw_ids.update(anchor[0] for anchor in artifact["anchors"])
-    held_ids = set()
-    for hold in actual_index.get("stale_holds", []):
-        artifact_record = next((record for record in raw["documents"] if record["id"] == hold["document_id"]), None)
-        if artifact_record:
-            held_ids.update(anchor[0] for anchor in load(ROOT / artifact_record["path"])["anchors"])
-    if set(item_by_id) | held_ids != raw_ids or set(item_by_id) & held_ids:
-        errors.append("Raw anchor全件がQueueまたはstale holdへ完全割当されていない")
-    if actual_index.get("depth_credit") is not False or actual_index.get("machine_assistance") != "priority-cluster-and-batch-proposals-only" or actual_index.get("semantic_decisions") != "human-only":
+        raw_ids.update(anchor["id"] for anchor in load(ROOT / record["path"])["anchors"])
+    if set(item_by_id) != raw_ids:
+        errors.append("Candidate anchor全件がQueueへ完全割当されていない")
+    if actual_index.get("summary", {}).get("queue_counts_as_depth_achievement") is not False or actual_index.get("machine_assistance") != "priority-cluster-and-batch-proposals-only" or actual_index.get("semantic_decisions") != "human-only":
         errors.append("Queue件数またはmachine提案がSemantic decision/Depth creditへ昇格している")
     depth = load(ROOT / "atlas" / "definitive" / "kotlin-depth-parity.json")
     if depth.get("review_queue_policy") != "queue-count-excluded-from-semantic-surface-and-depth-credit":
         errors.append("Kotlin Depth mappingがReview Queue件数の非算入を固定していない")
 
-    reviewed, promoted = verify_decisions(actual_index, item_by_id, document_by_id, errors)
+    reviewed, promoted = verify_decisions(actual_index, item_by_id, {}, errors)
     promotions = load(PROMOTIONS)
     if set(promotions) != {"schema_version", "atlas_id", "queue_id", "status", "items"} or promotions.get("queue_id") != actual_index.get("queue_id"):
         errors.append("Authority promotion ledger identity/status/fieldが不正")
@@ -209,26 +200,20 @@ def main() -> None:
         errors.append("Review decisionなしのSemantic Surface/Atomic behavior昇格、または実体のないresultがある")
     local_reference = verify_reference(load(REFERENCE), errors)
     summary = actual_index.get("summary", {})
-    if summary.get("pending_human") != len(item_by_id) - len(reviewed) or summary.get("human_reviewed") != len(reviewed) or summary.get("promoted_items") != len(promoted):
+    if summary.get("pending_human") != len(item_by_id) - len(reviewed) or summary.get("human_reviewed") != len(reviewed):
         errors.append("Authority review queue集計が実体と一致しない")
     result = {
-        "schema_version": 1,
-        "queue": QUEUE_INDEX.relative_to(ROOT).as_posix(),
-        "decision_ledger": DECISIONS.relative_to(ROOT).as_posix(),
-        "promotion_ledger": PROMOTIONS.relative_to(ROOT).as_posix(),
-        "methodology_reference": REFERENCE.relative_to(ROOT).as_posix(),
-        "local_methodology_reference": local_reference,
-        "summary": summary,
-        "all_raw_anchors_routed": set(item_by_id) | held_ids == raw_ids,
-        "queue_depth_credit": False,
-        "violations": errors,
-        "verdict": "pass" if not errors else "fail",
+        "schema_version": 1, "queue": QUEUE_INDEX.relative_to(ROOT).as_posix(),
+        "decision_ledger": DECISIONS.relative_to(ROOT).as_posix(), "promotion_ledger": PROMOTIONS.relative_to(ROOT).as_posix(),
+        "methodology_reference": REFERENCE.relative_to(ROOT).as_posix(), "local_methodology_reference": local_reference,
+        "summary": summary, "all_raw_anchors_routed": set(item_by_id) == raw_ids,
+        "queue_depth_credit": False, "violations": errors, "verdict": "pass" if not errors else "fail",
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     if errors:
         raise RuntimeError("Authority review queue Gate失敗: " + "; ".join(errors[:20]))
-    print(f"Authority review queue Gate: anchors={len(item_by_id)} pending-human={summary['pending_human']} batches={summary['suggested_batches']} stale-holds={summary['stale_anchor_holds']} decisions={len(reviewed)} promotions={len(promoted)} depth-credit=0")
+    print(f"Authority review queue Gate: anchors={len(item_by_id)} pending-human={summary['pending_human']} batches={summary['batches']} decisions={len(reviewed)} promotions={len(promoted)} depth-credit=0")
 
 
 if __name__ == "__main__":

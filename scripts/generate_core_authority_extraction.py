@@ -27,6 +27,7 @@ def write(path: Path, value: object) -> None:
 
 def main() -> None:
     lock = json.loads((ROOT / "sources.lock.yaml").read_text(encoding="utf-8"))
+    tool_digest = sha256(Path(__file__).read_bytes())
     records = []
     input_rows = []
     for source in sorted(lock["sources"], key=lambda item: item["id"]):
@@ -75,6 +76,7 @@ def main() -> None:
             "extraction": {
                 "method": "locked-body-locator-context-digest",
                 "tool": "kotlin-reference-atlas-core-authority-extractor-v1",
+                "tool_digest": tool_digest,
                 "review_status": "automated-unreviewed",
                 "body_storage": "digest-and-locator-context-digest-only",
             },
@@ -97,6 +99,7 @@ def main() -> None:
         "generated_at": "2026-08-28T00:00:00+09:00",
         "status": "incomplete-source-state",
         "input_digest": sha256(json.dumps(input_rows, sort_keys=True, separators=(",", ":")).encode()),
+        "tool_digest": tool_digest,
         "body_storage": "digest-and-locator-context-digest-only",
         "summary": {
             "locked_sources": len(records),

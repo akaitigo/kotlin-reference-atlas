@@ -1,0 +1,11 @@
+{
+  "failed_run_retains_prior_success": "pass",
+  "full_run_publish_only": "pass",
+  "methodology_reference": "baseline/fe-atomic-evidence-reference-v1.json",
+  "mixed_generation_rejected": "pass",
+  "partial_generation_rejected": "pass",
+  "schema_version": 1,
+  "staging_only_generation": "pass",
+  "swap_failure_rollback": "pass",
+  "verdict": "pass"
+}

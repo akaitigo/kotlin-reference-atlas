@@ -1,0 +1,27 @@
+{
+  "artifact": {
+    "digest": "sha256:1f749da3f5125dcc12721ebbe15371e716c76294884fd00c41a5d7b5bdc64372",
+    "media_type": "application/json",
+    "size_bytes": 275380,
+    "uri": "evidence/scenarios/kotlin-closure-index.json"
+  },
+  "atlas_id": "kotlin-reference-atlas",
+  "claim_ids": [
+    "workbench.jvm-integrated-scenarios"
+  ],
+  "command": "python3 scripts/generate_scenario_proofs.py && python3 scripts/verify_scenario_proofs.py",
+  "created_at": "2026-08-28T00:00:00+09:00",
+  "environment": {
+    "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
+    "profile": "local"
+  },
+  "harness_digest": "sha256:6e9a0e7882f5d98ee83d8365c71c62dddf46b7586c84495bc7af2cf704724aac",
+  "harness_path": "baseline/fe-scenario-gap-closure-reference-v1.json",
+  "id": "workbench.scenario-proof-matrix",
+  "kind": "conformance",
+  "producer": "kotlin-scenario-proof-matrix",
+  "retention": "git",
+  "schema_version": 1,
+  "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
+  "verdict": "pass"
+}

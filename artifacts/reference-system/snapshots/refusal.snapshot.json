@@ -1,0 +1,11 @@
+{
+  "classification": "deterministic-runtime-state-snapshot-not-behavior-proof",
+  "scenario": "refusal",
+  "schema_version": 1,
+  "source_trace": {
+    "bytes": 3176,
+    "digest": "sha256:6c438efb1236afe46d68c6fdc1742432f0fc9ceb70abc69a8c1aa25c17aca2f8",
+    "path": "evidence/scenarios/integrated/refusal.trace.json"
+  },
+  "status": "passed"
+}

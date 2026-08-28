@@ -1,0 +1,239 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "authority_source": {
+    "artifact_digest": "sha256:2b16721ff5dec81aaf0ebf9acf73c41fd1e0f37838bca249a86dd319cf0e2d6d",
+    "artifact_digest_verified": true,
+    "artifact_id": "gradle",
+    "artifact_path": "authority/surfaces/gradle.authority-surfaces.yaml",
+    "locator": "platforms/core-execution/build-cache",
+    "source_id": "gradle-source-9.5.0",
+    "surface_id": "gradle.build.cache"
+  },
+  "behavior_id": "gradle.build-cache-key-reuse",
+  "behavior_scope": "authority-inventory-candidate-not-human-reviewed-atomic",
+  "candidate_evidence": [
+    {
+      "artifact": {
+        "digest": "sha256:df09d74809e26ad9c3f73dd88106b36b23fa5ffd4f34149ba2e8c4e5db4d8b2e",
+        "exists": true,
+        "path": "evidence/artifacts/rights-validation.json"
+      },
+      "claim_ids": [
+        "gradle.toolchain-and-artifacts-locked"
+      ],
+      "command": "python3 scripts/verify.py",
+      "harness": {
+        "digest": "sha256:d184ed9317b4082952b413cf26438c5bd92c3293ac3397fe9e14b0945439faed",
+        "exists": true,
+        "path": "gradle/libs.versions.toml"
+      },
+      "id": "build.toolchain-lock",
+      "identity": null,
+      "kind": "conformance",
+      "producer": "kotlin-atlas-verifier",
+      "record": {
+        "bytes": 965,
+        "digest": "sha256:2a03a2842d2d2c2045cd92becc8440d806989bc61ae3bd09bc6cf4f71e1f5549",
+        "path": "evidence/build.toolchain-lock.evidence.json"
+      },
+      "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
+      "verdict": "pass"
+    }
+  ],
+  "capability_id": "gradle.cache",
+  "claim_ids": [
+    "gradle.toolchain-and-artifacts-locked"
+  ],
+  "closure": {
+    "all_surface_scenario_variants_closed": false,
+    "authority_atomic_binding": false,
+    "behavior_specific_evidence": false,
+    "completion_eligible": false,
+    "dedicated_artifact": true,
+    "dedicated_oracle_trace_artifact_all_variants": false,
+    "dedicated_row": true,
+    "retained_identity": false,
+    "retry_zero_all_variants": false,
+    "scenario_applicable": true,
+    "unrelated_metadata_reuse_blocked": true
+  },
+  "gaps": [
+    "All 4 Surface×Scenario×Variant closure cells remain explicit gaps.",
+    "Mapped Target Evidence is candidate context only; unrelated Artifact metadata cannot close a dedicated cell.",
+    "The mapped Claim is shared by multiple Authority inventory Behaviors and is not a dedicated Behavior proof.",
+    "No human-reviewed Authority anchor decision binds this Atomic behavior; completion credit is zero."
+  ],
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "id": "proof.behavior.gradle.build-cache-key-reuse.failure",
+  "integrated_reference": {
+    "manifest": {
+      "bytes": 33851,
+      "digest": "sha256:3abe4aa0f98c9daeb03e843125c81a68e235a19f9a87748e6ee45ca01f13dcbd",
+      "path": "integrations/reference-system/manifest.json"
+    },
+    "results": {
+      "bytes": 3983,
+      "digest": "sha256:a5946653c7a1707849cdd300c784228c7dca2762d206de6fcfb609853c5b834a",
+      "path": "evidence/scenarios/reference-system-results.json"
+    },
+    "reuse_as_behavior_specific_proof": false,
+    "target_mapped": false,
+    "trace": {
+      "digest": "sha256:ccdf7223d76a9557697829f52fc5f60fb165087ab06ae0b86aafb78dede8ff5f",
+      "path": "evidence/scenarios/integrated/failure.trace.json",
+      "rows": 2
+    }
+  },
+  "inventory_id": "inventory.gradle.build-cache-key-reuse",
+  "required_variants": [
+    "gradle-9.5.0-macos-jdk17",
+    "gradle-9.5.0-linux-jdk17"
+  ],
+  "scenario": "failure",
+  "schema_version": 1,
+  "specific_evidence": [],
+  "status": "explicit-gap",
+  "surface_ids": [
+    "performance-capacity-cost",
+    "operations-observability"
+  ],
+  "surface_scenario_variant_proofs": [
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.gradle.build-cache-key-reuse.performance-capacity-cost.failure.gradle-9.5.0-macos-jdk17",
+      "scenario": "failure",
+      "status": "explicit-gap",
+      "surface_id": "performance-capacity-cost",
+      "variant_id": "gradle-9.5.0-macos-jdk17"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.gradle.build-cache-key-reuse.performance-capacity-cost.failure.gradle-9.5.0-linux-jdk17",
+      "scenario": "failure",
+      "status": "explicit-gap",
+      "surface_id": "performance-capacity-cost",
+      "variant_id": "gradle-9.5.0-linux-jdk17"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.gradle.build-cache-key-reuse.operations-observability.failure.gradle-9.5.0-macos-jdk17",
+      "scenario": "failure",
+      "status": "explicit-gap",
+      "surface_id": "operations-observability",
+      "variant_id": "gradle-9.5.0-macos-jdk17"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.gradle.build-cache-key-reuse.operations-observability.failure.gradle-9.5.0-linux-jdk17",
+      "scenario": "failure",
+      "status": "explicit-gap",
+      "surface_id": "operations-observability",
+      "variant_id": "gradle-9.5.0-linux-jdk17"
+    }
+  ],
+  "target_id": "build.toolchain-lock"
+}

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import importlib.util
+import hashlib
 import json
 from collections import Counter
 from pathlib import Path
@@ -12,6 +13,7 @@ ROUTER_PATH = ROOT / ".agents/skills/kotlin-reference-router/scripts/route.py"
 OUTPUT = ROOT / "evals/kotlin-reference-router.definitive-skill-eval.json"
 REPORT = ROOT / "evals/kotlin-reference-router.definitive-skill-eval-report.json"
 FORWARD_EVAL = ROOT / "evals/kotlin-reference-router.agent-forward-eval.json"
+CORE_ROUTER = ROOT / "evals/definitive-skill-router.json"
 MUTATING = {"build", "operate", "troubleshoot", "evolve", "delegate"}
 
 
@@ -22,6 +24,15 @@ def load(path: Path) -> dict:
 
 def write(path: Path, value: dict) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def digest(path: Path) -> str:
+    return "sha256:" + hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def file_binding(relative: str, **extra: object) -> dict:
+    path = ROOT / relative
+    return {"path": relative, "digest": digest(path), "bytes": path.stat().st_size, **extra}
 
 
 def router_module():
@@ -144,6 +155,132 @@ def main() -> None:
         ],
     }
     write(REPORT, report)
+    representative_by_target = {
+        cell["route"]["target_id"]: cell["route"]
+        for cell in matrix
+        if cell["route"]["disposition"] == "covered"
+    }
+    core_matrix = []
+    for cell in matrix:
+        actual = cell["route"]
+        representative = actual if actual["disposition"] == "covered" else representative_by_target[actual["target_id"]]
+        implementation = representative["implementation_bindings"][0]
+        evidence_bindings = [
+            {
+                "path": item["artifact"]["path"],
+                "digest": item["artifact"]["digest"],
+                "bytes": item["artifact"]["size_bytes"],
+                "id": item["id"],
+                "claim_scope": ",".join(item["claim_ids"]),
+            }
+            for item in representative["evidence_bindings"]
+        ]
+        mutation_required = cell["outcome_id"] in MUTATING
+        routed_cell = actual["disposition"] == "covered"
+        core_matrix.append({
+            "id": f"matrix.{cell['outcome_id']}.{cell['surface_id']}",
+            "status": "routed" if routed_cell else "coverage-gap",
+            "outcome": cell["outcome_id"],
+            "surface": cell["surface_id"],
+            "mode": representative.get("mode", "route"),
+            "query": actual["query"],
+            "pattern_id": actual.get("capability_id"),
+            "target_id": actual["target_id"],
+            "target_set": actual["target_set"],
+            "target_set_allowed": bool(actual.get("target_set_allowed")),
+            "coverage_state": actual.get("target_state", "covered"),
+            "coverage_disposition": actual["disposition"] if routed_cell else actual["reason_code"],
+            "required_deliverables": representative.get("required_deliverables", []),
+            "required_output_fields": ["target", "implementation", "authority", "evidence", "completion-limit"],
+            "mutation_policy": "explicit-authorization-required" if mutation_required else "read-only",
+            "mutation_status": "authorized-for-request-scope" if mutation_required else "read-only",
+            "blocked_reasons": [] if routed_cell else [actual["reason_code"]],
+            "stop_conditions": [] if routed_cell else ["mastery-target-set-intersection-required"],
+            "implementation_bindings": [{
+                "path": implementation["path"], "digest": implementation["digest"],
+                "bytes": implementation["size_bytes"], "id": implementation["variant_id"],
+            }],
+            "source_bindings": [
+                {"source_id": item["id"], "url": item["url"], "digest": item["digest"]}
+                for item in representative["source_bindings"]
+            ],
+            "evidence_bindings": evidence_bindings,
+            "support_status": "routed" if routed_cell else "mastery-routing-gap",
+            "result": cell["result"],
+        })
+
+    def core_boundary(case_id: str, outcome: str, surface: str, query: str, reason: str, coverage_gap: bool = False) -> dict:
+        return {
+            "id": case_id,
+            "status": "coverage-gap" if coverage_gap else "blocked",
+            "outcome": outcome,
+            "surface": surface,
+            "mode": "route",
+            "query": query,
+            "pattern_id": None,
+            "target_id": None,
+            "target_set": None,
+            "target_set_allowed": False,
+            "coverage_state": "gap",
+            "coverage_disposition": reason,
+            "required_deliverables": [],
+            "required_output_fields": ["reason", "stop-condition"],
+            "mutation_policy": "read-only" if coverage_gap else "explicit-authorization-required",
+            "mutation_status": "read-only" if coverage_gap else "blocked",
+            "blocked_reasons": [reason],
+            "stop_conditions": [reason],
+            "result": "pass",
+        }
+
+    core_boundaries = [
+        core_boundary("boundary.ambiguous", "understand", "foundations-mechanics", "sealed variance", "ambiguous-query", True),
+        core_boundary("boundary.unknown", "understand", "orientation-scope", "未登録Frameworkの全APIを自動変更する", "unknown-query", True),
+        core_boundary("boundary.unauthorized-build", "build", "implementation-construction", "variance reified", "unauthorized-mutation"),
+        core_boundary("boundary.human-authority-decision", "understand", "orientation-scope", "authority review queue", "external-human-decision-required"),
+        core_boundary("boundary.stale-relock", "evolve", "provenance-rights", "authority locator", "stale-source-relock-explicit-procedure-required"),
+    ]
+    forward_complete = forward.get("verdict") == "pass" and all(item.get("pass") for item in forward.get("scenarios", []))
+    core_router = {
+        "schema_version": 1,
+        "id": "kotlin-reference-router.definitive-v2",
+        "atlas_id": "kotlin-reference-atlas",
+        "generated_at": "2026-08-28T21:00:00+09:00",
+        "status": "incomplete-mastery-routing-gaps",
+        "semantic_scope": "Kotlin固有Targetへの決定論的Route、停止境界、独立Agent Forward Evalを評価し、Runtime closureを代替しない。",
+        "source_bindings": {
+            "mastery": file_binding("mastery.yaml"),
+            "coverage": file_binding("coverage.yaml"),
+            "sources": file_binding("sources.lock.yaml"),
+            "capability_index": file_binding(".agents/skills/kotlin-reference-router/references/capability-index.json"),
+            "router": file_binding(".agents/skills/kotlin-reference-router/scripts/route.py"),
+            "report": file_binding("evals/kotlin-reference-router.definitive-skill-eval-report.json"),
+        },
+        "summary": {
+            "outcomes": 8,
+            "surfaces": 14,
+            "matrix_cells": 112,
+            "passed": sum(item["result"] == "pass" for item in core_matrix),
+            "failed": sum(item["result"] != "pass" for item in core_matrix),
+            "routed": sum(item["support_status"] == "routed" for item in core_matrix),
+            "mastery_routing_gaps": sum(item["support_status"] != "routed" for item in core_matrix),
+            "partial_coverage_cells": sum(item["coverage_state"] != "covered" for item in core_matrix),
+            "boundary_cases": len(core_boundaries),
+            "boundary_passed": sum(item["result"] == "pass" for item in core_boundaries),
+            "boundary_failed": sum(item["result"] != "pass" for item in core_boundaries),
+        },
+        "matrix": core_matrix,
+        "boundary_cases": core_boundaries,
+        "completion_limits": report["completion_limits"],
+        "forward_eval": {
+            "status": "completed" if forward_complete else "not-run",
+            "cases": len(forward.get("scenarios", [])),
+            "passed": sum(bool(item.get("pass")) for item in forward.get("scenarios", [])),
+            "failed": sum(not bool(item.get("pass")) for item in forward.get("scenarios", [])),
+            "artifact_path": FORWARD_EVAL.relative_to(ROOT).as_posix() if forward_complete else None,
+            "artifact_digest": digest(FORWARD_EVAL) if forward_complete else None,
+        },
+    }
+    write(CORE_ROUTER, core_router)
     cases = [
         {
             "id": "definitive.workbench-route", "result": "pass",

@@ -21,6 +21,16 @@
       ]
     },
     {
+      "digest": "sha256:852e4249e70cceb109d23d585c66b40b37e4677a6cf45bb5b0204107f3e951e6",
+      "generated_by": "python3 scripts/generate_definitive_skill_eval.py",
+      "kind": "skill-eval",
+      "license": "Apache-2.0",
+      "path": "evals/definitive-skill-router.json",
+      "source_ids": [
+        "reference-atlas-core-definitive-v2"
+      ]
+    },
+    {
       "digest": "sha256:a50e24c8346bd152be2d48a70bb662e3fd9828094fafe44e795fbac4e8e808c0",
       "generated_by": "independent subagent forwarded Router scenarios",
       "kind": "skill-eval",
@@ -31,7 +41,7 @@
       ]
     },
     {
-      "digest": "sha256:0a5acd344f84e7fd0f533b690866a69fe6362c987f2fd73b9f08eb13754ed138",
+      "digest": "sha256:e0b89c69aec33e855ea8dfad62cceb9c4ea77bbf85038500d07701a3dd01b21a",
       "generated_by": "python3 scripts/generate_definitive_skill_eval.py",
       "kind": "skill-eval",
       "license": "Apache-2.0",
@@ -61,7 +71,7 @@
       ]
     },
     {
-      "digest": "sha256:6283b4d8696c390e7899a7d14b96f2dadeb591e56d6d12b5d6d3bcc4d3d3da2b",
+      "digest": "sha256:a95cddf84c68a98bf877e63ff57e6c75aea054b58bc98f8a569c64dc831dc303",
       "generated_by": "python3 scripts/verify_authority_body_inventory.py",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -81,7 +91,7 @@
       ]
     },
     {
-      "digest": "sha256:c6cd915c824f88b62911afd39864ee3684d421c97523e9bc61ce65f8bcefd440",
+      "digest": "sha256:70636cc47fb01d42966829edfcffbb956eba6561492d888370bba199e5cc1d1c",
       "generated_by": "python3 scripts/generate_authority_review_queue.py && python3 scripts/test_authority_review_queue.py && python3 scripts/verify_authority_review_queue.py",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -121,7 +131,7 @@
       ]
     },
     {
-      "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+      "digest": "sha256:a07cab4cbf850ab792c87c92be20e533d8cd91be6b1f810b22aadaa694bd30fe",
       "generated_by": "./gradlew :labs:engineering:test",
       "kind": "test-report",
       "license": "Apache-2.0",
@@ -131,7 +141,7 @@
       ]
     },
     {
-      "digest": "sha256:1c0ede19075e488e444b866b859ef9aab2746726ecc590b6e2fcf9ffb5eb5e8b",
+      "digest": "sha256:a25065437d350a50898ce65c49bb583f6648c9684d445ef413ae7448d9c6a567",
       "generated_by": "atlas validate atlas.yaml mastery.yaml coverage.yaml sources.lock.yaml skill.package.yaml && atlas audit .",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -141,7 +151,7 @@
       ]
     },
     {
-      "digest": "sha256:1f50c2616fbca4a5af60cedb0a0cfa7ea8f41b1ecee4b53c8cfbeff7fd38480c",
+      "digest": "sha256:a0596cd68e6ea8e4a8eba0df5752ba05b5adcb3f3e0e66c96f344c3a2502f187",
       "generated_by": "python3 scripts/verify_non_regression.py",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -171,7 +181,7 @@
       ]
     },
     {
-      "digest": "sha256:470e87fa2f16c8ecddaff897f5fcd9619ea97c3542bf369bace1d7d9f1b05fce",
+      "digest": "sha256:ee0bc59d9ac10b8657e955866dfafccf2004633759d8a67351f9400b5e35d181",
       "generated_by": "python3 scripts/verify.py",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -181,11 +191,21 @@
       ]
     },
     {
-      "digest": "sha256:d77dd9177f1f84956a98c73420210663bc1eac200808df4773094be2f4a3f545",
+      "digest": "sha256:6e0fc8e335a7d735eb70e0538e922d4ef847b661f2a94637694274b717c098f0",
       "generated_by": "./gradlew :reference-systems:automation-workbench:test --rerun-tasks && python3 scripts/capture_workbench.py",
       "kind": "generated",
       "license": "Apache-2.0",
       "path": "evidence/artifacts/workbench-jvm-runtime.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
+      "digest": "sha256:1f749da3f5125dcc12721ebbe15371e716c76294884fd00c41a5d7b5bdc64372",
+      "generated_by": "python3 scripts/generate_scenario_proofs.py && python3 scripts/verify_scenario_proofs.py",
+      "kind": "generated",
+      "license": "Apache-2.0",
+      "path": "evidence/scenarios/kotlin-closure-index.json",
       "source_ids": [
         "reference-atlas-core-v1"
       ]

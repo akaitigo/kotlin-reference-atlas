@@ -1,6 +1,6 @@
 {
   "artifact": {
-    "digest": "sha256:1c0ede19075e488e444b866b859ef9aab2746726ecc590b6e2fcf9ffb5eb5e8b",
+    "digest": "sha256:a25065437d350a50898ce65c49bb583f6648c9684d445ef413ae7448d9c6a567",
     "media_type": "application/json",
     "size_bytes": 453,
     "uri": "evidence/artifacts/manifest-validation.json"
@@ -22,6 +22,6 @@
   "producer": "kotlin-atlas-verifier",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:3e21c001526a260e711f5b3c95ecc6cce76dc525317d71115bdaaf7f06d035de",
+  "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
   "verdict": "pass"
 }

@@ -267,6 +267,11 @@
         },
         {
           "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "compatibility records current JVM execution identity()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
           "name": "duplicate execution returns stored artifact without rerunning step()",
           "status": "pass"
         },
@@ -277,12 +282,32 @@
         },
         {
           "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "migration normalizes legacy payload into current representation()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
           "name": "normal execution emits context attempt and immutable artifact()",
           "status": "pass"
         },
         {
           "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "operations expose quiescent health after completion()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "performance boundary keeps dispatcher capacity finite()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
           "name": "permanent failure is categorized and observable()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "security rejects traversal shaped workflow identity()",
           "status": "pass"
         },
         {
@@ -296,6 +321,6 @@
       "task": "test"
     }
   ],
-  "test_case_count": 42,
+  "test_case_count": 47,
   "verdict": "pass"
 }

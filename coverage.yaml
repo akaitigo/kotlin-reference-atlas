@@ -2,7 +2,7 @@
   "schema_version": 1,
   "atlas_id": "kotlin-reference-atlas",
   "epoch": "2026-08-28",
-  "authority_lock_digest": "sha256:3e21c001526a260e711f5b3c95ecc6cce76dc525317d71115bdaaf7f06d035de",
+  "authority_lock_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
   "target_sets": [
     { "id": "authority", "title": "一次資料と公開Surface Inventory", "sequence": 1, "completion_required": true, "exit_criteria": ["対象Versionと一次資料のDigestが固定されていること", "Compilerとstdlibの対象Surfaceを機械的にInventoryできること"] },
     { "id": "semantics", "title": "言語Semanticsと型System", "sequence": 2, "completion_required": true, "exit_criteria": ["言語Semanticsを正常系と境界値のOracleで説明できること", "型Systemのvariance、Nothing、reified境界を実行またはcompileで検証できること"] },
@@ -51,6 +51,6 @@
     { "id": "skill.definitive-forward-evaluation", "title": "Kotlin Router Definitive契約と独立Forward評価", "target_set": "skill", "kind": "skill", "requirement": "required", "state": "partial", "rationale": "112-cell契約と独立Agent Forward Evalは実Target bindingと停止境界を検証するが、22 Mastery routing gapとBehavior別Routeが未閉鎖である。", "claim_ids": ["skill.definitive-routing-is-bounded"], "evidence_ids": ["skill.agent-forward-evaluation"], "exclusion": null },
     { "id": "publication.rights-metadata", "title": "Licenseと第三者Metadata", "target_set": "publication", "kind": "security", "requirement": "required", "state": "covered", "rationale": "独自成果物と第三者依存の権利を分離し公開可否を機械的に判定するために必要である。", "claim_ids": ["publication.required-rights-files-present"], "evidence_ids": ["publication.rights-metadata"], "exclusion": null },
     { "id": "publication.complete-sbom", "title": "Gradleとnpmのtransitive SPDX SBOM", "target_set": "publication", "kind": "security", "requirement": "required", "state": "covered", "rationale": "直接依存だけでなく全Gradle lockとnpm package-lockの閉包を公開Artifactへ反映する必要がある。", "claim_ids": ["publication.transitive-sbom-from-locks"], "evidence_ids": ["publication.complete-sbom"], "exclusion": null },
-    { "id": "reference-system.automation-workbench", "title": "Automation Workbench reference system", "target_set": "semantics", "kind": "construction", "requirement": "recommended", "state": "partial", "rationale": "JVM上の正常、境界、拒否、障害、回復、backpressure、context、cancellation、比較Variantは実装・実行済みだが、Definitive Gate v2が要求する全Platform Runtime、全Behavior専用Claim/Evidence、Skill Evalへの接続は未完である。", "claim_ids": ["workbench.jvm-integrated-scenarios"], "evidence_ids": ["workbench.jvm-runtime"], "exclusion": null }
+    { "id": "reference-system.automation-workbench", "title": "Automation Workbench reference system", "target_set": "semantics", "kind": "construction", "requirement": "recommended", "state": "partial", "rationale": "JVM上の10 Scenario統合Traceは実装済みだが個別Closureに流用しない。690専用rowの4590 Surface×Scenario×Variant cellは全て専用実行未閉鎖で、Authority atomic bindingも0である。", "claim_ids": ["workbench.jvm-integrated-scenarios"], "evidence_ids": ["workbench.jvm-runtime", "workbench.scenario-proof-matrix"], "exclusion": null }
   ]
 }

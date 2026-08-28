@@ -151,10 +151,44 @@ class AutomationWorkbenchTest {
         assertEquals(1, calls)
     }
 
+    @Test
+    fun `migration normalizes legacy payload into current representation`() = runBlocking {
+        val workbench = AutomationWorkbench(step = echoStep(), clock = fixedClock)
+        val completed = workbench.execute(request("migration", " Legacy-Payload "), InputPolicy.NORMALIZE).last() as WorkbenchEvent.Completed
+        assertEquals("legacy-payload", completed.artifact.normalizedPayload)
+    }
+
+    @Test
+    fun `operations expose quiescent health after completion`() = runBlocking {
+        val workbench = AutomationWorkbench(step = echoStep(), clock = fixedClock)
+        workbench.execute(request("operations", "task"), InputPolicy.STRICT)
+        assertEquals(WorkbenchHealth(active = 0, completed = 1, failed = 0), workbench.health())
+    }
+
+    @Test
+    fun `security rejects traversal shaped workflow identity`() {
+        assertThrows(IllegalArgumentException::class.java) { WorkflowId.parse("../escape") }
+    }
+
+    @Test
+    fun `performance boundary keeps dispatcher capacity finite`() = runBlocking {
+        val dispatcher = BoundedDispatcher(capacity = 1)
+        assertEquals(DispatchResult.Accepted, dispatcher.submit(request("performance-first", "a")))
+        assertEquals(DispatchResult.Backpressured, dispatcher.submit(request("performance-second", "b")))
+    }
+
+    @Test
+    fun `compatibility records current JVM execution identity`() = runBlocking {
+        val runtime = "java-${Runtime.version().feature()}"
+        val workbench = AutomationWorkbench(step = echoStep(runtime), clock = fixedClock)
+        val completed = workbench.execute(request("compatibility", "kotlin-2.4.10"), InputPolicy.STRICT).last() as WorkbenchEvent.Completed
+        assertEquals("kotlin-2.4.10:$runtime", completed.artifact.normalizedPayload)
+    }
+
     private fun request(id: String, payload: String, maxAttempts: Int = 2) =
         WorkflowRequest(WorkflowId.parse(id), payload, maxAttempts)
 
-    private fun echoStep() = object : WorkflowStep {
-        override suspend fun execute(workflowId: WorkflowId, payload: String, attempt: Int) = payload
+    private fun echoStep(suffix: String? = null) = object : WorkflowStep {
+        override suspend fun execute(workflowId: WorkflowId, payload: String, attempt: Int) = suffix?.let { "$payload:$it" } ?: payload
     }
 }

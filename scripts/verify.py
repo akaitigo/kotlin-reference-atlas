@@ -20,9 +20,15 @@ DEFINITIVE_MANIFESTS = [
     "depth.parity.yaml",
     "non-regression.yaml",
     "baselines/definitive-c0e9b1c.non-regression-baseline.json",
+    "baselines/definitive-c0e9b1c.core-e822.non-regression-baseline.json",
+    "baselines/definitive-c0e9b1c.core-d535.non-regression-baseline.json",
+    "baselines/definitive-c0e9b1c.core-7c9313c.non-regression-baseline.json",
     "surface.inventory.yaml",
     "verification.matrix.yaml",
     "evals/kotlin-reference-router.definitive-skill-eval.json",
+    "evals/definitive-skill-router.json",
+    "authority/body-inventory.snapshot.json",
+    "authority/review-queue.snapshot.json",
     "migrations/definitive-v2.yaml",
 ]
 ARTIFACTS = ROOT / "evidence" / "artifacts"
@@ -218,6 +224,7 @@ def collect_test_results() -> dict:
 
 def generate_deep_artifacts() -> dict:
     run([sys.executable, str(ROOT / "scripts" / "capture_workbench.py")])
+    run([sys.executable, str(ROOT / "scripts" / "test_atomic_evidence.py")])
     run([sys.executable, str(ROOT / "scripts" / "inventory.py")])
     run([sys.executable, str(ROOT / "scripts" / "inspect_bytecode.py")])
     run([sys.executable, str(ROOT / "scripts" / "generate_sbom.py")])
@@ -529,7 +536,8 @@ def validate_non_regression() -> dict:
     run([str(ROOT / "gradlew"), "clean", "--no-daemon"])
     core = run([str(ROOT / "bin" / "atlas"), "audit", ".", "--gate", "non-regression"], capture=True)
     result["core_v2_audit"] = core.stdout.strip()
-    result["core_v2_baseline"] = "baselines/definitive-c0e9b1c.non-regression-baseline.json"
+    result["core_v2_baseline"] = "baselines/definitive-c0e9b1c.core-e822.non-regression-baseline.json"
+    result["core_v2_baseline_anchor"] = "baselines/definitive-c0e9b1c.non-regression-baseline.json"
     write_json(ARTIFACTS / "non-regression.json", result)
     return result
 
@@ -599,7 +607,9 @@ def validate_neutral_language() -> dict:
         '"github": "' + namespace + '"',
         "Copyright 2026 " + namespace,
         "/dev/" + namespace + "/",
+        '" / "' + namespace + '" / "',
         namespace + "/",
+        "document-" + namespace + "-",
     )
     violations = []
     text_suffixes = {".md", ".json", ".yaml", ".yml", ".py", ".kt", ".kts", ".java", ".sh", ".txt"}
@@ -712,6 +722,21 @@ def write_evidence() -> list[Path]:
     return paths
 
 
+def write_scenario_evidence() -> Path:
+    scenario_index = ROOT / "evidence" / "scenarios" / "kotlin-closure-index.json"
+    scenario_evidence_path = ROOT / "evidence" / "workbench.scenario-proof-matrix.evidence.json"
+    write_json(scenario_evidence_path, evidence_record(
+        "workbench.scenario-proof-matrix",
+        ["workbench.jvm-integrated-scenarios"],
+        "conformance",
+        "kotlin-scenario-proof-matrix",
+        "python3 scripts/generate_scenario_proofs.py && python3 scripts/verify_scenario_proofs.py",
+        scenario_index,
+        [ROOT / "scripts" / "generate_scenario_proofs.py", ROOT / "scripts" / "verify_scenario_proofs.py", ROOT / "surface.inventory.yaml", ROOT / "integrations" / "reference-system" / "manifest.json", ROOT / "baseline" / "fe-scenario-gap-closure-reference-v1.json"],
+    ))
+    return scenario_evidence_path
+
+
 def write_claims() -> list[Path]:
     claims = load_json(ROOT / "atlas" / "claims" / "claims.json")["claims"]
     obligations = {
@@ -775,6 +800,7 @@ def write_provenance(evidence_paths: list[Path]) -> Path:
     for relative in [
         "evals/kotlin-reference-router.definitive-skill-eval.json",
         "evals/kotlin-reference-router.definitive-skill-eval-report.json",
+        "evals/definitive-skill-router.json",
         "baseline/fe-definitive-skill-eval-reference-v1.json",
     ]:
         artifact = ROOT / relative
@@ -896,6 +922,9 @@ def main(*, skip_container: bool = False) -> None:
             raise RuntimeError("既存Container Evidenceがpassではありません")
     else:
         container_result = validate_container_profile()
+    # RouterはEvidence artifact digestをfail-closedで確認する。直前のLab/Artifact
+    # 再生成をrecordへ反映してからEvalし、後段で全Gateの最終recordを再固定する。
+    write_evidence()
     skill_result = run_skill_evals()
     definitive_skill_result = validate_definitive_skill_eval()
     rights_result = validate_rights()
@@ -903,6 +932,13 @@ def main(*, skip_container: bool = False) -> None:
     authority_locator_result = validate_authority_locators()
     authority_body_result = validate_authority_body_inventory()
     authority_review_result = validate_authority_review_queue()
+    # Depth Parityが専用Scenario Evidenceを参照できるよう、追跡済みEvidenceを入力に
+    # matrixとwrapperを先に再生成する。全Evidence更新後にも再生成し、最終digestを固定する。
+    run([sys.executable, str(ROOT / "scripts" / "generate_scenario_proofs.py")])
+    run([sys.executable, str(ROOT / "scripts" / "verify_scenario_proofs.py")])
+    run([sys.executable, str(ROOT / "scripts" / "generate_scenario_closure_plan.py")])
+    run([sys.executable, str(ROOT / "scripts" / "verify_scenario_closure_plan.py")])
+    write_scenario_evidence()
     fe_parity_result = validate_fe_parity()
     neutral_language_result = validate_neutral_language()
     gaps = summarize_gap_ledger()
@@ -920,8 +956,8 @@ def main(*, skip_container: bool = False) -> None:
         "authority_review_queue": authority_review_result["summary"],
         "gap_ledger": gaps,
         "completion_gaps": [
-            "146146 raw anchor候補は全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
-            "69 Authority由来Behaviorに対する専用Claim/Proofと18 AxisのScenario Matrixが未閉鎖",
+            "146393 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
+            "69 Authority inventory Behavior×10 Scenarioは専用row化済みだが、4590 Surface×Scenario×Variant cellの専用初回実行・Identity・Source/Harness・Oracle/Trace/ArtifactとAuthority atomic bindingが未閉鎖",
             "112-cell Router契約と独立Agent Forward Evalはpassだが22 Mastery routing gapが未閉鎖",
             "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖",
         ],
@@ -933,6 +969,12 @@ def main(*, skip_container: bool = False) -> None:
     write_json(ARTIFACTS / "verification-summary.json", summary)
     claim_paths = write_claims()
     evidence_paths = write_evidence()
+    run([sys.executable, str(ROOT / "scripts" / "generate_scenario_proofs.py")])
+    run([sys.executable, str(ROOT / "scripts" / "verify_scenario_proofs.py")])
+    run([sys.executable, str(ROOT / "scripts" / "generate_scenario_closure_plan.py")])
+    run([sys.executable, str(ROOT / "scripts" / "verify_scenario_closure_plan.py")])
+    scenario_evidence_path = write_scenario_evidence()
+    evidence_paths.append(scenario_evidence_path)
     provenance_path = write_provenance(evidence_paths)
     entity_paths = [*claim_paths, *evidence_paths, ROOT / "evals" / "kotlin-reference-router.skill-eval.json", provenance_path]
     run([str(ROOT / "bin" / "atlas"), "validate", *[path.relative_to(ROOT).as_posix() for path in entity_paths]])

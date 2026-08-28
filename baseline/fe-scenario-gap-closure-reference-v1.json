@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "fe-scenario-gap-closure-reference-v1",
+  "repository": "frontend-behavior-atlas",
+  "git_commit": "f2e4c4b19156f8e993f48cdcbce23679ad881924",
+  "classification": "methodology-reference-not-completion-authority",
+  "artifacts": {
+    "scripts/lib/scenario-proof.ts": "sha256:8b89ff8d0f042b181abe22a2fb1280546f7534f0525a931c6437a177fdb2432f",
+    "scripts/verify-pattern-scenario-evidence.ts": "sha256:3643d1dd6ab6830d1a729fc0684a6691e8fc7af4b2d85bae3e5ec01d89113469",
+    "artifacts/pattern-scenarios/results.json": "sha256:6bf5034a3effce130861878081dfb2b3cd7d50698e7075237db13b29d46aecf6",
+    "docs/REFERENCE_SYSTEM.md": "sha256:5562aa75e57c518c402c31d97885083bed3d1e3abc0af2ecade5c5cb3f188d49"
+  },
+  "kotlin_mapping": {
+    "proof_unit": "behavior-surface-scenario-variant",
+    "first_attempt_only": true,
+    "retry_count": 0,
+    "requires_dedicated_source_digest": true,
+    "requires_dedicated_harness_digest": true,
+    "requires_dedicated_compiler_runtime_platform_identity": true,
+    "requires_dedicated_oracle": true,
+    "requires_dedicated_trace": true,
+    "requires_dedicated_artifact": true,
+    "integrated_trace_reuse_allowed": false,
+    "unrelated_artifact_metadata_reuse_allowed": false,
+    "all_applicable_variants_required": true
+  }
+}

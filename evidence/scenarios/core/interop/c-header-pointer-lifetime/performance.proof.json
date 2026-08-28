@@ -1,0 +1,93 @@
+{
+  "applicability": "required",
+  "atlas_id": "kotlin-reference-atlas",
+  "behavior_id": "interop.c-header-pointer-lifetime",
+  "behavior_scope": "current-domain-pattern-not-authority-atomic",
+  "classification": {
+    "matcher_digest": "sha256:cf2257b084add2df25023ca5cfeb83a8d83b44921932eb8962f14dcfdc55a0e4",
+    "method": "kotlin-authority-inventory-candidate-before-human-atomic-review",
+    "semantic_scope_match": false,
+    "state_ids": [
+      "performance"
+    ]
+  },
+  "closure": {
+    "authority_atomic_behavior": false,
+    "completion_eligible": false,
+    "dedicated_artifact": true,
+    "dedicated_row": true,
+    "integrated_runtime_trace": true,
+    "pattern_specific_evidence": false,
+    "real_runtime_identity": false
+  },
+  "gaps": [
+    "The companion Kotlin closure row has no dedicated retry-zero execution for every Surface×Scenario×Variant cell.",
+    "Human-reviewed Authority atomic binding is absent; integrated JVM traces cannot supply completion credit."
+  ],
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "id": "proof-interop-c-header-pointer-lifetime-performance",
+  "integrated_reference": {
+    "assertions": [
+      "scenario outcome is recorded",
+      "runtime returns to a bounded observable state"
+    ],
+    "attempts": 1,
+    "manifest": "integrations/reference-system/manifest.json",
+    "outcome": "expected",
+    "pattern_mapped": true,
+    "result": "artifacts/reference-system/results.json",
+    "runtime_boundaries": [
+      "Gradle 9.5.0",
+      "Kotlin 2.4.10 JVM IR",
+      "OpenJDK 17",
+      "macOS arm64"
+    ],
+    "screenshot": {
+      "bytes": 356,
+      "digest": "sha256:203dee42c0c48140fdafa114d8c47662a97f9549707262c30e7f6fadceeb031a",
+      "path": "artifacts/reference-system/snapshots/performance.snapshot.json"
+    },
+    "trace": {
+      "action_stream": true,
+      "bytes": 3168,
+      "digest": "sha256:5fa1c97d3eef1fdadb05e43f5758a3cdf13a503c3af459b4073f17d3be036ec1",
+      "network_stream": true,
+      "path": "evidence/scenarios/integrated/performance.trace.json",
+      "resource_stream": true
+    }
+  },
+  "pattern_evidence": {
+    "benchmark_environment": null,
+    "benchmark_records": [],
+    "capture_environment_identity": {
+      "architecture": "arm64",
+      "build_tool": "Gradle Wrapper 9.5.0",
+      "compiler": "Kotlin 2.4.10 JVM IR",
+      "os": "Darwin",
+      "platform": "JVM",
+      "retries": 0,
+      "runtime": "OpenJDK 17.0.17",
+      "trace_mode": "on"
+    },
+    "capture_harness_digest": "sha256:897b93cde0639b3e6b6c4be6ff4ba4b7acad298a1e7bff7060bc2f8fcb0f823b",
+    "capture_records": [],
+    "compatibility_environment": null,
+    "compatibility_records": [],
+    "scenario_runtime_environment": null,
+    "scenario_runtime_records": [],
+    "scenario_runtime_report": null
+  },
+  "pattern_id": "interop.c-header-pointer-lifetime",
+  "scenario": "performance",
+  "schema_version": 1,
+  "source_bindings": [
+    {
+      "digest": "sha256:cf2257b084add2df25023ca5cfeb83a8d83b44921932eb8962f14dcfdc55a0e4",
+      "path": "authority/surfaces/kotlin-docs.authority-surfaces.yaml",
+      "variant_id": "kotlin-2.4.10-native-macos-arm64-runtime"
+    }
+  ],
+  "status": "pattern-specific-gap",
+  "target_id": "platform.native-runtime",
+  "target_set": "implementation-construction,security-privacy-safety,compatibility-integration"
+}

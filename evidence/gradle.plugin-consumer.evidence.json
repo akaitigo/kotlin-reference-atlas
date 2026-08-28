@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:354fc71626e2ac86dcc8053e6a031409fafd8296962c701d277aea1d47bc66d9",
+    "digest": "sha256:a07cab4cbf850ab792c87c92be20e533d8cd91be6b1f810b22aadaa694bd30fe",
     "media_type": "application/json",
-    "size_bytes": 10463,
+    "size_bytes": 11498,
     "uri": "evidence/artifacts/lab-results.json"
   },
   "atlas_id": "kotlin-reference-atlas",
@@ -22,6 +22,6 @@
   "producer": "gradle-testkit",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:3e21c001526a260e711f5b3c95ecc6cce76dc525317d71115bdaaf7f06d035de",
+  "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
   "verdict": "pass"
 }

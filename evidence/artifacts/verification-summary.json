@@ -1,18 +1,21 @@
 {
   "atlas_id": "kotlin-reference-atlas",
   "authority_body_denominator": {
+    "anchors_by_selector": {
+      "document-root": 16,
+      "tracked-blob": 146377
+    },
     "authority_semantics_exhaustive": false,
-    "classified_anchors": 0,
     "failed_documents": 0,
     "human_reviewed_anchors": 0,
-    "matched_documents": 7,
+    "matched_documents": 16,
+    "pending_human_anchors": 146393,
     "promoted_surface_artifacts": 0,
-    "raw_anchors": 146146,
-    "selector_exhaustive_documents": 7,
-    "source_entries": 9,
+    "raw_anchor_candidates": 146393,
+    "selector_exhaustive_documents": 16,
+    "source_entries": 18,
     "stale_documents": 0,
-    "unclassified_anchors": 146146,
-    "unique_documents": 7
+    "unique_documents": 16
   },
   "authority_locator_extraction": {
     "authority_body_locator_candidates": 0,
@@ -28,27 +31,27 @@
   },
   "authority_review_queue": {
     "authority_semantics_exhaustive": false,
+    "batches": 143,
+    "candidate_clusters": 9758,
+    "clustered_anchors": 43126,
     "decisions": 0,
-    "eligible_documents": 7,
+    "deferred": 0,
+    "eligible_documents": 16,
     "excluded": 0,
     "human_reviewed": 0,
     "included": 0,
     "merged": 0,
-    "pending_human": 146146,
-    "promoted_items": 0,
-    "queued_anchors": 146146,
-    "raw_anchors": 146146,
+    "pending_human": 146393,
+    "priority_counts": {
+      "0": 16,
+      "1": 92991,
+      "2": 53386
+    },
+    "queue_counts_as_depth_achievement": false,
+    "queued_anchors": 146393,
     "split": 0,
-    "stale_anchor_holds": 0,
     "stale_document_holds": 0,
-    "suggested_batches": 135,
-    "suggested_candidate_clusters": 9720,
-    "suggested_clustered_anchors": 43018,
-    "suggested_priority_counts": {
-      "0": 7,
-      "1": 92869,
-      "2": 53270
-    }
+    "unavailable_document_holds": 0
   },
   "authority_surface_inventory": {
     "artifacts": 9,
@@ -57,8 +60,8 @@
   "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
   "completion_class": "incomplete",
   "completion_gaps": [
-    "146146 raw anchor候補は全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
-    "69 Authority由来Behaviorに対する専用Claim/Proofと18 AxisのScenario Matrixが未閉鎖",
+    "146393 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
+    "69 Authority inventory Behavior×10 Scenarioは専用row化済みだが、4590 Surface×Scenario×Variant cellの専用初回実行・Identity・Source/Harness・Oracle/Trace/ArtifactとAuthority atomic bindingが未閉鎖",
     "112-cell Router契約と独立Agent Forward Evalはpassだが22 Mastery routing gapが未閉鎖",
     "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖"
   ],

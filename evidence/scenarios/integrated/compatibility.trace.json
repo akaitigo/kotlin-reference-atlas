@@ -1,0 +1,82 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "harness_bindings": [
+    {
+      "digest": "sha256:897b93cde0639b3e6b6c4be6ff4ba4b7acad298a1e7bff7060bc2f8fcb0f823b",
+      "path": "reference-systems/automation-workbench/src/test/kotlin/dev/akaitigo/kotlinatlas/workbench/AutomationWorkbenchTest.kt"
+    },
+    {
+      "digest": "sha256:4147d7ddb782d3b56467d17f77ace06a7c9c3104df832f21e6afc2f91009770f",
+      "path": "reference-systems/automation-workbench/build.gradle.kts"
+    },
+    {
+      "digest": "sha256:cb6fea84f3a5591d74077cf888eec864244caebd03b63403eac3827edd4f6a5f",
+      "path": "scripts/capture_workbench.py"
+    }
+  ],
+  "id": "kotlin-reference-system-trace-compatibility",
+  "identity": {
+    "build_tool": {
+      "name": "Gradle Wrapper",
+      "version": "9.5.0"
+    },
+    "compiler": {
+      "backend": "JVM IR",
+      "name": "Kotlin",
+      "version": "2.4.10"
+    },
+    "platform": {
+      "architecture": "arm64",
+      "name": "JVM",
+      "os": "Darwin"
+    },
+    "runtime": {
+      "identity": "openjdk version \"17.0.17\" 2025-10-21",
+      "name": "OpenJDK"
+    }
+  },
+  "junit_cases": [
+    "boundary policy compares strict rejection with normalization",
+    "bounded dispatcher exposes backpressure and closed recovery path",
+    "cancellation is not converted into failure and active gauge recovers",
+    "compatibility records current JVM execution identity",
+    "duplicate execution returns stored artifact without rerunning step",
+    "invalid identifier and attempt limit are rejected before execution",
+    "migration normalizes legacy payload into current representation",
+    "normal execution emits context attempt and immutable artifact",
+    "operations expose quiescent health after completion",
+    "performance boundary keeps dispatcher capacity finite",
+    "permanent failure is categorized and observable",
+    "security rejects traversal shaped workflow identity",
+    "transient failure recovers within bounded retry budget"
+  ],
+  "runtime_rows": [
+    {
+      "artifact_digest": "43a82b8ed77753c1365b3c88555e3dcf0649f19e314e5d2b42fac322a04ca09a",
+      "events": "Accepted,Attempted,Completed",
+      "health": "0/1/0",
+      "outcome": "kotlin-2.4.10:java-17",
+      "scenario": "compatibility",
+      "variant": "jvm-runtime"
+    }
+  ],
+  "scenario": "compatibility",
+  "schema_version": 1,
+  "scope_limit": "This integrated JVM trace is not a per-Surface or per-Behavior proof.",
+  "source_bindings": [
+    {
+      "digest": "sha256:04e27674bd152c64679cb6d439218fc9e7538e6f1795df86557a9234b5f65da9",
+      "path": "reference-systems/automation-workbench/src/main/kotlin/dev/akaitigo/kotlinatlas/workbench/AutomationWorkbench.kt"
+    },
+    {
+      "digest": "sha256:20b8ee3dc977d4e61091e3075bd554c82e980a37ca8eac22cc91861a8cf61435",
+      "path": "reference-systems/automation-workbench/src/main/kotlin/dev/akaitigo/kotlinatlas/workbench/BoundedDispatcher.kt"
+    },
+    {
+      "digest": "sha256:438a3d466314b8a3a7672f3ecbdae0c29b3e3d8b9d18d5eff38f3c280c398972",
+      "path": "reference-systems/automation-workbench/src/main/kotlin/dev/akaitigo/kotlinatlas/workbench/EvidenceScenarioRunner.kt"
+    }
+  ],
+  "status": "bounded-jvm-runtime-proof"
+}

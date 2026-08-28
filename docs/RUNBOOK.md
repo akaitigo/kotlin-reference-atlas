@@ -7,7 +7,7 @@
 - Git
 - Node.js 25（Kotlin/JS・Wasm実行）
 - Docker 29（Container profile）
-- `reference-atlas-core` commit `1ea027babf3a8d6720ac617c56988e447695ba63`
+- `reference-atlas-core` commit `7c9313cfb3e3149af455976228b44bbcb706bf40`
 
 ## Execute
 
@@ -19,6 +19,12 @@ PATH="$PWD/bin:$PATH" atlas audit . --gate non-regression
 python3 scripts/generate_authority_review_queue.py
 python3 scripts/test_authority_review_queue.py
 python3 scripts/verify_authority_review_queue.py
+python3 scripts/capture_workbench.py
+python3 scripts/generate_scenario_proofs.py
+python3 scripts/verify_scenario_proofs.py
+python3 scripts/generate_scenario_closure_plan.py
+python3 scripts/verify_scenario_closure_plan.py
+python3 scripts/test_atomic_evidence.py
 python3 scripts/verify.py
 ```
 

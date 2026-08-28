@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:d77dd9177f1f84956a98c73420210663bc1eac200808df4773094be2f4a3f545",
+    "digest": "sha256:6e0fc8e335a7d735eb70e0538e922d4ef847b661f2a94637694274b717c098f0",
     "media_type": "application/json",
-    "size_bytes": 3584,
+    "size_bytes": 8450,
     "uri": "evidence/artifacts/workbench-jvm-runtime.json"
   },
   "atlas_id": "kotlin-reference-atlas",
@@ -16,7 +16,7 @@
     "profile": "local"
   },
   "execution_mode": "runtime",
-  "harness_digest": "sha256:fb25c70dc678c7e4dba856dafe11b682beffd364badd8b5cf78503a481db2769",
+  "harness_digest": "sha256:438a3d466314b8a3a7672f3ecbdae0c29b3e3d8b9d18d5eff38f3c280c398972",
   "harness_path": "reference-systems/automation-workbench/src/main/kotlin/dev/akaitigo/kotlinatlas/workbench/EvidenceScenarioRunner.kt",
   "id": "workbench.jvm-runtime",
   "kind": "conformance",
@@ -24,6 +24,6 @@
   "retention": "git",
   "runtime_identity": "Homebrew OpenJDK 17.0.17+0 aarch64; Kotlin 2.4.10; kotlinx.coroutines 1.11.0",
   "schema_version": 1,
-  "source_digest": "sha256:3e21c001526a260e711f5b3c95ecc6cce76dc525317d71115bdaaf7f06d035de",
+  "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
   "verdict": "pass"
 }

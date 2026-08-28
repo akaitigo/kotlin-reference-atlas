@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "fe-atomic-evidence-reference-v1",
+  "repository": "frontend-behavior-atlas",
+  "git_commit": "7175de4",
+  "classification": "methodology-reference-not-kotlin-runtime-proof",
+  "artifacts": {
+    "scripts/reporters/pattern-scenario-evidence-reporter.ts": "sha256:fa93509b82141deb456e1218095de52a147c88d2b7e6f8e0e5df2725e92ad330",
+    "scripts/verify-pattern-scenario-evidence.ts": "sha256:fc05990ab4a02a075f72badf60190dc3e584fe62acf52a31c179b99c90e3e0fd"
+  },
+  "kotlin_contract": {
+    "generate_all_artifacts_in_staging": true,
+    "publish_only_after_full_run_pass": true,
+    "failed_run_retains_prior_success": true,
+    "swap_failure_rolls_back": true,
+    "partial_or_mixed_generation_rejected": true
+  }
+}

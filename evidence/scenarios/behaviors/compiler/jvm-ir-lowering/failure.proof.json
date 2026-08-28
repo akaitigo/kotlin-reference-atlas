@@ -1,0 +1,169 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "authority_source": {
+    "artifact_digest": "sha256:c79ad99942a6ba91b84a72b86af0880a75397b054f17d1c277be6e24cac0cb58",
+    "artifact_digest_verified": true,
+    "artifact_id": "kotlin-compiler",
+    "artifact_path": "authority/surfaces/kotlin-compiler.authority-surfaces.yaml",
+    "locator": "compiler/ir/backend.jvm",
+    "source_id": "kotlin-compiler-source-2.4.10",
+    "surface_id": "compiler.ir.backend.jvm"
+  },
+  "behavior_id": "compiler.jvm-ir-lowering",
+  "behavior_scope": "authority-inventory-candidate-not-human-reviewed-atomic",
+  "candidate_evidence": [
+    {
+      "artifact": {
+        "digest": "sha256:3ccc910e53ecc505a50f522eb7baf59809a6d2b4f54fd1d45b6e73e06ae5cb9a",
+        "exists": true,
+        "path": "evidence/artifacts/bytecode-inspection.json"
+      },
+      "claim_ids": [
+        "compiler.bytecode-state-machine"
+      ],
+      "command": "python3 scripts/inspect_bytecode.py",
+      "harness": {
+        "digest": "sha256:fa6641ce4ffd67e9b91894f8d6690c429d3e39d7f944398aaa404a91c26d4969",
+        "exists": true,
+        "path": "labs/compiler-runtime/build.gradle.kts"
+      },
+      "id": "compiler.bytecode-inspection",
+      "identity": "Kotlin 2.4.10 JVM artifact inspected by /usr/bin/javap",
+      "kind": "compatibility",
+      "producer": "jdk-javap",
+      "record": {
+        "bytes": 984,
+        "digest": "sha256:353b1570c75a56065cb6e9621d76936f7222fae8242c80ffd7c25d8b114a104e",
+        "path": "evidence/compiler.bytecode-inspection.evidence.json"
+      },
+      "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
+      "verdict": "pass"
+    }
+  ],
+  "capability_id": "compiler.jvm-backend",
+  "claim_ids": [
+    "compiler.bytecode-state-machine"
+  ],
+  "closure": {
+    "all_surface_scenario_variants_closed": false,
+    "authority_atomic_binding": false,
+    "behavior_specific_evidence": false,
+    "completion_eligible": false,
+    "dedicated_artifact": true,
+    "dedicated_oracle_trace_artifact_all_variants": false,
+    "dedicated_row": true,
+    "retained_identity": false,
+    "retry_zero_all_variants": false,
+    "scenario_applicable": true,
+    "unrelated_metadata_reuse_blocked": true
+  },
+  "gaps": [
+    "All 2 Surface×Scenario×Variant closure cells remain explicit gaps.",
+    "Mapped Target Evidence is candidate context only; unrelated Artifact metadata cannot close a dedicated cell.",
+    "No human-reviewed Authority anchor decision binds this Atomic behavior; completion credit is zero."
+  ],
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "id": "proof.behavior.compiler.jvm-ir-lowering.failure",
+  "integrated_reference": {
+    "manifest": {
+      "bytes": 33851,
+      "digest": "sha256:3abe4aa0f98c9daeb03e843125c81a68e235a19f9a87748e6ee45ca01f13dcbd",
+      "path": "integrations/reference-system/manifest.json"
+    },
+    "results": {
+      "bytes": 3983,
+      "digest": "sha256:a5946653c7a1707849cdd300c784228c7dca2762d206de6fcfb609853c5b834a",
+      "path": "evidence/scenarios/reference-system-results.json"
+    },
+    "reuse_as_behavior_specific_proof": false,
+    "target_mapped": false,
+    "trace": {
+      "digest": "sha256:ccdf7223d76a9557697829f52fc5f60fb165087ab06ae0b86aafb78dede8ff5f",
+      "path": "evidence/scenarios/integrated/failure.trace.json",
+      "rows": 2
+    }
+  },
+  "inventory_id": "inventory.compiler.jvm-ir-lowering",
+  "required_variants": [
+    "kotlin-2.4.10-k2-jvm-ir-openjdk17"
+  ],
+  "scenario": "failure",
+  "schema_version": 1,
+  "specific_evidence": [],
+  "status": "explicit-gap",
+  "surface_ids": [
+    "foundations-mechanics",
+    "compatibility-integration"
+  ],
+  "surface_scenario_variant_proofs": [
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.compiler.jvm-ir-lowering.foundations-mechanics.failure.kotlin-2.4.10-k2-jvm-ir-openjdk17",
+      "scenario": "failure",
+      "status": "explicit-gap",
+      "surface_id": "foundations-mechanics",
+      "variant_id": "kotlin-2.4.10-k2-jvm-ir-openjdk17"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.compiler.jvm-ir-lowering.compatibility-integration.failure.kotlin-2.4.10-k2-jvm-ir-openjdk17",
+      "scenario": "failure",
+      "status": "explicit-gap",
+      "surface_id": "compatibility-integration",
+      "variant_id": "kotlin-2.4.10-k2-jvm-ir-openjdk17"
+    }
+  ],
+  "target_id": "compiler.jvm-bytecode"
+}

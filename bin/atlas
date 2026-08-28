@@ -8,7 +8,7 @@ if [[ -d "${repo_root}/.atlas-core/.git" ]]; then
 fi
 core_dir="${ATLAS_CORE_DIR:-${default_core_dir}}"
 go_cache_dir="${ATLAS_GO_CACHE_DIR:-${repo_root}/.cache/go-build}"
-pinned_commit="1ea027babf3a8d6720ac617c56988e447695ba63"
+pinned_commit="7c9313cfb3e3149af455976228b44bbcb706bf40"
 
 if [[ ! -d "${core_dir}/.git" ]]; then
   echo "エラー: reference-atlas-coreが見つかりません: ${core_dir}" >&2
@@ -60,7 +60,7 @@ if [[ "${command}" == "certificate" ]]; then
 fi
 
 if [[ "$#" -ne 1 && "$#" -ne 3 ]]; then
-  echo "エラー: 使い方: atlas audit <repository-root> [--gate definitive]" >&2
+  echo "エラー: 使い方: atlas audit <repository-root> [--gate definitive|non-regression|authority-extraction|authority-body|authority-review|authority-review-export|authority-relock|skill-router|scenario-trace]" >&2
   exit 1
 fi
 audit_root="$1"
@@ -68,8 +68,8 @@ if [[ "${audit_root}" != /* ]]; then
   audit_root="${repo_root}/${audit_root}"
 fi
 if [[ "$#" -eq 3 ]]; then
-  if [[ "$2" != "--gate" || ( "$3" != "definitive" && "$3" != "non-regression" ) ]]; then
-    echo "エラー: auditで指定できる追加引数は--gate definitiveまたは--gate non-regressionです" >&2
+  if [[ "$2" != "--gate" || ! "$3" =~ ^(definitive|non-regression|authority-extraction|authority-body|authority-review|authority-review-export|authority-relock|skill-router|scenario-trace)$ ]]; then
+    echo "エラー: 不明なaudit gateです: $3" >&2
     exit 1
   fi
   exec env GOCACHE="${go_cache_dir}" go -C "${core_dir}" run ./cmd/atlas audit "${audit_root}" --gate "$3"
