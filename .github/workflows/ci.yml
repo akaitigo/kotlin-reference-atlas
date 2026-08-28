@@ -23,6 +23,12 @@ jobs:
           ref: b32f6afe888e2e07eef0e2e016f6f7d139582159
           path: .atlas-core
 
+      - name: Goを設定
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
+        with:
+          go-version: "1.26.0"
+          cache-dependency-path: .atlas-core/go.sum
+
       - name: JDK 17を設定
         uses: actions/setup-java@v4
         with:
