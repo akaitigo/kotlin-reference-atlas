@@ -1,6 +1,6 @@
 {
   "artifact": {
-    "digest": "sha256:a0596cd68e6ea8e4a8eba0df5752ba05b5adcb3f3e0e66c96f344c3a2502f187",
+    "digest": "sha256:14ab8ce78c660e9d758c9496ce68c2ebb5f1cce8e6d43d57ccd65a77c55f9dd1",
     "media_type": "application/json",
     "size_bytes": 1113,
     "uri": "evidence/artifacts/non-regression.json"
@@ -22,6 +22,6 @@
   "producer": "kotlin-atlas-baseline-gate",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
+  "source_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
   "verdict": "pass"
 }

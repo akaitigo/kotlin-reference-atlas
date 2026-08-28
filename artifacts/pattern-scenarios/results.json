@@ -1,5 +1,8 @@
 {
   "command": "not-run: dedicated Pattern Scenario Variant suites remain planned",
+  "completion_limits": [
+    "専用Runtime成功世代が未生成のためEvidence durability Completion対象外である。"
+  ],
   "counts": {
     "failed": 0,
     "flaky": 0,
@@ -20,11 +23,25 @@
     "runtime": "not-recorded",
     "trace_mode": "required-but-not-recorded"
   },
-  "harness_digest": "sha256:6a0f4925141d36866ffbd9b695655421d7eccbed8237d8b8f192c4b4fefbae12",
+  "harness_digest": "sha256:977aa075a887edc15c9f3ff9f5c7021fdc87e1e611526dd581d2b6688ddd1bfb",
   "id": "kotlin-pattern-scenario-runtime-gap-v1",
   "profile": "unexecuted-dedicated-runtime-gap",
+  "retention_contract": {
+    "failed_run": "retain-prior-success",
+    "publish_on": "full-run-passed",
+    "swap": "staged-directory-rename-with-rollback"
+  },
   "schema_version": 1,
-  "source_digest": "sha256:8ffcf127bf134d920a2f8b549a322959890d22c215e4a1416a994cc6a5164de4",
+  "source_digest": "sha256:61cc38d487319b2e89e7f8456d18c18e1b0363c99a3e8066579c8d43f4c58384",
   "status": "failed",
-  "tests": []
+  "tests": [],
+  "trace_contract": {
+    "oracle_attachment": "required-per-record-not-yet-recorded",
+    "per_variant": true,
+    "required_streams": [
+      "action",
+      "network",
+      "resource"
+    ]
+  }
 }

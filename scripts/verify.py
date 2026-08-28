@@ -19,10 +19,10 @@ DEFINITIVE_MANIFESTS = [
     "definitive.yaml",
     "depth.parity.yaml",
     "non-regression.yaml",
-    "baselines/definitive-c0e9b1c.non-regression-baseline.json",
-    "baselines/definitive-c0e9b1c.core-e822.non-regression-baseline.json",
-    "baselines/definitive-c0e9b1c.core-d535.non-regression-baseline.json",
-    "baselines/definitive-c0e9b1c.core-7c9313c.non-regression-baseline.json",
+    "baselines/definitive-c0e9b1c.core-40f627e.non-regression-baseline.json",
+    "evidence/scenarios/index.json",
+    "evidence/scenarios/closure-plan.json",
+    "artifacts/pattern-scenarios/results.json",
     "surface.inventory.yaml",
     "verification.matrix.yaml",
     "evals/kotlin-reference-router.definitive-skill-eval.json",
@@ -895,11 +895,21 @@ def summarize_gap_ledger() -> dict:
 
 def audit_definitive_incomplete() -> dict:
     base = run([str(ROOT / "bin" / "atlas"), "audit", "."], capture=True)
+    scenario_plan = run_expect_failure([str(ROOT / "bin" / "atlas"), "audit", ".", "--gate", "scenario-plan"])
+    if not scenario_plan.stdout or "Evidence durability" not in scenario_plan.stdout:
+        raise RuntimeError("Scenario Plan Gateが成功世代未生成を明示して拒否しない")
+    durability = run_expect_failure([str(ROOT / "bin" / "atlas"), "audit", ".", "--gate", "evidence-durability"])
+    if not durability.stdout or "failed run" not in durability.stdout:
+        raise RuntimeError("Evidence durability Gateが成功世代未生成を明示して拒否しない")
     definitive = run_expect_failure([str(ROOT / "bin" / "atlas"), "audit", ".", "--gate", "definitive"])
     if not definitive.stdout or "subject-definitive" not in definitive.stdout:
         raise RuntimeError("Definitive Gateが未完理由を返さない")
     result = {
         "base_audit": base.stdout.strip(),
+        "scenario_plan_audit_exit_code": scenario_plan.returncode,
+        "scenario_plan_audit_output": scenario_plan.stdout.strip(),
+        "evidence_durability_audit_exit_code": durability.returncode,
+        "evidence_durability_audit_output": durability.stdout.strip(),
         "definitive_audit_exit_code": definitive.returncode,
         "definitive_audit_output": definitive.stdout.strip(),
         "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
@@ -945,7 +955,7 @@ def main(*, skip_container: bool = False) -> None:
     summary = {
         "atlas_id": "kotlin-reference-atlas",
         "epoch": "2026-08-28",
-        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "definitive_skill": definitive_skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "definitive": "expected-incomplete"},
+        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "definitive_skill": definitive_skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "scenario_plan": "expected-incomplete-no-success-generation", "evidence_durability": "expected-incomplete-no-success-generation", "definitive": "expected-incomplete"},
         "definitive_skill_eval": definitive_skill_result,
         "kotlin_depth_parity": {"axis_count": fe_parity_result["axis_count"], "status_counts": fe_parity_result["status_counts"], "total_axis_gaps": fe_parity_result["total_axis_gaps"], "all_axes_closed": fe_parity_result["all_axes_closed"], "reference_commit": fe_parity_result["reference_commit"]},
         "completion_class": "incomplete",
@@ -956,8 +966,9 @@ def main(*, skip_container: bool = False) -> None:
         "authority_review_queue": authority_review_result["summary"],
         "gap_ledger": gaps,
         "completion_gaps": [
-            "146393 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
+            "146397 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
             "69 Authority inventory Behavior×10 Scenarioは専用row化済みだが、4590 Surface×Scenario×Variant cellの専用初回実行・Identity・Source/Harness・Oracle/Trace/ArtifactとAuthority atomic bindingが未閉鎖",
+            "Pattern Scenario Reporterは原子的retention契約へ適合するが、公開可能なfull-run成功世代が未生成のためCore Evidence durability／Scenario Plan Gateは未閉鎖",
             "112-cell Router契約と独立Agent Forward Evalはpassだが22 Mastery routing gapが未閉鎖",
             "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖",
         ],

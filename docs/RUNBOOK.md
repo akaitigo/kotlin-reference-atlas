@@ -7,7 +7,7 @@
 - Git
 - Node.js 25（Kotlin/JS・Wasm実行）
 - Docker 29（Container profile）
-- `reference-atlas-core` commit `7c9313cfb3e3149af455976228b44bbcb706bf40`
+- `reference-atlas-core` commit `40f627e7e7db1d679c18f9442754951b0e1dd13b`
 
 ## Execute
 
@@ -16,6 +16,8 @@ PATH="$PWD/bin:$PATH" atlas validate atlas.yaml mastery.yaml coverage.yaml sourc
 PATH="$PWD/bin:$PATH" atlas audit .
 PATH="$PWD/bin:$PATH" atlas audit . --gate definitive # 未完中は非0終了
 PATH="$PWD/bin:$PATH" atlas audit . --gate non-regression
+PATH="$PWD/bin:$PATH" atlas audit . --gate scenario-plan # 成功世代未生成中は非0終了
+PATH="$PWD/bin:$PATH" atlas audit . --gate evidence-durability # 成功世代未生成中は非0終了
 python3 scripts/generate_authority_review_queue.py
 python3 scripts/test_authority_review_queue.py
 python3 scripts/verify_authority_review_queue.py

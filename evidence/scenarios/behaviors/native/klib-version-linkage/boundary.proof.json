@@ -33,10 +33,10 @@
       "producer": "kotlin-native",
       "record": {
         "bytes": 994,
-        "digest": "sha256:ee6f19fcec185e050f4c74e9e1c3a223c6a1f6f094147d76783f02fa7ac222ff",
+        "digest": "sha256:8314117635c856f1c0e274a2ded19c69e5bc0e70ecb4972848f522d48dd1bce0",
         "path": "evidence/platform.native-compile.evidence.json"
       },
-      "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
+      "source_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
       "verdict": "pass"
     }
   ],

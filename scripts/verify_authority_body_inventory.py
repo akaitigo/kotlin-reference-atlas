@@ -15,6 +15,7 @@ SCHEMA_MIGRATION = ROOT / "migrations" / "authority-body-schema-v2.json"
 CORE_PIN_MAPPINGS = [
     ROOT / "migrations" / "authority-anchor-core-e822-to-d535.json",
     ROOT / "migrations" / "authority-anchor-core-d535-to-7c9313c.json",
+    ROOT / "migrations" / "authority-anchor-core-7c9313c-to-40f627e.json",
 ]
 REFERENCE = ROOT / "baseline" / "fe-authority-body-reference-v1.json"
 OUTPUT = ROOT / "evidence" / "artifacts" / "authority-body-inventory-validation.json"
@@ -158,25 +159,30 @@ def main() -> None:
             errors.append(f"Core pin更新の旧ID→新ID履歴Mappingがない: {mapping_path.name}")
             continue
         mappings.append(load(mapping_path))
-    if len(mappings) == 2:
-        first, mapping = mappings
-        rows = mapping.get("mappings", [])
-        old_ids = [item.get("old_anchor_id") for item in rows]
-        new_ids = [item.get("new_anchor_id") for item in rows]
-        first_new_ids = {item.get("new_anchor_id") for item in first.get("mappings", [])}
-        if (
-            first.get("old_commit") != "e8223295bd86f7400e154171dd1596b9e54f0835"
-            or first.get("new_commit") != "d535b0802697edea73ca1c778a5b571e28fe0614"
-            or mapping.get("old_commit") != "d535b0802697edea73ca1c778a5b571e28fe0614"
-            or mapping.get("new_commit") != "7c9313cfb3e3149af455976228b44bbcb706bf40"
-            or mapping.get("old_anchor_count") != len(rows)
-            or len(old_ids) != len(set(old_ids))
-            or len(new_ids) != len(set(new_ids))
-            or not first_new_ids.issubset(set(old_ids))
-            or not set(new_ids).issubset(all_ids)
-            or any(not item.get("locator") for item in rows)
-        ):
-            errors.append("Authority candidate-anchor old ID→new ID履歴Mapping実体が不正")
+    expected_chain = [
+        ("e8223295bd86f7400e154171dd1596b9e54f0835", "d535b0802697edea73ca1c778a5b571e28fe0614"),
+        ("d535b0802697edea73ca1c778a5b571e28fe0614", "7c9313cfb3e3149af455976228b44bbcb706bf40"),
+        ("7c9313cfb3e3149af455976228b44bbcb706bf40", "40f627e7e7db1d679c18f9442754951b0e1dd13b"),
+    ]
+    if len(mappings) == len(expected_chain):
+        previous_new_ids = None
+        for mapping, (old_commit, new_commit) in zip(mappings, expected_chain):
+            rows = mapping.get("mappings", [])
+            old_ids = [item.get("old_anchor_id") for item in rows]
+            new_ids = [item.get("new_anchor_id") for item in rows]
+            if (
+                mapping.get("old_commit") != old_commit
+                or mapping.get("new_commit") != new_commit
+                or mapping.get("old_anchor_count") != len(rows)
+                or len(old_ids) != len(set(old_ids))
+                or len(new_ids) != len(set(new_ids))
+                or (previous_new_ids is not None and not previous_new_ids.issubset(set(old_ids)))
+                or any(not item.get("locator") for item in rows)
+            ):
+                errors.append("Authority candidate-anchor old ID→new ID履歴Mapping実体が不正")
+            previous_new_ids = set(new_ids)
+        if previous_new_ids is not None and not previous_new_ids.issubset(all_ids):
+            errors.append("Authority candidate-anchor最終Mappingが現行inventoryへ接続されていない")
 
     historical = historical_baseline(errors)
     historical_ids = {anchor for document in historical.get("documents", []) for anchor in document.get("anchor_ids", [])}

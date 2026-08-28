@@ -3,9 +3,11 @@
     "inherited_gap_rows_at_core_d535": 690,
     "matrix_rows": 690,
     "patterns": 69,
+    "planned_gap_rows_at_core_40f627e": 690,
     "scenarios": 10
   },
   "completed_rows": [],
+  "completed_tranches": [],
   "generated_at": "2026-08-28T00:00:00+09:00",
   "id": "kotlin-pattern-scenario-closure-plan-v1",
   "independent_incomplete": {
@@ -28495,8 +28497,8 @@
   "schema_version": 1,
   "scope": "Every current Kotlin Pattern gap row, with all declared platform Variants and no integrated-trace substitution",
   "source_digests": {
-    "artifacts/pattern-scenarios/results.json": "sha256:9fc974345bf219a10c349c41c3f08ed6e18f2757ded4bdf47ef6a885bac8ef54",
-    "evidence/scenarios/index.json": "sha256:5a744ff00660917129692ce89e7ff1fc3e26485a8600dfb1083831d21c31b685"
+    "artifacts/pattern-scenarios/results.json": "sha256:6d6354ecc5db3d2bc13c34e28cd009ca3f8809286e3ff2dd67dc2fb026998b5e",
+    "evidence/scenarios/index.json": "sha256:cb70c26f71f4e0514117aca0b51163c745a09f1610d103d9684f8cd1261442fc"
   },
   "status": "incomplete",
   "summary": {
@@ -28513,6 +28515,7 @@
       "security": 69
     },
     "completed_dedicated_rows": 0,
+    "completed_planned_tranches": 0,
     "planned_tranches": 180,
     "remaining_rows": 690
   },

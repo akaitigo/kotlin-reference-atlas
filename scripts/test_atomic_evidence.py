@@ -8,7 +8,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-from atomic_evidence import EvidencePublishError, publish_directory
+from atomic_evidence import EvidencePublishError, RETENTION_CONTRACT, publish_directory
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -71,6 +71,11 @@ def expect_retained(output: Path, before: str, *, build, passed: bool, fault: st
 
 def main() -> None:
     verify_fe_reference()
+    assert RETENTION_CONTRACT == {
+        "publish_on": "full-run-passed",
+        "failed_run": "retain-prior-success",
+        "swap": "staged-directory-rename-with-rollback",
+    }
     with tempfile.TemporaryDirectory(prefix="kotlin-atomic-evidence-") as temporary:
         output = Path(temporary) / "pattern-scenarios"
         publish_directory(output, build_generation("prior"), validate_generation, full_run_passed=True)
@@ -93,6 +98,7 @@ def main() -> None:
         "partial_generation_rejected": "pass",
         "mixed_generation_rejected": "pass",
         "swap_failure_rollback": "pass",
+        "retention_contract": RETENTION_CONTRACT,
         "verdict": "pass",
     }
     report_path = ROOT / "evidence" / "artifacts" / "atomic-evidence-validation.json"

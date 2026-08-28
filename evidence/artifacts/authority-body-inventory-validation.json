@@ -16,15 +16,15 @@
   "summary": {
     "anchors_by_selector": {
       "document-root": 16,
-      "tracked-blob": 146377
+      "tracked-blob": 146381
     },
     "authority_semantics_exhaustive": false,
     "failed_documents": 0,
     "human_reviewed_anchors": 0,
     "matched_documents": 16,
-    "pending_human_anchors": 146393,
+    "pending_human_anchors": 146397,
     "promoted_surface_artifacts": 0,
-    "raw_anchor_candidates": 146393,
+    "raw_anchor_candidates": 146397,
     "selector_exhaustive_documents": 16,
     "source_entries": 18,
     "stale_documents": 0,

@@ -7,6 +7,12 @@ import shutil
 from pathlib import Path
 from typing import Callable
 
+RETENTION_CONTRACT = {
+    "publish_on": "full-run-passed",
+    "failed_run": "retain-prior-success",
+    "swap": "staged-directory-rename-with-rollback",
+}
+
 
 class EvidencePublishError(RuntimeError):
     pass

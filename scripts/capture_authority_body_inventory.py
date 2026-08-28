@@ -15,10 +15,10 @@ DRAFTS = ROOT / "authority" / "body-inventory-draft"
 BASELINE = ROOT / "baselines" / "authority-body-inventory-v1.json"
 SCHEMA_MIGRATION = ROOT / "migrations" / "authority-body-schema-v2.json"
 PIN_MIGRATION = ROOT / "migrations" / "authority-body-inventory-v1.json"
-CORE_ANCHOR_MAPPING = ROOT / "migrations" / "authority-anchor-core-d535-to-7c9313c.json"
+CORE_ANCHOR_MAPPING = ROOT / "migrations" / "authority-anchor-core-7c9313c-to-40f627e.json"
 CORE_REPOSITORY = "https://github.com/akaitigo/reference-atlas-core.git"
-CORE_OLD_COMMIT = "d535b0802697edea73ca1c778a5b571e28fe0614"
-CORE_NEW_COMMIT = "7c9313cfb3e3149af455976228b44bbcb706bf40"
+CORE_OLD_COMMIT = "7c9313cfb3e3149af455976228b44bbcb706bf40"
+CORE_NEW_COMMIT = "40f627e7e7db1d679c18f9442754951b0e1dd13b"
 SELECTOR_CONTRACT = ["document-root", "tracked-blob"]
 BODY_STORAGE = "digest-locator-and-metadata-only"
 
@@ -210,7 +210,7 @@ def write_core_pin_migration(previous_baseline: dict, artifacts: list[tuple[dict
     ]
     mapping = {
         "schema_version": 1,
-        "id": "reference-atlas-core-d535-to-7c9313c-authority-anchor-mapping",
+        "id": "reference-atlas-core-7c9313c-to-40f627e-authority-anchor-mapping",
         "old_document_id": old["id"],
         "new_document_id": current["document_id"],
         "old_commit": CORE_OLD_COMMIT,
@@ -300,7 +300,7 @@ def main(cache_root: Path, initialize_baseline: bool) -> None:
             (item for item in previous_baseline.get("documents", []) if item.get("source_ids") == ["reference-atlas-core-definitive-v2"]),
             None,
         ) if previous_baseline else None
-        if previous_core and previous_core.get("locked_body_digest") == "sha256:4efc631c779d4d1dfcf6025287d3ab2213feb7e6bf32b9890edcbb36fda10b19":
+        if previous_core and previous_core.get("locked_body_digest") == "sha256:bc36ad66c1b18658beeb06b096419a3688de8f25a075069d105528cdb8117ba0":
             write_core_pin_migration(previous_baseline, artifacts)
         elif not CORE_ANCHOR_MAPPING.is_file():
             raise RuntimeError("Core pin更新の旧ID→新ID履歴Mappingがありません")

@@ -33,10 +33,10 @@
       "producer": "gradle-testkit",
       "record": {
         "bytes": 972,
-        "digest": "sha256:fd4e05c652ffe8af3398931555f37b4be0de4feb9ca3548407031b469188c1a4",
+        "digest": "sha256:d587e206909d3d77c11024f3450ca3211b52952a08cfa92daeb82bfd24b6b6dd",
         "path": "evidence/gradle.plugin-consumer.evidence.json"
       },
-      "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
+      "source_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
       "verdict": "pass"
     }
   ],

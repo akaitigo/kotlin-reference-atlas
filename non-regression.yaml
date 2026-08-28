@@ -1,14 +1,14 @@
 schema_version: 2
 atlas_id: kotlin-reference-atlas
 baseline:
-  path: baselines/definitive-c0e9b1c.core-7c9313c.non-regression-baseline.json
-  digest: sha256:45436a7b87f503af252f8e98f96860745cdfeaad80f7a9aa45cb29b8ddf7e9f3
+  path: baselines/definitive-c0e9b1c.core-40f627e.non-regression-baseline.json
+  digest: sha256:0167ef4b57bb0468ff74d4c52a23f24a99895ec120da39f03c754c0ec05bf5a8
 baseline_upgrade:
   mode: monotonic-capture-contract-extension
   from:
     path: baselines/definitive-c0e9b1c.non-regression-baseline.json
     digest: sha256:327a2e2cf6ba7fb3688fc9635da5fd04e72b741b1ee230a47963175d8d8a8e32
-  reason: Core 7c9313cのScenario Proof／Closure Plan Collectionを旧全項目を保持した空Collectionとして追加する単調capture契約拡張である。
+  reason: Core 40f627eのScenario Proof／Closure Plan／Evidence durability Collectionを旧全項目を保持した空Collectionとして追加する単調capture契約拡張である。
   migration_evidence_ids: [evolution.compatibility-migration]
 replacements:
   - collection: targets

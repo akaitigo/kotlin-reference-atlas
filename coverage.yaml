@@ -2,7 +2,7 @@
   "schema_version": 1,
   "atlas_id": "kotlin-reference-atlas",
   "epoch": "2026-08-28",
-  "authority_lock_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
+  "authority_lock_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
   "target_sets": [
     { "id": "authority", "title": "一次資料と公開Surface Inventory", "sequence": 1, "completion_required": true, "exit_criteria": ["対象Versionと一次資料のDigestが固定されていること", "Compilerとstdlibの対象Surfaceを機械的にInventoryできること"] },
     { "id": "semantics", "title": "言語Semanticsと型System", "sequence": 2, "completion_required": true, "exit_criteria": ["言語Semanticsを正常系と境界値のOracleで説明できること", "型Systemのvariance、Nothing、reified境界を実行またはcompileで検証できること"] },

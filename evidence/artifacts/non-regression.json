@@ -16,7 +16,7 @@
     "test_cases": 34,
     "test_files": 9
   },
-  "core_v2_audit": "非退行監査済み: kotlin-reference-atlas baseline_items=220 current_items=2089 replacements=5",
+  "core_v2_audit": "非退行監査済み: kotlin-reference-atlas baseline_items=220 current_items=2092 replacements=5",
   "core_v2_baseline": "baselines/definitive-c0e9b1c.core-e822.non-regression-baseline.json",
   "core_v2_baseline_anchor": "baselines/definitive-c0e9b1c.non-regression-baseline.json",
   "counts": {

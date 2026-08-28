@@ -5,5 +5,9 @@
   "completion_class": "incomplete",
   "definitive_audit_exit_code": 1,
   "definitive_audit_output": "エラー: subject-definitiveではrequired Targetをcoveredにする必要があります: authority.locator-extraction state=partial\nexit status 1",
+  "evidence_durability_audit_exit_code": 1,
+  "evidence_durability_audit_output": "エラー: failed runを成功Evidence directoryへ公開できません\nexit status 1",
+  "scenario_plan_audit_exit_code": 1,
+  "scenario_plan_audit_output": "エラー: Scenario Closure Evidence durability: failed runを成功Evidence directoryへ公開できません\nexit status 1",
   "verdict": "incomplete"
 }

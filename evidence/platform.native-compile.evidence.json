@@ -22,6 +22,6 @@
   "producer": "kotlin-native",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
+  "source_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
   "verdict": "pass"
 }

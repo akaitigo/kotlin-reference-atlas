@@ -10,14 +10,14 @@
       "context_end": null,
       "context_start": null,
       "context_unit": null,
-      "domain_reference_metadata_digest": "sha256:9fdfdd0d15526e4d3a703549396ece976b06a2b5af2008d58f53aca384065cc1",
+      "domain_reference_metadata_digest": "sha256:589b67df55779785508b3808b6fc537c9874313df4b2df7691b2abaa2c864315",
       "edge_id": "edge.authority.reference-atlas-core-definitive-v2",
       "heading_digest": null,
       "locator": "document-root",
       "locator_status": "not-evaluated-fetch-failed",
       "pattern_id": "authority/reference-atlas-core-definitive-v2",
       "pattern_kind": "atomic",
-      "reference_url": "https://github.com/akaitigo/reference-atlas-core/commit/7c9313cfb3e3149af455976228b44bbcb706bf40",
+      "reference_url": "https://github.com/akaitigo/reference-atlas-core/commit/40f627e7e7db1d679c18f9442754951b0e1dd13b",
       "source_id": "reference-atlas-core-definitive-v2",
       "surface_ids": [
         "provenance-rights"
@@ -45,8 +45,8 @@
     "locked_digest_match": false,
     "status": "failed"
   },
-  "locked_source_digest": "sha256:bc36ad66c1b18658beeb06b096419a3688de8f25a075069d105528cdb8117ba0",
+  "locked_source_digest": "sha256:bc469348f596574029bd45f77be3848f3ac55ed44c4aa41dba7730f920e68070",
   "schema_version": 1,
   "source_id": "reference-atlas-core-definitive-v2",
-  "source_url": "https://github.com/akaitigo/reference-atlas-core/commit/7c9313cfb3e3149af455976228b44bbcb706bf40"
+  "source_url": "https://github.com/akaitigo/reference-atlas-core/commit/40f627e7e7db1d679c18f9442754951b0e1dd13b"
 }

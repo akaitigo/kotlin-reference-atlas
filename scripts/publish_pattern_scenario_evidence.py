@@ -8,12 +8,10 @@ import json
 import shutil
 from pathlib import Path
 
-from atomic_evidence import EvidencePublishError, publish_directory
+from atomic_evidence import EvidencePublishError, RETENTION_CONTRACT, publish_directory
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "artifacts" / "pattern-scenarios"
-
-
 def sha256(path: Path) -> str:
     return "sha256:" + hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -38,6 +36,7 @@ def validate_generation(staging: Path) -> None:
     tests = report.get("tests", [])
     if (
         report.get("status") != "passed"
+        or report.get("retention_contract") != RETENTION_CONTRACT
         or counts.get("total") != len(tests)
         or counts.get("passed") != len(tests)
         or any(counts.get(field) != 0 for field in ("failed", "flaky", "skipped"))
@@ -45,6 +44,7 @@ def validate_generation(staging: Path) -> None:
     ):
         raise EvidencePublishError("the complete staged run is not a first-attempt pass set")
     expected_files = {"results.json"}
+    artifact_paths = set()
     for record in tests:
         if record.get("attempts") != 1 or record.get("final_status") != "passed" or record.get("error") is not None:
             raise EvidencePublishError(f"retry/failure record cannot be published: {record.get('id')}")
@@ -53,9 +53,17 @@ def validate_generation(staging: Path) -> None:
             raise EvidencePublishError(f"dedicated Oracle is missing: {record.get('id')}")
         for field, directory in (("trace", "traces"), ("screenshot", "screenshots")):
             artifact = record.get(field, {})
-            source_name = Path(str(artifact.get("path", ""))).name
+            declared_path = Path(str(artifact.get("path", "")))
+            expected_parent = Path("artifacts") / "pattern-scenarios" / directory
+            if declared_path.parent != expected_parent or declared_path.name in {"", ".", ".."}:
+                raise EvidencePublishError(f"staged {field} is outside the publication generation: {record.get('id')}")
+            source_name = declared_path.name
             path = staging / directory / source_name
-            expected_files.add(path.relative_to(staging).as_posix())
+            relative_path = path.relative_to(staging).as_posix()
+            if relative_path in artifact_paths:
+                raise EvidencePublishError(f"staged Artifact is shared by multiple records: {relative_path}")
+            artifact_paths.add(relative_path)
+            expected_files.add(relative_path)
             if not path.is_file() or sha256(path) != artifact.get("digest") or path.stat().st_size != artifact.get("bytes"):
                 raise EvidencePublishError(f"staged {field} binding mismatch: {record.get('id')}")
             if field == "trace" and not all(artifact.get(f"{stream}_stream") is True for stream in ("action", "network", "resource")):

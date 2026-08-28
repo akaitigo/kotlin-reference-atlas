@@ -33,10 +33,10 @@
       "producer": "kotlin-atlas-verifier",
       "record": {
         "bytes": 965,
-        "digest": "sha256:2a03a2842d2d2c2045cd92becc8440d806989bc61ae3bd09bc6cf4f71e1f5549",
+        "digest": "sha256:51bfe57d2e08c9af94c719a79efe0f96458b7041ca0e5cf6b883cc173cd210a2",
         "path": "evidence/build.toolchain-lock.evidence.json"
       },
-      "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
+      "source_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
       "verdict": "pass"
     }
   ],

@@ -6,7 +6,7 @@
 
 Authority Review Queueの人手decisionがAtomic behaviorへ結び付くまでは、統合Traceや既存Target Evidenceが成功していても`completion_eligible`は`false`です。統合System Traceと別Artifactのmetadataはcell固有Proofに流用しません。KLIB、bytecode、compile-only、static artifactは、実Runtimeが必要な行の代替にはしません。
 
-`evidence/scenarios/closure-plan.json`は690 Gapをrisk順の180 trancheへ固定し、各行の全Variant、専用Runtime identity、Oracle、Action／Network／Resource trace、Source／Harness digestをClosure条件にします。実行Reporterは全Artifactを同一filesystem上のstaging directoryへ生成・検証し、full-run pass時だけdirectory renameで公開します。失敗runは直前の成功Evidenceを保持し、swap失敗時はbackupからrollbackします。部分上書き、新旧generation混在、失敗runによる成功Evidence消去はnegative testで拒否します。
+`evidence/scenarios/closure-plan.json`は690 Gapをrisk順の180 trancheへ固定し、各行の全Variant、専用Runtime identity、Oracle、Action／Network／Resource trace、Source／Harness digestをClosure条件にします。実行Reporterは全Artifactを同一filesystem上のstaging directoryへ生成・検証し、full-run pass時だけdirectory renameで公開します。失敗runは直前の成功Evidenceを保持し、swap失敗時はbackupからrollbackします。部分上書き、新旧generation混在、失敗runによる成功Evidence消去はnegative testで拒否します。現状は公開可能な専用Runtime成功世代がないため、Core `evidence-durability`と、それを前提にする`scenario-plan`は明示的未完として非0終了します。
 
 再生成と検証:
 

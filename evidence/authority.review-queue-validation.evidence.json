@@ -1,6 +1,6 @@
 {
   "artifact": {
-    "digest": "sha256:70636cc47fb01d42966829edfcffbb956eba6561492d888370bba199e5cc1d1c",
+    "digest": "sha256:3ec7c8a6d365a3ef99620300b2f3d731e3cfedb9a0660dd720c1dfef6d46b1fa",
     "media_type": "application/json",
     "size_bytes": 1061,
     "uri": "evidence/artifacts/authority-review-queue-validation.json"
@@ -15,13 +15,13 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:1cfa93e419233a73271d7cb9299ec77bbde82eb7d80554f7ea9bbec38e1139b2",
+  "harness_digest": "sha256:c6f6792fbb1e13227dfdfcbb461b8f04f7ff057bdc1546063b030c058e57353f",
   "harness_path": "authority/review-queue.snapshot.json",
   "id": "authority.review-queue-validation",
   "kind": "capture",
   "producer": "kotlin-authority-review-queue-verifier",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:5884e3db0b1cfe1d5ae1e0b04864f79d7165fcae65f14954318e96fb8387d3bd",
+  "source_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
   "verdict": "pass"
 }

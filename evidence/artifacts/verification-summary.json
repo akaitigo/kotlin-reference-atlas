@@ -3,15 +3,15 @@
   "authority_body_denominator": {
     "anchors_by_selector": {
       "document-root": 16,
-      "tracked-blob": 146377
+      "tracked-blob": 146381
     },
     "authority_semantics_exhaustive": false,
     "failed_documents": 0,
     "human_reviewed_anchors": 0,
     "matched_documents": 16,
-    "pending_human_anchors": 146393,
+    "pending_human_anchors": 146397,
     "promoted_surface_artifacts": 0,
-    "raw_anchor_candidates": 146393,
+    "raw_anchor_candidates": 146397,
     "selector_exhaustive_documents": 16,
     "source_entries": 18,
     "stale_documents": 0,
@@ -41,14 +41,14 @@
     "human_reviewed": 0,
     "included": 0,
     "merged": 0,
-    "pending_human": 146393,
+    "pending_human": 146397,
     "priority_counts": {
       "0": 16,
-      "1": 92991,
-      "2": 53386
+      "1": 92992,
+      "2": 53389
     },
     "queue_counts_as_depth_achievement": false,
-    "queued_anchors": 146393,
+    "queued_anchors": 146397,
     "split": 0,
     "stale_document_holds": 0,
     "unavailable_document_holds": 0
@@ -60,8 +60,9 @@
   "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
   "completion_class": "incomplete",
   "completion_gaps": [
-    "146393 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
+    "146397 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
     "69 Authority inventory Behavior×10 Scenarioは専用row化済みだが、4590 Surface×Scenario×Variant cellの専用初回実行・Identity・Source/Harness・Oracle/Trace/ArtifactとAuthority atomic bindingが未閉鎖",
+    "Pattern Scenario Reporterは原子的retention契約へ適合するが、公開可能なfull-run成功世代が未生成のためCore Evidence durability／Scenario Plan Gateは未閉鎖",
     "112-cell Router契約と独立Agent Forward Evalはpassだが22 Mastery routing gapが未閉鎖",
     "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖"
   ],
@@ -96,6 +97,7 @@
     "deep_artifacts": "pass",
     "definitive": "expected-incomplete",
     "definitive_skill": "pass-bounded-incomplete",
+    "evidence_durability": "expected-incomplete-no-success-generation",
     "kotlin_depth_parity": "incomplete",
     "labs": "pass",
     "manifest": "pass",
@@ -103,6 +105,7 @@
     "neutral_language": "pass",
     "non_regression": "pass",
     "rights_metadata": "pass",
+    "scenario_plan": "expected-incomplete-no-success-generation",
     "skill": "pass"
   },
   "kotlin_depth_parity": {

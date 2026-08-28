@@ -23,14 +23,14 @@
     "human_reviewed": 0,
     "included": 0,
     "merged": 0,
-    "pending_human": 146393,
+    "pending_human": 146397,
     "priority_counts": {
       "0": 16,
-      "1": 92991,
-      "2": 53386
+      "1": 92992,
+      "2": 53389
     },
     "queue_counts_as_depth_achievement": false,
-    "queued_anchors": 146393,
+    "queued_anchors": 146397,
     "split": 0,
     "stale_document_holds": 0,
     "unavailable_document_holds": 0

@@ -4,6 +4,11 @@
   "methodology_reference": "baseline/fe-atomic-evidence-reference-v1.json",
   "mixed_generation_rejected": "pass",
   "partial_generation_rejected": "pass",
+  "retention_contract": {
+    "failed_run": "retain-prior-success",
+    "publish_on": "full-run-passed",
+    "swap": "staged-directory-rename-with-rollback"
+  },
   "schema_version": 1,
   "staging_only_generation": "pass",
   "swap_failure_rollback": "pass",

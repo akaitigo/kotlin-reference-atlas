@@ -10,6 +10,7 @@ verification_matrix: verification.matrix.yaml
 depth_parity: depth.parity.yaml
 scenario_proofs: evidence/scenarios/index.json
 scenario_closure_plan: evidence/scenarios/closure-plan.json
+evidence_durability: artifacts/pattern-scenarios/results.json
 skill_eval: evals/kotlin-reference-router.definitive-skill-eval.json
 skill_router: evals/definitive-skill-router.json
 non_regression: non-regression.yaml

@@ -6,6 +6,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from atomic_evidence import RETENTION_CONTRACT
+
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "evidence" / "scenarios" / "index.json"
 PLAN = ROOT / "evidence" / "scenarios" / "closure-plan.json"
@@ -23,8 +25,6 @@ REQUIRED_CLOSURE = {
     "source_and_harness_digests": True,
     "forbidden_substitutions": ["metadata-only", "capture-reuse", "integrated-trace-reuse", "mock-or-static-runtime"],
 }
-
-
 def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -59,6 +59,15 @@ def empty_runtime_report() -> dict:
             "retries": 0,
             "trace_mode": "required-but-not-recorded",
         },
+        "retention_contract": RETENTION_CONTRACT,
+        "trace_contract": {
+            "per_variant": True,
+            "required_streams": ["action", "network", "resource"],
+            "oracle_attachment": "required-per-record-not-yet-recorded",
+        },
+        "completion_limits": [
+            "専用Runtime成功世代が未生成のためEvidence durability Completion対象外である。",
+        ],
         "tests": [],
     }
 
@@ -123,12 +132,14 @@ def generate() -> dict:
         },
         "baseline": {
             "inherited_gap_rows_at_core_d535": len(rows),
+            "planned_gap_rows_at_core_40f627e": len(rows),
             "matrix_rows": index["summary"]["rows"],
             "patterns": index["summary"]["patterns"],
             "scenarios": index["summary"]["scenarios"],
         },
         "summary": {
             "completed_dedicated_rows": 0,
+            "completed_planned_tranches": 0,
             "remaining_rows": len(rows),
             "planned_tranches": len(tranches),
             "by_scenario": by_scenario,
@@ -144,6 +155,7 @@ def generate() -> dict:
             "agent_forward_eval": "pass-with-independent-routing-gaps-retained",
         },
         "completed_rows": [],
+        "completed_tranches": [],
         "next_tranche": tranches[0] if tranches else None,
         "tranches": tranches,
         "rows": rows,

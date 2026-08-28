@@ -6294,10 +6294,10 @@
   "id": "kotlin-scenario-proof-core-v2",
   "schema_version": 1,
   "source_digests": {
-    "authority/reviews/decisions.json": "sha256:3accf5f10b589cc5394c1474fdcbdd17358eba50472bbd5d2afd1cfcacff0da2",
-    "coverage.yaml": "sha256:f20cffa071144fecebb01a2e89303071856b7122a4e2ad579619a707a0897bb6",
-    "evidence/scenarios/kotlin-closure-index.json": "sha256:1f749da3f5125dcc12721ebbe15371e716c76294884fd00c41a5d7b5bdc64372",
-    "surface.inventory.yaml": "sha256:8ffcf127bf134d920a2f8b549a322959890d22c215e4a1416a994cc6a5164de4"
+    "authority/reviews/decisions.json": "sha256:e7308c7d97355dbbdf902133b8b466f68159bb094d886f24e5d27e00e9ba89e6",
+    "coverage.yaml": "sha256:06b7bf778bfe514db8e10b38ee56db6dba582197b653ebd04703402f1d2e42a8",
+    "evidence/scenarios/kotlin-closure-index.json": "sha256:b100f85c4d0519ef32f1f154bda3695b39af2fa514e852960761a8728dc51e61",
+    "surface.inventory.yaml": "sha256:61cc38d487319b2e89e7f8456d18c18e1b0363c99a3e8066579c8d43f4c58384"
   },
   "status": "incomplete-authority-atomic-and-runtime-closure",
   "summary": {
