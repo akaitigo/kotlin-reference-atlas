@@ -7,7 +7,7 @@
       "name": "reference-atlas-core",
       "redistribution": "link-only",
       "source": "https://github.com/akaitigo/reference-atlas-core",
-      "version": "cf9e6e2d981305c83f970c1f21a1ddc9c1109263"
+      "version": "eabefbb706c36140ae3f6509c9ca1bfae3c815ec"
     },
     {
       "id": "gradle-distribution",
@@ -38,7 +38,7 @@
     },
     {
       "id": "locked-4faa13a12d1130503617",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "com.github.ben-manes.caffeine:caffeine",
       "redistribution": "metadata-only",
@@ -47,7 +47,7 @@
     },
     {
       "id": "locked-ffe7bb907fde62ec9468",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "com.google.errorprone:error_prone_annotations",
       "redistribution": "metadata-only",
@@ -56,7 +56,7 @@
     },
     {
       "id": "locked-8344881a0ce27e5de6c2",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "io.opentelemetry:opentelemetry-api",
       "redistribution": "metadata-only",
@@ -65,7 +65,7 @@
     },
     {
       "id": "locked-b7eae8b03d2b7f90b448",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "io.opentelemetry:opentelemetry-context",
       "redistribution": "metadata-only",
@@ -74,7 +74,7 @@
     },
     {
       "id": "locked-7331587508d3f1055b97",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.apiguardian:apiguardian-api",
       "redistribution": "metadata-only",
@@ -83,7 +83,7 @@
     },
     {
       "id": "locked-494a20eab86e6813c749",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "MIT",
       "name": "org.checkerframework:checker-qual",
       "redistribution": "metadata-only",
@@ -92,7 +92,7 @@
     },
     {
       "id": "locked-2f6c12e4a1e9016b54c6",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-build-tools-api",
       "redistribution": "metadata-only",
@@ -101,7 +101,7 @@
     },
     {
       "id": "locked-a00b87217c357659b9e5",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-build-tools-api",
       "redistribution": "metadata-only",
@@ -110,7 +110,7 @@
     },
     {
       "id": "locked-c8fec8ca3aa25bde54fe",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-build-tools-compat",
       "redistribution": "metadata-only",
@@ -119,7 +119,7 @@
     },
     {
       "id": "locked-de5cf79ee86507897bd6",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-build-tools-cri-impl",
       "redistribution": "metadata-only",
@@ -128,7 +128,7 @@
     },
     {
       "id": "locked-3ab80748b7eab845c94a",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-build-tools-cri-impl",
       "redistribution": "metadata-only",
@@ -137,7 +137,7 @@
     },
     {
       "id": "locked-b4da255ac72f1be9b4a0",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-build-tools-impl",
       "redistribution": "metadata-only",
@@ -146,7 +146,7 @@
     },
     {
       "id": "locked-3ae7f600407dfe0845d3",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-build-tools-impl",
       "redistribution": "metadata-only",
@@ -155,7 +155,7 @@
     },
     {
       "id": "locked-49c014cffb5331d471bf",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-compiler-embeddable",
       "redistribution": "metadata-only",
@@ -164,7 +164,7 @@
     },
     {
       "id": "locked-2e735a53ec84c74bb7f3",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-compiler-embeddable",
       "redistribution": "metadata-only",
@@ -173,7 +173,7 @@
     },
     {
       "id": "locked-bc26d9d52af779d1cc85",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-compiler-runner",
       "redistribution": "metadata-only",
@@ -182,7 +182,7 @@
     },
     {
       "id": "locked-c5231a32aa52883ec3c4",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-compiler-runner",
       "redistribution": "metadata-only",
@@ -191,7 +191,7 @@
     },
     {
       "id": "locked-a52361f54e6075f7eae9",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-daemon-client",
       "redistribution": "metadata-only",
@@ -200,7 +200,7 @@
     },
     {
       "id": "locked-64a42fa45ff4da8a041d",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-daemon-client",
       "redistribution": "metadata-only",
@@ -209,7 +209,7 @@
     },
     {
       "id": "locked-069a7edd3f1e66019505",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-daemon-embeddable",
       "redistribution": "metadata-only",
@@ -218,7 +218,7 @@
     },
     {
       "id": "locked-015d74ac11b1edf588b8",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-daemon-embeddable",
       "redistribution": "metadata-only",
@@ -227,7 +227,7 @@
     },
     {
       "id": "locked-c9d58524415b2b53be8c",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-dom-api-compat",
       "redistribution": "metadata-only",
@@ -236,7 +236,7 @@
     },
     {
       "id": "locked-3a771a4b9d782e09a2d5",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable",
       "redistribution": "metadata-only",
@@ -245,7 +245,7 @@
     },
     {
       "id": "locked-f39e6518dc07091ad3c7",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-native-prebuilt",
       "redistribution": "metadata-only",
@@ -254,7 +254,7 @@
     },
     {
       "id": "locked-7f1354adb152d9988d03",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-reflect",
       "redistribution": "metadata-only",
@@ -263,7 +263,7 @@
     },
     {
       "id": "locked-16a4dfb5cc05b51903f0",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-script-runtime",
       "redistribution": "metadata-only",
@@ -272,7 +272,7 @@
     },
     {
       "id": "locked-0b7a2e8e2dfba8d42e31",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-script-runtime",
       "redistribution": "metadata-only",
@@ -281,7 +281,7 @@
     },
     {
       "id": "locked-4a1fdba308d6a0550dbf",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-scripting-common",
       "redistribution": "metadata-only",
@@ -290,7 +290,7 @@
     },
     {
       "id": "locked-b0d1686d2d9ac737074b",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable",
       "redistribution": "metadata-only",
@@ -299,7 +299,7 @@
     },
     {
       "id": "locked-e41888c9717c3cf74140",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable",
       "redistribution": "metadata-only",
@@ -308,7 +308,7 @@
     },
     {
       "id": "locked-333261a377b0f38eb2ab",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-scripting-jvm",
       "redistribution": "metadata-only",
@@ -317,7 +317,7 @@
     },
     {
       "id": "locked-a91e632426af32938d26",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-stdlib-js",
       "redistribution": "metadata-only",
@@ -326,7 +326,7 @@
     },
     {
       "id": "locked-7dac13424fb4612ec464",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-stdlib-wasm-js",
       "redistribution": "metadata-only",
@@ -335,7 +335,7 @@
     },
     {
       "id": "locked-ef297a59ae209ce0d6b7",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-stdlib",
       "redistribution": "metadata-only",
@@ -344,7 +344,7 @@
     },
     {
       "id": "locked-499b92d2d8b281ec2150",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-stdlib",
       "redistribution": "metadata-only",
@@ -353,7 +353,7 @@
     },
     {
       "id": "locked-5ec3212fcb64645fab86",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-test-js",
       "redistribution": "metadata-only",
@@ -362,7 +362,7 @@
     },
     {
       "id": "locked-507a558c9614b27a2890",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-test-junit5",
       "redistribution": "metadata-only",
@@ -371,7 +371,7 @@
     },
     {
       "id": "locked-1aa25c29cae6648c305b",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-test-wasm-js",
       "redistribution": "metadata-only",
@@ -380,7 +380,7 @@
     },
     {
       "id": "locked-d7fafb7530260a8a98c5",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-test",
       "redistribution": "metadata-only",
@@ -389,7 +389,7 @@
     },
     {
       "id": "locked-defef68d31ee81d46c14",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:kotlin-tooling-core",
       "redistribution": "metadata-only",
@@ -398,7 +398,7 @@
     },
     {
       "id": "locked-63051405cb6eb0e952a3",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlin:swift-export-embeddable",
       "redistribution": "metadata-only",
@@ -407,7 +407,7 @@
     },
     {
       "id": "locked-6e5096a844b12312a6d5",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlinx:kotlinx-coroutines-bom",
       "redistribution": "metadata-only",
@@ -416,7 +416,7 @@
     },
     {
       "id": "locked-ad45778dbf90ce1e47ae",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm",
       "redistribution": "metadata-only",
@@ -425,7 +425,7 @@
     },
     {
       "id": "locked-c687c7baab836303c61e",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm",
       "redistribution": "metadata-only",
@@ -434,7 +434,7 @@
     },
     {
       "id": "locked-6f35e01ad8aff608d793",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlinx:kotlinx-coroutines-core",
       "redistribution": "metadata-only",
@@ -443,7 +443,7 @@
     },
     {
       "id": "locked-acf7976ccb7af7990578",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlinx:kotlinx-serialization-bom",
       "redistribution": "metadata-only",
@@ -452,7 +452,7 @@
     },
     {
       "id": "locked-8fdeac34c2ec2b534f4d",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm",
       "redistribution": "metadata-only",
@@ -461,7 +461,7 @@
     },
     {
       "id": "locked-8c22b1a95fbed9cefc5d",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains:annotations",
       "redistribution": "metadata-only",
@@ -470,7 +470,7 @@
     },
     {
       "id": "locked-8783fb2446bd2db66924",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.jetbrains:annotations",
       "redistribution": "metadata-only",
@@ -479,7 +479,7 @@
     },
     {
       "id": "locked-e352e71e07c1b1100a6d",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit.jupiter:junit-jupiter-api",
       "redistribution": "metadata-only",
@@ -488,7 +488,7 @@
     },
     {
       "id": "locked-0ac8c600768c5f8a672e",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit.jupiter:junit-jupiter-api",
       "redistribution": "metadata-only",
@@ -497,7 +497,7 @@
     },
     {
       "id": "locked-db7e83721f39f90ab62f",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit.jupiter:junit-jupiter-engine",
       "redistribution": "metadata-only",
@@ -506,7 +506,7 @@
     },
     {
       "id": "locked-f5b58236ea6ced724b5c",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit.jupiter:junit-jupiter-engine",
       "redistribution": "metadata-only",
@@ -515,7 +515,7 @@
     },
     {
       "id": "locked-835f84a4f9ca922a405d",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit.jupiter:junit-jupiter-params",
       "redistribution": "metadata-only",
@@ -524,7 +524,7 @@
     },
     {
       "id": "locked-da849a6097cfef9c0403",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit.jupiter:junit-jupiter",
       "redistribution": "metadata-only",
@@ -533,7 +533,7 @@
     },
     {
       "id": "locked-06d326506b4bea88adcb",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit.platform:junit-platform-commons",
       "redistribution": "metadata-only",
@@ -542,7 +542,7 @@
     },
     {
       "id": "locked-212fe15baa7241793665",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit.platform:junit-platform-commons",
       "redistribution": "metadata-only",
@@ -551,7 +551,7 @@
     },
     {
       "id": "locked-638a44a2cb18f5b79e22",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit.platform:junit-platform-engine",
       "redistribution": "metadata-only",
@@ -560,7 +560,7 @@
     },
     {
       "id": "locked-108b93d0526db8d3b262",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit.platform:junit-platform-engine",
       "redistribution": "metadata-only",
@@ -569,7 +569,7 @@
     },
     {
       "id": "locked-517b8c20d75bc8e30850",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit.platform:junit-platform-launcher",
       "redistribution": "metadata-only",
@@ -578,7 +578,7 @@
     },
     {
       "id": "locked-0c558b2a50111c32ca01",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit.platform:junit-platform-launcher",
       "redistribution": "metadata-only",
@@ -587,7 +587,7 @@
     },
     {
       "id": "locked-77c1ae5857a8d32c0cf0",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit:junit-bom",
       "redistribution": "metadata-only",
@@ -596,7 +596,7 @@
     },
     {
       "id": "locked-252f05c02d814b4c05ba",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "EPL-2.0",
       "name": "org.junit:junit-bom",
       "redistribution": "metadata-only",
@@ -605,7 +605,7 @@
     },
     {
       "id": "locked-5b543ce37856670e7b64",
-      "kind": "source",
+      "kind": "maven-package",
       "license": "Apache-2.0",
       "name": "org.opentest4j:opentest4j",
       "redistribution": "metadata-only",
@@ -614,7 +614,7 @@
     },
     {
       "id": "locked-59028832ca2623da0ae9",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "@isaacs/cliui",
       "redistribution": "metadata-only",
@@ -623,7 +623,7 @@
     },
     {
       "id": "locked-6f83acdea97b79c0ef84",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "@pkgjs/parseargs",
       "redistribution": "metadata-only",
@@ -632,7 +632,7 @@
     },
     {
       "id": "locked-6bce4efe9a20ebd38646",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "ansi-regex",
       "redistribution": "metadata-only",
@@ -641,7 +641,7 @@
     },
     {
       "id": "locked-631ff3cbc4ad86691088",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "ansi-regex",
       "redistribution": "metadata-only",
@@ -650,7 +650,7 @@
     },
     {
       "id": "locked-bf601b237f767abc41be",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "ansi-styles",
       "redistribution": "metadata-only",
@@ -659,7 +659,7 @@
     },
     {
       "id": "locked-770014758b91fd6d0f63",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "ansi-styles",
       "redistribution": "metadata-only",
@@ -668,7 +668,7 @@
     },
     {
       "id": "locked-399f6cf9ddf3d48a52b5",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "Python-2.0",
       "name": "argparse",
       "redistribution": "metadata-only",
@@ -677,7 +677,7 @@
     },
     {
       "id": "locked-e01b4e5a5ae2db64d4c4",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "balanced-match",
       "redistribution": "metadata-only",
@@ -686,7 +686,7 @@
     },
     {
       "id": "locked-35884d19207ebd889888",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "brace-expansion",
       "redistribution": "metadata-only",
@@ -695,7 +695,7 @@
     },
     {
       "id": "locked-b88843bc75e9071afe17",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "browser-stdout",
       "redistribution": "metadata-only",
@@ -704,7 +704,7 @@
     },
     {
       "id": "locked-e4c0a17f2567d10cb311",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "buffer-from",
       "redistribution": "metadata-only",
@@ -713,7 +713,7 @@
     },
     {
       "id": "locked-e2b70a0ee1de80a60b9f",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "camelcase",
       "redistribution": "metadata-only",
@@ -722,7 +722,7 @@
     },
     {
       "id": "locked-49a5e90c594b83c29724",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "chalk",
       "redistribution": "metadata-only",
@@ -731,7 +731,7 @@
     },
     {
       "id": "locked-8616f2d6d2633e20e6ec",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "chokidar",
       "redistribution": "metadata-only",
@@ -740,7 +740,7 @@
     },
     {
       "id": "locked-ab6ba917906f8a1592fb",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "cliui",
       "redistribution": "metadata-only",
@@ -749,7 +749,7 @@
     },
     {
       "id": "locked-aeeb5e0167993eff3518",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "color-convert",
       "redistribution": "metadata-only",
@@ -758,7 +758,7 @@
     },
     {
       "id": "locked-7d567a0f446333fac6be",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "color-name",
       "redistribution": "metadata-only",
@@ -767,7 +767,7 @@
     },
     {
       "id": "locked-ed4ad5fb79ff4b349ee4",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "cross-spawn",
       "redistribution": "metadata-only",
@@ -776,7 +776,7 @@
     },
     {
       "id": "locked-82131a0549135bd3949f",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "debug",
       "redistribution": "metadata-only",
@@ -785,7 +785,7 @@
     },
     {
       "id": "locked-de6af2b62b933df86f1f",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "decamelize",
       "redistribution": "metadata-only",
@@ -794,7 +794,7 @@
     },
     {
       "id": "locked-0f7c893d1a39ff638b5f",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "BSD-3-Clause",
       "name": "diff",
       "redistribution": "metadata-only",
@@ -803,7 +803,7 @@
     },
     {
       "id": "locked-b497f50a6c77a10a4ae1",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "eastasianwidth",
       "redistribution": "metadata-only",
@@ -812,7 +812,7 @@
     },
     {
       "id": "locked-eb22eee27a31be5add85",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "emoji-regex",
       "redistribution": "metadata-only",
@@ -821,7 +821,7 @@
     },
     {
       "id": "locked-5ea51561a5969ebde8f3",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "emoji-regex",
       "redistribution": "metadata-only",
@@ -830,7 +830,7 @@
     },
     {
       "id": "locked-afa87c733f96bafe2e93",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "escalade",
       "redistribution": "metadata-only",
@@ -839,7 +839,7 @@
     },
     {
       "id": "locked-9317176d5fcba56896ae",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "escape-string-regexp",
       "redistribution": "metadata-only",
@@ -848,7 +848,7 @@
     },
     {
       "id": "locked-650ec676cd04bae2aaab",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "find-up",
       "redistribution": "metadata-only",
@@ -857,7 +857,7 @@
     },
     {
       "id": "locked-c52fb7af8b469829f187",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "BSD-3-Clause",
       "name": "flat",
       "redistribution": "metadata-only",
@@ -866,7 +866,7 @@
     },
     {
       "id": "locked-48ea855cf74b34659fcd",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "foreground-child",
       "redistribution": "metadata-only",
@@ -875,7 +875,7 @@
     },
     {
       "id": "locked-c7068bd4f798ce41ec7b",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "format-util",
       "redistribution": "metadata-only",
@@ -884,7 +884,7 @@
     },
     {
       "id": "locked-bae2cc7e4d9d636dd199",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "get-caller-file",
       "redistribution": "metadata-only",
@@ -893,7 +893,7 @@
     },
     {
       "id": "locked-f21c4139ab2215001a11",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "glob",
       "redistribution": "metadata-only",
@@ -902,7 +902,7 @@
     },
     {
       "id": "locked-e4ba897e2fba4c39ec1f",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "has-flag",
       "redistribution": "metadata-only",
@@ -911,7 +911,7 @@
     },
     {
       "id": "locked-485e5b62261832012bb3",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "he",
       "redistribution": "metadata-only",
@@ -920,7 +920,7 @@
     },
     {
       "id": "locked-111d893f3b7322f2b0bf",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "is-fullwidth-code-point",
       "redistribution": "metadata-only",
@@ -929,7 +929,7 @@
     },
     {
       "id": "locked-e5eeca8f4d0a52135d2e",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "is-path-inside",
       "redistribution": "metadata-only",
@@ -938,7 +938,7 @@
     },
     {
       "id": "locked-46c8be473cbd147ed479",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "is-plain-obj",
       "redistribution": "metadata-only",
@@ -947,7 +947,7 @@
     },
     {
       "id": "locked-7a98072cc20f4acb3de8",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "is-unicode-supported",
       "redistribution": "metadata-only",
@@ -956,7 +956,7 @@
     },
     {
       "id": "locked-57c33b21493e99f13964",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "isexe",
       "redistribution": "metadata-only",
@@ -965,7 +965,7 @@
     },
     {
       "id": "locked-0dd60f84e64bc4bba0c1",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "BlueOak-1.0.0",
       "name": "jackspeak",
       "redistribution": "metadata-only",
@@ -974,7 +974,7 @@
     },
     {
       "id": "locked-fba372f08ca82eef612f",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "js-yaml",
       "redistribution": "metadata-only",
@@ -983,7 +983,7 @@
     },
     {
       "id": "locked-d32bde122d7b2e58138c",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "Apache-2.0",
       "name": "kotlin-web-helpers",
       "redistribution": "metadata-only",
@@ -992,7 +992,7 @@
     },
     {
       "id": "locked-ede690d6daa058001890",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "locate-path",
       "redistribution": "metadata-only",
@@ -1001,7 +1001,7 @@
     },
     {
       "id": "locked-1e4830b417d7c7fe77bd",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "log-symbols",
       "redistribution": "metadata-only",
@@ -1010,7 +1010,7 @@
     },
     {
       "id": "locked-b6f8854624dd7b97591e",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "lru-cache",
       "redistribution": "metadata-only",
@@ -1019,7 +1019,7 @@
     },
     {
       "id": "locked-cb169db55af98d0191dc",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "minimatch",
       "redistribution": "metadata-only",
@@ -1028,7 +1028,7 @@
     },
     {
       "id": "locked-13a1a8660459c5b5a033",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "BlueOak-1.0.0",
       "name": "minipass",
       "redistribution": "metadata-only",
@@ -1037,7 +1037,7 @@
     },
     {
       "id": "locked-87cb5530ff7bb134c7b2",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "mocha",
       "redistribution": "metadata-only",
@@ -1046,7 +1046,7 @@
     },
     {
       "id": "locked-8f9a0f49530faa3b9b70",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "ms",
       "redistribution": "metadata-only",
@@ -1055,7 +1055,7 @@
     },
     {
       "id": "locked-46e75d2e83c03a21b4ce",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "p-limit",
       "redistribution": "metadata-only",
@@ -1064,7 +1064,7 @@
     },
     {
       "id": "locked-648ce2b7a299928875b4",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "p-locate",
       "redistribution": "metadata-only",
@@ -1073,7 +1073,7 @@
     },
     {
       "id": "locked-8948b881f250c2542f73",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "BlueOak-1.0.0",
       "name": "package-json-from-dist",
       "redistribution": "metadata-only",
@@ -1082,7 +1082,7 @@
     },
     {
       "id": "locked-04a52c47334be175daf7",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "path-exists",
       "redistribution": "metadata-only",
@@ -1091,7 +1091,7 @@
     },
     {
       "id": "locked-a29e80bd108a03d4641e",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "path-key",
       "redistribution": "metadata-only",
@@ -1100,7 +1100,7 @@
     },
     {
       "id": "locked-379d58fdf230ac1ce68e",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "BlueOak-1.0.0",
       "name": "path-scurry",
       "redistribution": "metadata-only",
@@ -1109,7 +1109,7 @@
     },
     {
       "id": "locked-a88a90f108bb49f62a8e",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "picocolors",
       "redistribution": "metadata-only",
@@ -1118,7 +1118,7 @@
     },
     {
       "id": "locked-e3624ed6649b3728a7b0",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "randombytes",
       "redistribution": "metadata-only",
@@ -1127,7 +1127,7 @@
     },
     {
       "id": "locked-4b938b539e398f1bf121",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "readdirp",
       "redistribution": "metadata-only",
@@ -1136,7 +1136,7 @@
     },
     {
       "id": "locked-a7e9ba0772c2426d52ef",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "require-directory",
       "redistribution": "metadata-only",
@@ -1145,7 +1145,7 @@
     },
     {
       "id": "locked-670ee7452f225ad20135",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "safe-buffer",
       "redistribution": "metadata-only",
@@ -1154,7 +1154,7 @@
     },
     {
       "id": "locked-3c9807270d747e7b2833",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "BSD-3-Clause",
       "name": "serialize-javascript",
       "redistribution": "metadata-only",
@@ -1163,7 +1163,7 @@
     },
     {
       "id": "locked-3c85eb1a66c817b76046",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "shebang-command",
       "redistribution": "metadata-only",
@@ -1172,7 +1172,7 @@
     },
     {
       "id": "locked-467600a9b54d94bdaa34",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "shebang-regex",
       "redistribution": "metadata-only",
@@ -1181,7 +1181,7 @@
     },
     {
       "id": "locked-b6a148660929dd7ec1ce",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "signal-exit",
       "redistribution": "metadata-only",
@@ -1190,7 +1190,7 @@
     },
     {
       "id": "locked-1aa64a7690f9cba98ecc",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "source-map-support",
       "redistribution": "metadata-only",
@@ -1199,7 +1199,7 @@
     },
     {
       "id": "locked-f6a70491d5885f99f5be",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "BSD-3-Clause",
       "name": "source-map",
       "redistribution": "metadata-only",
@@ -1208,7 +1208,7 @@
     },
     {
       "id": "locked-6da8179d4a10f7daeb95",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "string-width-cjs",
       "redistribution": "metadata-only",
@@ -1217,7 +1217,7 @@
     },
     {
       "id": "locked-c6e572a5fbc8a128f426",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "string-width",
       "redistribution": "metadata-only",
@@ -1226,7 +1226,7 @@
     },
     {
       "id": "locked-70ffe711c63be23a6bc8",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "string-width",
       "redistribution": "metadata-only",
@@ -1235,7 +1235,7 @@
     },
     {
       "id": "locked-a78dddc37596c1a51ee8",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "strip-ansi-cjs",
       "redistribution": "metadata-only",
@@ -1244,7 +1244,7 @@
     },
     {
       "id": "locked-66cba6b944ce65d88ff9",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "strip-ansi",
       "redistribution": "metadata-only",
@@ -1253,7 +1253,7 @@
     },
     {
       "id": "locked-c7dbc278d99999553be6",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "strip-ansi",
       "redistribution": "metadata-only",
@@ -1262,7 +1262,7 @@
     },
     {
       "id": "locked-e29c9f2dc5a971e33b32",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "strip-json-comments",
       "redistribution": "metadata-only",
@@ -1271,7 +1271,7 @@
     },
     {
       "id": "locked-53e54b036f83f436b817",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "supports-color",
       "redistribution": "metadata-only",
@@ -1280,7 +1280,7 @@
     },
     {
       "id": "locked-c34481d6876e7e186eea",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "supports-color",
       "redistribution": "metadata-only",
@@ -1289,7 +1289,7 @@
     },
     {
       "id": "locked-cc8746e214bd8f998948",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "which",
       "redistribution": "metadata-only",
@@ -1298,7 +1298,7 @@
     },
     {
       "id": "locked-4b9f949d6cecd042d431",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "Apache-2.0",
       "name": "workerpool",
       "redistribution": "metadata-only",
@@ -1307,7 +1307,7 @@
     },
     {
       "id": "locked-39d47ba1b2454470a8a9",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "wrap-ansi-cjs",
       "redistribution": "metadata-only",
@@ -1316,7 +1316,7 @@
     },
     {
       "id": "locked-8b7eba6d39ce7433bbae",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "wrap-ansi",
       "redistribution": "metadata-only",
@@ -1325,7 +1325,7 @@
     },
     {
       "id": "locked-dbc2fd29e6bbe1536f15",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "wrap-ansi",
       "redistribution": "metadata-only",
@@ -1334,7 +1334,7 @@
     },
     {
       "id": "locked-3c0e79e2a41f2a0b3143",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "y18n",
       "redistribution": "metadata-only",
@@ -1343,7 +1343,7 @@
     },
     {
       "id": "locked-4f6ecaa8bec002b95caa",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "ISC",
       "name": "yargs-parser",
       "redistribution": "metadata-only",
@@ -1352,7 +1352,7 @@
     },
     {
       "id": "locked-a78158069fbb26020706",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "yargs-unparser",
       "redistribution": "metadata-only",
@@ -1361,7 +1361,7 @@
     },
     {
       "id": "locked-5452c22037973b0c7fc8",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "yargs",
       "redistribution": "metadata-only",
@@ -1370,7 +1370,7 @@
     },
     {
       "id": "locked-63dd14f733935ee42de2",
-      "kind": "source",
+      "kind": "npm-package",
       "license": "MIT",
       "name": "yocto-queue",
       "redistribution": "metadata-only",

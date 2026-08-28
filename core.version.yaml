@@ -1,8 +1,8 @@
 {
   "repository": "reference-atlas-core",
   "version": "architecture-v1",
-  "commit": "cf9e6e2d981305c83f970c1f21a1ddc9c1109263",
-  "archive_sha256": "841ff24218218bd1262f7a71afa50c76c9f7a92ae50bfc036a4d8cc4dc4ba783",
+  "commit": "eabefbb706c36140ae3f6509c9ca1bfae3c815ec",
+  "archive_sha256": "d193d41748897d6797021c4be2fdb6b8cc05677e6ad51ad5a51845d38d60f275",
   "release_state": "commit-pinned",
-  "note_ja": "Control Plane v1のClaim、Evidence、Skill Eval、Provenance、Completion Certificate監査を含むCore commitを固定する。"
+  "note_ja": "Control Plane v1とMaven/npm Supply-chain監査を含むCore完成commitを固定する。"
 }

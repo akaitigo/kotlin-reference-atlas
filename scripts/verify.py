@@ -110,8 +110,6 @@ def validate_manifests() -> dict:
         errors.append("Coverage Epochが一致しない")
     if coverage["authority_lock_digest"] != expected_digest:
         errors.append("authority_lock_digestがsources.lock.yamlと一致しない")
-    if atlas["status"] == "complete" and not (ROOT / atlas["completion"]["certificate"]).is_file():
-        errors.append("status: completeにはCompletion Certificateが必要")
     if migration["unmapped_source_ids"]:
         errors.append("Core v1 migrationに未対応source IDがある")
     if migration["target"]["core_commit"] != core_version["commit"]:
@@ -577,10 +575,14 @@ def main(*, skip_container: bool = False) -> None:
     run([str(ROOT / "bin" / "atlas"), "validate", *[path.relative_to(ROOT).as_posix() for path in entity_paths]])
     validate_graph(evidence_paths)
     if load_json(ROOT / "atlas.yaml")["status"] == "complete":
-        existing = load_json(ROOT / "evidence" / "completion-certificate.json")
+        certificate_path = ROOT / "evidence" / "completion-certificate.json"
+        if certificate_path.is_file():
+            source_commit = load_json(certificate_path)["commit"]
+        else:
+            source_commit = run(["git", "rev-parse", "HEAD"], capture=True).stdout.strip()
         run([
             str(ROOT / "bin" / "atlas"), "certificate", "generate", ".",
-            "--issued-at", CREATED_AT, "--commit", existing["commit"],
+            "--issued-at", CREATED_AT, "--commit", source_commit,
         ])
         validate_completion_certificate(evidence_paths)
         run([str(ROOT / "bin" / "atlas"), "audit", "."])
