@@ -16,6 +16,7 @@ CORE_PIN_MAPPINGS = [
     ROOT / "migrations" / "authority-anchor-core-e822-to-d535.json",
     ROOT / "migrations" / "authority-anchor-core-d535-to-7c9313c.json",
     ROOT / "migrations" / "authority-anchor-core-7c9313c-to-40f627e.json",
+    ROOT / "migrations" / "authority-anchor-core-40f627e-to-072d7ca.json",
 ]
 REFERENCE = ROOT / "baseline" / "fe-authority-body-reference-v1.json"
 OUTPUT = ROOT / "evidence" / "artifacts" / "authority-body-inventory-validation.json"
@@ -163,6 +164,7 @@ def main() -> None:
         ("e8223295bd86f7400e154171dd1596b9e54f0835", "d535b0802697edea73ca1c778a5b571e28fe0614"),
         ("d535b0802697edea73ca1c778a5b571e28fe0614", "7c9313cfb3e3149af455976228b44bbcb706bf40"),
         ("7c9313cfb3e3149af455976228b44bbcb706bf40", "40f627e7e7db1d679c18f9442754951b0e1dd13b"),
+        ("40f627e7e7db1d679c18f9442754951b0e1dd13b", "072d7ca77981f51754e824d70c6d4ecd55ea67e5"),
     ]
     if len(mappings) == len(expected_chain):
         previous_new_ids = None

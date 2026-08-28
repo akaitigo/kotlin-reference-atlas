@@ -33,10 +33,10 @@
       "producer": "gradle-junit",
       "record": {
         "bytes": 958,
-        "digest": "sha256:1cc1505f5f78476c25d61e30d559e072ef92de3d437a2e4908c2d42cd229f93d",
+        "digest": "sha256:1ce3c87617501b3e3cad7c7fdefbe01befd467b5fca58db58b351d8f4bf43596",
         "path": "evidence/failure.debugging.evidence.json"
       },
-      "source_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
+      "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
       "verdict": "pass"
     }
   ],

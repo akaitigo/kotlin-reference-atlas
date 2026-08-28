@@ -33,10 +33,10 @@
       "producer": "kotlin-multiplatform",
       "record": {
         "bytes": 1058,
-        "digest": "sha256:2fb7c879dc1ebce5e71dceff05be5f1571e2750639deef70e5f42f0dc7162005",
+        "digest": "sha256:30690e1b0a9c1dc4782272f0de1c5fa2bc6d601c9925b22da50c35d504acab89",
         "path": "evidence/platform.multiplatform-runtime.evidence.json"
       },
-      "source_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
+      "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
       "verdict": "pass"
     },
     {
@@ -60,10 +60,10 @@
       "producer": "kotlin-native",
       "record": {
         "bytes": 994,
-        "digest": "sha256:8314117635c856f1c0e274a2ded19c69e5bc0e70ecb4972848f522d48dd1bce0",
+        "digest": "sha256:26e6088b67bd07e93fa1ee26b9d4eec9dc02d26cf8f50377c33d1559cc70adf8",
         "path": "evidence/platform.native-compile.evidence.json"
       },
-      "source_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
+      "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
       "verdict": "pass"
     }
   ],

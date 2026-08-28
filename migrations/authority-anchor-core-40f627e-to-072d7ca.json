@@ -1,0 +1,1013 @@
+{
+  "id": "reference-atlas-core-40f627e-to-072d7ca-authority-anchor-mapping",
+  "mapping_basis": "byte-exact stable git-tree locator; raw candidate IDs are replaced because the locked source commit is part of their identity",
+  "mappings": [
+    {
+      "locator": ".agents/skills/reference-atlas-core/SKILL.md",
+      "new_anchor_id": "anchor-29cbdf1d71781c8d4fae",
+      "old_anchor_id": "anchor-70095d5abc33ae2ddc46"
+    },
+    {
+      "locator": ".agents/skills/reference-atlas-core/references/coverage.md",
+      "new_anchor_id": "anchor-d94d1e4a0eeb90a45be8",
+      "old_anchor_id": "anchor-7b998a3e1b344a8a53e9"
+    },
+    {
+      "locator": ".github/workflows/ci.yml",
+      "new_anchor_id": "anchor-b121fcda0824ff903f7e",
+      "old_anchor_id": "anchor-b75c32cd42fdf597006f"
+    },
+    {
+      "locator": ".gitignore",
+      "new_anchor_id": "anchor-a9e69dc9979e08ae105f",
+      "old_anchor_id": "anchor-355ad1e2757c64967aa9"
+    },
+    {
+      "locator": "AGENTS.md",
+      "new_anchor_id": "anchor-c7a2827fecee6f87eeb4",
+      "old_anchor_id": "anchor-0ccdf6f7f7dcd7effb94"
+    },
+    {
+      "locator": "CHANGELOG.md",
+      "new_anchor_id": "anchor-0f195dbf0b821b6d2619",
+      "old_anchor_id": "anchor-946fb5505fb8fa791c5f"
+    },
+    {
+      "locator": "CONTRIBUTING.md",
+      "new_anchor_id": "anchor-5e3a74120ec3fdbec085",
+      "old_anchor_id": "anchor-174d869592bd24dd36a6"
+    },
+    {
+      "locator": "LICENSE",
+      "new_anchor_id": "anchor-05a2e2b413b28106cfd6",
+      "old_anchor_id": "anchor-c3741963eabf96a6182b"
+    },
+    {
+      "locator": "Makefile",
+      "new_anchor_id": "anchor-ac07ed390be1bb78775a",
+      "old_anchor_id": "anchor-cb3d78da68bad63b5b8c"
+    },
+    {
+      "locator": "NOTICE",
+      "new_anchor_id": "anchor-70521208d9d89f7a5b73",
+      "old_anchor_id": "anchor-7bb480a1e7e31ae821e9"
+    },
+    {
+      "locator": "README.md",
+      "new_anchor_id": "anchor-c87505e60b434cbf35da",
+      "old_anchor_id": "anchor-a670ea09d6d1c8b4eacf"
+    },
+    {
+      "locator": "SECURITY.md",
+      "new_anchor_id": "anchor-05cb57229469bffd99bb",
+      "old_anchor_id": "anchor-dae4f7f4f7b36260789e"
+    },
+    {
+      "locator": "VERSION",
+      "new_anchor_id": "anchor-264e5be8331a299e6b0a",
+      "old_anchor_id": "anchor-f4570b223dbb6b0ab95a"
+    },
+    {
+      "locator": "atlas.yaml",
+      "new_anchor_id": "anchor-6637a07b481751b89e55",
+      "old_anchor_id": "anchor-8b8cf64470e3cf67ed18"
+    },
+    {
+      "locator": "baselines/main-b32f6af.definitive-v2.non-regression-baseline.json",
+      "new_anchor_id": "anchor-ac05b2abc76e731c3507",
+      "old_anchor_id": "anchor-6bb92293ca1cb133145e"
+    },
+    {
+      "locator": "baselines/main-b32f6af.evidence-durability-v1.non-regression-baseline.json",
+      "new_anchor_id": "anchor-a2cc06a724023d7da649",
+      "old_anchor_id": "anchor-9ed1540c6ed9997e98eb"
+    },
+    {
+      "locator": "baselines/main-b32f6af.non-regression-baseline.json",
+      "new_anchor_id": "anchor-742dd4711e12c7a81086",
+      "old_anchor_id": "anchor-f415cc7f6a888cb75e94"
+    },
+    {
+      "locator": "baselines/main-b32f6af.scenario-closure-plan-v1.non-regression-baseline.json",
+      "new_anchor_id": "anchor-81374fa760f1c3aa49e5",
+      "old_anchor_id": "anchor-01ab18acb57d0db6b996"
+    },
+    {
+      "locator": "baselines/main-b32f6af.scenario-trace-v1.non-regression-baseline.json",
+      "new_anchor_id": "anchor-dbce379054a9704c45e1",
+      "old_anchor_id": "anchor-90442a7902013a6ee9f7"
+    },
+    {
+      "locator": "catalog/stage1.yaml",
+      "new_anchor_id": "anchor-8b8a17dad2768cb47bf8",
+      "old_anchor_id": "anchor-055ae1255389688930f8"
+    },
+    {
+      "locator": "claims/assurance.artifacts.claim.yaml",
+      "new_anchor_id": "anchor-3f6438a6d8d6e65d27a9",
+      "old_anchor_id": "anchor-2c50a252197403f1c2f4"
+    },
+    {
+      "locator": "claims/assurance.graph.claim.yaml",
+      "new_anchor_id": "anchor-68b010688077cd5b7f2c",
+      "old_anchor_id": "anchor-190e8f8cc11a58836726"
+    },
+    {
+      "locator": "claims/assurance.publication.claim.yaml",
+      "new_anchor_id": "anchor-c4a3372f3129ad7e4290",
+      "old_anchor_id": "anchor-d831c44ea96698e980cd"
+    },
+    {
+      "locator": "claims/contracts.mastery.claim.yaml",
+      "new_anchor_id": "anchor-c53961fdde56fa511a22",
+      "old_anchor_id": "anchor-258e8198be4a67a305f2"
+    },
+    {
+      "locator": "claims/contracts.schemas.claim.yaml",
+      "new_anchor_id": "anchor-759bc5a7309d6f3ee577",
+      "old_anchor_id": "anchor-74e5e7498a0a154171e1"
+    },
+    {
+      "locator": "claims/lifecycle.compatibility-release.claim.yaml",
+      "new_anchor_id": "anchor-b3a3672f6a1d170ea55c",
+      "old_anchor_id": "anchor-6369b90dde52915b38f9"
+    },
+    {
+      "locator": "claims/lifecycle.migration.claim.yaml",
+      "new_anchor_id": "anchor-2927e840d13e40607f9d",
+      "old_anchor_id": "anchor-408e10027ae902320589"
+    },
+    {
+      "locator": "claims/lifecycle.scaffold.claim.yaml",
+      "new_anchor_id": "anchor-05dbb1e03d614e4bdacc",
+      "old_anchor_id": "anchor-f66cf98106b3381f8e48"
+    },
+    {
+      "locator": "claims/skill.claim.yaml",
+      "new_anchor_id": "anchor-bdcaa8f91d69928bb4e6",
+      "old_anchor_id": "anchor-38bab3e025243e7150b3"
+    },
+    {
+      "locator": "cmd/atlas/main.go",
+      "new_anchor_id": "anchor-a6f96962d8e6c88d441e",
+      "old_anchor_id": "anchor-4c342e947e3b66d960c6"
+    },
+    {
+      "locator": "cmd/atlas/main_test.go",
+      "new_anchor_id": "anchor-354d214faf7348a6079b",
+      "old_anchor_id": "anchor-fcffb0a676a886117005"
+    },
+    {
+      "locator": "coverage.yaml",
+      "new_anchor_id": "anchor-42773da4a67dd264df9b",
+      "old_anchor_id": "anchor-52bf6ebb8bc87a831638"
+    },
+    {
+      "locator": "docs/ARCHITECTURE.md",
+      "new_anchor_id": "anchor-2b6b3366da72f3aa1966",
+      "old_anchor_id": "anchor-3ba6ca19194c15a711c5"
+    },
+    {
+      "locator": "docs/CATALOG_GAP_ANALYSIS.md",
+      "new_anchor_id": "anchor-4d7a652184f27a88fb3c",
+      "old_anchor_id": "anchor-5875d521bb69d39ee4d3"
+    },
+    {
+      "locator": "docs/CLI.md",
+      "new_anchor_id": "anchor-8b10e31b8fc88901318a",
+      "old_anchor_id": "anchor-617b7032946e36d08c0c"
+    },
+    {
+      "locator": "docs/COMPANY_TECH_INVENTORY_PROMPT.md",
+      "new_anchor_id": "anchor-9bc397c1b3fb91ce4cce",
+      "old_anchor_id": "anchor-8d5d14608f9f2a2d76ed"
+    },
+    {
+      "locator": "docs/COMPLETION_MODEL.md",
+      "new_anchor_id": "anchor-ccc034d5acbd20b0768d",
+      "old_anchor_id": "anchor-def7c61f3ba74b1a1c8e"
+    },
+    {
+      "locator": "docs/EVIDENCE_DURABILITY.md",
+      "new_anchor_id": "anchor-f5f180d5f449c5263b95",
+      "old_anchor_id": "anchor-4c1444e7ee20170d0fc5"
+    },
+    {
+      "locator": "docs/FE_AUTHORITY_BODY_DENOMINATOR_REFERENCE.md",
+      "new_anchor_id": "anchor-4a90f4d5333567b5ea3b",
+      "old_anchor_id": "anchor-49e241f7058477e28be7"
+    },
+    {
+      "locator": "docs/FE_AUTHORITY_EXTRACTION_REFERENCE.md",
+      "new_anchor_id": "anchor-299a1858fdb53d8b654d",
+      "old_anchor_id": "anchor-0a738e3927df4654f45b"
+    },
+    {
+      "locator": "docs/FE_AUTHORITY_REVIEW_REFERENCE.md",
+      "new_anchor_id": "anchor-a4fd8b935652066b78a6",
+      "old_anchor_id": "anchor-e7de060fbad6f97594e2"
+    },
+    {
+      "locator": "docs/FE_DEFINITIVE_SKILL_ROUTER_REFERENCE.md",
+      "new_anchor_id": "anchor-14c0753049229ccf39a1",
+      "old_anchor_id": "anchor-38c721281be9bc3a710a"
+    },
+    {
+      "locator": "docs/FE_DEPTH_REFERENCE_INPUT.md",
+      "new_anchor_id": "anchor-fc10c85e0298d63df7b7",
+      "old_anchor_id": "anchor-88eead2e233ed740b87a"
+    },
+    {
+      "locator": "docs/FE_INTEGRATED_SCENARIO_TRACE_REFERENCE.md",
+      "new_anchor_id": "anchor-dce64f6efdb8cd6bfbbd",
+      "old_anchor_id": "anchor-a865e789275b35e5ff89"
+    },
+    {
+      "locator": "docs/FE_SCENARIO_CLOSURE_PLAN_REFERENCE.md",
+      "new_anchor_id": "anchor-0091f3e0999cd16348d1",
+      "old_anchor_id": "anchor-101fd346b1e5f426a69c"
+    },
+    {
+      "locator": "docs/LEGAL_AND_PROVENANCE.md",
+      "new_anchor_id": "anchor-1a4ed3fb511cbc7b8eb8",
+      "old_anchor_id": "anchor-ff88a3a17b2d3258f248"
+    },
+    {
+      "locator": "docs/MIGRATION_CONTRACT.md",
+      "new_anchor_id": "anchor-19c09088df2c4be38dd1",
+      "old_anchor_id": "anchor-fac26a12c83216ce752f"
+    },
+    {
+      "locator": "docs/MIGRATION_DEFINITIVE_V2.md",
+      "new_anchor_id": "anchor-1bb138b77330a1974bf1",
+      "old_anchor_id": "anchor-4f5b31ad7dee91040e11"
+    },
+    {
+      "locator": "docs/MIGRATION_MASTERY_V1.md",
+      "new_anchor_id": "anchor-7c97b528c40da1ce740b",
+      "old_anchor_id": "anchor-bb9381fff0deeaba654e"
+    },
+    {
+      "locator": "docs/MIGRATION_SUPPLY_CHAIN_V1.md",
+      "new_anchor_id": "anchor-c4b4870e694d0f79a208",
+      "old_anchor_id": "anchor-9da9b0d589b122a166d6"
+    },
+    {
+      "locator": "docs/NEUTRAL_AUTHORING.md",
+      "new_anchor_id": "anchor-7817358e959b57e934b5",
+      "old_anchor_id": "anchor-157cb76afdda80e05b59"
+    },
+    {
+      "locator": "docs/RELEASING.md",
+      "new_anchor_id": "anchor-cefaa04232e53c3ecfe9",
+      "old_anchor_id": "anchor-2863780ebcc23782533d"
+    },
+    {
+      "locator": "docs/SKILL_CONTRACT.md",
+      "new_anchor_id": "anchor-09ed95d00d9dc9de492d",
+      "old_anchor_id": "anchor-4d3baa85fbed44b7b8e5"
+    },
+    {
+      "locator": "docs/SUBJECT_DELIVERY_STRATEGY.md",
+      "new_anchor_id": "anchor-a0299d72b4f9299882e5",
+      "old_anchor_id": "anchor-d24b465ceb5f21e9a1cc"
+    },
+    {
+      "locator": "docs/VERSIONING.md",
+      "new_anchor_id": "anchor-21d538b206203c9bdc1a",
+      "old_anchor_id": "anchor-506fde828f080b419b71"
+    },
+    {
+      "locator": "document-root",
+      "new_anchor_id": "anchor-749bbb5bab434d727b0b",
+      "old_anchor_id": "anchor-6ab49c15b9429b230b4c"
+    },
+    {
+      "locator": "evals/core.skill-eval.json",
+      "new_anchor_id": "anchor-f9e0ff40c81dd548525f",
+      "old_anchor_id": "anchor-cb658225650e71aa7a12"
+    },
+    {
+      "locator": "evidence/completion-certificate.json",
+      "new_anchor_id": "anchor-e50b77b20c7308d9280f",
+      "old_anchor_id": "anchor-697c9e0a3abb40140304"
+    },
+    {
+      "locator": "evidence/core.audit.evidence.yaml",
+      "new_anchor_id": "anchor-a38303b16a754c3b9b7b",
+      "old_anchor_id": "anchor-0c093e2ba410465ee992"
+    },
+    {
+      "locator": "evidence/core.compatibility.evidence.yaml",
+      "new_anchor_id": "anchor-41939ca449879f3496c6",
+      "old_anchor_id": "anchor-b513c80a3777ff23e30b"
+    },
+    {
+      "locator": "evidence/core.contracts.evidence.yaml",
+      "new_anchor_id": "anchor-1d616fbddca920a6a1ee",
+      "old_anchor_id": "anchor-7faba19b975950fb6367"
+    },
+    {
+      "locator": "evidence/core.skill.evidence.yaml",
+      "new_anchor_id": "anchor-6de98048beebc07d73e4",
+      "old_anchor_id": "anchor-1d1ac674681bb17276ae"
+    },
+    {
+      "locator": "evidence/core.tooling.evidence.yaml",
+      "new_anchor_id": "anchor-9dc90131fd306de40b85",
+      "old_anchor_id": "anchor-42355dd0dc717948a207"
+    },
+    {
+      "locator": "evidence/history/v1.0.0/completion-certificate.json",
+      "new_anchor_id": "anchor-91cd3f0efa78c438e3ee",
+      "old_anchor_id": "anchor-79d9b1fe00705affde34"
+    },
+    {
+      "locator": "evidence/reports/release-check.txt",
+      "new_anchor_id": "anchor-84c6a73c124307beb232",
+      "old_anchor_id": "anchor-13a73bd97236314e24b4"
+    },
+    {
+      "locator": "examples/company-inventory.yaml",
+      "new_anchor_id": "anchor-c0561e28363361b775a0",
+      "old_anchor_id": "anchor-62d093ba6d0907b96f3a"
+    },
+    {
+      "locator": "examples/frontend-behavior-atlas/atlas.yaml",
+      "new_anchor_id": "anchor-aca4bbe2f7e126c8d852",
+      "old_anchor_id": "anchor-48d8175aa352606bd510"
+    },
+    {
+      "locator": "examples/frontend-behavior-atlas/coverage.yaml",
+      "new_anchor_id": "anchor-8c585db40a7354716c37",
+      "old_anchor_id": "anchor-d4746c4754b0029697d0"
+    },
+    {
+      "locator": "examples/frontend-behavior-atlas/mastery.yaml",
+      "new_anchor_id": "anchor-eb4ba9e0c2e810159677",
+      "old_anchor_id": "anchor-f7b8a2fdd5a71007dbad"
+    },
+    {
+      "locator": "examples/frontend-behavior-atlas/sample.evidence.yaml",
+      "new_anchor_id": "anchor-3d877a63fa40d45c192c",
+      "old_anchor_id": "anchor-4757db889575a20c8753"
+    },
+    {
+      "locator": "examples/frontend-behavior-atlas/skill.package.yaml",
+      "new_anchor_id": "anchor-0fc262c23c43015f34d6",
+      "old_anchor_id": "anchor-fd7dfedfd6504a36ac50"
+    },
+    {
+      "locator": "examples/frontend-behavior-atlas/sources.lock.yaml",
+      "new_anchor_id": "anchor-4368e7be4a2e50c05b51",
+      "old_anchor_id": "anchor-d5051cae4904b978e737"
+    },
+    {
+      "locator": "go.mod",
+      "new_anchor_id": "anchor-d01858ff187008702062",
+      "old_anchor_id": "anchor-130a8774fd9c4725967d"
+    },
+    {
+      "locator": "go.sum",
+      "new_anchor_id": "anchor-f3891d49c95f0d49dedf",
+      "old_anchor_id": "anchor-f01cc501239d424fd455"
+    },
+    {
+      "locator": "internal/project/project.go",
+      "new_anchor_id": "anchor-5474ee7842ebe128f508",
+      "old_anchor_id": "anchor-4b0a64b22c5fc2137012"
+    },
+    {
+      "locator": "internal/project/project_test.go",
+      "new_anchor_id": "anchor-f741556a924edc249244",
+      "old_anchor_id": "anchor-fe38753fecf49363a2f8"
+    },
+    {
+      "locator": "internal/validate/audit.go",
+      "new_anchor_id": "anchor-9206bab763c58de0ec18",
+      "old_anchor_id": "anchor-52d30af51a6f91eb6dcd"
+    },
+    {
+      "locator": "internal/validate/authority_body.go",
+      "new_anchor_id": "anchor-20c158c1339e19ca9204",
+      "old_anchor_id": "anchor-ac17b43699e2c10dc904"
+    },
+    {
+      "locator": "internal/validate/authority_body_test.go",
+      "new_anchor_id": "anchor-aac3b4dc569b7ca9627b",
+      "old_anchor_id": "anchor-57346c17c31a51abcfe8"
+    },
+    {
+      "locator": "internal/validate/authority_extraction.go",
+      "new_anchor_id": "anchor-f11eabaae29548e275c1",
+      "old_anchor_id": "anchor-370ff2ea46642dd6084b"
+    },
+    {
+      "locator": "internal/validate/authority_extraction_test.go",
+      "new_anchor_id": "anchor-66932ef5106d84c94400",
+      "old_anchor_id": "anchor-8005227e9f3bf4ae8753"
+    },
+    {
+      "locator": "internal/validate/authority_relock.go",
+      "new_anchor_id": "anchor-16ce9b1fda300c3bbe95",
+      "old_anchor_id": "anchor-04bf7ed1c0598f131230"
+    },
+    {
+      "locator": "internal/validate/authority_review.go",
+      "new_anchor_id": "anchor-f18f631aea0a066afd19",
+      "old_anchor_id": "anchor-26e42df0bd92a2f2a983"
+    },
+    {
+      "locator": "internal/validate/authority_review_export.go",
+      "new_anchor_id": "anchor-a9e3b1493cd018abd85e",
+      "old_anchor_id": "anchor-505578eed0dada84c76c"
+    },
+    {
+      "locator": "internal/validate/authority_review_test.go",
+      "new_anchor_id": "anchor-0bc1d28657daf7fd9149",
+      "old_anchor_id": "anchor-beccf14acfa6f257d420"
+    },
+    {
+      "locator": "internal/validate/certificate.go",
+      "new_anchor_id": "anchor-675906b29adfecb64a26",
+      "old_anchor_id": "anchor-50c4dc00b36178477b8d"
+    },
+    {
+      "locator": "internal/validate/core_test.go",
+      "new_anchor_id": "anchor-7d32fc3ed60e13d0de3c",
+      "old_anchor_id": "anchor-3d74b6e5dd6e757be537"
+    },
+    {
+      "locator": "internal/validate/cross.go",
+      "new_anchor_id": "anchor-13ebc6fc083c3a251782",
+      "old_anchor_id": "anchor-f0a1a1b307085b1b63ff"
+    },
+    {
+      "locator": "internal/validate/definitive.go",
+      "new_anchor_id": "anchor-c1b7187e11f09eba095e",
+      "old_anchor_id": "anchor-fc3addf62beda586f4bb"
+    },
+    {
+      "locator": "internal/validate/definitive_certificate.go",
+      "new_anchor_id": "anchor-b6a8fcbc5ac8cd60b1b7",
+      "old_anchor_id": "anchor-ea857cbed972d31e0ec2"
+    },
+    {
+      "locator": "internal/validate/definitive_integration_test.go",
+      "new_anchor_id": "anchor-f3dadcb6764784347dd3",
+      "old_anchor_id": "anchor-8f6186eae70fc8513acb"
+    },
+    {
+      "locator": "internal/validate/definitive_skill_router.go",
+      "new_anchor_id": "anchor-538bc0e2ac670977a43a",
+      "old_anchor_id": "anchor-2e657326fad1c36ce60c"
+    },
+    {
+      "locator": "internal/validate/definitive_skill_router_test.go",
+      "new_anchor_id": "anchor-b583d225a86d1a14d07d",
+      "old_anchor_id": "anchor-44eee770a4f1f7770479"
+    },
+    {
+      "locator": "internal/validate/definitive_test.go",
+      "new_anchor_id": "anchor-708086c0c5dfbfb78473",
+      "old_anchor_id": "anchor-3ca8a798268d19f8a51c"
+    },
+    {
+      "locator": "internal/validate/depth_parity.go",
+      "new_anchor_id": "anchor-dc8b20899843fc5ef03f",
+      "old_anchor_id": "anchor-2fab265b4c5ea45e9b7a"
+    },
+    {
+      "locator": "internal/validate/evidence_durability.go",
+      "new_anchor_id": "anchor-7992c3ef311739f62165",
+      "old_anchor_id": "anchor-41bc5aad5f2fdacfd501"
+    },
+    {
+      "locator": "internal/validate/evidence_durability_test.go",
+      "new_anchor_id": "anchor-13771ca7804dce1cba8d",
+      "old_anchor_id": "anchor-74f67c0181a0633f1e05"
+    },
+    {
+      "locator": "internal/validate/nonregression.go",
+      "new_anchor_id": "anchor-796cb5ece00b6c43d211",
+      "old_anchor_id": "anchor-4ac69010cfa42884bd8b"
+    },
+    {
+      "locator": "internal/validate/nonregression_test.go",
+      "new_anchor_id": "anchor-9f58beb01c4800658a5b",
+      "old_anchor_id": "anchor-6ce3723cdd3a923c6f10"
+    },
+    {
+      "locator": "internal/validate/scenario_closure_plan.go",
+      "new_anchor_id": "anchor-e42ac9b9d9c2371f661b",
+      "old_anchor_id": "anchor-f1a3aff064e4ac77ac62"
+    },
+    {
+      "locator": "internal/validate/scenario_closure_plan_test.go",
+      "new_anchor_id": "anchor-76ba153a62cb9d9b7fe5",
+      "old_anchor_id": "anchor-c437122037b2dba3ae7c"
+    },
+    {
+      "locator": "internal/validate/scenario_trace.go",
+      "new_anchor_id": "anchor-85232cf3a9242d1cf981",
+      "old_anchor_id": "anchor-9366a410ece338eaf2fe"
+    },
+    {
+      "locator": "internal/validate/scenario_trace_test.go",
+      "new_anchor_id": "anchor-3e685ca2e5b16207a0fd",
+      "old_anchor_id": "anchor-b1629f75599b39235581"
+    },
+    {
+      "locator": "internal/validate/validate.go",
+      "new_anchor_id": "anchor-55698b59c343f1724204",
+      "old_anchor_id": "anchor-a4fa2bc468e6f09034b6"
+    },
+    {
+      "locator": "internal/validate/validate_test.go",
+      "new_anchor_id": "anchor-5e8976630f48efd273f0",
+      "old_anchor_id": "anchor-ea0297ec1785f696a069"
+    },
+    {
+      "locator": "mastery.yaml",
+      "new_anchor_id": "anchor-95a959fce5b3b92dbc82",
+      "old_anchor_id": "anchor-f9a928a267aa6dda6203"
+    },
+    {
+      "locator": "migrations/core-v1.yaml",
+      "new_anchor_id": "anchor-3d52139e719b01375b86",
+      "old_anchor_id": "anchor-6d222835d26a782d8b2f"
+    },
+    {
+      "locator": "migrations/definitive-v2.yaml",
+      "new_anchor_id": "anchor-3c8c6b1beb97b8f7e157",
+      "old_anchor_id": "anchor-9f038ce4aa83045e2c96"
+    },
+    {
+      "locator": "non-regression.yaml",
+      "new_anchor_id": "anchor-51a7e4e16294cc3d5ad4",
+      "old_anchor_id": "anchor-b54dfcab3c08f91aee7e"
+    },
+    {
+      "locator": "profiles/FE_AUTHORITY_BODY_DENOMINATOR_REFERENCE.json",
+      "new_anchor_id": "anchor-fe67e4f628e00bbc1678",
+      "old_anchor_id": "anchor-d88807ef950a57da6229"
+    },
+    {
+      "locator": "profiles/FE_AUTHORITY_EXTRACTION_REFERENCE.json",
+      "new_anchor_id": "anchor-985974b5f1e4c2c191ca",
+      "old_anchor_id": "anchor-2a6baf5a21e8872b791f"
+    },
+    {
+      "locator": "profiles/FE_AUTHORITY_REVIEW_DECISIONS_REFERENCE.json",
+      "new_anchor_id": "anchor-cd2995865117acf4dc60",
+      "old_anchor_id": "anchor-82094498487db2bad212"
+    },
+    {
+      "locator": "profiles/FE_AUTHORITY_REVIEW_QUEUE_REFERENCE.json",
+      "new_anchor_id": "anchor-383564dc478eac812882",
+      "old_anchor_id": "anchor-acbdf97ebe4570b3635e"
+    },
+    {
+      "locator": "profiles/FE_DEPTH_REFERENCE.json",
+      "new_anchor_id": "anchor-48db3fe3f554953a1321",
+      "old_anchor_id": "anchor-1b30f6d65395912a3081"
+    },
+    {
+      "locator": "provenance.yaml",
+      "new_anchor_id": "anchor-4b45ce8650adcbe01087",
+      "old_anchor_id": "anchor-9c5ccc4d14f8ef0fee4d"
+    },
+    {
+      "locator": "sbom.spdx.json",
+      "new_anchor_id": "anchor-87a9308005c3301a5c8a",
+      "old_anchor_id": "anchor-5cdbc42a82917a828bab"
+    },
+    {
+      "locator": "schemas/assets.go",
+      "new_anchor_id": "anchor-585e79d24faec63fee3d",
+      "old_anchor_id": "anchor-89e165224ef7efc3a3a8"
+    },
+    {
+      "locator": "schemas/atlas.schema.json",
+      "new_anchor_id": "anchor-a6060ab83152c9e7d664",
+      "old_anchor_id": "anchor-c0920cb49e049682601c"
+    },
+    {
+      "locator": "schemas/authority-body-baseline.schema.json",
+      "new_anchor_id": "anchor-c4f8cf37b12c881235b2",
+      "old_anchor_id": "anchor-6860673661d09852ead1"
+    },
+    {
+      "locator": "schemas/authority-body-document.schema.json",
+      "new_anchor_id": "anchor-930dc464b21eed5c23ce",
+      "old_anchor_id": "anchor-44285cc90307bf68ce9e"
+    },
+    {
+      "locator": "schemas/authority-body-inventory.schema.json",
+      "new_anchor_id": "anchor-36dcc2026ad07e0dea6b",
+      "old_anchor_id": "anchor-6f6c8e38b05a4a118472"
+    },
+    {
+      "locator": "schemas/authority-body-migration.schema.json",
+      "new_anchor_id": "anchor-df600552d09cdab8b07c",
+      "old_anchor_id": "anchor-697b23202ee71c67eba9"
+    },
+    {
+      "locator": "schemas/authority-extraction.schema.json",
+      "new_anchor_id": "anchor-0e574b4cfc50f395558e",
+      "old_anchor_id": "anchor-8d4f8b897b047e33feea"
+    },
+    {
+      "locator": "schemas/authority-relock-decision.schema.json",
+      "new_anchor_id": "anchor-21a3856ec79585592128",
+      "old_anchor_id": "anchor-a1fdf634cdd59643906c"
+    },
+    {
+      "locator": "schemas/authority-review-batch.schema.json",
+      "new_anchor_id": "anchor-207f28d352472f1735a2",
+      "old_anchor_id": "anchor-c9c601aeca14b8699e09"
+    },
+    {
+      "locator": "schemas/authority-review-decisions.schema.json",
+      "new_anchor_id": "anchor-5d0864ec0cdf5650d2fa",
+      "old_anchor_id": "anchor-73e5cad2dcca90091de6"
+    },
+    {
+      "locator": "schemas/authority-review-export.schema.json",
+      "new_anchor_id": "anchor-bfcf45074cf11c11d68e",
+      "old_anchor_id": "anchor-4c8948b75313a70c559d"
+    },
+    {
+      "locator": "schemas/authority-review-packet.schema.json",
+      "new_anchor_id": "anchor-0d2b7f44b6d6c8cc24ea",
+      "old_anchor_id": "anchor-26203e4988e34510a9e3"
+    },
+    {
+      "locator": "schemas/authority-review-queue.schema.json",
+      "new_anchor_id": "anchor-010d283f9880d1946d3e",
+      "old_anchor_id": "anchor-fbdfb19148b05fd2d894"
+    },
+    {
+      "locator": "schemas/authority-stale-relock-candidates.schema.json",
+      "new_anchor_id": "anchor-28a45cac7f13f5a30baa",
+      "old_anchor_id": "anchor-9fe51b9f63671b6550b7"
+    },
+    {
+      "locator": "schemas/authority-surface-draft.schema.json",
+      "new_anchor_id": "anchor-2883a2a4b2a38f6eb32c",
+      "old_anchor_id": "anchor-47a76be9d9c7689079df"
+    },
+    {
+      "locator": "schemas/authority-surfaces.schema.json",
+      "new_anchor_id": "anchor-d5ce912c5ede6f1f9d63",
+      "old_anchor_id": "anchor-ac996fc3e07c842c6be3"
+    },
+    {
+      "locator": "schemas/catalog.schema.json",
+      "new_anchor_id": "anchor-53a4e2729fe45acf8009",
+      "old_anchor_id": "anchor-0565632bbc7d8789d358"
+    },
+    {
+      "locator": "schemas/claim.schema.json",
+      "new_anchor_id": "anchor-cc5d7d7e9169a83907af",
+      "old_anchor_id": "anchor-4199cf3d9d0fdbdd2300"
+    },
+    {
+      "locator": "schemas/company-inventory.schema.json",
+      "new_anchor_id": "anchor-09fa3b29b82a77b3c8dc",
+      "old_anchor_id": "anchor-2da506f6a793e58accc1"
+    },
+    {
+      "locator": "schemas/completion-certificate.schema.json",
+      "new_anchor_id": "anchor-bb4108d6bb7245187a97",
+      "old_anchor_id": "anchor-1179c0852c59583153f8"
+    },
+    {
+      "locator": "schemas/coverage.schema.json",
+      "new_anchor_id": "anchor-32e56442963e268e1f53",
+      "old_anchor_id": "anchor-cd716dd6e600986e0ba9"
+    },
+    {
+      "locator": "schemas/definitive-certificate.schema.json",
+      "new_anchor_id": "anchor-a3022c6c728be408b771",
+      "old_anchor_id": "anchor-58ca59961b47f85f21a2"
+    },
+    {
+      "locator": "schemas/definitive-migration.schema.json",
+      "new_anchor_id": "anchor-382d36a002a9d6c2eb8a",
+      "old_anchor_id": "anchor-2450da7fc12bdf949256"
+    },
+    {
+      "locator": "schemas/definitive-skill-eval.schema.json",
+      "new_anchor_id": "anchor-f448288850e4f91225d2",
+      "old_anchor_id": "anchor-bcd1789f48db3622629c"
+    },
+    {
+      "locator": "schemas/definitive-skill-router.schema.json",
+      "new_anchor_id": "anchor-6784cc7bb75c03c5e40b",
+      "old_anchor_id": "anchor-774cfda32278ae7f06aa"
+    },
+    {
+      "locator": "schemas/definitive.schema.json",
+      "new_anchor_id": "anchor-e670285ded64ba9dd263",
+      "old_anchor_id": "anchor-927eacd44b79af150708"
+    },
+    {
+      "locator": "schemas/depth-parity.schema.json",
+      "new_anchor_id": "anchor-6894b96fa8d8b1273bf3",
+      "old_anchor_id": "anchor-79376c7cd5cab48a4be7"
+    },
+    {
+      "locator": "schemas/depth-reference.schema.json",
+      "new_anchor_id": "anchor-ff1837eb717a2c68ba15",
+      "old_anchor_id": "anchor-b4032796c1827bfe8cf3"
+    },
+    {
+      "locator": "schemas/evidence.schema.json",
+      "new_anchor_id": "anchor-fe5da0dc3781f3d60ed1",
+      "old_anchor_id": "anchor-1a5dc5aa1c3db8e98746"
+    },
+    {
+      "locator": "schemas/integrated-reference-system.schema.json",
+      "new_anchor_id": "anchor-72e3579bb20f4445c8fc",
+      "old_anchor_id": "anchor-7c8601bd6036da7cce71"
+    },
+    {
+      "locator": "schemas/integrated-scenario-results.schema.json",
+      "new_anchor_id": "anchor-c7e400770764fef63b16",
+      "old_anchor_id": "anchor-07f1a1d8e3bb31e9587a"
+    },
+    {
+      "locator": "schemas/mastery.schema.json",
+      "new_anchor_id": "anchor-5095143da57608e4c89d",
+      "old_anchor_id": "anchor-a8731466fc2fba9d8cde"
+    },
+    {
+      "locator": "schemas/migration.schema.json",
+      "new_anchor_id": "anchor-ad1a7f914c232aa94f6d",
+      "old_anchor_id": "anchor-2e05055ffe2b9c36bd4d"
+    },
+    {
+      "locator": "schemas/non-regression-baseline.schema.json",
+      "new_anchor_id": "anchor-7fbfad6f022bf30366b7",
+      "old_anchor_id": "anchor-917ef8a9e2cdc18320ad"
+    },
+    {
+      "locator": "schemas/non-regression.schema.json",
+      "new_anchor_id": "anchor-03ea28c3a4d686c5454d",
+      "old_anchor_id": "anchor-4d4401417427c27e036d"
+    },
+    {
+      "locator": "schemas/pattern-scenario-results.schema.json",
+      "new_anchor_id": "anchor-7f15cccc9f48455758ca",
+      "old_anchor_id": "anchor-1d4476ef9b66434b7b6b"
+    },
+    {
+      "locator": "schemas/provenance.schema.json",
+      "new_anchor_id": "anchor-15b45366193eeda18c57",
+      "old_anchor_id": "anchor-deae33abfc516969099e"
+    },
+    {
+      "locator": "schemas/scenario-closure-plan.schema.json",
+      "new_anchor_id": "anchor-fecb62581e3f45f452ab",
+      "old_anchor_id": "anchor-b49450ab136f3ac4dafb"
+    },
+    {
+      "locator": "schemas/scenario-proof-index.schema.json",
+      "new_anchor_id": "anchor-6d742bfae6b5d9cae583",
+      "old_anchor_id": "anchor-2aa13777f7f058a09a5a"
+    },
+    {
+      "locator": "schemas/scenario-proof-row.schema.json",
+      "new_anchor_id": "anchor-d4f7a5b979c447ddfe21",
+      "old_anchor_id": "anchor-f9333fc5ee95db2b5b1c"
+    },
+    {
+      "locator": "schemas/skill-eval.schema.json",
+      "new_anchor_id": "anchor-e9eea9a790e335a18c96",
+      "old_anchor_id": "anchor-b726ca0e1820d7d0fe2b"
+    },
+    {
+      "locator": "schemas/skill-package.schema.json",
+      "new_anchor_id": "anchor-e8ed62d8d61ac0541024",
+      "old_anchor_id": "anchor-794d2a85708221a5ccb8"
+    },
+    {
+      "locator": "schemas/sources-lock.schema.json",
+      "new_anchor_id": "anchor-ff4562906da8855739bb",
+      "old_anchor_id": "anchor-e759d4e77338475205c4"
+    },
+    {
+      "locator": "schemas/surface-inventory.schema.json",
+      "new_anchor_id": "anchor-8b1d9cce49f0ffdaf758",
+      "old_anchor_id": "anchor-47cf2543d98b1eb59e49"
+    },
+    {
+      "locator": "schemas/third-party.schema.json",
+      "new_anchor_id": "anchor-920b9ccd3b22483a3359",
+      "old_anchor_id": "anchor-53d53bdd7123a2af884a"
+    },
+    {
+      "locator": "schemas/verification-matrix.schema.json",
+      "new_anchor_id": "anchor-deba06e623de41c8d049",
+      "old_anchor_id": "anchor-86e66dc27746187a5f80"
+    },
+    {
+      "locator": "scripts/check_dco.py",
+      "new_anchor_id": "anchor-5f19f048d85af6163a76",
+      "old_anchor_id": "anchor-e1275b2cf2fd5ec9f8a4"
+    },
+    {
+      "locator": "skill.package.yaml",
+      "new_anchor_id": "anchor-61543c2f29fda62c2a10",
+      "old_anchor_id": "anchor-baf32e39913c150735c6"
+    },
+    {
+      "locator": "sources.lock.yaml",
+      "new_anchor_id": "anchor-716665accf867b951da8",
+      "old_anchor_id": "anchor-0fb0ea9cdc7381b61429"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-aggregate-evidence.yaml",
+      "new_anchor_id": "anchor-816b7a09d513fb75d197",
+      "old_anchor_id": "anchor-f7a07a55b6229b915518"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-aggregate-target.yaml",
+      "new_anchor_id": "anchor-2ba8a08453b4b7d0d96b",
+      "old_anchor_id": "anchor-be428fd9d6a95359425b"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-authority-candidates-not-exhaustive.yaml",
+      "new_anchor_id": "anchor-c766613c8effd37670ce",
+      "old_anchor_id": "anchor-0995a6b89ae290c5516c"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-automated-authority-reviewer.yaml",
+      "new_anchor_id": "anchor-376890a2dd77cc5aedbe",
+      "old_anchor_id": "anchor-f3209b0db65645389a4c"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-depth-gap.yaml",
+      "new_anchor_id": "anchor-197d5046d821e39740ea",
+      "old_anchor_id": "anchor-ecb1f39897353c88ccf9"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-inventory-omission.yaml",
+      "new_anchor_id": "anchor-cad1689a2e02c11f0b8d",
+      "old_anchor_id": "anchor-9de93128744a49574fd4"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-matrix-gap.yaml",
+      "new_anchor_id": "anchor-52f01057d4d1a0901c17",
+      "old_anchor_id": "anchor-e382a61e0657ee142aec"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-required-infeasible.yaml",
+      "new_anchor_id": "anchor-a246f7c5df335fa0c553",
+      "old_anchor_id": "anchor-981fbf423d4232f821ab"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-review-queue-anchor-omission.yaml",
+      "new_anchor_id": "anchor-f46e6f7c9bb907cd7f01",
+      "old_anchor_id": "anchor-793560e7753e816765a1"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-review-result-id-sharing.yaml",
+      "new_anchor_id": "anchor-8fd8c87501f33a8e3678",
+      "old_anchor_id": "anchor-3c25d396c7bd1e4304a8"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-scenario-authority-binding-forgery.yaml",
+      "new_anchor_id": "anchor-4de52a3b6e3cdde79da3",
+      "old_anchor_id": "anchor-cd9e9c66a30de417caaa"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-scenario-capture-identity-substitution.yaml",
+      "new_anchor_id": "anchor-96cf0e56729b4a6f5b32",
+      "old_anchor_id": "anchor-4b51d7b90012c0a5cf0a"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-scenario-dedicated-integrated-trace-reuse.yaml",
+      "new_anchor_id": "anchor-14a84650d4c87ca6c149",
+      "old_anchor_id": "anchor-19dbf82b6c204dcc6573"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-scenario-integrated-trace-reuse.yaml",
+      "new_anchor_id": "anchor-edb9331f136148e79bc8",
+      "old_anchor_id": "anchor-cb805923e28039382b44"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-scenario-runtime-retry.yaml",
+      "new_anchor_id": "anchor-58e46d9ff194e40d9a79",
+      "old_anchor_id": "anchor-707cc685e2de72a851ef"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-skill-gap.yaml",
+      "new_anchor_id": "anchor-e1fee947a18dda85fd5f",
+      "old_anchor_id": "anchor-a1c9b6b4fd6696546030"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-skill-router-forward-eval-missing.yaml",
+      "new_anchor_id": "anchor-3079f64f0fd3b4a2800e",
+      "old_anchor_id": "anchor-115409cd0449e6757bfa"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-skill-router-gap.yaml",
+      "new_anchor_id": "anchor-582d688f00cc7e04b122",
+      "old_anchor_id": "anchor-cac54b78e485d8f5cdd7"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-skill-router-human-authority-bypass.yaml",
+      "new_anchor_id": "anchor-d3697556bce20fb05ec3",
+      "old_anchor_id": "anchor-65f96d43f952d9c8fc23"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-static-runtime.yaml",
+      "new_anchor_id": "anchor-274a8663f5d478037a06",
+      "old_anchor_id": "anchor-6e30ed1d50daaea10aa2"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-unreviewed-body-anchor-promotion.yaml",
+      "new_anchor_id": "anchor-fbcf009be48ca663f49f",
+      "old_anchor_id": "anchor-ea1a9387998ec583c422"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-variant-omission.yaml",
+      "new_anchor_id": "anchor-15766427d2334c6f6c32",
+      "old_anchor_id": "anchor-75b6a8dcb71c9cf848ab"
+    },
+    {
+      "locator": "testdata/definitive/cases/false-positive-zero-decision-semantic-exhaustive.yaml",
+      "new_anchor_id": "anchor-bde121605274206fdd99",
+      "old_anchor_id": "anchor-4c0616a54d39b500516e"
+    },
+    {
+      "locator": "testdata/definitive/cases/valid-authority-derived.yaml",
+      "new_anchor_id": "anchor-2de68698884cf0b59c4a",
+      "old_anchor_id": "anchor-330bb870979d22fdf392"
+    },
+    {
+      "locator": "testdata/non-regression/cases/deletion.yaml",
+      "new_anchor_id": "anchor-d89f949cbcaeb004a81d",
+      "old_anchor_id": "anchor-d2eb14d1918efb635785"
+    },
+    {
+      "locator": "testdata/non-regression/cases/scenario-capture-substitution.yaml",
+      "new_anchor_id": "anchor-d8712358ed1cb4da1aac",
+      "old_anchor_id": "anchor-d7979feb9d7df0651881"
+    },
+    {
+      "locator": "testdata/non-regression/cases/scenario-runtime-artifact-replacement.yaml",
+      "new_anchor_id": "anchor-00138dda522edd814668",
+      "old_anchor_id": "anchor-8aa2664d1f154498665e"
+    },
+    {
+      "locator": "testdata/non-regression/cases/scope-exclusion.yaml",
+      "new_anchor_id": "anchor-a8148adea86b19152017",
+      "old_anchor_id": "anchor-70db93c6cbe27bd935d4"
+    },
+    {
+      "locator": "testdata/non-regression/cases/scope-statement-shrink.yaml",
+      "new_anchor_id": "anchor-74bf9ea8ffba25dde0f9",
+      "old_anchor_id": "anchor-92d9e3c23f344a30f57a"
+    },
+    {
+      "locator": "testdata/non-regression/cases/skip.yaml",
+      "new_anchor_id": "anchor-81ffd23c8c7c85873635",
+      "old_anchor_id": "anchor-28af9a3d787e1b8f1b53"
+    },
+    {
+      "locator": "testdata/non-regression/cases/threshold-relaxation.yaml",
+      "new_anchor_id": "anchor-bfdf2557553b4ef50425",
+      "old_anchor_id": "anchor-9be3ce377f06127d408f"
+    },
+    {
+      "locator": "testdata/scenario-closure-plan/cases/delete-row.yaml",
+      "new_anchor_id": "anchor-519714edc033832ba8fd",
+      "old_anchor_id": "anchor-c61430d0bf6edf9a10c8"
+    },
+    {
+      "locator": "testdata/scenario-closure-plan/cases/inflate-tranche.yaml",
+      "new_anchor_id": "anchor-91b76e05c7c568774c3d",
+      "old_anchor_id": "anchor-038281ec433901d50410"
+    },
+    {
+      "locator": "testdata/scenario-closure-plan/cases/retreat-order.yaml",
+      "new_anchor_id": "anchor-1d8c67c1b676de741d2b",
+      "old_anchor_id": "anchor-b03146be3bea3b62c7eb"
+    },
+    {
+      "locator": "third_party/manifest.yaml",
+      "new_anchor_id": "anchor-b142c311247239c8c63d",
+      "old_anchor_id": "anchor-486efb9ecbaa84e66837"
+    }
+  ],
+  "new_anchor_count": 205,
+  "new_commit": "072d7ca77981f51754e824d70c6d4ecd55ea67e5",
+  "new_document_id": "document-akaitigo-reference-atlas-core-1962d92e4393",
+  "old_anchor_count": 200,
+  "old_commit": "40f627e7e7db1d679c18f9442754951b0e1dd13b",
+  "old_document_id": "document-akaitigo-reference-atlas-core-a9e73fd54439",
+  "schema_version": 1
+}

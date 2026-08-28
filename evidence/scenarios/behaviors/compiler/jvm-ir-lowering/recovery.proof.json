@@ -33,10 +33,10 @@
       "producer": "jdk-javap",
       "record": {
         "bytes": 984,
-        "digest": "sha256:5c5381d79161fca4a9c78040615150a9fbc38e5ffad97c881c3d9c7defacd433",
+        "digest": "sha256:4245d47e80dbf09372783fa9ddbb1da7afa9d01559585b13e8a266b695d0738f",
         "path": "evidence/compiler.bytecode-inspection.evidence.json"
       },
-      "source_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
+      "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
       "verdict": "pass"
     }
   ],

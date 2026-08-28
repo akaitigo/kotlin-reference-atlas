@@ -32,7 +32,7 @@
     "swap": "staged-directory-rename-with-rollback"
   },
   "schema_version": 1,
-  "source_digest": "sha256:61cc38d487319b2e89e7f8456d18c18e1b0363c99a3e8066579c8d43f4c58384",
+  "source_digest": "sha256:7a69a420fecf94590e888ddbcd4f736b86ba534759143c3492818fdbff6997fd",
   "status": "failed",
   "tests": [],
   "trace_contract": {

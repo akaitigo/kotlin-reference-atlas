@@ -1,6 +1,6 @@
 {
   "artifact": {
-    "digest": "sha256:b100f85c4d0519ef32f1f154bda3695b39af2fa514e852960761a8728dc51e61",
+    "digest": "sha256:01aab400c74558c01becd69fea32b0f2ccd44d192245283444f795aa1a6999b7",
     "media_type": "application/json",
     "size_bytes": 275380,
     "uri": "evidence/scenarios/kotlin-closure-index.json"
@@ -22,6 +22,6 @@
   "producer": "kotlin-scenario-proof-matrix",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
+  "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
   "verdict": "pass"
 }

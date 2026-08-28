@@ -15,6 +15,7 @@ required_actions:
   - complete-scenario-matrix
   - execute-bounded-scenario-closure-plan
   - verify-evidence-durability
+  - verify-evidence-dependency-reruns
   - collect-runtime-evidence
   - add-reference-system-if-applicable
   - add-comparisons-if-applicable

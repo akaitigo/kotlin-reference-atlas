@@ -1,6 +1,20 @@
 {
   "documents": [
     {
+      "anchor_count": 205,
+      "anchor_id_set_digest": "sha256:72e80d46188daa6e0a428074a32d23ebeeb0c3bb56b4fdf4b8a497f9d0d525d5",
+      "document_id_changed": false,
+      "new_document_id": "document-akaitigo-reference-atlas-core-1962d92e4393",
+      "old_document_id": "document-akaitigo-reference-atlas-core-1962d92e4393",
+      "reason": "Core v2 document identity and root-anchor schema normalization; candidate identities remain unchanged.",
+      "root_locator_change": {
+        "anchor_id": "anchor-749bbb5bab434d727b0b",
+        "from": "repository-root",
+        "to": "document-root"
+      },
+      "stable_anchor_ids_preserved": true
+    },
+    {
       "anchor_count": 44,
       "anchor_id_set_digest": "sha256:ec1c0ace76184c3d127521c334e7fdd7590bf9410b97fb88b809252ab67631c0",
       "document_id_changed": false,
@@ -9,20 +23,6 @@
       "reason": "Core v2 document identity and root-anchor schema normalization; candidate identities remain unchanged.",
       "root_locator_change": {
         "anchor_id": "anchor-113bd4977b830b299e07",
-        "from": "repository-root",
-        "to": "document-root"
-      },
-      "stable_anchor_ids_preserved": true
-    },
-    {
-      "anchor_count": 200,
-      "anchor_id_set_digest": "sha256:7d5ae7dd9e0d343bb7b1020878640b46dcdca6c1ee413925148af14d600fe412",
-      "document_id_changed": false,
-      "new_document_id": "document-akaitigo-reference-atlas-core-a9e73fd54439",
-      "old_document_id": "document-akaitigo-reference-atlas-core-a9e73fd54439",
-      "reason": "Core v2 document identity and root-anchor schema normalization; candidate identities remain unchanged.",
-      "root_locator_change": {
-        "anchor_id": "anchor-6ab49c15b9429b230b4c",
         "from": "repository-root",
         "to": "document-root"
       },

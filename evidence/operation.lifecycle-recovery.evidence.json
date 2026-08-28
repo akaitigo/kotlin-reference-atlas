@@ -15,13 +15,13 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:41320a043ed0a718572dc071fb866913bee0071c1a009e16d2e719f44d3ae696",
+  "harness_digest": "sha256:def3e2b4fef0887b1544fd2e471a7f5f25a7f16355a926e37d09fac2a6f3c287",
   "harness_path": "docs/RUNBOOK.md",
   "id": "operation.lifecycle-recovery",
   "kind": "conformance",
   "producer": "gradle-junit",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
+  "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
   "verdict": "pass"
 }

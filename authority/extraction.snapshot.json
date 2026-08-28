@@ -2,7 +2,7 @@
   "atlas_id": "kotlin-reference-atlas",
   "body_storage": "digest-and-locator-context-digest-only",
   "generated_at": "2026-08-28T00:00:00+09:00",
-  "input_digest": "sha256:2899f531def1f1be1e131ddd3ea6285b3f43655edac88346e2627a59c85846b2",
+  "input_digest": "sha256:ef35dfb70a8142998e6670e0d4dd5263293dcbb997f3727c7c133945f9a9cf99",
   "schema_version": 1,
   "sources": [
     {
@@ -167,7 +167,7 @@
     },
     {
       "candidate_surfaces": 1,
-      "digest": "sha256:d20e94ddcf4d4890b41efb899e74a913e6b62c764236a668df346e1372cb1226",
+      "digest": "sha256:c786bb37763bd18fee6120bef0942f9b5444938117ea494c5ea1f885b629da22",
       "id": "reference-atlas-core-definitive-v2",
       "locator_status": {
         "not-evaluated-fetch-failed": 1

@@ -32,15 +32,17 @@ Kotlin RouterはFE commit `8a9e34a89a55cc53702032783c06ede7246a286f`の方式を
 
 FE側の判定は1軸satisfied、17軸partialで`incomplete`です。KotlinはFEのTarget／Test／Capture等の絶対件数や比率を閾値にせず、69 Authority由来Behaviorと適用Scenario／Runtime／Profileを母集団にします。現在のKotlin判定も1軸satisfied、17軸partial、30件の軸別Gap参照です。`scripts/verify_fe_parity.py`は18軸ID、正本commitとdigest、Kotlin denominator、Behavior×Scenario×Profile×Proof×専用Artifact粒度、Evidence、Gap、非後退を検証し、Gapがある状態での`complete`またはCertificate発行を拒否します。
 
-Authority locator抽出の方法論は`frontend-behavior-atlas` commit `cabf687bab769b17928d950acc416f3f77eb4ca3`へdigest固定し、Core v2は確定tip `40f627e7e7db1d679c18f9442754951b0e1dd13b`の独立Authority Extraction・Scenario/Trace・Closure Plan・Evidence durability Gateを使用します。`authority/locator-extraction.json`とCore用`authority/extraction.snapshot.json`は第三者本文を保存せず、URL、Source metadata、digest、locator metadataだけを許可します。既存69 reference edge分類とAuthority本文全体の網羅抽出は別判定です。
+Authority locator抽出の方法論は`frontend-behavior-atlas` commit `cabf687bab769b17928d950acc416f3f77eb4ca3`へdigest固定し、Core v2は正式main／CI成功DCO commit pin `072d7ca77981f51754e824d70c6d4ecd55ea67e5`の独立Authority Extraction・Scenario/Trace・Closure Plan・Evidence durability・Evidence Dependency Gateを使用します。`authority/locator-extraction.json`とCore用`authority/extraction.snapshot.json`は第三者本文を保存せず、URL、Source metadata、digest、locator metadataだけを許可します。既存69 reference edge分類とAuthority本文全体の網羅抽出は別判定です。
 
-Authority denominator方式は`frontend-behavior-atlas` commit `841ec2fa399606a10305021a8bcd396713b8cee5`へ別途digest固定しています。Kotlinでは18 Source Lock entryを16 documentへ正規化し、固定Git treeの`document-root`／`tracked-blob`と配布Artifact rootから146397 candidate anchorを列挙しました。本文は取得・保存せず、stable ID、source/tool digest、locator、offset、stale境界を保持します。公開済み146146 IDは維持し、Core e822→d535、d535→7c9313c、7c9313c→40f627e更新はlocator単位の旧ID→新ID Mappingを固定しました。専用baselineはMappingなしの削除・置換を拒否します。
+Authority denominator方式は`frontend-behavior-atlas` commit `841ec2fa399606a10305021a8bcd396713b8cee5`へ別途digest固定しています。Kotlinでは18 Source Lock entryを16 documentへ正規化し、固定Git treeの`document-root`／`tracked-blob`と配布Artifact rootから146402 candidate anchorを列挙しました。本文は取得・保存せず、stable ID、source/tool digest、locator、offset、stale境界を保持します。公開済み146146 IDは維持し、Core e822→d535、d535→7c9313c、7c9313c→40f627e、40f627e→072d7ca更新はlocator単位の旧ID→新ID Mappingを固定しました。専用baselineはMappingなしの削除・置換を拒否します。
 
-Human review Queue方式はFE commit `de2f016b8b44ea67afdb08c0552044807505984e`へdigest固定しています。146397 stable anchorは全件Queueへ割り当て、priority・cluster・batchはmachine proposalに限定しています。現状は全件`pending-human`、Human decision 0、Semantic昇格0、stale hold 0です。reviewer、時刻、理由、固定digest、locator、旧→新mapping、result、Promotion実体が一致しない昇格をVerifierが拒否し、stale documentはholdします。candidate anchorおよびQueue件数はSemantic Surface、Atomic behavior、18 Depth軸の達成へ算入しません。
+Human review Queue方式はFE commit `de2f016b8b44ea67afdb08c0552044807505984e`へdigest固定しています。146402 stable anchorは全件Queueへ割り当て、priority・cluster・batchはmachine proposalに限定しています。現状は全件`pending-human`、Human decision 0、Semantic昇格0、stale hold 0です。reviewer、時刻、理由、固定digest、locator、旧→新mapping、result、Promotion実体が一致しない昇格をVerifierが拒否し、stale documentはholdします。candidate anchorおよびQueue件数はSemantic Surface、Atomic behavior、18 Depth軸の達成へ算入しません。
 
 Reference System／Scenario Proof方式はFE commit `deadad18b6588d2c907170a451c3b5cea5ea4192`へ、Gap Closure条件はFE commit `f2e4c4b19156f8e993f48cdcbce23679ad881924`へdigest固定しています。Automation Workbenchの10統合Scenario Traceと、69 Authority inventory Behavior×10 Scenarioの690専用Artifactを分離し、4590 Surface×Scenario×Variant cellを展開しました。統合Traceや別Artifact metadataは個別Closureへ流用しません。各cellは専用実compiler/runtime/platformで全Variantを駆動し、初回成功・retry 0・Source/Harness digest・Runtime identity・Oracle・Trace・Artifactが揃う場合だけ閉じます。現状はclosed cell 0、明示Gap 4590、Human-reviewed Authority atomic binding 0、Completion eligible 0です。
 
 Scenario Closure Planは690 Gapを180 trancheへ固定し、完了0、次回trancheは`security-001`です。Evidence公開はFE commit `7175de4`の原子的保存契約へdigest固定し、stagingで全Artifactを生成・検証したfull-run passだけをdirectory renameで公開します。失敗runは直前成功Evidenceを保持し、swap失敗はrollbackします。部分上書き、新旧generation混在、失敗runによる成功Evidence消去はnegative testで拒否します。専用Runtime成功世代は未生成なので、Core Evidence durability／Scenario Plan Gateは未閉鎖です。
+
+Evidence Dependency GraphはFEの件数を転用せず、Kotlin Authority／Surface、Kotlin・Java・Gradle harness、compiler／runtime／toolchain lock、local／container／CI profileの4入力群と、Coreが機械列挙するunit、integration、compatibility、performance、toolchain、Reference System、Skill Eval、Scenario Proof全Evidenceを接続します。入力変更後は全到達Evidenceを初回実行で再生成し、現在digest、runtime identity、required output一覧へ結べない限り`current`にできません。digestだけの再固定、output漏れ、stale退避、runtime identity欠落、retry、Proof／Closure Plan構造縮小はnegative fixtureで拒否します。KLIB／bytecode／compile-onlyはNative Runtime Evidenceの代替にしません。
 
 ## Completion禁止条件
 
@@ -58,7 +60,7 @@ Scenario Closure Planは690 Gapを180 trancheへ固定し、完了0、次回tran
 
 公開main `e42f23d`をBaselineとして、28 Target、25 Claim、27 Proof、24 Evidence、8 Source、18 Skill Eval、34実行Test case、56 Assertion、JVM／JS／Wasm／Native compile task、macOS／Ubuntu CIを維持します。`scripts/verify_non_regression.py`が削除、格下げ、skip、Scope外退避、Evidence command置換を検出した場合、Definitive作業は未完のまま失敗します。
 
-Core v2標準の`non-regression.yaml`は、この公開main非後退を通過したDCO commit `c0e9b1c60768f606221f6a3ef0556052a8b5d0e9`を追加anchorとして固定します。Core生成baselineは29 Claim、31 Proof、28 Evidence、18 Source、21 Skill Eval、30 Targetを保持し、同一Harnessの変更には実Runtime ProofとMigration Evidenceを要求します。公開main baselineを置換するものではなく、二層を両方通します。
+Core v2標準の`non-regression.yaml`は、この公開main非後退を通過したDCO commit `c0e9b1c60768f606221f6a3ef0556052a8b5d0e9`を追加anchorとして固定します。正式main `072d7ca77981f51754e824d70c6d4ecd55ea67e5`で生成したbaselineは29 Claim、31 Proof、28 Evidence、18 Source、21 Skill Eval、30 TargetとEvidence Dependency Graph Collectionを保持し、同一Harnessの変更には実Runtime ProofとMigration Evidenceを要求します。公開main baselineを置換するものではなく、二層を両方通します。
 
 ## 既知の外部条件
 

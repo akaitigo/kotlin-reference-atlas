@@ -9,6 +9,7 @@ import os
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
+from datetime import datetime
 from pathlib import Path
 from typing import Iterable
 
@@ -19,10 +20,11 @@ DEFINITIVE_MANIFESTS = [
     "definitive.yaml",
     "depth.parity.yaml",
     "non-regression.yaml",
-    "baselines/definitive-c0e9b1c.core-40f627e.non-regression-baseline.json",
+    "baselines/definitive-c0e9b1c.core-072d7ca.non-regression-baseline.json",
     "evidence/scenarios/index.json",
     "evidence/scenarios/closure-plan.json",
     "artifacts/pattern-scenarios/results.json",
+    "evidence/dependency-graph.json",
     "surface.inventory.yaml",
     "verification.matrix.yaml",
     "evals/kotlin-reference-router.definitive-skill-eval.json",
@@ -895,6 +897,7 @@ def summarize_gap_ledger() -> dict:
 
 def audit_definitive_incomplete() -> dict:
     base = run([str(ROOT / "bin" / "atlas"), "audit", "."], capture=True)
+    dependency = run([str(ROOT / "bin" / "atlas"), "audit", ".", "--gate", "evidence-dependency"], capture=True)
     scenario_plan = run_expect_failure([str(ROOT / "bin" / "atlas"), "audit", ".", "--gate", "scenario-plan"])
     if not scenario_plan.stdout or "Evidence durability" not in scenario_plan.stdout:
         raise RuntimeError("Scenario Plan Gateが成功世代未生成を明示して拒否しない")
@@ -906,6 +909,7 @@ def audit_definitive_incomplete() -> dict:
         raise RuntimeError("Definitive Gateが未完理由を返さない")
     result = {
         "base_audit": base.stdout.strip(),
+        "evidence_dependency_audit": dependency.stdout.strip(),
         "scenario_plan_audit_exit_code": scenario_plan.returncode,
         "scenario_plan_audit_output": scenario_plan.stdout.strip(),
         "evidence_durability_audit_exit_code": durability.returncode,
@@ -922,6 +926,7 @@ def audit_definitive_incomplete() -> dict:
 
 
 def main(*, skip_container: bool = False) -> None:
+    evidence_run_started_at = datetime.now().astimezone().isoformat(timespec="seconds")
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
     manifest_result = validate_manifests()
     lab_result = collect_test_results()
@@ -951,11 +956,13 @@ def main(*, skip_container: bool = False) -> None:
     write_scenario_evidence()
     fe_parity_result = validate_fe_parity()
     neutral_language_result = validate_neutral_language()
+    run([sys.executable, str(ROOT / "scripts" / "generate_evidence_dependency_graph.py"), "--run-started-at", evidence_run_started_at, "--run-completed-at", datetime.now().astimezone().isoformat(timespec="seconds")])
+    run([sys.executable, str(ROOT / "scripts" / "test_evidence_dependency_graph.py")])
     gaps = summarize_gap_ledger()
     summary = {
         "atlas_id": "kotlin-reference-atlas",
         "epoch": "2026-08-28",
-        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "definitive_skill": definitive_skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "scenario_plan": "expected-incomplete-no-success-generation", "evidence_durability": "expected-incomplete-no-success-generation", "definitive": "expected-incomplete"},
+        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "definitive_skill": definitive_skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "evidence_dependency": "pass", "scenario_plan": "expected-incomplete-no-success-generation", "evidence_durability": "expected-incomplete-no-success-generation", "definitive": "expected-incomplete"},
         "definitive_skill_eval": definitive_skill_result,
         "kotlin_depth_parity": {"axis_count": fe_parity_result["axis_count"], "status_counts": fe_parity_result["status_counts"], "total_axis_gaps": fe_parity_result["total_axis_gaps"], "all_axes_closed": fe_parity_result["all_axes_closed"], "reference_commit": fe_parity_result["reference_commit"]},
         "completion_class": "incomplete",
@@ -966,7 +973,7 @@ def main(*, skip_container: bool = False) -> None:
         "authority_review_queue": authority_review_result["summary"],
         "gap_ledger": gaps,
         "completion_gaps": [
-            "146397 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
+            "146402 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
             "69 Authority inventory Behavior×10 Scenarioは専用row化済みだが、4590 Surface×Scenario×Variant cellの専用初回実行・Identity・Source/Harness・Oracle/Trace/ArtifactとAuthority atomic bindingが未閉鎖",
             "Pattern Scenario Reporterは原子的retention契約へ適合するが、公開可能なfull-run成功世代が未生成のためCore Evidence durability／Scenario Plan Gateは未閉鎖",
             "112-cell Router契約と独立Agent Forward Evalはpassだが22 Mastery routing gapが未閉鎖",
@@ -987,6 +994,8 @@ def main(*, skip_container: bool = False) -> None:
     scenario_evidence_path = write_scenario_evidence()
     evidence_paths.append(scenario_evidence_path)
     provenance_path = write_provenance(evidence_paths)
+    run([sys.executable, str(ROOT / "scripts" / "generate_evidence_dependency_graph.py"), "--run-started-at", evidence_run_started_at, "--run-completed-at", datetime.now().astimezone().isoformat(timespec="seconds")])
+    run([sys.executable, str(ROOT / "scripts" / "test_evidence_dependency_graph.py")])
     entity_paths = [*claim_paths, *evidence_paths, ROOT / "evals" / "kotlin-reference-router.skill-eval.json", provenance_path]
     run([str(ROOT / "bin" / "atlas"), "validate", *[path.relative_to(ROOT).as_posix() for path in entity_paths]])
     validate_graph(evidence_paths)

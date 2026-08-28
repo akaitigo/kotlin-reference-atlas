@@ -1,8 +1,8 @@
 {
   "repository": "reference-atlas-core",
   "version": "definitive-gate-v2",
-  "commit": "40f627e7e7db1d679c18f9442754951b0e1dd13b",
-  "archive_sha256": "bc469348f596574029bd45f77be3848f3ac55ed44c4aa41dba7730f920e68070",
-  "release_state": "commit-pinned",
-  "note_ja": "Control Plane v1、Authority Locator Extraction、Scenario Closure Plan、Evidence durability、Runtime代替拒否、旧bounded Certificate履歴を維持するDefinitive Gate v2確定tipを固定する。"
+  "commit": "072d7ca77981f51754e824d70c6d4ecd55ea67e5",
+  "archive_sha256": "2c0f1135d55c00f647ad5f4aa78333d00980f5bc5613dc32ccea9a784bbd9ab2",
+  "release_state": "main-ci-passed",
+  "note_ja": "正式mainかつCI成功のDCO commit pinとして、Authority Locator Extraction、Scenario Closure Plan、Evidence durability、Evidence Dependency Graph、Runtime代替拒否、旧bounded Certificate履歴を維持するDefinitive Gate v2を固定する。"
 }

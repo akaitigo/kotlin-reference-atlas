@@ -1,6 +1,6 @@
 {
   "artifact": {
-    "digest": "sha256:7376b374c4a3009a5e8ff98a0968e69387eeb3cd7d8981129ad1c7c13caed8d5",
+    "digest": "sha256:82e17cf0bed9c37eaf01af472a210d01ad32843b6c671e0aefdf27954f42480e",
     "media_type": "application/json",
     "size_bytes": 1067,
     "uri": "evidence/artifacts/authority-body-inventory-validation.json"
@@ -15,13 +15,13 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:ee0a27a9195d45a7d6c381b2f9b76bb6bfbb64bb9a7eac75ac8ba4da9f10fd65",
+  "harness_digest": "sha256:47af90a9531fd04ba168b792e50d6fe654bc0feeb840fb84e1d08d114ae09ea8",
   "harness_path": "authority/body-inventory.snapshot.json",
   "id": "authority.body-inventory-validation",
   "kind": "capture",
   "producer": "kotlin-authority-body-inventory-verifier",
   "retention": "git",
   "schema_version": 1,
-  "source_digest": "sha256:8b147db53cbbd96d08daca328ea438d8e749a9757b79e73af76dcc22d681f98c",
+  "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
   "verdict": "pass"
 }
