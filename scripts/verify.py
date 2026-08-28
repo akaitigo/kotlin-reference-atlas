@@ -444,6 +444,27 @@ def validate_authority_body_inventory() -> dict:
     return result
 
 
+def validate_authority_review_queue() -> dict:
+    run([sys.executable, str(ROOT / "scripts" / "generate_authority_review_queue.py")])
+    run([sys.executable, str(ROOT / "scripts" / "test_authority_review_queue.py")])
+    run([sys.executable, str(ROOT / "scripts" / "verify_authority_review_queue.py")])
+    result = load_json(ARTIFACTS / "authority-review-queue-validation.json")
+    if result.get("verdict") != "pass" or result.get("violations") or result.get("queue_depth_credit") is not False or result.get("all_raw_anchors_routed") is not True:
+        raise RuntimeError("Authority review queue Gateがpassではない")
+    artifact = ARTIFACTS / "authority-review-queue-validation.json"
+    record = evidence_record(
+        "authority.review-queue-validation",
+        ["authority.raw-anchor-denominator-is-pending-human"],
+        "capture",
+        "kotlin-authority-review-queue-verifier",
+        "python3 scripts/generate_authority_review_queue.py && python3 scripts/test_authority_review_queue.py && python3 scripts/verify_authority_review_queue.py",
+        artifact,
+        [ROOT / "scripts" / "verify_authority_review_queue.py", ROOT / "authority" / "review-queue.snapshot.json", ROOT / "authority" / "reviews" / "decisions.json", ROOT / "authority" / "reviews" / "promotions.json"],
+    )
+    write_json(ROOT / "evidence" / "authority.review-queue-validation.evidence.json", record)
+    return result
+
+
 def validate_fe_parity() -> dict:
     run([sys.executable, str(ROOT / "scripts" / "verify_fe_parity.py")])
     result = load_json(ARTIFACTS / "kotlin-depth-parity.json")
@@ -526,10 +547,12 @@ def write_evidence() -> list[Path]:
     fe_parity = ARTIFACTS / "kotlin-depth-parity.json"
     authority_locators = ARTIFACTS / "authority-locator-validation.json"
     authority_body = ARTIFACTS / "authority-body-inventory-validation.json"
+    authority_review = ARTIFACTS / "authority-review-queue-validation.json"
     specs = [
         ("authority.source-lock-validation", ["authority.source-lock-matches"], "conformance", "kotlin-atlas-verifier", "atlas validate atlas.yaml mastery.yaml coverage.yaml sources.lock.yaml skill.package.yaml && atlas audit .", manifest, [ROOT / "atlas", ROOT / "mastery.yaml", ROOT / "scripts" / "verify.py"]),
         ("authority.locator-validation", ["authority.locator-inventory-is-copyright-safe-and-incomplete"], "capture", "kotlin-authority-locator-verifier", "python3 scripts/generate_authority_locators.py && python3 scripts/verify_authority_locators.py", authority_locators, [ROOT / "scripts" / "verify_authority_locators.py", ROOT / "authority" / "locator-extraction.json", ROOT / "baseline" / "fe-authority-locator-reference-v1.json"]),
         ("authority.body-inventory-validation", ["authority.raw-anchor-denominator-is-pending-human"], "capture", "kotlin-authority-body-inventory-verifier", "python3 scripts/verify_authority_body_inventory.py", authority_body, [ROOT / "scripts" / "verify_authority_body_inventory.py", ROOT / "authority" / "body-inventory.snapshot.json", ROOT / "baselines" / "authority-body-inventory-v1.json"]),
+        ("authority.review-queue-validation", ["authority.raw-anchor-denominator-is-pending-human"], "capture", "kotlin-authority-review-queue-verifier", "python3 scripts/generate_authority_review_queue.py && python3 scripts/test_authority_review_queue.py && python3 scripts/verify_authority_review_queue.py", authority_review, [ROOT / "scripts" / "verify_authority_review_queue.py", ROOT / "authority" / "review-queue.snapshot.json", ROOT / "authority" / "reviews" / "decisions.json", ROOT / "authority" / "reviews" / "promotions.json"]),
         ("inventory.public-surface", ["inventory.locked-surface-enumerated"], "capture", "kotlin-artifact-inventory", "python3 scripts/inventory.py", inventory, [ROOT / "scripts" / "inventory.py", ROOT / "sources.lock.yaml"]),
         ("semantics.language-types", ["semantics.exhaustive-and-lazy", "types.variance-nothing-reified"], "test-report", "gradle-junit", "./gradlew :labs:semantics:test", lab, [ROOT / "labs" / "semantics"]),
         ("jvm.value-class-boundary", ["jvm.value-class-generic-boxing"], "test-report", "gradle-junit", "./gradlew :labs:jvm:test", lab, [ROOT / "labs" / "jvm"]),
@@ -753,22 +776,24 @@ def main(*, skip_container: bool = False) -> None:
     non_regression_result = validate_non_regression()
     authority_locator_result = validate_authority_locators()
     authority_body_result = validate_authority_body_inventory()
+    authority_review_result = validate_authority_review_queue()
     fe_parity_result = validate_fe_parity()
     neutral_language_result = validate_neutral_language()
     gaps = summarize_gap_ledger()
     summary = {
         "atlas_id": "kotlin-reference-atlas",
         "epoch": "2026-08-28",
-        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "definitive": "expected-incomplete"},
+        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "definitive": "expected-incomplete"},
         "kotlin_depth_parity": {"axis_count": fe_parity_result["axis_count"], "status_counts": fe_parity_result["status_counts"], "total_axis_gaps": fe_parity_result["total_axis_gaps"], "all_axes_closed": fe_parity_result["all_axes_closed"], "reference_commit": fe_parity_result["reference_commit"]},
         "completion_class": "incomplete",
         "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
         "authority_surface_inventory": {"artifacts": manifest_result["authority_artifacts"], "behaviors": manifest_result["authority_behaviors"]},
         "authority_locator_extraction": authority_locator_result["summary"],
         "authority_body_denominator": authority_body_result["summary"],
+        "authority_review_queue": authority_review_result["summary"],
         "gap_ledger": gaps,
         "completion_gaps": [
-            "146146 raw anchor候補のHuman decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
+            "146146 raw anchor候補は全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
             "69 Authority由来Behaviorに対する専用Claim/Proofと18 AxisのScenario Matrixが未閉鎖",
             "8 Outcomeと14 Surfaceを網羅するDefinitive Skill Evalが未閉鎖",
             "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖",

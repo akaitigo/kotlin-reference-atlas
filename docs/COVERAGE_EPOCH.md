@@ -20,7 +20,7 @@
 
 ## Definitive v2で再開した範囲
 
-公式Spec／Docs／KEEP／Compiler／stdlib／Native runtime／coroutines／serialization／Gradleから既存reference edgeとして69 Behaviorを分類した。これはAuthority本文全体の網羅抽出ではない。9 Sourceを7 unique Git documentへ正規化し、`repository-root`と`tracked-blob`の固定selectorから146146 raw anchor候補を列挙したが、全件`pending-human`でありDepth達成へ算入しない。`atlas/definitive/gap-ledger.yaml`の30 Gapを閉じ、Human decision後のSurface昇格、10 Scenario Matrix、実Runtime Evidenceが揃うまでは`incomplete`とする。
+公式Spec／Docs／KEEP／Compiler／stdlib／Native runtime／coroutines／serialization／Gradleから既存reference edgeとして69 Behaviorを分類した。これはAuthority本文全体の網羅抽出ではない。9 Sourceを7 unique Git documentへ正規化し、`repository-root`と`tracked-blob`の固定selectorから146146 raw anchor候補を列挙して全件Review Queueへ割り当てたが、全件`pending-human`でありQueue件数はDepth達成へ算入しない。`atlas/definitive/gap-ledger.yaml`の30 Gapを閉じ、Human decision後のSurface昇格、10 Scenario Matrix、実Runtime Evidenceが揃うまでは`incomplete`とする。
 
 ## Blockedと対象外
 

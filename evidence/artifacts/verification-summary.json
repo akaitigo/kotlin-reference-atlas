@@ -26,6 +26,30 @@
     "source_digest_stale": 0,
     "unclassified_reference_edges": 0
   },
+  "authority_review_queue": {
+    "authority_semantics_exhaustive": false,
+    "decisions": 0,
+    "eligible_documents": 7,
+    "excluded": 0,
+    "human_reviewed": 0,
+    "included": 0,
+    "merged": 0,
+    "pending_human": 146146,
+    "promoted_items": 0,
+    "queued_anchors": 146146,
+    "raw_anchors": 146146,
+    "split": 0,
+    "stale_anchor_holds": 0,
+    "stale_document_holds": 0,
+    "suggested_batches": 135,
+    "suggested_candidate_clusters": 9720,
+    "suggested_clustered_anchors": 43018,
+    "suggested_priority_counts": {
+      "0": 7,
+      "1": 92869,
+      "2": 53270
+    }
+  },
   "authority_surface_inventory": {
     "artifacts": 9,
     "behaviors": 69
@@ -33,7 +57,7 @@
   "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
   "completion_class": "incomplete",
   "completion_gaps": [
-    "146146 raw anchor候補のHuman decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
+    "146146 raw anchor候補は全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
     "69 Authority由来Behaviorに対する専用Claim/Proofと18 AxisのScenario Matrixが未閉鎖",
     "8 Outcomeと14 Surfaceを網羅するDefinitive Skill Evalが未閉鎖",
     "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖"
@@ -50,6 +74,7 @@
   "implementation_gates": {
     "authority_body_denominator": "pass",
     "authority_locator": "pass",
+    "authority_review_queue": "pass",
     "container": "pass",
     "deep_artifacts": "pass",
     "definitive": "expected-incomplete",

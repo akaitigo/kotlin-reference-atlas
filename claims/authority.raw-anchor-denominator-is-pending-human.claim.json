@@ -5,10 +5,10 @@
   "proof_obligations": [
     {
       "acceptance_criteria": [
-        "固定Git treeからstable IDを再計算し、7 unique document・全raw anchor pending-human・Surface昇格0・Depth credit 0・専用baseline非後退を検証すること"
+        "固定Git treeからstable IDを再計算し、全raw anchorのQueueまたはstale hold割当、machine提案境界、human reviewer/time/reason/digest/locator/mapping/result、Promotion実体、Depth credit 0、専用baseline非後退を検証すること"
       ],
       "id": "authority.raw-anchor-denominator-and-promotion-boundary",
-      "statement": "固定Git treeからstable IDを再計算し、7 unique document・全raw anchor pending-human・Surface昇格0・Depth credit 0・専用baseline非後退を検証すること"
+      "statement": "固定Git treeからstable IDを再計算し、全raw anchorのQueueまたはstale hold割当、machine提案境界、human reviewer/time/reason/digest/locator/mapping/result、Promotion実体、Depth credit 0、専用baseline非後退を検証すること"
     }
   ],
   "schema_version": 1,
@@ -23,6 +23,6 @@
     "kotlinx-serialization-source-snapshot",
     "gradle-source-9.5.0"
   ],
-  "statement": "9 Kotlin Authority Sourceを7 unique Git documentへ正規化し、固定selectorで列挙したraw anchor候補は全件pending-humanとし、decision前はSemantic Surface・Atomic behavior・Depth達成へ算入しない。",
+  "statement": "9 Kotlin Authority Sourceを7 unique Git documentへ正規化し、固定selectorで列挙したraw anchor候補をstable IDで全件Queue化する。priority・cluster・batchは提案に限り、人の一次資料Reviewとprovenance・mapping・result整合前はSemantic Surface・Atomic behavior・Depth達成へ算入せず、staleはholdする。",
   "status": "accepted"
 }

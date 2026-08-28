@@ -17,9 +17,9 @@ python3 scripts/verify.py
 
 ## 状態
 
-v0.2.0のCompletion Certificateは、28 Target／8 Sourceに対するCore v1の`bounded-complete`履歴として保存しています。現行Epochではbaseline 8 Sourceを不変に保った上で10 Sourceを追加固定し、9 Authority Artifactから69件の既存reference edgeを分類しました。さらに9 Kotlin Authority Sourceを7 unique Git documentへ正規化し、固定tree selectorから146146 raw anchor候補を本文非保存で列挙しています。候補は全件`pending-human`であり、Semantic Surface・Atomic behavior・Depth達成へは算入しません。現在は`status: incomplete`で、30 Gap（partial 14、open 13、blocked 3）を維持しています。Automation WorkbenchのJVM統合実装と8 Runtime Testは`partial`であり、KLIB compileはNative runtimeの代替に数えません。
+v0.2.0のCompletion Certificateは、28 Target／8 Sourceに対するCore v1の`bounded-complete`履歴として保存しています。現行Epochではbaseline 8 Sourceを不変に保った上で10 Sourceを追加固定し、9 Authority Artifactから69件の既存reference edgeを分類しました。さらに9 Kotlin Authority Sourceを7 unique Git documentへ正規化し、固定tree selectorから146146 raw anchor候補を本文非保存で列挙・全件Queue化しています。priority・cluster・batchは提案に限り、候補は全件`pending-human`、Review decisionとSemantic昇格は0件です。Queue件数はSemantic Surface・Atomic behavior・Depth達成へ算入しません。現在は`status: incomplete`で、30 Gap（partial 14、open 13、blocked 3）を維持しています。Automation WorkbenchのJVM統合実装と8 Runtime Testは`partial`であり、KLIB compileはNative runtimeの代替に数えません。
 
-Definitive移行状況は[`docs/DEFINITIVE_STATUS.md`](docs/DEFINITIVE_STATUS.md)、未Closureは[`atlas/definitive/gap-ledger.yaml`](atlas/definitive/gap-ledger.yaml)を正本として確認してください。`kotlin-depth-parity`はFE Depth Reference正本の18軸をKotlin固有denominatorへ写像し、現在は1軸satisfied、17軸partial、30件の軸別Gap参照があります。すべてが0になりCore v2 Gateが成功するまでは`complete`へ変更しません。
+Definitive移行状況は[`docs/DEFINITIVE_STATUS.md`](docs/DEFINITIVE_STATUS.md)、未Closureは[`atlas/definitive/gap-ledger.yaml`](atlas/definitive/gap-ledger.yaml)、人手確認手順は[`docs/AUTHORITY_REVIEW_WORKFLOW.md`](docs/AUTHORITY_REVIEW_WORKFLOW.md)を確認してください。`kotlin-depth-parity`はFE Depth Reference正本の18軸をKotlin固有denominatorへ写像し、現在は1軸satisfied、17軸partial、30件の軸別Gap参照があります。すべてが0になりCore v2 Gateが成功するまでは`complete`へ変更しません。
 
 公開mainの非後退条件は[`docs/NON_REGRESSION_BASELINE.md`](docs/NON_REGRESSION_BASELINE.md)に固定しています。`scripts/verify.py`はDefinitive未完を確認する前に、既存Test／Proof／Platform／Source／Skill Eval／CIが縮小していないことを検証します。
 

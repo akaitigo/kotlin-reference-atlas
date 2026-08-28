@@ -1,0 +1,1387 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "batches": [
+    {
+      "bucket": "04",
+      "digest": "sha256:f2098cecb0e382413dbc7839204f41b62afec503cceca12b5c504804d62e3c5a",
+      "id": "review-p0-repository-root-04",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-repository-root-04.json",
+      "suggested_kind": "repository-root",
+      "suggested_priority": 0
+    },
+    {
+      "bucket": "08",
+      "digest": "sha256:78c714d699960a8deade16b49bc5b3d4170d6688aa08d9a10727a476ee33fbe8",
+      "id": "review-p0-repository-root-08",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-repository-root-08.json",
+      "suggested_kind": "repository-root",
+      "suggested_priority": 0
+    },
+    {
+      "bucket": "10",
+      "digest": "sha256:c75890dc4893190328dbf43a661697d3afd33846c8dfb08c200203c0f22c8c83",
+      "id": "review-p0-repository-root-10",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-repository-root-10.json",
+      "suggested_kind": "repository-root",
+      "suggested_priority": 0
+    },
+    {
+      "bucket": "1c",
+      "digest": "sha256:a561815093c80e618454306e966719c0a40297294df9285f7ce1459834cfd182",
+      "id": "review-p0-repository-root-1c",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-repository-root-1c.json",
+      "suggested_kind": "repository-root",
+      "suggested_priority": 0
+    },
+    {
+      "bucket": "27",
+      "digest": "sha256:a75f9de3959b58216e33e5267cbcb4d211142f2d0231cf42144a64799cbffaa7",
+      "id": "review-p0-repository-root-27",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-repository-root-27.json",
+      "suggested_kind": "repository-root",
+      "suggested_priority": 0
+    },
+    {
+      "bucket": "33",
+      "digest": "sha256:75ec8a28ee5112e7cf696586ad666db2fe49d869c38cf4e7f0984d552949c2b8",
+      "id": "review-p0-repository-root-33",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-repository-root-33.json",
+      "suggested_kind": "repository-root",
+      "suggested_priority": 0
+    },
+    {
+      "bucket": "3d",
+      "digest": "sha256:5cd1fad44b651059e6a08c75ec7bc90708241d9d266a1c8eb3f8d92aa56697c4",
+      "id": "review-p0-repository-root-3d",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-repository-root-3d.json",
+      "suggested_kind": "repository-root",
+      "suggested_priority": 0
+    },
+    {
+      "bucket": "00",
+      "digest": "sha256:9293814ce7dd29103feaef81d531f245fa6f88119c38c57f9b3a73c10b50e604",
+      "id": "review-p1-source-or-document-00",
+      "items": 1394,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-00.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "01",
+      "digest": "sha256:b98852d968d4786d9fd86c227886fc7d06d024f981e94a6cbc5948950a938946",
+      "id": "review-p1-source-or-document-01",
+      "items": 1415,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-01.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "02",
+      "digest": "sha256:f1809c04fb083e7fe7b2c815b22f05e61a9a83b13ba549126eb32a85d8c1c0bb",
+      "id": "review-p1-source-or-document-02",
+      "items": 1457,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-02.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "03",
+      "digest": "sha256:3f86b71eb947c2c8317266b825b1a081b4a7a04b94ed38e8e53b6c2903e1cf51",
+      "id": "review-p1-source-or-document-03",
+      "items": 1436,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-03.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "04",
+      "digest": "sha256:a25aad8b9f78289fa924519c98edacfa5c4c15ac57125659ea8c6de9f511f828",
+      "id": "review-p1-source-or-document-04",
+      "items": 1409,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-04.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "05",
+      "digest": "sha256:3c2087c435e779858f4b9d7c8d472c539e020de0073c0a6c55b7901e1ac961f1",
+      "id": "review-p1-source-or-document-05",
+      "items": 1466,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-05.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "06",
+      "digest": "sha256:99f22111b9f14bb2c0e3612a01e35ef0c7f12f4af6227c6cd8f4447fee034ff7",
+      "id": "review-p1-source-or-document-06",
+      "items": 1447,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-06.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "07",
+      "digest": "sha256:62d4516dd6634a617da3d8f7eb8821beb5bde86ccd94e76d602666881401a793",
+      "id": "review-p1-source-or-document-07",
+      "items": 1448,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-07.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "08",
+      "digest": "sha256:84c698cd7d89c41321955c136b87d9cd9665c28870d7c9a0a05c2f686ba3d06e",
+      "id": "review-p1-source-or-document-08",
+      "items": 1452,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-08.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "09",
+      "digest": "sha256:c32a0c3f855d6ab781cb0d475fbf8bafc9832c62d198a5594b584e99646ee25d",
+      "id": "review-p1-source-or-document-09",
+      "items": 1464,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-09.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "0a",
+      "digest": "sha256:07d1777a65bf788ab74b5616ebda69017863df55e90504cbffbcaae814352773",
+      "id": "review-p1-source-or-document-0a",
+      "items": 1405,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-0a.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "0b",
+      "digest": "sha256:7156f02dad3cddaf3dd53004bb2ccdc348472c9876e9da752577ae914f535cd1",
+      "id": "review-p1-source-or-document-0b",
+      "items": 1435,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-0b.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "0c",
+      "digest": "sha256:0b0d4ac878da320136d9d30b4adec49077cde9f6c6c3dffed98dcdd4ba34ad7e",
+      "id": "review-p1-source-or-document-0c",
+      "items": 1476,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-0c.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "0d",
+      "digest": "sha256:2324f0d7fc4d1fef2bf30e8e39cdfc24df03d947df07cb78c2f188cc51421261",
+      "id": "review-p1-source-or-document-0d",
+      "items": 1445,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-0d.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "0e",
+      "digest": "sha256:f6064f4faf6ae9076142edf83a53fdc11c7f2e812fbc33a6de2265f55c29e9f8",
+      "id": "review-p1-source-or-document-0e",
+      "items": 1488,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-0e.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "0f",
+      "digest": "sha256:0a31549b32ee1a9f4ece4a05e1412faed20a22a0625f0baa5d8de2587244e21a",
+      "id": "review-p1-source-or-document-0f",
+      "items": 1508,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-0f.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "10",
+      "digest": "sha256:39528ddb58be44111c76957443c0c7967e8417af27077cc196553e8ee212b5a4",
+      "id": "review-p1-source-or-document-10",
+      "items": 1496,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-10.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "11",
+      "digest": "sha256:573d1f89f5eb995760928c3c42a3491ae8b5b4b31f4eca56b865dbcac866503a",
+      "id": "review-p1-source-or-document-11",
+      "items": 1454,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-11.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "12",
+      "digest": "sha256:240ff94e52cf08747629efb0dfb10104d7858b10fefb44a2c9fec90b897e3917",
+      "id": "review-p1-source-or-document-12",
+      "items": 1451,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-12.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "13",
+      "digest": "sha256:7f467b0c3142d06d4d73ad09da249ce17cba6039954edb5f99835c21613abfaf",
+      "id": "review-p1-source-or-document-13",
+      "items": 1477,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-13.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "14",
+      "digest": "sha256:1294755f268cbc9d551f22a2a209f8b4205f4541c27d70395cc44c69c8ff372e",
+      "id": "review-p1-source-or-document-14",
+      "items": 1449,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-14.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "15",
+      "digest": "sha256:74fcd8dea6f41169a29876e95846bedaf76a4b15f3d1e1058a481eb1d1d2fc77",
+      "id": "review-p1-source-or-document-15",
+      "items": 1485,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-15.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "16",
+      "digest": "sha256:382eb631e2835ec4229183d8b48a2e025a4fdb3a58603e54426cf03d74e2d8b6",
+      "id": "review-p1-source-or-document-16",
+      "items": 1416,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-16.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "17",
+      "digest": "sha256:04f6c6535ea59a78aff63a27ba20cb5a2e4abe9700eae3f0d3258aeff678effb",
+      "id": "review-p1-source-or-document-17",
+      "items": 1431,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-17.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "18",
+      "digest": "sha256:1b4ee83035210d1be850a5a8bfdc7fb52f60586476a095513f9fa1c1d95805dc",
+      "id": "review-p1-source-or-document-18",
+      "items": 1428,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-18.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "19",
+      "digest": "sha256:5f187de769cb6a611ac50f6e0640e40cb5fb49305ced83eb9d2caa3e09c46d17",
+      "id": "review-p1-source-or-document-19",
+      "items": 1433,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-19.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "1a",
+      "digest": "sha256:d1fd38ab2e6f3bbc2d0ccf53db4ffc8ca84977b66babcbb34f7697befd58a0b7",
+      "id": "review-p1-source-or-document-1a",
+      "items": 1464,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-1a.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "1b",
+      "digest": "sha256:ddfe9166f594b28078a6f909bb72c3f984b6cd83a98e1923c05d8cc1884539a1",
+      "id": "review-p1-source-or-document-1b",
+      "items": 1474,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-1b.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "1c",
+      "digest": "sha256:e259c1f4030e255eae070167db3a38b64d18075bba2aadf511d01ff2b64aa63c",
+      "id": "review-p1-source-or-document-1c",
+      "items": 1466,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-1c.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "1d",
+      "digest": "sha256:a22d4efd98ef359fb81ac35e59fde0b3e281fdadf3322afc37a33f0c2f8bdead",
+      "id": "review-p1-source-or-document-1d",
+      "items": 1448,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-1d.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "1e",
+      "digest": "sha256:54b4caf7a5aaaf70bf470e561d65461bb3b4c1a5724307bdb2103cdb02e15827",
+      "id": "review-p1-source-or-document-1e",
+      "items": 1503,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-1e.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "1f",
+      "digest": "sha256:69b815756a982b12a15a4679b5c2b0c254dcf0518c3c7bded1000d1aa508712f",
+      "id": "review-p1-source-or-document-1f",
+      "items": 1470,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-1f.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "20",
+      "digest": "sha256:4eff73d1653618738db53c93ea565c8210d22d878eaae205d72b6dd76d261bb6",
+      "id": "review-p1-source-or-document-20",
+      "items": 1494,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-20.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "21",
+      "digest": "sha256:f1b1f5b0c807214286812b25be5221ebdee504c49c9cd50a173ac452a88c679d",
+      "id": "review-p1-source-or-document-21",
+      "items": 1419,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-21.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "22",
+      "digest": "sha256:c06ca75de4a5d4cea7293a0b8cee0a10d09e7873660a6dec17dba0ab42ee2879",
+      "id": "review-p1-source-or-document-22",
+      "items": 1453,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-22.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "23",
+      "digest": "sha256:e993e9402773cb5c2658f9420a4e098f32ebafe4755e5ffe8f42f7ac716d9f53",
+      "id": "review-p1-source-or-document-23",
+      "items": 1472,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-23.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "24",
+      "digest": "sha256:6717e4b9ecf7e68fbdc08777b4f031cbf4db16ab07407a5aca94f9d8aa7dd50d",
+      "id": "review-p1-source-or-document-24",
+      "items": 1410,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-24.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "25",
+      "digest": "sha256:883148715eca99effcf33a23dbc0dfa4bac1e3d980fe61da8de03c83b0f3c7aa",
+      "id": "review-p1-source-or-document-25",
+      "items": 1429,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-25.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "26",
+      "digest": "sha256:d536b9b4ae3a1cd0a8461294a56fcc3742e522b1392805f6935b815ec90a29b0",
+      "id": "review-p1-source-or-document-26",
+      "items": 1476,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-26.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "27",
+      "digest": "sha256:68f6edfdb5d1d36630322a6fcdb9fa4ea32017864774e14102ae51e5a6327cf0",
+      "id": "review-p1-source-or-document-27",
+      "items": 1538,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-27.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "28",
+      "digest": "sha256:8189f7dba16b1d4f71cc29d4d9859103833b4dbda3a7bf3045177e0c20a1469f",
+      "id": "review-p1-source-or-document-28",
+      "items": 1443,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-28.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "29",
+      "digest": "sha256:5aac90b52da965b070a750c070002b83f523f2f73937edaa5f2165a018cb706d",
+      "id": "review-p1-source-or-document-29",
+      "items": 1492,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-29.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "2a",
+      "digest": "sha256:35fe594cf7fde842c9a58bf245b2ba53a1c4aae37268b69be41552651e326bda",
+      "id": "review-p1-source-or-document-2a",
+      "items": 1422,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-2a.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "2b",
+      "digest": "sha256:0afd062e43d5a0bace1ceea549d0b536b453d63b2c92b7ee998bf7169c976079",
+      "id": "review-p1-source-or-document-2b",
+      "items": 1450,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-2b.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "2c",
+      "digest": "sha256:82b842760908800092044d4f3474617620751499be7c52f81a5267c4720552be",
+      "id": "review-p1-source-or-document-2c",
+      "items": 1408,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-2c.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "2d",
+      "digest": "sha256:28497656067b6fe104819cf45c3e7e4c42b9b06d2cace32cec59e2c50efa1b7e",
+      "id": "review-p1-source-or-document-2d",
+      "items": 1456,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-2d.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "2e",
+      "digest": "sha256:92d6e0b9d39fd92399de13bcc23d1f76b6430b5f6aedca7ab747ad60a9811551",
+      "id": "review-p1-source-or-document-2e",
+      "items": 1485,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-2e.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "2f",
+      "digest": "sha256:66d398a6ad0285d267422926a9bb645c1c4603866e0ecdcc4b6c1b247b8f1868",
+      "id": "review-p1-source-or-document-2f",
+      "items": 1377,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-2f.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "30",
+      "digest": "sha256:e9a1136b01b6d414403d2e59a187c258a5273ecd48e572b86a3809721823ae73",
+      "id": "review-p1-source-or-document-30",
+      "items": 1415,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-30.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "31",
+      "digest": "sha256:e35bbd713a18db32639d8c24c00fc27e191651a8ecca7e0146ca3786c8b7f06a",
+      "id": "review-p1-source-or-document-31",
+      "items": 1476,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-31.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "32",
+      "digest": "sha256:e9579e5d86c9b4d054dfb05b4e6351faf2a199c2d37435d939fdbc27977c1d53",
+      "id": "review-p1-source-or-document-32",
+      "items": 1416,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-32.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "33",
+      "digest": "sha256:34cc27f43c664d7a1240f92df586036c614128d3aac8dbf3db568cede399feb4",
+      "id": "review-p1-source-or-document-33",
+      "items": 1467,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-33.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "34",
+      "digest": "sha256:2053c7aa0630b2d23e69bd30e9f3729e691f751ddfbe987757667e84fb97d3d5",
+      "id": "review-p1-source-or-document-34",
+      "items": 1467,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-34.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "35",
+      "digest": "sha256:1c4bf2bfa29ab1945220903ff2505086807d5454c1e7598a4fde2313d77f24b3",
+      "id": "review-p1-source-or-document-35",
+      "items": 1433,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-35.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "36",
+      "digest": "sha256:243dcdb135945fbbd0a326daaae04b86d114a5ad249ab566c787b4f924549de3",
+      "id": "review-p1-source-or-document-36",
+      "items": 1422,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-36.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "37",
+      "digest": "sha256:13401d02789731f3bc7c9da4b1e675cd3a9f6dd6f22fea26391f986ecbd5e2ab",
+      "id": "review-p1-source-or-document-37",
+      "items": 1446,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-37.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "38",
+      "digest": "sha256:17bd58001d8b26ebb7037137db2fc292c29a6d05bd7a6de0b3d3c783bcc2b96b",
+      "id": "review-p1-source-or-document-38",
+      "items": 1466,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-38.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "39",
+      "digest": "sha256:e4385bb4e583903284e425f88328d8171652819b06669979718ff34a37941fdf",
+      "id": "review-p1-source-or-document-39",
+      "items": 1410,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-39.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "3a",
+      "digest": "sha256:f16334721116268935cfb80cfa52a42c9e424ec463067e67e9870b22101e18b3",
+      "id": "review-p1-source-or-document-3a",
+      "items": 1471,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-3a.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "3b",
+      "digest": "sha256:dc835391974f63ea5efb5d20fc69f989f7cced3b7062501410bfc144a36a53ec",
+      "id": "review-p1-source-or-document-3b",
+      "items": 1476,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-3b.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "3c",
+      "digest": "sha256:bee5dcb188a32d761fe00925da37db574963f92736732e2d7b4daa5ec18aa710",
+      "id": "review-p1-source-or-document-3c",
+      "items": 1412,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-3c.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "3d",
+      "digest": "sha256:3c70be83383a8301fe8ee575761149f95333ff2ad6d866db2dc447d4249b0f25",
+      "id": "review-p1-source-or-document-3d",
+      "items": 1474,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-3d.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "3e",
+      "digest": "sha256:7394530e19a2dc00cbcb2cbc2ad8629b3d68e2f821d900f24054556f6e80afbc",
+      "id": "review-p1-source-or-document-3e",
+      "items": 1431,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-3e.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "3f",
+      "digest": "sha256:f6f5d963d231fb6d2a249f751cae3b57b91623543a56e66ad919c0d04e3e68de",
+      "id": "review-p1-source-or-document-3f",
+      "items": 1473,
+      "path": "authority/review-queue-draft/review-p1-source-or-document-3f.json",
+      "suggested_kind": "source-or-document",
+      "suggested_priority": 1
+    },
+    {
+      "bucket": "00",
+      "digest": "sha256:59862e5091d12c891c150b91fb5cffc57942d3ee7fa003b2db9e2cb15c7825dd",
+      "id": "review-p2-tracked-blob-00",
+      "items": 872,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-00.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "01",
+      "digest": "sha256:ed91e52b88997d09ff614d11fa34aa737a8815431ea44049de07d4d0b68f939a",
+      "id": "review-p2-tracked-blob-01",
+      "items": 804,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-01.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "02",
+      "digest": "sha256:9e2903c5ffac070f29562676f7f338f2a01e7f50abb4a1fb30dafb4c4d87d980",
+      "id": "review-p2-tracked-blob-02",
+      "items": 817,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-02.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "03",
+      "digest": "sha256:ac7297839bc6b1a32c4798cf341741f8374dfda6acfec74d154d8b2a06d13199",
+      "id": "review-p2-tracked-blob-03",
+      "items": 826,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-03.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "04",
+      "digest": "sha256:f1059a0608e83c54cb9493f860e99aea11174ee21f2ebcf1f7881426d21d42b8",
+      "id": "review-p2-tracked-blob-04",
+      "items": 829,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-04.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "05",
+      "digest": "sha256:5f8ba5a0a0ff0185fabdae6dd13cf04e97ddb4393b7cd05fa7be25c37143b6f2",
+      "id": "review-p2-tracked-blob-05",
+      "items": 832,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-05.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "06",
+      "digest": "sha256:bc98a02db6160e16d2fed670a49c8b089ff14b1f2d6811814f389b69c5ddd687",
+      "id": "review-p2-tracked-blob-06",
+      "items": 794,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-06.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "07",
+      "digest": "sha256:ba99363d39dd7b6721b85155aad65170b340c5ffdc9b226a38795a2f7fb6be7b",
+      "id": "review-p2-tracked-blob-07",
+      "items": 861,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-07.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "08",
+      "digest": "sha256:6518b85388bf8522b51e9eabeb1f6b3ed30257dbb26f024288654415fd78b693",
+      "id": "review-p2-tracked-blob-08",
+      "items": 843,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-08.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "09",
+      "digest": "sha256:ed17facdbb6a30a7b3d6cab2501c2214396fbd07691df24434196874b2c53c22",
+      "id": "review-p2-tracked-blob-09",
+      "items": 820,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-09.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "0a",
+      "digest": "sha256:19076da8a33940cc7d1fecefbe112c617042ac85627a64cead802e33971651b6",
+      "id": "review-p2-tracked-blob-0a",
+      "items": 831,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-0a.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "0b",
+      "digest": "sha256:9e221a7c3dcbef8fe741c8cc9edac52deb9955b9afb64060c353e0fd662570b7",
+      "id": "review-p2-tracked-blob-0b",
+      "items": 808,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-0b.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "0c",
+      "digest": "sha256:f6ffbce85dd4173dd4bebbe72903cd73679123e24db4d7964d9e12fe7bad4a28",
+      "id": "review-p2-tracked-blob-0c",
+      "items": 803,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-0c.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "0d",
+      "digest": "sha256:c4c2c8d1be2afd7b2404d77001e9b52ddba61f9d7d350f61983b83fc31de4c1c",
+      "id": "review-p2-tracked-blob-0d",
+      "items": 848,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-0d.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "0e",
+      "digest": "sha256:5079506f5fdb741c07f31215142ee36aef3bd7bd5950e825637e00b431c9db83",
+      "id": "review-p2-tracked-blob-0e",
+      "items": 836,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-0e.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "0f",
+      "digest": "sha256:32e646a1b2a0a4108af4401874da90774950f2862b09e89852e0eac0fcbd81e9",
+      "id": "review-p2-tracked-blob-0f",
+      "items": 784,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-0f.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "10",
+      "digest": "sha256:28c26a3f273d579dd00416fcb122b757c89c892ca6516da84112a025e912d40d",
+      "id": "review-p2-tracked-blob-10",
+      "items": 843,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-10.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "11",
+      "digest": "sha256:4765eb51f30f20c809a537aedb81e3c79fdbb61a4cb5b4628cd8f48ddfdb82b2",
+      "id": "review-p2-tracked-blob-11",
+      "items": 838,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-11.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "12",
+      "digest": "sha256:e6bcfa6148ffdf943ff143741a640dd4d53b4d7209f5db7af18a03d5296149cc",
+      "id": "review-p2-tracked-blob-12",
+      "items": 798,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-12.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "13",
+      "digest": "sha256:a71c4e0158b9ddb8c397767a4474d0e1db16b3b8c188d548e27697d0d90809eb",
+      "id": "review-p2-tracked-blob-13",
+      "items": 818,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-13.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "14",
+      "digest": "sha256:af40bd8e64affd694ca8e5f8d3fbc90be3122bed8da7855252db756361910ada",
+      "id": "review-p2-tracked-blob-14",
+      "items": 833,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-14.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "15",
+      "digest": "sha256:d57e3cbb23a902f398628676a7174a667e6821c04eba789ce36b468e91ee5546",
+      "id": "review-p2-tracked-blob-15",
+      "items": 845,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-15.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "16",
+      "digest": "sha256:49295dafe57341c37fe3970733a193debf296cd75517b0e572ccfd5662f619dd",
+      "id": "review-p2-tracked-blob-16",
+      "items": 834,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-16.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "17",
+      "digest": "sha256:a15ce73300b2093d0f873fe25f36428d689559ad83b0c13e59284f911e0344ed",
+      "id": "review-p2-tracked-blob-17",
+      "items": 824,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-17.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "18",
+      "digest": "sha256:b829e1b888f7d920e1e0bf7e0450f8b35e080c9de9b88b19e72efdf01d68245d",
+      "id": "review-p2-tracked-blob-18",
+      "items": 839,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-18.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "19",
+      "digest": "sha256:c8b96d7fb2b9d64b1066fd66b82b807ed9eff9e859bdd59b5a0a60984a5161bd",
+      "id": "review-p2-tracked-blob-19",
+      "items": 849,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-19.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "1a",
+      "digest": "sha256:59c65a5584a8d87c57e60f3d13fa5500212593649ff2d09d9ecb887247e6c680",
+      "id": "review-p2-tracked-blob-1a",
+      "items": 875,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-1a.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "1b",
+      "digest": "sha256:d8736db9df581deb03af11fa56c7aacb0264d65c48a2f5f3ac5199e502c3ac8b",
+      "id": "review-p2-tracked-blob-1b",
+      "items": 806,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-1b.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "1c",
+      "digest": "sha256:d770133ff4c49976e28d00b5efd62fa9e73637f1a1678c751e52a039c0063d52",
+      "id": "review-p2-tracked-blob-1c",
+      "items": 830,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-1c.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "1d",
+      "digest": "sha256:db91ea8db6c07ef99b37b2162af108e2138c2a9e803f309ec6e345d4320cb41f",
+      "id": "review-p2-tracked-blob-1d",
+      "items": 832,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-1d.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "1e",
+      "digest": "sha256:b964f7ea7b4b9856ef877db419bd82b93ca27ef36cf271b5ca51906c509cf995",
+      "id": "review-p2-tracked-blob-1e",
+      "items": 846,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-1e.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "1f",
+      "digest": "sha256:0ebbabdb7323bdd838ab7ac5435218b64900927548650d35d223214055182316",
+      "id": "review-p2-tracked-blob-1f",
+      "items": 804,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-1f.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "20",
+      "digest": "sha256:703c2a4080e384fcb982cdba7db11dfbef53583dcdbc853f6af4071bc99c0629",
+      "id": "review-p2-tracked-blob-20",
+      "items": 857,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-20.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "21",
+      "digest": "sha256:cc84fe1896896fc751a4344d11af16a0790735d4611ee66ca321b31d42f58bb5",
+      "id": "review-p2-tracked-blob-21",
+      "items": 889,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-21.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "22",
+      "digest": "sha256:bdc2206805c04d49946044cbfcbf5fcbf48f4409b5077592fa6a9c406241275b",
+      "id": "review-p2-tracked-blob-22",
+      "items": 826,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-22.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "23",
+      "digest": "sha256:6ce177636e10c20e4f96eb358e8f3a1c869012df249c1d880cd3b87a1c64f624",
+      "id": "review-p2-tracked-blob-23",
+      "items": 788,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-23.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "24",
+      "digest": "sha256:880b89624b85dd73160f7141735188fd9b15f6dce83a8e12e0a4270bd787580c",
+      "id": "review-p2-tracked-blob-24",
+      "items": 805,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-24.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "25",
+      "digest": "sha256:133d28b1823ba911a6a284953e6f883ded0700478301ae6a9a0110c25a22ffee",
+      "id": "review-p2-tracked-blob-25",
+      "items": 816,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-25.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "26",
+      "digest": "sha256:7d9a014141adde952b9dac340d399a2b46873bfd1e1d989fc26d35df0c408bbe",
+      "id": "review-p2-tracked-blob-26",
+      "items": 815,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-26.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "27",
+      "digest": "sha256:ea959f35b897f8fdd8dcd9e25409d4a518796d01915a8a0cca3a55a570b389fb",
+      "id": "review-p2-tracked-blob-27",
+      "items": 832,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-27.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "28",
+      "digest": "sha256:f0967b9bc7a7be35bc9cc24062cf2da452df23885e80bf5e02bd30f8bf164674",
+      "id": "review-p2-tracked-blob-28",
+      "items": 831,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-28.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "29",
+      "digest": "sha256:f2c92e2d91cc01f1033a8b8d587e183c93dbd749027db3232c6009cc8cc8d978",
+      "id": "review-p2-tracked-blob-29",
+      "items": 848,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-29.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "2a",
+      "digest": "sha256:c1b746d15545d71ab5585516f9c97e4461c3c8d576cbecb1a8cfcfb16761d6e3",
+      "id": "review-p2-tracked-blob-2a",
+      "items": 843,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-2a.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "2b",
+      "digest": "sha256:8d1058dcdb12496ec02cbb9f38c162579bfaf80e8b19d6574e968ec9459ba24b",
+      "id": "review-p2-tracked-blob-2b",
+      "items": 839,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-2b.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "2c",
+      "digest": "sha256:c7a5d4324c7c59ae58e044b3b1c3eea4bde2c651bbe07e9a31805f11fa4a0ef7",
+      "id": "review-p2-tracked-blob-2c",
+      "items": 843,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-2c.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "2d",
+      "digest": "sha256:c5188b281224be681e959b67314c4ea9f4832bdddf52536cc50b20a8f2ea6fc9",
+      "id": "review-p2-tracked-blob-2d",
+      "items": 832,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-2d.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "2e",
+      "digest": "sha256:d7f06269b4a1035c02b18602fb7d6544881227c4d315ce3953aea808f4562a41",
+      "id": "review-p2-tracked-blob-2e",
+      "items": 817,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-2e.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "2f",
+      "digest": "sha256:9e21bdce66c056c717e1cad27f7d9ae2d5e70ea6b0a984d1d2714559868102e1",
+      "id": "review-p2-tracked-blob-2f",
+      "items": 851,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-2f.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "30",
+      "digest": "sha256:bea3ca6f7d2d49a51c2af8255ad941f12cd16784c52c929d68c0f4d3d920ec95",
+      "id": "review-p2-tracked-blob-30",
+      "items": 830,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-30.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "31",
+      "digest": "sha256:03635d4051daf1e1dcd0dd22bd83f07ff2949d08cd1930b9f392693679f8ac18",
+      "id": "review-p2-tracked-blob-31",
+      "items": 860,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-31.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "32",
+      "digest": "sha256:dbde93d63bf9cc6d7e54f26d9d38b80a4a199dfcb779571d1713847a52fb8a11",
+      "id": "review-p2-tracked-blob-32",
+      "items": 860,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-32.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "33",
+      "digest": "sha256:fa12eae289281c5d2f55037e829c5fc0aa23901c973bcd119653d7a8aeba6c79",
+      "id": "review-p2-tracked-blob-33",
+      "items": 866,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-33.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "34",
+      "digest": "sha256:37daa1180f804314044bb6f5d8f547c3f17c64c888f7e3111959ab251c51b4dc",
+      "id": "review-p2-tracked-blob-34",
+      "items": 864,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-34.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "35",
+      "digest": "sha256:ce5f9341c3859168090180224afa1225319d61d5969f28cb4c0b202dd353d251",
+      "id": "review-p2-tracked-blob-35",
+      "items": 848,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-35.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "36",
+      "digest": "sha256:b0acb88177329aa4f1a1499ee9c77cdd1ede347300ba34e6283b69cb9ea55d26",
+      "id": "review-p2-tracked-blob-36",
+      "items": 805,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-36.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "37",
+      "digest": "sha256:80d94fb0c0987a76f103c942b8fee1b5e5d99da2caef086ecac029b1293e3a2a",
+      "id": "review-p2-tracked-blob-37",
+      "items": 835,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-37.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "38",
+      "digest": "sha256:2b5a3578e670ee750011baab96f73869060f9c3f276a05b7307b600a756e8b37",
+      "id": "review-p2-tracked-blob-38",
+      "items": 869,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-38.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "39",
+      "digest": "sha256:65a1882d06e6ebd141c80af21fb1edd40d02929841f10d1b2435265ef3113bed",
+      "id": "review-p2-tracked-blob-39",
+      "items": 822,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-39.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "3a",
+      "digest": "sha256:8b89f47067870ae44dcf44094b731dee8d6932f61d96399763a4b99461c76612",
+      "id": "review-p2-tracked-blob-3a",
+      "items": 836,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-3a.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "3b",
+      "digest": "sha256:dd1d42a37e9265d95effe89754dfe59bb614a22e753672f7b9c3625577997468",
+      "id": "review-p2-tracked-blob-3b",
+      "items": 850,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-3b.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "3c",
+      "digest": "sha256:845b7ca9fc60b8ec1ea176dded53425d69a477d8ffbd736ab32f39629a1d16f2",
+      "id": "review-p2-tracked-blob-3c",
+      "items": 843,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-3c.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "3d",
+      "digest": "sha256:94bcc340ce3a7528e9c0b767b8e6d47e67e930bc41a6758e94d8426b995db743",
+      "id": "review-p2-tracked-blob-3d",
+      "items": 766,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-3d.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "3e",
+      "digest": "sha256:994ac75c641249dc66c17a290557ad75badc3642015d14a9fb970a0003776679",
+      "id": "review-p2-tracked-blob-3e",
+      "items": 824,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-3e.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    },
+    {
+      "bucket": "3f",
+      "digest": "sha256:dd79f7219804f8e8ec3d001f8d9a65897c2a227c0fb9ceadfd978a807523e1f9",
+      "id": "review-p2-tracked-blob-3f",
+      "items": 838,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-3f.json",
+      "suggested_kind": "tracked-blob",
+      "suggested_priority": 2
+    }
+  ],
+  "body_storage": "digest-locator-and-metadata-only",
+  "decision_ledger": "authority/reviews/decisions.json",
+  "depth_credit": false,
+  "documents": [
+    {
+      "document_id": "document-gradle-gradle-8c4beeb1d6ea",
+      "inventory_tool_digest": "sha256:6de96fc1e2ef4667379c2ddb9e456037d66df4b9976854a8b7ee788ada62b463",
+      "locked_commit": "3fe117d68f3907790f3809f121aa36303a9151f8",
+      "raw_anchors": 26750,
+      "repository_url": "https://github.com/gradle/gradle.git",
+      "source_digests": [
+        "sha256:63f6246f601e260c3db5e6325599a9fca69cafc8868e90237a9c4c51d7502b85"
+      ],
+      "source_ids": [
+        "gradle-source-9.5.0"
+      ],
+      "source_state": {
+        "stale": false,
+        "status": "matched"
+      },
+      "tree_oid": "a6ba28a1ef5b6ff8c60d900a4635f2fda17a6847"
+    },
+    {
+      "document_id": "document-jetbrains-kotlin-55ae826a5657",
+      "inventory_tool_digest": "sha256:6de96fc1e2ef4667379c2ddb9e456037d66df4b9976854a8b7ee788ada62b463",
+      "locked_commit": "5687445832cd835b4509b9fbc264cdf1a8201093",
+      "raw_anchors": 108210,
+      "repository_url": "https://github.com/JetBrains/kotlin.git",
+      "source_digests": [
+        "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902"
+      ],
+      "source_ids": [
+        "kotlin-compiler-source-2.4.10",
+        "kotlin-native-source-2.4.10",
+        "kotlin-stdlib-source-2.4.10"
+      ],
+      "source_state": {
+        "stale": false,
+        "status": "matched"
+      },
+      "tree_oid": "a4a425e02534168477190c7f403ced024c116010"
+    },
+    {
+      "document_id": "document-jetbrains-kotlin-web-site-41bce3535b30",
+      "inventory_tool_digest": "sha256:6de96fc1e2ef4667379c2ddb9e456037d66df4b9976854a8b7ee788ada62b463",
+      "locked_commit": "135c79983f678c6367c5cc19eb5d8445eb3c95ce",
+      "raw_anchors": 1713,
+      "repository_url": "https://github.com/JetBrains/kotlin-web-site.git",
+      "source_digests": [
+        "sha256:3200d58d59e7ad08b9306a755aa0fd440b3a0264c7c3dc488cf3201d81fe54de"
+      ],
+      "source_ids": [
+        "kotlin-docs-snapshot"
+      ],
+      "source_state": {
+        "stale": false,
+        "status": "matched"
+      },
+      "tree_oid": "48ee76b6724d732b85cceb113227a5a6a71a37f4"
+    },
+    {
+      "document_id": "document-kotlin-keep-8cfb549b3048",
+      "inventory_tool_digest": "sha256:6de96fc1e2ef4667379c2ddb9e456037d66df4b9976854a8b7ee788ada62b463",
+      "locked_commit": "f6fdf1e5535cca71b8ed6676e2c3d777fdded34e",
+      "raw_anchors": 156,
+      "repository_url": "https://github.com/Kotlin/KEEP.git",
+      "source_digests": [
+        "sha256:bd43689297ab1ec0060953dab43aff276fc37491327ee2b341dce493a199d930"
+      ],
+      "source_ids": [
+        "kotlin-keep-snapshot"
+      ],
+      "source_state": {
+        "stale": false,
+        "status": "matched"
+      },
+      "tree_oid": "b663158733bfb3fcb5add26702354311e52626f2"
+    },
+    {
+      "document_id": "document-kotlin-kotlin-spec-d30c735b8b40",
+      "inventory_tool_digest": "sha256:6de96fc1e2ef4667379c2ddb9e456037d66df4b9976854a8b7ee788ada62b463",
+      "locked_commit": "2f7aa0524ec27e788dfacd550f144809f2e0254c",
+      "raw_anchors": 6933,
+      "repository_url": "https://github.com/Kotlin/kotlin-spec.git",
+      "source_digests": [
+        "sha256:2f54cc199a31ef55ccce24d1c068235be46d1f74f48d84a8230929d4a6184af4"
+      ],
+      "source_ids": [
+        "kotlin-spec-snapshot"
+      ],
+      "source_state": {
+        "stale": false,
+        "status": "matched"
+      },
+      "tree_oid": "62c85d99ae83b0e0b47e552121b6fa9e0869f82a"
+    },
+    {
+      "document_id": "document-kotlin-kotlinx.coroutines-b6cf464a1968",
+      "inventory_tool_digest": "sha256:6de96fc1e2ef4667379c2ddb9e456037d66df4b9976854a8b7ee788ada62b463",
+      "locked_commit": "8564f65764d3d05893cec026c6e94250e2b23874",
+      "raw_anchors": 1328,
+      "repository_url": "https://github.com/Kotlin/kotlinx.coroutines.git",
+      "source_digests": [
+        "sha256:ff25c4fd2855309cc047a17136f350579a3561e58c10515251063b81b8b8afef"
+      ],
+      "source_ids": [
+        "kotlinx-coroutines-source-1.11.0"
+      ],
+      "source_state": {
+        "stale": false,
+        "status": "matched"
+      },
+      "tree_oid": "454b8c238b0b77bae9e5e3c2bff76da4e57e2f27"
+    },
+    {
+      "document_id": "document-kotlin-kotlinx.serialization-19ce84e31d4f",
+      "inventory_tool_digest": "sha256:6de96fc1e2ef4667379c2ddb9e456037d66df4b9976854a8b7ee788ada62b463",
+      "locked_commit": "25c2a755cbe6926a63003f3a51527bb731e8cd14",
+      "raw_anchors": 1056,
+      "repository_url": "https://github.com/Kotlin/kotlinx.serialization.git",
+      "source_digests": [
+        "sha256:001b56cf980a08cab723a9081c0b93ce81539c3a2c221f471c03c778ee04c8de"
+      ],
+      "source_ids": [
+        "kotlinx-serialization-source-snapshot"
+      ],
+      "source_state": {
+        "stale": false,
+        "status": "matched"
+      },
+      "tree_oid": "b2cf481b1fecf79874fe380c7ee2f0c28f1f864e"
+    }
+  ],
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "input_digest": "sha256:130a8277b58d95a8c68e03ad7556ce6714d4ad85170ab70ddce65a66fb8a163d",
+  "machine_assistance": "priority-cluster-and-batch-proposals-only",
+  "promotion_ledger": "authority/reviews/promotions.json",
+  "queue_id": "authority-review-2ef24035022e8977d581",
+  "schema_version": 1,
+  "semantic_decisions": "human-only",
+  "stale_holds": [],
+  "status": "incomplete-human-review-required",
+  "summary": {
+    "authority_semantics_exhaustive": false,
+    "decisions": 0,
+    "eligible_documents": 7,
+    "excluded": 0,
+    "human_reviewed": 0,
+    "included": 0,
+    "merged": 0,
+    "pending_human": 146146,
+    "promoted_items": 0,
+    "queued_anchors": 146146,
+    "raw_anchors": 146146,
+    "split": 0,
+    "stale_anchor_holds": 0,
+    "stale_document_holds": 0,
+    "suggested_batches": 135,
+    "suggested_candidate_clusters": 9720,
+    "suggested_clustered_anchors": 43018,
+    "suggested_priority_counts": {
+      "0": 7,
+      "1": 92869,
+      "2": 53270
+    }
+  },
+  "tool_digest": "sha256:b056d9b7ea3dacc0c2da6a5ef5eb0249c7697a95bd28628b913f2e23e5c58bb0"
+}

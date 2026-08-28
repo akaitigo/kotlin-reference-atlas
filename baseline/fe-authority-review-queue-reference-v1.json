@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "fe-authority-review-queue-reference-v1",
+  "classification": "methodology-reference-not-completion-authority",
+  "repository": "frontend-behavior-atlas",
+  "git_commit": "de2f016b8b44ea67afdb08c0552044807505984e",
+  "artifacts": {
+    "authority/review-queue.snapshot.json": "sha256:9df1d3669135bf9612eb971b2e8279f8419deb3d0f484c7700ac1a3c19612484",
+    "docs/AUTHORITY_REVIEW_WORKFLOW.md": "sha256:64c8dad6e3dc1366ad5afb27a7e785dd428de3c6f0f55f4311ff4d3278370fbd",
+    "scripts/generate-authority-review-queue.ts": "sha256:0ddb9e1ed3221c89e68449914e37a94a9104123d3ae0578b2e0a4aed3f57f291",
+    "scripts/lib/authority-review-queue.ts": "sha256:6a0d44da874e7332d2212416bcbaa9ca93ab7a2cda9d5c28b846fecb847c2187",
+    "scripts/test-authority-review-queue.ts": "sha256:cd6ffd8860645b70f85feb262fffc903d3b0a0aa96c6f9a7181f6ed895e965ec",
+    "scripts/verify-authority-review-queue.ts": "sha256:3849bd25a409742acdcbb8e028a65cf0d51249ac29c23ba606a14d63b81524f9"
+  },
+  "adopted_boundaries": [
+    "complete-stable-anchor-review-queue",
+    "machine-priority-cluster-and-batch-are-proposals-only",
+    "all-current-items-start-pending-human",
+    "stale-documents-are-held",
+    "manual-primary-source-reviewer-time-reason-and-binding-required",
+    "mapping-result-and-promotion-ledger-must-agree",
+    "queue-count-does-not-credit-semantic-surface-or-depth"
+  ]
+}

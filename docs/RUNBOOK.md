@@ -16,6 +16,9 @@ PATH="$PWD/bin:$PATH" atlas validate atlas.yaml mastery.yaml coverage.yaml sourc
 PATH="$PWD/bin:$PATH" atlas audit .
 PATH="$PWD/bin:$PATH" atlas audit . --gate definitive # 未完中は非0終了
 PATH="$PWD/bin:$PATH" atlas audit . --gate non-regression
+python3 scripts/generate_authority_review_queue.py
+python3 scripts/test_authority_review_queue.py
+python3 scripts/verify_authority_review_queue.py
 python3 scripts/verify.py
 ```
 

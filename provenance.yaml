@@ -41,6 +41,16 @@
       ]
     },
     {
+      "digest": "sha256:c6cd915c824f88b62911afd39864ee3684d421c97523e9bc61ce65f8bcefd440",
+      "generated_by": "python3 scripts/generate_authority_review_queue.py && python3 scripts/test_authority_review_queue.py && python3 scripts/verify_authority_review_queue.py",
+      "kind": "generated",
+      "license": "Apache-2.0",
+      "path": "evidence/artifacts/authority-review-queue-validation.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
       "digest": "sha256:3ccc910e53ecc505a50f522eb7baf59809a6d2b4f54fd1d45b6e73e06ae5cb9a",
       "generated_by": "python3 scripts/inspect_bytecode.py",
       "kind": "generated",
@@ -91,7 +101,7 @@
       ]
     },
     {
-      "digest": "sha256:59aad693ca0be3bac274347376de0f4b9a074eefdf3c568cf6355ea57ef6572f",
+      "digest": "sha256:b7a4959210e00bfd881abf9e0fb0476e15b1aec59ad31afc840bdf83af583918",
       "generated_by": "python3 scripts/verify_non_regression.py",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -121,7 +131,7 @@
       ]
     },
     {
-      "digest": "sha256:3707364314ccd05a69276711292fb40013f5030a0d6f7260aa228b0f22bad218",
+      "digest": "sha256:e8a083399158ed0839f5a3adbbf8603fc0fc73c995de8d3049f5bf83134770d0",
       "generated_by": "python3 scripts/verify.py",
       "kind": "generated",
       "license": "Apache-2.0",

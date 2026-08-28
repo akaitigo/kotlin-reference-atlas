@@ -32,7 +32,9 @@ FE側の判定は1軸satisfied、17軸partialで`incomplete`です。KotlinはFE
 
 Authority locator抽出の方法論は`frontend-behavior-atlas` commit `cabf687bab769b17928d950acc416f3f77eb4ca3`へdigest固定し、Core v2はcommit `1ea027babf3a8d6720ac617c56988e447695ba63`の独立Authority Extraction Gateを使用します。`authority/locator-extraction.json`とCore用`authority/extraction.snapshot.json`は第三者本文を保存せず、URL、Source metadata、digest、locator metadataだけを許可します。既存69 reference edge分類とAuthority本文全体の網羅抽出は別判定です。
 
-Authority denominator方式は`frontend-behavior-atlas` commit `841ec2fa399606a10305021a8bcd396713b8cee5`へ別途digest固定しています。Kotlinでは9 Sourceを7 unique Git documentへ正規化し、固定commit treeの`repository-root`と全`tracked-blob`から146146 raw anchor候補を列挙しました。本文は取得・保存せず、stable ID、tree/source/tool digest、stale境界を保持します。候補は全件`pending-human`、Human review 0、Surface昇格0です。専用baselineは全stable IDを固定し、Mappingなしの削除・置換を拒否します。raw anchor件数はSemantic Surface、Atomic behavior、18 Depth軸の達成へ算入しません。
+Authority denominator方式は`frontend-behavior-atlas` commit `841ec2fa399606a10305021a8bcd396713b8cee5`へ別途digest固定しています。Kotlinでは9 Sourceを7 unique Git documentへ正規化し、固定commit treeの`repository-root`と全`tracked-blob`から146146 raw anchor候補を列挙しました。本文は取得・保存せず、stable ID、tree/source/tool digest、stale境界を保持します。専用baselineは全stable IDを固定し、Mappingなしの削除・置換を拒否します。
+
+Human review Queue方式はFE commit `de2f016b8b44ea67afdb08c0552044807505984e`へdigest固定しています。146146 stable anchorは全件Queueへ割り当て、priority・cluster・batchはmachine proposalに限定しています。現状は全件`pending-human`、Human decision 0、Semantic昇格0、stale hold 0です。reviewer、時刻、理由、固定digest、locator、旧→新mapping、result、Promotion実体が一致しない昇格をVerifierが拒否し、stale documentはholdします。raw anchorおよびQueue件数はSemantic Surface、Atomic behavior、18 Depth軸の達成へ算入しません。
 
 ## Completion禁止条件
 

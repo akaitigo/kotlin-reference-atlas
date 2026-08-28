@@ -15,7 +15,7 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:f11b56196058f1612ba1ad1ecb8923d7f06b14ff6f8391d254c1fd26a6dcec09",
+  "harness_digest": "sha256:7accf222daa479380370bde8b430891173f2557ba86a55ade1b11d9aaf3d1d7b",
   "harness_path": "atlas/definitive/kotlin-depth-parity.json",
   "id": "quality.kotlin-depth-parity-gate",
   "kind": "compatibility",

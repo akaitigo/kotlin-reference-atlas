@@ -1,0 +1,40 @@
+{
+  "all_raw_anchors_routed": true,
+  "decision_ledger": "authority/reviews/decisions.json",
+  "local_methodology_reference": {
+    "artifact_count": 6,
+    "available": true,
+    "verified": true
+  },
+  "methodology_reference": "baseline/fe-authority-review-queue-reference-v1.json",
+  "promotion_ledger": "authority/reviews/promotions.json",
+  "queue": "authority/review-queue.snapshot.json",
+  "queue_depth_credit": false,
+  "schema_version": 1,
+  "summary": {
+    "authority_semantics_exhaustive": false,
+    "decisions": 0,
+    "eligible_documents": 7,
+    "excluded": 0,
+    "human_reviewed": 0,
+    "included": 0,
+    "merged": 0,
+    "pending_human": 146146,
+    "promoted_items": 0,
+    "queued_anchors": 146146,
+    "raw_anchors": 146146,
+    "split": 0,
+    "stale_anchor_holds": 0,
+    "stale_document_holds": 0,
+    "suggested_batches": 135,
+    "suggested_candidate_clusters": 9720,
+    "suggested_clustered_anchors": 43018,
+    "suggested_priority_counts": {
+      "0": 7,
+      "1": 92869,
+      "2": 53270
+    }
+  },
+  "verdict": "pass",
+  "violations": []
+}
