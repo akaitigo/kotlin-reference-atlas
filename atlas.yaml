@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "kotlin-reference-atlas",
+  "title": "Kotlin 技術実証アトラス",
+  "owner": { "github": "akaitigo" },
+  "repository": {
+    "url": "https://github.com/akaitigo/kotlin-reference-atlas",
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  "archetypes": ["product", "language-platform"],
+  "stage": 1,
+  "status": "incomplete",
+  "language": { "primary": "ja", "identifiers": "en" },
+  "coverage": { "epoch": "2026-08-28", "manifest": "coverage.yaml" },
+  "authority": { "lockfile": "sources.lock.yaml", "policy": "primary-first" },
+  "mastery": { "manifest": "mastery.yaml", "contract_version": "1.0.0" },
+  "scope": {
+    "statement": "Kotlin 2.4.10を基準に、Kotlin/JVM、Gradle、structured concurrency、Java相互運用の設計判断と挙動を再実行可能なLabとEvidenceで実証する。",
+    "exclusions": [
+      "Android、Kotlin/Native、Kotlin/JS、Kotlin/Wasm、Apple相互運用は本Coverage Epochの必須完了対象に含めない。",
+      "Ktor、Spring、Compose等の第三者または周辺Frameworkの全公開API閉包は対象に含めない。",
+      "Kotlin 2.4.10より前の全Version再現は行わず、現行移行判断に必要なfixtureだけを将来追加する。"
+    ]
+  },
+  "requires": ["reference-atlas-core"],
+  "integrates_with": ["atlas-interoperability-lab", "technology-atlas-skills"],
+  "skills": {
+    "router": {
+      "id": "kotlin-reference-router",
+      "path": ".agents/skills/kotlin-reference-router/SKILL.md"
+    },
+    "package_manifest": "skill.package.yaml",
+    "evals": "evals/"
+  },
+  "completion": {
+    "policy_version": "1.0.0",
+    "required_profiles": ["local", "container"],
+    "certificate": "evidence/completion-certificate.json"
+  },
+  "license": {
+    "default": "Apache-2.0",
+    "notice": "NOTICE",
+    "third_party_manifest": "third_party/manifest.yaml",
+    "sbom": "sbom.spdx.json"
+  },
+  "security": { "disclosure": "SECURITY.md", "defensive_only": true }
+}

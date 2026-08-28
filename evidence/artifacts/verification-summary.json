@@ -1,0 +1,22 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "completion_gaps": [
+    "operation.container-evidence",
+    "publication.complete-sbom",
+    "inventory.kotlin-public-surface",
+    "reference-system.automation-workbench",
+    "evidence/completion-certificate.json",
+    "reference-atlas-core fixed release tag",
+    "github-hosted CI execution"
+  ],
+  "epoch": "2026-08-28",
+  "implementation_gates": {
+    "labs": "pass",
+    "manifest": "pass",
+    "mastery_audit": "pass",
+    "rights_metadata": "pass",
+    "skill": "pass"
+  },
+  "repository_status": "incomplete",
+  "verdict": "pass"
+}

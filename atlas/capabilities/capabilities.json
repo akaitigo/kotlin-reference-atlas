@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "atlas_id": "kotlin-reference-atlas",
+  "capabilities": [
+    {
+      "id": "authority.lock",
+      "title_ja": "一次資料Lock",
+      "verdict": "default",
+      "source_ids": ["reference-atlas-core-v1", "kotlin-compiler-2.4.10", "gradle-9.5.0", "kotlinx-coroutines-core-jvm-1.11.0"],
+      "lab": "scripts/verify.py"
+    },
+    {
+      "id": "jvm.value-class-boundary",
+      "title_ja": "JVM value classの型とboxing境界",
+      "verdict": "conditional",
+      "source_ids": ["kotlin-compiler-2.4.10"],
+      "lab": "labs/jvm"
+    },
+    {
+      "id": "gradle.plugin-consumer",
+      "title_ja": "Gradle Plugin consumer契約",
+      "verdict": "default",
+      "source_ids": ["gradle-9.5.0", "kotlin-compiler-2.4.10"],
+      "lab": "labs/gradle-plugin"
+    },
+    {
+      "id": "coroutines.structured-cancellation",
+      "title_ja": "Structured concurrencyのcancelと例外伝播",
+      "verdict": "default",
+      "source_ids": ["kotlinx-coroutines-core-jvm-1.11.0"],
+      "lab": "labs/coroutines"
+    },
+    {
+      "id": "interop.java-consumer",
+      "title_ja": "Java consumerから見たKotlin API",
+      "verdict": "boundary-only",
+      "source_ids": ["kotlin-compiler-2.4.10"],
+      "lab": "labs/interop"
+    },
+    {
+      "id": "skill.coverage-router",
+      "title_ja": "Coverage準拠Router",
+      "verdict": "default",
+      "source_ids": ["reference-atlas-core-v1"],
+      "lab": "evals"
+    }
+  ]
+}

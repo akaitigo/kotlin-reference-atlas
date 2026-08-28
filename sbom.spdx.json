@@ -1,0 +1,82 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "kotlin-reference-atlas-0.1.0",
+  "documentNamespace": "https://github.com/akaitigo/kotlin-reference-atlas/sbom/0.1.0/2026-08-28",
+  "creationInfo": {
+    "created": "2026-08-28T00:00:00+09:00",
+    "creators": ["Organization: akaitigo", "Tool: kotlin-reference-atlas-verifier-0.1.0"]
+  },
+  "documentDescribes": ["SPDXRef-Package-kotlin-reference-atlas"],
+  "packages": [
+    {
+      "name": "kotlin-reference-atlas",
+      "SPDXID": "SPDXRef-Package-kotlin-reference-atlas",
+      "versionInfo": "0.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "Copyright 2026 akaitigo"
+    },
+    {
+      "name": "reference-atlas-core",
+      "SPDXID": "SPDXRef-Package-reference-atlas-core",
+      "versionInfo": "d5c0a6ce757fd5f43af837edd26f55c7325b811e",
+      "downloadLocation": "https://github.com/akaitigo/reference-atlas-core",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "kotlin",
+      "SPDXID": "SPDXRef-Package-kotlin",
+      "versionInfo": "2.4.10",
+      "downloadLocation": "https://github.com/JetBrains/kotlin",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "gradle",
+      "SPDXID": "SPDXRef-Package-gradle",
+      "versionInfo": "9.5.0",
+      "downloadLocation": "https://github.com/gradle/gradle",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "kotlinx-coroutines",
+      "SPDXID": "SPDXRef-Package-kotlinx-coroutines",
+      "versionInfo": "1.11.0",
+      "downloadLocation": "https://github.com/Kotlin/kotlinx.coroutines",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "junit",
+      "SPDXID": "SPDXRef-Package-junit",
+      "versionInfo": "5.10.5",
+      "downloadLocation": "https://github.com/junit-team/junit5",
+      "filesAnalyzed": false,
+      "licenseConcluded": "EPL-2.0",
+      "licenseDeclared": "EPL-2.0",
+      "copyrightText": "NOASSERTION"
+    }
+  ],
+  "relationships": [
+    { "spdxElementId": "SPDXRef-DOCUMENT", "relationshipType": "DESCRIBES", "relatedSpdxElement": "SPDXRef-Package-kotlin-reference-atlas" },
+    { "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-reference-atlas-core" },
+    { "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-kotlin" },
+    { "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-gradle" },
+    { "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-kotlinx-coroutines" },
+    { "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-junit" }
+  ]
+}

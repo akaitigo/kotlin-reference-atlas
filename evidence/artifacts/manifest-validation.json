@@ -1,0 +1,9 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "audit_output": "監査済み: kotlin-reference-atlas status=incomplete mastery=14 target_sets=7 targets=12 open_required=3",
+  "authority_lock_digest": "sha256:656a3c4f0687029c7b4113a2cd36b1640251da05b986900a2dddba4e299e2b33",
+  "epoch": "2026-08-28",
+  "mastery_outcomes": 8,
+  "mastery_surfaces": 14,
+  "verdict": "pass"
+}

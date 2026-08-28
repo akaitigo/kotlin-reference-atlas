@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "generated_from": ["mastery.yaml", "coverage.yaml", "atlas/capabilities/capabilities.json", "atlas/claims/claims.json"],
+  "routes": [
+    { "capability_id": "jvm.value-class-boundary", "target_id": "language.jvm-value-class-boundary", "keywords": ["jvm", "value class", "value-class", "boxing", "値クラス", "ボクシング"], "lab": "labs/jvm", "claim_ids": ["jvm.value-class-generic-boxing"] },
+    { "capability_id": "gradle.plugin-consumer", "target_id": "build.gradle-plugin-consumer", "keywords": ["gradle", "plugin", "testkit", "build", "プラグイン", "ビルド"], "lab": "labs/gradle-plugin", "claim_ids": ["gradle.plugin-registers-probe-task"] },
+    { "capability_id": "coroutines.structured-cancellation", "target_id": "concurrency.structured-cancellation", "keywords": ["coroutine", "coroutines", "cancellation", "cancel", "structured concurrency", "コルーチン", "キャンセル", "例外伝播"], "lab": "labs/coroutines", "claim_ids": ["coroutines.child-failure-cancels-sibling"] },
+    { "capability_id": "interop.java-consumer", "target_id": "interop.java-consumer", "keywords": ["java", "interop", "jvmoverloads", "jvm overloads", "jvmthrows", "throws", "相互運用", "オーバーロード"], "lab": "labs/interop", "claim_ids": ["interop.java-overloads-and-throws"] }
+  ]
+}

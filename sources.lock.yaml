@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "atlas_id": "kotlin-reference-atlas",
+  "epoch": "2026-08-28",
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "sources": [
+    {
+      "id": "reference-atlas-core-v1",
+      "kind": "source",
+      "title": "Reference Atlas Core Architecture v1",
+      "url": "https://github.com/akaitigo/reference-atlas-core/commit/d5c0a6ce757fd5f43af837edd26f55c7325b811e",
+      "version": "git:d5c0a6ce757fd5f43af837edd26f55c7325b811e",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:67120b38028fa871625f370f3688e52a4963df1f318d6e4b30a1cb6b8accbc38",
+      "license": "Apache-2.0",
+      "redistribution": "metadata-only"
+    },
+    {
+      "id": "kotlin-compiler-2.4.10",
+      "kind": "source",
+      "title": "Kotlin compiler 2.4.10 binary distribution",
+      "url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+      "version": "2.4.10",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+      "license": "Apache-2.0",
+      "redistribution": "link-only"
+    },
+    {
+      "id": "gradle-9.5.0",
+      "kind": "source",
+      "title": "Gradle 9.5.0 binary distribution",
+      "url": "https://services.gradle.org/distributions/gradle-9.5.0-bin.zip",
+      "version": "9.5.0",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:553c78f50dafcd54d65b9a444649057857469edf836431389695608536d6b746",
+      "license": "Apache-2.0",
+      "redistribution": "link-only"
+    },
+    {
+      "id": "kotlinx-coroutines-core-jvm-1.11.0",
+      "kind": "source",
+      "title": "kotlinx-coroutines-core-jvm 1.11.0",
+      "url": "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.11.0/kotlinx-coroutines-core-jvm-1.11.0.jar",
+      "version": "1.11.0",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:d1d75aa01dffbb4d1c520e67e4c4e7f5f6174718e7cb4632412503f2f0e604fa",
+      "license": "Apache-2.0",
+      "redistribution": "link-only"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "epoch": "2026-08-28",
+  "exclusions": [
+    { "id": "platform.android", "reason_ja": "Android SDK profileとAGP互換Matrixを別Target Setで固定してから扱う。", "reviewed_at": "2026-08-28" },
+    { "id": "platform.kmp-native-js-wasm", "reason_ja": "Host、Browser、Native toolchain別のEvidence Contractが必要なため初回JVM Epochから分離する。", "reviewed_at": "2026-08-28" },
+    { "id": "ecosystem.framework-api-closure", "reason_ja": "Kotlin Atlasを各Framework Referenceの複製にしない。代表統合は将来のInteroperability Labで扱う。", "reviewed_at": "2026-08-28" }
+  ]
+}

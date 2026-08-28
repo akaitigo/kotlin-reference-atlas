@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28",
+  "components": [
+    { "id": "reference-atlas-core", "version": "d5c0a6ce757fd5f43af837edd26f55c7325b811e", "license": "Apache-2.0", "usage": "Manifest Schema, Mastery Contract, validation and audit CLI", "redistribution": "not-bundled", "source": "https://github.com/akaitigo/reference-atlas-core" },
+    { "id": "kotlin", "version": "2.4.10", "license": "Apache-2.0", "usage": "compiler, Gradle plugin, standard library", "redistribution": "not-bundled", "source": "https://github.com/JetBrains/kotlin" },
+    { "id": "gradle", "version": "9.5.0", "license": "Apache-2.0", "usage": "build tool, Wrapper, TestKit", "redistribution": "wrapper-only", "source": "https://github.com/gradle/gradle" },
+    { "id": "kotlinx-coroutines", "version": "1.11.0", "license": "Apache-2.0", "usage": "structured concurrency Lab", "redistribution": "not-bundled", "source": "https://github.com/Kotlin/kotlinx.coroutines" },
+    { "id": "junit", "version": "5.10.5", "license": "EPL-2.0", "usage": "JVM test engine", "redistribution": "not-bundled", "source": "https://github.com/junit-team/junit5" }
+  ]
+}

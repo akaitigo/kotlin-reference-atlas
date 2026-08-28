@@ -1,0 +1,18 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-08-28T00:00:00+09:00",
+    "component": { "type": "application", "name": "kotlin-reference-atlas", "version": "0.1.0" },
+    "properties": [
+      { "name": "atlas:completeness", "value": "direct-dependencies-only" }
+    ]
+  },
+  "components": [
+    { "type": "framework", "group": "org.jetbrains.kotlin", "name": "kotlin", "version": "2.4.10", "licenses": [{ "license": { "id": "Apache-2.0" } }] },
+    { "type": "framework", "group": "org.gradle", "name": "gradle", "version": "9.5.0", "licenses": [{ "license": { "id": "Apache-2.0" } }] },
+    { "type": "library", "group": "org.jetbrains.kotlinx", "name": "kotlinx-coroutines-core-jvm", "version": "1.11.0", "licenses": [{ "license": { "id": "Apache-2.0" } }] },
+    { "type": "library", "group": "org.junit", "name": "junit-bom", "version": "5.10.5", "licenses": [{ "license": { "id": "EPL-2.0" } }] }
+  ]
+}

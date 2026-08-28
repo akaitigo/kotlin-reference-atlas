@@ -1,0 +1,26 @@
+{
+  "artifact": {
+    "digest": "sha256:ce22b4b20c48f812b7c6a45102e0d529d7f6593504fda164674af78c68c29f7a",
+    "media_type": "application/json",
+    "size_bytes": 370,
+    "uri": "evidence/artifacts/manifest-validation.json"
+  },
+  "atlas_id": "kotlin-reference-atlas",
+  "claim_ids": [
+    "authority.source-lock-matches"
+  ],
+  "command": "atlas validate atlas.yaml mastery.yaml coverage.yaml sources.lock.yaml skill.package.yaml && atlas audit .",
+  "created_at": "2026-08-28T00:00:00+09:00",
+  "environment": {
+    "manifest_digest": "sha256:7dd6e45eb3a5a22cb9948e0d88ff03596474796978625984269a49bbab44dc97",
+    "profile": "local"
+  },
+  "harness_digest": "sha256:a935533e2bafb46197588f5525062bcc810e0cd2453f1b27a021a19c8566e4fe",
+  "id": "authority.source-lock-validation",
+  "kind": "conformance",
+  "producer": "kotlin-atlas-verifier",
+  "retention": "git",
+  "schema_version": 1,
+  "source_digest": "sha256:656a3c4f0687029c7b4113a2cd36b1640251da05b986900a2dddba4e299e2b33",
+  "verdict": "pass"
+}

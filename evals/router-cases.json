@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "cases": [
+    { "id": "jvm-value-class", "query": "JVMのvalue classがboxingされる境界をレビューしたい", "expected_disposition": "covered", "expected_capability_id": "jvm.value-class-boundary", "expected_outcome": "understand", "expected_surface": "foundations-mechanics" },
+    { "id": "gradle-testkit", "query": "Gradle pluginをTestKitのconsumer buildで検証したい", "expected_disposition": "covered", "expected_capability_id": "gradle.plugin-consumer", "expected_outcome": "build", "expected_surface": "implementation-construction" },
+    { "id": "coroutine-cancellation", "query": "Coroutineの子失敗と兄弟キャンセル、例外伝播を診断したい", "expected_disposition": "covered", "expected_capability_id": "coroutines.structured-cancellation", "expected_outcome": "troubleshoot", "expected_surface": "failure-recovery" },
+    { "id": "java-interop", "query": "JavaからKotlin APIのJvmOverloadsとThrowsを呼びたい", "expected_disposition": "covered", "expected_capability_id": "interop.java-consumer", "expected_outcome": "verify", "expected_surface": "compatibility-integration" },
+    { "id": "swift-export-gap", "query": "Kotlin NativeのSwift Exportを本番導入したい", "expected_disposition": "gap" },
+    { "id": "ktor-gap", "query": "Ktor serverの全APIを監査したい", "expected_disposition": "gap" }
+  ]
+}

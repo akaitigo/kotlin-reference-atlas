@@ -1,0 +1,23 @@
+{
+  "direct_component_count": 5,
+  "required_files": [
+    "LICENSE",
+    "NOTICE",
+    "SECURITY.md",
+    "third_party/manifest.yaml",
+    "third_party/sbom.cdx.json",
+    "sbom.spdx.json",
+    "gradle/verification-metadata.xml",
+    "settings-gradle.lockfile",
+    "labs/jvm/gradle.lockfile",
+    "labs/coroutines/gradle.lockfile",
+    "labs/interop/gradle.lockfile",
+    "labs/gradle-plugin/gradle.lockfile"
+  ],
+  "sbom_formats": [
+    "CycloneDX-1.6",
+    "SPDX-2.3"
+  ],
+  "sbom_scope": "direct-dependencies-only",
+  "verdict": "pass"
+}

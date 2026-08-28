@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "atlas_id": "kotlin-reference-atlas",
+  "atlas_release": "v0.1.0",
+  "router": {
+    "id": "kotlin-reference-router",
+    "path": ".agents/skills/kotlin-reference-router/SKILL.md",
+    "description": "Kotlinの設計、実装、診断、移行、ReviewをCoverage内の一次資料、Lab、Claim、Evidenceへ段階的に案内する。"
+  },
+  "generated_from": [
+    "mastery.yaml",
+    "coverage.yaml",
+    "atlas/capabilities/capabilities.json",
+    "atlas/claims/claims.json"
+  ],
+  "adapters": ["generic-agent-skills", "codex"],
+  "evals": { "path": "evals/", "minimum_pass_rate": 1.0 }
+}

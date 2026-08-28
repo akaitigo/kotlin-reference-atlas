@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "atlas_id": "kotlin-reference-atlas",
+  "epoch": "2026-08-28",
+  "authority_lock_digest": "sha256:656a3c4f0687029c7b4113a2cd36b1640251da05b986900a2dddba4e299e2b33",
+  "target_sets": [
+    {
+      "id": "authority",
+      "title": "一次資料と対象Version",
+      "sequence": 1,
+      "completion_required": true,
+      "exit_criteria": [
+        "対象Versionと一次資料のDigestが固定されていること",
+        "Coverage ManifestがAuthority LockのDigestを参照すること"
+      ]
+    },
+    {
+      "id": "language-platform",
+      "title": "Kotlin/JVMとJava境界",
+      "sequence": 2,
+      "completion_required": true,
+      "exit_criteria": [
+        "JVM固有の型表現を実行可能なOracleで検証できること",
+        "Java consumerから公開APIの境界を検証できること"
+      ]
+    },
+    {
+      "id": "build-tooling",
+      "title": "Gradle BuildとPlugin",
+      "sequence": 3,
+      "completion_required": true,
+      "exit_criteria": [
+        "固定Gradle Wrapperで全Labを再実行できること",
+        "Gradle TestKit consumer buildでPlugin契約を検証できること"
+      ]
+    },
+    {
+      "id": "concurrency",
+      "title": "Coroutine並行処理",
+      "sequence": 4,
+      "completion_required": true,
+      "exit_criteria": [
+        "Cancellationと例外伝播を決定論的に検証できること",
+        "失敗時にも子Coroutineが残存しないこと"
+      ]
+    },
+    {
+      "id": "operation",
+      "title": "再実行可能性と環境",
+      "sequence": 5,
+      "completion_required": true,
+      "exit_criteria": [
+        "Local profileから正規化されたEvidenceを再生成できること",
+        "Required profileごとの結果と未完了理由が記録されること"
+      ]
+    },
+    {
+      "id": "skill",
+      "title": "Agent Router Skill",
+      "sequence": 6,
+      "completion_required": true,
+      "exit_criteria": [
+        "RouterがCoverage内CapabilityとGapを区別すること",
+        "全Eval caseが文言一致ではなく選択結果で合格すること"
+      ]
+    },
+    {
+      "id": "publication",
+      "title": "権利と公開可能性",
+      "sequence": 7,
+      "completion_required": true,
+      "exit_criteria": [
+        "License、NOTICE、第三者Manifest、SBOMが整合すること",
+        "Completion Certificateの発行前に秘密とProvenance Gateが通ること"
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "authority.source-lock",
+      "title": "Kotlin 2.4.10 Authority Lock",
+      "target_set": "authority",
+      "kind": "compatibility",
+      "requirement": "required",
+      "state": "covered",
+      "rationale": "再現対象を移動する最新版ではなく固定VersionとDigestへ束縛するために必要である。",
+      "claim_ids": ["authority.source-lock-matches"],
+      "evidence_ids": ["authority.source-lock-validation"],
+      "exclusion": null
+    },
+    {
+      "id": "language.jvm-value-class-boundary",
+      "title": "JVM value class境界",
+      "target_set": "language-platform",
+      "kind": "capability",
+      "requirement": "required",
+      "state": "covered",
+      "rationale": "型安全な識別子の設計判断にはsource-level分離とboxing境界の両方を確認する必要がある。",
+      "claim_ids": ["jvm.value-class-generic-boxing"],
+      "evidence_ids": ["jvm.value-class-boundary"],
+      "exclusion": null
+    },
+    {
+      "id": "interop.java-consumer",
+      "title": "Java consumer契約",
+      "target_set": "language-platform",
+      "kind": "compatibility",
+      "requirement": "required",
+      "state": "covered",
+      "rationale": "Kotlin側だけのTestではJavaから見えるoverloadとchecked exception宣言を証明できない。",
+      "claim_ids": ["interop.java-overloads-and-throws"],
+      "evidence_ids": ["interop.java-consumer"],
+      "exclusion": null
+    },
+    {
+      "id": "build.gradle-plugin-consumer",
+      "title": "Gradle Plugin consumer build",
+      "target_set": "build-tooling",
+      "kind": "construction",
+      "requirement": "required",
+      "state": "covered",
+      "rationale": "Plugin実装単体ではなく独立consumer buildからPlugin IDとTask契約を検証する必要がある。",
+      "claim_ids": ["gradle.plugin-registers-probe-task"],
+      "evidence_ids": ["gradle.plugin-consumer"],
+      "exclusion": null
+    },
+    {
+      "id": "concurrency.structured-cancellation",
+      "title": "Structured concurrencyの失敗伝播",
+      "target_set": "concurrency",
+      "kind": "failure",
+      "requirement": "required",
+      "state": "covered",
+      "rationale": "子の失敗が兄弟をcancelし親へ伝播する性質は業務Coroutineのresource安全性に直結する。",
+      "claim_ids": ["coroutines.child-failure-cancels-sibling"],
+      "evidence_ids": ["coroutines.failure-propagation"],
+      "exclusion": null
+    },
+    {
+      "id": "operation.local-evidence",
+      "title": "Local profile Evidence再生成",
+      "target_set": "operation",
+      "kind": "operation",
+      "requirement": "required",
+      "state": "covered",
+      "rationale": "固定Harnessから正規化ArtifactとDigest付きEvidenceを再生成できることがLocal検証の前提である。",
+      "claim_ids": ["operation.local-suite-reproducible"],
+      "evidence_ids": ["operation.local-verification"],
+      "exclusion": null
+    },
+    {
+      "id": "operation.container-evidence",
+      "title": "Container profile Evidence再生成",
+      "target_set": "operation",
+      "kind": "operation",
+      "requirement": "required",
+      "state": "planned",
+      "rationale": "Host固有cacheやtoolchain状態から独立した再現性を確認するためContainer profileが必要である。",
+      "claim_ids": [],
+      "evidence_ids": [],
+      "exclusion": null
+    },
+    {
+      "id": "skill.router-evaluation",
+      "title": "Kotlin Router Skill評価",
+      "target_set": "skill",
+      "kind": "skill",
+      "requirement": "required",
+      "state": "covered",
+      "rationale": "RouterがCapabilityを捏造せずCoverage gapを返すことを反復可能なcaseで検証する必要がある。",
+      "claim_ids": ["skill.router-respects-coverage"],
+      "evidence_ids": ["skill.router-evaluation"],
+      "exclusion": null
+    },
+    {
+      "id": "publication.rights-metadata",
+      "title": "Licenseと第三者Metadata",
+      "target_set": "publication",
+      "kind": "security",
+      "requirement": "required",
+      "state": "covered",
+      "rationale": "独自成果物と第三者依存の権利を分離し公開可否を機械的に判定するために必要である。",
+      "claim_ids": ["publication.required-rights-files-present"],
+      "evidence_ids": ["publication.rights-metadata"],
+      "exclusion": null
+    },
+    {
+      "id": "publication.complete-sbom",
+      "title": "完全なDependency SBOM",
+      "target_set": "publication",
+      "kind": "security",
+      "requirement": "required",
+      "state": "partial",
+      "rationale": "直接依存のCycloneDX metadataは存在するが全transitive artifactの自動閉包と差分Gateが未完了である。",
+      "claim_ids": [],
+      "evidence_ids": [],
+      "exclusion": null
+    },
+    {
+      "id": "inventory.kotlin-public-surface",
+      "title": "Kotlin公開Surface Inventory閉包",
+      "target_set": "authority",
+      "kind": "capability",
+      "requirement": "required",
+      "state": "partial",
+      "rationale": "従来構想の全機能追跡を維持するが、Compiler registryとstdlib宣言の自動Inventoryは未実装である。",
+      "claim_ids": [],
+      "evidence_ids": [],
+      "exclusion": null
+    },
+    {
+      "id": "reference-system.automation-workbench",
+      "title": "Automation Workbench reference system",
+      "target_set": "language-platform",
+      "kind": "construction",
+      "requirement": "recommended",
+      "state": "planned",
+      "rationale": "以前の実用Reference構想を維持するが、Claim/Evidence基盤の確立後に自然な機能統合として実装する。",
+      "claim_ids": [],
+      "evidence_ids": [],
+      "exclusion": null
+    }
+  ]
+}

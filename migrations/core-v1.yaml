@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "migration_id": "kotlin-engineering-reference-to-core-v1",
+  "source": {
+    "repository_id": "kotlin-engineering-reference",
+    "kind": "planning-canonical",
+    "snapshot": "kotlin-2.4.10_2026-08-28"
+  },
+  "target": {
+    "repository_id": "kotlin-reference-atlas",
+    "title_ja": "Kotlin 技術実証アトラス",
+    "core_commit": "d5c0a6ce757fd5f43af837edd26f55c7325b811e"
+  },
+  "mappings": [
+    { "from": "kotlin.language.context-parameters", "to": "language.context-parameters", "state": "planned", "note_ja": "従来Claim IDを将来Inventoryへ引き継ぐ。" },
+    { "from": "reference-platform.application.ExecuteWorkflow", "to": "reference-system.automation-workbench", "state": "planned", "note_ja": "実用Reference製品構想を維持する。" },
+    { "from": "kotlin-concurrency-cancellation-audit", "to": "kotlin-reference-router:review-concurrency", "state": "adapted", "note_ja": "Micro SkillではなくRouter modeへ統合する。" },
+    { "from": "kotlin-2.4.10_2026-08-28", "to": "coverage-epoch:2026-08-28", "state": "adapted", "note_ja": "動的最新版ではなく有限Epochとして保持する。" }
+  ],
+  "preserved_research": [
+    "Kotlin側stabilityとRepository推奨度を別軸で扱う。",
+    "Inventory itemをCapabilityまたは明示的Exclusionへ閉じる。",
+    "技術的主張を実行Evidenceへ接続する。",
+    "機能ごとのGradle module乱立を避けdata-driven corpusを優先する。",
+    "Automation Workbenchを自然なProduction usageのReferenceとして後続実装する。"
+  ],
+  "compatibility_aliases": [],
+  "unmapped_source_ids": [],
+  "mastery_contract": {
+    "version": "1.0.0",
+    "outcomes": 8,
+    "surfaces": 14,
+    "coverage_target_sets_reused": true,
+    "new_subject_domains": []
+  },
+  "status": "incomplete"
+}

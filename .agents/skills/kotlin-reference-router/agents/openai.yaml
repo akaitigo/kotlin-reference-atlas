@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kotlin 技術実証アトラス"
+  short_description: "Kotlinの設計・実装・診断を実証Evidenceへ案内"
+  default_prompt: "Use $kotlin-reference-router to find the verified Kotlin capability, lab, and evidence for this task."

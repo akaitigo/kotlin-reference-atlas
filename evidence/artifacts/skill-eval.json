@@ -1,0 +1,122 @@
+{
+  "case_count": 6,
+  "pass_rate": 1.0,
+  "results": [
+    {
+      "actual_capability_id": "jvm.value-class-boundary",
+      "actual_disposition": "covered",
+      "id": "jvm-value-class",
+      "outcome_ids": [
+        "build",
+        "choose",
+        "evolve",
+        "understand",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "architecture-design",
+        "compatibility-integration",
+        "decision-comparison",
+        "foundations-mechanics",
+        "implementation-construction",
+        "migration-evolution-deprecation",
+        "orientation-scope",
+        "performance-capacity-cost",
+        "security-privacy-safety",
+        "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": "gradle.plugin-consumer",
+      "actual_disposition": "covered",
+      "id": "gradle-testkit",
+      "outcome_ids": [
+        "build",
+        "choose",
+        "evolve",
+        "troubleshoot",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "architecture-design",
+        "compatibility-integration",
+        "decision-comparison",
+        "failure-recovery",
+        "implementation-construction",
+        "migration-evolution-deprecation",
+        "performance-capacity-cost",
+        "security-privacy-safety",
+        "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": "coroutines.structured-cancellation",
+      "actual_disposition": "covered",
+      "id": "coroutine-cancellation",
+      "outcome_ids": [
+        "build",
+        "choose",
+        "operate",
+        "troubleshoot",
+        "understand",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "architecture-design",
+        "decision-comparison",
+        "failure-recovery",
+        "foundations-mechanics",
+        "implementation-construction",
+        "operations-observability",
+        "performance-capacity-cost",
+        "security-privacy-safety",
+        "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": "interop.java-consumer",
+      "actual_disposition": "covered",
+      "id": "java-interop",
+      "outcome_ids": [
+        "build",
+        "choose",
+        "evolve",
+        "understand",
+        "verify"
+      ],
+      "pass": true,
+      "surface_ids": [
+        "architecture-design",
+        "compatibility-integration",
+        "decision-comparison",
+        "foundations-mechanics",
+        "implementation-construction",
+        "migration-evolution-deprecation",
+        "orientation-scope",
+        "performance-capacity-cost",
+        "security-privacy-safety",
+        "testing-verification"
+      ]
+    },
+    {
+      "actual_capability_id": null,
+      "actual_disposition": "gap",
+      "id": "swift-export-gap",
+      "outcome_ids": [],
+      "pass": true,
+      "surface_ids": []
+    },
+    {
+      "actual_capability_id": null,
+      "actual_disposition": "gap",
+      "id": "ktor-gap",
+      "outcome_ids": [],
+      "pass": true,
+      "surface_ids": []
+    }
+  ],
+  "verdict": "pass"
+}

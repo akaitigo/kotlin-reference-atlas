@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+default_core_dir="${repo_root}/../reference-atlas-core"
+if [[ -d "${repo_root}/.atlas-core/.git" ]]; then
+  default_core_dir="${repo_root}/.atlas-core"
+fi
+core_dir="${ATLAS_CORE_DIR:-${default_core_dir}}"
+go_cache_dir="${ATLAS_GO_CACHE_DIR:-${repo_root}/.cache/go-build}"
+pinned_commit="d5c0a6ce757fd5f43af837edd26f55c7325b811e"
+
+if [[ ! -d "${core_dir}/.git" ]]; then
+  echo "エラー: reference-atlas-coreが見つかりません: ${core_dir}" >&2
+  exit 1
+fi
+
+actual_commit="$(git -C "${core_dir}" rev-parse HEAD)"
+if [[ "${actual_commit}" != "${pinned_commit}" ]]; then
+  echo "エラー: Core commitが固定値と一致しません。expected=${pinned_commit} actual=${actual_commit}" >&2
+  exit 1
+fi
+
+command="${1:-}"
+if [[ "${command}" != "validate" && "${command}" != "audit" ]]; then
+  echo "エラー: 使い方: atlas validate <manifest...> | atlas audit <repository-root>" >&2
+  exit 1
+fi
+
+shift
+mkdir -p "${go_cache_dir}"
+if [[ "${command}" == "validate" ]]; then
+  manifest_paths=()
+  for path in "$@"; do
+    if [[ "${path}" = /* ]]; then
+      manifest_paths+=("${path}")
+    else
+      manifest_paths+=("${repo_root}/${path}")
+    fi
+  done
+  exec env GOCACHE="${go_cache_dir}" go -C "${core_dir}" run ./cmd/atlas validate "${manifest_paths[@]}"
+fi
+
+if [[ "$#" -ne 1 ]]; then
+  echo "エラー: 使い方: atlas audit <repository-root>" >&2
+  exit 1
+fi
+audit_root="$1"
+if [[ "${audit_root}" != /* ]]; then
+  audit_root="${repo_root}/${audit_root}"
+fi
+exec env GOCACHE="${go_cache_dir}" go -C "${core_dir}" run ./cmd/atlas audit "${audit_root}"

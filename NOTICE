@@ -1,0 +1,10 @@
+Kotlin 技術実証アトラス
+Copyright 2026 akaitigo
+
+This product includes software developed by JetBrains and the Kotlin project,
+the Gradle project, the kotlinx.coroutines project, and the JUnit project.
+Attribution and license metadata are recorded in third_party/manifest.yaml.
+
+Kotlin and related marks are trademarks of their respective owners. This
+project is an independent engineering reference and is not endorsed by or
+affiliated with JetBrains.

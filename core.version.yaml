@@ -1,0 +1,8 @@
+{
+  "repository": "reference-atlas-core",
+  "version": "architecture-v1",
+  "commit": "d5c0a6ce757fd5f43af837edd26f55c7325b811e",
+  "archive_sha256": "67120b38028fa871625f370f3688e52a4963df1f318d6e4b30a1cb6b8accbc38",
+  "release_state": "commit-pinned",
+  "note_ja": "Mastery Contract v1を含むCore commitを固定する。正式Releaseへの置換はCompletion残課題とする。"
+}

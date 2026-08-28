@@ -1,0 +1,60 @@
+{
+  "command": "./gradlew clean test --configuration-cache --no-daemon",
+  "suites": [
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.coroutines.FailurePropagationTest",
+          "name": "child failure cancels sibling and propagates to caller()",
+          "status": "pass"
+        }
+      ],
+      "module": "coroutines",
+      "suite": "dev.akaitigo.kotlinatlas.coroutines.FailurePropagationTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.gradle.AtlasProbePluginTest",
+          "name": "consumer build applies plugin and executes probe task()",
+          "status": "pass"
+        }
+      ],
+      "module": "gradle-plugin",
+      "suite": "dev.akaitigo.kotlinatlas.gradle.AtlasProbePluginTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.interop.JavaConsumerTest",
+          "name": "consumesJvmOverloadsFromJavaSource()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.interop.JavaConsumerTest",
+          "name": "observesDeclaredExceptionContract()",
+          "status": "pass"
+        }
+      ],
+      "module": "interop",
+      "suite": "dev.akaitigo.kotlinatlas.interop.JavaConsumerTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.jvm.ValueClassBoundaryTest",
+          "name": "source-level identifier remains distinct and usable()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.jvm.ValueClassBoundaryTest",
+          "name": "value class is boxed at Any boundary()",
+          "status": "pass"
+        }
+      ],
+      "module": "jvm",
+      "suite": "dev.akaitigo.kotlinatlas.jvm.ValueClassBoundaryTest"
+    }
+  ],
+  "verdict": "pass"
+}

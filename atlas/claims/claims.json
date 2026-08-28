@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "atlas_id": "kotlin-reference-atlas",
+  "claims": [
+    {
+      "id": "authority.source-lock-matches",
+      "capability_id": "authority.lock",
+      "statement_ja": "Coverage Manifestのauthority_lock_digestはsources.lock.yamlのbyte digestと一致する。",
+      "authority_source_ids": ["reference-atlas-core-v1"],
+      "proof_obligation_ids": ["authority.digest-equality"]
+    },
+    {
+      "id": "jvm.value-class-generic-boxing",
+      "capability_id": "jvm.value-class-boundary",
+      "statement_ja": "value classはsource-levelで別型を提供し、Anyを受けるgeneric境界ではwrapper objectとして観測される。",
+      "authority_source_ids": ["kotlin-compiler-2.4.10"],
+      "proof_obligation_ids": ["jvm.compile-type-separation", "jvm.runtime-generic-boxing"]
+    },
+    {
+      "id": "gradle.plugin-registers-probe-task",
+      "capability_id": "gradle.plugin-consumer",
+      "statement_ja": "Plugin ID dev.akaitigo.kotlin-atlas-probeを適用したconsumer buildはatlasProbe taskを実行できる。",
+      "authority_source_ids": ["gradle-9.5.0", "kotlin-compiler-2.4.10"],
+      "proof_obligation_ids": ["gradle.testkit-consumer"]
+    },
+    {
+      "id": "coroutines.child-failure-cancels-sibling",
+      "capability_id": "coroutines.structured-cancellation",
+      "statement_ja": "coroutineScope内の子Coroutine失敗は待機中の兄弟をcancelし、元の例外を親callerへ伝播する。",
+      "authority_source_ids": ["kotlinx-coroutines-core-jvm-1.11.0"],
+      "proof_obligation_ids": ["coroutines.sibling-finally", "coroutines.parent-exception"]
+    },
+    {
+      "id": "interop.java-overloads-and-throws",
+      "capability_id": "interop.java-consumer",
+      "statement_ja": "@JvmOverloadsで生成したoverloadと@Throwsで宣言した例外をJava source consumerがcompileし実行できる。",
+      "authority_source_ids": ["kotlin-compiler-2.4.10"],
+      "proof_obligation_ids": ["interop.java-source-consumer"]
+    },
+    {
+      "id": "operation.local-suite-reproducible",
+      "capability_id": "authority.lock",
+      "statement_ja": "Local profileでManifest、Lab、Skill、Rightsの全実装Gateを一Commandから再実行し正規化Artifactを生成できる。",
+      "authority_source_ids": ["reference-atlas-core-v1"],
+      "proof_obligation_ids": ["operation.single-entrypoint"]
+    },
+    {
+      "id": "skill.router-respects-coverage",
+      "capability_id": "skill.coverage-router",
+      "statement_ja": "RouterはCoverage内CapabilityへRouteし、Coverage外質問にはgapを返す。",
+      "authority_source_ids": ["reference-atlas-core-v1"],
+      "proof_obligation_ids": ["skill.route-and-gap-cases"]
+    },
+    {
+      "id": "publication.required-rights-files-present",
+      "capability_id": "authority.lock",
+      "statement_ja": "Apache-2.0 License、NOTICE、第三者Manifest、直接依存SBOMが存在し相互に整合する。",
+      "authority_source_ids": ["reference-atlas-core-v1"],
+      "proof_obligation_ids": ["publication.metadata-gate"]
+    }
+  ]
+}
