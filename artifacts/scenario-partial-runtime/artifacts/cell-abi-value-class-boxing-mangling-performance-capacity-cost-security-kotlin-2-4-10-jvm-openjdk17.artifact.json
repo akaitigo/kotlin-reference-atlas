@@ -26,12 +26,12 @@
   "schema_version": 1,
   "source_digest": "sha256:9511134072ec7ce54bd544c895c38404aa0187b7f434bac2dfd0e9bd3d7a4639",
   "test_result": {
-    "digest": "sha256:18ab0c08a571a8f4354b2aa8128b3a1a7c6176b8f0921bc12a940b46a01b15a0",
+    "digest": "sha256:e912a13453108a9f39220dc8aafe53d02d8d727db4fd92c46983b383ca94e3a6",
     "path": "labs/abi-runtime-security/build/test-results/jvmTest/TEST-dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest.xml",
     "testcase": {
       "classname": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
       "name": "performance capacity cost boundary remains deterministic under repetition()[jvm]",
-      "time": "0.038"
+      "time": "0.032"
     }
   }
 }

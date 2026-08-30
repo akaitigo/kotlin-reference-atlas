@@ -76,6 +76,78 @@
     {
       "cases": [
         {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest",
+          "name": "explicit multiplatform metadata override remains bounded by the runtime security oracle[js, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-kmp-consumer-override",
+      "suite": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest",
+      "task": "jsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest",
+          "name": "explicit multiplatform metadata override remains bounded by the runtime security oracle()[jvm]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-kmp-consumer-override",
+      "suite": "MetadataOverrideRuntimeTest[jvm]",
+      "task": "jvmTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest",
+          "name": "explicit multiplatform metadata override remains bounded by the runtime security oracle[wasmJs, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-kmp-consumer-override",
+      "suite": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest",
+      "task": "wasmJsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest",
+          "name": "supported multiplatform metadata executes with the security contract intact[js, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-kmp-consumer-supported",
+      "suite": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest",
+      "task": "jsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest",
+          "name": "supported multiplatform metadata executes with the security contract intact()[jvm]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-kmp-consumer-supported",
+      "suite": "MetadataSupportedRuntimeTest[jvm]",
+      "task": "jvmTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest",
+          "name": "supported multiplatform metadata executes with the security contract intact[wasmJs, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-kmp-consumer-supported",
+      "suite": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest",
+      "task": "wasmJsNodeTest"
+    },
+    {
+      "cases": [
+        {
           "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
           "name": "compatibility integration keeps expect actual value representation executable[js, node]",
           "status": "pass"
@@ -525,6 +597,6 @@
       "task": "test"
     }
   ],
-  "test_case_count": 71,
+  "test_case_count": 77,
   "verdict": "pass"
 }

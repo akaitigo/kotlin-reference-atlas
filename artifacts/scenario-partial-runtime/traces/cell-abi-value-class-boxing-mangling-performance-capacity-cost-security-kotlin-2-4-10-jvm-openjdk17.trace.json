@@ -15,6 +15,10 @@
     ":labs:abi-compat-consumer:migrationCompatibleTest",
     ":labs:abi-metadata-consumer-supported:test",
     ":labs:abi-metadata-consumer-override:test",
+    ":labs:abi-metadata-kmp-consumer-supported:jsNodeTest",
+    ":labs:abi-metadata-kmp-consumer-supported:wasmJsNodeTest",
+    ":labs:abi-metadata-kmp-consumer-override:jsNodeTest",
+    ":labs:abi-metadata-kmp-consumer-override:wasmJsNodeTest",
     "--rerun-tasks",
     "--no-daemon"
   ],
@@ -49,6 +53,6 @@
   "testcase": {
     "classname": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
     "name": "performance capacity cost boundary remains deterministic under repetition()[jvm]",
-    "time": "0.038"
+    "time": "0.032"
   }
 }

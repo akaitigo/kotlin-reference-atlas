@@ -6294,10 +6294,10 @@
   "id": "kotlin-scenario-proof-core-v2",
   "schema_version": 1,
   "source_digests": {
-    "artifacts/scenario-partial-runtime/results.json": "sha256:66081e81e9ed91a7072769e2ba7c71004eee6c733371a210a96c44777c609ae0",
+    "artifacts/scenario-partial-runtime/results.json": "sha256:484637ea1c013306a1c73f6bf3a4d12e1bdc83ccac398ae42c10cf2493449aca",
     "authority/reviews/decisions.json": "sha256:b9bc220d5954ff4959905ac4efbf4fcff9c67a18256bba1f6a3d626b9a0106b8",
     "coverage.yaml": "sha256:12b913c1ec409c2bdd2435637c466b863d8c9720c81b2ebfdd2e8169e3e998a3",
-    "evidence/scenarios/kotlin-closure-index.json": "sha256:6a33de2e2bf31a572566e66688533d18886b825beeb7e12b55071aae3bee7e35",
+    "evidence/scenarios/kotlin-closure-index.json": "sha256:939a05640441b4697d881aff73cb9e256c4d47b0706cf0ffda4564b42ee84998",
     "surface.inventory.yaml": "sha256:7a69a420fecf94590e888ddbcd4f736b86ba534759143c3492818fdbff6997fd"
   },
   "status": "incomplete-authority-atomic-and-runtime-closure",

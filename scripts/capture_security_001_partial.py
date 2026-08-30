@@ -106,6 +106,46 @@ METADATA_ARTIFACTS = [
     METADATA_SUPPORTED / "build" / "libs" / "abi-metadata-consumer-supported-0.2.0.jar",
     METADATA_OVERRIDE / "build" / "libs" / "abi-metadata-consumer-override-0.2.0.jar",
 ]
+KMP_METADATA_SUPPORTED = ROOT / "labs" / "abi-metadata-kmp-consumer-supported"
+KMP_METADATA_OVERRIDE = ROOT / "labs" / "abi-metadata-kmp-consumer-override"
+KMP_METADATA_REJECTED = ROOT / "labs" / "abi-metadata-kmp-consumer-rejected"
+KMP_METADATA_SOURCES = [
+    ROOT / "labs" / "abi-metadata-kmp-api-supported" / "build.gradle.kts",
+    ROOT / "labs" / "abi-metadata-kmp-api-supported" / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "kmp" / "MetadataPolicy.kt",
+    ROOT / "labs" / "abi-metadata-kmp-api-future" / "build.gradle.kts",
+    ROOT / "labs" / "abi-metadata-kmp-api-future" / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "kmp" / "MetadataPolicy.kt",
+    KMP_METADATA_SUPPORTED / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "kmp" / "MetadataConsumer.kt",
+    KMP_METADATA_OVERRIDE / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "kmp" / "OverrideMetadataConsumer.kt",
+    KMP_METADATA_REJECTED / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "kmp" / "RejectedMetadataConsumer.kt",
+]
+KMP_METADATA_HARNESSES = [
+    KMP_METADATA_SUPPORTED / "src" / "commonTest" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "kmp" / "MetadataSupportedRuntimeTest.kt",
+    KMP_METADATA_OVERRIDE / "src" / "commonTest" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "kmp" / "MetadataOverrideRuntimeTest.kt",
+]
+KMP_METADATA_PROFILES = {
+    "kotlin-2.4.10-js-node": {
+        "compile_task": "compileKotlinJs",
+        "supported_task": ":labs:abi-metadata-kmp-consumer-supported:jsNodeTest",
+        "override_task": ":labs:abi-metadata-kmp-consumer-override:jsNodeTest",
+        "supported_result": KMP_METADATA_SUPPORTED / "build" / "test-results" / "jsNodeTest" / "TEST-jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest.xml",
+        "override_result": KMP_METADATA_OVERRIDE / "build" / "test-results" / "jsNodeTest" / "TEST-jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest.xml",
+        "supported_binary": KMP_METADATA_SUPPORTED / "build" / "compileSync" / "js" / "test" / "testDevelopmentExecutable" / "kotlin" / "kotlin-reference-atlas-labs-abi-metadata-kmp-consumer-supported-test.js",
+        "override_binary": KMP_METADATA_OVERRIDE / "build" / "compileSync" / "js" / "test" / "testDevelopmentExecutable" / "kotlin" / "kotlin-reference-atlas-labs-abi-metadata-kmp-consumer-override-test.js",
+        "future_manifest": ROOT / "labs" / "abi-metadata-kmp-api-future" / "build" / "classes" / "kotlin" / "js" / "main" / "default" / "manifest",
+        "runtime": "Kotlin/JS IR metadata compatibility on Node.js",
+    },
+    "kotlin-2.4.10-wasm-js-node": {
+        "compile_task": "compileKotlinWasmJs",
+        "supported_task": ":labs:abi-metadata-kmp-consumer-supported:wasmJsNodeTest",
+        "override_task": ":labs:abi-metadata-kmp-consumer-override:wasmJsNodeTest",
+        "supported_result": KMP_METADATA_SUPPORTED / "build" / "test-results" / "wasmJsNodeTest" / "TEST-wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest.xml",
+        "override_result": KMP_METADATA_OVERRIDE / "build" / "test-results" / "wasmJsNodeTest" / "TEST-wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest.xml",
+        "supported_binary": KMP_METADATA_SUPPORTED / "build" / "compileSync" / "wasmJs" / "test" / "testDevelopmentExecutable" / "kotlin" / "kotlin-reference-atlas-labs-abi-metadata-kmp-consumer-supported-test.wasm",
+        "override_binary": KMP_METADATA_OVERRIDE / "build" / "compileSync" / "wasmJs" / "test" / "testDevelopmentExecutable" / "kotlin" / "kotlin-reference-atlas-labs-abi-metadata-kmp-consumer-override-test.wasm",
+        "future_manifest": ROOT / "labs" / "abi-metadata-kmp-api-future" / "build" / "classes" / "kotlin" / "wasmJs" / "main" / "default" / "manifest",
+        "runtime": "Kotlin/Wasm JS metadata compatibility on Node.js",
+    },
+}
 COMPILER_LAB = ROOT / "labs" / "compiler-runtime-security"
 COMPILER_SOURCE = COMPILER_LAB / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "compiler" / "ReifiedSecurityBoundary.kt"
 COMPILER_HARNESS = COMPILER_LAB / "src" / "commonTest" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "compiler" / "ReifiedSecurityBoundaryTest.kt"
@@ -202,6 +242,8 @@ def run_gradle(runtime_profiles: dict[str, dict]) -> tuple[list[str], str]:
     ] + [
         ":labs:abi-metadata-consumer-supported:test",
         ":labs:abi-metadata-consumer-override:test",
+        *[profile["supported_task"] for profile in KMP_METADATA_PROFILES.values()],
+        *[profile["override_task"] for profile in KMP_METADATA_PROFILES.values()],
     ]
     command = ["./gradlew", *tasks, "--rerun-tasks", "--no-daemon"]
     environment = os.environ.copy()
@@ -237,6 +279,36 @@ def run_metadata_rejection(surface_id: str) -> tuple[list[str], dict]:
         "required_diagnostics": required,
         "producer_metadata_version": "999.0.0",
         "consumer_readable_metadata_version": "2.4.0",
+        "status": "expected-refusal",
+    }
+
+
+def run_kmp_metadata_rejection(variant_id: str, surface_id: str) -> tuple[list[str], dict]:
+    profile = KMP_METADATA_PROFILES[variant_id]
+    command = [
+        "./gradlew",
+        f":labs:abi-metadata-kmp-consumer-rejected:{profile['compile_task']}",
+        "--rerun-tasks",
+        "--no-daemon",
+        f"-PatlasEvidenceSurface={surface_id}",
+    ]
+    environment = os.environ.copy()
+    environment.setdefault("GRADLE_USER_HOME", str(ROOT / ".gradle" / "atlas-home"))
+    result = subprocess.run(command, cwd=ROOT, env=environment, check=False, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    normalized = result.stdout.replace(str(ROOT), ".").replace(str(Path.home()), "$HOME")
+    required = [
+        "Incompatible classes were found in dependencies",
+        "actual metadata version is 999.0.0",
+        "can read versions up to 2.5.0",
+    ]
+    if result.returncode == 0 or any(message not in normalized for message in required):
+        raise RuntimeError(f"KMP metadata-version refusal Oracle failed for {surface_id}/{variant_id} (exit={result.returncode})")
+    return command, {
+        "exit_code": result.returncode,
+        "output_digest": sha256_bytes(normalized.encode()),
+        "required_diagnostics": required,
+        "producer_metadata_version": "999.0.0",
+        "consumer_readable_metadata_version": "2.5.0",
         "status": "expected-refusal",
     }
 
@@ -541,6 +613,106 @@ def build_generation(staging: Path, *, include_native: bool) -> None:
             "final_status": "passed",
             "dedicated_to_this_cell": True,
         })
+    kmp_metadata_source_digest = canonical_digest(KMP_METADATA_SOURCES)
+    kmp_metadata_harness_digest = canonical_digest(KMP_METADATA_HARNESSES)
+    kmp_metadata_refusals = {
+        (variant_id, surface_id): run_kmp_metadata_rejection(variant_id, surface_id)
+        for variant_id in KMP_METADATA_PROFILES
+        for surface_id in METADATA_SURFACES
+    }
+    for variant_id, profile in KMP_METADATA_PROFILES.items():
+        supported_cases = testcases(profile["supported_result"])
+        override_cases = testcases(profile["override_result"])
+        if len(supported_cases) != 1 or len(override_cases) != 1:
+            raise RuntimeError(f"KMP metadata-version Runtime phases must each contain one testcase: {variant_id}")
+        compiler_artifacts = [profile["supported_binary"], profile["override_binary"], profile["future_manifest"]]
+        if any(not path.is_file() or path.stat().st_size == 0 for path in compiler_artifacts):
+            raise RuntimeError(f"KMP metadata compiler/runtime artifact is missing: {variant_id}")
+        identity = {
+            "compiler": "Kotlin 2.4.10 K2 IR",
+            "runtime": profile["runtime"],
+            "variant_id": variant_id,
+            "gradle": gradle_identity,
+            "java": java_identity,
+            "node": node_identity,
+            "host_os": platform.system(),
+            "host_architecture": platform.machine(),
+        }
+        for surface_id in METADATA_SURFACES:
+            refusal_command, refusal = kmp_metadata_refusals[(variant_id, surface_id)]
+            if surface_id == "compatibility-integration":
+                runtime_result = profile["supported_result"]
+                runtime_case = supported_cases[0]
+                runtime_task = profile["supported_task"]
+                assertion = "supported KMP metadata executes and future metadata is rejected by the default target compiler"
+            else:
+                runtime_result = profile["override_result"]
+                runtime_case = override_cases[0]
+                runtime_task = profile["override_task"]
+                assertion = "future KMP metadata is rejected by default and an explicit isolated override reaches the target runtime without weakening the oracle"
+            cell_id = f"cell.abi.kotlin-metadata-version.{surface_id}.{SCENARIO}.{variant_id}"
+            safe = cell_id.replace(".", "-")
+            trace_path = staging / "traces" / f"{safe}.trace.json"
+            artifact_path = staging / "artifacts" / f"{safe}.artifact.json"
+            trace = {
+                "schema_version": 1,
+                "cell_id": cell_id,
+                "attempt": 1,
+                "retry_count": 0,
+                "commands": [command, refusal_command],
+                "runtime_task": runtime_task,
+                "runtime_testcase": runtime_case,
+                "compiler_refusal": refusal,
+                "streams": {
+                    "action": ["compile supported and future KMP producers", "observe default target compiler refusal", "launch dedicated JS or Wasm recovery runtime", "execute security oracle"],
+                    "network": ["no application network operation; dependency resolution is repository-locked"],
+                    "resource": [f"compiler_artifact={path.relative_to(ROOT).as_posix()}" for path in compiler_artifacts],
+                },
+                "runtime_identity": identity,
+                "outcome": "expected",
+            }
+            artifact = {
+                "schema_version": 1,
+                "cell_id": cell_id,
+                "source_digest": kmp_metadata_source_digest,
+                "harness_digest": kmp_metadata_harness_digest,
+                "runtime_test_result": {
+                    "path": runtime_result.relative_to(ROOT).as_posix(),
+                    "digest": sha256_file(runtime_result),
+                    "testcase": runtime_case,
+                },
+                "compiler_refusal": refusal,
+                "compiler_artifacts": [binding(path, path.relative_to(ROOT).as_posix()) for path in compiler_artifacts],
+                "oracle": {
+                    "kind": "kotlin-kmp-metadata-version-security",
+                    "scenario": SCENARIO,
+                    "surface_id": surface_id,
+                    "assertion": assertion,
+                    "passed": True,
+                },
+                "runtime_identity": identity,
+            }
+            write_json(trace_path, trace)
+            write_json(artifact_path, artifact)
+            trace_relative = f"artifacts/scenario-partial-runtime/traces/{trace_path.name}"
+            artifact_relative = f"artifacts/scenario-partial-runtime/artifacts/{artifact_path.name}"
+            records.append({
+                "id": cell_id,
+                "behavior_id": "abi.kotlin-metadata-version",
+                "surface_id": surface_id,
+                "scenario": SCENARIO,
+                "variant_id": variant_id,
+                "source_digest": kmp_metadata_source_digest,
+                "harness_digest": kmp_metadata_harness_digest,
+                "compiler_runtime_platform_identity": identity,
+                "oracle": artifact["oracle"],
+                "trace": binding(trace_path, trace_relative, streams=True),
+                "artifact": binding(artifact_path, artifact_relative),
+                "attempts": 1,
+                "retries": 0,
+                "final_status": "passed",
+                "dedicated_to_this_cell": True,
+            })
     compiler_source_digest = sha256_file(COMPILER_SOURCE)
     compiler_harness_digest = sha256_file(COMPILER_HARNESS)
     for variant_id, profile in COMPILER_PROFILES.items():
@@ -633,8 +805,8 @@ def build_generation(staging: Path, *, include_native: bool) -> None:
         "command": " ".join(command),
         "profile": "real-kotlin-jvm-js-wasm-runtime" + ("-with-native-request" if include_native else "-partial-ci"),
         "retention_contract": RETENTION_CONTRACT,
-        "source_digest": canonical_digest([COMMON_SOURCE, *[profile["platform_source"] for profile in (PROFILES | NATIVE_PROFILES).values()], *ABI_SOURCES, *METADATA_SOURCES, COMPILER_SOURCE]),
-        "harness_digest": canonical_digest([HARNESS, ABI_HARNESS, *METADATA_HARNESSES, COMPILER_HARNESS]),
+        "source_digest": canonical_digest([COMMON_SOURCE, *[profile["platform_source"] for profile in (PROFILES | NATIVE_PROFILES).values()], *ABI_SOURCES, *METADATA_SOURCES, *KMP_METADATA_SOURCES, COMPILER_SOURCE]),
+        "harness_digest": canonical_digest([HARNESS, ABI_HARNESS, *METADATA_HARNESSES, *KMP_METADATA_HARNESSES, COMPILER_HARNESS]),
         "counts": {"cells": len(records), "passed": len(records), "failed": 0, "variants": len({record["variant_id"] for record in records}), "surfaces": len(SURFACE_TESTS) + len(ABI_SURFACE_PHASES) + len(METADATA_SURFACES) + len(COMPILER_SURFACE_TESTS), "behaviors": 4},
         "requested_variant_ids": sorted(PROFILES | NATIVE_PROFILES),
         "executed_variant_ids": sorted(runtime_profiles),
@@ -645,10 +817,22 @@ def build_generation(staging: Path, *, include_native: bool) -> None:
             "executed_profile_passed": True,
             "full_requested_profile_passed": include_native and native_available,
         },
+        "tranche_contract": {
+            "id": "security-001",
+            "variant_runs": 13,
+            "row_runtime_contracts": [
+                {"row_id": "closure.abi.klib-linkage.security", "variant_ids": ["kotlin-2.4.10-native-macos-arm64-runtime"], "oracle": "incompatible KLIB linkage refusal followed by a launched Native recovery executable", "runtime_binding": "Kotlin/Native macOS arm64 with full Xcode"},
+                {"row_id": "closure.abi.kotlin-metadata-version.security", "variant_ids": ["kotlin-2.4.10-jvm-openjdk17", "kotlin-2.4.10-js-node", "kotlin-2.4.10-wasm-js-node", "kotlin-2.4.10-native-macos-arm64"], "oracle": "future metadata refusal plus supported or explicitly bounded override runtime", "runtime_binding": "OpenJDK 17, Node.js JS IR, Node.js Wasm, and Native executable"},
+                {"row_id": "closure.abi.source-binary-behavioral.security", "variant_ids": ["kotlin-2.4.10-jvm-openjdk17", "kotlin-2.4.10-js-node", "kotlin-2.4.10-wasm-js-node", "kotlin-2.4.10-native-macos-arm64"], "oracle": "unchanged consumer rejects breaking producer and recovers with compatible producer", "runtime_binding": "platform-specific producer and consumer runtime"},
+                {"row_id": "closure.abi.value-class-boxing-mangling.security", "variant_ids": ["kotlin-2.4.10-jvm-openjdk17", "kotlin-2.4.10-js-node", "kotlin-2.4.10-wasm-js-node", "kotlin-2.4.10-native-macos-arm64"], "oracle": "value-class identity and rejection survive generic boxing and platform lowering", "runtime_binding": "OpenJDK 17, Node.js JS IR, Node.js Wasm, and Native executable"},
+            ],
+            "evidence_contract": {"attempts": 1, "retries": 0, "dedicated_trace": True, "dedicated_artifact": True, "atomic_publish": True},
+            "publication_contract": {"graph_publish": "owner-managed-mac-full-local-plus-docker-only", "ci_graph_mode": "committed-read-only-stale-audit", "ci_runtime_proof": "same-job-live-runtime-identity"},
+        },
         "completion_limits": [
             "security-001 is not complete: Native runtime cells require a working Xcode toolchain and remain explicit gaps.",
             "JS and Wasm cells for abi.source-binary-behavioral remain explicit gaps.",
-            "JS, Wasm, and Native cells for abi.kotlin-metadata-version remain explicit gaps.",
+            "Native cells for abi.kotlin-metadata-version remain explicit gaps.",
             "security-002 is not complete: inline-reified Native runtime and the other compiler rows remain explicit gaps.",
             "This generation closes only the exact cell records listed in this report.",
         ],
@@ -687,12 +871,36 @@ def validate_generation(staging: Path) -> None:
         for surface in METADATA_SURFACES
     }
     expected_ids |= {
+        f"cell.abi.kotlin-metadata-version.{surface}.{SCENARIO}.{variant}"
+        for surface in METADATA_SURFACES
+        for variant in KMP_METADATA_PROFILES
+    }
+    expected_ids |= {
         f"cell.{COMPILER_BEHAVIOR}.{surface}.{SCENARIO}.{variant}"
         for surface in COMPILER_SURFACE_TESTS
         for variant in COMPILER_PROFILES
     }
     if report.get("status") != "passed" or {record.get("id") for record in records} != expected_ids:
         raise RuntimeError("partial Runtime report does not contain the exact requested cell denominator")
+    tranche = report.get("tranche_contract", {})
+    rows = tranche.get("row_runtime_contracts", [])
+    expected_rows = {
+        "closure.abi.klib-linkage.security",
+        "closure.abi.kotlin-metadata-version.security",
+        "closure.abi.source-binary-behavioral.security",
+        "closure.abi.value-class-boxing-mangling.security",
+    }
+    if tranche.get("id") != "security-001" or tranche.get("variant_runs") != 13 or {row.get("row_id") for row in rows} != expected_rows:
+        raise RuntimeError("security-001 four-row/13-variant tranche contract drifted")
+    if sum(len(row.get("variant_ids", [])) for row in rows) != 13:
+        raise RuntimeError("security-001 variant denominator changed")
+    publication = tranche.get("publication_contract", {})
+    if publication != {
+        "graph_publish": "owner-managed-mac-full-local-plus-docker-only",
+        "ci_graph_mode": "committed-read-only-stale-audit",
+        "ci_runtime_proof": "same-job-live-runtime-identity",
+    }:
+        raise RuntimeError("security-001 Graph/runtime publication contract drifted")
     seen_paths = set()
     for record in records:
         if record.get("attempts") != 1 or record.get("retries") != 0 or record.get("final_status") != "passed":

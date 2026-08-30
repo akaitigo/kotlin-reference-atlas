@@ -15,7 +15,7 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:3466f4bff7b9280d937494982327402562794e1696293635a1a008dbf727876c",
+  "harness_digest": "sha256:c1b6f8d1f0a764fa6b04930f45bbce27bf1b06e34e310e52ffd45cb9dacb9bff",
   "harness_path": "build.gradle.kts",
   "id": "operation.local-verification",
   "kind": "conformance",

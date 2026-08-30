@@ -35,5 +35,10 @@ include(
     ":labs:abi-metadata-consumer-supported",
     ":labs:abi-metadata-consumer-rejected",
     ":labs:abi-metadata-consumer-override",
+    ":labs:abi-metadata-kmp-api-supported",
+    ":labs:abi-metadata-kmp-api-future",
+    ":labs:abi-metadata-kmp-consumer-supported",
+    ":labs:abi-metadata-kmp-consumer-rejected",
+    ":labs:abi-metadata-kmp-consumer-override",
     ":reference-systems:automation-workbench",
 )

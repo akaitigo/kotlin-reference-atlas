@@ -14,7 +14,7 @@
   "candidate_evidence": [
     {
       "artifact": {
-        "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+        "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
         "exists": true,
         "path": "evidence/artifacts/lab-results.json"
       },
@@ -33,7 +33,7 @@
       "producer": "gradle-junit",
       "record": {
         "bytes": 1077,
-        "digest": "sha256:1654da09eaa5d4414f1dc71a3a27e1b5a7c966b2607681df877574eae9afa0a2",
+        "digest": "sha256:3920c7d9ae82c291a45138e2d06c93856b3b4d2fc3d9e29b080a4cf140aec8c8",
         "path": "evidence/evolution.compatibility-migration.evidence.json"
       },
       "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
@@ -59,7 +59,7 @@
   },
   "gaps": [
     "This Behavior has no subject-specific oracle classified for this scenario.",
-    "6 of 8 Surface×Scenario×Variant closure cells remain explicit gaps.",
+    "2 of 8 Surface×Scenario×Variant closure cells remain explicit gaps.",
     "Mapped Target Evidence is candidate context only; unrelated Artifact metadata cannot close a dedicated cell.",
     "The mapped Claim is shared by multiple Authority inventory Behaviors and is not a dedicated Behavior proof.",
     "No human-reviewed Authority anchor decision binds this Atomic behavior; completion credit is zero."
@@ -117,7 +117,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 3488,
-          "digest": "sha256:8a442df5280b85e8e342f622ed670e9235111ae0250431fba9eda1a41fa40ad7",
+          "digest": "sha256:425f15cb696aa75f19ec2e8e2664b52188b83c5d50bfd76a40534ea6377540bc",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-kotlin-metadata-version-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -142,8 +142,8 @@
         "source_digest": "sha256:f2a0f6a0108c3b27d7e5dd7ff8734ba8435960a3459753fa5c38f41d50d828c9",
         "trace": {
           "action_stream": true,
-          "bytes": 3617,
-          "digest": "sha256:a629d71e4ed2be03706a82177231979dbb0c02f054573b0cbe2a2b083d92192c",
+          "bytes": 3871,
+          "digest": "sha256:4065c87c41c1ffff654c891ea9d2838fd2c5821b90872b22f479ea6fa7068909",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-kotlin-metadata-version-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true
@@ -159,69 +159,115 @@
     },
     {
       "closure": {
-        "artifact_bound": false,
-        "closed": false,
-        "dedicated_to_this_cell": false,
-        "first_attempt_pass": false,
-        "harness_bound": false,
-        "identity_bound": false,
-        "oracle_bound": false,
-        "retry_count_zero": false,
-        "source_bound": false,
-        "trace_bound": false
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
       },
       "dedicated_execution": {
-        "artifact": null,
-        "attempts": null,
-        "compiler_runtime_platform_identity": null,
-        "harness_digest": null,
-        "oracle": null,
-        "retries": null,
-        "source_digest": null,
-        "trace": null
+        "artifact": {
+          "bytes": 3514,
+          "digest": "sha256:c40793411f7f1ca5f81cd8bc4168531d6b5439481c903ec188997805fc7d8629",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-kotlin-metadata-version-compatibility-integration-security-kotlin-2-4-10-js-node.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 K2 IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "node": "v25.2.1",
+          "runtime": "Kotlin/JS IR metadata compatibility on Node.js",
+          "variant_id": "kotlin-2.4.10-js-node"
+        },
+        "harness_digest": "sha256:a3cf89c8b1309b5696c40db52d40014186b7c74d9b7147bde365a5c7d88086ac",
+        "oracle": {
+          "assertion": "supported KMP metadata executes and future metadata is rejected by the default target compiler",
+          "kind": "kotlin-kmp-metadata-version-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "compatibility-integration"
+        },
+        "retries": 0,
+        "source_digest": "sha256:1d5fbac6286fe61640af033ec9ba64590edaab3e2b8c223b5910b43c6c8c287f",
+        "trace": {
+          "action_stream": true,
+          "bytes": 4060,
+          "digest": "sha256:12794a1bdb21c931c3e8ad06e76bcb362eea550278c43f863fb3b7cc895261f8",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-abi-kotlin-metadata-version-compatibility-integration-security-kotlin-2-4-10-js-node.trace.json",
+          "resource_stream": true
+        }
       },
       "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
-      "gaps": [
-        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
-        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
-      ],
+      "gaps": [],
       "id": "cell.abi.kotlin-metadata-version.compatibility-integration.security.kotlin-2.4.10-js-node",
       "scenario": "security",
-      "status": "explicit-gap",
+      "status": "dedicated-runtime-pass",
       "surface_id": "compatibility-integration",
       "variant_id": "kotlin-2.4.10-js-node"
     },
     {
       "closure": {
-        "artifact_bound": false,
-        "closed": false,
-        "dedicated_to_this_cell": false,
-        "first_attempt_pass": false,
-        "harness_bound": false,
-        "identity_bound": false,
-        "oracle_bound": false,
-        "retry_count_zero": false,
-        "source_bound": false,
-        "trace_bound": false
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
       },
       "dedicated_execution": {
-        "artifact": null,
-        "attempts": null,
-        "compiler_runtime_platform_identity": null,
-        "harness_digest": null,
-        "oracle": null,
-        "retries": null,
-        "source_digest": null,
-        "trace": null
+        "artifact": {
+          "bytes": 3560,
+          "digest": "sha256:f49d48d97f8116b34eca83328c96425855d725794a6be296a14cadd2c5accdee",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-kotlin-metadata-version-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 K2 IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "node": "v25.2.1",
+          "runtime": "Kotlin/Wasm JS metadata compatibility on Node.js",
+          "variant_id": "kotlin-2.4.10-wasm-js-node"
+        },
+        "harness_digest": "sha256:a3cf89c8b1309b5696c40db52d40014186b7c74d9b7147bde365a5c7d88086ac",
+        "oracle": {
+          "assertion": "supported KMP metadata executes and future metadata is rejected by the default target compiler",
+          "kind": "kotlin-kmp-metadata-version-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "compatibility-integration"
+        },
+        "retries": 0,
+        "source_digest": "sha256:1d5fbac6286fe61640af033ec9ba64590edaab3e2b8c223b5910b43c6c8c287f",
+        "trace": {
+          "action_stream": true,
+          "bytes": 4102,
+          "digest": "sha256:20a5f9084475ab487c8c592b5ea7336cbb14640a92e874e4ce249a56dd5fc305",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-abi-kotlin-metadata-version-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.trace.json",
+          "resource_stream": true
+        }
       },
       "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
-      "gaps": [
-        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
-        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
-      ],
+      "gaps": [],
       "id": "cell.abi.kotlin-metadata-version.compatibility-integration.security.kotlin-2.4.10-wasm-js-node",
       "scenario": "security",
-      "status": "explicit-gap",
+      "status": "dedicated-runtime-pass",
       "surface_id": "compatibility-integration",
       "variant_id": "kotlin-2.4.10-wasm-js-node"
     },
@@ -275,7 +321,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 3544,
-          "digest": "sha256:a8acf6b0a72a8b27820996a93588d29e2bb6e40f523ff311e2c653f83976de78",
+          "digest": "sha256:1dc9d383874f0b90f883fc622982b2f55b11414831a4c0a0326291dce03c0392",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-kotlin-metadata-version-migration-evolution-deprecation-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -300,8 +346,8 @@
         "source_digest": "sha256:f2a0f6a0108c3b27d7e5dd7ff8734ba8435960a3459753fa5c38f41d50d828c9",
         "trace": {
           "action_stream": true,
-          "bytes": 3640,
-          "digest": "sha256:a67ba27d6959fec1bf1b88309f2ff4c9abe7a6727e2c640ec5697ad78cedce39",
+          "bytes": 3894,
+          "digest": "sha256:98540b074479128358b927b61dd34cdab23bd20cd11ee060c350f49c9db1faff",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-kotlin-metadata-version-migration-evolution-deprecation-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true
@@ -317,69 +363,115 @@
     },
     {
       "closure": {
-        "artifact_bound": false,
-        "closed": false,
-        "dedicated_to_this_cell": false,
-        "first_attempt_pass": false,
-        "harness_bound": false,
-        "identity_bound": false,
-        "oracle_bound": false,
-        "retry_count_zero": false,
-        "source_bound": false,
-        "trace_bound": false
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
       },
       "dedicated_execution": {
-        "artifact": null,
-        "attempts": null,
-        "compiler_runtime_platform_identity": null,
-        "harness_digest": null,
-        "oracle": null,
-        "retries": null,
-        "source_digest": null,
-        "trace": null
+        "artifact": {
+          "bytes": 3571,
+          "digest": "sha256:ba89bc4fdd324500afa1362125aa0517a68269d8af73971c035c3ce87411acf0",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-kotlin-metadata-version-migration-evolution-deprecation-security-kotlin-2-4-10-js-node.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 K2 IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "node": "v25.2.1",
+          "runtime": "Kotlin/JS IR metadata compatibility on Node.js",
+          "variant_id": "kotlin-2.4.10-js-node"
+        },
+        "harness_digest": "sha256:a3cf89c8b1309b5696c40db52d40014186b7c74d9b7147bde365a5c7d88086ac",
+        "oracle": {
+          "assertion": "future KMP metadata is rejected by default and an explicit isolated override reaches the target runtime without weakening the oracle",
+          "kind": "kotlin-kmp-metadata-version-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "migration-evolution-deprecation"
+        },
+        "retries": 0,
+        "source_digest": "sha256:1d5fbac6286fe61640af033ec9ba64590edaab3e2b8c223b5910b43c6c8c287f",
+        "trace": {
+          "action_stream": true,
+          "bytes": 4080,
+          "digest": "sha256:a0c94c54bf75c06626ebeb5066248d963a09f2287d2370f1337dd8d74bd3c849",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-abi-kotlin-metadata-version-migration-evolution-deprecation-security-kotlin-2-4-10-js-node.trace.json",
+          "resource_stream": true
+        }
       },
       "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
-      "gaps": [
-        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
-        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
-      ],
+      "gaps": [],
       "id": "cell.abi.kotlin-metadata-version.migration-evolution-deprecation.security.kotlin-2.4.10-js-node",
       "scenario": "security",
-      "status": "explicit-gap",
+      "status": "dedicated-runtime-pass",
       "surface_id": "migration-evolution-deprecation",
       "variant_id": "kotlin-2.4.10-js-node"
     },
     {
       "closure": {
-        "artifact_bound": false,
-        "closed": false,
-        "dedicated_to_this_cell": false,
-        "first_attempt_pass": false,
-        "harness_bound": false,
-        "identity_bound": false,
-        "oracle_bound": false,
-        "retry_count_zero": false,
-        "source_bound": false,
-        "trace_bound": false
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
       },
       "dedicated_execution": {
-        "artifact": null,
-        "attempts": null,
-        "compiler_runtime_platform_identity": null,
-        "harness_digest": null,
-        "oracle": null,
-        "retries": null,
-        "source_digest": null,
-        "trace": null
+        "artifact": {
+          "bytes": 3619,
+          "digest": "sha256:7ced4aeebb17ecfa57ffbed0e740c6f36793856909ba90b0c21434f86cf0ea6c",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-kotlin-metadata-version-migration-evolution-deprecation-security-kotlin-2-4-10-wasm-js-node.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 K2 IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "node": "v25.2.1",
+          "runtime": "Kotlin/Wasm JS metadata compatibility on Node.js",
+          "variant_id": "kotlin-2.4.10-wasm-js-node"
+        },
+        "harness_digest": "sha256:a3cf89c8b1309b5696c40db52d40014186b7c74d9b7147bde365a5c7d88086ac",
+        "oracle": {
+          "assertion": "future KMP metadata is rejected by default and an explicit isolated override reaches the target runtime without weakening the oracle",
+          "kind": "kotlin-kmp-metadata-version-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "migration-evolution-deprecation"
+        },
+        "retries": 0,
+        "source_digest": "sha256:1d5fbac6286fe61640af033ec9ba64590edaab3e2b8c223b5910b43c6c8c287f",
+        "trace": {
+          "action_stream": true,
+          "bytes": 4124,
+          "digest": "sha256:0533999ad3e79935585fd544be515af3f49ee9d49ff6db36a5c808130ccebf28",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-abi-kotlin-metadata-version-migration-evolution-deprecation-security-kotlin-2-4-10-wasm-js-node.trace.json",
+          "resource_stream": true
+        }
       },
       "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
-      "gaps": [
-        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
-        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
-      ],
+      "gaps": [],
       "id": "cell.abi.kotlin-metadata-version.migration-evolution-deprecation.security.kotlin-2.4.10-wasm-js-node",
       "scenario": "security",
-      "status": "explicit-gap",
+      "status": "dedicated-runtime-pass",
       "surface_id": "migration-evolution-deprecation",
       "variant_id": "kotlin-2.4.10-wasm-js-node"
     },

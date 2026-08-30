@@ -4404,9 +4404,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "coroutines.child-failure-cancels-sibling"
@@ -4416,7 +4416,7 @@
             "kind": "test-report",
             "producer": "gradle-junit",
             "record": {
-              "digest": "sha256:0da825b1b0f7d40881b19d00d4a5c0e41045c154c1e35948db45943186cd3c3b",
+              "digest": "sha256:92c2d3f202fde087249932cb05b43118d9757914991f467a3b9498e3e2155a4a",
               "path": "evidence/coroutines.failure-propagation.evidence.json",
               "size_bytes": 978
             }
@@ -4538,9 +4538,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "coroutines.child-failure-cancels-sibling"
@@ -4550,7 +4550,7 @@
             "kind": "test-report",
             "producer": "gradle-junit",
             "record": {
-              "digest": "sha256:0da825b1b0f7d40881b19d00d4a5c0e41045c154c1e35948db45943186cd3c3b",
+              "digest": "sha256:92c2d3f202fde087249932cb05b43118d9757914991f467a3b9498e3e2155a4a",
               "path": "evidence/coroutines.failure-propagation.evidence.json",
               "size_bytes": 978
             }
@@ -5243,9 +5243,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "jvm.value-class-generic-boxing"
@@ -5255,7 +5255,7 @@
             "kind": "test-report",
             "producer": "gradle-junit",
             "record": {
-              "digest": "sha256:5ed1ea19d0779ad54d169d11069e1d73a27ddb280d1d464fadd2cd287a3c7817",
+              "digest": "sha256:25480b5a648db74816ef8dca014eed67e13d3d29eabb81ea82542e9c5adc13fa",
               "path": "evidence/jvm.value-class-boundary.evidence.json",
               "size_bytes": 948
             }
@@ -5376,9 +5376,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "coroutines.child-failure-cancels-sibling"
@@ -5388,7 +5388,7 @@
             "kind": "test-report",
             "producer": "gradle-junit",
             "record": {
-              "digest": "sha256:0da825b1b0f7d40881b19d00d4a5c0e41045c154c1e35948db45943186cd3c3b",
+              "digest": "sha256:92c2d3f202fde087249932cb05b43118d9757914991f467a3b9498e3e2155a4a",
               "path": "evidence/coroutines.failure-propagation.evidence.json",
               "size_bytes": 978
             }
@@ -5512,9 +5512,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -5524,7 +5524,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -5656,9 +5656,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -5668,7 +5668,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -5800,9 +5800,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -5812,7 +5812,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -5945,9 +5945,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -5957,7 +5957,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -6087,9 +6087,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -6099,7 +6099,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -6228,9 +6228,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -6240,7 +6240,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -6372,9 +6372,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -6384,7 +6384,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -6516,9 +6516,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -6528,7 +6528,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -6658,9 +6658,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -6670,7 +6670,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -6801,9 +6801,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -6813,7 +6813,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -6989,9 +6989,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "jvm.value-class-generic-boxing"
@@ -7001,7 +7001,7 @@
             "kind": "test-report",
             "producer": "gradle-junit",
             "record": {
-              "digest": "sha256:5ed1ea19d0779ad54d169d11069e1d73a27ddb280d1d464fadd2cd287a3c7817",
+              "digest": "sha256:25480b5a648db74816ef8dca014eed67e13d3d29eabb81ea82542e9c5adc13fa",
               "path": "evidence/jvm.value-class-boundary.evidence.json",
               "size_bytes": 948
             }
@@ -7235,9 +7235,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -7247,7 +7247,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -7380,9 +7380,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -7392,7 +7392,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -7525,9 +7525,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -7537,7 +7537,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -7670,9 +7670,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -7682,7 +7682,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -7813,9 +7813,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -7825,7 +7825,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -7954,9 +7954,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -7966,7 +7966,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -8097,9 +8097,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -8109,7 +8109,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -8241,9 +8241,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -8253,7 +8253,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -8384,9 +8384,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -8396,7 +8396,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -8527,9 +8527,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -8539,7 +8539,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -8936,9 +8936,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -8948,7 +8948,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -9081,9 +9081,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -9093,7 +9093,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -9342,9 +9342,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -9354,7 +9354,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -9487,9 +9487,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -9499,7 +9499,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -9630,9 +9630,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -9642,7 +9642,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -9775,9 +9775,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -9787,7 +9787,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -10143,9 +10143,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -10155,7 +10155,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -10441,9 +10441,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "coroutines.child-failure-cancels-sibling"
@@ -10453,7 +10453,7 @@
             "kind": "test-report",
             "producer": "gradle-junit",
             "record": {
-              "digest": "sha256:0da825b1b0f7d40881b19d00d4a5c0e41045c154c1e35948db45943186cd3c3b",
+              "digest": "sha256:92c2d3f202fde087249932cb05b43118d9757914991f467a3b9498e3e2155a4a",
               "path": "evidence/coroutines.failure-propagation.evidence.json",
               "size_bytes": 978
             }
@@ -10575,9 +10575,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -10587,7 +10587,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -10716,9 +10716,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -10728,7 +10728,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -10857,9 +10857,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -10869,7 +10869,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -11001,9 +11001,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -11013,7 +11013,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -11145,9 +11145,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -11157,7 +11157,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -11288,9 +11288,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -11300,7 +11300,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -11432,9 +11432,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -11444,7 +11444,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -11575,9 +11575,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -11587,7 +11587,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -11715,9 +11715,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -11727,7 +11727,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -11856,9 +11856,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -11868,7 +11868,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -12012,7 +12012,7 @@
             "kind": "capture",
             "producer": "spdx-lock-generator",
             "record": {
-              "digest": "sha256:9b51a1ca8fb9acabba9179dad8b751fa05b3c0d8908aeac37fa676527cf06c2e",
+              "digest": "sha256:26634d1c3b9dafbf8a2bc93b307dcf96213e4caa0850f1f907a02eeda1517c80",
               "path": "evidence/publication.complete-sbom.evidence.json",
               "size_bytes": 980
             }
@@ -12266,9 +12266,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -12278,7 +12278,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -12408,9 +12408,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -12420,7 +12420,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -12550,9 +12550,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -12562,7 +12562,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -12694,9 +12694,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -12706,7 +12706,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -12839,9 +12839,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -12851,7 +12851,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -12982,9 +12982,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -12994,7 +12994,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -13124,9 +13124,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -13136,7 +13136,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -13267,9 +13267,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -13279,7 +13279,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -13408,9 +13408,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -13420,7 +13420,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -13548,9 +13548,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -13560,7 +13560,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -13844,9 +13844,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "jvm.value-class-generic-boxing"
@@ -13856,7 +13856,7 @@
             "kind": "test-report",
             "producer": "gradle-junit",
             "record": {
-              "digest": "sha256:5ed1ea19d0779ad54d169d11069e1d73a27ddb280d1d464fadd2cd287a3c7817",
+              "digest": "sha256:25480b5a648db74816ef8dca014eed67e13d3d29eabb81ea82542e9c5adc13fa",
               "path": "evidence/jvm.value-class-boundary.evidence.json",
               "size_bytes": 948
             }
@@ -13977,9 +13977,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -13989,7 +13989,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -14120,9 +14120,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -14132,7 +14132,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -14374,9 +14374,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -14386,7 +14386,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -14515,9 +14515,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -14527,7 +14527,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -14655,9 +14655,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -14667,7 +14667,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -14798,9 +14798,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -14810,7 +14810,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -15162,9 +15162,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+              "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
               "path": "evidence/artifacts/lab-results.json",
-              "size_bytes": 19456
+              "size_bytes": 22259
             },
             "claim_ids": [
               "gradle.plugin-registers-probe-task"
@@ -15174,7 +15174,7 @@
             "kind": "test-report",
             "producer": "gradle-testkit",
             "record": {
-              "digest": "sha256:3a866b89d5e9e8419ee010ad528891598e1895b64478fee8b889a70d9f6c5d37",
+              "digest": "sha256:8ddbde19d985a0dc4ec715a0516e4012d361c232c04a1cdde929ff81b56032b5",
               "path": "evidence/gradle.plugin-consumer.evidence.json",
               "size_bytes": 972
             }
@@ -15600,7 +15600,7 @@
             "kind": "capture",
             "producer": "spdx-lock-generator",
             "record": {
-              "digest": "sha256:9b51a1ca8fb9acabba9179dad8b751fa05b3c0d8908aeac37fa676527cf06c2e",
+              "digest": "sha256:26634d1c3b9dafbf8a2bc93b307dcf96213e4caa0850f1f907a02eeda1517c80",
               "path": "evidence/publication.complete-sbom.evidence.json",
               "size_bytes": 980
             }
@@ -15755,7 +15755,7 @@
             "kind": "capture",
             "producer": "spdx-lock-generator",
             "record": {
-              "digest": "sha256:9b51a1ca8fb9acabba9179dad8b751fa05b3c0d8908aeac37fa676527cf06c2e",
+              "digest": "sha256:26634d1c3b9dafbf8a2bc93b307dcf96213e4caa0850f1f907a02eeda1517c80",
               "path": "evidence/publication.complete-sbom.evidence.json",
               "size_bytes": 980
             }
@@ -15888,7 +15888,7 @@
             "kind": "capture",
             "producer": "spdx-lock-generator",
             "record": {
-              "digest": "sha256:9b51a1ca8fb9acabba9179dad8b751fa05b3c0d8908aeac37fa676527cf06c2e",
+              "digest": "sha256:26634d1c3b9dafbf8a2bc93b307dcf96213e4caa0850f1f907a02eeda1517c80",
               "path": "evidence/publication.complete-sbom.evidence.json",
               "size_bytes": 980
             }
@@ -16010,7 +16010,7 @@
         ],
         "implementation_bindings": [
           {
-            "digest": "sha256:dded128debe22c7899164c369009791c4974ad5f28d3a9ae1f4e234cce29d357",
+            "digest": "sha256:136e258e76ea93edfe85ed485deff00fc49cc670c3247234fb395d2271d52afd",
             "path": "evals/definitive-skill-router.json",
             "size_bytes": 238527,
             "variant_id": "evals:definitive-skill-router.json"
@@ -16022,7 +16022,7 @@
             "variant_id": "evals:kotlin-reference-router.agent-forward-eval.json"
           },
           {
-            "digest": "sha256:c9e38d67250ace3aae7472ac2b560d644da633f249cf1a83464781656d82905e",
+            "digest": "sha256:c4e4938321af35ddd95ddbdc39d32052ba6b28f07d2530a5e5fbd8f1ed045b0a",
             "path": "evals/kotlin-reference-router.definitive-skill-eval-report.json",
             "size_bytes": 593301,
             "variant_id": "evals:kotlin-reference-router.definitive-skill-eval-report.json"

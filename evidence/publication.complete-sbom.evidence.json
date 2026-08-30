@@ -15,7 +15,7 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:152c997f3996aefb163d8eba376bfe51554ef86f694872f28c9548676b00969e",
+  "harness_digest": "sha256:7601d33c51b09af1983fe57d622b08a326158c740f524557953483f518a800f4",
   "harness_path": "kotlin-js-store/package-lock.json",
   "id": "publication.complete-sbom",
   "kind": "capture",

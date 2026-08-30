@@ -49,8 +49,10 @@ def main() -> None:
             expect_rejected(root, lambda item: item["runtime_gaps"][0].update(completion_credit=True))
             expect_rejected(root, lambda item: item.update(runtime_gaps=[]))
             expect_rejected(root, lambda item: item["executed_variant_ids"].append(native_variant))
+        expect_rejected(root, lambda item: item["tranche_contract"]["row_runtime_contracts"].pop())
+        expect_rejected(root, lambda item: item["tranche_contract"]["publication_contract"].update(graph_publish="ci-partial-run"))
 
-    print("security-001 Native gap Gate: positive=1 negative=3 completion-credit=0 compile-only-credit=0")
+    print("security-001 tranche Gate: positive=1 negative=5 completion-credit=0 compile-only-credit=0")
 
 
 if __name__ == "__main__":

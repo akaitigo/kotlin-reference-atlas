@@ -14,7 +14,7 @@
   "candidate_evidence": [
     {
       "artifact": {
-        "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+        "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
         "exists": true,
         "path": "evidence/artifacts/lab-results.json"
       },
@@ -33,7 +33,7 @@
       "producer": "gradle-junit",
       "record": {
         "bytes": 977,
-        "digest": "sha256:c1009b08a579a9868350571e66d0f89d5ad51567287e088259b4b3e0a1fbe576",
+        "digest": "sha256:57c71abf17c922914ce379ee4e68445d6b4a2fdc9c3b5d15ea6684274f65c2a5",
         "path": "evidence/compiler.runtime-shapes.evidence.json"
       },
       "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
@@ -117,8 +117,8 @@
       },
       "dedicated_execution": {
         "artifact": {
-          "bytes": 2322,
-          "digest": "sha256:af2d5d34331ed5e61991bf337e9084e333ec228f577c9dea9fb14e177cecda0d",
+          "bytes": 2320,
+          "digest": "sha256:d7af1aa8d09b94ae6c2e860f82b2f7e93625882bda4afa6865f025c9cab3cdb8",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-foundations-mechanics-security-kotlin-2-4-10-k2-jvm-ir-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -144,8 +144,8 @@
         "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
         "trace": {
           "action_stream": true,
-          "bytes": 2623,
-          "digest": "sha256:87a61744be858bf92ce77ff4a19450e44949ba725497ef1bff1b3713d5b71b12",
+          "bytes": 2867,
+          "digest": "sha256:8002b371e5006e07ed88de49f360324f01b6fbb146f8774127fb9d9269e9d2c2",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-foundations-mechanics-security-kotlin-2-4-10-k2-jvm-ir-openjdk17.trace.json",
           "resource_stream": true
@@ -174,8 +174,8 @@
       },
       "dedicated_execution": {
         "artifact": {
-          "bytes": 2404,
-          "digest": "sha256:27b6bbe9379bc70d01d1c2ed34246e5f3011d4c0a31dbfe9052db58e14552817",
+          "bytes": 2406,
+          "digest": "sha256:5fe7064bdc87dce7ec8f1a2ec6f06084f89e96db7cd6482d7cf149ae2a4986df",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-foundations-mechanics-security-kotlin-2-4-10-js-ir-node.artifact.json"
         },
         "attempts": 1,
@@ -201,8 +201,8 @@
         "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
         "trace": {
           "action_stream": true,
-          "bytes": 2694,
-          "digest": "sha256:cbc20677db663981709c4cf972cb3323291186a825c72d33fb4d64bbd6875a98",
+          "bytes": 2942,
+          "digest": "sha256:a7f6fbc809e9b83eb10a4895eb0cb6d12262317142d65b224677e7691f6d189f",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-foundations-mechanics-security-kotlin-2-4-10-js-ir-node.trace.json",
           "resource_stream": true
@@ -232,7 +232,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2435,
-          "digest": "sha256:15aa9ecb6b6447bf81c3b1a4cc01e8babbcb71796b88cebef636fcfe1cba08bd",
+          "digest": "sha256:019d8f4442ee4f7140ac045635226dc8404272578e400a45f77d16163882f379",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-foundations-mechanics-security-kotlin-2-4-10-wasm-js-node.artifact.json"
         },
         "attempts": 1,
@@ -258,8 +258,8 @@
         "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
         "trace": {
           "action_stream": true,
-          "bytes": 2721,
-          "digest": "sha256:a803f10fb2b82972593243e1bed61c834c52863bf6bdc46c345d114a3995d01a",
+          "bytes": 2967,
+          "digest": "sha256:dbef26cc8f7585671300ca112545787b562749df2ebe36a238e6261d05c6deaf",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-foundations-mechanics-security-kotlin-2-4-10-wasm-js-node.trace.json",
           "resource_stream": true
@@ -323,7 +323,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2352,
-          "digest": "sha256:5056f5ca959238ecae86efb643d0dda7b6ee0f2f0a203a31dc4167498837b844",
+          "digest": "sha256:84bd642d27dd0aefcec1446fd038bd13a2211e9db10ba23c724088bcf29dc61f",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-performance-capacity-cost-security-kotlin-2-4-10-k2-jvm-ir-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -349,8 +349,8 @@
         "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
         "trace": {
           "action_stream": true,
-          "bytes": 2638,
-          "digest": "sha256:fa91d0be63308a8731e59acd261eeafb2c996af822e028a6d90130640e340db7",
+          "bytes": 2884,
+          "digest": "sha256:2b4c2082c9bf6c795213bf5affb2ac4200de7df675a27a1d918daf84829aee1e",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-performance-capacity-cost-security-kotlin-2-4-10-k2-jvm-ir-openjdk17.trace.json",
           "resource_stream": true
@@ -380,7 +380,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2434,
-          "digest": "sha256:0536e225ef16370a243bdd7444718bea48eda12c86a89ac98c9a0bf3ea6d298a",
+          "digest": "sha256:ee4518cf6f29795d48c8033db098f9f5be18cf0ac5c2f5988685956956b19d78",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-performance-capacity-cost-security-kotlin-2-4-10-js-ir-node.artifact.json"
         },
         "attempts": 1,
@@ -406,8 +406,8 @@
         "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
         "trace": {
           "action_stream": true,
-          "bytes": 2709,
-          "digest": "sha256:36fb81148c00cf7a8b4be357761f63d466ee4850038fbc8d5f58eb7b8ba473fc",
+          "bytes": 2955,
+          "digest": "sha256:2075460245ba3e07562e5c3e2c5fe0e25b69f19de2cc7cd88777a24ed15318c5",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-performance-capacity-cost-security-kotlin-2-4-10-js-ir-node.trace.json",
           "resource_stream": true
@@ -437,7 +437,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2463,
-          "digest": "sha256:c3fccf5f712f0f9dfb2125f602ddb5a2c0ed2d603b915264caff2893d2ce646d",
+          "digest": "sha256:48acb38250387def62641a2698172a11506c4c730c5e0ebf2c24ad6afdb3ac6f",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-performance-capacity-cost-security-kotlin-2-4-10-wasm-js-node.artifact.json"
         },
         "attempts": 1,
@@ -463,8 +463,8 @@
         "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
         "trace": {
           "action_stream": true,
-          "bytes": 2734,
-          "digest": "sha256:16c08333daeb1bae6f03f8b096866cfcaed74e9216793bd73b623fb17b328593",
+          "bytes": 2980,
+          "digest": "sha256:4d57d763dafd001d5aa471c764aecd0979e06a8da229f12ddbc9d99bfe30064c",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-performance-capacity-cost-security-kotlin-2-4-10-wasm-js-node.trace.json",
           "resource_stream": true
@@ -527,8 +527,8 @@
       },
       "dedicated_execution": {
         "artifact": {
-          "bytes": 2362,
-          "digest": "sha256:f469918069659bd64dba357d7401d6a5cb30f7b83a13eca1a119fe884121a504",
+          "bytes": 2361,
+          "digest": "sha256:52f3ebc373c4dca8356151dfe5e8433a551fa0373ac5d3362f7d6fd653b06f90",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-compatibility-integration-security-kotlin-2-4-10-k2-jvm-ir-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -554,8 +554,8 @@
         "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
         "trace": {
           "action_stream": true,
-          "bytes": 2643,
-          "digest": "sha256:b619fc99c7197703b016444f3069ef885ffd429cc718ec4ddd64bfee945b8cbc",
+          "bytes": 2888,
+          "digest": "sha256:bd6029ef5f0de8d278affde1ebe8efdb3a33aead01cbff59f604740cc9b3140c",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-compatibility-integration-security-kotlin-2-4-10-k2-jvm-ir-openjdk17.trace.json",
           "resource_stream": true
@@ -584,8 +584,8 @@
       },
       "dedicated_execution": {
         "artifact": {
-          "bytes": 2446,
-          "digest": "sha256:c1521a93197a2d4b88043434bfe2c17f560511da611e91332c6e772953753fb3",
+          "bytes": 2444,
+          "digest": "sha256:d2efe08f0e0a3b326289ae990c2b015168317f8a80d93d1236ae5ba5a9d51610",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-compatibility-integration-security-kotlin-2-4-10-js-ir-node.artifact.json"
         },
         "attempts": 1,
@@ -611,8 +611,8 @@
         "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
         "trace": {
           "action_stream": true,
-          "bytes": 2716,
-          "digest": "sha256:bc4fcb25d36cc5147be6a715d63b0b98e598b19ff57105559aedd8c7ca9ea26b",
+          "bytes": 2960,
+          "digest": "sha256:a8426814c75bf093ac58dda80fad684b0c43de370e0150e5425e345bb1adc458",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-compatibility-integration-security-kotlin-2-4-10-js-ir-node.trace.json",
           "resource_stream": true
@@ -641,8 +641,8 @@
       },
       "dedicated_execution": {
         "artifact": {
-          "bytes": 2473,
-          "digest": "sha256:8ede0ce00098d5f21bcabe6b227759e1f7d9f773c13ba62a2d99403c7fc9faa2",
+          "bytes": 2475,
+          "digest": "sha256:451583459173761e37f56719c638436de0d60b45cb89f50b530b3803797f0463",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.artifact.json"
         },
         "attempts": 1,
@@ -668,8 +668,8 @@
         "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
         "trace": {
           "action_stream": true,
-          "bytes": 2739,
-          "digest": "sha256:b2474ad814b5d4b8becd85cc96e35ef038231929c9a942296a18cdc7e61fddeb",
+          "bytes": 2987,
+          "digest": "sha256:b202a301b959e33fb60e2541b9a86adac26c805ab5013273f769d3eeb4379b90",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.trace.json",
           "resource_stream": true

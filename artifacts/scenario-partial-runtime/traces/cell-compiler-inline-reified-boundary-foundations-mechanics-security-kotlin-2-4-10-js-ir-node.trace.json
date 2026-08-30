@@ -15,6 +15,10 @@
     ":labs:abi-compat-consumer:migrationCompatibleTest",
     ":labs:abi-metadata-consumer-supported:test",
     ":labs:abi-metadata-consumer-override:test",
+    ":labs:abi-metadata-kmp-consumer-supported:jsNodeTest",
+    ":labs:abi-metadata-kmp-consumer-supported:wasmJsNodeTest",
+    ":labs:abi-metadata-kmp-consumer-override:jsNodeTest",
+    ":labs:abi-metadata-kmp-consumer-override:wasmJsNodeTest",
     "--rerun-tasks",
     "--no-daemon"
   ],
@@ -49,6 +53,6 @@
   "testcase": {
     "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
     "name": "foundations mechanics rejects a mismatched runtime type token[js, node]",
-    "time": "0.0"
+    "time": "0.001"
   }
 }

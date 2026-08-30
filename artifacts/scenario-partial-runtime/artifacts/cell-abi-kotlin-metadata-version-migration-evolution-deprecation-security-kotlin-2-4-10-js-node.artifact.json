@@ -1,0 +1,61 @@
+{
+  "cell_id": "cell.abi.kotlin-metadata-version.migration-evolution-deprecation.security.kotlin-2.4.10-js-node",
+  "compiler_artifacts": [
+    {
+      "bytes": 4357,
+      "digest": "sha256:878657930081404a1610a1fd509b0ec993f6e824e41e51880fef5e6d86b8340d",
+      "path": "labs/abi-metadata-kmp-consumer-supported/build/compileSync/js/test/testDevelopmentExecutable/kotlin/kotlin-reference-atlas-labs-abi-metadata-kmp-consumer-supported-test.js"
+    },
+    {
+      "bytes": 4404,
+      "digest": "sha256:24cfdf5c02e52b34f9d88028bdee87faeb61f6ff6c3e34dc93381666c1684a6b",
+      "path": "labs/abi-metadata-kmp-consumer-override/build/compileSync/js/test/testDevelopmentExecutable/kotlin/kotlin-reference-atlas-labs-abi-metadata-kmp-consumer-override-test.js"
+    },
+    {
+      "bytes": 442,
+      "digest": "sha256:cd3fd88a435b49d92c5959dad867c84e8f426ccd9c25a837a9ca147b162cacda",
+      "path": "labs/abi-metadata-kmp-api-future/build/classes/kotlin/js/main/default/manifest"
+    }
+  ],
+  "compiler_refusal": {
+    "consumer_readable_metadata_version": "2.5.0",
+    "exit_code": 1,
+    "output_digest": "sha256:1bda464fc35435ff9753ab5574662445ba14e17f3edde8a5365a4b81ac49c971",
+    "producer_metadata_version": "999.0.0",
+    "required_diagnostics": [
+      "Incompatible classes were found in dependencies",
+      "actual metadata version is 999.0.0",
+      "can read versions up to 2.5.0"
+    ],
+    "status": "expected-refusal"
+  },
+  "harness_digest": "sha256:a3cf89c8b1309b5696c40db52d40014186b7c74d9b7147bde365a5c7d88086ac",
+  "oracle": {
+    "assertion": "future KMP metadata is rejected by default and an explicit isolated override reaches the target runtime without weakening the oracle",
+    "kind": "kotlin-kmp-metadata-version-security",
+    "passed": true,
+    "scenario": "security",
+    "surface_id": "migration-evolution-deprecation"
+  },
+  "runtime_identity": {
+    "compiler": "Kotlin 2.4.10 K2 IR",
+    "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+    "host_architecture": "arm64",
+    "host_os": "Darwin",
+    "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+    "node": "v25.2.1",
+    "runtime": "Kotlin/JS IR metadata compatibility on Node.js",
+    "variant_id": "kotlin-2.4.10-js-node"
+  },
+  "runtime_test_result": {
+    "digest": "sha256:f0b58e26bb28551f6c3fc1f1b905bf7727353a93795b0e8c0a91630f6fd32794",
+    "path": "labs/abi-metadata-kmp-consumer-override/build/test-results/jsNodeTest/TEST-jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest.xml",
+    "testcase": {
+      "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest",
+      "name": "explicit multiplatform metadata override remains bounded by the runtime security oracle[js, node]",
+      "time": "0.0"
+    }
+  },
+  "schema_version": 1,
+  "source_digest": "sha256:1d5fbac6286fe61640af033ec9ba64590edaab3e2b8c223b5910b43c6c8c287f"
+}

@@ -14,7 +14,7 @@
   "candidate_evidence": [
     {
       "artifact": {
-        "digest": "sha256:7a5e30ae0e2de61b3ff5a78916605839bdfb377eb1f366b00e3d628e56fedd4d",
+        "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
         "exists": true,
         "path": "evidence/artifacts/lab-results.json"
       },
@@ -34,7 +34,7 @@
       "producer": "gradle-junit",
       "record": {
         "bytes": 997,
-        "digest": "sha256:f2020bb8c9eb7b9d56e0d9e8eafeb0e8dcc88186f7e574b3802269e5308c7374",
+        "digest": "sha256:66e726e0622efee3943921bbbddfd93582b7b048a797ff4e61c7ed626ef40df5",
         "path": "evidence/semantics.language-types.evidence.json"
       },
       "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
