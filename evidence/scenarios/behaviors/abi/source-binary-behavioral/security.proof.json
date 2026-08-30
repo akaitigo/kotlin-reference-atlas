@@ -14,7 +14,7 @@
   "candidate_evidence": [
     {
       "artifact": {
-        "digest": "sha256:b9f9d5fe9f2def9f6386e609f0ce8a943e1f881e5c649cbcc2911c27c38e8730",
+        "digest": "sha256:db76ea2ecad87e059484a4c8d4846f8af01e35993f370086ee0a92b4945c04bf",
         "exists": true,
         "path": "evidence/artifacts/lab-results.json"
       },
@@ -33,7 +33,7 @@
       "producer": "gradle-junit",
       "record": {
         "bytes": 1077,
-        "digest": "sha256:44ccd7c62a08ae78ad8b04a3adf837745a1fa4fbe623988ed6f27be3dd4f1621",
+        "digest": "sha256:faf9eb9d2a45b4e6fc19fb791e8cdbb0027aeaacabd9a3b1256e1ca66fe5811e",
         "path": "evidence/evolution.compatibility-migration.evidence.json"
       },
       "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
@@ -59,7 +59,7 @@
   },
   "gaps": [
     "This Behavior has no subject-specific oracle classified for this scenario.",
-    "All 8 Surface×Scenario×Variant closure cells remain explicit gaps.",
+    "6 of 8 Surface×Scenario×Variant closure cells remain explicit gaps.",
     "Mapped Target Evidence is candidate context only; unrelated Artifact metadata cannot close a dedicated cell.",
     "The mapped Claim is shared by multiple Authority inventory Behaviors and is not a dedicated Behavior proof.",
     "No human-reviewed Authority anchor decision binds this Atomic behavior; completion credit is zero."
@@ -103,35 +103,57 @@
   "surface_scenario_variant_proofs": [
     {
       "closure": {
-        "artifact_bound": false,
-        "closed": false,
-        "dedicated_to_this_cell": false,
-        "first_attempt_pass": false,
-        "harness_bound": false,
-        "identity_bound": false,
-        "oracle_bound": false,
-        "retry_count_zero": false,
-        "source_bound": false,
-        "trace_bound": false
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
       },
       "dedicated_execution": {
-        "artifact": null,
-        "attempts": null,
-        "compiler_runtime_platform_identity": null,
-        "harness_digest": null,
-        "oracle": null,
-        "retries": null,
-        "source_digest": null,
-        "trace": null
+        "artifact": {
+          "bytes": 3604,
+          "digest": "sha256:457e05648009a79702c822b97e98266e9b2ae5e81361b4d62aebbf956959f1c1",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-source-binary-behavioral-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 JVM IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "runtime": "JVM binary linkage on OpenJDK 17",
+          "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+        },
+        "harness_digest": "sha256:e402a231cde4162e8463f059ce862f8d7ff8f682f467488e691e9333a35599a7",
+        "oracle": {
+          "assertion": "the unchanged v1 consumer runs with v1 and rejects a producer that removed the linked descriptor",
+          "kind": "kotlin-jvm-binary-linkage-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "compatibility-integration"
+        },
+        "retries": 0,
+        "source_digest": "sha256:0e326ff8e229fae1754aea542c383c20dd14bd2d772ac27886cfa6e80bc8fd6c",
+        "trace": {
+          "action_stream": true,
+          "bytes": 3598,
+          "digest": "sha256:7511a10b5aa747b75405ce9f0e0ccb49cf0427a443ec62395c67dc237aae6b02",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-abi-source-binary-behavioral-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
+          "resource_stream": true
+        }
       },
       "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
-      "gaps": [
-        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
-        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
-      ],
+      "gaps": [],
       "id": "cell.abi.source-binary-behavioral.compatibility-integration.security.kotlin-2.4.10-jvm-openjdk17",
       "scenario": "security",
-      "status": "explicit-gap",
+      "status": "dedicated-runtime-pass",
       "surface_id": "compatibility-integration",
       "variant_id": "kotlin-2.4.10-jvm-openjdk17"
     },
@@ -239,35 +261,57 @@
     },
     {
       "closure": {
-        "artifact_bound": false,
-        "closed": false,
-        "dedicated_to_this_cell": false,
-        "first_attempt_pass": false,
-        "harness_bound": false,
-        "identity_bound": false,
-        "oracle_bound": false,
-        "retry_count_zero": false,
-        "source_bound": false,
-        "trace_bound": false
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
       },
       "dedicated_execution": {
-        "artifact": null,
-        "attempts": null,
-        "compiler_runtime_platform_identity": null,
-        "harness_digest": null,
-        "oracle": null,
-        "retries": null,
-        "source_digest": null,
-        "trace": null
+        "artifact": {
+          "bytes": 3593,
+          "digest": "sha256:83c2ba3c62e6b463f749dd1301fde8bda606dc469bd2cff6e3135992054673c2",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-source-binary-behavioral-migration-evolution-deprecation-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 JVM IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "runtime": "JVM binary linkage on OpenJDK 17",
+          "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+        },
+        "harness_digest": "sha256:e402a231cde4162e8463f059ce862f8d7ff8f682f467488e691e9333a35599a7",
+        "oracle": {
+          "assertion": "the unchanged v1 consumer rejects the breaking producer and recovers with the descriptor-preserving producer",
+          "kind": "kotlin-jvm-binary-linkage-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "migration-evolution-deprecation"
+        },
+        "retries": 0,
+        "source_digest": "sha256:0e326ff8e229fae1754aea542c383c20dd14bd2d772ac27886cfa6e80bc8fd6c",
+        "trace": {
+          "action_stream": true,
+          "bytes": 3563,
+          "digest": "sha256:3cdd70feae97c0c5db012db1fbe15f1ba4994cf4ecc41a7d91fb9f32b4b09777",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-abi-source-binary-behavioral-migration-evolution-deprecation-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
+          "resource_stream": true
+        }
       },
       "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
-      "gaps": [
-        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
-        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
-      ],
+      "gaps": [],
       "id": "cell.abi.source-binary-behavioral.migration-evolution-deprecation.security.kotlin-2.4.10-jvm-openjdk17",
       "scenario": "security",
-      "status": "explicit-gap",
+      "status": "dedicated-runtime-pass",
       "surface_id": "migration-evolution-deprecation",
       "variant_id": "kotlin-2.4.10-jvm-openjdk17"
     },

@@ -4,6 +4,54 @@
     {
       "cases": [
         {
+          "class": "dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBaselineTest",
+          "name": "compatibility integration executes the v1 binary contract without privilege change()",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-consumer",
+      "suite": "dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBaselineTest",
+      "task": "compatibilityBaselineTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBreakingTest",
+          "name": "compatibility integration rejects a binary incompatible producer()",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-consumer",
+      "suite": "dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBreakingTest",
+      "task": "compatibilityBreakingTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.compat.MigrationBreakingTest",
+          "name": "migration evolution observes the removed descriptor as a linkage failure()",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-consumer",
+      "suite": "dev.akaitigo.kotlinatlas.abi.compat.MigrationBreakingTest",
+      "task": "migrationBreakingTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.compat.MigrationCompatibleTest",
+          "name": "migration evolution preserves the old descriptor during recovery()",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-consumer",
+      "suite": "dev.akaitigo.kotlinatlas.abi.compat.MigrationCompatibleTest",
+      "task": "migrationCompatibleTest"
+    },
+    {
+      "cases": [
+        {
           "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
           "name": "compatibility integration keeps expect actual value representation executable[js, node]",
           "status": "pass"
@@ -387,6 +435,6 @@
       "task": "test"
     }
   ],
-  "test_case_count": 56,
+  "test_case_count": 60,
   "verdict": "pass"
 }

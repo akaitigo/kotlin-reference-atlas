@@ -1,0 +1,70 @@
+{
+  "attempt": 1,
+  "cell_id": "cell.abi.source-binary-behavioral.migration-evolution-deprecation.security.kotlin-2.4.10-jvm-openjdk17",
+  "command": [
+    "./gradlew",
+    ":labs:abi-runtime-security:jvmTest",
+    ":labs:abi-runtime-security:jsNodeTest",
+    ":labs:abi-runtime-security:wasmJsNodeTest",
+    ":labs:abi-compat-consumer:compatibilityBaselineTest",
+    ":labs:abi-compat-consumer:compatibilityBreakingTest",
+    ":labs:abi-compat-consumer:migrationBreakingTest",
+    ":labs:abi-compat-consumer:migrationCompatibleTest",
+    "--rerun-tasks",
+    "--no-daemon"
+  ],
+  "outcome": "expected",
+  "phases": [
+    {
+      "digest": "sha256:b639916cbd8eda4ebf43ca6deb2e0073d3cd9c6ef64a26ecc70f519a30d6f4f6",
+      "path": "labs/abi-compat-consumer/build/test-results/migrationBreakingTest/TEST-dev.akaitigo.kotlinatlas.abi.compat.MigrationBreakingTest.xml",
+      "task": "migrationBreakingTest",
+      "testcase": {
+        "classname": "dev.akaitigo.kotlinatlas.abi.compat.MigrationBreakingTest",
+        "name": "migration evolution observes the removed descriptor as a linkage failure()",
+        "time": "0.14"
+      }
+    },
+    {
+      "digest": "sha256:f1af5ff247ef4e6fa1ab23eafad4487878cab3f89e5f9d5c155656f8d5211deb",
+      "path": "labs/abi-compat-consumer/build/test-results/migrationCompatibleTest/TEST-dev.akaitigo.kotlinatlas.abi.compat.MigrationCompatibleTest.xml",
+      "task": "migrationCompatibleTest",
+      "testcase": {
+        "classname": "dev.akaitigo.kotlinatlas.abi.compat.MigrationCompatibleTest",
+        "name": "migration evolution preserves the old descriptor during recovery()",
+        "time": "0.029"
+      }
+    }
+  ],
+  "retry_count": 0,
+  "runtime_identity": {
+    "compiler": "Kotlin 2.4.10 JVM IR",
+    "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+    "host_architecture": "arm64",
+    "host_os": "Darwin",
+    "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+    "runtime": "JVM binary linkage on OpenJDK 17",
+    "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+  },
+  "schema_version": 1,
+  "streams": {
+    "action": [
+      "compile consumer against v1 descriptor",
+      "replace producer JAR without recompiling consumer",
+      "execute JVM linkage oracle"
+    ],
+    "network": [
+      "no application network operation; dependency resolution is repository-locked"
+    ],
+    "resource": [
+      "compiler_artifact=labs/abi-compat-api-v1/build/libs/abi-compat-api-v1-0.2.0.jar",
+      "compiler_artifact=labs/abi-compat-api-v2-breaking/build/libs/abi-compat-api-v2-breaking-0.2.0.jar",
+      "compiler_artifact=labs/abi-compat-api-v2-compatible/build/libs/abi-compat-api-v2-compatible-0.2.0.jar",
+      "compiler_artifact=labs/abi-compat-consumer/build/libs/abi-compat-consumer-0.2.0.jar"
+    ]
+  },
+  "tasks": [
+    ":labs:abi-compat-consumer:migrationBreakingTest",
+    ":labs:abi-compat-consumer:migrationCompatibleTest"
+  ]
+}

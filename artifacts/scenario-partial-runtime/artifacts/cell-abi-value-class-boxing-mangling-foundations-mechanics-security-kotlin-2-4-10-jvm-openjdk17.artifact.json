@@ -26,12 +26,12 @@
   "schema_version": 1,
   "source_digest": "sha256:9511134072ec7ce54bd544c895c38404aa0187b7f434bac2dfd0e9bd3d7a4639",
   "test_result": {
-    "digest": "sha256:3636db3d38fe9f56ee4e1179c90a61476e9c2ec01140c7e1c947acf8e058e079",
+    "digest": "sha256:28214af991d982042eeff417ead93729d7fd078b58bce35e32b64ba902e593bb",
     "path": "labs/abi-runtime-security/build/test-results/jvmTest/TEST-dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest.xml",
     "testcase": {
       "classname": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
       "name": "foundations mechanics preserves trusted identity at a generic boxing boundary()[jvm]",
-      "time": "0.0"
+      "time": "0.001"
     }
   }
 }

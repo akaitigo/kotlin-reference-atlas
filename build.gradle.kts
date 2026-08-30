@@ -57,6 +57,7 @@ tasks.register("atlasCheck") {
         ":labs:abi-runtime-security:jvmTest",
         ":labs:abi-runtime-security:jsNodeTest",
         ":labs:abi-runtime-security:wasmJsNodeTest",
+        ":labs:abi-compat-consumer:abiCompatibilityRuntimeTest",
         ":labs:multiplatform:jvmTest",
         ":labs:multiplatform:jsNodeTest",
         ":labs:multiplatform:wasmJsNodeTest",

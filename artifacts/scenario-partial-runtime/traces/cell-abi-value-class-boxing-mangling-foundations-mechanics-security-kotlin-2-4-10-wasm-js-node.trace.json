@@ -6,6 +6,10 @@
     ":labs:abi-runtime-security:jvmTest",
     ":labs:abi-runtime-security:jsNodeTest",
     ":labs:abi-runtime-security:wasmJsNodeTest",
+    ":labs:abi-compat-consumer:compatibilityBaselineTest",
+    ":labs:abi-compat-consumer:compatibilityBreakingTest",
+    ":labs:abi-compat-consumer:migrationBreakingTest",
+    ":labs:abi-compat-consumer:migrationCompatibleTest",
     "--rerun-tasks",
     "--no-daemon"
   ],
@@ -40,6 +44,6 @@
   "testcase": {
     "classname": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
     "name": "foundations mechanics preserves trusted identity at a generic boxing boundary[wasmJs, node]",
-    "time": "0.001"
+    "time": "0.002"
   }
 }

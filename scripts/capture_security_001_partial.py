@@ -18,6 +18,14 @@ OUTPUT = ROOT / "artifacts" / "scenario-partial-runtime"
 LAB = ROOT / "labs" / "abi-runtime-security"
 HARNESS = LAB / "src" / "commonTest" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "ValueClassSecurityTest.kt"
 COMMON_SOURCE = LAB / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "SecureToken.kt"
+ABI_CONSUMER = ROOT / "labs" / "abi-compat-consumer"
+ABI_HARNESS = ABI_CONSUMER / "src" / "test" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "compat" / "AbiCompatibilityRuntimeTest.kt"
+ABI_SOURCES = [
+    ROOT / "labs" / "abi-compat-api-v1" / "src" / "main" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "compat" / "SecurePolicy.kt",
+    ROOT / "labs" / "abi-compat-api-v2-breaking" / "src" / "main" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "compat" / "SecurePolicy.kt",
+    ROOT / "labs" / "abi-compat-api-v2-compatible" / "src" / "main" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "compat" / "SecurePolicy.kt",
+    ABI_CONSUMER / "src" / "main" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "compat" / "SecureConsumer.kt",
+]
 BEHAVIOR = "abi.value-class-boxing-mangling"
 SCENARIO = "security"
 SURFACE_TESTS = {
@@ -48,6 +56,22 @@ PROFILES = {
         "runtime": "Kotlin/Wasm JS on Node.js",
     },
 }
+ABI_TASKS = {
+    "compatibilityBaselineTest": "CompatibilityBaselineTest",
+    "compatibilityBreakingTest": "CompatibilityBreakingTest",
+    "migrationBreakingTest": "MigrationBreakingTest",
+    "migrationCompatibleTest": "MigrationCompatibleTest",
+}
+ABI_SURFACE_PHASES = {
+    "compatibility-integration": ["compatibilityBaselineTest", "compatibilityBreakingTest"],
+    "migration-evolution-deprecation": ["migrationBreakingTest", "migrationCompatibleTest"],
+}
+ABI_ARTIFACTS = [
+    ROOT / "labs" / "abi-compat-api-v1" / "build" / "libs" / "abi-compat-api-v1-0.2.0.jar",
+    ROOT / "labs" / "abi-compat-api-v2-breaking" / "build" / "libs" / "abi-compat-api-v2-breaking-0.2.0.jar",
+    ROOT / "labs" / "abi-compat-api-v2-compatible" / "build" / "libs" / "abi-compat-api-v2-compatible-0.2.0.jar",
+    ABI_CONSUMER / "build" / "libs" / "abi-compat-consumer-0.2.0.jar",
+]
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -84,7 +108,9 @@ def command_output(command: list[str]) -> str:
 
 
 def run_gradle() -> tuple[list[str], str]:
-    tasks = [profile["task"] for profile in PROFILES.values()]
+    tasks = [profile["task"] for profile in PROFILES.values()] + [
+        f":labs:abi-compat-consumer:{task}" for task in ABI_TASKS
+    ]
     command = ["./gradlew", *tasks, "--rerun-tasks", "--no-daemon"]
     environment = os.environ.copy()
     environment.setdefault("GRADLE_USER_HOME", str(ROOT / ".gradle" / "atlas-home"))
@@ -200,6 +226,98 @@ def build_generation(staging: Path) -> None:
                 "final_status": "passed",
                 "dedicated_to_this_cell": True,
             })
+    abi_source_digest = canonical_digest(ABI_SOURCES)
+    abi_harness_digest = sha256_file(ABI_HARNESS)
+    abi_results = {}
+    for task, test_class in ABI_TASKS.items():
+        result_path = ABI_CONSUMER / "build" / "test-results" / task / f"TEST-dev.akaitigo.kotlinatlas.abi.compat.{test_class}.xml"
+        cases = testcases(result_path)
+        if len(cases) != 1:
+            raise RuntimeError(f"Expected one dedicated Runtime testcase for {task}, found {len(cases)}")
+        abi_results[task] = {"path": result_path, "testcase": cases[0]}
+    if any(not path.is_file() or path.stat().st_size == 0 for path in ABI_ARTIFACTS):
+        raise RuntimeError("ABI producer/consumer compiler artifact is missing")
+    abi_identity = {
+        "compiler": "Kotlin 2.4.10 JVM IR",
+        "runtime": "JVM binary linkage on OpenJDK 17",
+        "variant_id": "kotlin-2.4.10-jvm-openjdk17",
+        "gradle": gradle_identity,
+        "java": java_identity,
+        "host_os": platform.system(),
+        "host_architecture": platform.machine(),
+    }
+    for surface_id, phases in ABI_SURFACE_PHASES.items():
+        cell_id = f"cell.abi.source-binary-behavioral.{surface_id}.{SCENARIO}.kotlin-2.4.10-jvm-openjdk17"
+        safe = cell_id.replace(".", "-")
+        trace_path = staging / "traces" / f"{safe}.trace.json"
+        artifact_path = staging / "artifacts" / f"{safe}.artifact.json"
+        phase_results = [
+            {
+                "task": task,
+                "path": abi_results[task]["path"].relative_to(ROOT).as_posix(),
+                "digest": sha256_file(abi_results[task]["path"]),
+                "testcase": abi_results[task]["testcase"],
+            }
+            for task in phases
+        ]
+        trace = {
+            "schema_version": 1,
+            "cell_id": cell_id,
+            "attempt": 1,
+            "retry_count": 0,
+            "command": command,
+            "tasks": [f":labs:abi-compat-consumer:{task}" for task in phases],
+            "phases": phase_results,
+            "streams": {
+                "action": ["compile consumer against v1 descriptor", "replace producer JAR without recompiling consumer", "execute JVM linkage oracle"],
+                "network": ["no application network operation; dependency resolution is repository-locked"],
+                "resource": [f"compiler_artifact={path.relative_to(ROOT).as_posix()}" for path in ABI_ARTIFACTS],
+            },
+            "runtime_identity": abi_identity,
+            "outcome": "expected",
+        }
+        assertion = (
+            "the unchanged v1 consumer runs with v1 and rejects a producer that removed the linked descriptor"
+            if surface_id == "compatibility-integration"
+            else "the unchanged v1 consumer rejects the breaking producer and recovers with the descriptor-preserving producer"
+        )
+        artifact = {
+            "schema_version": 1,
+            "cell_id": cell_id,
+            "source_digest": abi_source_digest,
+            "harness_digest": abi_harness_digest,
+            "test_results": phase_results,
+            "compiler_artifacts": [binding(path, path.relative_to(ROOT).as_posix()) for path in ABI_ARTIFACTS],
+            "oracle": {
+                "kind": "kotlin-jvm-binary-linkage-security",
+                "scenario": SCENARIO,
+                "surface_id": surface_id,
+                "assertion": assertion,
+                "passed": True,
+            },
+            "runtime_identity": abi_identity,
+        }
+        write_json(trace_path, trace)
+        write_json(artifact_path, artifact)
+        trace_relative = f"artifacts/scenario-partial-runtime/traces/{trace_path.name}"
+        artifact_relative = f"artifacts/scenario-partial-runtime/artifacts/{artifact_path.name}"
+        records.append({
+            "id": cell_id,
+            "behavior_id": "abi.source-binary-behavioral",
+            "surface_id": surface_id,
+            "scenario": SCENARIO,
+            "variant_id": "kotlin-2.4.10-jvm-openjdk17",
+            "source_digest": abi_source_digest,
+            "harness_digest": abi_harness_digest,
+            "compiler_runtime_platform_identity": abi_identity,
+            "oracle": artifact["oracle"],
+            "trace": binding(trace_path, trace_relative, streams=True),
+            "artifact": binding(artifact_path, artifact_relative),
+            "attempts": 1,
+            "retries": 0,
+            "final_status": "passed",
+            "dedicated_to_this_cell": True,
+        })
     report = {
         "schema_version": 1,
         "id": "kotlin-security-001-partial-runtime-v1",
@@ -208,13 +326,14 @@ def build_generation(staging: Path) -> None:
         "command": " ".join(command),
         "profile": "real-kotlin-jvm-js-wasm-runtime",
         "retention_contract": RETENTION_CONTRACT,
-        "source_digest": canonical_digest([COMMON_SOURCE, *[profile["platform_source"] for profile in PROFILES.values()]]),
-        "harness_digest": harness_digest,
-        "counts": {"cells": len(records), "passed": len(records), "failed": 0, "variants": len(PROFILES), "surfaces": len(SURFACE_TESTS)},
+        "source_digest": canonical_digest([COMMON_SOURCE, *[profile["platform_source"] for profile in PROFILES.values()], *ABI_SOURCES]),
+        "harness_digest": canonical_digest([HARNESS, ABI_HARNESS]),
+        "counts": {"cells": len(records), "passed": len(records), "failed": 0, "variants": len(PROFILES), "surfaces": len(SURFACE_TESTS) + len(ABI_SURFACE_PHASES), "behaviors": 2},
         "execution": {"attempts": 1, "retries": 0, "full_requested_profile_passed": True},
         "completion_limits": [
             "security-001 is not complete: Native runtime cells require a working Xcode toolchain and remain explicit gaps.",
-            "This generation closes only abi.value-class-boxing-mangling security cells for JVM, JS, and Wasm.",
+            "JS and Wasm cells for abi.source-binary-behavioral remain explicit gaps.",
+            "This generation closes only the exact cell records listed in this report.",
         ],
         "records": records,
         "gradle_output_digest": sha256_bytes(gradle_output.encode()),
@@ -229,6 +348,10 @@ def validate_generation(staging: Path) -> None:
         f"cell.{BEHAVIOR}.{surface}.{SCENARIO}.{variant}"
         for surface in SURFACE_TESTS
         for variant in PROFILES
+    }
+    expected_ids |= {
+        f"cell.abi.source-binary-behavioral.{surface}.{SCENARIO}.kotlin-2.4.10-jvm-openjdk17"
+        for surface in ABI_SURFACE_PHASES
     }
     if report.get("status") != "passed" or {record.get("id") for record in records} != expected_ids:
         raise RuntimeError("partial Runtime report does not contain the exact requested cell denominator")

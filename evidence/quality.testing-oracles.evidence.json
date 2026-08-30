@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:b9f9d5fe9f2def9f6386e609f0ce8a943e1f881e5c649cbcc2911c27c38e8730",
+    "digest": "sha256:db76ea2ecad87e059484a4c8d4846f8af01e35993f370086ee0a92b4945c04bf",
     "media_type": "application/json",
-    "size_bytes": 14174,
+    "size_bytes": 15858,
     "uri": "evidence/artifacts/lab-results.json"
   },
   "atlas_id": "kotlin-reference-atlas",
@@ -15,8 +15,8 @@
     "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
     "profile": "local"
   },
-  "harness_digest": "sha256:0d90e4cabfc327ad312435a3480553581aa331272be51bd7e2794dddd6736c6e",
-  "harness_path": "labs/abi-runtime-security/build.gradle.kts",
+  "harness_digest": "sha256:e0c37450f7eeb337b2859c8c39a8986f840f360e08070888f4abc62363a0a79c",
+  "harness_path": "labs/abi-compat-api-v1/build.gradle.kts",
   "id": "quality.testing-oracles",
   "kind": "test-report",
   "producer": "kotlin-atlas-verifier",
