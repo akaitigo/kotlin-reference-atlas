@@ -44,13 +44,13 @@
     ],
     "screenshot": {
       "bytes": 348,
-      "digest": "sha256:95c03ecd306585a9a54f12aab75f4959e680717c481146180e0f81d38a84bda2",
+      "digest": "sha256:53c81daebf10918fcbc08aeef8714e8f11990c35c73ec7878b5933556c1e90f8",
       "path": "artifacts/reference-system/snapshots/refusal.snapshot.json"
     },
     "trace": {
       "action_stream": true,
       "bytes": 3176,
-      "digest": "sha256:6c438efb1236afe46d68c6fdc1742432f0fc9ceb70abc69a8c1aa25c17aca2f8",
+      "digest": "sha256:5d34df7592902387dd75dcf6fdf2da87cec6fe56aa88b038fa5e403ffb5d3462",
       "network_stream": true,
       "path": "evidence/scenarios/integrated/refusal.trace.json",
       "resource_stream": true

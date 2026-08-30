@@ -25,7 +25,7 @@
   "compiler_refusal": {
     "consumer_readable_metadata_version": "2.4.0",
     "exit_code": 1,
-    "output_digest": "sha256:7418f1beab3749bf1bb4bd5de99ff638e64339a2e52b5e50b87fbb6df41a2b9a",
+    "output_digest": "sha256:5fd60eea5d572fa33d8c0b49b15fef312e83ca4f0e61bde39aa1475ff46fcbc3",
     "producer_metadata_version": "999.0.0",
     "required_diagnostics": [
       "Incompatible classes were found in dependencies",
@@ -52,12 +52,12 @@
     "variant_id": "kotlin-2.4.10-jvm-openjdk17"
   },
   "runtime_test_result": {
-    "digest": "sha256:7d22d28985f80e3ecda5aaa647bcc9fcf86c745a8cceb081f3985dcbac9a91a9",
+    "digest": "sha256:97b9e4812decdc690ee66cd8e4067234a3032af6fea241660152750ae32a4e23",
     "path": "labs/abi-metadata-consumer-override/build/test-results/test/TEST-dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest.xml",
     "testcase": {
       "classname": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest",
       "name": "explicit metadata override remains bounded by the runtime security oracle()",
-      "time": "0.013"
+      "time": "0.023"
     }
   },
   "schema_version": 1,

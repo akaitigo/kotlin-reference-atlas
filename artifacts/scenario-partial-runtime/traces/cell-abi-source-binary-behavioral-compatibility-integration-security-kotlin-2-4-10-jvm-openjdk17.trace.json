@@ -21,23 +21,23 @@
   "outcome": "expected",
   "phases": [
     {
-      "digest": "sha256:201ec2ed32e288e4c4531e524e97ca150692ff85676863b3d2a9310a35a2cc0d",
+      "digest": "sha256:519b006ba7a7e35aef776acbba865a8b87f85f7d6450249f81c1300f3e1a73a2",
       "path": "labs/abi-compat-consumer/build/test-results/compatibilityBaselineTest/TEST-dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBaselineTest.xml",
       "task": "compatibilityBaselineTest",
       "testcase": {
         "classname": "dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBaselineTest",
         "name": "compatibility integration executes the v1 binary contract without privilege change()",
-        "time": "0.048"
+        "time": "0.04"
       }
     },
     {
-      "digest": "sha256:9a87561ff6353bf6d0a4bd9ba30a4b5f3bf6491ba2dd9cd62c66849dfaf89f33",
+      "digest": "sha256:ed650a8119cdfa1e28f45c82eef1970e7a94a676e2e3962ce9a6d8d5011181ce",
       "path": "labs/abi-compat-consumer/build/test-results/compatibilityBreakingTest/TEST-dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBreakingTest.xml",
       "task": "compatibilityBreakingTest",
       "testcase": {
         "classname": "dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBreakingTest",
         "name": "compatibility integration rejects a binary incompatible producer()",
-        "time": "0.205"
+        "time": "0.068"
       }
     }
   ],

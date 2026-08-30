@@ -4,7 +4,7 @@
   "schema_version": 1,
   "source_trace": {
     "bytes": 3241,
-    "digest": "sha256:b47a6c4e57ab9ea83f09197ea5a5cf0a03672cbe22c87572bb99808edc18e741",
+    "digest": "sha256:8aeaedea126045e931631ba724f4e4a5940952fb75512f1aaf01a418276ff8fd",
     "path": "evidence/scenarios/integrated/migration.trace.json"
   },
   "status": "passed"

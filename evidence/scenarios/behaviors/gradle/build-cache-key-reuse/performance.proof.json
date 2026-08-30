@@ -14,7 +14,7 @@
   "candidate_evidence": [
     {
       "artifact": {
-        "digest": "sha256:19a2cdda2fc5374eb11c32910e47c7b2aac769796369a57bd4dab62ea62eb77f",
+        "digest": "sha256:815507f216f4e896a9709afb3f627a2d088aceff6b02957b2c168318fc7800d6",
         "exists": true,
         "path": "evidence/artifacts/rights-validation.json"
       },
@@ -33,7 +33,7 @@
       "producer": "kotlin-atlas-verifier",
       "record": {
         "bytes": 965,
-        "digest": "sha256:e48752def2bfb4bca009b444187b97639e22f05d7f385d4028628ae6862410a6",
+        "digest": "sha256:7bdddc1e18c00205ed12c435fdaf6407d711395f94341a4b233a9e8f855c8ae3",
         "path": "evidence/build.toolchain-lock.evidence.json"
       },
       "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
@@ -73,13 +73,13 @@
     },
     "results": {
       "bytes": 3983,
-      "digest": "sha256:a5946653c7a1707849cdd300c784228c7dca2762d206de6fcfb609853c5b834a",
+      "digest": "sha256:db5a9b489fe103cd22a092393a0bfb27cc7ca0e1816988aa2fdf7cb764d8cb9b",
       "path": "evidence/scenarios/reference-system-results.json"
     },
     "reuse_as_behavior_specific_proof": false,
     "target_mapped": false,
     "trace": {
-      "digest": "sha256:5fa1c97d3eef1fdadb05e43f5758a3cdf13a503c3af459b4073f17d3be036ec1",
+      "digest": "sha256:cd2d7e03ddb6e911743d3982a9bb02b1761f6a24b27904a123d43233c6e0094f",
       "path": "evidence/scenarios/integrated/performance.trace.json",
       "rows": 1
     }

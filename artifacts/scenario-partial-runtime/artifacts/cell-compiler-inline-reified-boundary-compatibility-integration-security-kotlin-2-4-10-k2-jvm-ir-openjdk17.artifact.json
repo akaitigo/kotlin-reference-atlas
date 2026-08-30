@@ -26,12 +26,12 @@
   "schema_version": 1,
   "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
   "test_result": {
-    "digest": "sha256:3d56f89e304622f70e490afeb7b92790f454fe4484244100ef95a8abf2bcdb09",
+    "digest": "sha256:b64fc46191418b099e5900cb4fa62b973e6979928b78a80261390d4dc4328c68",
     "path": "labs/compiler-runtime-security/build/test-results/jvmTest/TEST-dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest.xml",
     "testcase": {
       "classname": "dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
       "name": "compatibility integration validates generic elements after outer type erasure()[jvm]",
-      "time": "0.04"
+      "time": "0.038"
     }
   }
 }

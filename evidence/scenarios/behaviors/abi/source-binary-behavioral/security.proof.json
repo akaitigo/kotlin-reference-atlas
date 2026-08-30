@@ -74,13 +74,13 @@
     },
     "results": {
       "bytes": 3983,
-      "digest": "sha256:a5946653c7a1707849cdd300c784228c7dca2762d206de6fcfb609853c5b834a",
+      "digest": "sha256:db5a9b489fe103cd22a092393a0bfb27cc7ca0e1816988aa2fdf7cb764d8cb9b",
       "path": "evidence/scenarios/reference-system-results.json"
     },
     "reuse_as_behavior_specific_proof": false,
     "target_mapped": false,
     "trace": {
-      "digest": "sha256:1fe9c3fd7c92c06990d27c11a4e844a568dc00efcfd76586a1fbe80b9880b6f2",
+      "digest": "sha256:00273f5121ddfcaaaf12e8bc14ec7e604ef8665d8f394c4ccc638aa1a30bb3f6",
       "path": "evidence/scenarios/integrated/security.trace.json",
       "rows": 1
     }
@@ -116,8 +116,8 @@
       },
       "dedicated_execution": {
         "artifact": {
-          "bytes": 3604,
-          "digest": "sha256:fff42fe5425e5588cae7ac44f7716b22a1293b41b56415c928fd1559b9e86772",
+          "bytes": 3603,
+          "digest": "sha256:f5da8bb2260b0bc7cdea37b305cbb0b3dd38102de58be397eee69c5d69016c79",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-source-binary-behavioral-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -142,8 +142,8 @@
         "source_digest": "sha256:0e326ff8e229fae1754aea542c383c20dd14bd2d772ac27886cfa6e80bc8fd6c",
         "trace": {
           "action_stream": true,
-          "bytes": 3848,
-          "digest": "sha256:da0c44057e669062f17032874726c8fa7dede312a8e0314aafad7f7ed6dd3b91",
+          "bytes": 3847,
+          "digest": "sha256:5263d3c34d08c13cb4e68892c3c67ed4b09c2f8510716ef0426c47c7cde1a8ef",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-source-binary-behavioral-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true
@@ -274,8 +274,8 @@
       },
       "dedicated_execution": {
         "artifact": {
-          "bytes": 3594,
-          "digest": "sha256:43cb9bdca8e7299498cfac9b4d603c6d541544674e4fa5894e3258dc4e2dfb94",
+          "bytes": 3593,
+          "digest": "sha256:8cc4a8e009c7eb5539920e251a861d037dca63b40bc68c8bf0d57d6224b13b0a",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-source-binary-behavioral-migration-evolution-deprecation-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -300,8 +300,8 @@
         "source_digest": "sha256:0e326ff8e229fae1754aea542c383c20dd14bd2d772ac27886cfa6e80bc8fd6c",
         "trace": {
           "action_stream": true,
-          "bytes": 3814,
-          "digest": "sha256:9f25b92c66471ec2ffece39add91154a961f51e8c402d64957020d2d279eb76d",
+          "bytes": 3813,
+          "digest": "sha256:91773dd275207e52c017dcd96764348b75307b17d2e0136cd853d89261cf0799",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-source-binary-behavioral-migration-evolution-deprecation-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true

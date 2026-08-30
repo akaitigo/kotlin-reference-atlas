@@ -30,7 +30,7 @@
   "compiler_refusal": {
     "consumer_readable_metadata_version": "2.4.0",
     "exit_code": 1,
-    "output_digest": "sha256:7418f1beab3749bf1bb4bd5de99ff638e64339a2e52b5e50b87fbb6df41a2b9a",
+    "output_digest": "sha256:5fd60eea5d572fa33d8c0b49b15fef312e83ca4f0e61bde39aa1475ff46fcbc3",
     "producer_metadata_version": "999.0.0",
     "required_diagnostics": [
       "Incompatible classes were found in dependencies",
@@ -53,7 +53,7 @@
   "runtime_testcase": {
     "classname": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest",
     "name": "explicit metadata override remains bounded by the runtime security oracle()",
-    "time": "0.013"
+    "time": "0.023"
   },
   "schema_version": 1,
   "streams": {

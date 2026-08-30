@@ -44,13 +44,13 @@
     ],
     "screenshot": {
       "bytes": 350,
-      "digest": "sha256:f5305bbd13ce9c13fe8ce901c46d4951f34301910e7c8c1abacb085873a24f4d",
+      "digest": "sha256:f3775167a3523c2a3c7b8c3a5c64d232253fd935fa0ade812e6e0bdc95d3489f",
       "path": "artifacts/reference-system/snapshots/security.snapshot.json"
     },
     "trace": {
       "action_stream": true,
       "bytes": 3177,
-      "digest": "sha256:1fe9c3fd7c92c06990d27c11a4e844a568dc00efcfd76586a1fbe80b9880b6f2",
+      "digest": "sha256:00273f5121ddfcaaaf12e8bc14ec7e604ef8665d8f394c4ccc638aa1a30bb3f6",
       "network_stream": true,
       "path": "evidence/scenarios/integrated/security.trace.json",
       "resource_stream": true

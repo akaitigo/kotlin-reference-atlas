@@ -71,6 +71,21 @@ def npm_components() -> dict[str, dict]:
     return result
 
 
+def python_components() -> dict[str, dict]:
+    contract = json.loads((ROOT / "toolchains" / "python-ci.lock.json").read_text(encoding="utf-8"))
+    result: dict[str, dict] = {}
+    for item in contract["packages"]:
+        key = item["purl"]
+        result[key] = {
+            "name": item["distribution"],
+            "version": item["version"],
+            "purl": key,
+            "ecosystem": "python",
+            "license": item["license"],
+        }
+    return result
+
+
 def package(component: dict) -> dict:
     identity = component["purl"]
     return {
@@ -95,13 +110,14 @@ def third_party_manifest(components: dict[str, dict]) -> dict:
         {"id": "frontend-behavior-atlas-methodology-vendor", "name": "frontend-behavior-atlas methodology snapshots", "kind": "source-snapshot", "version": "7175de4+deadad18+f2e4c4b", "source": "repository:frontend-behavior-atlas", "license": "Apache-2.0", "redistribution": "fixed-artifacts"},
         {"id": "gradle-distribution", "name": "Gradle", "kind": "source", "version": "9.5.0", "source": "https://github.com/gradle/gradle", "license": "Apache-2.0", "redistribution": "link-only"},
         {"id": "nodejs-runtime", "name": "Node.js", "kind": "source", "version": "25.2.1", "source": "https://github.com/nodejs/node", "license": "MIT", "redistribution": "link-only"},
+        {"id": "python-runtime", "name": "CPython", "kind": "source", "version": "3.14.0", "source": "https://github.com/python/cpython", "license": "PSF-2.0", "redistribution": "link-only"},
         {"id": "eclipse-temurin-runtime", "name": "Eclipse Temurin", "kind": "source", "version": "17", "source": "https://github.com/adoptium/temurin-build", "license": "GPL-2.0-with-classpath-exception", "redistribution": "link-only"},
     ]
     transitive = [
         {
             "id": "locked-" + hashlib.sha256(key.encode()).hexdigest()[:20],
             "name": component["name"],
-            "kind": "maven-package" if component["ecosystem"] == "gradle" else "npm-package",
+            "kind": {"gradle": "maven-package", "npm": "npm-package", "python": "python-package"}[component["ecosystem"]],
             "version": component["version"],
             "source": component["purl"],
             "license": component["license"],
@@ -115,6 +131,7 @@ def third_party_manifest(components: dict[str, dict]) -> dict:
 def main() -> None:
     components = gradle_components()
     components.update(npm_components())
+    components.update(python_components())
     root_package = {
         "SPDXID": "SPDXRef-Package-kotlin-reference-atlas",
         "name": "kotlin-reference-atlas",
@@ -144,12 +161,12 @@ def main() -> None:
             "annotationDate": "2026-08-28T00:00:00Z",
             "annotationType": "OTHER",
             "annotator": "Tool: scripts/generate_sbom.py",
-            "comment": f"Gradle/npm lock closure components={len(components)} sha256={closure}",
+            "comment": f"Gradle/npm/Python lock closure components={len(components)} sha256={closure}",
         }],
     }
     OUTPUT.write_text(json.dumps(document, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     THIRD_PARTY.write_text(json.dumps(third_party_manifest(components), ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(f"SPDX SBOM生成: components={len(components)} closure={closure}")
+    print(f"SPDX SBOM生成: Gradle/npm/Python components={len(components)} closure={closure}")
 
 
 if __name__ == "__main__":

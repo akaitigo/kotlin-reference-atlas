@@ -49,6 +49,6 @@
   "testcase": {
     "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
     "name": "compatibility integration keeps expect actual value representation executable[js, node]",
-    "time": "0.001"
+    "time": "0.0"
   }
 }

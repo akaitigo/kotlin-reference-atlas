@@ -4,7 +4,7 @@
   "schema_version": 1,
   "source_trace": {
     "bytes": 3511,
-    "digest": "sha256:482b2fe4a9e8d048f633e6d4cd5d12a2a62250c5529d8e9c04ec1c068f73ed11",
+    "digest": "sha256:108416ef3ea50cae87198db844b25b61e88d07790bb22dab650cd10796a2a06c",
     "path": "evidence/scenarios/integrated/recovery.trace.json"
   },
   "status": "passed"

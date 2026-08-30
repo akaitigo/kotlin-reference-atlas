@@ -894,7 +894,7 @@
       "implementation_bindings": [
         {
           "bytes": 238527,
-          "digest": "sha256:1fffc4eb928d2db698da31edece73d001bffc09bda57e621bce2741effee6257",
+          "digest": "sha256:9f642d0467ed002d20d70bb6857ca15f51b25cf66c0f92dff9aca1c7ef8d815b",
           "id": "evals:definitive-skill-router.json",
           "path": "evals/definitive-skill-router.json"
         }
@@ -1723,7 +1723,7 @@
       "implementation_bindings": [
         {
           "bytes": 238527,
-          "digest": "sha256:1fffc4eb928d2db698da31edece73d001bffc09bda57e621bce2741effee6257",
+          "digest": "sha256:9f642d0467ed002d20d70bb6857ca15f51b25cf66c0f92dff9aca1c7ef8d815b",
           "id": "evals:definitive-skill-router.json",
           "path": "evals/definitive-skill-router.json"
         }
@@ -2552,7 +2552,7 @@
       "implementation_bindings": [
         {
           "bytes": 238527,
-          "digest": "sha256:1fffc4eb928d2db698da31edece73d001bffc09bda57e621bce2741effee6257",
+          "digest": "sha256:9f642d0467ed002d20d70bb6857ca15f51b25cf66c0f92dff9aca1c7ef8d815b",
           "id": "evals:definitive-skill-router.json",
           "path": "evals/definitive-skill-router.json"
         }
@@ -3362,7 +3362,7 @@
       "implementation_bindings": [
         {
           "bytes": 238527,
-          "digest": "sha256:1fffc4eb928d2db698da31edece73d001bffc09bda57e621bce2741effee6257",
+          "digest": "sha256:9f642d0467ed002d20d70bb6857ca15f51b25cf66c0f92dff9aca1c7ef8d815b",
           "id": "evals:definitive-skill-router.json",
           "path": "evals/definitive-skill-router.json"
         }
@@ -4123,9 +4123,9 @@
       "coverage_state": "covered",
       "evidence_bindings": [
         {
-          "bytes": 714,
+          "bytes": 783,
           "claim_scope": "publication.transitive-sbom-from-locks",
-          "digest": "sha256:df09d74809e26ad9c3f73dd88106b36b23fa5ffd4f34149ba2e8c4e5db4d8b2e",
+          "digest": "sha256:815507f216f4e896a9709afb3f627a2d088aceff6b02957b2c168318fc7800d6",
           "id": "publication.complete-sbom",
           "path": "evidence/artifacts/rights-validation.json"
         }
@@ -4133,8 +4133,8 @@
       "id": "matrix.operate.provenance-rights",
       "implementation_bindings": [
         {
-          "bytes": 7590,
-          "digest": "sha256:c37d28a036b4a96fb47e1a5a8646fc476afd9eccf580c7df580d1b581d2cc140",
+          "bytes": 8358,
+          "digest": "sha256:dfa29825ec9a32ca3fcaba861a21f500c5741b4ddbc9892412af13e1ec8051df",
           "id": "scripts/generate_sbom.py",
           "path": "scripts/generate_sbom.py"
         }
@@ -4196,7 +4196,7 @@
       "implementation_bindings": [
         {
           "bytes": 238527,
-          "digest": "sha256:1fffc4eb928d2db698da31edece73d001bffc09bda57e621bce2741effee6257",
+          "digest": "sha256:9f642d0467ed002d20d70bb6857ca15f51b25cf66c0f92dff9aca1c7ef8d815b",
           "id": "evals:definitive-skill-router.json",
           "path": "evals/definitive-skill-router.json"
         }
@@ -5029,7 +5029,7 @@
       "implementation_bindings": [
         {
           "bytes": 238527,
-          "digest": "sha256:1fffc4eb928d2db698da31edece73d001bffc09bda57e621bce2741effee6257",
+          "digest": "sha256:9f642d0467ed002d20d70bb6857ca15f51b25cf66c0f92dff9aca1c7ef8d815b",
           "id": "evals:definitive-skill-router.json",
           "path": "evals/definitive-skill-router.json"
         }
@@ -5839,7 +5839,7 @@
       "implementation_bindings": [
         {
           "bytes": 238527,
-          "digest": "sha256:1fffc4eb928d2db698da31edece73d001bffc09bda57e621bce2741effee6257",
+          "digest": "sha256:9f642d0467ed002d20d70bb6857ca15f51b25cf66c0f92dff9aca1c7ef8d815b",
           "id": "evals:definitive-skill-router.json",
           "path": "evals/definitive-skill-router.json"
         }
@@ -6298,9 +6298,9 @@
       "coverage_state": "covered",
       "evidence_bindings": [
         {
-          "bytes": 714,
+          "bytes": 783,
           "claim_scope": "publication.transitive-sbom-from-locks",
-          "digest": "sha256:df09d74809e26ad9c3f73dd88106b36b23fa5ffd4f34149ba2e8c4e5db4d8b2e",
+          "digest": "sha256:815507f216f4e896a9709afb3f627a2d088aceff6b02957b2c168318fc7800d6",
           "id": "publication.complete-sbom",
           "path": "evidence/artifacts/rights-validation.json"
         }
@@ -6308,8 +6308,8 @@
       "id": "matrix.delegate.security-privacy-safety",
       "implementation_bindings": [
         {
-          "bytes": 7590,
-          "digest": "sha256:c37d28a036b4a96fb47e1a5a8646fc476afd9eccf580c7df580d1b581d2cc140",
+          "bytes": 8358,
+          "digest": "sha256:dfa29825ec9a32ca3fcaba861a21f500c5741b4ddbc9892412af13e1ec8051df",
           "id": "scripts/generate_sbom.py",
           "path": "scripts/generate_sbom.py"
         }
@@ -6476,9 +6476,9 @@
       "coverage_state": "covered",
       "evidence_bindings": [
         {
-          "bytes": 714,
+          "bytes": 783,
           "claim_scope": "publication.transitive-sbom-from-locks",
-          "digest": "sha256:df09d74809e26ad9c3f73dd88106b36b23fa5ffd4f34149ba2e8c4e5db4d8b2e",
+          "digest": "sha256:815507f216f4e896a9709afb3f627a2d088aceff6b02957b2c168318fc7800d6",
           "id": "publication.complete-sbom",
           "path": "evidence/artifacts/rights-validation.json"
         }
@@ -6486,8 +6486,8 @@
       "id": "matrix.delegate.migration-evolution-deprecation",
       "implementation_bindings": [
         {
-          "bytes": 7590,
-          "digest": "sha256:c37d28a036b4a96fb47e1a5a8646fc476afd9eccf580c7df580d1b581d2cc140",
+          "bytes": 8358,
+          "digest": "sha256:dfa29825ec9a32ca3fcaba861a21f500c5741b4ddbc9892412af13e1ec8051df",
           "id": "scripts/generate_sbom.py",
           "path": "scripts/generate_sbom.py"
         }
@@ -6595,9 +6595,9 @@
       "coverage_state": "covered",
       "evidence_bindings": [
         {
-          "bytes": 714,
+          "bytes": 783,
           "claim_scope": "publication.transitive-sbom-from-locks",
-          "digest": "sha256:df09d74809e26ad9c3f73dd88106b36b23fa5ffd4f34149ba2e8c4e5db4d8b2e",
+          "digest": "sha256:815507f216f4e896a9709afb3f627a2d088aceff6b02957b2c168318fc7800d6",
           "id": "publication.complete-sbom",
           "path": "evidence/artifacts/rights-validation.json"
         }
@@ -6605,8 +6605,8 @@
       "id": "matrix.delegate.provenance-rights",
       "implementation_bindings": [
         {
-          "bytes": 7590,
-          "digest": "sha256:c37d28a036b4a96fb47e1a5a8646fc476afd9eccf580c7df580d1b581d2cc140",
+          "bytes": 8358,
+          "digest": "sha256:dfa29825ec9a32ca3fcaba861a21f500c5741b4ddbc9892412af13e1ec8051df",
           "id": "scripts/generate_sbom.py",
           "path": "scripts/generate_sbom.py"
         }
@@ -6666,7 +6666,7 @@
       "implementation_bindings": [
         {
           "bytes": 238527,
-          "digest": "sha256:1fffc4eb928d2db698da31edece73d001bffc09bda57e621bce2741effee6257",
+          "digest": "sha256:9f642d0467ed002d20d70bb6857ca15f51b25cf66c0f92dff9aca1c7ef8d815b",
           "id": "evals:definitive-skill-router.json",
           "path": "evals/definitive-skill-router.json"
         }
@@ -6725,7 +6725,7 @@
     },
     "report": {
       "bytes": 593301,
-      "digest": "sha256:be21d997d049409030a9af5bff26fc736ca3bc30c682269e5dabf547668977e8",
+      "digest": "sha256:eb9d00b333aa4637d8cf8cb999baaf8eb67cbcf7f96f843fbad02bb54f5b9dc0",
       "path": "evals/kotlin-reference-router.definitive-skill-eval-report.json"
     },
     "router": {

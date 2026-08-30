@@ -26,12 +26,12 @@
   "schema_version": 1,
   "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
   "test_result": {
-    "digest": "sha256:89c77f092a7f712f429a76bada540f95a8285362611fe2a559a7978538225a09",
+    "digest": "sha256:817d3c8c0134ffaae4474a4796d38e07f649610df4afe4f8f95f58778e2d5c7e",
     "path": "labs/compiler-runtime-security/build/test-results/wasmJsNodeTest/TEST-wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest.xml",
     "testcase": {
       "classname": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
       "name": "performance capacity cost keeps the reified refusal result deterministic[wasmJs, node]",
-      "time": "0.0"
+      "time": "0.001"
     }
   }
 }

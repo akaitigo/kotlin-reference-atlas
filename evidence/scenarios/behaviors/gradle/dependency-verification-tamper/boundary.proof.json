@@ -14,7 +14,7 @@
   "candidate_evidence": [
     {
       "artifact": {
-        "digest": "sha256:19a2cdda2fc5374eb11c32910e47c7b2aac769796369a57bd4dab62ea62eb77f",
+        "digest": "sha256:815507f216f4e896a9709afb3f627a2d088aceff6b02957b2c168318fc7800d6",
         "exists": true,
         "path": "evidence/artifacts/rights-validation.json"
       },
@@ -33,7 +33,7 @@
       "producer": "kotlin-atlas-verifier",
       "record": {
         "bytes": 965,
-        "digest": "sha256:e48752def2bfb4bca009b444187b97639e22f05d7f385d4028628ae6862410a6",
+        "digest": "sha256:7bdddc1e18c00205ed12c435fdaf6407d711395f94341a4b233a9e8f855c8ae3",
         "path": "evidence/build.toolchain-lock.evidence.json"
       },
       "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
@@ -74,13 +74,13 @@
     },
     "results": {
       "bytes": 3983,
-      "digest": "sha256:a5946653c7a1707849cdd300c784228c7dca2762d206de6fcfb609853c5b834a",
+      "digest": "sha256:db5a9b489fe103cd22a092393a0bfb27cc7ca0e1816988aa2fdf7cb764d8cb9b",
       "path": "evidence/scenarios/reference-system-results.json"
     },
     "reuse_as_behavior_specific_proof": false,
     "target_mapped": false,
     "trace": {
-      "digest": "sha256:d29e338204de80dc279b7c9bf6bb0db6eedf302522bdfdcb7b912f16b7006052",
+      "digest": "sha256:fd211f2a89a34de8d6dd3cd90cf9d3bee2c41453fbd6aae2e7ab088ff9442e61",
       "path": "evidence/scenarios/integrated/boundary.trace.json",
       "rows": 2
     }

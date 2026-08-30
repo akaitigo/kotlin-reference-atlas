@@ -44,13 +44,13 @@
     ],
     "screenshot": {
       "bytes": 348,
-      "digest": "sha256:4e4d4a7eefa961c7a339d71bf1ca6eb882c2db0a52d11d8778c7c08eb9e88a05",
+      "digest": "sha256:5215273cd6d9c8d1fa9cb3f2880d4f35b147e12916611f40ca2bc0106f57fe95",
       "path": "artifacts/reference-system/snapshots/failure.snapshot.json"
     },
     "trace": {
       "action_stream": true,
       "bytes": 3363,
-      "digest": "sha256:ccdf7223d76a9557697829f52fc5f60fb165087ab06ae0b86aafb78dede8ff5f",
+      "digest": "sha256:541a7c08f9102aa43800a2670a8038b0fda7fd3a73734e162f856e3eba5989d2",
       "network_stream": true,
       "path": "evidence/scenarios/integrated/failure.trace.json",
       "resource_stream": true

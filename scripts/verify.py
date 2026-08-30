@@ -192,6 +192,24 @@ def validate_manifests() -> dict:
     return result
 
 
+def validate_python_dependency_contract() -> dict:
+    run([sys.executable, str(ROOT / "scripts" / "verify_python_dependency_contract.py")])
+    run([sys.executable, str(ROOT / "scripts" / "test_python_dependency_contract.py")])
+    contract = load_json(ARTIFACTS / "python-dependency-contract.json")
+    negatives = load_json(ARTIFACTS / "python-dependency-negative-tests.json")
+    if contract.get("verdict") != "pass" or contract.get("pyyaml_version") != "6.0.3":
+        raise RuntimeError("Python/PyYAML dependency contractがpassではない")
+    if negatives.get("verdict") != "pass" or negatives.get("case_count", 0) < 3:
+        raise RuntimeError("Python dependency missing/tampered negative testがpassではない")
+    return {
+        "profile_id": contract["profile_id"],
+        "python_contract_version": contract["python_contract_version"],
+        "pyyaml_version": contract["pyyaml_version"],
+        "negative_case_count": negatives["case_count"],
+        "verdict": "pass",
+    }
+
+
 def collect_test_results() -> dict:
     command = [str(ROOT / "gradlew"), "clean", "atlasCheck"]
     if detect_full_xcode().returncode == 0:
@@ -452,6 +470,8 @@ def validate_rights() -> dict:
         "third_party/sbom.cdx.json",
         "sbom.spdx.json",
         "gradle/verification-metadata.xml",
+        "toolchains/python-ci.lock.json",
+        "requirements-ci.lock",
         "settings-gradle.lockfile",
         "labs/jvm/gradle.lockfile",
         "labs/coroutines/gradle.lockfile",
@@ -468,9 +488,9 @@ def validate_rights() -> dict:
     errors = []
     if missing:
         errors.append("missing=" + ",".join(missing))
-    if not {"reference-atlas-core", "frontend-behavior-atlas-methodology-vendor", "gradle-distribution", "nodejs-runtime", "eclipse-temurin-runtime"}.issubset(direct_ids):
+    if not {"reference-atlas-core", "frontend-behavior-atlas-methodology-vendor", "gradle-distribution", "nodejs-runtime", "python-runtime", "eclipse-temurin-runtime"}.issubset(direct_ids):
         errors.append("third_party manifestの固定Toolchain依存が不足")
-    if not {"kotlin", "gradle", "kotlinx-coroutines-core-jvm", "junit-bom"}.issubset(sbom_names):
+    if not {"kotlin", "gradle", "kotlinx-coroutines-core-jvm", "junit-bom", "PyYAML"}.issubset(sbom_names):
         errors.append("SBOMの直接依存が不足")
     spdx_names = {item["name"] for item in spdx["packages"]}
     spdx_purls = {
@@ -497,7 +517,9 @@ def validate_rights() -> dict:
                 if name.startswith("kotlin-reference-atlas-"):
                     continue
                 expected_npm.add(f"pkg:npm/{name}@{package['version']}")
-    missing_purls = sorted((expected_gradle | expected_npm) - spdx_purls)
+    python_contract = load_json(ROOT / "toolchains" / "python-ci.lock.json")
+    expected_python = {item["purl"] for item in python_contract["packages"]}
+    missing_purls = sorted((expected_gradle | expected_npm | expected_python) - spdx_purls)
     if spdx.get("spdxVersion") != "SPDX-2.3" or not {"kotlin-reference-atlas", "org.jetbrains.kotlin:kotlin-stdlib", "org.jetbrains.kotlin:kotlin-compiler-embeddable", "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm"}.issubset(spdx_names):
         errors.append("SPDX SBOMの必須Packageが不足")
     if missing_purls:
@@ -523,7 +545,7 @@ def validate_rights() -> dict:
         errors.append("第三者ManifestとSPDX transitive closureが一致しない")
     if errors:
         raise RuntimeError("; ".join(errors))
-    result = {"required_files": required, "direct_component_count": len(manifest["artifacts"]), "sbom_formats": ["CycloneDX-1.6", "SPDX-2.3"], "sbom_scope": "gradle-and-npm-lock-transitive-closure", "spdx_package_count": len(spdx["packages"]), "lock_component_count": len(expected_gradle | expected_npm), "missing_lock_components": [], "verdict": "pass"}
+    result = {"required_files": required, "direct_component_count": len(manifest["artifacts"]), "sbom_formats": ["CycloneDX-1.6", "SPDX-2.3"], "sbom_scope": "gradle-npm-python-lock-transitive-closure", "spdx_package_count": len(spdx["packages"]), "lock_component_count": len(expected_gradle | expected_npm | expected_python), "missing_lock_components": [], "verdict": "pass"}
     write_json(ARTIFACTS / "rights-validation.json", result)
     return result
 
@@ -928,6 +950,7 @@ def audit_definitive_incomplete() -> dict:
 def main(*, skip_container: bool = False) -> None:
     evidence_run_started_at = datetime.now().astimezone().isoformat(timespec="seconds")
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
+    python_dependency_result = validate_python_dependency_contract()
     manifest_result = validate_manifests()
     lab_result = collect_test_results()
     deep_result = generate_deep_artifacts()
@@ -955,6 +978,7 @@ def main(*, skip_container: bool = False) -> None:
     # matrixとwrapperを先に再生成する。全Evidence更新後にも再生成し、最終digestを固定する。
     run([sys.executable, str(ROOT / "scripts" / "generate_scenario_proofs.py")])
     run([sys.executable, str(ROOT / "scripts" / "verify_scenario_proofs.py")])
+    run([sys.executable, str(ROOT / "scripts" / "test_reference_system_non_regression.py")])
     run([sys.executable, str(ROOT / "scripts" / "generate_scenario_closure_plan.py")])
     run([sys.executable, str(ROOT / "scripts" / "verify_scenario_closure_plan.py")])
     write_scenario_evidence()
@@ -966,7 +990,8 @@ def main(*, skip_container: bool = False) -> None:
     summary = {
         "atlas_id": "kotlin-reference-atlas",
         "epoch": "2026-08-28",
-        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "partial_scenario_runtime": partial_scenario_runtime["status"], "skill": skill_result["verdict"], "definitive_skill": definitive_skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "evidence_dependency": "pass", "scenario_plan": "expected-incomplete-no-success-generation", "evidence_durability": "expected-incomplete-no-success-generation", "definitive": "expected-incomplete"},
+        "implementation_gates": {"python_dependency": python_dependency_result["verdict"], "manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "partial_scenario_runtime": partial_scenario_runtime["status"], "skill": skill_result["verdict"], "definitive_skill": definitive_skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "evidence_dependency": "pass", "scenario_plan": "expected-incomplete-no-success-generation", "evidence_durability": "expected-incomplete-no-success-generation", "definitive": "expected-incomplete"},
+        "python_dependency_contract": python_dependency_result,
         "definitive_skill_eval": definitive_skill_result,
         "kotlin_depth_parity": {"axis_count": fe_parity_result["axis_count"], "status_counts": fe_parity_result["status_counts"], "total_axis_gaps": fe_parity_result["total_axis_gaps"], "all_axes_closed": fe_parity_result["all_axes_closed"], "reference_commit": fe_parity_result["reference_commit"]},
         "completion_class": "incomplete",
@@ -993,6 +1018,7 @@ def main(*, skip_container: bool = False) -> None:
     evidence_paths = write_evidence()
     run([sys.executable, str(ROOT / "scripts" / "generate_scenario_proofs.py")])
     run([sys.executable, str(ROOT / "scripts" / "verify_scenario_proofs.py")])
+    run([sys.executable, str(ROOT / "scripts" / "test_reference_system_non_regression.py")])
     run([sys.executable, str(ROOT / "scripts" / "generate_scenario_closure_plan.py")])
     run([sys.executable, str(ROOT / "scripts" / "verify_scenario_closure_plan.py")])
     scenario_evidence_path = write_scenario_evidence()

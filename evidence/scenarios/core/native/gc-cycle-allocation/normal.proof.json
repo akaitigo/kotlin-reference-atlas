@@ -44,13 +44,13 @@
     ],
     "screenshot": {
       "bytes": 346,
-      "digest": "sha256:f98ff8f85423d00907a152fcbf297efb5d2e1cf144547b97547c944290fab542",
+      "digest": "sha256:146cee8e4388a73f81420465920bd9d7065b0acac14f8a6bbabc4b320a0a0a10",
       "path": "artifacts/reference-system/snapshots/normal.snapshot.json"
     },
     "trace": {
       "action_stream": true,
       "bytes": 3215,
-      "digest": "sha256:eb7b7cc2cda50aefc9eed3b5ed9df8345c774485a7306d0d6d9780c7e5241e6d",
+      "digest": "sha256:8e23c69b22dd41fe1a74f9f8251bc4063a990804d51041ed732068ad72ded885",
       "network_stream": true,
       "path": "evidence/scenarios/integrated/normal.trace.json",
       "resource_stream": true

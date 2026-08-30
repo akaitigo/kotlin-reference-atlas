@@ -44,13 +44,13 @@
     ],
     "screenshot": {
       "bytes": 350,
-      "digest": "sha256:2064e9b39f58da23c40582349ec8f2f3fda0a89d66df942e1ca77c6e012f2e36",
+      "digest": "sha256:dceb6663218ad3b3fb3e0753150937b6e599a7a05b762936db9492e554489d5b",
       "path": "artifacts/reference-system/snapshots/boundary.snapshot.json"
     },
     "trace": {
       "action_stream": true,
       "bytes": 3400,
-      "digest": "sha256:d29e338204de80dc279b7c9bf6bb0db6eedf302522bdfdcb7b912f16b7006052",
+      "digest": "sha256:fd211f2a89a34de8d6dd3cd90cf9d3bee2c41453fbd6aae2e7ab088ff9442e61",
       "network_stream": true,
       "path": "evidence/scenarios/integrated/boundary.trace.json",
       "resource_stream": true

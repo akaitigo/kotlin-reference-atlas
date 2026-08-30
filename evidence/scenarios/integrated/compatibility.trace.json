@@ -11,7 +11,7 @@
       "path": "reference-systems/automation-workbench/build.gradle.kts"
     },
     {
-      "digest": "sha256:cb6fea84f3a5591d74077cf888eec864244caebd03b63403eac3827edd4f6a5f",
+      "digest": "sha256:0898099f149b6b6abcae042199371136f2bc2ecdd866c67f60e3816266fb0aaf",
       "path": "scripts/capture_workbench.py"
     }
   ],

@@ -1,0 +1,22 @@
+{
+  "case_count": 3,
+  "cases": [
+    {
+      "expected": "reject",
+      "id": "missing-requirements-lock",
+      "verdict": "pass"
+    },
+    {
+      "expected": "reject",
+      "id": "tampered-wheel-hash",
+      "verdict": "pass"
+    },
+    {
+      "expected": "reject",
+      "id": "missing-installed-pyyaml",
+      "verdict": "pass"
+    }
+  ],
+  "schema_version": 1,
+  "verdict": "pass"
+}

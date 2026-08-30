@@ -74,13 +74,13 @@
     },
     "results": {
       "bytes": 3983,
-      "digest": "sha256:a5946653c7a1707849cdd300c784228c7dca2762d206de6fcfb609853c5b834a",
+      "digest": "sha256:db5a9b489fe103cd22a092393a0bfb27cc7ca0e1816988aa2fdf7cb764d8cb9b",
       "path": "evidence/scenarios/reference-system-results.json"
     },
     "reuse_as_behavior_specific_proof": false,
     "target_mapped": false,
     "trace": {
-      "digest": "sha256:1fe9c3fd7c92c06990d27c11a4e844a568dc00efcfd76586a1fbe80b9880b6f2",
+      "digest": "sha256:00273f5121ddfcaaaf12e8bc14ec7e604ef8665d8f394c4ccc638aa1a30bb3f6",
       "path": "evidence/scenarios/integrated/security.trace.json",
       "rows": 1
     }
@@ -117,7 +117,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 3488,
-          "digest": "sha256:7e7fba12baae8edfd2b30076503b4dfa4edf0294c883311011826d9ef2e6ed45",
+          "digest": "sha256:019f6e2e7ea32ffe7463c8bb450d14de8bca5cdf0d0ce2aac87514cec2eff923",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-kotlin-metadata-version-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -143,7 +143,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 3617,
-          "digest": "sha256:5fbcaae043ac303a2de44385838ca0bd2cf18b7cb9708b215f944a7b1861c3cf",
+          "digest": "sha256:f440d7c32abf1ce1ba42b3c617d7d5a2b32d8bc9c939935a842fd59b6df61069",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-kotlin-metadata-version-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true
@@ -275,7 +275,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 3544,
-          "digest": "sha256:5f1c6fa89331f9e09b81a1a73288f5a409d00d75f9d7442113d7c048b0e04614",
+          "digest": "sha256:846363714edd10d5eec9d13c64deeef5ae183b7eb7e0550c4dc749aec626a6c1",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-kotlin-metadata-version-migration-evolution-deprecation-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -301,7 +301,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 3640,
-          "digest": "sha256:2c9503b0737102f2da5ae256d38f255061e02126e4b9989a14265f75973d3ad3",
+          "digest": "sha256:de6911127648914d998d7ce5be10831429518860af844400b36ae1c64cac78a4",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-kotlin-metadata-version-migration-evolution-deprecation-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true

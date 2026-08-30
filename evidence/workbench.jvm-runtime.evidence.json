@@ -1,6 +1,6 @@
 {
   "artifact": {
-    "digest": "sha256:6e0fc8e335a7d735eb70e0538e922d4ef847b661f2a94637694274b717c098f0",
+    "digest": "sha256:24f39dd6fb35cfe85fc3be8a662297172948a168e62ef602d877851e488ccf92",
     "media_type": "application/json",
     "size_bytes": 8450,
     "uri": "evidence/artifacts/workbench-jvm-runtime.json"

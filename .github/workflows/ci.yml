@@ -45,6 +45,16 @@ jobs:
         with:
           node-version: "25.2.1"
 
+      - name: Python 3.14を固定commitで設定
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.14.0"
+
+      - name: Python依存をhash固定lockから導入・検証
+        run: |
+          python3 -m pip install --disable-pip-version-check --only-binary=:all: --require-hashes -r requirements-ci.lock
+          python3 scripts/verify_python_dependency_contract.py --require-runtime
+
       - name: Core Schemaでatlas validate
         env:
           ATLAS_CORE_DIR: ${{ github.workspace }}/.atlas-core

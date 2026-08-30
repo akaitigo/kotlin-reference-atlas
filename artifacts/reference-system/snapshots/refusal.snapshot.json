@@ -4,7 +4,7 @@
   "schema_version": 1,
   "source_trace": {
     "bytes": 3176,
-    "digest": "sha256:6c438efb1236afe46d68c6fdc1742432f0fc9ceb70abc69a8c1aa25c17aca2f8",
+    "digest": "sha256:5d34df7592902387dd75dcf6fdf2da87cec6fe56aa88b038fa5e403ffb5d3462",
     "path": "evidence/scenarios/integrated/refusal.trace.json"
   },
   "status": "passed"

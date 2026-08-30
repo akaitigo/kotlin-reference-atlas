@@ -99,6 +99,7 @@ def input_groups(observed_at: str) -> list[dict]:
     profile = [
         ".github/workflows/ci.yml", "verification.matrix.yaml",
         "environments/container/Dockerfile", "scripts/container-verify.sh",
+        "toolchains/python-ci.lock.json", "requirements-ci.lock",
         "definitive.yaml", "non-regression.yaml",
     ]
     specs = [
@@ -136,6 +137,9 @@ def discover_required_outputs() -> list[str]:
         "artifacts/benchmark-results.json", "artifacts/compatibility-results.json",
         "artifacts/reference-system/results.json", "artifacts/pattern-scenarios/results.json",
         "evidence/scenarios/index.json", "evidence/scenarios/closure-plan.json",
+        "evidence/artifacts/python-dependency-contract.json",
+        "evidence/artifacts/python-dependency-negative-tests.json",
+        "evidence/artifacts/reference-system-non-regression.json",
     ]:
         add_if_file(relative)
     for root in ["artifacts", "evidence/core-v1", "evidence/reports"]:
@@ -289,6 +293,7 @@ def generate(run_started_at: str, run_completed_at: str) -> dict:
             "runtime_identity": {
                 "subject": "Kotlin/JVM/JS/Wasm/Native compile, Gradle and container verification",
                 "kotlin": "2.4.10", "gradle": "9.5.0", "jvm": "OpenJDK 17",
+                "ci_python": "CPython 3.14.0", "ci_pyyaml": "6.0.3",
                 "container": "gradle:9.5.0-jdk17", "host": "macOS arm64",
                 "docker_server": docker_server_version(),
                 "container_profile_command": CONTAINER_PROFILE_COMMAND,

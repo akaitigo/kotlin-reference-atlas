@@ -12000,9 +12000,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:df09d74809e26ad9c3f73dd88106b36b23fa5ffd4f34149ba2e8c4e5db4d8b2e",
+              "digest": "sha256:815507f216f4e896a9709afb3f627a2d088aceff6b02957b2c168318fc7800d6",
               "path": "evidence/artifacts/rights-validation.json",
-              "size_bytes": 714
+              "size_bytes": 783
             },
             "claim_ids": [
               "publication.transitive-sbom-from-locks"
@@ -12012,7 +12012,7 @@
             "kind": "capture",
             "producer": "spdx-lock-generator",
             "record": {
-              "digest": "sha256:4af9d9a39918e98c2ec18a92c2a5aa5e648d81da0d4106773038de5660a06391",
+              "digest": "sha256:9b51a1ca8fb9acabba9179dad8b751fa05b3c0d8908aeac37fa676527cf06c2e",
               "path": "evidence/publication.complete-sbom.evidence.json",
               "size_bytes": 980
             }
@@ -12023,9 +12023,9 @@
         ],
         "implementation_bindings": [
           {
-            "digest": "sha256:c37d28a036b4a96fb47e1a5a8646fc476afd9eccf580c7df580d1b581d2cc140",
+            "digest": "sha256:dfa29825ec9a32ca3fcaba861a21f500c5741b4ddbc9892412af13e1ec8051df",
             "path": "scripts/generate_sbom.py",
-            "size_bytes": 7590,
+            "size_bytes": 8358,
             "variant_id": "scripts/generate_sbom.py"
           }
         ],
@@ -15588,9 +15588,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:df09d74809e26ad9c3f73dd88106b36b23fa5ffd4f34149ba2e8c4e5db4d8b2e",
+              "digest": "sha256:815507f216f4e896a9709afb3f627a2d088aceff6b02957b2c168318fc7800d6",
               "path": "evidence/artifacts/rights-validation.json",
-              "size_bytes": 714
+              "size_bytes": 783
             },
             "claim_ids": [
               "publication.transitive-sbom-from-locks"
@@ -15600,7 +15600,7 @@
             "kind": "capture",
             "producer": "spdx-lock-generator",
             "record": {
-              "digest": "sha256:4af9d9a39918e98c2ec18a92c2a5aa5e648d81da0d4106773038de5660a06391",
+              "digest": "sha256:9b51a1ca8fb9acabba9179dad8b751fa05b3c0d8908aeac37fa676527cf06c2e",
               "path": "evidence/publication.complete-sbom.evidence.json",
               "size_bytes": 980
             }
@@ -15611,9 +15611,9 @@
         ],
         "implementation_bindings": [
           {
-            "digest": "sha256:c37d28a036b4a96fb47e1a5a8646fc476afd9eccf580c7df580d1b581d2cc140",
+            "digest": "sha256:dfa29825ec9a32ca3fcaba861a21f500c5741b4ddbc9892412af13e1ec8051df",
             "path": "scripts/generate_sbom.py",
-            "size_bytes": 7590,
+            "size_bytes": 8358,
             "variant_id": "scripts/generate_sbom.py"
           }
         ],
@@ -15743,9 +15743,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:df09d74809e26ad9c3f73dd88106b36b23fa5ffd4f34149ba2e8c4e5db4d8b2e",
+              "digest": "sha256:815507f216f4e896a9709afb3f627a2d088aceff6b02957b2c168318fc7800d6",
               "path": "evidence/artifacts/rights-validation.json",
-              "size_bytes": 714
+              "size_bytes": 783
             },
             "claim_ids": [
               "publication.transitive-sbom-from-locks"
@@ -15755,7 +15755,7 @@
             "kind": "capture",
             "producer": "spdx-lock-generator",
             "record": {
-              "digest": "sha256:4af9d9a39918e98c2ec18a92c2a5aa5e648d81da0d4106773038de5660a06391",
+              "digest": "sha256:9b51a1ca8fb9acabba9179dad8b751fa05b3c0d8908aeac37fa676527cf06c2e",
               "path": "evidence/publication.complete-sbom.evidence.json",
               "size_bytes": 980
             }
@@ -15766,9 +15766,9 @@
         ],
         "implementation_bindings": [
           {
-            "digest": "sha256:c37d28a036b4a96fb47e1a5a8646fc476afd9eccf580c7df580d1b581d2cc140",
+            "digest": "sha256:dfa29825ec9a32ca3fcaba861a21f500c5741b4ddbc9892412af13e1ec8051df",
             "path": "scripts/generate_sbom.py",
-            "size_bytes": 7590,
+            "size_bytes": 8358,
             "variant_id": "scripts/generate_sbom.py"
           }
         ],
@@ -15876,9 +15876,9 @@
         "evidence_bindings": [
           {
             "artifact": {
-              "digest": "sha256:df09d74809e26ad9c3f73dd88106b36b23fa5ffd4f34149ba2e8c4e5db4d8b2e",
+              "digest": "sha256:815507f216f4e896a9709afb3f627a2d088aceff6b02957b2c168318fc7800d6",
               "path": "evidence/artifacts/rights-validation.json",
-              "size_bytes": 714
+              "size_bytes": 783
             },
             "claim_ids": [
               "publication.transitive-sbom-from-locks"
@@ -15888,7 +15888,7 @@
             "kind": "capture",
             "producer": "spdx-lock-generator",
             "record": {
-              "digest": "sha256:4af9d9a39918e98c2ec18a92c2a5aa5e648d81da0d4106773038de5660a06391",
+              "digest": "sha256:9b51a1ca8fb9acabba9179dad8b751fa05b3c0d8908aeac37fa676527cf06c2e",
               "path": "evidence/publication.complete-sbom.evidence.json",
               "size_bytes": 980
             }
@@ -15899,9 +15899,9 @@
         ],
         "implementation_bindings": [
           {
-            "digest": "sha256:c37d28a036b4a96fb47e1a5a8646fc476afd9eccf580c7df580d1b581d2cc140",
+            "digest": "sha256:dfa29825ec9a32ca3fcaba861a21f500c5741b4ddbc9892412af13e1ec8051df",
             "path": "scripts/generate_sbom.py",
-            "size_bytes": 7590,
+            "size_bytes": 8358,
             "variant_id": "scripts/generate_sbom.py"
           }
         ],
@@ -16010,7 +16010,7 @@
         ],
         "implementation_bindings": [
           {
-            "digest": "sha256:1fffc4eb928d2db698da31edece73d001bffc09bda57e621bce2741effee6257",
+            "digest": "sha256:9f642d0467ed002d20d70bb6857ca15f51b25cf66c0f92dff9aca1c7ef8d815b",
             "path": "evals/definitive-skill-router.json",
             "size_bytes": 238527,
             "variant_id": "evals:definitive-skill-router.json"
@@ -16022,7 +16022,7 @@
             "variant_id": "evals:kotlin-reference-router.agent-forward-eval.json"
           },
           {
-            "digest": "sha256:2c29316873fc580fd00416330417499a5aad90d539e2706d8bfe8a5029b666f8",
+            "digest": "sha256:5de12254bcd783aaaf4f56bac0d75430954bc00d5706cd583a553536c919f708",
             "path": "evals/kotlin-reference-router.definitive-skill-eval-report.json",
             "size_bytes": 593301,
             "variant_id": "evals:kotlin-reference-router.definitive-skill-eval-report.json"

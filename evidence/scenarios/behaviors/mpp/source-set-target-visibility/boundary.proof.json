@@ -100,13 +100,13 @@
     },
     "results": {
       "bytes": 3983,
-      "digest": "sha256:a5946653c7a1707849cdd300c784228c7dca2762d206de6fcfb609853c5b834a",
+      "digest": "sha256:db5a9b489fe103cd22a092393a0bfb27cc7ca0e1816988aa2fdf7cb764d8cb9b",
       "path": "evidence/scenarios/reference-system-results.json"
     },
     "reuse_as_behavior_specific_proof": false,
     "target_mapped": false,
     "trace": {
-      "digest": "sha256:d29e338204de80dc279b7c9bf6bb0db6eedf302522bdfdcb7b912f16b7006052",
+      "digest": "sha256:fd211f2a89a34de8d6dd3cd90cf9d3bee2c41453fbd6aae2e7ab088ff9442e61",
       "path": "evidence/scenarios/integrated/boundary.trace.json",
       "rows": 2
     }

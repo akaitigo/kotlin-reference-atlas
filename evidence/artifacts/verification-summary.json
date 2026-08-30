@@ -106,6 +106,7 @@
     "neutral_language": "pass",
     "non_regression": "pass",
     "partial_scenario_runtime": "passed",
+    "python_dependency": "pass",
     "rights_metadata": "pass",
     "scenario_plan": "expected-incomplete-no-success-generation",
     "skill": "pass"
@@ -120,6 +121,13 @@
       "satisfied": 1
     },
     "total_axis_gaps": 30
+  },
+  "python_dependency_contract": {
+    "negative_case_count": 3,
+    "profile_id": "github-actions-macos-14-local-gate",
+    "python_contract_version": "3.14.0",
+    "pyyaml_version": "6.0.3",
+    "verdict": "pass"
   },
   "recommended_open": [
     "Gap LedgerのBehavior別Proof closure",

@@ -46,6 +46,15 @@
       "version": "25.2.1"
     },
     {
+      "id": "python-runtime",
+      "kind": "source",
+      "license": "PSF-2.0",
+      "name": "CPython",
+      "redistribution": "link-only",
+      "source": "https://github.com/python/cpython",
+      "version": "3.14.0"
+    },
+    {
       "id": "eclipse-temurin-runtime",
       "kind": "source",
       "license": "GPL-2.0-with-classpath-exception",
@@ -1394,6 +1403,15 @@
       "redistribution": "metadata-only",
       "source": "pkg:npm/yocto-queue@0.1.0",
       "version": "0.1.0"
+    },
+    {
+      "id": "locked-f25f7309ec6994358454",
+      "kind": "python-package",
+      "license": "MIT",
+      "name": "PyYAML",
+      "redistribution": "metadata-only",
+      "source": "pkg:pypi/PyYAML@6.0.3",
+      "version": "6.0.3"
     }
   ],
   "schema_version": 1

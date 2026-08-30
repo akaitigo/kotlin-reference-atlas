@@ -1,6 +1,6 @@
 {
-  "direct_component_count": 155,
-  "lock_component_count": 149,
+  "direct_component_count": 157,
+  "lock_component_count": 150,
   "missing_lock_components": [],
   "required_files": [
     "LICENSE",
@@ -10,6 +10,8 @@
     "third_party/sbom.cdx.json",
     "sbom.spdx.json",
     "gradle/verification-metadata.xml",
+    "toolchains/python-ci.lock.json",
+    "requirements-ci.lock",
     "settings-gradle.lockfile",
     "labs/jvm/gradle.lockfile",
     "labs/coroutines/gradle.lockfile",
@@ -21,7 +23,7 @@
     "CycloneDX-1.6",
     "SPDX-2.3"
   ],
-  "sbom_scope": "gradle-and-npm-lock-transitive-closure",
-  "spdx_package_count": 150,
+  "sbom_scope": "gradle-npm-python-lock-transitive-closure",
+  "spdx_package_count": 151,
   "verdict": "pass"
 }

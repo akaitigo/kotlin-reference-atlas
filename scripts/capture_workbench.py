@@ -16,7 +16,6 @@ TRACE = ROOT / "reference-systems" / "automation-workbench" / "build" / "evidenc
 OUTPUT = ROOT / "evidence" / "artifacts" / "workbench-jvm-runtime.json"
 INTEGRATED_ROOT = ROOT / "evidence" / "scenarios" / "integrated"
 REFERENCE_RESULT = ROOT / "evidence" / "scenarios" / "reference-system-results.json"
-REFERENCE_MANIFEST = ROOT / "integrations" / "reference-system" / "manifest.json"
 SCENARIOS = ["normal", "boundary", "refusal", "failure", "recovery", "migration", "operations", "security", "performance", "compatibility"]
 SCENARIO_TARGETS = {
     "normal": ["reference-system.automation-workbench", "semantics.language-core"],
@@ -101,18 +100,6 @@ def main() -> None:
             "scenario": scenario, "path": path.relative_to(ROOT).as_posix(), "digest": digest_file(path),
             "rows": len(scenario_rows), "target_ids": SCENARIO_TARGETS[scenario],
         })
-    manifest = {
-        "schema_version": 1, "id": "kotlin-automation-workbench-reference-system-v2",
-        "status": "bounded-jvm-integration-proof", "runtime": "real-jvm-local",
-        "source": source_files, "harness": harness_files,
-        "scenarios": [{"id": scenario, "target_ids": SCENARIO_TARGETS[scenario]} for scenario in SCENARIOS],
-        "completion_limits": [
-            "Integrated success is not reused as proof for every Surface or Behavior.",
-            "JVM identity is not substituted for JS, Wasm, or Native runtime identity.",
-            "Authority atomic binding requires a recorded human review decision.",
-        ],
-    }
-    write(REFERENCE_MANIFEST, manifest)
     reference = {
         "schema_version": 1, "id": "kotlin-reference-system-results-v2", "status": "bounded-jvm-integration-proof",
         "identity": identity, "trace_source": {"path": TRACE.relative_to(ROOT).as_posix(), "digest": digest_file(TRACE)},
