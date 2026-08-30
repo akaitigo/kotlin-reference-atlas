@@ -117,7 +117,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 3488,
-          "digest": "sha256:019f6e2e7ea32ffe7463c8bb450d14de8bca5cdf0d0ce2aac87514cec2eff923",
+          "digest": "sha256:6012adc082b521a1102f535ecc941f6b37bfaaee380f4623f6a1fbfff6fb0dab",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-kotlin-metadata-version-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -143,7 +143,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 3617,
-          "digest": "sha256:f440d7c32abf1ce1ba42b3c617d7d5a2b32d8bc9c939935a842fd59b6df61069",
+          "digest": "sha256:0ed4c48b3055409acb9854c89331efc08eed85b3af4ce6cd2d1f8b2df77226bc",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-kotlin-metadata-version-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true
@@ -275,7 +275,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 3544,
-          "digest": "sha256:846363714edd10d5eec9d13c64deeef5ae183b7eb7e0550c4dc749aec626a6c1",
+          "digest": "sha256:955602e013771fc1276181649e0e9deff153060084a67ef1c81159c6ee2a4eae",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-kotlin-metadata-version-migration-evolution-deprecation-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -301,7 +301,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 3640,
-          "digest": "sha256:de6911127648914d998d7ce5be10831429518860af844400b36ae1c64cac78a4",
+          "digest": "sha256:029911e79aab584ad86fd02ff993cd579ec043d30a800da6e749d9ca4fc414fd",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-kotlin-metadata-version-migration-evolution-deprecation-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true

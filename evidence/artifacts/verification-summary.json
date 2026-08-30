@@ -97,7 +97,7 @@
     "deep_artifacts": "pass",
     "definitive": "expected-incomplete",
     "definitive_skill": "pass-bounded-incomplete",
-    "evidence_dependency": "pass",
+    "evidence_dependency": "owner-managed-full-live-runtime-regenerated-pass",
     "evidence_durability": "expected-incomplete-no-success-generation",
     "kotlin_depth_parity": "incomplete",
     "labs": "pass",

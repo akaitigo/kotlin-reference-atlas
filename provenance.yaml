@@ -21,7 +21,7 @@
       ]
     },
     {
-      "digest": "sha256:77b0bc8f754244c995c3b180a0684c3d58cedd494406f097d9df1de436904fd0",
+      "digest": "sha256:afe873c76d4bb91bfea52e26c6c5498a3452f8c059e8ab865a4c331d0297a50c",
       "generated_by": "python3 scripts/generate_definitive_skill_eval.py",
       "kind": "skill-eval",
       "license": "Apache-2.0",
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "digest": "sha256:eb9d00b333aa4637d8cf8cb999baaf8eb67cbcf7f96f843fbad02bb54f5b9dc0",
+      "digest": "sha256:996fb00e664d03ad18458421a113e681b16b7e0e3bf2de2b86183d1dcd04e6e0",
       "generated_by": "python3 scripts/generate_definitive_skill_eval.py",
       "kind": "skill-eval",
       "license": "Apache-2.0",
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "digest": "sha256:83d7941dd0a3590ce04d7cd1900a7e8027eccf8514093b26b95dd93de5c55b9b",
+      "digest": "sha256:b38685ffe91a7d0e5727b21c39497b8764cfbadd60b6e1f9ef5b4156e07b9dfe",
       "generated_by": "scripts/container-verify.sh",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -151,7 +151,7 @@
       ]
     },
     {
-      "digest": "sha256:0bf473d17a4025a93bfcd9f917ebbacaed786d4a22bf85406940f1aa87fd0766",
+      "digest": "sha256:9a5a579d119493e1696f8a8066db282fe6f0a25c7c8e90648fc41c922eb46f4a",
       "generated_by": "python3 scripts/verify_non_regression.py",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -181,7 +181,7 @@
       ]
     },
     {
-      "digest": "sha256:e51f478ec7427173d3f00b91df92c9b81ef833fe875083fe4cf14cd6242df4aa",
+      "digest": "sha256:c3e33900872dcd6895e237dd88d261429ccfc98ee8ae7f002c4ff39428c8fdae",
       "generated_by": "python3 scripts/verify.py",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "digest": "sha256:2f8e61e314c3310bf19b9ee002bdb4b8bf102fc29b2b056cef1256fac002310d",
+      "digest": "sha256:d8002e8c420159e23ba23e518f66c6dd25c10a1e5bc6dcbc76c47d219fdbc4f6",
       "generated_by": "python3 scripts/generate_scenario_proofs.py && python3 scripts/verify_scenario_proofs.py",
       "kind": "generated",
       "license": "Apache-2.0",

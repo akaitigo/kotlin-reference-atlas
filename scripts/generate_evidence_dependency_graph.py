@@ -140,6 +140,9 @@ def discover_required_outputs() -> list[str]:
         "evidence/artifacts/python-dependency-contract.json",
         "evidence/artifacts/python-dependency-negative-tests.json",
         "evidence/artifacts/reference-system-non-regression.json",
+        "evidence/artifacts/ci-profile-contract.json",
+        "evidence/artifacts/ci-container-runtime-proof-negative-tests.json",
+        "evidence/artifacts/dco-range-negative-tests.json",
     ]:
         add_if_file(relative)
     for root in ["artifacts", "evidence/core-v1", "evidence/reports"]:
@@ -247,10 +250,16 @@ def closure_plan_structure() -> str:
 
 
 def docker_server_version() -> str:
-    completed = subprocess.run(
-        ["docker", "version", "--format", "{{.Server.Version}}"],
-        cwd=ROOT, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
-    )
+    try:
+        completed = subprocess.run(
+            ["docker", "version", "--format", "{{.Server.Version}}"],
+            cwd=ROOT, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+        )
+    except FileNotFoundError as error:
+        raise RuntimeError(
+            "Evidence Dependency Graphの再生成には実Docker runtimeが必要です。"
+            "--skip-containerでは再生成せずcommitted Graphをread-only検証してください。"
+        ) from error
     version = completed.stdout.strip()
     if not version:
         raise RuntimeError("Docker server versionを取得できません")

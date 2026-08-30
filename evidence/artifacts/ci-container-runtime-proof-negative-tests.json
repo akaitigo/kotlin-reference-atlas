@@ -1,0 +1,28 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "negative_fixtures": [
+    {
+      "id": "missing-proof",
+      "result": "pass"
+    },
+    {
+      "id": "missing-live-identity",
+      "result": "pass"
+    },
+    {
+      "id": "subject-mismatch",
+      "result": "pass"
+    },
+    {
+      "id": "input-binding-tamper",
+      "result": "pass"
+    },
+    {
+      "id": "retry-capture",
+      "result": "pass"
+    }
+  ],
+  "positive_fixture": "pass",
+  "schema_version": 1,
+  "verdict": "pass"
+}

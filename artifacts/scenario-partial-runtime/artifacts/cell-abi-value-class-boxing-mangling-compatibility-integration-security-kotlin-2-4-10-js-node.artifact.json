@@ -26,12 +26,12 @@
   "schema_version": 1,
   "source_digest": "sha256:bc60d30e24fe8363c38d2450f1d5cf86298b247141bfde79dccd32dfaf354f3e",
   "test_result": {
-    "digest": "sha256:e1fbedc4df0a4d7dda6eb5e2f91e51f166cc7d0329f7eac317422478a5665cef",
+    "digest": "sha256:ee94e78be6cef5bc589bca94f52d46d9a6ecf8656f441ada5fd8957beb342811",
     "path": "labs/abi-runtime-security/build/test-results/jsNodeTest/TEST-jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest.xml",
     "testcase": {
       "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
       "name": "compatibility integration keeps expect actual value representation executable[js, node]",
-      "time": "0.0"
+      "time": "0.004"
     }
   }
 }

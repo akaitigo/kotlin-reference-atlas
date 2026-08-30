@@ -950,6 +950,21 @@ def audit_definitive_incomplete() -> dict:
 def main(*, skip_container: bool = False) -> None:
     evidence_run_started_at = datetime.now().astimezone().isoformat(timespec="seconds")
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
+    run([sys.executable, str(ROOT / "scripts" / "test_ci_profile_contract.py")])
+    run([sys.executable, str(ROOT / "scripts" / "test_ci_container_runtime_proof.py")])
+    run([sys.executable, str(ROOT / "scripts" / "test_dco_range.py")])
+    preflight_definitive_audit = None
+    if skip_container:
+        # DockerなしProfileは、生成物を更新する前のcommitted Graph/Evidenceを
+        # read-onlyで検証する。Graph再生成と実Docker identity取得は別の必須
+        # container Jobが担当し、staleな入力はこの時点でfail-closedになる。
+        run([
+            sys.executable,
+            str(ROOT / "scripts" / "verify_evidence_dependency_profile.py"),
+            "--profile", "skip-container",
+        ])
+        run([sys.executable, str(ROOT / "scripts" / "test_evidence_dependency_graph.py")])
+        preflight_definitive_audit = audit_definitive_incomplete()
     python_dependency_result = validate_python_dependency_contract()
     manifest_result = validate_manifests()
     lab_result = collect_test_results()
@@ -984,13 +999,14 @@ def main(*, skip_container: bool = False) -> None:
     write_scenario_evidence()
     fe_parity_result = validate_fe_parity()
     neutral_language_result = validate_neutral_language()
-    run([sys.executable, str(ROOT / "scripts" / "generate_evidence_dependency_graph.py"), "--run-started-at", evidence_run_started_at, "--run-completed-at", datetime.now().astimezone().isoformat(timespec="seconds")])
-    run([sys.executable, str(ROOT / "scripts" / "test_evidence_dependency_graph.py")])
+    if not skip_container:
+        run([sys.executable, str(ROOT / "scripts" / "generate_evidence_dependency_graph.py"), "--run-started-at", evidence_run_started_at, "--run-completed-at", datetime.now().astimezone().isoformat(timespec="seconds")])
+        run([sys.executable, str(ROOT / "scripts" / "test_evidence_dependency_graph.py")])
     gaps = summarize_gap_ledger()
     summary = {
         "atlas_id": "kotlin-reference-atlas",
         "epoch": "2026-08-28",
-        "implementation_gates": {"python_dependency": python_dependency_result["verdict"], "manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "partial_scenario_runtime": partial_scenario_runtime["status"], "skill": skill_result["verdict"], "definitive_skill": definitive_skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "evidence_dependency": "pass", "scenario_plan": "expected-incomplete-no-success-generation", "evidence_durability": "expected-incomplete-no-success-generation", "definitive": "expected-incomplete"},
+        "implementation_gates": {"python_dependency": python_dependency_result["verdict"], "manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "partial_scenario_runtime": partial_scenario_runtime["status"], "skill": skill_result["verdict"], "definitive_skill": definitive_skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "evidence_dependency": "committed-read-only-pass; owner-managed full verify is the only Graph publication path" if skip_container else "owner-managed-full-live-runtime-regenerated-pass", "scenario_plan": "expected-incomplete-no-success-generation", "evidence_durability": "expected-incomplete-no-success-generation", "definitive": "expected-incomplete"},
         "python_dependency_contract": python_dependency_result,
         "definitive_skill_eval": definitive_skill_result,
         "kotlin_depth_parity": {"axis_count": fe_parity_result["axis_count"], "status_counts": fe_parity_result["status_counts"], "total_axis_gaps": fe_parity_result["total_axis_gaps"], "all_axes_closed": fe_parity_result["all_axes_closed"], "reference_commit": fe_parity_result["reference_commit"]},
@@ -1024,8 +1040,9 @@ def main(*, skip_container: bool = False) -> None:
     scenario_evidence_path = write_scenario_evidence()
     evidence_paths.append(scenario_evidence_path)
     provenance_path = write_provenance(evidence_paths)
-    run([sys.executable, str(ROOT / "scripts" / "generate_evidence_dependency_graph.py"), "--run-started-at", evidence_run_started_at, "--run-completed-at", datetime.now().astimezone().isoformat(timespec="seconds")])
-    run([sys.executable, str(ROOT / "scripts" / "test_evidence_dependency_graph.py")])
+    if not skip_container:
+        run([sys.executable, str(ROOT / "scripts" / "generate_evidence_dependency_graph.py"), "--run-started-at", evidence_run_started_at, "--run-completed-at", datetime.now().astimezone().isoformat(timespec="seconds")])
+        run([sys.executable, str(ROOT / "scripts" / "test_evidence_dependency_graph.py")])
     entity_paths = [*claim_paths, *evidence_paths, ROOT / "evals" / "kotlin-reference-router.skill-eval.json", provenance_path]
     run([str(ROOT / "bin" / "atlas"), "validate", *[path.relative_to(ROOT).as_posix() for path in entity_paths]])
     validate_graph(evidence_paths)
@@ -1042,7 +1059,11 @@ def main(*, skip_container: bool = False) -> None:
         validate_completion_certificate(evidence_paths)
         run([str(ROOT / "bin" / "atlas"), "audit", "."])
     else:
-        audit_definitive_incomplete()
+        if skip_container:
+            if preflight_definitive_audit is None:
+                raise RuntimeError("skip-container Profileのcommitted Core auditがありません")
+        else:
+            audit_definitive_incomplete()
     print(f"検証完了: implementation gates passed; Definitive Gateは期待どおり未完; repository status={load_json(ROOT / 'atlas.yaml')['status']}.")
 
 
