@@ -8,6 +8,7 @@ import json
 import shutil
 import subprocess
 import tempfile
+from datetime import datetime, timedelta
 from pathlib import Path
 
 from generate_evidence_dependency_graph import canonical, digest_bytes
@@ -104,7 +105,9 @@ def main() -> None:
             with (root / member).open("ab") as handle:
                 handle.write(b"\ndigest-only-change")
             changed["current_digest"] = aggregate(root, changed["members"])
-            changed["observed_at"] = "2026-08-29T02:00:00+09:00"
+            changed["observed_at"] = (
+                datetime.fromisoformat(document["runs"][0]["completed_at"]) + timedelta(seconds=1)
+            ).isoformat()
             for binding in document["runs"][0]["input_bindings"]:
                 if binding["input_id"] == changed["id"]:
                     binding["digest"] = changed["current_digest"]

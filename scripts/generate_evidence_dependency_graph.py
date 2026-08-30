@@ -14,8 +14,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "evidence" / "dependency-graph.json"
 BASELINE_COMMIT = "0fd5f9bb6af411ad4371674b542eb146de69af96"
-OBSERVED_AT = "2026-08-29T00:30:00+09:00"
-RUN_ID = "kotlin-atlas.full-evidence-rerun.2026-08-29"
+RUN_ID_PREFIX = "kotlin-atlas.full-evidence-rerun"
+RUN_COMMAND = "python3 scripts/verify.py"
+CONTAINER_PROFILE_COMMAND = "scripts/container-verify.sh"
+CONTAINER_PROFILE_DOCKERFILE = "environments/container/Dockerfile"
 
 
 def canonical(value: object) -> bytes:
@@ -78,7 +80,7 @@ def relative_files(root: str, suffixes: set[str]) -> list[str]:
     )
 
 
-def input_groups() -> list[dict]:
+def input_groups(observed_at: str) -> list[dict]:
     source = [
         "sources.lock.yaml", "coverage.yaml", "surface.inventory.yaml",
         "atlas/definitive/kotlin-depth-parity.json",
@@ -116,7 +118,7 @@ def input_groups() -> list[dict]:
             "members": sorted(members),
             "baseline_digest": aggregate_at_commit(members),
             "current_digest": aggregate_current(members),
-            "observed_at": OBSERVED_AT,
+            "observed_at": observed_at,
         })
     return result
 
@@ -239,15 +241,27 @@ def closure_plan_structure() -> str:
     }))
 
 
+def docker_server_version() -> str:
+    completed = subprocess.run(
+        ["docker", "version", "--format", "{{.Server.Version}}"],
+        cwd=ROOT, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+    )
+    version = completed.stdout.strip()
+    if not version:
+        raise RuntimeError("Docker server versionを取得できません")
+    return version
+
+
 def generate(run_started_at: str, run_completed_at: str) -> dict:
-    inputs = input_groups()
+    inputs = input_groups(run_started_at)
     input_ids = sorted(item["id"] for item in inputs)
     required = discover_required_outputs()
+    run_id = f"{RUN_ID_PREFIX}.{hashlib.sha256(run_started_at.encode()).hexdigest()[:12]}"
     outputs = [
         {
             "id": output_id(path), "kind": output_kind(path), "path": path,
             "digest": digest_file(path), "depends_on": input_ids,
-            "status": "current", "run_id": RUN_ID,
+            "status": "current", "run_id": run_id,
         }
         for path in required
     ]
@@ -267,14 +281,17 @@ def generate(run_started_at: str, run_completed_at: str) -> dict:
         "inputs": inputs,
         "outputs": outputs,
         "runs": [{
-            "id": RUN_ID, "execution_kind": "runtime",
-            "command": "python3 scripts/verify.py",
+            "id": run_id, "execution_kind": "runtime",
+            "command": RUN_COMMAND,
             "started_at": run_started_at, "completed_at": run_completed_at,
             "result": "passed", "attempts": 1,
             "runtime_identity": {
                 "subject": "Kotlin/JVM/JS/Wasm/Native compile, Gradle and container verification",
                 "kotlin": "2.4.10", "gradle": "9.5.0", "jvm": "OpenJDK 17",
                 "container": "gradle:9.5.0-jdk17", "host": "macOS arm64",
+                "docker_server": docker_server_version(),
+                "container_profile_command": CONTAINER_PROFILE_COMMAND,
+                "container_profile_dockerfile": CONTAINER_PROFILE_DOCKERFILE,
                 "native_runtime_substitution": "forbidden; KLIB compile-only is not runtime evidence",
             },
             "input_bindings": [

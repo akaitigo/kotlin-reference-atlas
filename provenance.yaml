@@ -21,7 +21,7 @@
       ]
     },
     {
-      "digest": "sha256:4feb616d8e35503365c8d682bcf6b13abcc319d722e42b5cbbf84fbaa88b96f1",
+      "digest": "sha256:a9b6bed4b4beb7d583690c50d1aff69eae46bd9e1649fd66045e0a7872c81d04",
       "generated_by": "python3 scripts/generate_definitive_skill_eval.py",
       "kind": "skill-eval",
       "license": "Apache-2.0",
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "digest": "sha256:74a64ef02c8393e3b0cd279eb2decaddb8d15fbe76275efaeb7e8081b629ad8f",
+      "digest": "sha256:0ad11a700f1f3d7e7ba82bc363c0eae94cb8d89e31cb8f948b984c2c4908d16a",
       "generated_by": "python3 scripts/generate_definitive_skill_eval.py",
       "kind": "skill-eval",
       "license": "Apache-2.0",
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "digest": "sha256:82c6451a9c1c835c93e794eaea4bbfa76960de0709512fc87efcd9729f037eea",
+      "digest": "sha256:79784c25ae6ca548abe7f8c947c7e24870aee8b266bfb17a4191440c8a9dd3c7",
       "generated_by": "scripts/container-verify.sh",
       "kind": "generated",
       "license": "Apache-2.0",

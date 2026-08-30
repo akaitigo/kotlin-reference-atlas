@@ -60,7 +60,7 @@ Evidence Dependency GraphはFEの件数を転用せず、Kotlin Authority／Surf
 
 公開main `e42f23d`をBaselineとして、28 Target、25 Claim、27 Proof、24 Evidence、8 Source、18 Skill Eval、34実行Test case、56 Assertion、JVM／JS／Wasm／Native compile task、macOS／Ubuntu CIを維持します。`scripts/verify_non_regression.py`が削除、格下げ、skip、Scope外退避、Evidence command置換を検出した場合、Definitive作業は未完のまま失敗します。
 
-Core v2標準の`non-regression.yaml`は、この公開main非後退を通過したDCO commit `c0e9b1c60768f606221f6a3ef0556052a8b5d0e9`を追加anchorとして固定します。正式main `072d7ca77981f51754e824d70c6d4ecd55ea67e5`で生成したbaselineは29 Claim、31 Proof、28 Evidence、18 Source、21 Skill Eval、30 TargetとEvidence Dependency Graph Collectionを保持し、同一Harnessの変更には実Runtime ProofとMigration Evidenceを要求します。公開main baselineを置換するものではなく、二層を両方通します。
+Core v2標準の`non-regression.yaml`は、この公開main非後退を通過したDCO commit `c0e9b1c60768f606221f6a3ef0556052a8b5d0e9`を追加anchorとして固定します。正式main `072d7ca77981f51754e824d70c6d4ecd55ea67e5`で同一commitを再採取したbaselineは29 Claim、31 Proof、28 Evidence、18 Source、21 Skill Eval、30 Targetを保持します。Kotlin固有Evidence Dependency Graph 736 fingerprintはこの不変anchorを変更せず、現行Collectionへの単調追加としてCore Gateが監査します。公開main baselineを置換するものではなく、二層を両方通します。
 
 ## 既知の外部条件
 
