@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import subprocess
 from pathlib import Path
 
 import yaml
@@ -21,23 +20,27 @@ def load(path: Path) -> dict:
 
 def verify_reference(errors: list[str]) -> dict:
     reference = load(REFERENCE)
-    repository = ROOT.parent / "frontend-behavior-atlas"
     expected_commit = "deadad18b6588d2c907170a451c3b5cea5ea4192"
     if reference.get("git_commit") != expected_commit or reference.get("absolute_counts_transplanted") is not False:
         errors.append("FE Scenario Proof methodology identity/count policyが不正")
     mismatches = []
+    mutation_rejected = True
+    vendor = ROOT / "baseline" / "fe-methodology-vendor" / expected_commit
     for path, digest in reference.get("artifacts", {}).items():
-        result = subprocess.run(["git", "-C", str(repository), "show", f"{expected_commit}:{path}"], check=False, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        if result.returncode != 0 or sha256(result.stdout) != digest:
+        artifact = vendor / path
+        content = artifact.read_bytes() if artifact.is_file() else b""
+        if not content or sha256(content) != digest:
             mismatches.append(path)
+        mutation_rejected = mutation_rejected and sha256(content + b"\nmethodology-drift-negative-fixture") != digest
     if mismatches:
         errors.append(f"FE Scenario Proof methodology digest不一致: {mismatches}")
-    return {"commit": expected_commit, "artifacts": len(reference.get("artifacts", {})), "verified": not mismatches}
+    if not mutation_rejected:
+        errors.append("FE Scenario Proof methodology mutation negative fixtureが拒否されない")
+    return {"commit": expected_commit, "artifacts": len(reference.get("artifacts", {})), "vendor_snapshot": vendor.relative_to(ROOT).as_posix(), "mutation_rejected": mutation_rejected, "verified": not mismatches and mutation_rejected}
 
 
 def verify_closure_reference(errors: list[str]) -> dict:
     reference = load(CLOSURE_REFERENCE)
-    repository = ROOT.parent / "frontend-behavior-atlas"
     expected_commit = "f2e4c4b19156f8e993f48cdcbce23679ad881924"
     policy = reference.get("kotlin_mapping", {})
     required_true = {
@@ -50,13 +53,19 @@ def verify_closure_reference(errors: list[str]) -> dict:
     if any(policy.get(field) is not True for field in required_true) or policy.get("integrated_trace_reuse_allowed") is not False or policy.get("unrelated_artifact_metadata_reuse_allowed") is not False:
         errors.append("Kotlin Scenario gap closureの専用実行条件が不足")
     mismatches = []
+    mutation_rejected = True
+    vendor = ROOT / "baseline" / "fe-methodology-vendor" / expected_commit
     for path, digest in reference.get("artifacts", {}).items():
-        result = subprocess.run(["git", "-C", str(repository), "show", f"{expected_commit}:{path}"], check=False, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        if result.returncode != 0 or sha256(result.stdout) != digest:
+        artifact = vendor / path
+        content = artifact.read_bytes() if artifact.is_file() else b""
+        if not content or sha256(content) != digest:
             mismatches.append(path)
+        mutation_rejected = mutation_rejected and sha256(content + b"\nmethodology-drift-negative-fixture") != digest
     if mismatches:
         errors.append(f"FE Scenario gap closure methodology digest不一致: {mismatches}")
-    return {"commit": expected_commit, "artifacts": len(reference.get("artifacts", {})), "verified": not mismatches}
+    if not mutation_rejected:
+        errors.append("FE Scenario gap closure methodology mutation negative fixtureが拒否されない")
+    return {"commit": expected_commit, "artifacts": len(reference.get("artifacts", {})), "vendor_snapshot": vendor.relative_to(ROOT).as_posix(), "mutation_rejected": mutation_rejected, "verified": not mismatches and mutation_rejected}
 
 
 def main() -> None:
@@ -81,7 +90,7 @@ def main() -> None:
     partial_report = load(partial_report_path)
     partial_records = {record["id"]: record for record in partial_report.get("records", [])}
     if partial_report.get("status") != "passed" or partial_report.get("execution", {}).get("retries") != 0:
-        errors.append("security-001 partial Runtime reportがpass/retry 0ではない")
+        errors.append("Scenario partial Runtime reportがpass/retry 0ではない")
     used_dedicated_paths = set()
     reference_results = load(REFERENCE_RESULTS)
     trace_by_scenario = {item["scenario"]: item for item in reference_results["scenarios"]}

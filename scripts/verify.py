@@ -468,7 +468,7 @@ def validate_rights() -> dict:
     errors = []
     if missing:
         errors.append("missing=" + ",".join(missing))
-    if not {"reference-atlas-core", "gradle-distribution", "nodejs-runtime", "eclipse-temurin-runtime"}.issubset(direct_ids):
+    if not {"reference-atlas-core", "frontend-behavior-atlas-methodology-vendor", "gradle-distribution", "nodejs-runtime", "eclipse-temurin-runtime"}.issubset(direct_ids):
         errors.append("third_party manifestの固定Toolchain依存が不足")
     if not {"kotlin", "gradle", "kotlinx-coroutines-core-jvm", "junit-bom"}.issubset(sbom_names):
         errors.append("SBOMの直接依存が不足")
@@ -940,7 +940,7 @@ def main(*, skip_container: bool = False) -> None:
     run([sys.executable, str(ROOT / "scripts" / "capture_security_001_partial.py")])
     partial_scenario_runtime = load_json(ROOT / "artifacts" / "scenario-partial-runtime" / "results.json")
     if partial_scenario_runtime.get("status") != "passed" or partial_scenario_runtime.get("execution", {}).get("retries") != 0:
-        raise RuntimeError("security-001 partial Runtime Evidenceがpass/retry 0ではない")
+        raise RuntimeError("Scenario partial Runtime Evidenceがpass/retry 0ではない")
     # RouterはEvidence artifact digestをfail-closedで確認する。直前のLab/Artifact
     # 再生成をrecordへ反映してからEvalし、後段で全Gateの最終recordを再固定する。
     write_evidence()
@@ -978,7 +978,7 @@ def main(*, skip_container: bool = False) -> None:
         "gap_ledger": gaps,
         "completion_gaps": [
             "146402 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
-            "69 Authority inventory Behavior×10 Scenarioは専用row化済み。security-001ではvalue-class securityのJVM/JS/Wasm 9 cell、source/binary/behavioral securityのJVM 2 cell、metadata-version securityのJVM 2 cellを専用初回実行で閉じたが、Native・JS/Wasm ABIを含む残cellとAuthority atomic bindingは未閉鎖",
+            "69 Authority inventory Behavior×10 Scenarioは専用row化済み。security-001の13 cellに加え、security-002のinline-reified security JVM/JS/Wasm 9 cellを専用初回実行で閉じた。合計22 cellはretry 0だが、Native・JS/Wasm ABI・他Compiler rowとAuthority atomic bindingは未閉鎖",
             "Pattern Scenario Reporterは原子的retention契約へ適合するが、公開可能なfull-run成功世代が未生成のためCore Evidence durability／Scenario Plan Gateは未閉鎖",
             "112-cell Router契約と独立Agent Forward Evalはpassだが22 Mastery routing gapが未閉鎖",
             "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖",

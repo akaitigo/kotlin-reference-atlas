@@ -5,7 +5,7 @@
   "completion_class": "incomplete",
   "definitive_audit_exit_code": 1,
   "definitive_audit_output": "エラー: subject-definitiveではrequired Targetをcoveredにする必要があります: authority.locator-extraction state=partial\nexit status 1",
-  "evidence_dependency_audit": "Evidence dependency監査済み: kotlin-reference-atlas inputs=4 changed_inputs=4 outputs=756 affected_outputs=756 reruns=1 digest_only_closure=false",
+  "evidence_dependency_audit": "Evidence dependency監査済み: kotlin-reference-atlas inputs=4 changed_inputs=4 outputs=774 affected_outputs=774 reruns=1 digest_only_closure=false",
   "evidence_durability_audit_exit_code": 1,
   "evidence_durability_audit_output": "エラー: failed runを成功Evidence directoryへ公開できません\nexit status 1",
   "scenario_plan_audit_exit_code": 1,

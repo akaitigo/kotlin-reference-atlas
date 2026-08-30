@@ -6,6 +6,9 @@
     ":labs:abi-runtime-security:jvmTest",
     ":labs:abi-runtime-security:jsNodeTest",
     ":labs:abi-runtime-security:wasmJsNodeTest",
+    ":labs:compiler-runtime-security:jvmTest",
+    ":labs:compiler-runtime-security:jsNodeTest",
+    ":labs:compiler-runtime-security:wasmJsNodeTest",
     ":labs:abi-compat-consumer:compatibilityBaselineTest",
     ":labs:abi-compat-consumer:compatibilityBreakingTest",
     ":labs:abi-compat-consumer:migrationBreakingTest",
@@ -46,6 +49,6 @@
   "testcase": {
     "classname": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
     "name": "performance capacity cost boundary remains deterministic under repetition()[jvm]",
-    "time": "0.035"
+    "time": "0.139"
   }
 }

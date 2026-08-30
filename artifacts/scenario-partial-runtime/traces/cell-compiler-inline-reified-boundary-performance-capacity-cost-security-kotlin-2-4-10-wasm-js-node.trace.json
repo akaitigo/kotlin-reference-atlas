@@ -1,0 +1,54 @@
+{
+  "attempt": 1,
+  "cell_id": "cell.compiler.inline-reified-boundary.performance-capacity-cost.security.kotlin-2.4.10-wasm-js-node",
+  "command": [
+    "./gradlew",
+    ":labs:abi-runtime-security:jvmTest",
+    ":labs:abi-runtime-security:jsNodeTest",
+    ":labs:abi-runtime-security:wasmJsNodeTest",
+    ":labs:compiler-runtime-security:jvmTest",
+    ":labs:compiler-runtime-security:jsNodeTest",
+    ":labs:compiler-runtime-security:wasmJsNodeTest",
+    ":labs:abi-compat-consumer:compatibilityBaselineTest",
+    ":labs:abi-compat-consumer:compatibilityBreakingTest",
+    ":labs:abi-compat-consumer:migrationBreakingTest",
+    ":labs:abi-compat-consumer:migrationCompatibleTest",
+    ":labs:abi-metadata-consumer-supported:test",
+    ":labs:abi-metadata-consumer-override:test",
+    "--rerun-tasks",
+    "--no-daemon"
+  ],
+  "outcome": "expected",
+  "retry_count": 0,
+  "runtime_identity": {
+    "compiler": "Kotlin 2.4.10 K2 IR",
+    "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+    "host_architecture": "arm64",
+    "host_os": "Darwin",
+    "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+    "node": "v25.2.1",
+    "runtime": "K2 Kotlin/Wasm JS on Node.js",
+    "variant_id": "kotlin-2.4.10-wasm-js-node"
+  },
+  "schema_version": 1,
+  "streams": {
+    "action": [
+      "compile reified boundary with K2 IR",
+      "launch target runtime",
+      "execute dedicated type-confusion refusal oracle"
+    ],
+    "network": [
+      "no application network operation; dependency resolution is repository-locked"
+    ],
+    "resource": [
+      "compiler_artifact=labs/compiler-runtime-security/build/compileSync/wasmJs/test/testDevelopmentExecutable/kotlin/kotlin-reference-atlas-labs-compiler-runtime-security-test.wasm",
+      "bytes=788220"
+    ]
+  },
+  "task": ":labs:compiler-runtime-security:wasmJsNodeTest",
+  "testcase": {
+    "classname": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+    "name": "performance capacity cost keeps the reified refusal result deterministic[wasmJs, node]",
+    "time": "0.0"
+  }
+}

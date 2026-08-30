@@ -14,7 +14,7 @@
   "candidate_evidence": [
     {
       "artifact": {
-        "digest": "sha256:df09d74809e26ad9c3f73dd88106b36b23fa5ffd4f34149ba2e8c4e5db4d8b2e",
+        "digest": "sha256:19a2cdda2fc5374eb11c32910e47c7b2aac769796369a57bd4dab62ea62eb77f",
         "exists": true,
         "path": "evidence/artifacts/rights-validation.json"
       },
@@ -33,7 +33,7 @@
       "producer": "kotlin-atlas-verifier",
       "record": {
         "bytes": 965,
-        "digest": "sha256:a334f5b14703f01f30321b65c7f692d267f18d8705e597ec7024dab7e2bfb6c0",
+        "digest": "sha256:e48752def2bfb4bca009b444187b97639e22f05d7f385d4028628ae6862410a6",
         "path": "evidence/build.toolchain-lock.evidence.json"
       },
       "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",

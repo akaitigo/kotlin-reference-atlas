@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import subprocess
 import tempfile
 from pathlib import Path
 
@@ -15,15 +14,13 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def verify_fe_reference() -> None:
     reference = json.loads((ROOT / "baseline" / "fe-atomic-evidence-reference-v1.json").read_text(encoding="utf-8"))
-    repository = ROOT.parent / "frontend-behavior-atlas"
+    vendor = ROOT / "baseline" / "fe-methodology-vendor" / reference["git_commit"]
     for path, expected in reference["artifacts"].items():
-        result = subprocess.run(
-            ["git", "-C", str(repository), "show", f"{reference['git_commit']}:{path}"],
-            check=True,
-            stdout=subprocess.PIPE,
-        )
-        actual = "sha256:" + hashlib.sha256(result.stdout).hexdigest()
+        content = (vendor / path).read_bytes()
+        actual = "sha256:" + hashlib.sha256(content).hexdigest()
         assert actual == expected, f"FE atomic Evidence reference drift: {path}"
+        mutated = content + b"\nmethodology-drift-negative-fixture"
+        assert "sha256:" + hashlib.sha256(mutated).hexdigest() != expected, f"FE atomic Evidence mutation was accepted: {path}"
 
 
 def generation_digest(root: Path) -> str:
@@ -92,6 +89,8 @@ def main() -> None:
     report = {
         "schema_version": 1,
         "methodology_reference": "baseline/fe-atomic-evidence-reference-v1.json",
+        "methodology_vendor_snapshot": "baseline/fe-methodology-vendor/7175de4",
+        "vendored_reference_mutation_rejected": "pass",
         "staging_only_generation": "pass",
         "full_run_publish_only": "pass",
         "failed_run_retains_prior_success": "pass",

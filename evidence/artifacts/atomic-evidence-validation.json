@@ -2,6 +2,7 @@
   "failed_run_retains_prior_success": "pass",
   "full_run_publish_only": "pass",
   "methodology_reference": "baseline/fe-atomic-evidence-reference-v1.json",
+  "methodology_vendor_snapshot": "baseline/fe-methodology-vendor/7175de4",
   "mixed_generation_rejected": "pass",
   "partial_generation_rejected": "pass",
   "retention_contract": {
@@ -12,5 +13,6 @@
   "schema_version": 1,
   "staging_only_generation": "pass",
   "swap_failure_rollback": "pass",
+  "vendored_reference_mutation_rejected": "pass",
   "verdict": "pass"
 }

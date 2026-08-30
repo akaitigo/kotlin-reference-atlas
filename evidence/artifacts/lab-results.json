@@ -169,6 +169,72 @@
     {
       "cases": [
         {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "compatibility integration validates generic elements after outer type erasure[js, node]",
+          "status": "pass"
+        },
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "foundations mechanics rejects a mismatched runtime type token[js, node]",
+          "status": "pass"
+        },
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "performance capacity cost keeps the reified refusal result deterministic[js, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "compiler-runtime-security",
+      "suite": "jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+      "task": "jsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "compatibility integration validates generic elements after outer type erasure()[jvm]",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "foundations mechanics rejects a mismatched runtime type token()[jvm]",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "performance capacity cost keeps the reified refusal result deterministic()[jvm]",
+          "status": "pass"
+        }
+      ],
+      "module": "compiler-runtime-security",
+      "suite": "ReifiedSecurityBoundaryTest[jvm]",
+      "task": "jvmTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "compatibility integration validates generic elements after outer type erasure[wasmJs, node]",
+          "status": "pass"
+        },
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "foundations mechanics rejects a mismatched runtime type token[wasmJs, node]",
+          "status": "pass"
+        },
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "performance capacity cost keeps the reified refusal result deterministic[wasmJs, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "compiler-runtime-security",
+      "suite": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+      "task": "wasmJsNodeTest"
+    },
+    {
+      "cases": [
+        {
           "class": "dev.akaitigo.kotlinatlas.coroutines.FailurePropagationTest",
           "name": "child failure cancels sibling and propagates to caller()",
           "status": "pass"
@@ -459,6 +525,6 @@
       "task": "test"
     }
   ],
-  "test_case_count": 62,
+  "test_case_count": 71,
   "verdict": "pass"
 }

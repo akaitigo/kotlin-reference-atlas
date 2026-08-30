@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "id": "frontend-pattern-scenario-runtime-v1",
+  "created_at": "2026-08-28T13:46:09.811Z",
+  "status": "passed",
+  "command": "pnpm pattern-scenario:test",
+  "profile": "local-real-browser",
+  "counts": {
+    "rows": 2,
+    "variants": 4,
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0
+  },
+  "source_digest": "sha256:c0fe441c01d10c8fe6e2ef9ada9e21b0f3c356abca20b4dffa879eba2ccaf0a8",
+  "harness_digest": "sha256:1a1c84ec79b772eedb391163e8ec14ff5ca8148ac12fac99447bdf914396ea79",
+  "environment": {
+    "node": "v25.2.1",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "playwright": "1.62.1",
+    "browser_name": "chromium",
+    "browser_version": "151.0.7922.175",
+    "browser_channel": "chrome",
+    "workers": 1,
+    "retries": 0,
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "device_scale_factor": 1
+    },
+    "trace_mode": "on"
+  },
+  "trace_contract": {
+    "per_variant": true,
+    "required_streams": [
+      "action",
+      "network",
+      "resource"
+    ],
+    "oracle_attachment": "scenario-oracle"
+  },
+  "completion_limits": [
+    "first incremental tranche: two current Domain Pattern boundary rows only",
+    "does not replace the remaining Pattern-specific Scenario gaps",
+    "does not establish Authority-derived Atomic behavior completion"
+  ],
+  "tests": [
+    {
+      "id": "fc9392a77101f793fcba-994872ea1f7fe73a5115",
+      "pattern_id": "reactive/background-sync-status",
+      "variant_id": "durable-sync-queue",
+      "scenario": "boundary",
+      "title": "reactive-queue-boundary.spec.ts › [pattern-scenario:boundary][pattern:reactive/background-sync-status][variant:durable-sync-queue] bounds queued work under repeated input",
+      "file": "pattern-scenario-e2e/reactive-queue-boundary.spec.ts",
+      "line": 30,
+      "source_digest": "sha256:1d90bfa6a7df87f0c7c2f2de4285d6b73faa3f212d5ce801ca09dee7d8e178be",
+      "outcome": "expected",
+      "attempts": 1,
+      "final_status": "passed",
+      "error": null,
+      "oracle": {
+        "scenario": "boundary",
+        "driven_actions": {
+          "repeated_start": 8,
+          "disconnect": 1,
+          "recover": 1
+        },
+        "observed_queue_depths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "maximum_queue_depth": 1,
+        "final_state": {
+          "pattern": "background-sync-status",
+          "strategy": "durable-sync-queue",
+          "phase": "recovered",
+          "permission": "fixture",
+          "connected": true,
+          "sequence": 9,
+          "queued": 0,
+          "fixture": "two idempotency keys",
+          "motion": "reduced"
+        }
+      },
+      "trace": {
+        "path": "artifacts/pattern-scenarios/traces/reactive__background-sync-status__boundary__durable-sync-queue.trace.zip",
+        "digest": "sha256:a18f02454fe39c7df0a74bd5abcf1aa3cd39858ea4ccde94b3dd5817706cb6bf",
+        "bytes": 655130,
+        "action_stream": true,
+        "network_stream": true,
+        "resource_stream": true
+      },
+      "screenshot": {
+        "path": "artifacts/pattern-scenarios/screenshots/reactive__background-sync-status__boundary__durable-sync-queue.png",
+        "digest": "sha256:9d7e1d822bcda95edc353c28ec96bd36d1c5ca7e20bb4d9630801dfd34ea9303",
+        "bytes": 96330
+      }
+    },
+    {
+      "id": "fc9392a77101f793fcba-ebf5102949b597758cb0",
+      "pattern_id": "reactive/background-sync-status",
+      "variant_id": "foreground-retry-queue",
+      "scenario": "boundary",
+      "title": "reactive-queue-boundary.spec.ts › [pattern-scenario:boundary][pattern:reactive/background-sync-status][variant:foreground-retry-queue] bounds queued work under repeated input",
+      "file": "pattern-scenario-e2e/reactive-queue-boundary.spec.ts",
+      "line": 30,
+      "source_digest": "sha256:c3b7bf011a659dfceac40e369180b1421f0bd4ec6c06f00ba294f8a1642eeb74",
+      "outcome": "expected",
+      "attempts": 1,
+      "final_status": "passed",
+      "error": null,
+      "oracle": {
+        "scenario": "boundary",
+        "driven_actions": {
+          "repeated_start": 8,
+          "disconnect": 1,
+          "recover": 1
+        },
+        "observed_queue_depths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "maximum_queue_depth": 1,
+        "final_state": {
+          "pattern": "background-sync-status",
+          "strategy": "foreground-retry-queue",
+          "phase": "recovered",
+          "permission": "fixture",
+          "connected": true,
+          "sequence": 9,
+          "queued": 0,
+          "fixture": "two idempotency keys",
+          "motion": "reduced"
+        }
+      },
+      "trace": {
+        "path": "artifacts/pattern-scenarios/traces/reactive__background-sync-status__boundary__foreground-retry-queue.trace.zip",
+        "digest": "sha256:7846c088f429c209ae3f18abde9c46c67b15b0c28d1a4c492015f59cef38639c",
+        "bytes": 611576,
+        "action_stream": true,
+        "network_stream": true,
+        "resource_stream": true
+      },
+      "screenshot": {
+        "path": "artifacts/pattern-scenarios/screenshots/reactive__background-sync-status__boundary__foreground-retry-queue.png",
+        "digest": "sha256:4dacaf54bb6aa0f7d8cdf7dac1007af0d009b13b9f42c26197db65bed8c34472",
+        "bytes": 96341
+      }
+    },
+    {
+      "id": "fc9392a77101f793fcba-2173ccbaf839a25a1f9e",
+      "pattern_id": "reactive/network-offline-recovery",
+      "variant_id": "idempotent-operation-queue",
+      "scenario": "boundary",
+      "title": "reactive-queue-boundary.spec.ts › [pattern-scenario:boundary][pattern:reactive/network-offline-recovery][variant:idempotent-operation-queue] bounds queued work under repeated input",
+      "file": "pattern-scenario-e2e/reactive-queue-boundary.spec.ts",
+      "line": 30,
+      "source_digest": "sha256:316671bb5dab743a9ecd60d014ee9fcc553df6ba51dd578258f9cd8687fe9f88",
+      "outcome": "expected",
+      "attempts": 1,
+      "final_status": "passed",
+      "error": null,
+      "oracle": {
+        "scenario": "boundary",
+        "driven_actions": {
+          "repeated_start": 8,
+          "disconnect": 1,
+          "recover": 1
+        },
+        "observed_queue_depths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "maximum_queue_depth": 1,
+        "final_state": {
+          "pattern": "network-offline-recovery",
+          "strategy": "idempotent-operation-queue",
+          "phase": "recovered",
+          "permission": "fixture",
+          "connected": true,
+          "sequence": 9,
+          "queued": 0,
+          "fixture": "three mutation identifiers",
+          "motion": "reduced"
+        }
+      },
+      "trace": {
+        "path": "artifacts/pattern-scenarios/traces/reactive__network-offline-recovery__boundary__idempotent-operation-queue.trace.zip",
+        "digest": "sha256:1781ac843e31cbaec37d3a7af885568553dd8dd60b366d6b447d688347045a83",
+        "bytes": 669407,
+        "action_stream": true,
+        "network_stream": true,
+        "resource_stream": true
+      },
+      "screenshot": {
+        "path": "artifacts/pattern-scenarios/screenshots/reactive__network-offline-recovery__boundary__idempotent-operation-queue.png",
+        "digest": "sha256:97f5e6d49591afd62594b1f8acb46acd81b78a8a57200d51d2a0d391ebf85b50",
+        "bytes": 97049
+      }
+    },
+    {
+      "id": "fc9392a77101f793fcba-277d82e40ba63e807791",
+      "pattern_id": "reactive/network-offline-recovery",
+      "variant_id": "snapshot-reconciliation",
+      "scenario": "boundary",
+      "title": "reactive-queue-boundary.spec.ts › [pattern-scenario:boundary][pattern:reactive/network-offline-recovery][variant:snapshot-reconciliation] bounds queued work under repeated input",
+      "file": "pattern-scenario-e2e/reactive-queue-boundary.spec.ts",
+      "line": 30,
+      "source_digest": "sha256:13da21742a3eaa2e3f362564abf6fba2be5fc136046aa41a0c48e3a5ab64c4fe",
+      "outcome": "expected",
+      "attempts": 1,
+      "final_status": "passed",
+      "error": null,
+      "oracle": {
+        "scenario": "boundary",
+        "driven_actions": {
+          "repeated_start": 8,
+          "disconnect": 1,
+          "recover": 1
+        },
+        "observed_queue_depths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "maximum_queue_depth": 1,
+        "final_state": {
+          "pattern": "network-offline-recovery",
+          "strategy": "snapshot-reconciliation",
+          "phase": "recovered",
+          "permission": "fixture",
+          "connected": true,
+          "sequence": 9,
+          "queued": 0,
+          "fixture": "three mutation identifiers",
+          "motion": "reduced"
+        }
+      },
+      "trace": {
+        "path": "artifacts/pattern-scenarios/traces/reactive__network-offline-recovery__boundary__snapshot-reconciliation.trace.zip",
+        "digest": "sha256:1d4abd5065bc986c913e96029dcc13b5c15daa250d1d66afa68dae3211212d4d",
+        "bytes": 665595,
+        "action_stream": true,
+        "network_stream": true,
+        "resource_stream": true
+      },
+      "screenshot": {
+        "path": "artifacts/pattern-scenarios/screenshots/reactive__network-offline-recovery__boundary__snapshot-reconciliation.png",
+        "digest": "sha256:89f0eac05c904d2ed6e87f01917545ad6797488f34fc8cb493cf38e238db86cf",
+        "bytes": 96850
+      }
+    }
+  ]
+}

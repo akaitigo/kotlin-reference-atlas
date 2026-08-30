@@ -96,6 +96,35 @@ METADATA_ARTIFACTS = [
     METADATA_SUPPORTED / "build" / "libs" / "abi-metadata-consumer-supported-0.2.0.jar",
     METADATA_OVERRIDE / "build" / "libs" / "abi-metadata-consumer-override-0.2.0.jar",
 ]
+COMPILER_LAB = ROOT / "labs" / "compiler-runtime-security"
+COMPILER_SOURCE = COMPILER_LAB / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "compiler" / "ReifiedSecurityBoundary.kt"
+COMPILER_HARNESS = COMPILER_LAB / "src" / "commonTest" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "compiler" / "ReifiedSecurityBoundaryTest.kt"
+COMPILER_BEHAVIOR = "compiler.inline-reified-boundary"
+COMPILER_SURFACE_TESTS = {
+    "foundations-mechanics": "foundations mechanics rejects a mismatched runtime type token",
+    "compatibility-integration": "compatibility integration validates generic elements after outer type erasure",
+    "performance-capacity-cost": "performance capacity cost keeps the reified refusal result deterministic",
+}
+COMPILER_PROFILES = {
+    "kotlin-2.4.10-k2-jvm-ir-openjdk17": {
+        "task": ":labs:compiler-runtime-security:jvmTest",
+        "result": COMPILER_LAB / "build" / "test-results" / "jvmTest" / "TEST-dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest.xml",
+        "binary": COMPILER_LAB / "build" / "libs" / "compiler-runtime-security-jvm-0.2.0.jar",
+        "runtime": "K2 JVM IR on OpenJDK 17",
+    },
+    "kotlin-2.4.10-js-ir-node": {
+        "task": ":labs:compiler-runtime-security:jsNodeTest",
+        "result": COMPILER_LAB / "build" / "test-results" / "jsNodeTest" / "TEST-jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest.xml",
+        "binary": COMPILER_LAB / "build" / "compileSync" / "js" / "test" / "testDevelopmentExecutable" / "kotlin" / "kotlin-reference-atlas-labs-compiler-runtime-security-test.js",
+        "runtime": "K2 Kotlin/JS IR on Node.js",
+    },
+    "kotlin-2.4.10-wasm-js-node": {
+        "task": ":labs:compiler-runtime-security:wasmJsNodeTest",
+        "result": COMPILER_LAB / "build" / "test-results" / "wasmJsNodeTest" / "TEST-wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest.xml",
+        "binary": COMPILER_LAB / "build" / "compileSync" / "wasmJs" / "test" / "testDevelopmentExecutable" / "kotlin" / "kotlin-reference-atlas-labs-compiler-runtime-security-test.wasm",
+        "runtime": "K2 Kotlin/Wasm JS on Node.js",
+    },
+}
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -132,7 +161,7 @@ def command_output(command: list[str]) -> str:
 
 
 def run_gradle() -> tuple[list[str], str]:
-    tasks = [profile["task"] for profile in PROFILES.values()] + [
+    tasks = [profile["task"] for profile in PROFILES.values()] + [profile["task"] for profile in COMPILER_PROFILES.values()] + [
         f":labs:abi-compat-consumer:{task}" for task in ABI_TASKS
     ] + [
         ":labs:abi-metadata-consumer-supported:test",
@@ -464,22 +493,107 @@ def build_generation(staging: Path) -> None:
             "final_status": "passed",
             "dedicated_to_this_cell": True,
         })
+    compiler_source_digest = sha256_file(COMPILER_SOURCE)
+    compiler_harness_digest = sha256_file(COMPILER_HARNESS)
+    for variant_id, profile in COMPILER_PROFILES.items():
+        result_path, binary_path = profile["result"], profile["binary"]
+        cases = testcases(result_path)
+        if not binary_path.is_file() or binary_path.stat().st_size == 0:
+            raise RuntimeError(f"inline-reified compiler artifact is missing: {binary_path.relative_to(ROOT)}")
+        identity = {
+            "compiler": "Kotlin 2.4.10 K2 IR",
+            "runtime": profile["runtime"],
+            "variant_id": variant_id,
+            "gradle": gradle_identity,
+            "java": java_identity,
+            "node": node_identity,
+            "host_os": platform.system(),
+            "host_architecture": platform.machine(),
+        }
+        for surface_id, expected_test in COMPILER_SURFACE_TESTS.items():
+            case = find_case(cases, expected_test)
+            cell_id = f"cell.{COMPILER_BEHAVIOR}.{surface_id}.{SCENARIO}.{variant_id}"
+            safe = cell_id.replace(".", "-")
+            trace_path = staging / "traces" / f"{safe}.trace.json"
+            artifact_path = staging / "artifacts" / f"{safe}.artifact.json"
+            trace = {
+                "schema_version": 1,
+                "cell_id": cell_id,
+                "attempt": 1,
+                "retry_count": 0,
+                "command": command,
+                "task": profile["task"],
+                "testcase": case,
+                "streams": {
+                    "action": ["compile reified boundary with K2 IR", "launch target runtime", "execute dedicated type-confusion refusal oracle"],
+                    "network": ["no application network operation; dependency resolution is repository-locked"],
+                    "resource": [f"compiler_artifact={binary_path.relative_to(ROOT).as_posix()}", f"bytes={binary_path.stat().st_size}"],
+                },
+                "runtime_identity": identity,
+                "outcome": "expected",
+            }
+            artifact = {
+                "schema_version": 1,
+                "cell_id": cell_id,
+                "source_digest": compiler_source_digest,
+                "harness_digest": compiler_harness_digest,
+                "test_result": {
+                    "path": result_path.relative_to(ROOT).as_posix(),
+                    "digest": sha256_file(result_path),
+                    "testcase": case,
+                },
+                "compiler_artifact": {
+                    "path": binary_path.relative_to(ROOT).as_posix(),
+                    "digest": sha256_file(binary_path),
+                    "bytes": binary_path.stat().st_size,
+                },
+                "oracle": {
+                    "kind": "kotlin-inline-reified-type-confusion-security",
+                    "scenario": SCENARIO,
+                    "surface_id": surface_id,
+                    "assertion": expected_test,
+                    "passed": True,
+                },
+                "runtime_identity": identity,
+            }
+            write_json(trace_path, trace)
+            write_json(artifact_path, artifact)
+            trace_relative = f"artifacts/scenario-partial-runtime/traces/{trace_path.name}"
+            artifact_relative = f"artifacts/scenario-partial-runtime/artifacts/{artifact_path.name}"
+            records.append({
+                "id": cell_id,
+                "behavior_id": COMPILER_BEHAVIOR,
+                "surface_id": surface_id,
+                "scenario": SCENARIO,
+                "variant_id": variant_id,
+                "source_digest": compiler_source_digest,
+                "harness_digest": compiler_harness_digest,
+                "compiler_runtime_platform_identity": identity,
+                "oracle": artifact["oracle"],
+                "trace": binding(trace_path, trace_relative, streams=True),
+                "artifact": binding(artifact_path, artifact_relative),
+                "attempts": 1,
+                "retries": 0,
+                "final_status": "passed",
+                "dedicated_to_this_cell": True,
+            })
     report = {
         "schema_version": 1,
-        "id": "kotlin-security-001-partial-runtime-v1",
+        "id": "kotlin-scenario-partial-runtime-v2",
         "created_at": datetime.now().astimezone().isoformat(timespec="seconds"),
         "status": "passed",
         "command": " ".join(command),
         "profile": "real-kotlin-jvm-js-wasm-runtime",
         "retention_contract": RETENTION_CONTRACT,
-        "source_digest": canonical_digest([COMMON_SOURCE, *[profile["platform_source"] for profile in PROFILES.values()], *ABI_SOURCES, *METADATA_SOURCES]),
-        "harness_digest": canonical_digest([HARNESS, ABI_HARNESS, *METADATA_HARNESSES]),
-        "counts": {"cells": len(records), "passed": len(records), "failed": 0, "variants": len(PROFILES), "surfaces": len(SURFACE_TESTS) + len(ABI_SURFACE_PHASES) + len(METADATA_SURFACES), "behaviors": 3},
+        "source_digest": canonical_digest([COMMON_SOURCE, *[profile["platform_source"] for profile in PROFILES.values()], *ABI_SOURCES, *METADATA_SOURCES, COMPILER_SOURCE]),
+        "harness_digest": canonical_digest([HARNESS, ABI_HARNESS, *METADATA_HARNESSES, COMPILER_HARNESS]),
+        "counts": {"cells": len(records), "passed": len(records), "failed": 0, "variants": len({record["variant_id"] for record in records}), "surfaces": len(SURFACE_TESTS) + len(ABI_SURFACE_PHASES) + len(METADATA_SURFACES) + len(COMPILER_SURFACE_TESTS), "behaviors": 4},
         "execution": {"attempts": 1, "retries": 0, "full_requested_profile_passed": True},
         "completion_limits": [
             "security-001 is not complete: Native runtime cells require a working Xcode toolchain and remain explicit gaps.",
             "JS and Wasm cells for abi.source-binary-behavioral remain explicit gaps.",
             "JS, Wasm, and Native cells for abi.kotlin-metadata-version remain explicit gaps.",
+            "security-002 is not complete: inline-reified Native runtime and the other compiler rows remain explicit gaps.",
             "This generation closes only the exact cell records listed in this report.",
         ],
         "records": records,
@@ -504,6 +618,11 @@ def validate_generation(staging: Path) -> None:
         f"cell.abi.kotlin-metadata-version.{surface}.{SCENARIO}.kotlin-2.4.10-jvm-openjdk17"
         for surface in METADATA_SURFACES
     }
+    expected_ids |= {
+        f"cell.{COMPILER_BEHAVIOR}.{surface}.{SCENARIO}.{variant}"
+        for surface in COMPILER_SURFACE_TESTS
+        for variant in COMPILER_PROFILES
+    }
     if report.get("status") != "passed" or {record.get("id") for record in records} != expected_ids:
         raise RuntimeError("partial Runtime report does not contain the exact requested cell denominator")
     seen_paths = set()
@@ -522,7 +641,7 @@ def validate_generation(staging: Path) -> None:
 def main() -> None:
     publish_directory(OUTPUT, build_generation, validate_generation, full_run_passed=True)
     report = json.loads((OUTPUT / "results.json").read_text(encoding="utf-8"))
-    print(f"security-001 partial Runtime Evidence: cells={report['counts']['cells']} variants={report['counts']['variants']} status={report['status']}")
+    print(f"Scenario partial Runtime Evidence: cells={report['counts']['cells']} variants={report['counts']['variants']} status={report['status']}")
 
 
 if __name__ == "__main__":

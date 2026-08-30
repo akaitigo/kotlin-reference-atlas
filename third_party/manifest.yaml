@@ -19,6 +19,15 @@
       "version": "072d7ca77981f51754e824d70c6d4ecd55ea67e5"
     },
     {
+      "id": "frontend-behavior-atlas-methodology-vendor",
+      "kind": "source-snapshot",
+      "license": "Apache-2.0",
+      "name": "frontend-behavior-atlas methodology snapshots",
+      "redistribution": "fixed-artifacts",
+      "source": "repository:frontend-behavior-atlas",
+      "version": "7175de4+deadad18+f2e4c4b"
+    },
+    {
       "id": "gradle-distribution",
       "kind": "source",
       "license": "Apache-2.0",

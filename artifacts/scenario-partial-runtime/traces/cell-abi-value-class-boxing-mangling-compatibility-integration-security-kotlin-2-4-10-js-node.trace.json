@@ -6,6 +6,9 @@
     ":labs:abi-runtime-security:jvmTest",
     ":labs:abi-runtime-security:jsNodeTest",
     ":labs:abi-runtime-security:wasmJsNodeTest",
+    ":labs:compiler-runtime-security:jvmTest",
+    ":labs:compiler-runtime-security:jsNodeTest",
+    ":labs:compiler-runtime-security:wasmJsNodeTest",
     ":labs:abi-compat-consumer:compatibilityBaselineTest",
     ":labs:abi-compat-consumer:compatibilityBreakingTest",
     ":labs:abi-compat-consumer:migrationBreakingTest",
@@ -46,6 +49,6 @@
   "testcase": {
     "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
     "name": "compatibility integration keeps expect actual value representation executable[js, node]",
-    "time": "0.0"
+    "time": "0.001"
   }
 }

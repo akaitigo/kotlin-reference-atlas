@@ -1,6 +1,6 @@
 {
   "artifact": {
-    "digest": "sha256:df09d74809e26ad9c3f73dd88106b36b23fa5ffd4f34149ba2e8c4e5db4d8b2e",
+    "digest": "sha256:19a2cdda2fc5374eb11c32910e47c7b2aac769796369a57bd4dab62ea62eb77f",
     "media_type": "application/json",
     "size_bytes": 714,
     "uri": "evidence/artifacts/rights-validation.json"

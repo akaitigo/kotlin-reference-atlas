@@ -23,6 +23,7 @@ include(
     ":labs:gradle-plugin",
     ":labs:multiplatform",
     ":labs:compiler-runtime",
+    ":labs:compiler-runtime-security",
     ":labs:engineering",
     ":labs:abi-runtime-security",
     ":labs:abi-compat-api-v1",

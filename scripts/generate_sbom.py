@@ -92,6 +92,7 @@ def third_party_manifest(components: dict[str, dict]) -> dict:
     fixed = [
         {"id": "reference-atlas-core", "name": "reference-atlas-core", "kind": "source", "version": "b32f6afe888e2e07eef0e2e016f6f7d139582159", "source": "https://github.com/akaitigo/reference-atlas-core", "license": "Apache-2.0", "redistribution": "link-only"},
         {"id": "reference-atlas-core-definitive-v2", "name": "reference-atlas-core", "kind": "source", "version": core_version, "source": "https://github.com/akaitigo/reference-atlas-core", "license": "Apache-2.0", "redistribution": "link-only"},
+        {"id": "frontend-behavior-atlas-methodology-vendor", "name": "frontend-behavior-atlas methodology snapshots", "kind": "source-snapshot", "version": "7175de4+deadad18+f2e4c4b", "source": "repository:frontend-behavior-atlas", "license": "Apache-2.0", "redistribution": "fixed-artifacts"},
         {"id": "gradle-distribution", "name": "Gradle", "kind": "source", "version": "9.5.0", "source": "https://github.com/gradle/gradle", "license": "Apache-2.0", "redistribution": "link-only"},
         {"id": "nodejs-runtime", "name": "Node.js", "kind": "source", "version": "25.2.1", "source": "https://github.com/nodejs/node", "license": "MIT", "redistribution": "link-only"},
         {"id": "eclipse-temurin-runtime", "name": "Eclipse Temurin", "kind": "source", "version": "17", "source": "https://github.com/adoptium/temurin-build", "license": "GPL-2.0-with-classpath-exception", "redistribution": "link-only"},

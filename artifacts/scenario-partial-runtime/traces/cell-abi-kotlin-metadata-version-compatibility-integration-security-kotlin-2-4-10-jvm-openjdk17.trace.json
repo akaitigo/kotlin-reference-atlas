@@ -7,6 +7,9 @@
       ":labs:abi-runtime-security:jvmTest",
       ":labs:abi-runtime-security:jsNodeTest",
       ":labs:abi-runtime-security:wasmJsNodeTest",
+      ":labs:compiler-runtime-security:jvmTest",
+      ":labs:compiler-runtime-security:jsNodeTest",
+      ":labs:compiler-runtime-security:wasmJsNodeTest",
       ":labs:abi-compat-consumer:compatibilityBaselineTest",
       ":labs:abi-compat-consumer:compatibilityBreakingTest",
       ":labs:abi-compat-consumer:migrationBreakingTest",
@@ -27,7 +30,7 @@
   "compiler_refusal": {
     "consumer_readable_metadata_version": "2.4.0",
     "exit_code": 1,
-    "output_digest": "sha256:ff9889762a6a8a645097d28ad18ba6b319dfe79ac2f8ecf36e8a9757b9077a22",
+    "output_digest": "sha256:7bd5e020c0b8de3e2dd9eaa61c1932c59747bc930a4a87db8929a21121f1cdab",
     "producer_metadata_version": "999.0.0",
     "required_diagnostics": [
       "Incompatible classes were found in dependencies",
@@ -50,7 +53,7 @@
   "runtime_testcase": {
     "classname": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataSupportedRuntimeTest",
     "name": "supported metadata executes with the security contract intact()",
-    "time": "0.022"
+    "time": "0.017"
   },
   "schema_version": 1,
   "streams": {
