@@ -82,6 +82,51 @@ ABI_ARTIFACTS = [
     ROOT / "labs" / "abi-compat-api-v2-compatible" / "build" / "libs" / "abi-compat-api-v2-compatible-0.2.0.jar",
     ABI_CONSUMER / "build" / "libs" / "abi-compat-consumer-0.2.0.jar",
 ]
+KMP_ABI_BASELINE = ROOT / "labs" / "abi-compat-kmp-consumer-baseline"
+KMP_ABI_COMPATIBLE = ROOT / "labs" / "abi-compat-kmp-consumer-compatible"
+KMP_ABI_REJECTED = ROOT / "labs" / "abi-compat-kmp-consumer-rejected"
+KMP_ABI_CONSUMER_SOURCES = [
+    KMP_ABI_BASELINE / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "compat" / "kmp" / "SecureConsumer.kt",
+    KMP_ABI_COMPATIBLE / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "compat" / "kmp" / "SecureConsumer.kt",
+    KMP_ABI_REJECTED / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "compat" / "kmp" / "SecureConsumer.kt",
+]
+KMP_ABI_SOURCES = [
+    ROOT / "labs" / "abi-compat-kmp-api-v1" / "build.gradle.kts",
+    ROOT / "labs" / "abi-compat-kmp-api-v1" / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "compat" / "kmp" / "SecurePolicy.kt",
+    ROOT / "labs" / "abi-compat-kmp-api-v2-compatible" / "build.gradle.kts",
+    ROOT / "labs" / "abi-compat-kmp-api-v2-compatible" / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "compat" / "kmp" / "SecurePolicy.kt",
+    ROOT / "labs" / "abi-compat-kmp-api-v2-breaking" / "build.gradle.kts",
+    ROOT / "labs" / "abi-compat-kmp-api-v2-breaking" / "src" / "commonMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "compat" / "kmp" / "SecurePolicy.kt",
+    KMP_ABI_CONSUMER_SOURCES[0],
+]
+KMP_ABI_HARNESSES = [
+    KMP_ABI_BASELINE / "src" / "commonTest" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "compat" / "kmp" / "AbiBaselineRuntimeTest.kt",
+    KMP_ABI_COMPATIBLE / "src" / "commonTest" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "compat" / "kmp" / "AbiCompatibleRuntimeTest.kt",
+]
+KMP_ABI_PROFILES = {
+    "kotlin-2.4.10-js-node": {
+        "compile_task": "compileKotlinJs",
+        "baseline_task": ":labs:abi-compat-kmp-consumer-baseline:jsNodeTest",
+        "compatible_task": ":labs:abi-compat-kmp-consumer-compatible:jsNodeTest",
+        "baseline_result": KMP_ABI_BASELINE / "build" / "test-results" / "jsNodeTest" / "TEST-jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest.xml",
+        "compatible_result": KMP_ABI_COMPATIBLE / "build" / "test-results" / "jsNodeTest" / "TEST-jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest.xml",
+        "baseline_binary": KMP_ABI_BASELINE / "build" / "compileSync" / "js" / "test" / "testDevelopmentExecutable" / "kotlin" / "kotlin-reference-atlas-labs-abi-compat-kmp-consumer-baseline-test.js",
+        "compatible_binary": KMP_ABI_COMPATIBLE / "build" / "compileSync" / "js" / "test" / "testDevelopmentExecutable" / "kotlin" / "kotlin-reference-atlas-labs-abi-compat-kmp-consumer-compatible-test.js",
+        "breaking_manifest": ROOT / "labs" / "abi-compat-kmp-api-v2-breaking" / "build" / "classes" / "kotlin" / "js" / "main" / "default" / "manifest",
+        "runtime": "Kotlin/JS IR compatibility on Node.js",
+    },
+    "kotlin-2.4.10-wasm-js-node": {
+        "compile_task": "compileKotlinWasmJs",
+        "baseline_task": ":labs:abi-compat-kmp-consumer-baseline:wasmJsNodeTest",
+        "compatible_task": ":labs:abi-compat-kmp-consumer-compatible:wasmJsNodeTest",
+        "baseline_result": KMP_ABI_BASELINE / "build" / "test-results" / "wasmJsNodeTest" / "TEST-wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest.xml",
+        "compatible_result": KMP_ABI_COMPATIBLE / "build" / "test-results" / "wasmJsNodeTest" / "TEST-wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest.xml",
+        "baseline_binary": KMP_ABI_BASELINE / "build" / "compileSync" / "wasmJs" / "test" / "testDevelopmentExecutable" / "kotlin" / "kotlin-reference-atlas-labs-abi-compat-kmp-consumer-baseline-test.wasm",
+        "compatible_binary": KMP_ABI_COMPATIBLE / "build" / "compileSync" / "wasmJs" / "test" / "testDevelopmentExecutable" / "kotlin" / "kotlin-reference-atlas-labs-abi-compat-kmp-consumer-compatible-test.wasm",
+        "breaking_manifest": ROOT / "labs" / "abi-compat-kmp-api-v2-breaking" / "build" / "classes" / "kotlin" / "wasmJs" / "main" / "default" / "manifest",
+        "runtime": "Kotlin/Wasm JS compatibility on Node.js",
+    },
+}
 METADATA_SUPPORTED = ROOT / "labs" / "abi-metadata-consumer-supported"
 METADATA_OVERRIDE = ROOT / "labs" / "abi-metadata-consumer-override"
 METADATA_REJECTED = ROOT / "labs" / "abi-metadata-consumer-rejected"
@@ -240,6 +285,8 @@ def run_gradle(runtime_profiles: dict[str, dict]) -> tuple[list[str], str]:
     tasks = [profile["task"] for profile in runtime_profiles.values()] + [profile["task"] for profile in COMPILER_PROFILES.values()] + [
         f":labs:abi-compat-consumer:{task}" for task in ABI_TASKS
     ] + [
+        *[profile["baseline_task"] for profile in KMP_ABI_PROFILES.values()],
+        *[profile["compatible_task"] for profile in KMP_ABI_PROFILES.values()],
         ":labs:abi-metadata-consumer-supported:test",
         ":labs:abi-metadata-consumer-override:test",
         *[profile["supported_task"] for profile in KMP_METADATA_PROFILES.values()],
@@ -309,6 +356,31 @@ def run_kmp_metadata_rejection(variant_id: str, surface_id: str) -> tuple[list[s
         "required_diagnostics": required,
         "producer_metadata_version": "999.0.0",
         "consumer_readable_metadata_version": "2.5.0",
+        "status": "expected-refusal",
+    }
+
+
+def run_kmp_abi_rejection(variant_id: str, surface_id: str) -> tuple[list[str], dict]:
+    profile = KMP_ABI_PROFILES[variant_id]
+    command = [
+        "./gradlew",
+        f":labs:abi-compat-kmp-consumer-rejected:{profile['compile_task']}",
+        "--rerun-tasks",
+        "--no-daemon",
+        f"-PatlasEvidenceSurface={surface_id}",
+    ]
+    environment = os.environ.copy()
+    environment.setdefault("GRADLE_USER_HOME", str(ROOT / ".gradle" / "atlas-home"))
+    result = subprocess.run(command, cwd=ROOT, env=environment, check=False, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    normalized = result.stdout.replace(str(ROOT), ".").replace(str(Path.home()), "$HOME")
+    required = ["No value passed for parameter 'context'"]
+    if result.returncode == 0 or any(message not in normalized for message in required):
+        raise RuntimeError(f"KMP ABI refusal Oracle failed for {surface_id}/{variant_id} (exit={result.returncode})")
+    return command, {
+        "exit_code": result.returncode,
+        "output_digest": sha256_bytes(normalized.encode()),
+        "required_diagnostics": required,
+        "removed_descriptor": "SecurePolicy.authorize(role: String)",
         "status": "expected-refusal",
     }
 
@@ -524,6 +596,110 @@ def build_generation(staging: Path, *, include_native: bool) -> None:
             "final_status": "passed",
             "dedicated_to_this_cell": True,
         })
+    consumer_digests = {sha256_file(path) for path in KMP_ABI_CONSUMER_SOURCES}
+    if len(consumer_digests) != 1:
+        raise RuntimeError("KMP ABI baseline, compatible, and rejected consumers must be byte-identical")
+    kmp_abi_source_digest = canonical_digest(KMP_ABI_SOURCES)
+    kmp_abi_harness_digest = canonical_digest(KMP_ABI_HARNESSES)
+    kmp_abi_refusals = {
+        (variant_id, surface_id): run_kmp_abi_rejection(variant_id, surface_id)
+        for variant_id in KMP_ABI_PROFILES
+        for surface_id in ABI_SURFACE_PHASES
+    }
+    for variant_id, profile in KMP_ABI_PROFILES.items():
+        baseline_cases = testcases(profile["baseline_result"])
+        compatible_cases = testcases(profile["compatible_result"])
+        if len(baseline_cases) != 1 or len(compatible_cases) != 1:
+            raise RuntimeError(f"KMP ABI Runtime phases must each contain one testcase: {variant_id}")
+        compiler_artifacts = [profile["baseline_binary"], profile["compatible_binary"], profile["breaking_manifest"]]
+        if any(not path.is_file() or path.stat().st_size == 0 for path in compiler_artifacts):
+            raise RuntimeError(f"KMP ABI compiler/runtime artifact is missing: {variant_id}")
+        identity = {
+            "compiler": "Kotlin 2.4.10 K2 IR",
+            "runtime": profile["runtime"],
+            "variant_id": variant_id,
+            "gradle": gradle_identity,
+            "java": java_identity,
+            "node": node_identity,
+            "host_os": platform.system(),
+            "host_architecture": platform.machine(),
+        }
+        for surface_id in ABI_SURFACE_PHASES:
+            refusal_command, refusal = kmp_abi_refusals[(variant_id, surface_id)]
+            if surface_id == "compatibility-integration":
+                runtime_task = profile["baseline_task"]
+                runtime_result = profile["baseline_result"]
+                runtime_case = baseline_cases[0]
+                assertion = "the unchanged consumer executes the baseline producer and the target compiler rejects a producer that removed the descriptor"
+            else:
+                runtime_task = profile["compatible_task"]
+                runtime_result = profile["compatible_result"]
+                runtime_case = compatible_cases[0]
+                assertion = "the unchanged consumer rejects the breaking producer and executes the descriptor-preserving migration on the target runtime"
+            cell_id = f"cell.abi.source-binary-behavioral.{surface_id}.{SCENARIO}.{variant_id}"
+            safe = cell_id.replace(".", "-")
+            trace_path = staging / "traces" / f"{safe}.trace.json"
+            artifact_path = staging / "artifacts" / f"{safe}.artifact.json"
+            trace = {
+                "schema_version": 1,
+                "cell_id": cell_id,
+                "attempt": 1,
+                "retry_count": 0,
+                "commands": [command, refusal_command],
+                "runtime_task": runtime_task,
+                "runtime_testcase": runtime_case,
+                "compiler_refusal": refusal,
+                "streams": {
+                    "action": ["compile byte-identical consumer against baseline, compatible, and breaking producers", "observe target compiler refusal for the removed descriptor", "launch dedicated JS or Wasm runtime", "execute compatibility security oracle"],
+                    "network": ["no application network operation; dependency resolution is repository-locked"],
+                    "resource": [f"compiler_artifact={path.relative_to(ROOT).as_posix()}" for path in compiler_artifacts],
+                },
+                "runtime_identity": identity,
+                "outcome": "expected",
+            }
+            artifact = {
+                "schema_version": 1,
+                "cell_id": cell_id,
+                "source_digest": kmp_abi_source_digest,
+                "harness_digest": kmp_abi_harness_digest,
+                "unchanged_consumer_digest": next(iter(consumer_digests)),
+                "runtime_test_result": {
+                    "path": runtime_result.relative_to(ROOT).as_posix(),
+                    "digest": sha256_file(runtime_result),
+                    "testcase": runtime_case,
+                },
+                "compiler_refusal": refusal,
+                "compiler_artifacts": [binding(path, path.relative_to(ROOT).as_posix()) for path in compiler_artifacts],
+                "oracle": {
+                    "kind": "kotlin-kmp-source-compatibility-security",
+                    "scenario": SCENARIO,
+                    "surface_id": surface_id,
+                    "assertion": assertion,
+                    "passed": True,
+                },
+                "runtime_identity": identity,
+            }
+            write_json(trace_path, trace)
+            write_json(artifact_path, artifact)
+            trace_relative = f"artifacts/scenario-partial-runtime/traces/{trace_path.name}"
+            artifact_relative = f"artifacts/scenario-partial-runtime/artifacts/{artifact_path.name}"
+            records.append({
+                "id": cell_id,
+                "behavior_id": "abi.source-binary-behavioral",
+                "surface_id": surface_id,
+                "scenario": SCENARIO,
+                "variant_id": variant_id,
+                "source_digest": kmp_abi_source_digest,
+                "harness_digest": kmp_abi_harness_digest,
+                "compiler_runtime_platform_identity": identity,
+                "oracle": artifact["oracle"],
+                "trace": binding(trace_path, trace_relative, streams=True),
+                "artifact": binding(artifact_path, artifact_relative),
+                "attempts": 1,
+                "retries": 0,
+                "final_status": "passed",
+                "dedicated_to_this_cell": True,
+            })
     metadata_source_digest = canonical_digest(METADATA_SOURCES)
     metadata_harness_digest = canonical_digest(METADATA_HARNESSES)
     supported_result = METADATA_SUPPORTED / "build" / "test-results" / "test" / "TEST-dev.akaitigo.kotlinatlas.abi.metadata.MetadataSupportedRuntimeTest.xml"
@@ -805,8 +981,8 @@ def build_generation(staging: Path, *, include_native: bool) -> None:
         "command": " ".join(command),
         "profile": "real-kotlin-jvm-js-wasm-runtime" + ("-with-native-request" if include_native else "-partial-ci"),
         "retention_contract": RETENTION_CONTRACT,
-        "source_digest": canonical_digest([COMMON_SOURCE, *[profile["platform_source"] for profile in (PROFILES | NATIVE_PROFILES).values()], *ABI_SOURCES, *METADATA_SOURCES, *KMP_METADATA_SOURCES, COMPILER_SOURCE]),
-        "harness_digest": canonical_digest([HARNESS, ABI_HARNESS, *METADATA_HARNESSES, *KMP_METADATA_HARNESSES, COMPILER_HARNESS]),
+        "source_digest": canonical_digest([COMMON_SOURCE, *[profile["platform_source"] for profile in (PROFILES | NATIVE_PROFILES).values()], *ABI_SOURCES, *KMP_ABI_SOURCES, *METADATA_SOURCES, *KMP_METADATA_SOURCES, COMPILER_SOURCE]),
+        "harness_digest": canonical_digest([HARNESS, ABI_HARNESS, *KMP_ABI_HARNESSES, *METADATA_HARNESSES, *KMP_METADATA_HARNESSES, COMPILER_HARNESS]),
         "counts": {"cells": len(records), "passed": len(records), "failed": 0, "variants": len({record["variant_id"] for record in records}), "surfaces": len(SURFACE_TESTS) + len(ABI_SURFACE_PHASES) + len(METADATA_SURFACES) + len(COMPILER_SURFACE_TESTS), "behaviors": 4},
         "requested_variant_ids": sorted(PROFILES | NATIVE_PROFILES),
         "executed_variant_ids": sorted(runtime_profiles),
@@ -831,7 +1007,7 @@ def build_generation(staging: Path, *, include_native: bool) -> None:
         },
         "completion_limits": [
             "security-001 is not complete: Native runtime cells require a working Xcode toolchain and remain explicit gaps.",
-            "JS and Wasm cells for abi.source-binary-behavioral remain explicit gaps.",
+            "Native cells for abi.source-binary-behavioral remain explicit gaps.",
             "Native cells for abi.kotlin-metadata-version remain explicit gaps.",
             "security-002 is not complete: inline-reified Native runtime and the other compiler rows remain explicit gaps.",
             "This generation closes only the exact cell records listed in this report.",
@@ -865,6 +1041,11 @@ def validate_generation(staging: Path) -> None:
     expected_ids |= {
         f"cell.abi.source-binary-behavioral.{surface}.{SCENARIO}.kotlin-2.4.10-jvm-openjdk17"
         for surface in ABI_SURFACE_PHASES
+    }
+    expected_ids |= {
+        f"cell.abi.source-binary-behavioral.{surface}.{SCENARIO}.{variant}"
+        for surface in ABI_SURFACE_PHASES
+        for variant in KMP_ABI_PROFILES
     }
     expected_ids |= {
         f"cell.abi.kotlin-metadata-version.{surface}.{SCENARIO}.kotlin-2.4.10-jvm-openjdk17"

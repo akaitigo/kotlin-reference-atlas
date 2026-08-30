@@ -1,6 +1,6 @@
 {
   "artifact": {
-    "digest": "sha256:4541e6d0b871a9ccede18657d1749fb8b2e2939d305c52d860b1c6882e41b9d2",
+    "digest": "sha256:5a5322f5910b0c55fcff4b966d72598e2373835056485bda0413d561f79681bf",
     "media_type": "application/json",
     "size_bytes": 1116,
     "uri": "evidence/artifacts/non-regression.json"

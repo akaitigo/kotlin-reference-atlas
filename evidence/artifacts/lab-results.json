@@ -52,6 +52,78 @@
     {
       "cases": [
         {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
+          "name": "unchanged consumer executes the version one security contract[js, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-kmp-consumer-baseline",
+      "suite": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
+      "task": "jsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
+          "name": "unchanged consumer executes the version one security contract()[jvm]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-kmp-consumer-baseline",
+      "suite": "AbiBaselineRuntimeTest[jvm]",
+      "task": "jvmTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
+          "name": "unchanged consumer executes the version one security contract[wasmJs, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-kmp-consumer-baseline",
+      "suite": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
+      "task": "wasmJsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest",
+          "name": "unchanged consumer executes after a descriptor preserving migration[js, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-kmp-consumer-compatible",
+      "suite": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest",
+      "task": "jsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest",
+          "name": "unchanged consumer executes after a descriptor preserving migration()[jvm]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-kmp-consumer-compatible",
+      "suite": "AbiCompatibleRuntimeTest[jvm]",
+      "task": "jvmTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest",
+          "name": "unchanged consumer executes after a descriptor preserving migration[wasmJs, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-kmp-consumer-compatible",
+      "suite": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest",
+      "task": "wasmJsNodeTest"
+    },
+    {
+      "cases": [
+        {
           "class": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest",
           "name": "explicit metadata override remains bounded by the runtime security oracle()",
           "status": "pass"
@@ -597,6 +669,6 @@
       "task": "test"
     }
   ],
-  "test_case_count": 77,
+  "test_case_count": 83,
   "verdict": "pass"
 }

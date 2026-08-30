@@ -25,7 +25,7 @@
   "compiler_refusal": {
     "consumer_readable_metadata_version": "2.4.0",
     "exit_code": 1,
-    "output_digest": "sha256:941590dbac310c45e84d8a1b15c142fc6ec7521c0c220e52fd2494f94ba5dbc4",
+    "output_digest": "sha256:7bd5e020c0b8de3e2dd9eaa61c1932c59747bc930a4a87db8929a21121f1cdab",
     "producer_metadata_version": "999.0.0",
     "required_diagnostics": [
       "Incompatible classes were found in dependencies",
@@ -52,12 +52,12 @@
     "variant_id": "kotlin-2.4.10-jvm-openjdk17"
   },
   "runtime_test_result": {
-    "digest": "sha256:6b040c0e5bf16e1cc15e8912cd96d7cfa71bf408d965bfdbf1b991f1074c855b",
+    "digest": "sha256:074d35b8059ded23feee085a79bf34c32be208f80d829665acb23cb489a7021d",
     "path": "labs/abi-metadata-consumer-supported/build/test-results/test/TEST-dev.akaitigo.kotlinatlas.abi.metadata.MetadataSupportedRuntimeTest.xml",
     "testcase": {
       "classname": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataSupportedRuntimeTest",
       "name": "supported metadata executes with the security contract intact()",
-      "time": "0.171"
+      "time": "0.017"
     }
   },
   "schema_version": 1,

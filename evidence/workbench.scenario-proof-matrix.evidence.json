@@ -1,6 +1,6 @@
 {
   "artifact": {
-    "digest": "sha256:939a05640441b4697d881aff73cb9e256c4d47b0706cf0ffda4564b42ee84998",
+    "digest": "sha256:51c83e2fb3fcd6eb9e9c88f412c547838edb19ccff2ab2a49024c847425c7f50",
     "media_type": "application/json",
     "size_bytes": 275599,
     "uri": "evidence/scenarios/kotlin-closure-index.json"

@@ -13,6 +13,10 @@
     ":labs:abi-compat-consumer:compatibilityBreakingTest",
     ":labs:abi-compat-consumer:migrationBreakingTest",
     ":labs:abi-compat-consumer:migrationCompatibleTest",
+    ":labs:abi-compat-kmp-consumer-baseline:jsNodeTest",
+    ":labs:abi-compat-kmp-consumer-baseline:wasmJsNodeTest",
+    ":labs:abi-compat-kmp-consumer-compatible:jsNodeTest",
+    ":labs:abi-compat-kmp-consumer-compatible:wasmJsNodeTest",
     ":labs:abi-metadata-consumer-supported:test",
     ":labs:abi-metadata-consumer-override:test",
     ":labs:abi-metadata-kmp-consumer-supported:jsNodeTest",
@@ -53,6 +57,6 @@
   "testcase": {
     "classname": "dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
     "name": "foundations mechanics rejects a mismatched runtime type token()[jvm]",
-    "time": "0.0"
+    "time": "0.001"
   }
 }

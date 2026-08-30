@@ -14,6 +14,10 @@
       ":labs:abi-compat-consumer:compatibilityBreakingTest",
       ":labs:abi-compat-consumer:migrationBreakingTest",
       ":labs:abi-compat-consumer:migrationCompatibleTest",
+      ":labs:abi-compat-kmp-consumer-baseline:jsNodeTest",
+      ":labs:abi-compat-kmp-consumer-baseline:wasmJsNodeTest",
+      ":labs:abi-compat-kmp-consumer-compatible:jsNodeTest",
+      ":labs:abi-compat-kmp-consumer-compatible:wasmJsNodeTest",
       ":labs:abi-metadata-consumer-supported:test",
       ":labs:abi-metadata-consumer-override:test",
       ":labs:abi-metadata-kmp-consumer-supported:jsNodeTest",
@@ -34,7 +38,7 @@
   "compiler_refusal": {
     "consumer_readable_metadata_version": "2.4.0",
     "exit_code": 1,
-    "output_digest": "sha256:92d59328e538f690891711763076588ae19251a9f00db49c2504f597bf67a268",
+    "output_digest": "sha256:4c3e48a5e7bb7c9c2695d839a31af67f68318ca0e5c20f44701c47aab1c2aeac",
     "producer_metadata_version": "999.0.0",
     "required_diagnostics": [
       "Incompatible classes were found in dependencies",
@@ -57,7 +61,7 @@
   "runtime_testcase": {
     "classname": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest",
     "name": "explicit metadata override remains bounded by the runtime security oracle()",
-    "time": "0.244"
+    "time": "0.016"
   },
   "schema_version": 1,
   "streams": {

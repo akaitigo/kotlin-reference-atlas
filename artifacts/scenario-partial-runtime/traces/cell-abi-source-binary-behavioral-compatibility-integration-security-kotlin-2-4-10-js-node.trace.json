@@ -1,0 +1,82 @@
+{
+  "attempt": 1,
+  "cell_id": "cell.abi.source-binary-behavioral.compatibility-integration.security.kotlin-2.4.10-js-node",
+  "commands": [
+    [
+      "./gradlew",
+      ":labs:abi-runtime-security:jvmTest",
+      ":labs:abi-runtime-security:jsNodeTest",
+      ":labs:abi-runtime-security:wasmJsNodeTest",
+      ":labs:compiler-runtime-security:jvmTest",
+      ":labs:compiler-runtime-security:jsNodeTest",
+      ":labs:compiler-runtime-security:wasmJsNodeTest",
+      ":labs:abi-compat-consumer:compatibilityBaselineTest",
+      ":labs:abi-compat-consumer:compatibilityBreakingTest",
+      ":labs:abi-compat-consumer:migrationBreakingTest",
+      ":labs:abi-compat-consumer:migrationCompatibleTest",
+      ":labs:abi-compat-kmp-consumer-baseline:jsNodeTest",
+      ":labs:abi-compat-kmp-consumer-baseline:wasmJsNodeTest",
+      ":labs:abi-compat-kmp-consumer-compatible:jsNodeTest",
+      ":labs:abi-compat-kmp-consumer-compatible:wasmJsNodeTest",
+      ":labs:abi-metadata-consumer-supported:test",
+      ":labs:abi-metadata-consumer-override:test",
+      ":labs:abi-metadata-kmp-consumer-supported:jsNodeTest",
+      ":labs:abi-metadata-kmp-consumer-supported:wasmJsNodeTest",
+      ":labs:abi-metadata-kmp-consumer-override:jsNodeTest",
+      ":labs:abi-metadata-kmp-consumer-override:wasmJsNodeTest",
+      "--rerun-tasks",
+      "--no-daemon"
+    ],
+    [
+      "./gradlew",
+      ":labs:abi-compat-kmp-consumer-rejected:compileKotlinJs",
+      "--rerun-tasks",
+      "--no-daemon",
+      "-PatlasEvidenceSurface=compatibility-integration"
+    ]
+  ],
+  "compiler_refusal": {
+    "exit_code": 1,
+    "output_digest": "sha256:2524bd85cc17d25dc27ca80dc930e2444a94c3a9f858254b57a25e443402c4d9",
+    "removed_descriptor": "SecurePolicy.authorize(role: String)",
+    "required_diagnostics": [
+      "No value passed for parameter 'context'"
+    ],
+    "status": "expected-refusal"
+  },
+  "outcome": "expected",
+  "retry_count": 0,
+  "runtime_identity": {
+    "compiler": "Kotlin 2.4.10 K2 IR",
+    "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+    "host_architecture": "arm64",
+    "host_os": "Darwin",
+    "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+    "node": "v25.2.1",
+    "runtime": "Kotlin/JS IR compatibility on Node.js",
+    "variant_id": "kotlin-2.4.10-js-node"
+  },
+  "runtime_task": ":labs:abi-compat-kmp-consumer-baseline:jsNodeTest",
+  "runtime_testcase": {
+    "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
+    "name": "unchanged consumer executes the version one security contract[js, node]",
+    "time": "0.0"
+  },
+  "schema_version": 1,
+  "streams": {
+    "action": [
+      "compile byte-identical consumer against baseline, compatible, and breaking producers",
+      "observe target compiler refusal for the removed descriptor",
+      "launch dedicated JS or Wasm runtime",
+      "execute compatibility security oracle"
+    ],
+    "network": [
+      "no application network operation; dependency resolution is repository-locked"
+    ],
+    "resource": [
+      "compiler_artifact=labs/abi-compat-kmp-consumer-baseline/build/compileSync/js/test/testDevelopmentExecutable/kotlin/kotlin-reference-atlas-labs-abi-compat-kmp-consumer-baseline-test.js",
+      "compiler_artifact=labs/abi-compat-kmp-consumer-compatible/build/compileSync/js/test/testDevelopmentExecutable/kotlin/kotlin-reference-atlas-labs-abi-compat-kmp-consumer-compatible-test.js",
+      "compiler_artifact=labs/abi-compat-kmp-api-v2-breaking/build/classes/kotlin/js/main/default/manifest"
+    ]
+  }
+}

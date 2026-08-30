@@ -20,7 +20,7 @@
   "compiler_refusal": {
     "consumer_readable_metadata_version": "2.5.0",
     "exit_code": 1,
-    "output_digest": "sha256:633129a0eacb3ee0faf7dc369a8d05f7b83dbc6be3eb9017934b25ef56cc6e27",
+    "output_digest": "sha256:e39cb9a3f903734b003d275b951bc48a0bfb82e8f8865291a4cfa0c56b9d7812",
     "producer_metadata_version": "999.0.0",
     "required_diagnostics": [
       "Incompatible classes were found in dependencies",
@@ -48,7 +48,7 @@
     "variant_id": "kotlin-2.4.10-wasm-js-node"
   },
   "runtime_test_result": {
-    "digest": "sha256:4898cd2f16beb5fe94b057ce8ef52545a308ac5f92966af588ffa2acb490814d",
+    "digest": "sha256:aec8c2a16c3492e81e51d019f9d03f3e61ed1ec72b497fb2699c7d275804ee15",
     "path": "labs/abi-metadata-kmp-consumer-supported/build/test-results/wasmJsNodeTest/TEST-wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest.xml",
     "testcase": {
       "classname": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest",

@@ -14,7 +14,7 @@
   "candidate_evidence": [
     {
       "artifact": {
-        "digest": "sha256:f1134987435e295f3e5dce63ba67b337f4bdd7bc8bf93a32efc9cc2a6d402dc3",
+        "digest": "sha256:98c4eac42e85d32d934a21a6777a5f29c548257e3664b9ca6da810e20c9e6770",
         "exists": true,
         "path": "evidence/artifacts/lab-results.json"
       },
@@ -33,7 +33,7 @@
       "producer": "gradle-junit",
       "record": {
         "bytes": 1077,
-        "digest": "sha256:3920c7d9ae82c291a45138e2d06c93856b3b4d2fc3d9e29b080a4cf140aec8c8",
+        "digest": "sha256:52b2c93acfbb7323acbeece7e78f08d0ef92081d5b3cbeac3be213a05ca5e02d",
         "path": "evidence/evolution.compatibility-migration.evidence.json"
       },
       "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
@@ -118,7 +118,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2288,
-          "digest": "sha256:69ddbd096976d40b033431d145fa2d4984d1d95854cf1b01b6f513be0abd35f8",
+          "digest": "sha256:ad49eda53311c03f0552cdfbdf894fa4f15dcbcbc6cd7afbbf6b71673952bbbf",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -144,8 +144,8 @@
         "source_digest": "sha256:9511134072ec7ce54bd544c895c38404aa0187b7f434bac2dfd0e9bd3d7a4639",
         "trace": {
           "action_stream": true,
-          "bytes": 2809,
-          "digest": "sha256:3c4a865843f1ebb3a3fc6775f0974d2066fa366536f1dbdda0395009c39cacd9",
+          "bytes": 3049,
+          "digest": "sha256:8e5bac6d2ac45acdaa6ea84e59ef1aa8b9f0afb7b975381329baf622ce055d3b",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true
@@ -175,7 +175,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2378,
-          "digest": "sha256:c6c5ef21ccfea8e98d2420d29c260266aa70a9feb969f8b4bcf2138e73f63206",
+          "digest": "sha256:cefb842e52eef551fb6e9fd5e6cfaafb6959aacb9f07a2a1e1bb49871b750140",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-js-node.artifact.json"
         },
         "attempts": 1,
@@ -201,8 +201,8 @@
         "source_digest": "sha256:bc60d30e24fe8363c38d2450f1d5cf86298b247141bfde79dccd32dfaf354f3e",
         "trace": {
           "action_stream": true,
-          "bytes": 2888,
-          "digest": "sha256:9d36e73efd557033eeb787e043f479de308e6c81d951593bcfa2cd34f39e90fb",
+          "bytes": 3128,
+          "digest": "sha256:f6f3e2adbf9b167a406d3a8cb44a056a29396461387847bd2c90a2cd3dbed0fd",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-js-node.trace.json",
           "resource_stream": true
@@ -232,7 +232,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2416,
-          "digest": "sha256:0e514c3ef24c06e0a7feff1ee1dea82f804f996d5638d9a5311dc76a09e0cb08",
+          "digest": "sha256:3bf58f0a94cdd4ed32b998e48b5961d8befbb3e74181ccd1f87cc3ad817dc390",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-wasm-js-node.artifact.json"
         },
         "attempts": 1,
@@ -258,8 +258,8 @@
         "source_digest": "sha256:7d88402bb355dbfce8a33b9295b79c42af45223417845969ab134ac15f950b31",
         "trace": {
           "action_stream": true,
-          "bytes": 2922,
-          "digest": "sha256:894f64387f31a0413116f8c2ecd4a160c5399616870e4df003698f3cb3db5695",
+          "bytes": 3162,
+          "digest": "sha256:42377c34d61fda69f696ba2be1e52fe07ea1ab30e5650260c220c5c3b78e27b2",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-wasm-js-node.trace.json",
           "resource_stream": true
@@ -323,7 +323,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2296,
-          "digest": "sha256:59a60b6b62bb10f09c05fac4c3bfb55723b158e2a589cc18862e5fa8d86d862d",
+          "digest": "sha256:61e0d36bc0fdb33c25516392d6783ab0ce3a4ddfa7c7fb5cb9fbd6a104edb70e",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -349,8 +349,8 @@
         "source_digest": "sha256:9511134072ec7ce54bd544c895c38404aa0187b7f434bac2dfd0e9bd3d7a4639",
         "trace": {
           "action_stream": true,
-          "bytes": 2813,
-          "digest": "sha256:6ae36722440dd1b013d2d1d6c495687a4c348024f566f9d2869344ba77b550ab",
+          "bytes": 3053,
+          "digest": "sha256:ace9d455e22dcd1bbdb7227b390a6708cc83610aaed86ce94c03ef5456d5fd02",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true
@@ -380,7 +380,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2386,
-          "digest": "sha256:a71d65a86412522e369aa661779f16fc607684e23672e38f78884541507a4969",
+          "digest": "sha256:61a15d16db3d982f914948a4280fd64f064b59d0e06d233246234e413e889199",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-js-node.artifact.json"
         },
         "attempts": 1,
@@ -406,8 +406,8 @@
         "source_digest": "sha256:bc60d30e24fe8363c38d2450f1d5cf86298b247141bfde79dccd32dfaf354f3e",
         "trace": {
           "action_stream": true,
-          "bytes": 2892,
-          "digest": "sha256:abce7e0bc15ddfc082829f25a15a29ae56b42e3f506d1f4f5a5154c63fc4875d",
+          "bytes": 3132,
+          "digest": "sha256:ae2c66f25910ce4ea732edfc1f21d10448532926d050069fb98472beac9d7991",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-js-node.trace.json",
           "resource_stream": true
@@ -437,7 +437,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2422,
-          "digest": "sha256:26b42ac23dc5eb90bf89710a9078decd326915086242acc48f38e5ed23b0806e",
+          "digest": "sha256:fdc7dd4929f820db3e4c27d8d32e0923d209c55b16a876036d515741436bec62",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.artifact.json"
         },
         "attempts": 1,
@@ -463,8 +463,8 @@
         "source_digest": "sha256:7d88402bb355dbfce8a33b9295b79c42af45223417845969ab134ac15f950b31",
         "trace": {
           "action_stream": true,
-          "bytes": 2924,
-          "digest": "sha256:b547118a5e1206e1e1646cc18943be9ca9b7e8b5f6da30c693e9ff55ae2d0a30",
+          "bytes": 3164,
+          "digest": "sha256:820e43d5004c8c4c278ad094ea91c1f045e7963eadbdb4525a7528bb531f2f7b",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.trace.json",
           "resource_stream": true
@@ -528,7 +528,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2288,
-          "digest": "sha256:0a19ef05a1fbdaabda7d3f34a31286fbf5d84244d413987f151dd11c2e66252f",
+          "digest": "sha256:9fe6c5650938ecf58f8569e140b4db5b3571d9c9fd8fc9b77cac000b5b9a63e9",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -554,8 +554,8 @@
         "source_digest": "sha256:9511134072ec7ce54bd544c895c38404aa0187b7f434bac2dfd0e9bd3d7a4639",
         "trace": {
           "action_stream": true,
-          "bytes": 2809,
-          "digest": "sha256:d73586ee4cca56c1d119604dd4fd6347fe0acbcea7e536f3068a14e47948f6c8",
+          "bytes": 3049,
+          "digest": "sha256:519ca6155ccd8884a1005bbc983e79b472f1056a9f6f94358528f98d1ac988e0",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true
@@ -585,7 +585,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2378,
-          "digest": "sha256:9fbf07dfe2bb90af15cdabe0f2cf59f0e28917746ec38fd46eb0bcfffa56f29b",
+          "digest": "sha256:209a4b04f7cf659cb531d02c957127cc40a099f2ba830035367298d8a5645776",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-js-node.artifact.json"
         },
         "attempts": 1,
@@ -611,8 +611,8 @@
         "source_digest": "sha256:bc60d30e24fe8363c38d2450f1d5cf86298b247141bfde79dccd32dfaf354f3e",
         "trace": {
           "action_stream": true,
-          "bytes": 2888,
-          "digest": "sha256:ce96ce3d8a4e23d77dee30c995035eac03708b3d94aacb75c7985f9386317eda",
+          "bytes": 3128,
+          "digest": "sha256:2786af5e08abf173c127a6a76eaf3b7134ba4ffaf5847931105bef8b3ce34297",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-js-node.trace.json",
           "resource_stream": true
@@ -642,7 +642,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2414,
-          "digest": "sha256:368910e25f3d2896c6e20af4f9935203ab4adb01f9f39b6d349e045f62cd7fae",
+          "digest": "sha256:b59749c8862f040a630517162f33064437e8f0737247e7bf2233f50ed67a356d",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-wasm-js-node.artifact.json"
         },
         "attempts": 1,
@@ -668,8 +668,8 @@
         "source_digest": "sha256:7d88402bb355dbfce8a33b9295b79c42af45223417845969ab134ac15f950b31",
         "trace": {
           "action_stream": true,
-          "bytes": 2920,
-          "digest": "sha256:fd54c7021c7af72c32dd4690e04654200072697aab4e9dd0a6bbbd1f43df6cd8",
+          "bytes": 3160,
+          "digest": "sha256:3b00c74df77bf36f6bff52c271b1ddb532b5407d34f8419e11da6ac29197dde0",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-wasm-js-node.trace.json",
           "resource_stream": true

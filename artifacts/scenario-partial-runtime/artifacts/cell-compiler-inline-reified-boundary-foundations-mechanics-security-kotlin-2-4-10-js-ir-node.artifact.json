@@ -26,12 +26,12 @@
   "schema_version": 1,
   "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
   "test_result": {
-    "digest": "sha256:444cb7c539460f823babd30d530ad7fab61c5188400505d985d6c7bf4e886707",
+    "digest": "sha256:ffce0dcde8a0df6fc28eed19f49679f78912c862d3d4464d4afb76e0f7735e04",
     "path": "labs/compiler-runtime-security/build/test-results/jsNodeTest/TEST-jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest.xml",
     "testcase": {
       "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
       "name": "foundations mechanics rejects a mismatched runtime type token[js, node]",
-      "time": "0.001"
+      "time": "0.0"
     }
   }
 }
