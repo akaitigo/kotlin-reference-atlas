@@ -10,7 +10,7 @@
     "gradle/actions/setup-gradle": "ed408507eac070d1f99cc633dbcf757c94c7933a"
   },
   "atlas_id": "kotlin-reference-atlas",
-  "container_runtime_proof": "CI container Job executes one scripts/container-verify.sh run, probes live Docker identity, performs committed Graph audit, and transfers a subject/input-bound proof to evidence_dependency",
+  "container_runtime_proof": "CI container_bound Job executes one scripts/container-verify.sh run, probes live Docker identity, performs committed Graph audit, and transfers a subject/input-bound proof to evidence_dependency",
   "dco_range": "fixed Core checker validates only explicit PR base..head or push before..sha new commits",
   "docker_path_absence": {
     "container_required": "expected-failure",
@@ -19,17 +19,17 @@
   "graph_publication": "owner-managed full python3 scripts/verify.py only; partial CI jobs are read-only",
   "negative_fixtures": [
     {
-      "expected_rejection": "validate/container/evidence_dependency/dco Jobのいずれかがありません",
+      "expected_rejection": "validate_bound/container_bound/evidence_dependency/dco Jobのいずれかがありません",
       "id": "required-container-job-missing",
       "result": "pass"
     },
     {
-      "expected_rejection": "validate/container/evidence_dependency/dco Jobのいずれかがありません",
+      "expected_rejection": "validate_bound/container_bound/evidence_dependency/dco Jobのいずれかがありません",
       "id": "required-evidence-dependency-job-missing",
       "result": "pass"
     },
     {
-      "expected_rejection": "validate/container/evidence_dependency/dco Jobのいずれかがありません",
+      "expected_rejection": "validate_bound/container_bound/evidence_dependency/dco Jobのいずれかがありません",
       "id": "required-dco-job-missing",
       "result": "pass"
     },

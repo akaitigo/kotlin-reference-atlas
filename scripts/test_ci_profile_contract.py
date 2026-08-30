@@ -29,7 +29,7 @@ REQUIRED_CONTAINER = [
     "actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
 ]
 REQUIRED_EVIDENCE_DEPENDENCY = [
-    "needs: container",
+    "needs: container_bound",
     "runs-on: ubuntu-latest",
     "actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
     "python3 scripts/ci_container_runtime_proof.py verify .ci-runtime-proof/container.json",
@@ -55,12 +55,12 @@ ACTION_PINS = {
 
 
 def split_jobs(text: str) -> tuple[str, str, str, str]:
-    validate_marker = "  validate:\n"
-    container_marker = "  container:\n"
+    validate_marker = "  validate_bound:\n"
+    container_marker = "  container_bound:\n"
     dependency_marker = "  evidence_dependency:\n"
     dco_marker = "  dco:\n"
     if validate_marker not in text or container_marker not in text or dependency_marker not in text or dco_marker not in text:
-        raise RuntimeError("validate/container/evidence_dependency/dco Jobのいずれかがありません")
+        raise RuntimeError("validate_bound/container_bound/evidence_dependency/dco Jobのいずれかがありません")
     before_container, after_container = text.split(container_marker, 1)
     validate = before_container.split(validate_marker, 1)[1]
     container, after_dependency = after_container.split(dependency_marker, 1)
@@ -114,18 +114,18 @@ def main() -> None:
     fixtures = []
     fixtures.append(expect_rejection(
         "required-container-job-missing",
-        text.split("  container:\n", 1)[0],
-        "validate/container/evidence_dependency/dco Jobのいずれかがありません",
+        text.split("  container_bound:\n", 1)[0],
+        "validate_bound/container_bound/evidence_dependency/dco Jobのいずれかがありません",
     ))
     fixtures.append(expect_rejection(
         "required-evidence-dependency-job-missing",
         text.split("  evidence_dependency:\n", 1)[0],
-        "validate/container/evidence_dependency/dco Jobのいずれかがありません",
+        "validate_bound/container_bound/evidence_dependency/dco Jobのいずれかがありません",
     ))
     fixtures.append(expect_rejection(
         "required-dco-job-missing",
         text.split("  dco:\n", 1)[0],
-        "validate/container/evidence_dependency/dco Jobのいずれかがありません",
+        "validate_bound/container_bound/evidence_dependency/dco Jobのいずれかがありません",
     ))
     fixtures.append(expect_rejection(
         "network-none-runtime-step-missing",
@@ -193,7 +193,7 @@ def main() -> None:
             "container_required": "expected-failure",
         },
         "negative_fixtures": fixtures,
-        "container_runtime_proof": "CI container Job executes one scripts/container-verify.sh run, probes live Docker identity, performs committed Graph audit, and transfers a subject/input-bound proof to evidence_dependency",
+        "container_runtime_proof": "CI container_bound Job executes one scripts/container-verify.sh run, probes live Docker identity, performs committed Graph audit, and transfers a subject/input-bound proof to evidence_dependency",
         "dco_range": "fixed Core checker validates only explicit PR base..head or push before..sha new commits",
         "action_pins": ACTION_PINS,
         "graph_publication": "owner-managed full python3 scripts/verify.py only; partial CI jobs are read-only",

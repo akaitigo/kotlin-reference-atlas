@@ -560,7 +560,7 @@ def validate_non_regression() -> dict:
     run([str(ROOT / "gradlew"), "clean", "--no-daemon"])
     core = run([str(ROOT / "bin" / "atlas"), "audit", ".", "--gate", "non-regression"], capture=True)
     result["core_v2_audit"] = core.stdout.strip()
-    result["core_v2_baseline"] = "baselines/definitive-c0e9b1c.core-e822.non-regression-baseline.json"
+    result["core_v2_baseline"] = "baselines/definitive-c0e9b1c.core-072d7ca.non-regression-baseline.json"
     result["core_v2_baseline_anchor"] = "baselines/definitive-c0e9b1c.non-regression-baseline.json"
     write_json(ARTIFACTS / "non-regression.json", result)
     return result

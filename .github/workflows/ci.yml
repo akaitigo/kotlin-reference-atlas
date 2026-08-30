@@ -9,7 +9,8 @@ permissions:
   contents: read
 
 jobs:
-  validate:
+  # Non-regression ID mapping source: validate: -> validate_bound:
+  validate_bound:
     runs-on: macos-14
     timeout-minutes: 45
     steps:
@@ -70,7 +71,8 @@ jobs:
           ATLAS_CORE_DIR: ${{ github.workspace }}/.atlas-core
         run: python3 scripts/verify.py --skip-container
 
-  container:
+  # Non-regression ID mapping source: container: -> container_bound:
+  container_bound:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -113,7 +115,7 @@ jobs:
           retention-days: 1
 
   evidence_dependency:
-    needs: container
+    needs: container_bound
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:

@@ -20,9 +20,16 @@ replacements:
     migration_evidence_ids: [evolution.compatibility-migration]
   - collection: ci_jobs
     old_id: .github/workflows/ci.yml:validate
-    new_ids: [.github/workflows/ci.yml:validate]
+    new_ids: [.github/workflows/ci.yml:validate_bound]
     equivalence: equal-or-stronger
-    reason: macOS validate JobのPlatformと全Gateを維持し、Core固定commitをd535へ更新してScenario/Trace Gateを追加する。
+    reason: macOS validate JobのPlatform・Version・全Gateを維持したvalidate_boundへ移行し、Action exact commit pinとDockerなしcommitted Graph read-only auditを追加する。
+    execution_proof_evidence_ids: [workbench.jvm-runtime]
+    migration_evidence_ids: [evolution.compatibility-migration]
+  - collection: ci_jobs
+    old_id: .github/workflows/ci.yml:container
+    new_ids: [.github/workflows/ci.yml:container_bound]
+    equivalence: equal-or-stronger
+    reason: 既存network-none Container Runtimeを維持したcontainer_boundへ移行し、同一Jobのlive Docker identity、固定Core read-only Graph audit、digest束縛Proofを追加する。
     execution_proof_evidence_ids: [workbench.jvm-runtime]
     migration_evidence_ids: [evolution.compatibility-migration]
   - collection: tests_labs
