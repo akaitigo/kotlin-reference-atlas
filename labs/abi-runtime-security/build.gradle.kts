@@ -12,6 +12,7 @@ kotlin {
     wasmJs {
         nodejs()
     }
+    macosArm64()
 
     sourceSets {
         commonTest.dependencies {

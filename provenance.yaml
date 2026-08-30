@@ -21,7 +21,7 @@
       ]
     },
     {
-      "digest": "sha256:dded128debe22c7899164c369009791c4974ad5f28d3a9ae1f4e234cce29d357",
+      "digest": "sha256:136e258e76ea93edfe85ed485deff00fc49cc670c3247234fb395d2271d52afd",
       "generated_by": "python3 scripts/generate_definitive_skill_eval.py",
       "kind": "skill-eval",
       "license": "Apache-2.0",
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "digest": "sha256:c9e38d67250ace3aae7472ac2b560d644da633f249cf1a83464781656d82905e",
+      "digest": "sha256:c4e4938321af35ddd95ddbdc39d32052ba6b28f07d2530a5e5fbd8f1ed045b0a",
       "generated_by": "python3 scripts/generate_definitive_skill_eval.py",
       "kind": "skill-eval",
       "license": "Apache-2.0",
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "digest": "sha256:e8ed80fe076f1263b60d0d5a3d043d18a02b117195cf69fe8a73698a4742c525",
+      "digest": "sha256:2e4c2077e888eec583c7c988dafcbd165851f5d556c325724214052c69355937",
       "generated_by": "scripts/container-verify.sh",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -151,7 +151,7 @@
       ]
     },
     {
-      "digest": "sha256:baf7a5f8fcf735e626d9f9ed8ee9355a5e4a4f6cba2462fcde5ccf395fbf31e6",
+      "digest": "sha256:d2199d96cb73a4b14bfbbd47a2017235b7975c26a9b0b0858efafbdc4430e2f3",
       "generated_by": "python3 scripts/verify_non_regression.py",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "digest": "sha256:b7a8bac6e50e7c90212901d75298ffd4d9d432b82cd770a1d8e34b1a6ae7051d",
+      "digest": "sha256:6a33de2e2bf31a572566e66688533d18886b825beeb7e12b55071aae3bee7e35",
       "generated_by": "python3 scripts/generate_scenario_proofs.py && python3 scripts/verify_scenario_proofs.py",
       "kind": "generated",
       "license": "Apache-2.0",

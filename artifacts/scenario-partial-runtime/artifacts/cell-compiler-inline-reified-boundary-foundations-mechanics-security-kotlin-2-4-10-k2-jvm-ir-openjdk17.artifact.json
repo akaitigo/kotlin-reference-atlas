@@ -26,7 +26,7 @@
   "schema_version": 1,
   "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
   "test_result": {
-    "digest": "sha256:535821a11b392b476b5e635dd7da8c86ff1ea60c7e43964ab3e718c8499a7d1c",
+    "digest": "sha256:27312c85819e76893b54b91773007ee84ddf3aec549858a5263d8c997cb85636",
     "path": "labs/compiler-runtime-security/build/test-results/jvmTest/TEST-dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest.xml",
     "testcase": {
       "classname": "dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",

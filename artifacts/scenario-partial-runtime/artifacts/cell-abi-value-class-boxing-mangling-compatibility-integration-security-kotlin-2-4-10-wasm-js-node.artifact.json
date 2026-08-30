@@ -1,11 +1,11 @@
 {
   "cell_id": "cell.abi.value-class-boxing-mangling.compatibility-integration.security.kotlin-2.4.10-wasm-js-node",
   "compiler_artifact": {
-    "bytes": 791233,
-    "digest": "sha256:d377a41f756bd9c8c3776a0f174d1a8fbdff057772e269810fa962d853109ff1",
+    "bytes": 791267,
+    "digest": "sha256:ec3f0a40999683ddbfe0de91193edc4b13c3729e8bc9c93a034f0bcaab186d8f",
     "path": "labs/abi-runtime-security/build/compileSync/wasmJs/test/testDevelopmentExecutable/kotlin/kotlin-reference-atlas-labs-abi-runtime-security-test.wasm"
   },
-  "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+  "harness_digest": "sha256:3e64feae71035a839621fc354ce69c68cb3844bc5aef27b450ad6d267347c936",
   "oracle": {
     "assertion": "compatibility integration keeps expect actual value representation executable",
     "kind": "kotlin-value-class-security-boundary",
@@ -26,7 +26,7 @@
   "schema_version": 1,
   "source_digest": "sha256:7d88402bb355dbfce8a33b9295b79c42af45223417845969ab134ac15f950b31",
   "test_result": {
-    "digest": "sha256:033ca54ed655f0cf2d365a0a8703b94a888d22ba044c726f1e8d2efd3df08b00",
+    "digest": "sha256:75a14f44fcc11c9a7bfc2eade9930cb80d84c80b61755e2ed8f43959355fe1ec",
     "path": "labs/abi-runtime-security/build/test-results/wasmJsNodeTest/TEST-wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest.xml",
     "testcase": {
       "classname": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",

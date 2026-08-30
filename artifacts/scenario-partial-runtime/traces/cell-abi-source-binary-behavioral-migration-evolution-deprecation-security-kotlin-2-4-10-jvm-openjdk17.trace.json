@@ -21,23 +21,23 @@
   "outcome": "expected",
   "phases": [
     {
-      "digest": "sha256:029d6e441b81205111e47609a0f0c7450e5e465acc3cf7a357b467eced68b140",
+      "digest": "sha256:08b6c4b20bf1400f0d20dbac3f1f5a24c504a666671f8329481f5a7839e257b2",
       "path": "labs/abi-compat-consumer/build/test-results/migrationBreakingTest/TEST-dev.akaitigo.kotlinatlas.abi.compat.MigrationBreakingTest.xml",
       "task": "migrationBreakingTest",
       "testcase": {
         "classname": "dev.akaitigo.kotlinatlas.abi.compat.MigrationBreakingTest",
         "name": "migration evolution observes the removed descriptor as a linkage failure()",
-        "time": "0.11"
+        "time": "0.024"
       }
     },
     {
-      "digest": "sha256:4daa6d2a261bbdb27c5d4fadc310d5f7855f2ee34c38309b06ff36b421721a61",
+      "digest": "sha256:7a249342a44e769769366d8b2eb0a84ccf358f1afeb26a8b8cebcafd487d2e98",
       "path": "labs/abi-compat-consumer/build/test-results/migrationCompatibleTest/TEST-dev.akaitigo.kotlinatlas.abi.compat.MigrationCompatibleTest.xml",
       "task": "migrationCompatibleTest",
       "testcase": {
         "classname": "dev.akaitigo.kotlinatlas.abi.compat.MigrationCompatibleTest",
         "name": "migration evolution preserves the old descriptor during recovery()",
-        "time": "0.013"
+        "time": "0.024"
       }
     }
   ],

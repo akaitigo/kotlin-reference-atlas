@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import os
@@ -54,6 +55,15 @@ PROFILES = {
         "binary": LAB / "build" / "compileSync" / "wasmJs" / "test" / "testDevelopmentExecutable" / "kotlin" / "kotlin-reference-atlas-labs-abi-runtime-security-test.wasm",
         "platform_source": LAB / "src" / "wasmJsMain" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "WasmBoundary.kt",
         "runtime": "Kotlin/Wasm JS on Node.js",
+    },
+}
+NATIVE_PROFILES = {
+    "kotlin-2.4.10-native-macos-arm64": {
+        "task": ":labs:abi-runtime-security:macosArm64Test",
+        "result": LAB / "build" / "test-results" / "macosArm64Test" / "TEST-dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest.xml",
+        "binary": LAB / "build" / "bin" / "macosArm64" / "debugTest" / "test.kexe",
+        "platform_source": LAB / "src" / "macosArm64Main" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "NativeBoundary.kt",
+        "runtime": "Kotlin/Native macOS arm64 executable",
     },
 }
 ABI_TASKS = {
@@ -160,8 +170,34 @@ def command_output(command: list[str]) -> str:
     return result.stdout.strip()
 
 
-def run_gradle() -> tuple[list[str], str]:
-    tasks = [profile["task"] for profile in PROFILES.values()] + [profile["task"] for profile in COMPILER_PROFILES.values()] + [
+def native_runtime_available() -> tuple[bool, dict]:
+    command = ["/usr/bin/xcrun", "xcodebuild", "-version"]
+    if not Path(command[0]).is_file():
+        return False, {
+            "variant_ids": sorted(NATIVE_PROFILES),
+            "status": "runtime-gap",
+            "reason": "the xcrun launcher required for the Kotlin/Native macOS runtime is absent",
+            "probe": command,
+            "probe_exit_code": 127,
+            "completion_credit": False,
+            "compile_only_credit": False,
+        }
+    result = subprocess.run(command, cwd=ROOT, check=False, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    normalized = result.stdout.replace(str(ROOT), ".").replace(str(Path.home()), "$HOME").strip()
+    return result.returncode == 0, {
+        "variant_ids": sorted(NATIVE_PROFILES),
+        "status": "available" if result.returncode == 0 else "runtime-gap",
+        "reason": "full Xcode toolchain is required to link and launch the Kotlin/Native test executable",
+        "probe": command,
+        "probe_exit_code": result.returncode,
+        "probe_output_digest": sha256_bytes(normalized.encode()),
+        "completion_credit": False,
+        "compile_only_credit": False,
+    }
+
+
+def run_gradle(runtime_profiles: dict[str, dict]) -> tuple[list[str], str]:
+    tasks = [profile["task"] for profile in runtime_profiles.values()] + [profile["task"] for profile in COMPILER_PROFILES.values()] + [
         f":labs:abi-compat-consumer:{task}" for task in ABI_TASKS
     ] + [
         ":labs:abi-metadata-consumer-supported:test",
@@ -221,15 +257,27 @@ def find_case(cases: list[dict], expected: str) -> dict:
     return matches[0]
 
 
-def build_generation(staging: Path) -> None:
-    command, gradle_output = run_gradle()
+def build_generation(staging: Path, *, include_native: bool) -> None:
+    native_available, native_gap = native_runtime_available()
+    runtime_profiles = dict(PROFILES)
+    if include_native and native_available:
+        runtime_profiles.update(NATIVE_PROFILES)
+    elif not include_native:
+        native_gap = {
+            "variant_ids": sorted(NATIVE_PROFILES),
+            "status": "runtime-gap",
+            "reason": "the current partial CI profile does not execute or publish owner-managed Native Runtime Evidence",
+            "completion_credit": False,
+            "compile_only_credit": False,
+        }
+    command, gradle_output = run_gradle(runtime_profiles)
     metadata_refusals = {surface: run_metadata_rejection(surface) for surface in METADATA_SURFACES}
     java_identity = command_output(["java", "-version"])
     node_identity = command_output(["node", "--version"])
     gradle_identity = command_output([str(ROOT / "gradlew"), "--version", "--no-daemon"])
     harness_digest = sha256_file(HARNESS)
     records = []
-    for variant_id, profile in PROFILES.items():
+    for variant_id, profile in runtime_profiles.items():
         result_path, binary_path = profile["result"], profile["binary"]
         cases = testcases(result_path)
         if not binary_path.is_file() or binary_path.stat().st_size == 0:
@@ -583,12 +631,20 @@ def build_generation(staging: Path) -> None:
         "created_at": datetime.now().astimezone().isoformat(timespec="seconds"),
         "status": "passed",
         "command": " ".join(command),
-        "profile": "real-kotlin-jvm-js-wasm-runtime",
+        "profile": "real-kotlin-jvm-js-wasm-runtime" + ("-with-native-request" if include_native else "-partial-ci"),
         "retention_contract": RETENTION_CONTRACT,
-        "source_digest": canonical_digest([COMMON_SOURCE, *[profile["platform_source"] for profile in PROFILES.values()], *ABI_SOURCES, *METADATA_SOURCES, COMPILER_SOURCE]),
+        "source_digest": canonical_digest([COMMON_SOURCE, *[profile["platform_source"] for profile in (PROFILES | NATIVE_PROFILES).values()], *ABI_SOURCES, *METADATA_SOURCES, COMPILER_SOURCE]),
         "harness_digest": canonical_digest([HARNESS, ABI_HARNESS, *METADATA_HARNESSES, COMPILER_HARNESS]),
         "counts": {"cells": len(records), "passed": len(records), "failed": 0, "variants": len({record["variant_id"] for record in records}), "surfaces": len(SURFACE_TESTS) + len(ABI_SURFACE_PHASES) + len(METADATA_SURFACES) + len(COMPILER_SURFACE_TESTS), "behaviors": 4},
-        "execution": {"attempts": 1, "retries": 0, "full_requested_profile_passed": True},
+        "requested_variant_ids": sorted(PROFILES | NATIVE_PROFILES),
+        "executed_variant_ids": sorted(runtime_profiles),
+        "runtime_gaps": [] if include_native and native_available else [native_gap],
+        "execution": {
+            "attempts": 1,
+            "retries": 0,
+            "executed_profile_passed": True,
+            "full_requested_profile_passed": include_native and native_available,
+        },
         "completion_limits": [
             "security-001 is not complete: Native runtime cells require a working Xcode toolchain and remain explicit gaps.",
             "JS and Wasm cells for abi.source-binary-behavioral remain explicit gaps.",
@@ -605,10 +661,22 @@ def build_generation(staging: Path) -> None:
 def validate_generation(staging: Path) -> None:
     report = json.loads((staging / "results.json").read_text(encoding="utf-8"))
     records = report.get("records", [])
+    requested_variants = set(PROFILES | NATIVE_PROFILES)
+    executed_variants = set(report.get("executed_variant_ids", []))
+    runtime_gaps = report.get("runtime_gaps", [])
+    if set(report.get("requested_variant_ids", [])) != requested_variants or not executed_variants.issubset(requested_variants):
+        raise RuntimeError("partial Runtime report changed the requested platform denominator")
+    missing_variants = requested_variants - executed_variants
+    if missing_variants:
+        gap_variants = {variant for gap in runtime_gaps for variant in gap.get("variant_ids", [])}
+        if gap_variants != missing_variants or any(gap.get("completion_credit") is not False or gap.get("compile_only_credit") is not False for gap in runtime_gaps):
+            raise RuntimeError("unexecuted Native Runtime variants must remain explicit zero-credit gaps")
+    elif runtime_gaps:
+        raise RuntimeError("Runtime gap records are forbidden when every requested variant executed")
     expected_ids = {
         f"cell.{BEHAVIOR}.{surface}.{SCENARIO}.{variant}"
         for surface in SURFACE_TESTS
-        for variant in PROFILES
+        for variant in executed_variants
     }
     expected_ids |= {
         f"cell.abi.source-binary-behavioral.{surface}.{SCENARIO}.kotlin-2.4.10-jvm-openjdk17"
@@ -639,7 +707,10 @@ def validate_generation(staging: Path) -> None:
 
 
 def main() -> None:
-    publish_directory(OUTPUT, build_generation, validate_generation, full_run_passed=True)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--include-native", action="store_true", help="attempt the owner-managed Kotlin/Native runtime profile")
+    args = parser.parse_args()
+    publish_directory(OUTPUT, lambda staging: build_generation(staging, include_native=args.include_native), validate_generation, full_run_passed=True)
     report = json.loads((OUTPUT / "results.json").read_text(encoding="utf-8"))
     print(f"Scenario partial Runtime Evidence: cells={report['counts']['cells']} variants={report['counts']['variants']} status={report['status']}")
 

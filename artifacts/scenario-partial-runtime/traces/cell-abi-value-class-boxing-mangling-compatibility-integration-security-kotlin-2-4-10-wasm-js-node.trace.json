@@ -42,7 +42,7 @@
     ],
     "resource": [
       "compiler_artifact=labs/abi-runtime-security/build/compileSync/wasmJs/test/testDevelopmentExecutable/kotlin/kotlin-reference-atlas-labs-abi-runtime-security-test.wasm",
-      "bytes=791233"
+      "bytes=791267"
     ]
   },
   "task": ":labs:abi-runtime-security:wasmJsNodeTest",

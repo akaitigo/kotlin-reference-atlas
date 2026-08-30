@@ -22,7 +22,7 @@ class ValueClassSecurityTest {
         val observation = observeBoundary("tok_compat01")
 
         assertTrue(observation.accepted)
-        assertTrue(observation.platform in setOf("jvm-openjdk17", "js-ir-node", "wasm-js-node"))
+        assertTrue(observation.platform in setOf("jvm-openjdk17", "js-ir-node", "wasm-js-node", "native-macos-arm64"))
         assertEquals(SecureToken("tok_compat01"), observation.genericRoundTrip)
     }
 

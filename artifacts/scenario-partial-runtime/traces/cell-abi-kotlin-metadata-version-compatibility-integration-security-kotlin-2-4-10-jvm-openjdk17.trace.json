@@ -30,7 +30,7 @@
   "compiler_refusal": {
     "consumer_readable_metadata_version": "2.4.0",
     "exit_code": 1,
-    "output_digest": "sha256:fa4ff54b7336676a5081d144b1b104dc4d50d6a10bdd82cdbaf3660659b99b8f",
+    "output_digest": "sha256:7418f1beab3749bf1bb4bd5de99ff638e64339a2e52b5e50b87fbb6df41a2b9a",
     "producer_metadata_version": "999.0.0",
     "required_diagnostics": [
       "Incompatible classes were found in dependencies",
@@ -53,7 +53,7 @@
   "runtime_testcase": {
     "classname": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataSupportedRuntimeTest",
     "name": "supported metadata executes with the security contract intact()",
-    "time": "0.012"
+    "time": "0.011"
   },
   "schema_version": 1,
   "streams": {

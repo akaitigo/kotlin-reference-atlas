@@ -975,10 +975,14 @@ def main(*, skip_container: bool = False) -> None:
             raise RuntimeError("既存Container Evidenceがpassではありません")
     else:
         container_result = validate_container_profile()
-    run([sys.executable, str(ROOT / "scripts" / "capture_security_001_partial.py")])
+    capture_command = [sys.executable, str(ROOT / "scripts" / "capture_security_001_partial.py")]
+    if not skip_container:
+        capture_command.append("--include-native")
+    run(capture_command)
     partial_scenario_runtime = load_json(ROOT / "artifacts" / "scenario-partial-runtime" / "results.json")
     if partial_scenario_runtime.get("status") != "passed" or partial_scenario_runtime.get("execution", {}).get("retries") != 0:
         raise RuntimeError("Scenario partial Runtime Evidenceがpass/retry 0ではない")
+    run([sys.executable, str(ROOT / "scripts" / "test_security_001_native_gap.py")])
     # RouterはEvidence artifact digestをfail-closedで確認する。直前のLab/Artifact
     # 再生成をrecordへ反映してからEvalし、後段で全Gateの最終recordを再固定する。
     write_evidence()

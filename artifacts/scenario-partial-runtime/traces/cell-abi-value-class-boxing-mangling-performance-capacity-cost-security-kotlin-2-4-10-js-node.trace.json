@@ -42,7 +42,7 @@
     ],
     "resource": [
       "compiler_artifact=labs/abi-runtime-security/build/compileSync/js/test/testDevelopmentExecutable/kotlin/kotlin-reference-atlas-labs-abi-runtime-security-test.js",
-      "bytes=9650"
+      "bytes=9672"
     ]
   },
   "task": ":labs:abi-runtime-security:jsNodeTest",

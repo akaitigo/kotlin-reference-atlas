@@ -26,12 +26,12 @@
   "schema_version": 1,
   "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
   "test_result": {
-    "digest": "sha256:82efea42d66f7e2a274c5078b71ae7c8e4f31724daefdea095b6b11bfcc92e6d",
+    "digest": "sha256:216e8d9fb5d5d4e88535c69e5977cb09180c61210866c76646524fbc828b33ba",
     "path": "labs/compiler-runtime-security/build/test-results/jsNodeTest/TEST-jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest.xml",
     "testcase": {
       "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
       "name": "compatibility integration validates generic elements after outer type erasure[js, node]",
-      "time": "0.0"
+      "time": "0.001"
     }
   }
 }

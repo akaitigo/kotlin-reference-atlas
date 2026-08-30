@@ -118,7 +118,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2286,
-          "digest": "sha256:7a5c3e066ba355dadf324e5a9b5eaf7405120cefc1b8b26b51d4d8a809c187bd",
+          "digest": "sha256:1d44085825516371653c1512f752fe8ca0a8bca61bfd5e7598a9ea3176711ebf",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -132,7 +132,7 @@
           "runtime": "JVM on OpenJDK 17",
           "variant_id": "kotlin-2.4.10-jvm-openjdk17"
         },
-        "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+        "harness_digest": "sha256:3e64feae71035a839621fc354ce69c68cb3844bc5aef27b450ad6d267347c936",
         "oracle": {
           "assertion": "foundations mechanics preserves trusted identity at a generic boxing boundary",
           "kind": "kotlin-value-class-security-boundary",
@@ -175,7 +175,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2378,
-          "digest": "sha256:6885faa38c0b7d9ebd2d543305e983f391260461ad5891a286198ee6c8b35a3f",
+          "digest": "sha256:8e9a0d909e731a742630435caf38e90fa8034f8f908fc8da872c136b71c81b34",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-js-node.artifact.json"
         },
         "attempts": 1,
@@ -189,7 +189,7 @@
           "runtime": "Kotlin/JS IR on Node.js",
           "variant_id": "kotlin-2.4.10-js-node"
         },
-        "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+        "harness_digest": "sha256:3e64feae71035a839621fc354ce69c68cb3844bc5aef27b450ad6d267347c936",
         "oracle": {
           "assertion": "foundations mechanics preserves trusted identity at a generic boxing boundary",
           "kind": "kotlin-value-class-security-boundary",
@@ -202,7 +202,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 2642,
-          "digest": "sha256:558d0bffafd74f2d68513f51d2f4d09e31f8d3e83f4a04ba4abf775507970558",
+          "digest": "sha256:76da70782ad1dcd9df26c3b25ac337cbe83c05f83f0499a6f1ae343fb077c72c",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-js-node.trace.json",
           "resource_stream": true
@@ -232,7 +232,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2416,
-          "digest": "sha256:9568f210e09184b3dd95e01b887659d0da538f21256be5455730f9d4a04b90a1",
+          "digest": "sha256:4050531cd55480716b53d857750a95a2bdaf11c77569c600068d4057e81bb95c",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-wasm-js-node.artifact.json"
         },
         "attempts": 1,
@@ -246,7 +246,7 @@
           "runtime": "Kotlin/Wasm JS on Node.js",
           "variant_id": "kotlin-2.4.10-wasm-js-node"
         },
-        "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+        "harness_digest": "sha256:3e64feae71035a839621fc354ce69c68cb3844bc5aef27b450ad6d267347c936",
         "oracle": {
           "assertion": "foundations mechanics preserves trusted identity at a generic boxing boundary",
           "kind": "kotlin-value-class-security-boundary",
@@ -259,7 +259,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 2676,
-          "digest": "sha256:05865f207e2c8b6761917e767c9ce6382041fe6867803623786c1bfd38b9ee2d",
+          "digest": "sha256:87d38cab3b246bf7b22c92f71c526133ba09ebd33cbcd7f855c41ac05cf4b484",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-wasm-js-node.trace.json",
           "resource_stream": true
@@ -323,7 +323,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2296,
-          "digest": "sha256:62080807f3cffde88602b9eb9f3bd7982d2980023a632290f309bdde3c2e5129",
+          "digest": "sha256:3f554765fbf1e1341ff239bac6304d023a58385219b3bddf91e3d0d06d8c7529",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -337,7 +337,7 @@
           "runtime": "JVM on OpenJDK 17",
           "variant_id": "kotlin-2.4.10-jvm-openjdk17"
         },
-        "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+        "harness_digest": "sha256:3e64feae71035a839621fc354ce69c68cb3844bc5aef27b450ad6d267347c936",
         "oracle": {
           "assertion": "compatibility integration keeps expect actual value representation executable",
           "kind": "kotlin-value-class-security-boundary",
@@ -350,7 +350,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 2567,
-          "digest": "sha256:8567e21ef479fa3d2a60bb24db2a1fc703f659a4a1faffa7a0641436ae6b521e",
+          "digest": "sha256:6526797d2b359d33e11834c4f52e2b9b70a989add7cb4a981e392f4a20a82be0",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true
@@ -380,7 +380,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2386,
-          "digest": "sha256:84dc9512ea4d151e685247bec5ec64d8816b7898e9b155ba0a099c423b7193c1",
+          "digest": "sha256:2ca60ed389e88333091707e1ed175434ddf1c0ead3aa2a450241d36996c43238",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-js-node.artifact.json"
         },
         "attempts": 1,
@@ -394,7 +394,7 @@
           "runtime": "Kotlin/JS IR on Node.js",
           "variant_id": "kotlin-2.4.10-js-node"
         },
-        "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+        "harness_digest": "sha256:3e64feae71035a839621fc354ce69c68cb3844bc5aef27b450ad6d267347c936",
         "oracle": {
           "assertion": "compatibility integration keeps expect actual value representation executable",
           "kind": "kotlin-value-class-security-boundary",
@@ -407,7 +407,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 2646,
-          "digest": "sha256:e99c2d1590157ca48ed713fe2a127f8da24bbe0f7dbc0dcb35dfb45a254ffc60",
+          "digest": "sha256:bbe86c41281ad6a537c8a589ecfdc4891c77518ad065f9617112324f426f9879",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-js-node.trace.json",
           "resource_stream": true
@@ -437,7 +437,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2422,
-          "digest": "sha256:45a68ea493e11cd9c6223313d91be7cf995e6bd0333f1959e642f4ad892ac714",
+          "digest": "sha256:2c903c8ab21ec6467cb57dad00dec6e13f403d5d3b635c8fdeb1b787a5485913",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.artifact.json"
         },
         "attempts": 1,
@@ -451,7 +451,7 @@
           "runtime": "Kotlin/Wasm JS on Node.js",
           "variant_id": "kotlin-2.4.10-wasm-js-node"
         },
-        "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+        "harness_digest": "sha256:3e64feae71035a839621fc354ce69c68cb3844bc5aef27b450ad6d267347c936",
         "oracle": {
           "assertion": "compatibility integration keeps expect actual value representation executable",
           "kind": "kotlin-value-class-security-boundary",
@@ -464,7 +464,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 2678,
-          "digest": "sha256:f2fab2c9e20c964264f84a485c1fcf5257f9cde020e2d5f8eeab47944b565464",
+          "digest": "sha256:b2fa9103822ab97ab9be14772e5a3a5be057e920ab5bada3695fdcbf5dcdbc3b",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.trace.json",
           "resource_stream": true
@@ -528,7 +528,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2288,
-          "digest": "sha256:479dd18e968e881abd3812485a29506b867d7e3dbb18d2726599b2446844ce22",
+          "digest": "sha256:fefbc7ae98f32ab516279ac385ca0eb743849fa925e99c49daa72c071fab19ff",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -542,7 +542,7 @@
           "runtime": "JVM on OpenJDK 17",
           "variant_id": "kotlin-2.4.10-jvm-openjdk17"
         },
-        "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+        "harness_digest": "sha256:3e64feae71035a839621fc354ce69c68cb3844bc5aef27b450ad6d267347c936",
         "oracle": {
           "assertion": "performance capacity cost boundary remains deterministic under repetition",
           "kind": "kotlin-value-class-security-boundary",
@@ -555,7 +555,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 2563,
-          "digest": "sha256:e38400caf00e5cd235a07eecd9d4610fe21c7938df099ece145d73b12371d7c1",
+          "digest": "sha256:282c6e3604025ae5bde7db92dff34c591e79b769ae2b5a9da4bff060ef78cd4b",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true
@@ -585,7 +585,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2378,
-          "digest": "sha256:1fca60e8b4de9789e7d93ac3f9fed45a8dfccb534fa4a5cc497b1d17aa7fee16",
+          "digest": "sha256:65f99b4a019d74378836fd7ef32194a2d48edc67a20cc6aa2f54129f20f49aad",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-js-node.artifact.json"
         },
         "attempts": 1,
@@ -599,7 +599,7 @@
           "runtime": "Kotlin/JS IR on Node.js",
           "variant_id": "kotlin-2.4.10-js-node"
         },
-        "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+        "harness_digest": "sha256:3e64feae71035a839621fc354ce69c68cb3844bc5aef27b450ad6d267347c936",
         "oracle": {
           "assertion": "performance capacity cost boundary remains deterministic under repetition",
           "kind": "kotlin-value-class-security-boundary",
@@ -612,7 +612,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 2642,
-          "digest": "sha256:78ac1b062d0b1063a7704a31252678e5263176d41ff858345386e9a3dca2fb30",
+          "digest": "sha256:a32c2e2c1f905a79e0d53a090c7c0e35fbae9a1ffa4257eff88b84a9d0b5ebee",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-js-node.trace.json",
           "resource_stream": true
@@ -642,7 +642,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 2414,
-          "digest": "sha256:500482ba35a3a085e399c795ebd9b43089168488031a22f6a432fa21adc88661",
+          "digest": "sha256:156b498ffb195b3ac6811260ee7b39f241e786f46b50c81a84b29ed4fda48a4e",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-wasm-js-node.artifact.json"
         },
         "attempts": 1,
@@ -656,7 +656,7 @@
           "runtime": "Kotlin/Wasm JS on Node.js",
           "variant_id": "kotlin-2.4.10-wasm-js-node"
         },
-        "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+        "harness_digest": "sha256:3e64feae71035a839621fc354ce69c68cb3844bc5aef27b450ad6d267347c936",
         "oracle": {
           "assertion": "performance capacity cost boundary remains deterministic under repetition",
           "kind": "kotlin-value-class-security-boundary",
@@ -669,7 +669,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 2674,
-          "digest": "sha256:75081b0953ee406c1a09c461040d51a5a4a0bf8baa03301b86dfe89bfb13cef7",
+          "digest": "sha256:2a68ebea05b0b8690b53ec1b29213dd93ddde6f79c11327a07109e784ab0b3a5",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-wasm-js-node.trace.json",
           "resource_stream": true

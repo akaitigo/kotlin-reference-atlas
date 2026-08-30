@@ -1,11 +1,11 @@
 {
   "cell_id": "cell.abi.value-class-boxing-mangling.performance-capacity-cost.security.kotlin-2.4.10-js-node",
   "compiler_artifact": {
-    "bytes": 9650,
-    "digest": "sha256:cbca6752ae5672814a6e09b8260a77506c3a46a2df939b35e486b9a08aaf20f9",
+    "bytes": 9672,
+    "digest": "sha256:d352f0c3953fc2aea1f6fe30af70b62de54b86a64172323bce01a764f7430959",
     "path": "labs/abi-runtime-security/build/compileSync/js/test/testDevelopmentExecutable/kotlin/kotlin-reference-atlas-labs-abi-runtime-security-test.js"
   },
-  "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+  "harness_digest": "sha256:3e64feae71035a839621fc354ce69c68cb3844bc5aef27b450ad6d267347c936",
   "oracle": {
     "assertion": "performance capacity cost boundary remains deterministic under repetition",
     "kind": "kotlin-value-class-security-boundary",
@@ -26,7 +26,7 @@
   "schema_version": 1,
   "source_digest": "sha256:bc60d30e24fe8363c38d2450f1d5cf86298b247141bfde79dccd32dfaf354f3e",
   "test_result": {
-    "digest": "sha256:ff4a24f5086d1c6a7827091cb49442a0cec5cda98190ddb24d3f7f32c3e85d48",
+    "digest": "sha256:da2f82ca35b6d8eaf3c9bc86105b53440fe6ff728de5aed0d04bd9b327d870ad",
     "path": "labs/abi-runtime-security/build/test-results/jsNodeTest/TEST-jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest.xml",
     "testcase": {
       "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
