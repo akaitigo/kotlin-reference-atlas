@@ -16,7 +16,7 @@
     "test_cases": 34,
     "test_files": 9
   },
-  "core_v2_audit": "非退行監査済み: kotlin-reference-atlas baseline_items=220 current_items=2983 replacements=6",
+  "core_v2_audit": "非退行監査済み: kotlin-reference-atlas baseline_items=220 current_items=3017 replacements=6",
   "core_v2_baseline": "baselines/definitive-c0e9b1c.core-072d7ca.non-regression-baseline.json",
   "core_v2_baseline_anchor": "baselines/definitive-c0e9b1c.non-regression-baseline.json",
   "counts": {
@@ -24,7 +24,7 @@
     "baseline_test_annotations": 30,
     "capabilities": 28,
     "claims": 31,
-    "evidence": 32,
+    "evidence": 33,
     "executed_test_cases": 83,
     "proof_obligations": 33,
     "skill_eval_cases": 18,

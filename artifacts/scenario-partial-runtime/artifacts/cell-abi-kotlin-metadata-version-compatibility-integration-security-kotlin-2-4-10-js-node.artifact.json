@@ -20,7 +20,7 @@
   "compiler_refusal": {
     "consumer_readable_metadata_version": "2.5.0",
     "exit_code": 1,
-    "output_digest": "sha256:403f87294fa4cc198af12c8469693d93dace0695c8290c27ff7d199a1411f4af",
+    "output_digest": "sha256:a0446f20326a5e6473dee9e53598b1ab70500a3cea28a9fd228373349ec546bb",
     "producer_metadata_version": "999.0.0",
     "required_diagnostics": [
       "Incompatible classes were found in dependencies",
@@ -48,7 +48,7 @@
     "variant_id": "kotlin-2.4.10-js-node"
   },
   "runtime_test_result": {
-    "digest": "sha256:b2fe64a9c7b579ecfe79633cf657cbd1e1803ffc6c7daddee178ea822e201764",
+    "digest": "sha256:beec8a448f2a2e10b86b83acbcd24fdcaeac295c3330e50d4125eb6d09eec796",
     "path": "labs/abi-metadata-kmp-consumer-supported/build/test-results/jsNodeTest/TEST-jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest.xml",
     "testcase": {
       "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest",

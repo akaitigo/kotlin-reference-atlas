@@ -1180,7 +1180,7 @@
     },
     {
       "behavior_id": "abi.kotlin-metadata-version",
-      "digest": "sha256:e75d308e5d81813c205aa3bfd32f5657307aa01298c1679ab06e4fb289fbbf58",
+      "digest": "sha256:37889bd4ab62efb8f18811826205d599ea61d3606416c48da03dcf7180f5cbb7",
       "id": "proof.behavior.abi.kotlin-metadata-version.security",
       "path": "evidence/scenarios/behaviors/abi/kotlin-metadata-version/security.proof.json",
       "scenario": "security",
@@ -2220,7 +2220,7 @@
     },
     {
       "behavior_id": "abi.source-binary-behavioral",
-      "digest": "sha256:6f453c53c5e9c8224852dd3cae6ae41f336324cf9642f997defa800e8b60b481",
+      "digest": "sha256:881598ad21566115d206e8afc09ce5876bac1057cb5372b334e6e6554987af75",
       "id": "proof.behavior.abi.source-binary-behavioral.security",
       "path": "evidence/scenarios/behaviors/abi/source-binary-behavioral/security.proof.json",
       "scenario": "security",
@@ -2620,7 +2620,7 @@
     },
     {
       "behavior_id": "abi.value-class-boxing-mangling",
-      "digest": "sha256:83726dc9111af8050ba1527fbf17b75e2646f573703fbb637abc3850bd3c662a",
+      "digest": "sha256:17f6a8742e8f10c698b232b69eff3ef6cde0362651be156ed41e1c364fe9e745",
       "id": "proof.behavior.abi.value-class-boxing-mangling.security",
       "path": "evidence/scenarios/behaviors/abi/value-class-boxing-mangling/security.proof.json",
       "scenario": "security",
@@ -3740,7 +3740,7 @@
     },
     {
       "behavior_id": "compiler.inline-reified-boundary",
-      "digest": "sha256:f42b285c6fc45e6bc8aa3791ad506bf267bf42a8dd37b5de973244e979510b7a",
+      "digest": "sha256:ed88e1c1b1ed3402828da0d9fb81aab1771901529a2314293b9ca6e5354d69c8",
       "id": "proof.behavior.compiler.inline-reified-boundary.security",
       "path": "evidence/scenarios/behaviors/compiler/inline-reified-boundary/security.proof.json",
       "scenario": "security",
@@ -5624,7 +5624,7 @@
     },
     "partial_runtime_report": {
       "bytes": 87536,
-      "digest": "sha256:3cf015793ab0ab0075f971bacb7b7b4ca38882b3d3b929d78c08cf7c794aa4c1",
+      "digest": "sha256:604a06431c0d491b14e3be859be7f23e0b30cc24bd3a22613108a6bd1c6969cf",
       "path": "artifacts/scenario-partial-runtime/results.json"
     },
     "reference_manifest": {

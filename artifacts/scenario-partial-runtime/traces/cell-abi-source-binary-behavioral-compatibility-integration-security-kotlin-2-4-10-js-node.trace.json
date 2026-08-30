@@ -37,7 +37,7 @@
   ],
   "compiler_refusal": {
     "exit_code": 1,
-    "output_digest": "sha256:2524bd85cc17d25dc27ca80dc930e2444a94c3a9f858254b57a25e443402c4d9",
+    "output_digest": "sha256:a8baf823f69e97f23682f72ee9e5bb870b19319f13ec0071502213ff71d648f9",
     "removed_descriptor": "SecurePolicy.authorize(role: String)",
     "required_diagnostics": [
       "No value passed for parameter 'context'"
@@ -60,7 +60,7 @@
   "runtime_testcase": {
     "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
     "name": "unchanged consumer executes the version one security contract[js, node]",
-    "time": "0.0"
+    "time": "0.001"
   },
   "schema_version": 1,
   "streams": {

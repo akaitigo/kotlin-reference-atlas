@@ -37,7 +37,7 @@
   ],
   "compiler_refusal": {
     "exit_code": 1,
-    "output_digest": "sha256:ba3c3a62ff50664c35f5a804e734a4852cd30b542c2daff1ea2a6e2790f2cc5f",
+    "output_digest": "sha256:74f12d9faa3d72f990787a62012b9526768fe194bcdf4711900635f88eea6199",
     "removed_descriptor": "SecurePolicy.authorize(role: String)",
     "required_diagnostics": [
       "No value passed for parameter 'context'"

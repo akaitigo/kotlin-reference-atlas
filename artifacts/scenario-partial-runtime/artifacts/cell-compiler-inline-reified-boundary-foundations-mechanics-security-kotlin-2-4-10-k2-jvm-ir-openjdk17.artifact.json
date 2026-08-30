@@ -26,12 +26,12 @@
   "schema_version": 1,
   "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
   "test_result": {
-    "digest": "sha256:fc35723ba89894cf4743b624807354e397f5056881538be9726115f4311973ce",
+    "digest": "sha256:08444ae9633195b2d12cd1dd6fbea89c20b62ca8cce8f82ee79197aac90dca5b",
     "path": "labs/compiler-runtime-security/build/test-results/jvmTest/TEST-dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest.xml",
     "testcase": {
       "classname": "dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
       "name": "foundations mechanics rejects a mismatched runtime type token()[jvm]",
-      "time": "0.001"
+      "time": "0.0"
     }
   }
 }

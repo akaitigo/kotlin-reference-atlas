@@ -26,12 +26,12 @@
   "schema_version": 1,
   "source_digest": "sha256:9511134072ec7ce54bd544c895c38404aa0187b7f434bac2dfd0e9bd3d7a4639",
   "test_result": {
-    "digest": "sha256:73a4904c58ca3b3bd3da82b401f9c3a8dcf9113a019227ec2df672a17bbd9e8f",
+    "digest": "sha256:32c720148b648e84dc8c3473c6de95a282fd5b0ea2a0dbeb25edbe6f3e4489f2",
     "path": "labs/abi-runtime-security/build/test-results/jvmTest/TEST-dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest.xml",
     "testcase": {
       "classname": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
       "name": "compatibility integration keeps expect actual value representation executable()[jvm]",
-      "time": "0.007"
+      "time": "0.058"
     }
   }
 }

@@ -16010,7 +16010,7 @@
         ],
         "implementation_bindings": [
           {
-            "digest": "sha256:62e3783e362cff584556bd9edd87d64a1bb720a58669e73f5dd1333b69a83a77",
+            "digest": "sha256:a28ba811da0ce02732eea0666c912159c339632fdd41357fbc3c11e0eebba67a",
             "path": "evals/definitive-skill-router.json",
             "size_bytes": 238527,
             "variant_id": "evals:definitive-skill-router.json"
@@ -16022,7 +16022,7 @@
             "variant_id": "evals:kotlin-reference-router.agent-forward-eval.json"
           },
           {
-            "digest": "sha256:8ea5034784cdb7b78bbf05f65889032c193cda173e2226b5756456be8e823436",
+            "digest": "sha256:5b628a33933e76a1b6d9bc987d558033a1a84fb0913e2ea5323a32b1bd713632",
             "path": "evals/kotlin-reference-router.definitive-skill-eval-report.json",
             "size_bytes": 593301,
             "variant_id": "evals:kotlin-reference-router.definitive-skill-eval-report.json"

@@ -26,12 +26,12 @@
   "schema_version": 1,
   "source_digest": "sha256:bc60d30e24fe8363c38d2450f1d5cf86298b247141bfde79dccd32dfaf354f3e",
   "test_result": {
-    "digest": "sha256:2d1811ef8cad95790e73819db77539ece24a0fb4fd0589d57913461dcf90978b",
+    "digest": "sha256:5840a8ac7c52aeef46657072c0c36318d2db8d38a41535173483dd5e40e59eb0",
     "path": "labs/abi-runtime-security/build/test-results/jsNodeTest/TEST-jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest.xml",
     "testcase": {
       "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
       "name": "performance capacity cost boundary remains deterministic under repetition[js, node]",
-      "time": "0.0"
+      "time": "0.001"
     }
   }
 }

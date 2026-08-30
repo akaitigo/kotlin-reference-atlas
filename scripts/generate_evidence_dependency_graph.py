@@ -84,6 +84,8 @@ def input_groups(observed_at: str) -> list[dict]:
     source = [
         "sources.lock.yaml", "coverage.yaml", "surface.inventory.yaml",
         "atlas/definitive/kotlin-depth-parity.json",
+        "authority/body-inventory.snapshot.json",
+        "baselines/authority-body-inventory-v1.json",
     ]
     harness = sorted(set([
         "build.gradle.kts", "settings.gradle.kts",
@@ -143,8 +145,15 @@ def discover_required_outputs() -> list[str]:
         "evidence/artifacts/ci-profile-contract.json",
         "evidence/artifacts/ci-container-runtime-proof-negative-tests.json",
         "evidence/artifacts/dco-range-negative-tests.json",
+        "authority/extraction.snapshot.json",
+        "authority/extraction-source-state.snapshot.json",
+        "evidence/artifacts/core-authority-extraction-validation.json",
+        "evidence/artifacts/core-authority-extraction-negative-tests.json",
     ]:
         add_if_file(relative)
+    for path in (ROOT / "authority" / "surfaces-draft").glob("*.json"):
+        if path.is_file():
+            result.add(path.relative_to(ROOT).as_posix())
     for root in ["artifacts", "evidence/core-v1", "evidence/reports"]:
         directory = ROOT / root
         if not directory.exists():

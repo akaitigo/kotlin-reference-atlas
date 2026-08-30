@@ -145,6 +145,8 @@ def validate_manifests() -> dict:
     run([sys.executable, str(ROOT / "scripts" / "generate_core_authority_extraction.py")])
     authority_drafts = [path.relative_to(ROOT).as_posix() for path in sorted((ROOT / "authority" / "surfaces-draft").glob("*.json"))]
     run([str(ROOT / "bin" / "atlas"), "validate", *MANIFESTS, *DEFINITIVE_MANIFESTS, "authority/extraction.snapshot.json", *authority_drafts, *authority_manifests])
+    run([sys.executable, str(ROOT / "scripts" / "test_core_authority_extraction.py")])
+    run([sys.executable, str(ROOT / "scripts" / "verify_core_authority_extraction.py")])
     atlas = load_json(ROOT / "atlas.yaml")
     mastery = load_json(ROOT / "mastery.yaml")
     coverage = load_json(ROOT / "coverage.yaml")
@@ -585,6 +587,24 @@ def validate_authority_body_inventory() -> dict:
     return result
 
 
+def validate_core_authority_extraction() -> dict:
+    run([sys.executable, str(ROOT / "scripts" / "test_core_authority_extraction.py")])
+    run([sys.executable, str(ROOT / "scripts" / "verify_core_authority_extraction.py")])
+    result = load_json(ARTIFACTS / "core-authority-extraction-validation.json")
+    negatives = load_json(ARTIFACTS / "core-authority-extraction-negative-tests.json")
+    if (
+        result.get("verdict") != "pass"
+        or result.get("violations")
+        or result.get("semantic_depth_credit") is not False
+        or result.get("human_review_performed") is not False
+        or result.get("core_v2_eligible") is not False
+        or negatives.get("verdict") != "pass"
+        or negatives.get("negative_case_count", 0) < 8
+    ):
+        raise RuntimeError("Core Authority Extraction bridge Gateがpassではない")
+    return result
+
+
 def validate_authority_review_queue() -> dict:
     run([sys.executable, str(ROOT / "scripts" / "generate_authority_review_queue.py")])
     run([sys.executable, str(ROOT / "scripts" / "test_authority_review_queue.py")])
@@ -690,11 +710,13 @@ def write_evidence() -> list[Path]:
     fe_parity = ARTIFACTS / "kotlin-depth-parity.json"
     authority_locators = ARTIFACTS / "authority-locator-validation.json"
     authority_body = ARTIFACTS / "authority-body-inventory-validation.json"
+    core_authority = ARTIFACTS / "core-authority-extraction-validation.json"
     authority_review = ARTIFACTS / "authority-review-queue-validation.json"
     specs = [
         ("authority.source-lock-validation", ["authority.source-lock-matches"], "conformance", "kotlin-atlas-verifier", "atlas validate atlas.yaml mastery.yaml coverage.yaml sources.lock.yaml skill.package.yaml && atlas audit .", manifest, [ROOT / "atlas", ROOT / "mastery.yaml", ROOT / "scripts" / "verify.py"]),
         ("authority.locator-validation", ["authority.locator-inventory-is-copyright-safe-and-incomplete"], "capture", "kotlin-authority-locator-verifier", "python3 scripts/generate_authority_locators.py && python3 scripts/verify_authority_locators.py", authority_locators, [ROOT / "scripts" / "verify_authority_locators.py", ROOT / "authority" / "locator-extraction.json", ROOT / "baseline" / "fe-authority-locator-reference-v1.json"]),
         ("authority.body-inventory-validation", ["authority.raw-anchor-denominator-is-pending-human"], "capture", "kotlin-authority-body-inventory-verifier", "python3 scripts/verify_authority_body_inventory.py", authority_body, [ROOT / "scripts" / "verify_authority_body_inventory.py", ROOT / "authority" / "body-inventory.snapshot.json", ROOT / "baselines" / "authority-body-inventory-v1.json"]),
+        ("authority.core-extraction-validation", ["authority.locator-inventory-is-copyright-safe-and-incomplete"], "capture", "kotlin-core-authority-extraction-verifier", "python3 scripts/generate_core_authority_extraction.py && python3 scripts/test_core_authority_extraction.py && python3 scripts/verify_core_authority_extraction.py", core_authority, [ROOT / "scripts" / "generate_core_authority_extraction.py", ROOT / "scripts" / "verify_core_authority_extraction.py", ROOT / "authority" / "extraction.snapshot.json", ROOT / "authority" / "extraction-source-state.snapshot.json", ROOT / "authority" / "body-inventory.snapshot.json"]),
         ("authority.review-queue-validation", ["authority.raw-anchor-denominator-is-pending-human"], "capture", "kotlin-authority-review-queue-verifier", "python3 scripts/generate_authority_review_queue.py && python3 scripts/test_authority_review_queue.py && python3 scripts/verify_authority_review_queue.py", authority_review, [ROOT / "scripts" / "verify_authority_review_queue.py", ROOT / "authority" / "review-queue.snapshot.json", ROOT / "authority" / "reviews" / "decisions.json", ROOT / "authority" / "reviews" / "promotions.json"]),
         ("inventory.public-surface", ["inventory.locked-surface-enumerated"], "capture", "kotlin-artifact-inventory", "python3 scripts/inventory.py", inventory, [ROOT / "scripts" / "inventory.py", ROOT / "sources.lock.yaml"]),
         ("semantics.language-types", ["semantics.exhaustive-and-lazy", "types.variance-nothing-reified"], "test-report", "gradle-junit", "./gradlew :labs:semantics:test", lab, [ROOT / "labs" / "semantics"]),
@@ -992,6 +1014,7 @@ def main(*, skip_container: bool = False) -> None:
     non_regression_result = validate_non_regression()
     authority_locator_result = validate_authority_locators()
     authority_body_result = validate_authority_body_inventory()
+    core_authority_result = validate_core_authority_extraction()
     authority_review_result = validate_authority_review_queue()
     # Depth Parityが専用Scenario Evidenceを参照できるよう、追跡済みEvidenceを入力に
     # matrixとwrapperを先に再生成する。全Evidence更新後にも再生成し、最終digestを固定する。
@@ -1010,7 +1033,7 @@ def main(*, skip_container: bool = False) -> None:
     summary = {
         "atlas_id": "kotlin-reference-atlas",
         "epoch": "2026-08-28",
-        "implementation_gates": {"python_dependency": python_dependency_result["verdict"], "manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "partial_scenario_runtime": partial_scenario_runtime["status"], "skill": skill_result["verdict"], "definitive_skill": definitive_skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "evidence_dependency": "committed-read-only-pass; owner-managed full verify is the only Graph publication path" if skip_container else "owner-managed-full-live-runtime-regenerated-pass", "scenario_plan": "expected-incomplete-no-success-generation", "evidence_durability": "expected-incomplete-no-success-generation", "definitive": "expected-incomplete"},
+        "implementation_gates": {"python_dependency": python_dependency_result["verdict"], "manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "partial_scenario_runtime": partial_scenario_runtime["status"], "skill": skill_result["verdict"], "definitive_skill": definitive_skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "core_authority_extraction": core_authority_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "evidence_dependency": "committed-read-only-pass; owner-managed full verify is the only Graph publication path" if skip_container else "owner-managed-full-live-runtime-regenerated-pass", "scenario_plan": "expected-incomplete-no-success-generation", "evidence_durability": "expected-incomplete-no-success-generation", "definitive": "expected-incomplete"},
         "python_dependency_contract": python_dependency_result,
         "definitive_skill_eval": definitive_skill_result,
         "kotlin_depth_parity": {"axis_count": fe_parity_result["axis_count"], "status_counts": fe_parity_result["status_counts"], "total_axis_gaps": fe_parity_result["total_axis_gaps"], "all_axes_closed": fe_parity_result["all_axes_closed"], "reference_commit": fe_parity_result["reference_commit"]},
@@ -1019,11 +1042,12 @@ def main(*, skip_container: bool = False) -> None:
         "authority_surface_inventory": {"artifacts": manifest_result["authority_artifacts"], "behaviors": manifest_result["authority_behaviors"]},
         "authority_locator_extraction": authority_locator_result["summary"],
         "authority_body_denominator": authority_body_result["summary"],
+        "core_authority_extraction": core_authority_result["summary"],
         "authority_review_queue": authority_review_result["summary"],
         "gap_ledger": gaps,
         "completion_gaps": [
             "146402 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
-            "69 Authority inventory Behavior×10 Scenarioは専用row化済み。security-001の13 cellに加え、security-002のinline-reified security JVM/JS/Wasm 9 cellを専用初回実行で閉じた。合計22 cellはretry 0だが、Native・JS/Wasm ABI・他Compiler rowとAuthority atomic bindingは未閉鎖",
+            f"69 Authority inventory Behavior×10 Scenarioは専用row化済み。Authority非依存のSecurity 4 BehaviorについてJVM/JS/Wasm {partial_scenario_runtime['counts']['cells']} cellを専用初回実行で閉じたが、Closure Plan rowは全Variantを要求するためcompleted 0/690。Native実RuntimeとAuthority atomic bindingは未閉鎖",
             "Pattern Scenario Reporterは原子的retention契約へ適合するが、公開可能なfull-run成功世代が未生成のためCore Evidence durability／Scenario Plan Gateは未閉鎖",
             "112-cell Router契約と独立Agent Forward Evalはpassだが22 Mastery routing gapが未閉鎖",
             "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖",

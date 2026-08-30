@@ -57,6 +57,6 @@
   "testcase": {
     "classname": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
     "name": "compatibility integration keeps expect actual value representation executable()[jvm]",
-    "time": "0.007"
+    "time": "0.058"
   }
 }

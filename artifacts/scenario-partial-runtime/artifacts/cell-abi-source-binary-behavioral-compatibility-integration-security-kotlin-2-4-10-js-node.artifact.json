@@ -19,7 +19,7 @@
   ],
   "compiler_refusal": {
     "exit_code": 1,
-    "output_digest": "sha256:2524bd85cc17d25dc27ca80dc930e2444a94c3a9f858254b57a25e443402c4d9",
+    "output_digest": "sha256:a8baf823f69e97f23682f72ee9e5bb870b19319f13ec0071502213ff71d648f9",
     "removed_descriptor": "SecurePolicy.authorize(role: String)",
     "required_diagnostics": [
       "No value passed for parameter 'context'"
@@ -45,12 +45,12 @@
     "variant_id": "kotlin-2.4.10-js-node"
   },
   "runtime_test_result": {
-    "digest": "sha256:20ebb485ceda6717a0dd6ec670c535a9e3accb434d86e6c04729c4a56974f831",
+    "digest": "sha256:5c981e5f75345d8d7adb1965e10c7dc84fed9ad79ca677c1ac2a07e788fa8996",
     "path": "labs/abi-compat-kmp-consumer-baseline/build/test-results/jsNodeTest/TEST-jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest.xml",
     "testcase": {
       "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
       "name": "unchanged consumer executes the version one security contract[js, node]",
-      "time": "0.0"
+      "time": "0.001"
     }
   },
   "schema_version": 1,

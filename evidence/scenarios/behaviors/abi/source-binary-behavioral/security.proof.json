@@ -116,8 +116,8 @@
       },
       "dedicated_execution": {
         "artifact": {
-          "bytes": 3603,
-          "digest": "sha256:c69d2b8f136c0421b69cd98149fdd6b3744be9dab5c082e0f5691013101c2a96",
+          "bytes": 3604,
+          "digest": "sha256:7595f66c2b25a7729225a27d4d74ed9d1d0426d4e60e17cb75d498c6a1c1eb8f",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-source-binary-behavioral-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -142,8 +142,8 @@
         "source_digest": "sha256:0e326ff8e229fae1754aea542c383c20dd14bd2d772ac27886cfa6e80bc8fd6c",
         "trace": {
           "action_stream": true,
-          "bytes": 4333,
-          "digest": "sha256:27b281c55c20bd9d7e7446bc181c1da49ef1c2469cf99a752c286eb38d8362b9",
+          "bytes": 4334,
+          "digest": "sha256:bf1013954eabfb91037d99690b0df34d2da4cf7940a22dae2c2ca9f8f33573de",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-source-binary-behavioral-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true
@@ -172,8 +172,8 @@
       },
       "dedicated_execution": {
         "artifact": {
-          "bytes": 3488,
-          "digest": "sha256:75ef20bc899fe0fe722a3d512caa85e6951bb7cc240c0b20f8c2cc36de399b3c",
+          "bytes": 3490,
+          "digest": "sha256:6a6d60ae5d24b4c44dc400b1afdfd95009a0efb4e08b4466ef4be848fd4dee7a",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-source-binary-behavioral-compatibility-integration-security-kotlin-2-4-10-js-node.artifact.json"
         },
         "attempts": 1,
@@ -199,8 +199,8 @@
         "source_digest": "sha256:d10e3d3e7e86a721de8880c8cd8c672a1a4d20402b10649248da8a080a69bae3",
         "trace": {
           "action_stream": true,
-          "bytes": 4214,
-          "digest": "sha256:768b16f9df5ebe69d01f983ef627f3cd9f7d18f7b53f9620d48b208777c38450",
+          "bytes": 4216,
+          "digest": "sha256:7fc9381ff1d4055b1d5a8e719ecc44022b3ae5c4a0be5537613bc69bfac7d57a",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-source-binary-behavioral-compatibility-integration-security-kotlin-2-4-10-js-node.trace.json",
           "resource_stream": true
@@ -230,7 +230,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 3536,
-          "digest": "sha256:a49a9296176fa511eae42ea83b457e17d921bd3a6d04cddde45eb5285ef8a2ea",
+          "digest": "sha256:427a045cc46d4958ea3a8a0fce7a25609e0f24a694d50c6ad0f7ba4bad7f45c6",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-source-binary-behavioral-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.artifact.json"
         },
         "attempts": 1,
@@ -257,7 +257,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 4258,
-          "digest": "sha256:f3fdc45484121009f02268fc9fbc07e113a416a3bddd1226d0b37a8da2ddc2e6",
+          "digest": "sha256:c48e28fe51e76fdea679bddf27cadf4c66d6a46885891226404b111c20e290b6",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-source-binary-behavioral-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.trace.json",
           "resource_stream": true
@@ -320,8 +320,8 @@
       },
       "dedicated_execution": {
         "artifact": {
-          "bytes": 3593,
-          "digest": "sha256:96c44657c9ec0475140df3bd2cceff4286a76ea7906ee74e1fc2845142e334b4",
+          "bytes": 3594,
+          "digest": "sha256:cfd6e8755c997f1b256f391a4b8126d21428efe96fc88bcf89605eeb9eb9fb3f",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-source-binary-behavioral-migration-evolution-deprecation-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
         },
         "attempts": 1,
@@ -346,8 +346,8 @@
         "source_digest": "sha256:0e326ff8e229fae1754aea542c383c20dd14bd2d772ac27886cfa6e80bc8fd6c",
         "trace": {
           "action_stream": true,
-          "bytes": 4299,
-          "digest": "sha256:c0ad327f749af3e42e26987b7691b9e8c1a494288343317f8a55f0bf6787815e",
+          "bytes": 4300,
+          "digest": "sha256:9030de77fc6206247f68676ae405a3a2c22ecdaf4409c9e86bd03e0c5c7004db",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-source-binary-behavioral-migration-evolution-deprecation-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
           "resource_stream": true
@@ -377,7 +377,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 3511,
-          "digest": "sha256:3453937deeebd527e4621ddc0c2b42a1ec5f3e0965ccfc90c8e8b714c258a2b9",
+          "digest": "sha256:baaa83451e9861b82c2ed724938659efc88ddba2b33a647e998b2e49e5892e70",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-source-binary-behavioral-migration-evolution-deprecation-security-kotlin-2-4-10-js-node.artifact.json"
         },
         "attempts": 1,
@@ -434,7 +434,7 @@
       "dedicated_execution": {
         "artifact": {
           "bytes": 3561,
-          "digest": "sha256:b0d4958c0cd9d6ba97df93f494cf87170ded9b200c840d03ac9fea2a95dbb380",
+          "digest": "sha256:4a20759ce8b1a181f769bc80f4f65f6507ac3a21c955dd1ebd76faf98d23ce3d",
           "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-source-binary-behavioral-migration-evolution-deprecation-security-kotlin-2-4-10-wasm-js-node.artifact.json"
         },
         "attempts": 1,
@@ -461,7 +461,7 @@
         "trace": {
           "action_stream": true,
           "bytes": 4282,
-          "digest": "sha256:b4fed4b6f52486a0adc10040bc4cbdf99828535755f66c39e7e010567079d2ae",
+          "digest": "sha256:2b8f5704b4566f10599c71bd49917f66dbd7aad784c83234e78259bd1fed9e61",
           "network_stream": true,
           "path": "artifacts/scenario-partial-runtime/traces/cell-abi-source-binary-behavioral-migration-evolution-deprecation-security-kotlin-2-4-10-wasm-js-node.trace.json",
           "resource_stream": true

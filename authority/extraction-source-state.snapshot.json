@@ -1,0 +1,944 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "body_inventory": {
+    "digest": "sha256:47af90a9531fd04ba168b792e50d6fe654bc0feeb840fb84e1d08d114ae09ea8",
+    "path": "authority/body-inventory.snapshot.json",
+    "selector_contract": [
+      "document-root",
+      "tracked-blob"
+    ],
+    "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+  },
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "schema_version": 1,
+  "sources": [
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:b64f376e9d3ab7f3a695eb5e6850e14ae8c52afb9f22adc4f9d6ae0f192f38ce",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:553c78f50dafcd54d65b9a444649057857469edf836431389695608536d6b746",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "gradle-9.5.0",
+      "source_url": "https://services.gradle.org/distributions/gradle-9.5.0-bin.zip",
+      "subject_generic_acquisition": {
+        "anchor_count": 1,
+        "anchor_id_set_digest": "sha256:07e895fe392a6fb8a39fdd12fa884ee158ff19e7640758dee242533e39176315",
+        "anchors_by_selector": {
+          "document-root": 1
+        },
+        "binary_only": true,
+        "deferred": false,
+        "document_digest": "sha256:db209521559e20554744716280c5626db0c8985a6368cef85a9b5b85c2874c0e",
+        "document_id": "document-gradle-9-5-0-2055dd1ccac0",
+        "document_path": "authority/body-inventory-draft/document-gradle-9-5-0-2055dd1ccac0.json",
+        "locked_body_digest": "sha256:553c78f50dafcd54d65b9a444649057857469edf836431389695608536d6b746",
+        "root_locator": {
+          "anchor_id": "anchor-2c03687c6772ef4060aa",
+          "context_digest": "sha256:553c78f50dafcd54d65b9a444649057857469edf836431389695608536d6b746",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:25be07a50fce5951779d1d29cf13f1337df4424ed82efa0d4ad3e22d959cbd45",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:63f6246f601e260c3db5e6325599a9fca69cafc8868e90237a9c4c51d7502b85",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "gradle-source-9.5.0",
+      "source_url": "https://github.com/gradle/gradle/commit/3fe117d68f3907790f3809f121aa36303a9151f8",
+      "subject_generic_acquisition": {
+        "anchor_count": 26750,
+        "anchor_id_set_digest": "sha256:2b0638d4c4679ba60cba15ab3ae06654b5e10b5855a8b2cb657c71f010e68597",
+        "anchors_by_selector": {
+          "document-root": 1,
+          "tracked-blob": 26749
+        },
+        "binary_only": false,
+        "deferred": false,
+        "document_digest": "sha256:5b13e745e2f3d0caa9b242c4c919c397c4f0f86ad52c0954a73efbcd0a9c6787",
+        "document_id": "document-gradle-gradle-8c4beeb1d6ea",
+        "document_path": "authority/body-inventory-draft/document-gradle-gradle-8c4beeb1d6ea.json",
+        "locked_body_digest": "sha256:63f6246f601e260c3db5e6325599a9fca69cafc8868e90237a9c4c51d7502b85",
+        "root_locator": {
+          "anchor_id": "anchor-8b8efdf6aaf48ee1646d",
+          "context_digest": "sha256:63f6246f601e260c3db5e6325599a9fca69cafc8868e90237a9c4c51d7502b85",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:78d64cfefb962acf2e9e352bf55fa0c2a6db77a9eae32f5bb8c0cff1b7e61d16",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlin-compiler-2.4.10",
+      "source_url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+      "subject_generic_acquisition": {
+        "anchor_count": 1,
+        "anchor_id_set_digest": "sha256:f4dc4f74d2fbb4fbf5ce340ca8ed83c97d7729a40b09d587d871436551ada573",
+        "anchors_by_selector": {
+          "document-root": 1
+        },
+        "binary_only": true,
+        "deferred": false,
+        "document_digest": "sha256:aa7a02c9120fd739d159c7007ce9e5abf86aefce8b7c126b7b46c893ab59d294",
+        "document_id": "document-kotlin-compiler-2-4-10-f2c27c089b3c",
+        "document_path": "authority/body-inventory-draft/document-kotlin-compiler-2-4-10-f2c27c089b3c.json",
+        "locked_body_digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+        "root_locator": {
+          "anchor_id": "anchor-aa5249958f2bbc71afa0",
+          "context_digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:4e16d093399fd181512876d84f487d9f691da52a2739e9221ff8f8e356d391c8",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlin-compiler-source-2.4.10",
+      "source_url": "https://github.com/JetBrains/kotlin/commit/5687445832cd835b4509b9fbc264cdf1a8201093",
+      "subject_generic_acquisition": {
+        "anchor_count": 108210,
+        "anchor_id_set_digest": "sha256:a89191b7da371bd01d144fadd871022e9025ec52a199d6bc91262006fea8e324",
+        "anchors_by_selector": {
+          "document-root": 1,
+          "tracked-blob": 108209
+        },
+        "binary_only": false,
+        "deferred": false,
+        "document_digest": "sha256:d724d370eb1d0c48e0cb090bf70ecf3e4bb2ae912a2c167c92933584c3ddf3d7",
+        "document_id": "document-jetbrains-kotlin-55ae826a5657",
+        "document_path": "authority/body-inventory-draft/document-jetbrains-kotlin-55ae826a5657.json",
+        "locked_body_digest": "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902",
+        "root_locator": {
+          "anchor_id": "anchor-01d3f1d1eee1d6329591",
+          "context_digest": "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:c54db53d89a54bb11f43c1ec4b8b7b17331d561affa17fe7928aa94f0b549422",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:3200d58d59e7ad08b9306a755aa0fd440b3a0264c7c3dc488cf3201d81fe54de",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlin-docs-snapshot",
+      "source_url": "https://github.com/JetBrains/kotlin-web-site/commit/135c79983f678c6367c5cc19eb5d8445eb3c95ce",
+      "subject_generic_acquisition": {
+        "anchor_count": 1713,
+        "anchor_id_set_digest": "sha256:1a7c0bce2926319c0e670136f11167fc20e058ff4b6ebf23d43a666bd8a80d91",
+        "anchors_by_selector": {
+          "document-root": 1,
+          "tracked-blob": 1712
+        },
+        "binary_only": false,
+        "deferred": false,
+        "document_digest": "sha256:d099e137c276ed6fe3a5db702602e10ee0e1709cfac380e754923b929bf8ecd2",
+        "document_id": "document-jetbrains-kotlin-web-site-41bce3535b30",
+        "document_path": "authority/body-inventory-draft/document-jetbrains-kotlin-web-site-41bce3535b30.json",
+        "locked_body_digest": "sha256:3200d58d59e7ad08b9306a755aa0fd440b3a0264c7c3dc488cf3201d81fe54de",
+        "root_locator": {
+          "anchor_id": "anchor-a46506030c96f8501544",
+          "context_digest": "sha256:3200d58d59e7ad08b9306a755aa0fd440b3a0264c7c3dc488cf3201d81fe54de",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:155c43bbd29b548b77edac99aeb72c2c1dc0e4cbfb7773f86ddb5958fcd23dcb",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:bd43689297ab1ec0060953dab43aff276fc37491327ee2b341dce493a199d930",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlin-keep-snapshot",
+      "source_url": "https://github.com/Kotlin/KEEP/commit/f6fdf1e5535cca71b8ed6676e2c3d777fdded34e",
+      "subject_generic_acquisition": {
+        "anchor_count": 156,
+        "anchor_id_set_digest": "sha256:7f16b6f553da7dbcafc1ad68a769fa1c5d0a37b15abe67336257b963e93a8fea",
+        "anchors_by_selector": {
+          "document-root": 1,
+          "tracked-blob": 155
+        },
+        "binary_only": false,
+        "deferred": false,
+        "document_digest": "sha256:37b2e8038961e76ecf49efb2f1bf236fd87f9d6aa5236d3dab99deafc3080844",
+        "document_id": "document-kotlin-keep-8cfb549b3048",
+        "document_path": "authority/body-inventory-draft/document-kotlin-keep-8cfb549b3048.json",
+        "locked_body_digest": "sha256:bd43689297ab1ec0060953dab43aff276fc37491327ee2b341dce493a199d930",
+        "root_locator": {
+          "anchor_id": "anchor-401d1fafdf5133ff2075",
+          "context_digest": "sha256:bd43689297ab1ec0060953dab43aff276fc37491327ee2b341dce493a199d930",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:3c1616ed84f7f0fa5cda5a045935bb19cabb3db59f82aed9c2b2eec58677dce8",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:55ded039bb56a69aec9df354a92b42df9e916104e3c53d8d9852d9cc6617ed9d",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlin-native-macos-arm64-2.4.10",
+      "source_url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-native-prebuilt/2.4.10/kotlin-native-prebuilt-2.4.10-macos-aarch64.tar.gz",
+      "subject_generic_acquisition": {
+        "anchor_count": 1,
+        "anchor_id_set_digest": "sha256:7085f8edf60d3211ac374ae958dbf5e372e5810cfcea95c1cabf191a4f398257",
+        "anchors_by_selector": {
+          "document-root": 1
+        },
+        "binary_only": true,
+        "deferred": false,
+        "document_digest": "sha256:79c3ad54448c273f3526cd77945918089126c281667f0c892785320bfc52d686",
+        "document_id": "document-kotlin-native-macos-arm64-2-4-10-f01da68263ff",
+        "document_path": "authority/body-inventory-draft/document-kotlin-native-macos-arm64-2-4-10-f01da68263ff.json",
+        "locked_body_digest": "sha256:55ded039bb56a69aec9df354a92b42df9e916104e3c53d8d9852d9cc6617ed9d",
+        "root_locator": {
+          "anchor_id": "anchor-2fe6840849089684d3b3",
+          "context_digest": "sha256:55ded039bb56a69aec9df354a92b42df9e916104e3c53d8d9852d9cc6617ed9d",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:14ddc8f9250013d85ab4ad8c8ad713e6a06b8855bb78b06046329cb63b57745b",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlin-native-source-2.4.10",
+      "source_url": "https://github.com/JetBrains/kotlin/commit/5687445832cd835b4509b9fbc264cdf1a8201093",
+      "subject_generic_acquisition": {
+        "anchor_count": 108210,
+        "anchor_id_set_digest": "sha256:a89191b7da371bd01d144fadd871022e9025ec52a199d6bc91262006fea8e324",
+        "anchors_by_selector": {
+          "document-root": 1,
+          "tracked-blob": 108209
+        },
+        "binary_only": false,
+        "deferred": false,
+        "document_digest": "sha256:d724d370eb1d0c48e0cb090bf70ecf3e4bb2ae912a2c167c92933584c3ddf3d7",
+        "document_id": "document-jetbrains-kotlin-55ae826a5657",
+        "document_path": "authority/body-inventory-draft/document-jetbrains-kotlin-55ae826a5657.json",
+        "locked_body_digest": "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902",
+        "root_locator": {
+          "anchor_id": "anchor-01d3f1d1eee1d6329591",
+          "context_digest": "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:baea98aed3b852305e469d9b94d6242d2b01500023fa12ae2fbd6f0bf8a07bca",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:2f54cc199a31ef55ccce24d1c068235be46d1f74f48d84a8230929d4a6184af4",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlin-spec-snapshot",
+      "source_url": "https://github.com/Kotlin/kotlin-spec/commit/2f7aa0524ec27e788dfacd550f144809f2e0254c",
+      "subject_generic_acquisition": {
+        "anchor_count": 6933,
+        "anchor_id_set_digest": "sha256:7f1d968fc706c08d3ba87ab2467471bc4da783bd532e470c0ddd2c5b7d722d5f",
+        "anchors_by_selector": {
+          "document-root": 1,
+          "tracked-blob": 6932
+        },
+        "binary_only": false,
+        "deferred": false,
+        "document_digest": "sha256:b14b9dc0d7ed9c2ab01b64fd3c574a6ac127f5f0bb3eb25d1b9936739e569483",
+        "document_id": "document-kotlin-kotlin-spec-d30c735b8b40",
+        "document_path": "authority/body-inventory-draft/document-kotlin-kotlin-spec-d30c735b8b40.json",
+        "locked_body_digest": "sha256:2f54cc199a31ef55ccce24d1c068235be46d1f74f48d84a8230929d4a6184af4",
+        "root_locator": {
+          "anchor_id": "anchor-7a038dff5ee60e4eb3b1",
+          "context_digest": "sha256:2f54cc199a31ef55ccce24d1c068235be46d1f74f48d84a8230929d4a6184af4",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:a945802bca8de253c501d21aeb66843d1ee78a066c666352c773fdee1ee414a3",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:1b8208cd3ec7c6106261fd1f4b37ea11a075ea07d9e5a2231326a5703038a632",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlin-stdlib-js-2.4.10",
+      "source_url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-js/2.4.10/kotlin-stdlib-js-2.4.10.klib",
+      "subject_generic_acquisition": {
+        "anchor_count": 1,
+        "anchor_id_set_digest": "sha256:02ba48dc4a4b5f6464e2b162bba10f97105b3fe9f7d25f761e1e78fe9952be73",
+        "anchors_by_selector": {
+          "document-root": 1
+        },
+        "binary_only": true,
+        "deferred": false,
+        "document_digest": "sha256:52923bde6e33785aa4467a718366a81e842177daba52407ad2bc7529cfb2e196",
+        "document_id": "document-kotlin-stdlib-js-2-4-10-2aae8e0cca27",
+        "document_path": "authority/body-inventory-draft/document-kotlin-stdlib-js-2-4-10-2aae8e0cca27.json",
+        "locked_body_digest": "sha256:1b8208cd3ec7c6106261fd1f4b37ea11a075ea07d9e5a2231326a5703038a632",
+        "root_locator": {
+          "anchor_id": "anchor-50807448ee2cb04c7a68",
+          "context_digest": "sha256:1b8208cd3ec7c6106261fd1f4b37ea11a075ea07d9e5a2231326a5703038a632",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:b45f2d4cb397255747ba8b097124eaef04b9bdeee9faad5f1a3f79d0442212dd",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:4ec0293bc3751423b203f1d8493251c57c42e73eb6377a6b8560d0974ff0a6df",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlin-stdlib-jvm-2.4.10",
+      "source_url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.4.10/kotlin-stdlib-2.4.10.jar",
+      "subject_generic_acquisition": {
+        "anchor_count": 1,
+        "anchor_id_set_digest": "sha256:d6505f40b3dcd90cdd08f43f1e45b62d9a8f4bd6ac6b1d09dc3291aa34c30d60",
+        "anchors_by_selector": {
+          "document-root": 1
+        },
+        "binary_only": true,
+        "deferred": false,
+        "document_digest": "sha256:c6544a403684eb7f8feda3e0b415069afbe0de8a6dc2ce25f5ce0af4aa2e4607",
+        "document_id": "document-kotlin-stdlib-jvm-2-4-10-bb664af1d0b7",
+        "document_path": "authority/body-inventory-draft/document-kotlin-stdlib-jvm-2-4-10-bb664af1d0b7.json",
+        "locked_body_digest": "sha256:4ec0293bc3751423b203f1d8493251c57c42e73eb6377a6b8560d0974ff0a6df",
+        "root_locator": {
+          "anchor_id": "anchor-f41cefa0f74c599bd2c2",
+          "context_digest": "sha256:4ec0293bc3751423b203f1d8493251c57c42e73eb6377a6b8560d0974ff0a6df",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:644b95ecaf37fff7e7674b6cffb61e866ad9d7d493d8d657cb16d1c8f06b2dea",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlin-stdlib-source-2.4.10",
+      "source_url": "https://github.com/JetBrains/kotlin/commit/5687445832cd835b4509b9fbc264cdf1a8201093",
+      "subject_generic_acquisition": {
+        "anchor_count": 108210,
+        "anchor_id_set_digest": "sha256:a89191b7da371bd01d144fadd871022e9025ec52a199d6bc91262006fea8e324",
+        "anchors_by_selector": {
+          "document-root": 1,
+          "tracked-blob": 108209
+        },
+        "binary_only": false,
+        "deferred": false,
+        "document_digest": "sha256:d724d370eb1d0c48e0cb090bf70ecf3e4bb2ae912a2c167c92933584c3ddf3d7",
+        "document_id": "document-jetbrains-kotlin-55ae826a5657",
+        "document_path": "authority/body-inventory-draft/document-jetbrains-kotlin-55ae826a5657.json",
+        "locked_body_digest": "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902",
+        "root_locator": {
+          "anchor_id": "anchor-01d3f1d1eee1d6329591",
+          "context_digest": "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:9b5bfaa80d0c30324c85f1cac7b5d11cf3a743a0c9d199e4029379aa7bbe471b",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:4da1327c168060f0f4a08f41f2e9db9ec76f161cc5765470a03a7c7e0f815925",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlin-stdlib-wasm-js-2.4.10",
+      "source_url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-wasm-js/2.4.10/kotlin-stdlib-wasm-js-2.4.10.klib",
+      "subject_generic_acquisition": {
+        "anchor_count": 1,
+        "anchor_id_set_digest": "sha256:6f03efc2e1a8c8fc279b3a54ad21b62475cd7a72b1e13c9193a21df2a4e656f4",
+        "anchors_by_selector": {
+          "document-root": 1
+        },
+        "binary_only": true,
+        "deferred": false,
+        "document_digest": "sha256:d492744a81102c0f9e621eb75527486d84a3f675c407053e7302742e6d3cbe13",
+        "document_id": "document-kotlin-stdlib-wasm-js-2-4-10-069f8d90580f",
+        "document_path": "authority/body-inventory-draft/document-kotlin-stdlib-wasm-js-2-4-10-069f8d90580f.json",
+        "locked_body_digest": "sha256:4da1327c168060f0f4a08f41f2e9db9ec76f161cc5765470a03a7c7e0f815925",
+        "root_locator": {
+          "anchor_id": "anchor-2b498a7dd383fa08ffbc",
+          "context_digest": "sha256:4da1327c168060f0f4a08f41f2e9db9ec76f161cc5765470a03a7c7e0f815925",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:aca810a9d9f4ad8c3afdb2ee59fc4e82f6891985c85d6d93d2192803a456d6ae",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:d1d75aa01dffbb4d1c520e67e4c4e7f5f6174718e7cb4632412503f2f0e604fa",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlinx-coroutines-core-jvm-1.11.0",
+      "source_url": "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.11.0/kotlinx-coroutines-core-jvm-1.11.0.jar",
+      "subject_generic_acquisition": {
+        "anchor_count": 1,
+        "anchor_id_set_digest": "sha256:481967f9de6371f5fddc35e97e10c48ebacf17793fc3fcaf36526288126cd4ba",
+        "anchors_by_selector": {
+          "document-root": 1
+        },
+        "binary_only": true,
+        "deferred": false,
+        "document_digest": "sha256:b4a26e10f3bff8b1d23b0d5ae6e9ebd052fa92439f773b33c1051a4a769641b7",
+        "document_id": "document-kotlinx-coroutines-core-jvm-1-11-0-06d9be2a0154",
+        "document_path": "authority/body-inventory-draft/document-kotlinx-coroutines-core-jvm-1-11-0-06d9be2a0154.json",
+        "locked_body_digest": "sha256:d1d75aa01dffbb4d1c520e67e4c4e7f5f6174718e7cb4632412503f2f0e604fa",
+        "root_locator": {
+          "anchor_id": "anchor-7f3336b6d9a26552dce7",
+          "context_digest": "sha256:d1d75aa01dffbb4d1c520e67e4c4e7f5f6174718e7cb4632412503f2f0e604fa",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:909a86e20eccb06d61c89ede1b259cb9f7850fb3cac65925d18d228b52bb12db",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:ff25c4fd2855309cc047a17136f350579a3561e58c10515251063b81b8b8afef",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlinx-coroutines-source-1.11.0",
+      "source_url": "https://github.com/Kotlin/kotlinx.coroutines/commit/8564f65764d3d05893cec026c6e94250e2b23874",
+      "subject_generic_acquisition": {
+        "anchor_count": 1328,
+        "anchor_id_set_digest": "sha256:f43475401179ff6486d4fdd62cc121b00fac9c98708c8b2a5d433cead0b59d1a",
+        "anchors_by_selector": {
+          "document-root": 1,
+          "tracked-blob": 1327
+        },
+        "binary_only": false,
+        "deferred": false,
+        "document_digest": "sha256:06b6166a0472048714a4c4987a2e9aa44fc24de288a46dba5653c8baf3ced62c",
+        "document_id": "document-kotlin-kotlinx-coroutines-b6cf464a1968",
+        "document_path": "authority/body-inventory-draft/document-kotlin-kotlinx-coroutines-b6cf464a1968.json",
+        "locked_body_digest": "sha256:ff25c4fd2855309cc047a17136f350579a3561e58c10515251063b81b8b8afef",
+        "root_locator": {
+          "anchor_id": "anchor-413a76612930fd1fdb69",
+          "context_digest": "sha256:ff25c4fd2855309cc047a17136f350579a3561e58c10515251063b81b8b8afef",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:4f4b5d9e98b5b01efa3c4dd07e7cfc97bfae8f0c3a7151ec03d97f1d3ff5b222",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:001b56cf980a08cab723a9081c0b93ce81539c3a2c221f471c03c778ee04c8de",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "kotlinx-serialization-source-snapshot",
+      "source_url": "https://github.com/Kotlin/kotlinx.serialization/commit/25c2a755cbe6926a63003f3a51527bb731e8cd14",
+      "subject_generic_acquisition": {
+        "anchor_count": 1056,
+        "anchor_id_set_digest": "sha256:9cd6aff2ab412d930947258f8b076216c6495e7b5c6d2136a895d0eb2101fd31",
+        "anchors_by_selector": {
+          "document-root": 1,
+          "tracked-blob": 1055
+        },
+        "binary_only": false,
+        "deferred": false,
+        "document_digest": "sha256:768e5cd47f7eb366a1dfa0f0dd26287d5a93b523af501e2524d95108cf30a5d3",
+        "document_id": "document-kotlin-kotlinx-serialization-19ce84e31d4f",
+        "document_path": "authority/body-inventory-draft/document-kotlin-kotlinx-serialization-19ce84e31d4f.json",
+        "locked_body_digest": "sha256:001b56cf980a08cab723a9081c0b93ce81539c3a2c221f471c03c778ee04c8de",
+        "root_locator": {
+          "anchor_id": "anchor-64bb7aa8107397a174dd",
+          "context_digest": "sha256:001b56cf980a08cab723a9081c0b93ce81539c3a2c221f471c03c778ee04c8de",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:14e344a348d16ae6671512e76bb0e81ca649ebfb8e65fadb6f1862c082e8b930",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:2c0f1135d55c00f647ad5f4aa78333d00980f5bc5613dc32ccea9a784bbd9ab2",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "reference-atlas-core-definitive-v2",
+      "source_url": "https://github.com/akaitigo/reference-atlas-core/commit/072d7ca77981f51754e824d70c6d4ecd55ea67e5",
+      "subject_generic_acquisition": {
+        "anchor_count": 205,
+        "anchor_id_set_digest": "sha256:72e80d46188daa6e0a428074a32d23ebeeb0c3bb56b4fdf4b8a497f9d0d525d5",
+        "anchors_by_selector": {
+          "document-root": 1,
+          "tracked-blob": 204
+        },
+        "binary_only": false,
+        "deferred": false,
+        "document_digest": "sha256:1cae7d3d55397257c78921790be2d7d8a4579bf4b2df46be6e61bc6a17723e3b",
+        "document_id": "document-akaitigo-reference-atlas-core-1962d92e4393",
+        "document_path": "authority/body-inventory-draft/document-akaitigo-reference-atlas-core-1962d92e4393.json",
+        "locked_body_digest": "sha256:2c0f1135d55c00f647ad5f4aa78333d00980f5bc5613dc32ccea9a784bbd9ab2",
+        "root_locator": {
+          "anchor_id": "anchor-749bbb5bab434d727b0b",
+          "context_digest": "sha256:2c0f1135d55c00f647ad5f4aa78333d00980f5bc5613dc32ccea9a784bbd9ab2",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    },
+    {
+      "http_transport": {
+        "content_type": null,
+        "error_digest": "sha256:fa5080e15722a5a56bb94d56f388c7507320fca91994af7686ead350826683f7",
+        "fetched_bytes": null,
+        "final_url": null,
+        "http_status": null,
+        "status": "failed"
+      },
+      "locked_source_digest": "sha256:67120b38028fa871625f370f3688e52a4963df1f318d6e4b30a1cb6b8accbc38",
+      "semantic_state": {
+        "authority_text_surfaces_exhaustive": false,
+        "core_v2_eligible": false,
+        "depth_credit": false,
+        "human_review_status": "pending-human"
+      },
+      "source_id": "reference-atlas-core-v1",
+      "source_url": "https://github.com/akaitigo/reference-atlas-core/commit/d5c0a6ce757fd5f43af837edd26f55c7325b811e",
+      "subject_generic_acquisition": {
+        "anchor_count": 44,
+        "anchor_id_set_digest": "sha256:ec1c0ace76184c3d127521c334e7fdd7590bf9410b97fb88b809252ab67631c0",
+        "anchors_by_selector": {
+          "document-root": 1,
+          "tracked-blob": 43
+        },
+        "binary_only": false,
+        "deferred": false,
+        "document_digest": "sha256:73094e1de23c0df9b81c8149f52c8a86a1719d0542d4a1397bcdbe360dd610ef",
+        "document_id": "document-akaitigo-reference-atlas-core-3e1de93e838a",
+        "document_path": "authority/body-inventory-draft/document-akaitigo-reference-atlas-core-3e1de93e838a.json",
+        "locked_body_digest": "sha256:67120b38028fa871625f370f3688e52a4963df1f318d6e4b30a1cb6b8accbc38",
+        "root_locator": {
+          "anchor_id": "anchor-113bd4977b830b299e07",
+          "context_digest": "sha256:67120b38028fa871625f370f3688e52a4963df1f318d6e4b30a1cb6b8accbc38",
+          "locator": "document-root",
+          "offset_end": 1,
+          "offset_start": 0,
+          "offset_unit": "byte",
+          "selector": "document-root"
+        },
+        "selector_contract": [
+          "document-root",
+          "tracked-blob"
+        ],
+        "selector_exhaustive_for_locked_body": true,
+        "stale": false,
+        "status": "matched",
+        "tool": "kotlin-reference-atlas-authority-body-inventory-v2",
+        "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+      }
+    }
+  ],
+  "status": "incomplete-http-transport-and-human-review-required",
+  "storage_policy": "source-tool-document-selector-offset-and-digest-only",
+  "summary": {
+    "authority_text_surfaces_exhaustive": false,
+    "binary_only_sources": 7,
+    "core_v2_eligible_sources": 0,
+    "deferred_source_bindings": 0,
+    "document_digest_matched": 16,
+    "http_fetch_failed": 18,
+    "human_reviewed_sources": 0,
+    "locked_sources": 18,
+    "root_locator_bindings": 18,
+    "source_bindings_matched": 18,
+    "stale_source_bindings": 0,
+    "tracked_blob_candidates": 146386,
+    "unique_documents": 16
+  }
+}

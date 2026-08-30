@@ -38,7 +38,7 @@
   "compiler_refusal": {
     "consumer_readable_metadata_version": "2.5.0",
     "exit_code": 1,
-    "output_digest": "sha256:e39cb9a3f903734b003d275b951bc48a0bfb82e8f8865291a4cfa0c56b9d7812",
+    "output_digest": "sha256:ba5342f461021116bccba5df4de494ab40d7869b539c4f67ccb2f701de4d5cbb",
     "producer_metadata_version": "999.0.0",
     "required_diagnostics": [
       "Incompatible classes were found in dependencies",

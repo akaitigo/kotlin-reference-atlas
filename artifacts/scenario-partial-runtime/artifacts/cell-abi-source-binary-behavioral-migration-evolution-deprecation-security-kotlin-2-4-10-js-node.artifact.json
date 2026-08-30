@@ -45,7 +45,7 @@
     "variant_id": "kotlin-2.4.10-js-node"
   },
   "runtime_test_result": {
-    "digest": "sha256:4e5f79190b284e93844f9006a9bc9f922a789b3d054d0bcfd84c899455ba6d9c",
+    "digest": "sha256:4f94182c9ee4c9c8929c25a6ae85bd9a816f7cb351bbe48ec659454690b65e7c",
     "path": "labs/abi-compat-kmp-consumer-compatible/build/test-results/jsNodeTest/TEST-jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest.xml",
     "testcase": {
       "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest",

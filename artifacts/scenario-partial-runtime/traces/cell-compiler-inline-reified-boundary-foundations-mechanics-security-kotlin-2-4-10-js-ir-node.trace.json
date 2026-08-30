@@ -57,6 +57,6 @@
   "testcase": {
     "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
     "name": "foundations mechanics rejects a mismatched runtime type token[js, node]",
-    "time": "0.0"
+    "time": "0.001"
   }
 }

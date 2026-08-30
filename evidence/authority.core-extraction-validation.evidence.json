@@ -1,0 +1,27 @@
+{
+  "artifact": {
+    "digest": "sha256:c191dfa5830436ea7cdcf535e6e6fb8706c1ddd11064cacd40f432eec7675bbe",
+    "media_type": "application/json",
+    "size_bytes": 1248,
+    "uri": "evidence/artifacts/core-authority-extraction-validation.json"
+  },
+  "atlas_id": "kotlin-reference-atlas",
+  "claim_ids": [
+    "authority.locator-inventory-is-copyright-safe-and-incomplete"
+  ],
+  "command": "python3 scripts/generate_core_authority_extraction.py && python3 scripts/test_core_authority_extraction.py && python3 scripts/verify_core_authority_extraction.py",
+  "created_at": "2026-08-28T00:00:00+09:00",
+  "environment": {
+    "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
+    "profile": "local"
+  },
+  "harness_digest": "sha256:47af90a9531fd04ba168b792e50d6fe654bc0feeb840fb84e1d08d114ae09ea8",
+  "harness_path": "authority/body-inventory.snapshot.json",
+  "id": "authority.core-extraction-validation",
+  "kind": "capture",
+  "producer": "kotlin-core-authority-extraction-verifier",
+  "retention": "git",
+  "schema_version": 1,
+  "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
+  "verdict": "pass"
+}

@@ -57,6 +57,6 @@
   "testcase": {
     "classname": "dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
     "name": "compatibility integration validates generic elements after outer type erasure()[jvm]",
-    "time": "0.043"
+    "time": "0.037"
   }
 }

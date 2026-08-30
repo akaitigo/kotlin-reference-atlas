@@ -52,12 +52,12 @@
     "variant_id": "kotlin-2.4.10-jvm-openjdk17"
   },
   "runtime_test_result": {
-    "digest": "sha256:a961e7be8617d568506ac9b7e8862b9cbe28b5f89fc88506aa63625612e27e0d",
+    "digest": "sha256:f37f3d330f182fe1af8a86b3ebf69cdf600df41ab5f238891f058b16d39197be",
     "path": "labs/abi-metadata-consumer-override/build/test-results/test/TEST-dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest.xml",
     "testcase": {
       "classname": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest",
       "name": "explicit metadata override remains bounded by the runtime security oracle()",
-      "time": "0.016"
+      "time": "0.019"
     }
   },
   "schema_version": 1,

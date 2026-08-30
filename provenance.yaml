@@ -21,7 +21,7 @@
       ]
     },
     {
-      "digest": "sha256:5ea35a93b48b76e97e6413097ad391e8ee69abbee623e58727a768b0f150a559",
+      "digest": "sha256:25e3b13a5cf8c3a75364aa26ec5d3c5c02a1f2d568cab236250cc3d011b3467c",
       "generated_by": "python3 scripts/generate_definitive_skill_eval.py",
       "kind": "skill-eval",
       "license": "Apache-2.0",
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "digest": "sha256:1b0686db4677b0a734e5fb2908cb6205b668da5b1e1be267e3c10738e65c0d97",
+      "digest": "sha256:845186ced6605f4e136dcdb2f6242c080ad757cbc684cb1a12775d0e20f1b2df",
       "generated_by": "python3 scripts/generate_definitive_skill_eval.py",
       "kind": "skill-eval",
       "license": "Apache-2.0",
@@ -111,11 +111,21 @@
       ]
     },
     {
-      "digest": "sha256:4347459d85f2881cb43e80e1482be25b3cb2ef01e09eb6e145a8c7d635222904",
+      "digest": "sha256:9d36df450202a63060dbf3964c88cdb8310f252ccce66e6d0c19ea25e4608e18",
       "generated_by": "scripts/container-verify.sh",
       "kind": "generated",
       "license": "Apache-2.0",
       "path": "evidence/artifacts/container-verification.json",
+      "source_ids": [
+        "reference-atlas-core-v1"
+      ]
+    },
+    {
+      "digest": "sha256:c191dfa5830436ea7cdcf535e6e6fb8706c1ddd11064cacd40f432eec7675bbe",
+      "generated_by": "python3 scripts/generate_core_authority_extraction.py && python3 scripts/test_core_authority_extraction.py && python3 scripts/verify_core_authority_extraction.py",
+      "kind": "generated",
+      "license": "Apache-2.0",
+      "path": "evidence/artifacts/core-authority-extraction-validation.json",
       "source_ids": [
         "reference-atlas-core-v1"
       ]
@@ -151,7 +161,7 @@
       ]
     },
     {
-      "digest": "sha256:5a5322f5910b0c55fcff4b966d72598e2373835056485bda0413d561f79681bf",
+      "digest": "sha256:58b0348a1248e99c3c36e6fd0ccfaf06b682bbab6f28b557a2bf3ae8245a9284",
       "generated_by": "python3 scripts/verify_non_regression.py",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -181,7 +191,7 @@
       ]
     },
     {
-      "digest": "sha256:259fc2e7d81b73a8dc447889418110d665f1bbbaab62b2c18b043bfd5b4a4c2e",
+      "digest": "sha256:018c93b199491800c7d38f2f158a620522d470ef8cc2ef77937d6857ddb81ee2",
       "generated_by": "python3 scripts/verify.py",
       "kind": "generated",
       "license": "Apache-2.0",
@@ -201,7 +211,7 @@
       ]
     },
     {
-      "digest": "sha256:51c83e2fb3fcd6eb9e9c88f412c547838edb19ccff2ab2a49024c847425c7f50",
+      "digest": "sha256:4c5ad90ff929c23f599a61383dd669f964483f303ed45a5d953ae1f985998ae3",
       "generated_by": "python3 scripts/generate_scenario_proofs.py && python3 scripts/verify_scenario_proofs.py",
       "kind": "generated",
       "license": "Apache-2.0",

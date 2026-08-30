@@ -19,7 +19,7 @@
   ],
   "compiler_refusal": {
     "exit_code": 1,
-    "output_digest": "sha256:74f12d9faa3d72f990787a62012b9526768fe194bcdf4711900635f88eea6199",
+    "output_digest": "sha256:8d856a7d0c733e83f64e7e3df2dca3d171b5d41a852f7ecaa746e0c2c1411305",
     "removed_descriptor": "SecurePolicy.authorize(role: String)",
     "required_diagnostics": [
       "No value passed for parameter 'context'"
@@ -45,7 +45,7 @@
     "variant_id": "kotlin-2.4.10-wasm-js-node"
   },
   "runtime_test_result": {
-    "digest": "sha256:447ad2383c064f4d9df826502ac043fc50d568275d3eda9654e2908ee68a9e53",
+    "digest": "sha256:e09733998edb495e3fea877765c2b33eb5c61e0a31c417128e97fb9d1e69110c",
     "path": "labs/abi-compat-kmp-consumer-baseline/build/test-results/wasmJsNodeTest/TEST-wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest.xml",
     "testcase": {
       "classname": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",

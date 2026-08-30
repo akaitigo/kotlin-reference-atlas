@@ -57,6 +57,6 @@
   "testcase": {
     "classname": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
     "name": "foundations mechanics preserves trusted identity at a generic boxing boundary()[jvm]",
-    "time": "0.001"
+    "time": "0.0"
   }
 }

@@ -57,6 +57,6 @@
   "testcase": {
     "classname": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
     "name": "performance capacity cost boundary remains deterministic under repetition()[jvm]",
-    "time": "0.044"
+    "time": "0.034"
   }
 }

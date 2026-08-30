@@ -61,11 +61,26 @@
   "completion_class": "incomplete",
   "completion_gaps": [
     "146402 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
-    "69 Authority inventory Behavior×10 Scenarioは専用row化済み。security-001の13 cellに加え、security-002のinline-reified security JVM/JS/Wasm 9 cellを専用初回実行で閉じた。合計22 cellはretry 0だが、Native・JS/Wasm ABI・他Compiler rowとAuthority atomic bindingは未閉鎖",
+    "69 Authority inventory Behavior×10 Scenarioは専用row化済み。Authority非依存のSecurity 4 BehaviorについてJVM/JS/Wasm 30 cellを専用初回実行で閉じたが、Closure Plan rowは全Variantを要求するためcompleted 0/690。Native実RuntimeとAuthority atomic bindingは未閉鎖",
     "Pattern Scenario Reporterは原子的retention契約へ適合するが、公開可能なfull-run成功世代が未生成のためCore Evidence durability／Scenario Plan Gateは未閉鎖",
     "112-cell Router契約と独立Agent Forward Evalはpassだが22 Mastery routing gapが未閉鎖",
     "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖"
   ],
+  "core_authority_extraction": {
+    "authority_text_surfaces_exhaustive": false,
+    "binary_only_sources": 7,
+    "core_v2_eligible_sources": 0,
+    "deferred_source_bindings": 0,
+    "document_digest_matched": 16,
+    "http_fetch_failed": 18,
+    "human_reviewed_sources": 0,
+    "locked_sources": 18,
+    "root_locator_bindings": 18,
+    "source_bindings_matched": 18,
+    "stale_source_bindings": 0,
+    "tracked_blob_candidates": 146386,
+    "unique_documents": 16
+  },
   "definitive_skill_eval": {
     "boundary_case_count": 7,
     "completion_claim": false,
@@ -94,6 +109,7 @@
     "authority_locator": "pass",
     "authority_review_queue": "pass",
     "container": "pass",
+    "core_authority_extraction": "pass",
     "deep_artifacts": "pass",
     "definitive": "expected-incomplete",
     "definitive_skill": "pass-bounded-incomplete",

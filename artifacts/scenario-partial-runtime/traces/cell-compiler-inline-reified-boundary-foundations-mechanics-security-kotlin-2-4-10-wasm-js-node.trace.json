@@ -57,6 +57,6 @@
   "testcase": {
     "classname": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
     "name": "foundations mechanics rejects a mismatched runtime type token[wasmJs, node]",
-    "time": "0.001"
+    "time": "0.0"
   }
 }

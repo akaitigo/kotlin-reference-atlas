@@ -1,0 +1,50 @@
+{
+  "human_review_performed": false,
+  "negative_case_count": 8,
+  "negative_cases": [
+    {
+      "expected_reason": "第三者本文fieldは禁止",
+      "id": "third-party-body-field",
+      "verdict": "rejected"
+    },
+    {
+      "expected_reason": "HTTP fetch失敗状態",
+      "id": "http-failure-hidden",
+      "verdict": "rejected"
+    },
+    {
+      "expected_reason": "Semantic/Core eligible昇格",
+      "id": "binary-only-promoted",
+      "verdict": "rejected"
+    },
+    {
+      "expected_reason": "stale/deferred binding",
+      "id": "stale-binding-used",
+      "verdict": "rejected"
+    },
+    {
+      "expected_reason": "stale/deferred binding",
+      "id": "deferred-binding-used",
+      "verdict": "rejected"
+    },
+    {
+      "expected_reason": "body inventory binding digest",
+      "id": "body-inventory-digest-tampered",
+      "verdict": "rejected"
+    },
+    {
+      "expected_reason": "未完状態またはsummary",
+      "id": "semantic-exhaustive-without-review",
+      "verdict": "rejected"
+    },
+    {
+      "expected_reason": "draft digest不一致: gradle-9.5.0",
+      "id": "locator-binding-digest-tampered",
+      "verdict": "rejected"
+    }
+  ],
+  "positive_cases": 1,
+  "schema_version": 1,
+  "semantic_depth_credit": false,
+  "verdict": "pass"
+}
