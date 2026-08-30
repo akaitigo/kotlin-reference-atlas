@@ -72,6 +72,30 @@ ABI_ARTIFACTS = [
     ROOT / "labs" / "abi-compat-api-v2-compatible" / "build" / "libs" / "abi-compat-api-v2-compatible-0.2.0.jar",
     ABI_CONSUMER / "build" / "libs" / "abi-compat-consumer-0.2.0.jar",
 ]
+METADATA_SUPPORTED = ROOT / "labs" / "abi-metadata-consumer-supported"
+METADATA_OVERRIDE = ROOT / "labs" / "abi-metadata-consumer-override"
+METADATA_REJECTED = ROOT / "labs" / "abi-metadata-consumer-rejected"
+METADATA_SURFACES = ("compatibility-integration", "migration-evolution-deprecation")
+METADATA_SOURCES = [
+    ROOT / "labs" / "abi-metadata-api-supported" / "build.gradle.kts",
+    ROOT / "labs" / "abi-metadata-api-supported" / "src" / "main" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "MetadataPolicy.kt",
+    ROOT / "labs" / "abi-metadata-api-future" / "build.gradle.kts",
+    ROOT / "labs" / "abi-metadata-api-future" / "src" / "main" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "MetadataPolicy.kt",
+    METADATA_SUPPORTED / "src" / "main" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "MetadataConsumer.kt",
+    METADATA_OVERRIDE / "src" / "main" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "OverrideMetadataConsumer.kt",
+    METADATA_REJECTED / "src" / "main" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "RejectedMetadataConsumer.kt",
+]
+METADATA_HARNESSES = [
+    METADATA_SUPPORTED / "src" / "test" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "MetadataSupportedRuntimeTest.kt",
+    METADATA_OVERRIDE / "src" / "test" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "MetadataOverrideRuntimeTest.kt",
+    METADATA_REJECTED / "src" / "main" / "kotlin" / "dev" / "akaitigo" / "kotlinatlas" / "abi" / "metadata" / "RejectedMetadataConsumer.kt",
+]
+METADATA_ARTIFACTS = [
+    ROOT / "labs" / "abi-metadata-api-supported" / "build" / "libs" / "abi-metadata-api-supported-0.2.0.jar",
+    ROOT / "labs" / "abi-metadata-api-future" / "build" / "libs" / "abi-metadata-api-future-0.2.0.jar",
+    METADATA_SUPPORTED / "build" / "libs" / "abi-metadata-consumer-supported-0.2.0.jar",
+    METADATA_OVERRIDE / "build" / "libs" / "abi-metadata-consumer-override-0.2.0.jar",
+]
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -110,6 +134,9 @@ def command_output(command: list[str]) -> str:
 def run_gradle() -> tuple[list[str], str]:
     tasks = [profile["task"] for profile in PROFILES.values()] + [
         f":labs:abi-compat-consumer:{task}" for task in ABI_TASKS
+    ] + [
+        ":labs:abi-metadata-consumer-supported:test",
+        ":labs:abi-metadata-consumer-override:test",
     ]
     command = ["./gradlew", *tasks, "--rerun-tasks", "--no-daemon"]
     environment = os.environ.copy()
@@ -118,6 +145,35 @@ def run_gradle() -> tuple[list[str], str]:
     if result.returncode != 0:
         raise RuntimeError(f"security-001 partial Runtime suite failed ({result.returncode})\n{result.stdout}")
     return command, result.stdout
+
+
+def run_metadata_rejection(surface_id: str) -> tuple[list[str], dict]:
+    command = [
+        "./gradlew",
+        ":labs:abi-metadata-consumer-rejected:compileKotlin",
+        "--rerun-tasks",
+        "--no-daemon",
+        f"-PatlasEvidenceSurface={surface_id}",
+    ]
+    environment = os.environ.copy()
+    environment.setdefault("GRADLE_USER_HOME", str(ROOT / ".gradle" / "atlas-home"))
+    result = subprocess.run(command, cwd=ROOT, env=environment, check=False, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    normalized = result.stdout.replace(str(ROOT), ".").replace(str(Path.home()), "$HOME")
+    required = [
+        "Incompatible classes were found in dependencies",
+        "binary version of its metadata is 999.0.0",
+        "expected version is 2.4.0",
+    ]
+    if result.returncode == 0 or any(message not in normalized for message in required):
+        raise RuntimeError(f"metadata-version refusal Oracle failed for {surface_id} (exit={result.returncode})")
+    return command, {
+        "exit_code": result.returncode,
+        "output_digest": sha256_bytes(normalized.encode()),
+        "required_diagnostics": required,
+        "producer_metadata_version": "999.0.0",
+        "consumer_readable_metadata_version": "2.4.0",
+        "status": "expected-refusal",
+    }
 
 
 def testcases(path: Path) -> list[dict]:
@@ -138,6 +194,7 @@ def find_case(cases: list[dict], expected: str) -> dict:
 
 def build_generation(staging: Path) -> None:
     command, gradle_output = run_gradle()
+    metadata_refusals = {surface: run_metadata_rejection(surface) for surface in METADATA_SURFACES}
     java_identity = command_output(["java", "-version"])
     node_identity = command_output(["node", "--version"])
     gradle_identity = command_output([str(ROOT / "gradlew"), "--version", "--no-daemon"])
@@ -318,6 +375,95 @@ def build_generation(staging: Path) -> None:
             "final_status": "passed",
             "dedicated_to_this_cell": True,
         })
+    metadata_source_digest = canonical_digest(METADATA_SOURCES)
+    metadata_harness_digest = canonical_digest(METADATA_HARNESSES)
+    supported_result = METADATA_SUPPORTED / "build" / "test-results" / "test" / "TEST-dev.akaitigo.kotlinatlas.abi.metadata.MetadataSupportedRuntimeTest.xml"
+    override_result = METADATA_OVERRIDE / "build" / "test-results" / "test" / "TEST-dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest.xml"
+    supported_cases, override_cases = testcases(supported_result), testcases(override_result)
+    if len(supported_cases) != 1 or len(override_cases) != 1:
+        raise RuntimeError("metadata-version Runtime phases must each contain exactly one testcase")
+    if any(not path.is_file() or path.stat().st_size == 0 for path in METADATA_ARTIFACTS):
+        raise RuntimeError("metadata-version producer/consumer compiler artifact is missing")
+    metadata_identity = {
+        "compiler": "Kotlin 2.4.10 JVM IR",
+        "runtime": "JVM metadata compatibility on OpenJDK 17",
+        "variant_id": "kotlin-2.4.10-jvm-openjdk17",
+        "gradle": gradle_identity,
+        "java": java_identity,
+        "host_os": platform.system(),
+        "host_architecture": platform.machine(),
+    }
+    for surface_id in METADATA_SURFACES:
+        refusal_command, refusal = metadata_refusals[surface_id]
+        runtime_result = supported_result if surface_id == "compatibility-integration" else override_result
+        runtime_case = supported_cases[0] if surface_id == "compatibility-integration" else override_cases[0]
+        cell_id = f"cell.abi.kotlin-metadata-version.{surface_id}.{SCENARIO}.kotlin-2.4.10-jvm-openjdk17"
+        safe = cell_id.replace(".", "-")
+        trace_path = staging / "traces" / f"{safe}.trace.json"
+        artifact_path = staging / "artifacts" / f"{safe}.artifact.json"
+        assertion = (
+            "supported metadata executes and future strict metadata is rejected by the default compiler"
+            if surface_id == "compatibility-integration"
+            else "future strict metadata is rejected by default and an explicit isolated override executes without changing the security result"
+        )
+        trace = {
+            "schema_version": 1,
+            "cell_id": cell_id,
+            "attempt": 1,
+            "retry_count": 0,
+            "commands": [command, refusal_command],
+            "runtime_testcase": runtime_case,
+            "compiler_refusal": refusal,
+            "streams": {
+                "action": ["compile strict future metadata producer", "invoke default consumer compiler and observe refusal", "launch dedicated JVM recovery runtime", "execute security oracle"],
+                "network": ["no application network operation; dependency resolution is repository-locked"],
+                "resource": [f"compiler_artifact={path.relative_to(ROOT).as_posix()}" for path in METADATA_ARTIFACTS],
+            },
+            "runtime_identity": metadata_identity,
+            "outcome": "expected",
+        }
+        artifact = {
+            "schema_version": 1,
+            "cell_id": cell_id,
+            "source_digest": metadata_source_digest,
+            "harness_digest": metadata_harness_digest,
+            "runtime_test_result": {
+                "path": runtime_result.relative_to(ROOT).as_posix(),
+                "digest": sha256_file(runtime_result),
+                "testcase": runtime_case,
+            },
+            "compiler_refusal": refusal,
+            "compiler_artifacts": [binding(path, path.relative_to(ROOT).as_posix()) for path in METADATA_ARTIFACTS],
+            "oracle": {
+                "kind": "kotlin-jvm-metadata-version-security",
+                "scenario": SCENARIO,
+                "surface_id": surface_id,
+                "assertion": assertion,
+                "passed": True,
+            },
+            "runtime_identity": metadata_identity,
+        }
+        write_json(trace_path, trace)
+        write_json(artifact_path, artifact)
+        trace_relative = f"artifacts/scenario-partial-runtime/traces/{trace_path.name}"
+        artifact_relative = f"artifacts/scenario-partial-runtime/artifacts/{artifact_path.name}"
+        records.append({
+            "id": cell_id,
+            "behavior_id": "abi.kotlin-metadata-version",
+            "surface_id": surface_id,
+            "scenario": SCENARIO,
+            "variant_id": "kotlin-2.4.10-jvm-openjdk17",
+            "source_digest": metadata_source_digest,
+            "harness_digest": metadata_harness_digest,
+            "compiler_runtime_platform_identity": metadata_identity,
+            "oracle": artifact["oracle"],
+            "trace": binding(trace_path, trace_relative, streams=True),
+            "artifact": binding(artifact_path, artifact_relative),
+            "attempts": 1,
+            "retries": 0,
+            "final_status": "passed",
+            "dedicated_to_this_cell": True,
+        })
     report = {
         "schema_version": 1,
         "id": "kotlin-security-001-partial-runtime-v1",
@@ -326,13 +472,14 @@ def build_generation(staging: Path) -> None:
         "command": " ".join(command),
         "profile": "real-kotlin-jvm-js-wasm-runtime",
         "retention_contract": RETENTION_CONTRACT,
-        "source_digest": canonical_digest([COMMON_SOURCE, *[profile["platform_source"] for profile in PROFILES.values()], *ABI_SOURCES]),
-        "harness_digest": canonical_digest([HARNESS, ABI_HARNESS]),
-        "counts": {"cells": len(records), "passed": len(records), "failed": 0, "variants": len(PROFILES), "surfaces": len(SURFACE_TESTS) + len(ABI_SURFACE_PHASES), "behaviors": 2},
+        "source_digest": canonical_digest([COMMON_SOURCE, *[profile["platform_source"] for profile in PROFILES.values()], *ABI_SOURCES, *METADATA_SOURCES]),
+        "harness_digest": canonical_digest([HARNESS, ABI_HARNESS, *METADATA_HARNESSES]),
+        "counts": {"cells": len(records), "passed": len(records), "failed": 0, "variants": len(PROFILES), "surfaces": len(SURFACE_TESTS) + len(ABI_SURFACE_PHASES) + len(METADATA_SURFACES), "behaviors": 3},
         "execution": {"attempts": 1, "retries": 0, "full_requested_profile_passed": True},
         "completion_limits": [
             "security-001 is not complete: Native runtime cells require a working Xcode toolchain and remain explicit gaps.",
             "JS and Wasm cells for abi.source-binary-behavioral remain explicit gaps.",
+            "JS, Wasm, and Native cells for abi.kotlin-metadata-version remain explicit gaps.",
             "This generation closes only the exact cell records listed in this report.",
         ],
         "records": records,
@@ -352,6 +499,10 @@ def validate_generation(staging: Path) -> None:
     expected_ids |= {
         f"cell.abi.source-binary-behavioral.{surface}.{SCENARIO}.kotlin-2.4.10-jvm-openjdk17"
         for surface in ABI_SURFACE_PHASES
+    }
+    expected_ids |= {
+        f"cell.abi.kotlin-metadata-version.{surface}.{SCENARIO}.kotlin-2.4.10-jvm-openjdk17"
+        for surface in METADATA_SURFACES
     }
     if report.get("status") != "passed" or {record.get("id") for record in records} != expected_ids:
         raise RuntimeError("partial Runtime report does not contain the exact requested cell denominator")

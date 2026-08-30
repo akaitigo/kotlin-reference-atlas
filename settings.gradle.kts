@@ -29,5 +29,10 @@ include(
     ":labs:abi-compat-api-v2-breaking",
     ":labs:abi-compat-api-v2-compatible",
     ":labs:abi-compat-consumer",
+    ":labs:abi-metadata-api-supported",
+    ":labs:abi-metadata-api-future",
+    ":labs:abi-metadata-consumer-supported",
+    ":labs:abi-metadata-consumer-rejected",
+    ":labs:abi-metadata-consumer-override",
     ":reference-systems:automation-workbench",
 )

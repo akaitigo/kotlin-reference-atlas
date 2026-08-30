@@ -52,6 +52,30 @@
     {
       "cases": [
         {
+          "class": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest",
+          "name": "explicit metadata override remains bounded by the runtime security oracle()",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-consumer-override",
+      "suite": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest",
+      "task": "test"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataSupportedRuntimeTest",
+          "name": "supported metadata executes with the security contract intact()",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-consumer-supported",
+      "suite": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataSupportedRuntimeTest",
+      "task": "test"
+    },
+    {
+      "cases": [
+        {
           "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
           "name": "compatibility integration keeps expect actual value representation executable[js, node]",
           "status": "pass"
@@ -435,6 +459,6 @@
       "task": "test"
     }
   ],
-  "test_case_count": 60,
+  "test_case_count": 62,
   "verdict": "pass"
 }

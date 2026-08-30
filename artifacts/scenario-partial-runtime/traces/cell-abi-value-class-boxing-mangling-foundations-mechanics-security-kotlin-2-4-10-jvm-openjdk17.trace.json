@@ -10,6 +10,8 @@
     ":labs:abi-compat-consumer:compatibilityBreakingTest",
     ":labs:abi-compat-consumer:migrationBreakingTest",
     ":labs:abi-compat-consumer:migrationCompatibleTest",
+    ":labs:abi-metadata-consumer-supported:test",
+    ":labs:abi-metadata-consumer-override:test",
     "--rerun-tasks",
     "--no-daemon"
   ],
@@ -44,6 +46,6 @@
   "testcase": {
     "classname": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
     "name": "foundations mechanics preserves trusted identity at a generic boxing boundary()[jvm]",
-    "time": "0.001"
+    "time": "0.0"
   }
 }

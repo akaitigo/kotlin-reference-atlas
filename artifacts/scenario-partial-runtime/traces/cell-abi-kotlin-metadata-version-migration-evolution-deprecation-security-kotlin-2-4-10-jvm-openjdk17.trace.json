@@ -1,0 +1,73 @@
+{
+  "attempt": 1,
+  "cell_id": "cell.abi.kotlin-metadata-version.migration-evolution-deprecation.security.kotlin-2.4.10-jvm-openjdk17",
+  "commands": [
+    [
+      "./gradlew",
+      ":labs:abi-runtime-security:jvmTest",
+      ":labs:abi-runtime-security:jsNodeTest",
+      ":labs:abi-runtime-security:wasmJsNodeTest",
+      ":labs:abi-compat-consumer:compatibilityBaselineTest",
+      ":labs:abi-compat-consumer:compatibilityBreakingTest",
+      ":labs:abi-compat-consumer:migrationBreakingTest",
+      ":labs:abi-compat-consumer:migrationCompatibleTest",
+      ":labs:abi-metadata-consumer-supported:test",
+      ":labs:abi-metadata-consumer-override:test",
+      "--rerun-tasks",
+      "--no-daemon"
+    ],
+    [
+      "./gradlew",
+      ":labs:abi-metadata-consumer-rejected:compileKotlin",
+      "--rerun-tasks",
+      "--no-daemon",
+      "-PatlasEvidenceSurface=migration-evolution-deprecation"
+    ]
+  ],
+  "compiler_refusal": {
+    "consumer_readable_metadata_version": "2.4.0",
+    "exit_code": 1,
+    "output_digest": "sha256:fa4ff54b7336676a5081d144b1b104dc4d50d6a10bdd82cdbaf3660659b99b8f",
+    "producer_metadata_version": "999.0.0",
+    "required_diagnostics": [
+      "Incompatible classes were found in dependencies",
+      "binary version of its metadata is 999.0.0",
+      "expected version is 2.4.0"
+    ],
+    "status": "expected-refusal"
+  },
+  "outcome": "expected",
+  "retry_count": 0,
+  "runtime_identity": {
+    "compiler": "Kotlin 2.4.10 JVM IR",
+    "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+    "host_architecture": "arm64",
+    "host_os": "Darwin",
+    "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+    "runtime": "JVM metadata compatibility on OpenJDK 17",
+    "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+  },
+  "runtime_testcase": {
+    "classname": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest",
+    "name": "explicit metadata override remains bounded by the runtime security oracle()",
+    "time": "0.021"
+  },
+  "schema_version": 1,
+  "streams": {
+    "action": [
+      "compile strict future metadata producer",
+      "invoke default consumer compiler and observe refusal",
+      "launch dedicated JVM recovery runtime",
+      "execute security oracle"
+    ],
+    "network": [
+      "no application network operation; dependency resolution is repository-locked"
+    ],
+    "resource": [
+      "compiler_artifact=labs/abi-metadata-api-supported/build/libs/abi-metadata-api-supported-0.2.0.jar",
+      "compiler_artifact=labs/abi-metadata-api-future/build/libs/abi-metadata-api-future-0.2.0.jar",
+      "compiler_artifact=labs/abi-metadata-consumer-supported/build/libs/abi-metadata-consumer-supported-0.2.0.jar",
+      "compiler_artifact=labs/abi-metadata-consumer-override/build/libs/abi-metadata-consumer-override-0.2.0.jar"
+    ]
+  }
+}

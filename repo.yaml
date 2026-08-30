@@ -1,0 +1,12 @@
+schemaVersion: 1
+id: kotlin-reference-atlas
+classification: reference-implementation
+lifecycle: active
+sensitivity: public
+hostClass: managed-development-mac
+commands:
+  verify: python3 scripts/verify.py
+externalWrites:
+  github: allowed
+  cloud: denied
+  existingRepositories: denied

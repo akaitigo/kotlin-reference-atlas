@@ -978,7 +978,7 @@ def main(*, skip_container: bool = False) -> None:
         "gap_ledger": gaps,
         "completion_gaps": [
             "146402 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
-            "69 Authority inventory Behavior×10 Scenarioは専用row化済み。security-001ではvalue-class securityのJVM/JS/Wasm 9 cellとsource/binary/behavioral securityのJVM 2 cellを専用初回実行で閉じたが、Native・JS/Wasm ABIを含む残cellとAuthority atomic bindingは未閉鎖",
+            "69 Authority inventory Behavior×10 Scenarioは専用row化済み。security-001ではvalue-class securityのJVM/JS/Wasm 9 cell、source/binary/behavioral securityのJVM 2 cell、metadata-version securityのJVM 2 cellを専用初回実行で閉じたが、Native・JS/Wasm ABIを含む残cellとAuthority atomic bindingは未閉鎖",
             "Pattern Scenario Reporterは原子的retention契約へ適合するが、公開可能なfull-run成功世代が未生成のためCore Evidence durability／Scenario Plan Gateは未閉鎖",
             "112-cell Router契約と独立Agent Forward Evalはpassだが22 Mastery routing gapが未閉鎖",
             "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖",
