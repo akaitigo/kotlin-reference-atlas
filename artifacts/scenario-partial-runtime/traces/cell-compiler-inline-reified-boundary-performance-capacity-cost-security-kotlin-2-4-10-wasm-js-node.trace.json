@@ -49,6 +49,6 @@
   "testcase": {
     "classname": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
     "name": "performance capacity cost keeps the reified refusal result deterministic[wasmJs, node]",
-    "time": "0.001"
+    "time": "0.0"
   }
 }

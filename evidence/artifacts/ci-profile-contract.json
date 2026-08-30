@@ -62,12 +62,23 @@
       "expected_rejection": "GitHub Actionがexact commitへ固定されていません",
       "id": "mutable-action-ref",
       "result": "pass"
+    },
+    {
+      "expected_rejection": "CI required profile/runtime stepがありません",
+      "id": "python-runtime-mutates-static-evidence",
+      "result": "pass"
+    },
+    {
+      "expected_rejection": "CI required profile/runtime stepがありません",
+      "id": "python-runtime-proof-missing",
+      "result": "pass"
     }
   ],
   "profile_split": {
     "macos": "real local/Native runtime; committed container Evidence is read-only and stale-checked",
     "ubuntu": "one network-none real container runtime with live Docker identity, followed by committed Graph read-only Core audit"
   },
+  "python_dependency_evidence": "tracked contract Evidence is deterministic across host Python; pinned CPython 3.14 identity is emitted only to the same-job runtime Proof artifact",
   "schema_version": 1,
   "verdict": "pass"
 }

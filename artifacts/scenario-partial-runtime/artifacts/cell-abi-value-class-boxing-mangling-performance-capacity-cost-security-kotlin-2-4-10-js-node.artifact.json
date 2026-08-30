@@ -26,7 +26,7 @@
   "schema_version": 1,
   "source_digest": "sha256:bc60d30e24fe8363c38d2450f1d5cf86298b247141bfde79dccd32dfaf354f3e",
   "test_result": {
-    "digest": "sha256:ee94e78be6cef5bc589bca94f52d46d9a6ecf8656f441ada5fd8957beb342811",
+    "digest": "sha256:ff4a24f5086d1c6a7827091cb49442a0cec5cda98190ddb24d3f7f32c3e85d48",
     "path": "labs/abi-runtime-security/build/test-results/jsNodeTest/TEST-jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest.xml",
     "testcase": {
       "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",

@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import importlib.metadata
 import json
+import os
 import platform
 import re
 import sys
@@ -26,6 +27,35 @@ class ContractError(RuntimeError):
 
 def sha256(path: Path) -> str:
     return "sha256:" + hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def canonical_bytes(value: dict) -> bytes:
+    return (json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
+
+
+def digest_bytes(value: bytes) -> str:
+    return "sha256:" + hashlib.sha256(value).hexdigest()
+
+
+def validate_static_report(report: dict) -> None:
+    forbidden = {
+        "observed_python",
+        "runtime_version_required",
+        "python_executable",
+        "runner_os",
+        "runner_arch",
+        "github_run_id",
+        "github_run_attempt",
+    }
+    leaked = sorted(forbidden.intersection(report))
+    if leaked:
+        raise ContractError("固定Dependency Evidenceへlive runtime fieldを保存できない: " + ", ".join(leaked))
+
+
+def write_report(path: Path, report: dict) -> None:
+    validate_static_report(report)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(canonical_bytes(report))
 
 
 def installed_pyyaml_version() -> str | None:
@@ -96,11 +126,27 @@ def validate_contract(
         "contract_digest": sha256(contract_file),
         "requirements": requirements["path"],
         "requirements_digest": requirements["sha256"],
+        "python": {"implementation": "CPython", "version": EXPECTED_PYTHON},
+        "packages": [{"distribution": "PyYAML", "version": EXPECTED_PYYAML}],
         "python_contract_version": EXPECTED_PYTHON,
-        "observed_python": f"{platform.python_implementation()} {runtime_version}",
-        "runtime_version_required": require_runtime,
-        "pyyaml_version": installed_version,
+        "pyyaml_version": EXPECTED_PYYAML,
         "wheel_hash_count": len(locked_hashes),
+        "verdict": "pass",
+    }
+
+
+def runtime_proof(static_report: dict) -> dict:
+    validate_static_report(static_report)
+    return {
+        "schema_version": 1,
+        "profile_id": static_report["profile_id"],
+        "contract_evidence_digest": digest_bytes(canonical_bytes(static_report)),
+        "observed_python": f"{platform.python_implementation()} {platform.python_version()}",
+        "observed_pyyaml": installed_pyyaml_version(),
+        "runner_os": platform.system(),
+        "runner_arch": platform.machine(),
+        "github_run_id": os.environ.get("GITHUB_RUN_ID", "local"),
+        "github_run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT", "local"),
         "verdict": "pass",
     }
 
@@ -109,11 +155,17 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--require-runtime", action="store_true", help="CIのPython patch versionも完全一致させる")
     parser.add_argument("--no-write", action="store_true", help="Evidence reportを書き換えない")
+    parser.add_argument("--runtime-proof", type=Path, help="live runtime identityを追跡外のProfile Proofへ保存する")
     args = parser.parse_args()
+    if args.runtime_proof is not None and not args.require_runtime:
+        raise ContractError("runtime proof生成には--require-runtimeが必要")
     report = validate_contract(ROOT, require_runtime=args.require_runtime, installed_version=installed_pyyaml_version())
     if not args.no_write:
         output = ROOT / "evidence" / "artifacts" / "python-dependency-contract.json"
-        output.write_text(json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        write_report(output, report)
+    if args.runtime_proof is not None:
+        args.runtime_proof.parent.mkdir(parents=True, exist_ok=True)
+        args.runtime_proof.write_bytes(canonical_bytes(runtime_proof(report)))
     print(f"Python dependency contract成功: python={report['python_contract_version']} PyYAML={report['pyyaml_version']} hashes={report['wheel_hash_count']}")
 
 

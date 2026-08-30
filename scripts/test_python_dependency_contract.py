@@ -7,8 +7,17 @@ import json
 import shutil
 import tempfile
 from pathlib import Path
+from unittest.mock import patch
 
-from verify_python_dependency_contract import CONTRACT_PATH, ContractError, ROOT, validate_contract
+from verify_python_dependency_contract import (
+    CONTRACT_PATH,
+    ContractError,
+    ROOT,
+    canonical_bytes,
+    validate_contract,
+    validate_static_report,
+    write_report,
+)
 
 
 def rejected(root: Path, expected: str) -> None:
@@ -28,7 +37,7 @@ def copy_contract(destination: Path) -> None:
 
 
 def main() -> None:
-    validate_contract(ROOT, require_runtime=False, installed_version="6.0.3")
+    canonical_report = validate_contract(ROOT, require_runtime=False, installed_version="6.0.3")
     cases: list[dict] = []
     with tempfile.TemporaryDirectory(prefix="kotlin-atlas-python-lock-") as directory:
         fixture = Path(directory)
@@ -54,6 +63,31 @@ def main() -> None:
         else:
             raise RuntimeError("PyYAML missing fixtureが受理された")
         cases.append({"id": "missing-installed-pyyaml", "expected": "reject", "verdict": "pass"})
+    with patch("verify_python_dependency_contract.platform.python_version", return_value="3.9.6"):
+        python_39_report = validate_contract(ROOT, require_runtime=False, installed_version="6.0.3")
+    with patch("verify_python_dependency_contract.platform.python_version", return_value="3.14.0"):
+        python_314_report = validate_contract(ROOT, require_runtime=False, installed_version="6.0.3")
+    if canonical_bytes(python_39_report) != canonical_bytes(python_314_report):
+        raise RuntimeError("固定Dependency Evidenceがhost Pythonにより変化する")
+    cases.append({"id": "cross-python-static-evidence", "expected": "byte-identical", "verdict": "pass"})
+    contaminated = dict(canonical_report)
+    contaminated["observed_python"] = "CPython 3.14.0"
+    try:
+        validate_static_report(contaminated)
+    except ContractError as error:
+        if "live runtime field" not in str(error):
+            raise
+    else:
+        raise RuntimeError("live runtime identity混入fixtureが受理された")
+    cases.append({"id": "live-runtime-field-in-static-evidence", "expected": "reject", "verdict": "pass"})
+    with tempfile.TemporaryDirectory(prefix="kotlin-atlas-python-fresh-run-") as directory:
+        first = Path(directory) / "first.json"
+        second = Path(directory) / "second.json"
+        write_report(first, canonical_report)
+        write_report(second, validate_contract(ROOT, require_runtime=False, installed_version="6.0.3"))
+        if first.read_bytes() != second.read_bytes():
+            raise RuntimeError("fresh-runで固定Dependency Evidenceのbyte列が変化する")
+    cases.append({"id": "fresh-run-static-evidence", "expected": "byte-identical", "verdict": "pass"})
     report = {"schema_version": 1, "case_count": len(cases), "cases": cases, "verdict": "pass"}
     output = ROOT / "evidence" / "artifacts" / "python-dependency-negative-tests.json"
     output.write_text(json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")

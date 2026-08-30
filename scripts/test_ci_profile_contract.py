@@ -19,6 +19,8 @@ REPORT = ROOT / "evidence" / "artifacts" / "ci-profile-contract.json"
 
 REQUIRED_VALIDATE = [
     "runs-on: macos-14",
+    "python3 scripts/verify_python_dependency_contract.py --require-runtime --no-write --runtime-proof",
+    "python-dependency-runtime-${{ github.run_id }}-${{ github.run_attempt }}",
     "python3 scripts/verify.py --skip-container",
 ]
 REQUIRED_CONTAINER = [
@@ -78,6 +80,8 @@ def validate_workflow(text: str) -> None:
         raise RuntimeError("CI required profile/runtime stepがありません: " + ", ".join(missing))
     if "python3 scripts/verify.py\n" in validate or "python3 scripts/verify.py --skip-container" not in validate:
         raise RuntimeError("macOS local Jobは--skip-container Profileでなければなりません")
+    if "verify_python_dependency_contract.py --require-runtime\n" in validate or "--require-runtime --no-write --runtime-proof" not in validate:
+        raise RuntimeError("CI Python runtime検証は追跡済み固定Evidenceを書き換えてはなりません")
     if "generate_evidence_dependency_graph.py" in text:
         raise RuntimeError("部分CI JobからEvidence Dependency Graphを再発行できません")
     for action, commit in ACTION_PINS.items():
@@ -163,6 +167,16 @@ def main() -> None:
         text.replace("actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020", "actions/setup-node@v4"),
         "GitHub Actionがexact commitへ固定されていません",
     ))
+    fixtures.append(expect_rejection(
+        "python-runtime-mutates-static-evidence",
+        text.replace("--require-runtime --no-write --runtime-proof", "--require-runtime"),
+        "CI required profile/runtime stepがありません",
+    ))
+    fixtures.append(expect_rejection(
+        "python-runtime-proof-missing",
+        text.replace("python-dependency-runtime-${{ github.run_id }}-${{ github.run_attempt }}", "removed-python-runtime-proof"),
+        "CI required profile/runtime stepがありません",
+    ))
 
     with tempfile.TemporaryDirectory(prefix="kotlin-no-docker-path-") as raw:
         empty_path = str(Path(raw))
@@ -196,6 +210,7 @@ def main() -> None:
         "container_runtime_proof": "CI container_bound Job executes one scripts/container-verify.sh run, probes live Docker identity, performs committed Graph audit, and transfers a subject/input-bound proof to evidence_dependency",
         "dco_range": "fixed Core checker validates only explicit PR base..head or push before..sha new commits",
         "action_pins": ACTION_PINS,
+        "python_dependency_evidence": "tracked contract Evidence is deterministic across host Python; pinned CPython 3.14 identity is emitted only to the same-job runtime Proof artifact",
         "graph_publication": "owner-managed full python3 scripts/verify.py only; partial CI jobs are read-only",
         "verdict": "pass",
     }, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")

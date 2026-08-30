@@ -26,7 +26,7 @@
   "schema_version": 1,
   "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
   "test_result": {
-    "digest": "sha256:94978ad5d6bc2452eb38a419ac8f4ecae5979e892c98bbc2e5b4b6a29a58d77d",
+    "digest": "sha256:5fadaeb3a1dbc1c8088d2b61d8fd4284599fcc4bb71bd37ebbd57f5facd49d87",
     "path": "labs/compiler-runtime-security/build/test-results/wasmJsNodeTest/TEST-wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest.xml",
     "testcase": {
       "classname": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",

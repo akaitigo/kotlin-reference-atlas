@@ -54,7 +54,15 @@ jobs:
       - name: Python依存をhash固定lockから導入・検証
         run: |
           python3 -m pip install --disable-pip-version-check --only-binary=:all: --require-hashes -r requirements-ci.lock
-          python3 scripts/verify_python_dependency_contract.py --require-runtime
+          python3 scripts/verify_python_dependency_contract.py --require-runtime --no-write --runtime-proof "$RUNNER_TEMP/python-dependency-runtime.json"
+
+      - name: 同一JobのPython Runtime Proofを固定
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: python-dependency-runtime-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/python-dependency-runtime.json
+          if-no-files-found: error
+          retention-days: 14
 
       - name: Core Schemaでatlas validate
         env:

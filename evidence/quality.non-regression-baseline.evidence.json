@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:9a5a579d119493e1696f8a8066db282fe6f0a25c7c8e90648fc41c922eb46f4a",
+    "digest": "sha256:baf7a5f8fcf735e626d9f9ed8ee9355a5e4a4f6cba2462fcde5ccf395fbf31e6",
     "media_type": "application/json",
-    "size_bytes": 1113,
+    "size_bytes": 1116,
     "uri": "evidence/artifacts/non-regression.json"
   },
   "atlas_id": "kotlin-reference-atlas",

@@ -49,6 +49,6 @@
   "testcase": {
     "classname": "dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
     "name": "performance capacity cost keeps the reified refusal result deterministic()[jvm]",
-    "time": "0.004"
+    "time": "0.134"
   }
 }

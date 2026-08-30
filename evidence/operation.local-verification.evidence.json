@@ -1,6 +1,6 @@
 {
   "artifact": {
-    "digest": "sha256:c3e33900872dcd6895e237dd88d261429ccfc98ee8ae7f002c4ff39428c8fdae",
+    "digest": "sha256:259fc2e7d81b73a8dc447889418110d665f1bbbaab62b2c18b043bfd5b4a4c2e",
     "media_type": "application/json",
     "size_bytes": 4813,
     "uri": "evidence/artifacts/verification-summary.json"
