@@ -16,6 +16,116 @@
       "redistribution": "metadata-only"
     },
     {
+      "id": "reference-atlas-core-definitive-v2",
+      "kind": "source",
+      "title": "Reference Atlas Core Definitive Gate v2",
+      "url": "https://github.com/akaitigo/reference-atlas-core/commit/072d7ca77981f51754e824d70c6d4ecd55ea67e5",
+      "version": "git:072d7ca77981f51754e824d70c6d4ecd55ea67e5",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:2c0f1135d55c00f647ad5f4aa78333d00980f5bc5613dc32ccea9a784bbd9ab2",
+      "license": "Apache-2.0",
+      "redistribution": "metadata-only"
+    },
+    {
+      "id": "kotlin-spec-snapshot",
+      "kind": "specification",
+      "title": "Kotlin language specification source snapshot",
+      "url": "https://github.com/Kotlin/kotlin-spec/commit/2f7aa0524ec27e788dfacd550f144809f2e0254c",
+      "version": "git:2f7aa0524ec27e788dfacd550f144809f2e0254c",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:2f54cc199a31ef55ccce24d1c068235be46d1f74f48d84a8230929d4a6184af4",
+      "license": "Apache-2.0",
+      "redistribution": "metadata-only"
+    },
+    {
+      "id": "kotlin-docs-snapshot",
+      "kind": "official-documentation",
+      "title": "Kotlin official documentation source snapshot",
+      "url": "https://github.com/JetBrains/kotlin-web-site/commit/135c79983f678c6367c5cc19eb5d8445eb3c95ce",
+      "version": "git:135c79983f678c6367c5cc19eb5d8445eb3c95ce",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:3200d58d59e7ad08b9306a755aa0fd440b3a0264c7c3dc488cf3201d81fe54de",
+      "license": "Apache-2.0",
+      "redistribution": "metadata-only"
+    },
+    {
+      "id": "kotlin-keep-snapshot",
+      "kind": "official-documentation",
+      "title": "Kotlin Evolution and Enhancement Process snapshot",
+      "url": "https://github.com/Kotlin/KEEP/commit/f6fdf1e5535cca71b8ed6676e2c3d777fdded34e",
+      "version": "git:f6fdf1e5535cca71b8ed6676e2c3d777fdded34e",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:bd43689297ab1ec0060953dab43aff276fc37491327ee2b341dce493a199d930",
+      "license": "Apache-2.0",
+      "redistribution": "metadata-only"
+    },
+    {
+      "id": "kotlin-compiler-source-2.4.10",
+      "kind": "source",
+      "title": "Kotlin compiler source snapshot 2.4.10",
+      "url": "https://github.com/JetBrains/kotlin/commit/5687445832cd835b4509b9fbc264cdf1a8201093",
+      "version": "2.4.10+git.5687445832cd835b4509b9fbc264cdf1a8201093",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902",
+      "license": "Apache-2.0",
+      "redistribution": "metadata-only"
+    },
+    {
+      "id": "kotlin-stdlib-source-2.4.10",
+      "kind": "source",
+      "title": "Kotlin standard library source snapshot 2.4.10",
+      "url": "https://github.com/JetBrains/kotlin/commit/5687445832cd835b4509b9fbc264cdf1a8201093",
+      "version": "2.4.10+git.5687445832cd835b4509b9fbc264cdf1a8201093",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902",
+      "license": "Apache-2.0",
+      "redistribution": "metadata-only"
+    },
+    {
+      "id": "kotlin-native-source-2.4.10",
+      "kind": "source",
+      "title": "Kotlin Native runtime and interop source snapshot 2.4.10",
+      "url": "https://github.com/JetBrains/kotlin/commit/5687445832cd835b4509b9fbc264cdf1a8201093",
+      "version": "2.4.10+git.5687445832cd835b4509b9fbc264cdf1a8201093",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902",
+      "license": "Apache-2.0",
+      "redistribution": "metadata-only"
+    },
+    {
+      "id": "kotlinx-coroutines-source-1.11.0",
+      "kind": "source",
+      "title": "kotlinx.coroutines source snapshot 1.11.0",
+      "url": "https://github.com/Kotlin/kotlinx.coroutines/commit/8564f65764d3d05893cec026c6e94250e2b23874",
+      "version": "1.11.0+git.8564f65764d3d05893cec026c6e94250e2b23874",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:ff25c4fd2855309cc047a17136f350579a3561e58c10515251063b81b8b8afef",
+      "license": "Apache-2.0",
+      "redistribution": "metadata-only"
+    },
+    {
+      "id": "kotlinx-serialization-source-snapshot",
+      "kind": "source",
+      "title": "kotlinx.serialization source snapshot",
+      "url": "https://github.com/Kotlin/kotlinx.serialization/commit/25c2a755cbe6926a63003f3a51527bb731e8cd14",
+      "version": "git:25c2a755cbe6926a63003f3a51527bb731e8cd14",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:001b56cf980a08cab723a9081c0b93ce81539c3a2c221f471c03c778ee04c8de",
+      "license": "Apache-2.0",
+      "redistribution": "metadata-only"
+    },
+    {
+      "id": "gradle-source-9.5.0",
+      "kind": "source",
+      "title": "Gradle source snapshot 9.5.0",
+      "url": "https://github.com/gradle/gradle/commit/3fe117d68f3907790f3809f121aa36303a9151f8",
+      "version": "9.5.0+git.3fe117d68f3907790f3809f121aa36303a9151f8",
+      "retrieved_at": "2026-08-28",
+      "digest": "sha256:63f6246f601e260c3db5e6325599a9fca69cafc8868e90237a9c4c51d7502b85",
+      "license": "Apache-2.0",
+      "redistribution": "metadata-only"
+    },
+    {
       "id": "kotlin-compiler-2.4.10",
       "kind": "source",
       "title": "Kotlin compiler 2.4.10 binary distribution",

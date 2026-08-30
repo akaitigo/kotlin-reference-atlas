@@ -1,0 +1,14 @@
+{
+  "boundary_case_count": 7,
+  "completion_claim": false,
+  "independent_agent_scenario_count": 23,
+  "matrix_cell_count": 112,
+  "routed_cell_count": 90,
+  "routing_gap_count": 22,
+  "target_state_counts": {
+    "covered": 28,
+    "infeasible": 1,
+    "partial": 4
+  },
+  "verdict": "pass-bounded-incomplete"
+}

@@ -1,0 +1,204 @@
+{
+  "documents": [
+    {
+      "anchor_count": 205,
+      "anchor_id_set_digest": "sha256:72e80d46188daa6e0a428074a32d23ebeeb0c3bb56b4fdf4b8a497f9d0d525d5",
+      "document_id_changed": false,
+      "new_document_id": "document-akaitigo-reference-atlas-core-1962d92e4393",
+      "old_document_id": "document-akaitigo-reference-atlas-core-1962d92e4393",
+      "reason": "Core v2 document identity and root-anchor schema normalization; candidate identities remain unchanged.",
+      "root_locator_change": {
+        "anchor_id": "anchor-749bbb5bab434d727b0b",
+        "from": "repository-root",
+        "to": "document-root"
+      },
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 44,
+      "anchor_id_set_digest": "sha256:ec1c0ace76184c3d127521c334e7fdd7590bf9410b97fb88b809252ab67631c0",
+      "document_id_changed": false,
+      "new_document_id": "document-akaitigo-reference-atlas-core-3e1de93e838a",
+      "old_document_id": "document-akaitigo-reference-atlas-core-3e1de93e838a",
+      "reason": "Core v2 document identity and root-anchor schema normalization; candidate identities remain unchanged.",
+      "root_locator_change": {
+        "anchor_id": "anchor-113bd4977b830b299e07",
+        "from": "repository-root",
+        "to": "document-root"
+      },
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 1,
+      "anchor_id_set_digest": "sha256:07e895fe392a6fb8a39fdd12fa884ee158ff19e7640758dee242533e39176315",
+      "document_id_changed": false,
+      "new_document_id": "document-gradle-9-5-0-2055dd1ccac0",
+      "old_document_id": null,
+      "reason": "Core v2 Source Lock closure adds one pending-human metadata root for the previously unqueued locked artifact.",
+      "root_locator_change": null,
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 26750,
+      "anchor_id_set_digest": "sha256:2b0638d4c4679ba60cba15ab3ae06654b5e10b5855a8b2cb657c71f010e68597",
+      "document_id_changed": false,
+      "new_document_id": "document-gradle-gradle-8c4beeb1d6ea",
+      "old_document_id": "document-gradle-gradle-8c4beeb1d6ea",
+      "reason": "Core v2 document identity and root-anchor schema normalization; candidate identities remain unchanged.",
+      "root_locator_change": {
+        "anchor_id": "anchor-8b8efdf6aaf48ee1646d",
+        "from": "repository-root",
+        "to": "document-root"
+      },
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 108210,
+      "anchor_id_set_digest": "sha256:a89191b7da371bd01d144fadd871022e9025ec52a199d6bc91262006fea8e324",
+      "document_id_changed": false,
+      "new_document_id": "document-jetbrains-kotlin-55ae826a5657",
+      "old_document_id": "document-jetbrains-kotlin-55ae826a5657",
+      "reason": "Core v2 document identity and root-anchor schema normalization; candidate identities remain unchanged.",
+      "root_locator_change": {
+        "anchor_id": "anchor-01d3f1d1eee1d6329591",
+        "from": "repository-root",
+        "to": "document-root"
+      },
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 1713,
+      "anchor_id_set_digest": "sha256:1a7c0bce2926319c0e670136f11167fc20e058ff4b6ebf23d43a666bd8a80d91",
+      "document_id_changed": false,
+      "new_document_id": "document-jetbrains-kotlin-web-site-41bce3535b30",
+      "old_document_id": "document-jetbrains-kotlin-web-site-41bce3535b30",
+      "reason": "Core v2 document identity and root-anchor schema normalization; candidate identities remain unchanged.",
+      "root_locator_change": {
+        "anchor_id": "anchor-a46506030c96f8501544",
+        "from": "repository-root",
+        "to": "document-root"
+      },
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 1,
+      "anchor_id_set_digest": "sha256:f4dc4f74d2fbb4fbf5ce340ca8ed83c97d7729a40b09d587d871436551ada573",
+      "document_id_changed": false,
+      "new_document_id": "document-kotlin-compiler-2-4-10-f2c27c089b3c",
+      "old_document_id": null,
+      "reason": "Core v2 Source Lock closure adds one pending-human metadata root for the previously unqueued locked artifact.",
+      "root_locator_change": null,
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 156,
+      "anchor_id_set_digest": "sha256:7f16b6f553da7dbcafc1ad68a769fa1c5d0a37b15abe67336257b963e93a8fea",
+      "document_id_changed": false,
+      "new_document_id": "document-kotlin-keep-8cfb549b3048",
+      "old_document_id": "document-kotlin-keep-8cfb549b3048",
+      "reason": "Core v2 document identity and root-anchor schema normalization; candidate identities remain unchanged.",
+      "root_locator_change": {
+        "anchor_id": "anchor-401d1fafdf5133ff2075",
+        "from": "repository-root",
+        "to": "document-root"
+      },
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 6933,
+      "anchor_id_set_digest": "sha256:7f1d968fc706c08d3ba87ab2467471bc4da783bd532e470c0ddd2c5b7d722d5f",
+      "document_id_changed": false,
+      "new_document_id": "document-kotlin-kotlin-spec-d30c735b8b40",
+      "old_document_id": "document-kotlin-kotlin-spec-d30c735b8b40",
+      "reason": "Core v2 document identity and root-anchor schema normalization; candidate identities remain unchanged.",
+      "root_locator_change": {
+        "anchor_id": "anchor-7a038dff5ee60e4eb3b1",
+        "from": "repository-root",
+        "to": "document-root"
+      },
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 1328,
+      "anchor_id_set_digest": "sha256:f43475401179ff6486d4fdd62cc121b00fac9c98708c8b2a5d433cead0b59d1a",
+      "document_id_changed": true,
+      "new_document_id": "document-kotlin-kotlinx-coroutines-b6cf464a1968",
+      "old_document_id": "document-kotlin-kotlinx.coroutines-b6cf464a1968",
+      "reason": "Core v2 document identity and root-anchor schema normalization; candidate identities remain unchanged.",
+      "root_locator_change": {
+        "anchor_id": "anchor-413a76612930fd1fdb69",
+        "from": "repository-root",
+        "to": "document-root"
+      },
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 1056,
+      "anchor_id_set_digest": "sha256:9cd6aff2ab412d930947258f8b076216c6495e7b5c6d2136a895d0eb2101fd31",
+      "document_id_changed": true,
+      "new_document_id": "document-kotlin-kotlinx-serialization-19ce84e31d4f",
+      "old_document_id": "document-kotlin-kotlinx.serialization-19ce84e31d4f",
+      "reason": "Core v2 document identity and root-anchor schema normalization; candidate identities remain unchanged.",
+      "root_locator_change": {
+        "anchor_id": "anchor-64bb7aa8107397a174dd",
+        "from": "repository-root",
+        "to": "document-root"
+      },
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 1,
+      "anchor_id_set_digest": "sha256:7085f8edf60d3211ac374ae958dbf5e372e5810cfcea95c1cabf191a4f398257",
+      "document_id_changed": false,
+      "new_document_id": "document-kotlin-native-macos-arm64-2-4-10-f01da68263ff",
+      "old_document_id": null,
+      "reason": "Core v2 Source Lock closure adds one pending-human metadata root for the previously unqueued locked artifact.",
+      "root_locator_change": null,
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 1,
+      "anchor_id_set_digest": "sha256:02ba48dc4a4b5f6464e2b162bba10f97105b3fe9f7d25f761e1e78fe9952be73",
+      "document_id_changed": false,
+      "new_document_id": "document-kotlin-stdlib-js-2-4-10-2aae8e0cca27",
+      "old_document_id": null,
+      "reason": "Core v2 Source Lock closure adds one pending-human metadata root for the previously unqueued locked artifact.",
+      "root_locator_change": null,
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 1,
+      "anchor_id_set_digest": "sha256:d6505f40b3dcd90cdd08f43f1e45b62d9a8f4bd6ac6b1d09dc3291aa34c30d60",
+      "document_id_changed": false,
+      "new_document_id": "document-kotlin-stdlib-jvm-2-4-10-bb664af1d0b7",
+      "old_document_id": null,
+      "reason": "Core v2 Source Lock closure adds one pending-human metadata root for the previously unqueued locked artifact.",
+      "root_locator_change": null,
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 1,
+      "anchor_id_set_digest": "sha256:6f03efc2e1a8c8fc279b3a54ad21b62475cd7a72b1e13c9193a21df2a4e656f4",
+      "document_id_changed": false,
+      "new_document_id": "document-kotlin-stdlib-wasm-js-2-4-10-069f8d90580f",
+      "old_document_id": null,
+      "reason": "Core v2 Source Lock closure adds one pending-human metadata root for the previously unqueued locked artifact.",
+      "root_locator_change": null,
+      "stable_anchor_ids_preserved": true
+    },
+    {
+      "anchor_count": 1,
+      "anchor_id_set_digest": "sha256:481967f9de6371f5fddc35e97e10c48ebacf17793fc3fcaf36526288126cd4ba",
+      "document_id_changed": false,
+      "new_document_id": "document-kotlinx-coroutines-core-jvm-1-11-0-06d9be2a0154",
+      "old_document_id": null,
+      "reason": "Core v2 Source Lock closure adds one pending-human metadata root for the previously unqueued locked artifact.",
+      "root_locator_change": null,
+      "stable_anchor_ids_preserved": true
+    }
+  ],
+  "from_commit": "78e8906fb6164df6fc813ef393a5303e2f83724a",
+  "migration_id": "kotlin-authority-body-core-v2-schema-2026-08-28",
+  "policy": "schema-normalization-with-stable-anchor-preservation-and-source-lock-closure",
+  "schema_version": 1
+}

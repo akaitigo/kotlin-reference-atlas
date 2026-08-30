@@ -1,8 +1,8 @@
 {
   "repository": "reference-atlas-core",
-  "version": "architecture-v1",
-  "commit": "b32f6afe888e2e07eef0e2e016f6f7d139582159",
-  "archive_sha256": "15360911a1a7b6d6f4772bbaec4280f2990c68645f49ec261db7f0b4836858c5",
-  "release_state": "commit-pinned",
-  "note_ja": "Control Plane v1とMaven/npm Supply-chain監査を含むCore完成commitを固定する。"
+  "version": "definitive-gate-v2",
+  "commit": "072d7ca77981f51754e824d70c6d4ecd55ea67e5",
+  "archive_sha256": "2c0f1135d55c00f647ad5f4aa78333d00980f5bc5613dc32ccea9a784bbd9ab2",
+  "release_state": "main-ci-passed",
+  "note_ja": "正式mainかつCI成功のDCO commit pinとして、Authority Locator Extraction、Scenario Closure Plan、Evidence durability、Evidence Dependency Graph、Runtime代替拒否、旧bounded Certificate履歴を維持するDefinitive Gate v2を固定する。"
 }

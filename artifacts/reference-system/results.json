@@ -1,0 +1,292 @@
+{
+  "command": "./gradlew :reference-systems:automation-workbench:test captureWorkbenchEvidence",
+  "completion_limits": [
+    "Integrated traces remain contextual and cannot close a Behavior-specific or Surface×Scenario×Variant gap."
+  ],
+  "counts": {
+    "failed": 0,
+    "flaky": 0,
+    "passed": 10,
+    "skipped": 0,
+    "total": 10
+  },
+  "created_at": "2026-08-28T00:00:00+09:00",
+  "duration_ms": 0.001,
+  "environment": {
+    "architecture": "arm64",
+    "build_tool": "Gradle Wrapper 9.5.0",
+    "compiler": "Kotlin 2.4.10 JVM IR",
+    "os": "Darwin",
+    "platform": "JVM",
+    "retries": 0,
+    "runtime": "OpenJDK 17.0.17",
+    "trace_mode": "on"
+  },
+  "harness_digest": "sha256:897b93cde0639b3e6b6c4be6ff4ba4b7acad298a1e7bff7060bc2f8fcb0f823b",
+  "id": "kotlin-automation-workbench-reference-system-results-v3",
+  "profile": "local-real-jvm-openjdk-17",
+  "schema_version": 1,
+  "source_digest": "sha256:438a3d466314b8a3a7672f3ecbdae0c29b3e3d8b9d18d5eff38f3c280c398972",
+  "status": "passed",
+  "tests": [
+    {
+      "attempts": 1,
+      "duration_ms": 0,
+      "error": null,
+      "file": "reference-systems/automation-workbench/src/test/kotlin/dev/akaitigo/kotlinatlas/workbench/AutomationWorkbenchTest.kt",
+      "final_status": "passed",
+      "id": "kotlin-reference-system-normal",
+      "line": 1,
+      "outcome": "expected",
+      "scenario": "normal",
+      "screenshot": {
+        "bytes": 346,
+        "digest": "sha256:146cee8e4388a73f81420465920bd9d7065b0acac14f8a6bbabc4b320a0a0a10",
+        "path": "artifacts/reference-system/snapshots/normal.snapshot.json"
+      },
+      "title": "Kotlin automation workbench integrated normal scenario",
+      "trace": {
+        "action_stream": true,
+        "bytes": 3215,
+        "digest": "sha256:8e23c69b22dd41fe1a74f9f8251bc4063a990804d51041ed732068ad72ded885",
+        "network_stream": true,
+        "path": "evidence/scenarios/integrated/normal.trace.json",
+        "resource_stream": true
+      }
+    },
+    {
+      "attempts": 1,
+      "duration_ms": 0,
+      "error": null,
+      "file": "reference-systems/automation-workbench/src/test/kotlin/dev/akaitigo/kotlinatlas/workbench/AutomationWorkbenchTest.kt",
+      "final_status": "passed",
+      "id": "kotlin-reference-system-boundary",
+      "line": 1,
+      "outcome": "expected",
+      "scenario": "boundary",
+      "screenshot": {
+        "bytes": 350,
+        "digest": "sha256:dceb6663218ad3b3fb3e0753150937b6e599a7a05b762936db9492e554489d5b",
+        "path": "artifacts/reference-system/snapshots/boundary.snapshot.json"
+      },
+      "title": "Kotlin automation workbench integrated boundary scenario",
+      "trace": {
+        "action_stream": true,
+        "bytes": 3400,
+        "digest": "sha256:fd211f2a89a34de8d6dd3cd90cf9d3bee2c41453fbd6aae2e7ab088ff9442e61",
+        "network_stream": true,
+        "path": "evidence/scenarios/integrated/boundary.trace.json",
+        "resource_stream": true
+      }
+    },
+    {
+      "attempts": 1,
+      "duration_ms": 0,
+      "error": null,
+      "file": "reference-systems/automation-workbench/src/test/kotlin/dev/akaitigo/kotlinatlas/workbench/AutomationWorkbenchTest.kt",
+      "final_status": "passed",
+      "id": "kotlin-reference-system-refusal",
+      "line": 1,
+      "outcome": "expected",
+      "scenario": "refusal",
+      "screenshot": {
+        "bytes": 348,
+        "digest": "sha256:53c81daebf10918fcbc08aeef8714e8f11990c35c73ec7878b5933556c1e90f8",
+        "path": "artifacts/reference-system/snapshots/refusal.snapshot.json"
+      },
+      "title": "Kotlin automation workbench integrated refusal scenario",
+      "trace": {
+        "action_stream": true,
+        "bytes": 3176,
+        "digest": "sha256:5d34df7592902387dd75dcf6fdf2da87cec6fe56aa88b038fa5e403ffb5d3462",
+        "network_stream": true,
+        "path": "evidence/scenarios/integrated/refusal.trace.json",
+        "resource_stream": true
+      }
+    },
+    {
+      "attempts": 1,
+      "duration_ms": 0,
+      "error": null,
+      "file": "reference-systems/automation-workbench/src/test/kotlin/dev/akaitigo/kotlinatlas/workbench/AutomationWorkbenchTest.kt",
+      "final_status": "passed",
+      "id": "kotlin-reference-system-failure",
+      "line": 1,
+      "outcome": "expected",
+      "scenario": "failure",
+      "screenshot": {
+        "bytes": 348,
+        "digest": "sha256:5215273cd6d9c8d1fa9cb3f2880d4f35b147e12916611f40ca2bc0106f57fe95",
+        "path": "artifacts/reference-system/snapshots/failure.snapshot.json"
+      },
+      "title": "Kotlin automation workbench integrated failure scenario",
+      "trace": {
+        "action_stream": true,
+        "bytes": 3363,
+        "digest": "sha256:541a7c08f9102aa43800a2670a8038b0fda7fd3a73734e162f856e3eba5989d2",
+        "network_stream": true,
+        "path": "evidence/scenarios/integrated/failure.trace.json",
+        "resource_stream": true
+      }
+    },
+    {
+      "attempts": 1,
+      "duration_ms": 0,
+      "error": null,
+      "file": "reference-systems/automation-workbench/src/test/kotlin/dev/akaitigo/kotlinatlas/workbench/AutomationWorkbenchTest.kt",
+      "final_status": "passed",
+      "id": "kotlin-reference-system-recovery",
+      "line": 1,
+      "outcome": "expected",
+      "scenario": "recovery",
+      "screenshot": {
+        "bytes": 350,
+        "digest": "sha256:5d6a89ab8be6b0791411135bd6aa9adf75c68702a9df700dae74c50131b5cb06",
+        "path": "artifacts/reference-system/snapshots/recovery.snapshot.json"
+      },
+      "title": "Kotlin automation workbench integrated recovery scenario",
+      "trace": {
+        "action_stream": true,
+        "bytes": 3511,
+        "digest": "sha256:108416ef3ea50cae87198db844b25b61e88d07790bb22dab650cd10796a2a06c",
+        "network_stream": true,
+        "path": "evidence/scenarios/integrated/recovery.trace.json",
+        "resource_stream": true
+      }
+    },
+    {
+      "attempts": 1,
+      "duration_ms": 0,
+      "error": null,
+      "file": "reference-systems/automation-workbench/src/test/kotlin/dev/akaitigo/kotlinatlas/workbench/AutomationWorkbenchTest.kt",
+      "final_status": "passed",
+      "id": "kotlin-reference-system-migration",
+      "line": 1,
+      "outcome": "expected",
+      "scenario": "migration",
+      "screenshot": {
+        "bytes": 352,
+        "digest": "sha256:071e229ef856aa73e89570b5d09c8506e85a72485446fd16367817cf42ca2053",
+        "path": "artifacts/reference-system/snapshots/migration.snapshot.json"
+      },
+      "title": "Kotlin automation workbench integrated migration scenario",
+      "trace": {
+        "action_stream": true,
+        "bytes": 3241,
+        "digest": "sha256:8aeaedea126045e931631ba724f4e4a5940952fb75512f1aaf01a418276ff8fd",
+        "network_stream": true,
+        "path": "evidence/scenarios/integrated/migration.trace.json",
+        "resource_stream": true
+      }
+    },
+    {
+      "attempts": 1,
+      "duration_ms": 0,
+      "error": null,
+      "file": "reference-systems/automation-workbench/src/test/kotlin/dev/akaitigo/kotlinatlas/workbench/AutomationWorkbenchTest.kt",
+      "final_status": "passed",
+      "id": "kotlin-reference-system-operations",
+      "line": 1,
+      "outcome": "expected",
+      "scenario": "operations",
+      "screenshot": {
+        "bytes": 354,
+        "digest": "sha256:1ae7f805d5e7158536de1606b9c4f456895e0976ec20ad718760618db9440f96",
+        "path": "artifacts/reference-system/snapshots/operations.snapshot.json"
+      },
+      "title": "Kotlin automation workbench integrated operations scenario",
+      "trace": {
+        "action_stream": true,
+        "bytes": 3233,
+        "digest": "sha256:bf6ce213a491dcb3ed6f8f9b8b258b4064988df4cec2f11de0ece9023b609e76",
+        "network_stream": true,
+        "path": "evidence/scenarios/integrated/operations.trace.json",
+        "resource_stream": true
+      }
+    },
+    {
+      "attempts": 1,
+      "duration_ms": 0,
+      "error": null,
+      "file": "reference-systems/automation-workbench/src/test/kotlin/dev/akaitigo/kotlinatlas/workbench/AutomationWorkbenchTest.kt",
+      "final_status": "passed",
+      "id": "kotlin-reference-system-security",
+      "line": 1,
+      "outcome": "expected",
+      "scenario": "security",
+      "screenshot": {
+        "bytes": 350,
+        "digest": "sha256:f3775167a3523c2a3c7b8c3a5c64d232253fd935fa0ade812e6e0bdc95d3489f",
+        "path": "artifacts/reference-system/snapshots/security.snapshot.json"
+      },
+      "title": "Kotlin automation workbench integrated security scenario",
+      "trace": {
+        "action_stream": true,
+        "bytes": 3177,
+        "digest": "sha256:00273f5121ddfcaaaf12e8bc14ec7e604ef8665d8f394c4ccc638aa1a30bb3f6",
+        "network_stream": true,
+        "path": "evidence/scenarios/integrated/security.trace.json",
+        "resource_stream": true
+      }
+    },
+    {
+      "attempts": 1,
+      "duration_ms": 0,
+      "error": null,
+      "file": "reference-systems/automation-workbench/src/test/kotlin/dev/akaitigo/kotlinatlas/workbench/AutomationWorkbenchTest.kt",
+      "final_status": "passed",
+      "id": "kotlin-reference-system-performance",
+      "line": 1,
+      "outcome": "expected",
+      "scenario": "performance",
+      "screenshot": {
+        "bytes": 356,
+        "digest": "sha256:d516554c1d86c907b25af5a7c33a5b43b0345c88d981d12800c49e200a7cddfe",
+        "path": "artifacts/reference-system/snapshots/performance.snapshot.json"
+      },
+      "title": "Kotlin automation workbench integrated performance scenario",
+      "trace": {
+        "action_stream": true,
+        "bytes": 3168,
+        "digest": "sha256:cd2d7e03ddb6e911743d3982a9bb02b1761f6a24b27904a123d43233c6e0094f",
+        "network_stream": true,
+        "path": "evidence/scenarios/integrated/performance.trace.json",
+        "resource_stream": true
+      }
+    },
+    {
+      "attempts": 1,
+      "duration_ms": 0,
+      "error": null,
+      "file": "reference-systems/automation-workbench/src/test/kotlin/dev/akaitigo/kotlinatlas/workbench/AutomationWorkbenchTest.kt",
+      "final_status": "passed",
+      "id": "kotlin-reference-system-compatibility",
+      "line": 1,
+      "outcome": "expected",
+      "scenario": "compatibility",
+      "screenshot": {
+        "bytes": 360,
+        "digest": "sha256:acdbd606a00bd1e1e6e7c9bce1523a453fb5027ee60b174b3eeedb1bb23e1300",
+        "path": "artifacts/reference-system/snapshots/compatibility.snapshot.json"
+      },
+      "title": "Kotlin automation workbench integrated compatibility scenario",
+      "trace": {
+        "action_stream": true,
+        "bytes": 3253,
+        "digest": "sha256:78801058e81fd050a79f6b2f58186d3a61878fa25f44c7f49935c71f8c170c60",
+        "network_stream": true,
+        "path": "evidence/scenarios/integrated/compatibility.trace.json",
+        "resource_stream": true
+      }
+    }
+  ],
+  "trace_contract": {
+    "console_events": "recorded inside each deterministic JSON trace",
+    "per_scenario": true,
+    "required_streams": [
+      "action",
+      "network",
+      "resource"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "quality.non-regression-baseline",
+  "id": "quality.public-main-never-regresses",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "origin/main e42f23d由来BaselineのID、固定Source、Test/Assertion、実行Task、Evidence command、Skill Eval期待値、CI tokenがすべて同等以上であること"
+      ],
+      "id": "quality.public-main-baseline-gate",
+      "statement": "origin/main e42f23d由来BaselineのID、固定Source、Test/Assertion、実行Task、Evidence command、Skill Eval期待値、CI tokenがすべて同等以上であること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "reference-atlas-core-v1",
+    "reference-atlas-core-definitive-v2"
+  ],
+  "statement": "公開済みmainのTest、Lab、Target、Claim、Proof、Evidence、Source、Skill Eval、CI Matrixを削除・格下げ・mock化せず、置換には明示MappingとMigration Evidenceを要求する。",
+  "status": "accepted"
+}

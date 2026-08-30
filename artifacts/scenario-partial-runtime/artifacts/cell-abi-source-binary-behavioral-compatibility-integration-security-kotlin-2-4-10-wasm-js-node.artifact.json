@@ -1,0 +1,59 @@
+{
+  "cell_id": "cell.abi.source-binary-behavioral.compatibility-integration.security.kotlin-2.4.10-wasm-js-node",
+  "compiler_artifacts": [
+    {
+      "bytes": 772745,
+      "digest": "sha256:9e8af99521512bdd77ac50412cb6c8a3e62c8f6e260ab6eac12e09fe754f0037",
+      "path": "labs/abi-compat-kmp-consumer-baseline/build/compileSync/wasmJs/test/testDevelopmentExecutable/kotlin/kotlin-reference-atlas-labs-abi-compat-kmp-consumer-baseline-test.wasm"
+    },
+    {
+      "bytes": 772991,
+      "digest": "sha256:19e67b3495d3ddb861b01c58af03f48d7aea2ccf6ec9c4baefc83c19e4d2cf4c",
+      "path": "labs/abi-compat-kmp-consumer-compatible/build/compileSync/wasmJs/test/testDevelopmentExecutable/kotlin/kotlin-reference-atlas-labs-abi-compat-kmp-consumer-compatible-test.wasm"
+    },
+    {
+      "bytes": 508,
+      "digest": "sha256:b611ab90fb7124c413428302738cf023291697b159aa48ae4291410b81767b27",
+      "path": "labs/abi-compat-kmp-api-v2-breaking/build/classes/kotlin/wasmJs/main/default/manifest"
+    }
+  ],
+  "compiler_refusal": {
+    "exit_code": 1,
+    "output_digest": "sha256:8d856a7d0c733e83f64e7e3df2dca3d171b5d41a852f7ecaa746e0c2c1411305",
+    "removed_descriptor": "SecurePolicy.authorize(role: String)",
+    "required_diagnostics": [
+      "No value passed for parameter 'context'"
+    ],
+    "status": "expected-refusal"
+  },
+  "harness_digest": "sha256:9b042312aa53444028337ab8df9f5e3209ec608734b20744bf7522d4c0bd917e",
+  "oracle": {
+    "assertion": "the unchanged consumer executes the baseline producer and the target compiler rejects a producer that removed the descriptor",
+    "kind": "kotlin-kmp-source-compatibility-security",
+    "passed": true,
+    "scenario": "security",
+    "surface_id": "compatibility-integration"
+  },
+  "runtime_identity": {
+    "compiler": "Kotlin 2.4.10 K2 IR",
+    "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+    "host_architecture": "arm64",
+    "host_os": "Darwin",
+    "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+    "node": "v25.2.1",
+    "runtime": "Kotlin/Wasm JS compatibility on Node.js",
+    "variant_id": "kotlin-2.4.10-wasm-js-node"
+  },
+  "runtime_test_result": {
+    "digest": "sha256:e09733998edb495e3fea877765c2b33eb5c61e0a31c417128e97fb9d1e69110c",
+    "path": "labs/abi-compat-kmp-consumer-baseline/build/test-results/wasmJsNodeTest/TEST-wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest.xml",
+    "testcase": {
+      "classname": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
+      "name": "unchanged consumer executes the version one security contract[wasmJs, node]",
+      "time": "0.0"
+    }
+  },
+  "schema_version": 1,
+  "source_digest": "sha256:d10e3d3e7e86a721de8880c8cd8c672a1a4d20402b10649248da8a080a69bae3",
+  "unchanged_consumer_digest": "sha256:4d5a7b23e9c94abae261de2c8ac9bf58e2f520ab95e4585ed74ca95e24a9185d"
+}

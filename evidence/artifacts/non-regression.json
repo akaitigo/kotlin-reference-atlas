@@ -1,0 +1,39 @@
+{
+  "baseline_commit": "e42f23d616b9172bddc0a35679f111d4aab7e43b",
+  "baseline_id": "public-main-v0.2.0",
+  "baseline_minimum_counts": {
+    "assertions": 56,
+    "capabilities": 23,
+    "ci_jobs": 2,
+    "claims": 25,
+    "evidence": 24,
+    "lab_modules": 9,
+    "proof_obligations": 27,
+    "skill_eval_cases": 18,
+    "sources": 8,
+    "target_sets": 13,
+    "targets": 28,
+    "test_cases": 34,
+    "test_files": 9
+  },
+  "core_v2_audit": "非退行監査済み: kotlin-reference-atlas baseline_items=220 current_items=3017 replacements=6",
+  "core_v2_baseline": "baselines/definitive-c0e9b1c.core-072d7ca.non-regression-baseline.json",
+  "core_v2_baseline_anchor": "baselines/definitive-c0e9b1c.non-regression-baseline.json",
+  "counts": {
+    "baseline_assertions": 56,
+    "baseline_test_annotations": 30,
+    "capabilities": 28,
+    "claims": 31,
+    "evidence": 33,
+    "executed_test_cases": 83,
+    "proof_obligations": 33,
+    "skill_eval_cases": 18,
+    "sources": 18,
+    "target_sets": 13,
+    "targets": 33
+  },
+  "replacements": [],
+  "schema_version": 1,
+  "verdict": "pass",
+  "violations": []
+}

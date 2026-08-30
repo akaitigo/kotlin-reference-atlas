@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "atlas_id": "kotlin-reference-atlas",
+  "status": "incomplete",
+  "authority_artifacts": 9,
+  "behaviors": 69,
+  "distinct_claims_currently_reused": 11,
+  "definitive_claims_required": 69,
+  "by_mastery_surface": {
+    "architecture-design": 7,
+    "compatibility-integration": 25,
+    "decision-comparison": 6,
+    "failure-recovery": 22,
+    "foundations-mechanics": 25,
+    "implementation-construction": 9,
+    "migration-evolution-deprecation": 8,
+    "operations-observability": 9,
+    "performance-capacity-cost": 13,
+    "provenance-rights": 1,
+    "security-privacy-safety": 6,
+    "testing-verification": 12
+  }
+}

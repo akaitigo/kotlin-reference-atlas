@@ -1,0 +1,108 @@
+{
+  "applicability": "required",
+  "atlas_id": "kotlin-reference-atlas",
+  "behavior_id": "abi.kotlin-metadata-version",
+  "behavior_scope": "current-domain-pattern-not-authority-atomic",
+  "classification": {
+    "matcher_digest": "sha256:c79ad99942a6ba91b84a72b86af0880a75397b054f17d1c277be6e24cac0cb58",
+    "method": "kotlin-authority-inventory-candidate-before-human-atomic-review",
+    "semantic_scope_match": true,
+    "state_ids": [
+      "compatibility"
+    ]
+  },
+  "closure": {
+    "authority_atomic_behavior": false,
+    "completion_eligible": false,
+    "dedicated_artifact": true,
+    "dedicated_row": true,
+    "integrated_runtime_trace": true,
+    "pattern_specific_evidence": false,
+    "real_runtime_identity": false
+  },
+  "gaps": [
+    "The companion Kotlin closure row has no dedicated retry-zero execution for every Surface×Scenario×Variant cell.",
+    "Human-reviewed Authority atomic binding is absent; integrated JVM traces cannot supply completion credit."
+  ],
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "id": "proof-abi-kotlin-metadata-version-compatibility",
+  "integrated_reference": {
+    "assertions": [
+      "scenario outcome is recorded",
+      "runtime returns to a bounded observable state"
+    ],
+    "attempts": 1,
+    "manifest": "integrations/reference-system/manifest.json",
+    "outcome": "expected",
+    "pattern_mapped": true,
+    "result": "artifacts/reference-system/results.json",
+    "runtime_boundaries": [
+      "Gradle 9.5.0",
+      "Kotlin 2.4.10 JVM IR",
+      "OpenJDK 17",
+      "macOS arm64"
+    ],
+    "screenshot": {
+      "bytes": 360,
+      "digest": "sha256:acdbd606a00bd1e1e6e7c9bce1523a453fb5027ee60b174b3eeedb1bb23e1300",
+      "path": "artifacts/reference-system/snapshots/compatibility.snapshot.json"
+    },
+    "trace": {
+      "action_stream": true,
+      "bytes": 3253,
+      "digest": "sha256:78801058e81fd050a79f6b2f58186d3a61878fa25f44c7f49935c71f8c170c60",
+      "network_stream": true,
+      "path": "evidence/scenarios/integrated/compatibility.trace.json",
+      "resource_stream": true
+    }
+  },
+  "pattern_evidence": {
+    "benchmark_environment": null,
+    "benchmark_records": [],
+    "capture_environment_identity": {
+      "architecture": "arm64",
+      "build_tool": "Gradle Wrapper 9.5.0",
+      "compiler": "Kotlin 2.4.10 JVM IR",
+      "os": "Darwin",
+      "platform": "JVM",
+      "retries": 0,
+      "runtime": "OpenJDK 17.0.17",
+      "trace_mode": "on"
+    },
+    "capture_harness_digest": "sha256:897b93cde0639b3e6b6c4be6ff4ba4b7acad298a1e7bff7060bc2f8fcb0f823b",
+    "capture_records": [],
+    "compatibility_environment": null,
+    "compatibility_records": [],
+    "scenario_runtime_environment": null,
+    "scenario_runtime_records": [],
+    "scenario_runtime_report": null
+  },
+  "pattern_id": "abi.kotlin-metadata-version",
+  "scenario": "compatibility",
+  "schema_version": 1,
+  "source_bindings": [
+    {
+      "digest": "sha256:c79ad99942a6ba91b84a72b86af0880a75397b054f17d1c277be6e24cac0cb58",
+      "path": "authority/surfaces/kotlin-compiler.authority-surfaces.yaml",
+      "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+    },
+    {
+      "digest": "sha256:c79ad99942a6ba91b84a72b86af0880a75397b054f17d1c277be6e24cac0cb58",
+      "path": "authority/surfaces/kotlin-compiler.authority-surfaces.yaml",
+      "variant_id": "kotlin-2.4.10-js-node"
+    },
+    {
+      "digest": "sha256:c79ad99942a6ba91b84a72b86af0880a75397b054f17d1c277be6e24cac0cb58",
+      "path": "authority/surfaces/kotlin-compiler.authority-surfaces.yaml",
+      "variant_id": "kotlin-2.4.10-wasm-js-node"
+    },
+    {
+      "digest": "sha256:c79ad99942a6ba91b84a72b86af0880a75397b054f17d1c277be6e24cac0cb58",
+      "path": "authority/surfaces/kotlin-compiler.authority-surfaces.yaml",
+      "variant_id": "kotlin-2.4.10-native-macos-arm64"
+    }
+  ],
+  "status": "pattern-specific-gap",
+  "target_id": "evolution.compatibility-migration",
+  "target_set": "compatibility-integration,migration-evolution-deprecation"
+}

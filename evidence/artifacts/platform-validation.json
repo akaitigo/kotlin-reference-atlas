@@ -1,6 +1,7 @@
 {
   "js_node_runtime": "pass",
   "jvm_runtime": "pass",
+  "native_compile_is_runtime_substitute": false,
   "native_macos_arm64_compile": "pass",
   "native_runtime": {
     "reason": "Full XcodeのxcodebuildがHostに存在しないためlinkDebugTestMacosArm64を実行できない",

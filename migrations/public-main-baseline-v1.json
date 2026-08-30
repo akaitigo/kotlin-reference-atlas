@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "atlas_id": "kotlin-reference-atlas",
+  "baseline_commit": "e42f23d616b9172bddc0a35679f111d4aab7e43b",
+  "status": "additive",
+  "changes": [
+    {
+      "old_id": "reference-atlas-core-v1",
+      "new_id": "reference-atlas-core-definitive-v2",
+      "replacement": false,
+      "reason_ja": "v1 Sourceとbounded証拠を維持したまま、Definitive Gate v2を追加固定する。",
+      "migration_evidence": "evidence/artifacts/non-regression.json",
+      "proof_ids": ["quality.public-main-baseline-gate"]
+    },
+    {
+      "old_id": "reference-system.automation-workbench",
+      "new_id": "reference-system.automation-workbench",
+      "replacement": false,
+      "reason_ja": "planned Targetを削除・集約せずpartialへ前進させ、JVM Runtime実装とEvidenceを追加する。",
+      "migration_evidence": "evidence/workbench.jvm-runtime.evidence.json",
+      "proof_ids": ["workbench.jvm.normal-boundary-rejection-failure-recovery"]
+    }
+  ]
+}

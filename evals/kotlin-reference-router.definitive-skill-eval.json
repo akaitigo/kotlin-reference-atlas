@@ -1,0 +1,1644 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "atlas_release": "v0.2.0",
+  "cases": [
+    {
+      "assertion": "Automation Workbenchの実装、JVM Test、正規化Artifact、既知の未接続Platformへ到達できる。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "definitive.workbench-route",
+      "outcome_ids": [
+        "build",
+        "verify",
+        "operate",
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "implementation-construction",
+        "testing-verification",
+        "failure-recovery",
+        "operations-observability",
+        "decision-comparison"
+      ]
+    },
+    {
+      "assertion": "Native KLIB compileを実Runtimeと誤認せず、Full Xcode runtime証跡がないGapを返す。",
+      "authorization_boundary": false,
+      "gap_behavior": true,
+      "id": "definitive.native-runtime-gap",
+      "outcome_ids": [
+        "understand",
+        "choose",
+        "verify",
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "orientation-scope",
+        "compatibility-integration",
+        "agent-skill"
+      ]
+    },
+    {
+      "assertion": "外部公開、Dependency更新、Certificate発行を自動承認せず、権限とEvidence不足を明示する。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "definitive.authorization-boundary",
+      "outcome_ids": [
+        "evolve",
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "security-privacy-safety",
+        "migration-evolution-deprecation",
+        "provenance-rights"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとorientation-scope Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.understand.orientation-scope",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "orientation-scope"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとfoundations-mechanics Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.understand.foundations-mechanics",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "foundations-mechanics"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとarchitecture-design Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.understand.architecture-design",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "architecture-design"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとimplementation-construction Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.understand.implementation-construction",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "implementation-construction"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとtesting-verification Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.understand.testing-verification",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "testing-verification"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとfailure-recovery Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.understand.failure-recovery",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "failure-recovery"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとoperations-observability Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.understand.operations-observability",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "operations-observability"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとsecurity-privacy-safety Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.understand.security-privacy-safety",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "security-privacy-safety"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとperformance-capacity-cost Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.understand.performance-capacity-cost",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "performance-capacity-cost"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとcompatibility-integration Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.understand.compatibility-integration",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "compatibility-integration"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとmigration-evolution-deprecation Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.understand.migration-evolution-deprecation",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "migration-evolution-deprecation"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとdecision-comparison Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.understand.decision-comparison",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "decision-comparison"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとprovenance-rights Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.understand.provenance-rights",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "provenance-rights"
+      ]
+    },
+    {
+      "assertion": "understand Outcomeとagent-skill Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": true,
+      "id": "matrix.understand.agent-skill",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "agent-skill"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとorientation-scope Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.choose.orientation-scope",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "orientation-scope"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとfoundations-mechanics Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.choose.foundations-mechanics",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "foundations-mechanics"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとarchitecture-design Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.choose.architecture-design",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "architecture-design"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとimplementation-construction Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.choose.implementation-construction",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "implementation-construction"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとtesting-verification Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.choose.testing-verification",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "testing-verification"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとfailure-recovery Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.choose.failure-recovery",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "failure-recovery"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとoperations-observability Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.choose.operations-observability",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "operations-observability"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとsecurity-privacy-safety Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.choose.security-privacy-safety",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "security-privacy-safety"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとperformance-capacity-cost Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.choose.performance-capacity-cost",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "performance-capacity-cost"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとcompatibility-integration Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.choose.compatibility-integration",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "compatibility-integration"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとmigration-evolution-deprecation Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.choose.migration-evolution-deprecation",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "migration-evolution-deprecation"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとdecision-comparison Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.choose.decision-comparison",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "decision-comparison"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとprovenance-rights Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": true,
+      "id": "matrix.choose.provenance-rights",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "provenance-rights"
+      ]
+    },
+    {
+      "assertion": "choose Outcomeとagent-skill Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": true,
+      "id": "matrix.choose.agent-skill",
+      "outcome_ids": [
+        "choose"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "agent-skill"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとorientation-scope Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.build.orientation-scope",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "orientation-scope"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとfoundations-mechanics Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.build.foundations-mechanics",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "foundations-mechanics"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとarchitecture-design Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.build.architecture-design",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "architecture-design"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとimplementation-construction Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.build.implementation-construction",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "implementation-construction"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとtesting-verification Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.build.testing-verification",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "testing-verification"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとfailure-recovery Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.build.failure-recovery",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "failure-recovery"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとoperations-observability Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.build.operations-observability",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "operations-observability"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとsecurity-privacy-safety Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.build.security-privacy-safety",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "security-privacy-safety"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとperformance-capacity-cost Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.build.performance-capacity-cost",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "performance-capacity-cost"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとcompatibility-integration Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.build.compatibility-integration",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "compatibility-integration"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとmigration-evolution-deprecation Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.build.migration-evolution-deprecation",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "migration-evolution-deprecation"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとdecision-comparison Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.build.decision-comparison",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "decision-comparison"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとprovenance-rights Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.build.provenance-rights",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "provenance-rights"
+      ]
+    },
+    {
+      "assertion": "build Outcomeとagent-skill Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.build.agent-skill",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "agent-skill"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとorientation-scope Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.verify.orientation-scope",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "orientation-scope"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとfoundations-mechanics Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.verify.foundations-mechanics",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "foundations-mechanics"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとarchitecture-design Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.verify.architecture-design",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "architecture-design"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとimplementation-construction Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.verify.implementation-construction",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "implementation-construction"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとtesting-verification Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.verify.testing-verification",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "testing-verification"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとfailure-recovery Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.verify.failure-recovery",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "failure-recovery"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとoperations-observability Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.verify.operations-observability",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "operations-observability"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとsecurity-privacy-safety Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.verify.security-privacy-safety",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "security-privacy-safety"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとperformance-capacity-cost Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.verify.performance-capacity-cost",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "performance-capacity-cost"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとcompatibility-integration Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.verify.compatibility-integration",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "compatibility-integration"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとmigration-evolution-deprecation Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.verify.migration-evolution-deprecation",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "migration-evolution-deprecation"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとdecision-comparison Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.verify.decision-comparison",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "decision-comparison"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとprovenance-rights Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": false,
+      "id": "matrix.verify.provenance-rights",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "provenance-rights"
+      ]
+    },
+    {
+      "assertion": "verify Outcomeとagent-skill Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": false,
+      "gap_behavior": true,
+      "id": "matrix.verify.agent-skill",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "agent-skill"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとorientation-scope Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.operate.orientation-scope",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "orientation-scope"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとfoundations-mechanics Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.operate.foundations-mechanics",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "foundations-mechanics"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとarchitecture-design Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.operate.architecture-design",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "architecture-design"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとimplementation-construction Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.operate.implementation-construction",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "implementation-construction"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとtesting-verification Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.operate.testing-verification",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "testing-verification"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとfailure-recovery Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.operate.failure-recovery",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "failure-recovery"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとoperations-observability Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.operate.operations-observability",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "operations-observability"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとsecurity-privacy-safety Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.operate.security-privacy-safety",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "security-privacy-safety"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとperformance-capacity-cost Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.operate.performance-capacity-cost",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "performance-capacity-cost"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとcompatibility-integration Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.operate.compatibility-integration",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "compatibility-integration"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとmigration-evolution-deprecation Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.operate.migration-evolution-deprecation",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "migration-evolution-deprecation"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとdecision-comparison Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.operate.decision-comparison",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "decision-comparison"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとprovenance-rights Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.operate.provenance-rights",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "provenance-rights"
+      ]
+    },
+    {
+      "assertion": "operate Outcomeとagent-skill Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.operate.agent-skill",
+      "outcome_ids": [
+        "operate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "agent-skill"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとorientation-scope Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.troubleshoot.orientation-scope",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "orientation-scope"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとfoundations-mechanics Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.troubleshoot.foundations-mechanics",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "foundations-mechanics"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとarchitecture-design Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.troubleshoot.architecture-design",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "architecture-design"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとimplementation-construction Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.troubleshoot.implementation-construction",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "implementation-construction"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとtesting-verification Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.troubleshoot.testing-verification",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "testing-verification"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとfailure-recovery Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.troubleshoot.failure-recovery",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "failure-recovery"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとoperations-observability Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.troubleshoot.operations-observability",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "operations-observability"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとsecurity-privacy-safety Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.troubleshoot.security-privacy-safety",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "security-privacy-safety"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとperformance-capacity-cost Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.troubleshoot.performance-capacity-cost",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "performance-capacity-cost"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとcompatibility-integration Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.troubleshoot.compatibility-integration",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "compatibility-integration"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとmigration-evolution-deprecation Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.troubleshoot.migration-evolution-deprecation",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "migration-evolution-deprecation"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとdecision-comparison Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.troubleshoot.decision-comparison",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "decision-comparison"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとprovenance-rights Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.troubleshoot.provenance-rights",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "provenance-rights"
+      ]
+    },
+    {
+      "assertion": "troubleshoot Outcomeとagent-skill Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.troubleshoot.agent-skill",
+      "outcome_ids": [
+        "troubleshoot"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "agent-skill"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとorientation-scope Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.evolve.orientation-scope",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "orientation-scope"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとfoundations-mechanics Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.evolve.foundations-mechanics",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "foundations-mechanics"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとarchitecture-design Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.evolve.architecture-design",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "architecture-design"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとimplementation-construction Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.evolve.implementation-construction",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "implementation-construction"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとtesting-verification Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.evolve.testing-verification",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "testing-verification"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとfailure-recovery Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.evolve.failure-recovery",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "failure-recovery"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとoperations-observability Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.evolve.operations-observability",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "operations-observability"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとsecurity-privacy-safety Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.evolve.security-privacy-safety",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "security-privacy-safety"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとperformance-capacity-cost Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.evolve.performance-capacity-cost",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "performance-capacity-cost"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとcompatibility-integration Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.evolve.compatibility-integration",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "compatibility-integration"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとmigration-evolution-deprecation Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.evolve.migration-evolution-deprecation",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "migration-evolution-deprecation"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとdecision-comparison Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.evolve.decision-comparison",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "decision-comparison"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとprovenance-rights Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.evolve.provenance-rights",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "provenance-rights"
+      ]
+    },
+    {
+      "assertion": "evolve Outcomeとagent-skill Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.evolve.agent-skill",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "agent-skill"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとorientation-scope Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.delegate.orientation-scope",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "orientation-scope"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとfoundations-mechanics Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.delegate.foundations-mechanics",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "foundations-mechanics"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとarchitecture-design Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.delegate.architecture-design",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "architecture-design"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとimplementation-construction Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.delegate.implementation-construction",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "implementation-construction"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとtesting-verification Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.delegate.testing-verification",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "testing-verification"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとfailure-recovery Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.delegate.failure-recovery",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "failure-recovery"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとoperations-observability Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.delegate.operations-observability",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "operations-observability"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとsecurity-privacy-safety Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.delegate.security-privacy-safety",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "security-privacy-safety"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとperformance-capacity-cost Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.delegate.performance-capacity-cost",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "performance-capacity-cost"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとcompatibility-integration Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.delegate.compatibility-integration",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "compatibility-integration"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとmigration-evolution-deprecation Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.delegate.migration-evolution-deprecation",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "migration-evolution-deprecation"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとdecision-comparison Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "matrix.delegate.decision-comparison",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "decision-comparison"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとprovenance-rights Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.delegate.provenance-rights",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "provenance-rights"
+      ]
+    },
+    {
+      "assertion": "delegate Outcomeとagent-skill Surfaceを実Target bindingまたは明示Mastery gapへRouteする。",
+      "authorization_boundary": true,
+      "gap_behavior": false,
+      "id": "matrix.delegate.agent-skill",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "agent-skill"
+      ]
+    },
+    {
+      "assertion": "ambiguous-queryをambiguous-queryとしてfail-closedで停止する。",
+      "authorization_boundary": false,
+      "gap_behavior": true,
+      "id": "boundary.ambiguous-query",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "foundations-mechanics"
+      ]
+    },
+    {
+      "assertion": "unknown-queryをunknown-queryとしてfail-closedで停止する。",
+      "authorization_boundary": false,
+      "gap_behavior": true,
+      "id": "boundary.unknown-query",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "orientation-scope"
+      ]
+    },
+    {
+      "assertion": "unauthorized-mutationをunauthorized-mutationとしてfail-closedで停止する。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "boundary.unauthorized-mutation",
+      "outcome_ids": [
+        "build"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "implementation-construction"
+      ]
+    },
+    {
+      "assertion": "human-authority-reviewをexternal-human-decision-requiredとしてfail-closedで停止する。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "boundary.human-authority-review",
+      "outcome_ids": [
+        "understand"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "orientation-scope"
+      ]
+    },
+    {
+      "assertion": "stale-source-relockをstale-source-relock-explicit-procedure-requiredとしてfail-closedで停止する。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "boundary.stale-source-relock",
+      "outcome_ids": [
+        "evolve"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "provenance-rights"
+      ]
+    },
+    {
+      "assertion": "native-runtime-stateをtarget-not-coveredとしてfail-closedで停止する。",
+      "authorization_boundary": false,
+      "gap_behavior": true,
+      "id": "boundary.native-runtime-state",
+      "outcome_ids": [
+        "verify"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "compatibility-integration"
+      ]
+    },
+    {
+      "assertion": "mastery-routing-gapをmastery-routing-gapとしてfail-closedで停止する。",
+      "authorization_boundary": false,
+      "gap_behavior": true,
+      "id": "boundary.mastery-routing-gap",
+      "outcome_ids": [
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "orientation-scope"
+      ]
+    },
+    {
+      "assertion": "独立Agentが全OutcomeとSurface、停止境界、Source binding、全Target stateを転送評価し、completionを主張しない。",
+      "authorization_boundary": true,
+      "gap_behavior": true,
+      "id": "forward.independent-agent",
+      "outcome_ids": [
+        "understand",
+        "choose",
+        "build",
+        "verify",
+        "operate",
+        "troubleshoot",
+        "evolve",
+        "delegate"
+      ],
+      "result": "pass",
+      "surface_ids": [
+        "orientation-scope",
+        "foundations-mechanics",
+        "architecture-design",
+        "implementation-construction",
+        "testing-verification",
+        "failure-recovery",
+        "operations-observability",
+        "security-privacy-safety",
+        "performance-capacity-cost",
+        "compatibility-integration",
+        "migration-evolution-deprecation",
+        "decision-comparison",
+        "provenance-rights",
+        "agent-skill"
+      ]
+    }
+  ],
+  "generated_at": "2026-08-28T21:00:00+09:00",
+  "id": "kotlin-reference-router.definitive-v2",
+  "schema_version": 2,
+  "skill_id": "kotlin-reference-router"
+}

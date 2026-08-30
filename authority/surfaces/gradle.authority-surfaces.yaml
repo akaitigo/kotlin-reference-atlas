@@ -1,0 +1,11 @@
+schema_version: 2
+source_id: gradle-source-9.5.0
+source_digest: sha256:63f6246f601e260c3db5e6325599a9fca69cafc8868e90237a9c4c51d7502b85
+extraction: {method: machine-readable-primary, tool: git-tree-surface-extractor-v2, reviewed_by: kotlin-atlas-maintainer, reviewed_at: "2026-08-28"}
+surfaces:
+  - {id: gradle.task.validation, locator: platforms/core-execution/Work Validation.md, kind: behavior, capability_id: gradle.tasks, behavior_id: gradle.task-input-output-validation, title: Task input/output validation, surface_ids: [testing-verification, failure-recovery]}
+  - {id: gradle.build.cache, locator: platforms/core-execution/build-cache, kind: behavior, capability_id: gradle.cache, behavior_id: gradle.build-cache-key-reuse, title: Build cache keyと再利用, surface_ids: [performance-capacity-cost, operations-observability]}
+  - {id: gradle.configuration.cache, locator: platforms/core-configuration/configuration-cache, kind: behavior, capability_id: gradle.configuration-cache, behavior_id: gradle.configuration-cache-serialization, title: Configuration cache serialization境界, surface_ids: [performance-capacity-cost, failure-recovery]}
+  - {id: gradle.dependency.verification, locator: platforms/software/dependency-management/src/main/java/org/gradle/api/internal/artifacts/verification, kind: behavior, capability_id: gradle.supply-chain, behavior_id: gradle.dependency-verification-tamper, title: Dependency verificationとtamper拒否, surface_ids: [security-privacy-safety, provenance-rights]}
+  - {id: gradle.toolchains, locator: platforms/jvm/toolchains-jvm, kind: capability, capability_id: gradle.toolchains, behavior_id: gradle.jvm-toolchain-selection, title: JVM toolchain選択と不一致, surface_ids: [implementation-construction, compatibility-integration]}
+  - {id: gradle.testkit, locator: platforms/extensibility/test-kit, kind: capability, capability_id: gradle.testkit, behavior_id: gradle.plugin-consumer-testkit, title: Plugin consumer TestKit実行, surface_ids: [testing-verification, compatibility-integration]}

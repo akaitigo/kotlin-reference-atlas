@@ -1,0 +1,27 @@
+{
+  "artifact": {
+    "digest": "sha256:79bcdfa752987ee75c720e33f53abe25ebeb1ac66fd1840fcf20be7cc0d477e9",
+    "media_type": "application/json",
+    "size_bytes": 1061,
+    "uri": "evidence/artifacts/authority-review-queue-validation.json"
+  },
+  "atlas_id": "kotlin-reference-atlas",
+  "claim_ids": [
+    "authority.raw-anchor-denominator-is-pending-human"
+  ],
+  "command": "python3 scripts/generate_authority_review_queue.py && python3 scripts/test_authority_review_queue.py && python3 scripts/verify_authority_review_queue.py",
+  "created_at": "2026-08-28T00:00:00+09:00",
+  "environment": {
+    "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
+    "profile": "local"
+  },
+  "harness_digest": "sha256:634e457063ce6dd170b96f40c7f05e447f2a884aae1fd8e908c0ed842a792692",
+  "harness_path": "authority/review-queue.snapshot.json",
+  "id": "authority.review-queue-validation",
+  "kind": "capture",
+  "producer": "kotlin-authority-review-queue-verifier",
+  "retention": "git",
+  "schema_version": 1,
+  "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
+  "verdict": "pass"
+}

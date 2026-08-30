@@ -1,0 +1,133 @@
+{
+  "id": "kotlin-reference-system-results-v2",
+  "identity": {
+    "build_tool": {
+      "name": "Gradle Wrapper",
+      "version": "9.5.0"
+    },
+    "compiler": {
+      "backend": "JVM IR",
+      "name": "Kotlin",
+      "version": "2.4.10"
+    },
+    "platform": {
+      "architecture": "arm64",
+      "name": "JVM",
+      "os": "Darwin"
+    },
+    "runtime": {
+      "identity": "openjdk version \"17.0.17\" 2025-10-21",
+      "name": "OpenJDK"
+    }
+  },
+  "scenarios": [
+    {
+      "digest": "sha256:8e23c69b22dd41fe1a74f9f8251bc4063a990804d51041ed732068ad72ded885",
+      "path": "evidence/scenarios/integrated/normal.trace.json",
+      "rows": 1,
+      "scenario": "normal",
+      "target_ids": [
+        "reference-system.automation-workbench",
+        "semantics.language-core"
+      ]
+    },
+    {
+      "digest": "sha256:fd211f2a89a34de8d6dd3cd90cf9d3bee2c41453fbd6aae2e7ab088ff9442e61",
+      "path": "evidence/scenarios/integrated/boundary.trace.json",
+      "rows": 2,
+      "scenario": "boundary",
+      "target_ids": [
+        "semantics.type-system",
+        "security.input-boundaries"
+      ]
+    },
+    {
+      "digest": "sha256:5d34df7592902387dd75dcf6fdf2da87cec6fe56aa88b038fa5e403ffb5d3462",
+      "path": "evidence/scenarios/integrated/refusal.trace.json",
+      "rows": 1,
+      "scenario": "refusal",
+      "target_ids": [
+        "security.input-boundaries"
+      ]
+    },
+    {
+      "digest": "sha256:541a7c08f9102aa43800a2670a8038b0fda7fd3a73734e162f856e3eba5989d2",
+      "path": "evidence/scenarios/integrated/failure.trace.json",
+      "rows": 2,
+      "scenario": "failure",
+      "target_ids": [
+        "concurrency.structured-cancellation",
+        "quality.failure-debugging"
+      ]
+    },
+    {
+      "digest": "sha256:108416ef3ea50cae87198db844b25b61e88d07790bb22dab650cd10796a2a06c",
+      "path": "evidence/scenarios/integrated/recovery.trace.json",
+      "rows": 2,
+      "scenario": "recovery",
+      "target_ids": [
+        "concurrency.flow-pipelines",
+        "operation.lifecycle-recovery"
+      ]
+    },
+    {
+      "digest": "sha256:8aeaedea126045e931631ba724f4e4a5940952fb75512f1aaf01a418276ff8fd",
+      "path": "evidence/scenarios/integrated/migration.trace.json",
+      "rows": 1,
+      "scenario": "migration",
+      "target_ids": [
+        "evolution.compatibility-migration"
+      ]
+    },
+    {
+      "digest": "sha256:bf6ce213a491dcb3ed6f8f9b8b258b4064988df4cec2f11de0ece9023b609e76",
+      "path": "evidence/scenarios/integrated/operations.trace.json",
+      "rows": 1,
+      "scenario": "operations",
+      "target_ids": [
+        "operation.lifecycle-recovery",
+        "operation.local-evidence"
+      ]
+    },
+    {
+      "digest": "sha256:00273f5121ddfcaaaf12e8bc14ec7e604ef8665d8f394c4ccc638aa1a30bb3f6",
+      "path": "evidence/scenarios/integrated/security.trace.json",
+      "rows": 1,
+      "scenario": "security",
+      "target_ids": [
+        "security.input-boundaries",
+        "build.toolchain-lock"
+      ]
+    },
+    {
+      "digest": "sha256:cd2d7e03ddb6e911743d3982a9bb02b1761f6a24b27904a123d43233c6e0094f",
+      "path": "evidence/scenarios/integrated/performance.trace.json",
+      "rows": 1,
+      "scenario": "performance",
+      "target_ids": [
+        "performance.measurement-harness"
+      ]
+    },
+    {
+      "digest": "sha256:78801058e81fd050a79f6b2f58186d3a61878fa25f44c7f49935c71f8c170c60",
+      "path": "evidence/scenarios/integrated/compatibility.trace.json",
+      "rows": 1,
+      "scenario": "compatibility",
+      "target_ids": [
+        "platform.jvm-js-wasm-runtime",
+        "interop.java-consumer"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "status": "bounded-jvm-integration-proof",
+  "summary": {
+    "junit_tests": 13,
+    "scenarios": 10,
+    "trace_artifacts": 10
+  },
+  "trace_source": {
+    "digest": "sha256:d4f6cbdd0bb90c34d8938c90891c4bf0fad43cfa7272e34e5733a504ebc5e84e",
+    "path": "reference-systems/automation-workbench/build/evidence/runtime-trace.tsv"
+  }
+}

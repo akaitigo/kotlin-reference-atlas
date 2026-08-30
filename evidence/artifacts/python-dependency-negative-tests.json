@@ -1,0 +1,37 @@
+{
+  "case_count": 6,
+  "cases": [
+    {
+      "expected": "reject",
+      "id": "missing-requirements-lock",
+      "verdict": "pass"
+    },
+    {
+      "expected": "reject",
+      "id": "tampered-wheel-hash",
+      "verdict": "pass"
+    },
+    {
+      "expected": "reject",
+      "id": "missing-installed-pyyaml",
+      "verdict": "pass"
+    },
+    {
+      "expected": "byte-identical",
+      "id": "cross-python-static-evidence",
+      "verdict": "pass"
+    },
+    {
+      "expected": "reject",
+      "id": "live-runtime-field-in-static-evidence",
+      "verdict": "pass"
+    },
+    {
+      "expected": "byte-identical",
+      "id": "fresh-run-static-evidence",
+      "verdict": "pass"
+    }
+  ],
+  "schema_version": 1,
+  "verdict": "pass"
+}

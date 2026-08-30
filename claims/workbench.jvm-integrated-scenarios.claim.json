@@ -1,0 +1,22 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "reference-system.automation-workbench",
+  "id": "workbench.jvm-integrated-scenarios",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "8件のJVM Testが正常、境界、拒否、障害、回復、Coroutine context/cancellation、bounded backpressure、Strict/Normalize比較を実Runtimeで検証すること"
+      ],
+      "id": "workbench.jvm.normal-boundary-rejection-failure-recovery",
+      "statement": "8件のJVM Testが正常、境界、拒否、障害、回復、Coroutine context/cancellation、bounded backpressure、Strict/Normalize比較を実Runtimeで検証すること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "kotlin-spec-snapshot",
+    "kotlinx-coroutines-source-1.11.0",
+    "gradle-source-9.5.0"
+  ],
+  "statement": "Automation WorkbenchはJVM実Runtimeで正常、境界、拒否、障害、回復を実行し、Coroutine contextとcancellation、bounded backpressure、StrictとNormalizeの比較可能なArtifactを生成する。",
+  "status": "accepted"
+}

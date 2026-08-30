@@ -9,10 +9,10 @@ Kotlinに関する依頼をAtlasの検証済みCapabilityへ接続する。技�
 
 ## Route
 
-1. 依頼を`design`、`implement`、`diagnose`、`migrate`、`review`のいずれかとして捉える。境界は[references/modes.md](references/modes.md)を必要時だけ読む。
-2. `mastery.yaml`のOutcomeとSurfaceを入口にし、`python3 scripts/route.py --query "<依頼の要約>"`を実行する。
-3. `disposition: covered`なら、返されたOutcome、Surface、Capability、Lab、Claim、Evidenceを確認して回答または作業する。実行可能な依頼ではEvidenceに記録されたCommandを再実行する。
-4. `disposition: gap`なら、未検証領域として明示し、存在しないCapabilityやEvidenceを捏造しない。`infeasible` Targetでは代替Evidenceと再評価条件を示す。
+1. 依頼を`mastery.yaml`の8 Outcomeと14 Surfaceへ明示的に分類する。境界は[references/modes.md](references/modes.md)を必要時だけ読む。
+2. `python3 scripts/route.py --query "<依頼の要約>" --outcome <outcome-id> --surface <surface-id>`を実行する。`build`、`operate`、`troubleshoot`、`evolve`、`delegate`で利用者が変更を明示した場合だけ`--authorized-change`を付ける。
+3. `disposition: covered`なら、Target state、実装Variant、Authority Source、Claim、Evidence record、Artifact digestを確認する。実行可能な依頼ではEvidenceのCommandを再実行する。
+4. `disposition: gap`なら`reason_code`と`stop_conditions`を保ったまま停止する。曖昧・未知Queryを推測で補完せず、`partial`または`infeasible` Targetをcoveredとして扱わない。
 
 ## Invariants
 
@@ -22,4 +22,9 @@ Kotlinに関する依頼をAtlasの検証済みCapabilityへ接続する。技�
 - `verdict: conditional`、`boundary-only`、`planned`を`default`として扱わない。
 - Evidenceを再実行していない場合は、固定Epochで記録済みの結果であることを明示する。
 - 変更、公開、外部書き込みは依頼された範囲に限定する。GitHub公開を自動で行わない。
+- 変更権限をQueryの語調から推測しない。`unauthorized-mutation`では変更せず、明示権限を求める。
+- Authority raw anchorの意味判断・Semantic Surface昇格は人手Review専用であり、Agentが代行しない。
+- stale Sourceはholdし、明示的な再固定手順と人手確認なしにdigestを更新しない。
+- `ambiguous-query`、`unknown-query`、`mastery-routing-gap`はfail-closedとし、近いTargetへ自動的に寄せない。
+- 112-cell MatrixのpassはRouter契約のpassに限られ、Target、Depth、Repositoryのcompletionを意味しない。
 - Coverage外のKotlin機能を一般知識で説明することはできるが、Atlasが実証済みとは表現しない。

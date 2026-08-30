@@ -1,0 +1,10 @@
+schema_version: 2
+source_id: kotlin-keep-snapshot
+source_digest: sha256:bd43689297ab1ec0060953dab43aff276fc37491327ee2b341dce493a199d930
+extraction: {method: primary-text-reviewed, tool: atlas-surface-review-v2, reviewed_by: kotlin-atlas-maintainer, reviewed_at: "2026-08-28"}
+surfaces:
+  - {id: keep.contracts, locator: proposals/KEEP-0139-kotlin-contracts.md, kind: behavior, capability_id: language.contracts, behavior_id: contracts.effects-calls-in-place, title: Contract effectとcallsInPlace, surface_ids: [foundations-mechanics, testing-verification, security-privacy-safety]}
+  - {id: keep.coroutines, locator: proposals/KEEP-0164-coroutines.md, kind: behavior, capability_id: language.coroutines, behavior_id: coroutines.suspension-design, title: Coroutine suspensionとbuilder設計, surface_ids: [foundations-mechanics, architecture-design]}
+  - {id: keep.definitely-non-null, locator: proposals/KEEP-0268-definitely-non-nullable-types.md, kind: behavior, capability_id: language.nullability, behavior_id: nullability.definitely-non-null-generic, title: Definitely non-nullable generic型, surface_ids: [foundations-mechanics, compatibility-integration]}
+  - {id: keep.value-classes, locator: notes/0001-value-classes.md, kind: behavior, capability_id: language.value-classes, behavior_id: abi.value-class-boxing-mangling, title: Value class boxingとname mangling, surface_ids: [foundations-mechanics, compatibility-integration, performance-capacity-cost]}
+  - {id: keep.context, locator: proposals/KEEP-0367-context-parameters.md, kind: behavior, capability_id: language.context, behavior_id: migration.context-parameters, title: Context parameter resolutionと移行, surface_ids: [foundations-mechanics, migration-evolution-deprecation]}

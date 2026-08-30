@@ -1,0 +1,27 @@
+{
+  "minimum_assertions_per_scenario": 2,
+  "minimum_patterns_per_scenario": 69,
+  "minimum_runtime_boundaries_per_scenario": 4,
+  "negative_case_count": 4,
+  "negative_cases": [
+    {
+      "id": "pattern-deletion",
+      "verdict": "pass"
+    },
+    {
+      "id": "assertion-deletion",
+      "verdict": "pass"
+    },
+    {
+      "id": "runtime-boundary-deletion",
+      "verdict": "pass"
+    },
+    {
+      "id": "old-template-downgrade",
+      "verdict": "pass"
+    }
+  ],
+  "scenario_count": 10,
+  "schema_version": 1,
+  "verdict": "pass"
+}

@@ -1,0 +1,52 @@
+{
+  "candidate_surfaces": [
+    {
+      "candidate_behavior_id": "candidate.authority.kotlin-compiler-2.4.10",
+      "capability_id": "authority.locator-extraction",
+      "claim_id": "authority.locator-inventory-is-copyright-safe-and-incomplete",
+      "classification": "candidate-included-unreviewed",
+      "classification_basis": "domain-contract-projection-unreviewed",
+      "context_digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+      "context_end": 1,
+      "context_start": 0,
+      "context_unit": "utf16-code-unit",
+      "domain_reference_metadata_digest": "sha256:94b1461edaed65ebeb0853040a73358d6a3f6e66ce717bde613cb4c86a4055dc",
+      "edge_id": "edge.authority.kotlin-compiler-2.4.10",
+      "heading_digest": null,
+      "locator": "document-root",
+      "locator_status": "root-document",
+      "pattern_id": "authority/kotlin-compiler-2-4-10",
+      "pattern_kind": "atomic",
+      "reference_url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip",
+      "source_id": "kotlin-compiler-2.4.10",
+      "surface_ids": [
+        "provenance-rights"
+      ],
+      "target_id": "authority.locator-extraction",
+      "variant_ids": [
+        "variant.authority.kotlin-compiler-2.4.10.locked"
+      ]
+    }
+  ],
+  "extraction": {
+    "body_storage": "digest-and-locator-context-digest-only",
+    "method": "locked-body-locator-context-digest",
+    "review_status": "automated-unreviewed",
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v2",
+    "tool_digest": "sha256:250ed66a276212e8d4af1743e1198fa85538cdb830560ff65fcd8b08ad29062a"
+  },
+  "fetch": {
+    "content_type": "application/vnd.reference-atlas.locked-metadata+json",
+    "error_digest": null,
+    "fetched_bytes": null,
+    "fetched_digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+    "final_url": null,
+    "http_status": null,
+    "locked_digest_match": true,
+    "status": "matched"
+  },
+  "locked_source_digest": "sha256:473dd66c7a3ef4b182065b3da670466c1bf2773a9dbb0ed8b33a39fe9d4f876d",
+  "schema_version": 1,
+  "source_id": "kotlin-compiler-2.4.10",
+  "source_url": "https://github.com/JetBrains/kotlin/releases/download/v2.4.10/kotlin-compiler-2.4.10.zip"
+}

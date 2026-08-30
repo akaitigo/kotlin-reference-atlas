@@ -1,0 +1,11 @@
+schema_version: 2
+source_id: kotlin-stdlib-source-2.4.10
+source_digest: sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902
+extraction: {method: machine-readable-primary, tool: git-tree-surface-extractor-v2, reviewed_by: kotlin-atlas-maintainer, reviewed_at: "2026-08-28"}
+surfaces:
+  - {id: stdlib.collections, locator: libraries/stdlib/src/kotlin/collections, kind: behavior, capability_id: stdlib.collections, behavior_id: stdlib.collection-mutation-iteration, title: Collection mutationとiteration境界, surface_ids: [foundations-mechanics, testing-verification]}
+  - {id: stdlib.sequences, locator: libraries/stdlib/src/kotlin/sequences, kind: behavior, capability_id: stdlib.sequences, behavior_id: stdlib.sequence-laziness, title: Sequence lazinessとterminal evaluation, surface_ids: [foundations-mechanics, performance-capacity-cost]}
+  - {id: stdlib.lazy, locator: libraries/stdlib/src/kotlin/util/LazyJVM.kt, kind: behavior, capability_id: stdlib.delegates, behavior_id: stdlib.lazy-thread-safety-modes, title: lazy thread-safety mode比較, surface_ids: [decision-comparison, performance-capacity-cost]}
+  - {id: stdlib.reflection, locator: libraries/stdlib/src/kotlin/jvm/JvmClassMapping.kt, kind: behavior, capability_id: runtime.reflection, behavior_id: reflection.jvm-class-mapping, title: KClassとJava Class mapping, surface_ids: [compatibility-integration, failure-recovery]}
+  - {id: stdlib.results, locator: libraries/stdlib/src/kotlin/util/Result.kt, kind: behavior, capability_id: stdlib.result, behavior_id: stdlib.result-failure-boundary, title: Result success/failure境界, surface_ids: [architecture-design, failure-recovery]}
+  - {id: stdlib.time, locator: libraries/stdlib/src/kotlin/time, kind: capability, capability_id: stdlib.time, behavior_id: stdlib.duration-time-source, title: DurationとTimeSource測定Semantics, surface_ids: [testing-verification, performance-capacity-cost]}

@@ -1,0 +1,259 @@
+schema_version: 2
+atlas_id: kotlin-reference-atlas
+epoch: "2026-08-28"
+completion_class: subject-definitive
+status: incomplete
+policy: >-
+  Gapは文書またはTarget件数では閉じない。各適用Behaviorに専用Claim、Proof Obligation、正常・境界・拒否・障害・回復、
+  実Runtime、比較Variant、Artifact Evidence、Skill Evalが接続され、Core Definitive Gate v2が通過した場合だけclosedにする。
+gaps:
+  - id: authority.exhaustive-locator-review
+    area: authority-extraction
+    state: open
+    target_ids: [quality.kotlin-depth-parity-gate]
+    authority_ids: [kotlin-spec-snapshot, kotlin-docs-snapshot, kotlin-keep-snapshot, kotlin-compiler-source-2.4.10, kotlin-stdlib-source-2.4.10, kotlin-native-source-2.4.10, kotlinx-coroutines-source-1.11.0, kotlinx-serialization-source-snapshot, gradle-source-9.5.0]
+    current_evidence_ids: [authority.locator-validation, authority.body-inventory-validation, authority.review-queue-validation]
+    missing:
+      - 9 Authorityの固定本文をcopyright-safeな一時入力として再取得し、digest一致・stale・failedをSource別に評価する
+      - 既存69 reference edgeとは別に本文全体からLocator offset候補を抽出し、未分類Surfaceをゼロにする
+      - 抽出候補をHuman reviewし、Behavior・Variant・Claim・Proof・Evidenceへ接続する
+      - Queue済み146402 candidate anchorを件数だけで達成扱いせず、一次資料を確認したHuman decisionとreviewer・time・reason・digest・locator・mapping・result整合後に必要な候補だけをSemantic Surface・Atomic behaviorへ昇格する
+  - id: types.subtyping-and-inference
+    area: types
+    state: partial
+    target_ids: [semantics.type-system]
+    authority_ids: [kotlin-spec-snapshot, kotlin-docs-snapshot, kotlin-compiler-source-2.4.10]
+    current_evidence_ids: [semantics.language-types]
+    missing:
+      - LUB/GLB、intersection、definitely-non-null、smart cast data-flow、overload resolutionのBehavior専用compile/runtime証跡
+      - K2 diagnostics比較とSkill Eval
+  - id: nullability.platform-boundaries
+    area: nullability
+    state: partial
+    target_ids: [semantics.type-system, interop.java-consumer]
+    authority_ids: [kotlin-spec-snapshot, kotlin-docs-snapshot]
+    current_evidence_ids: [semantics.language-types, interop.java-consumer]
+    missing:
+      - platform type、generic nullability、lateinit、leaking this、Java annotation enhancementの拒否・障害・回復証跡
+  - id: generics.variance-erasure
+    area: generics
+    state: partial
+    target_ids: [semantics.type-system, platform.jvm-value-class-boundary]
+    authority_ids: [kotlin-spec-snapshot, kotlin-docs-snapshot]
+    current_evidence_ids: [semantics.language-types, jvm.value-class-boundary]
+    missing:
+      - mixed-site variance、star projection、unchecked cast、erasure、reified制約の比較Variantとnegative diagnostics
+  - id: contracts.effects-and-soundness
+    area: contracts
+    state: open
+    target_ids: [semantics.language-core, compiler.runtime-shapes]
+    authority_ids: [kotlin-keep-snapshot, kotlin-compiler-source-2.4.10]
+    current_evidence_ids: []
+    missing:
+      - returns、returnsNotNull、callsInPlace、contract violation境界、cross-module data-flowのcompile/runtime証跡
+  - id: reflection.metadata-and-erasure
+    area: reflection
+    state: open
+    target_ids: [compiler.runtime-shapes, platform.jvm-value-class-boundary]
+    authority_ids: [kotlin-docs-snapshot, kotlin-stdlib-source-2.4.10]
+    current_evidence_ids: []
+    missing:
+      - KClass/KType、typeOf、visibility、annotation、callBy、generic erasure、kotlin-reflect有無の比較とArtifact検査
+  - id: serialization.schema-boundaries
+    area: serialization
+    state: open
+    target_ids: [evolution.compatibility-migration, security.input-boundaries]
+    authority_ids: [kotlinx-serialization-source-snapshot]
+    current_evidence_ids: [evolution.compatibility-migration, security.boundaries]
+    missing:
+      - unknown key、explicit null、default、polymorphism、descriptor、malformed input、schema evolutionの専用Runtime Evidence
+  - id: abi.binary-source-behavioral
+    area: abi
+    state: partial
+    target_ids: [compiler.jvm-bytecode, evolution.compatibility-migration]
+    authority_ids: [kotlin-docs-snapshot, kotlin-compiler-source-2.4.10]
+    current_evidence_ids: [compiler.bytecode-inspection, evolution.compatibility-migration]
+    missing:
+      - JVM ABI dump/check、旧consumer binary実行、KLIB互換、default argument/value class/inline変更の破壊・回復比較
+  - id: compiler.k2-diagnostics
+    area: compiler-diagnostics
+    state: open
+    target_ids: [compiler.runtime-shapes, quality.failure-debugging]
+    authority_ids: [kotlin-compiler-source-2.4.10, kotlin-docs-snapshot]
+    current_evidence_ids: [failure.debugging]
+    missing:
+      - Diagnostic ID、位置、severity、language/progressive version差、K2 migration diagnosticsのfixtureとcompiler Artifact
+  - id: compiler.incremental-compilation
+    area: incremental-compilation
+    state: open
+    target_ids: [build.toolchain-lock, performance.measurement-harness, quality.failure-debugging]
+    authority_ids: [kotlin-docs-snapshot, kotlin-compiler-source-2.4.10, gradle-source-9.5.0]
+    current_evidence_ids: [build.toolchain-lock, performance.measurement]
+    missing:
+      - classpath snapshot、dirty set、cache invalidation、fallback、clean/incremental比較、Build Report Artifact
+  - id: multiplatform.source-set-hierarchy
+    area: multiplatform-source-sets
+    state: partial
+    target_ids: [interop.expect-actual, platform.jvm-js-wasm-runtime, platform.native-runtime]
+    authority_ids: [kotlin-docs-snapshot, kotlin-compiler-source-2.4.10]
+    current_evidence_ids: [platform.multiplatform-runtime, platform.native-compile]
+    missing:
+      - hierarchical source sets、dependsOn、default hierarchy、platform API漏洩、expect/actual visibilityの拒否・回復証跡
+  - id: interop.java-surface
+    area: java-interop
+    state: partial
+    target_ids: [interop.java-consumer, compiler.jvm-bytecode]
+    authority_ids: [kotlin-docs-snapshot, kotlin-compiler-source-2.4.10]
+    current_evidence_ids: [interop.java-consumer, compiler.bytecode-inspection]
+    missing:
+      - SAM、wildcard、checked exception、nullability annotation、default method、records、sealed、synthetic memberの双方向consumer証跡
+  - id: interop.javascript-typescript
+    area: js-interop
+    state: open
+    target_ids: [platform.jvm-js-wasm-runtime]
+    authority_ids: [kotlin-docs-snapshot, kotlin-compiler-source-2.4.10]
+    current_evidence_ids: [platform.multiplatform-runtime]
+    missing:
+      - external/@JsModule/@JsExport、Promise、dynamic、d.ts、npm consumer、exception/null境界のNode実Runtime証跡
+  - id: interop.native-runtime
+    area: native-interop
+    state: blocked
+    target_ids: [platform.native-runtime, interop.expect-actual]
+    authority_ids: [kotlin-docs-snapshot, kotlin-native-source-2.4.10]
+    current_evidence_ids: [platform.native-compile]
+    missing:
+      - macOS arm64 executableの実行、GC/thread/freeze境界、uncaught failure、recovery、runtime Artifact
+    blocker: Full Xcodeを持つmacOS arm64 runnerが必要。KLIB compileは代替にしない。
+  - id: interop.swift-objective-c
+    area: swift-interop
+    state: blocked
+    target_ids: [platform.native-runtime]
+    authority_ids: [kotlin-docs-snapshot, kotlin-native-source-2.4.10]
+    current_evidence_ids: []
+    missing:
+      - Kotlin framework/Swift Export consumer、nullable/generic/suspend/error mapping、ABI差、XCTest runtime Artifact
+    blocker: Full XcodeとSwift toolchainを持つmacOS arm64 runnerが必要。
+  - id: interop.c-abi-and-memory
+    area: c-interop
+    state: blocked
+    target_ids: [platform.native-runtime]
+    authority_ids: [kotlin-docs-snapshot, kotlin-native-source-2.4.10]
+    current_evidence_ids: []
+    missing:
+      - cinterop header mapping、pointer lifetime、StableRef、callback、errno、allocation/free、invalid inputのnative runtime証跡
+    blocker: Kotlin/Native executable linkとC toolchainを持つrunnerが必要。
+  - id: interop.wasm-javascript
+    area: wasm-interop
+    state: open
+    target_ids: [platform.jvm-js-wasm-runtime]
+    authority_ids: [kotlin-docs-snapshot, kotlin-compiler-source-2.4.10]
+    current_evidence_ids: [platform.multiplatform-runtime]
+    missing:
+      - external/nativeInvoke/JsAny、exception、GC boundary、JS consumer、WASI差の実Runtime比較
+  - id: coroutines.cancellation-context
+    area: coroutines
+    state: partial
+    target_ids: [concurrency.structured-cancellation, reference-system.automation-workbench]
+    authority_ids: [kotlin-spec-snapshot, kotlinx-coroutines-source-1.11.0]
+    current_evidence_ids: [coroutines.failure-propagation]
+    missing:
+      - supervisor、NonCancellable、timeout、exception aggregation、dispatcher/context element、resource cleanupの専用Artifact Evidence
+  - id: flow.backpressure-operators
+    area: flow
+    state: partial
+    target_ids: [concurrency.flow-pipelines, reference-system.automation-workbench]
+    authority_ids: [kotlinx-coroutines-source-1.11.0]
+    current_evidence_ids: [flow.pipeline-semantics]
+    missing:
+      - buffer/conflate/collectLatest、fusion、flowOn、shareIn/stateIn、combine/flatMap、retry/catch境界の速度差とcancellation Artifact
+  - id: gradle.plugin-toolchain
+    area: gradle-toolchain
+    state: partial
+    target_ids: [build.gradle-plugin-consumer, build.toolchain-lock]
+    authority_ids: [kotlin-docs-snapshot, kotlin-compiler-source-2.4.10, gradle-source-9.5.0]
+    current_evidence_ids: [gradle.plugin-consumer, build.toolchain-lock]
+    missing:
+      - KGP extension/task model、compilerOptions、Java toolchain整合、configuration/build cache、composite/plugin consumer失敗回復
+  - id: testing.property-fuzz
+    area: testing
+    state: open
+    target_ids: [quality.testing-oracles, security.input-boundaries]
+    authority_ids: [kotlin-docs-snapshot, kotlin-stdlib-source-2.4.10]
+    current_evidence_ids: [quality.testing-oracles, security.boundaries]
+    missing:
+      - property generator、shrinking、seed再現、parser fuzz、concurrency stress、mutation sensitivity Artifact
+  - id: performance.memory
+    area: performance-memory
+    state: open
+    target_ids: [performance.measurement-harness, platform.native-runtime]
+    authority_ids: [kotlin-docs-snapshot, kotlin-native-source-2.4.10, kotlin-compiler-source-2.4.10]
+    current_evidence_ids: [performance.measurement]
+    missing:
+      - JMH相当warmup/fork、allocation/GC、coroutine/Flow throughput、JS/Wasm/Native memory、regression thresholdとprofile Artifact
+  - id: security.supply-chain
+    area: security-supply-chain
+    state: partial
+    target_ids: [security.input-boundaries, build.toolchain-lock, publication.complete-sbom]
+    authority_ids: [kotlin-docs-snapshot, gradle-source-9.5.0]
+    current_evidence_ids: [security.boundaries, build.toolchain-lock, publication.complete-sbom]
+    missing:
+      - dependency verification tamper、plugin portal/repository policy、artifact provenance、malicious serialization input、secret/log leakageの拒否証跡
+  - id: debug.profiling
+    area: debug-profiling
+    state: open
+    target_ids: [quality.failure-debugging, operation.lifecycle-recovery]
+    authority_ids: [kotlin-docs-snapshot, kotlin-compiler-source-2.4.10, kotlinx-coroutines-source-1.11.0]
+    current_evidence_ids: [failure.debugging, operation.lifecycle-recovery]
+    missing:
+      - coroutine debug probes、stacktrace recovery、JFR/async-profiler、Gradle build report、JS source map、Native crash/debug symbol Artifact
+  - id: migration.deprecation
+    area: migration-deprecation
+    state: partial
+    target_ids: [evolution.compatibility-migration, compiler.runtime-shapes, build.toolchain-lock]
+    authority_ids: [kotlin-docs-snapshot, kotlin-keep-snapshot, kotlin-compiler-source-2.4.10]
+    current_evidence_ids: [evolution.compatibility-migration]
+    missing:
+      - language/api/progressive version、ReplaceWith、deprecation level、K2/KGP/Gradle更新、rollbackと旧consumer比較
+  - id: operations.runtime-lifecycle
+    area: runtime-operations
+    state: partial
+    target_ids: [operation.lifecycle-recovery, operation.local-evidence, operation.container-evidence, reference-system.automation-workbench]
+    authority_ids: [kotlin-docs-snapshot, kotlin-compiler-source-2.4.10, gradle-source-9.5.0]
+    current_evidence_ids: [operation.lifecycle-recovery, operation.local-verification, operation.container-verification]
+    missing:
+      - daemon/process leak、cache corruption、resource exhaustion、health/metrics/log correlation、backup/restore相当のbuild artifact回復Runbookと実証
+  - id: skill.definitive-behavior-routing
+    area: agent-skill
+    state: partial
+    target_ids: [skill.router-evaluation, reference-system.automation-workbench]
+    authority_ids: [reference-atlas-core-v1]
+    current_evidence_ids: [skill.router-evaluation, skill.agent-forward-evaluation]
+    missing:
+      - 22 Mastery routing gapを閉じ、各Authority昇格Behaviorと5 Scenarioへ専用Routeを接続する
+      - Router Matrix／Forward EvalをBehavior別実Runtime Proofの代替にしない
+  - id: reference-system.cross-platform-integration
+    area: integrated-reference-system
+    state: partial
+    target_ids: [reference-system.automation-workbench]
+    authority_ids: [kotlin-spec-snapshot, kotlinx-coroutines-source-1.11.0, gradle-source-9.5.0]
+    current_evidence_ids: [workbench.jvm-runtime]
+    missing:
+      - JVM traceと同一ContractをJS・Wasm・Native実Runtimeへ接続し、Platform差・失敗・回復をArtifact化する
+      - 5 Behaviorそれぞれの専用Claim・10 Scenario Matrix・Skill Evalへ分割する
+  - id: comparisons.behavior-variants
+    area: comparison
+    state: partial
+    target_ids: [reference-system.automation-workbench, semantics.language-core, build.toolchain-lock]
+    authority_ids: [kotlin-spec-snapshot, kotlin-docs-snapshot, gradle-source-9.5.0]
+    current_evidence_ids: [workbench.jvm-runtime]
+    missing:
+      - 各比較適用Behaviorで2件以上の実行Variant、同一入力、差分Oracle、Artifact・traceを接続する
+  - id: parity.frontend-evidence-density
+    area: parity
+    state: open
+    target_ids: [quality.kotlin-depth-parity-gate]
+    authority_ids: [reference-atlas-core-definitive-v2]
+    current_evidence_ids: []
+    missing:
+      - FE Depth Reference正本の18軸をKotlin固有denominatorへ写像し、Authority→Behavior→Variant→Runtime→Artifact・trace→Comparison→Skill Evalでgap 0にする
+      - FEの絶対件数・比率ではなくBehavior×Scenario×Profile×Proof×専用Artifact単位で実行Evidenceを閉じる

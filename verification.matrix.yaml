@@ -1,0 +1,12 @@
+schema_version: 2
+atlas_id: kotlin-reference-atlas
+epoch: "2026-08-28"
+rows:
+  - behavior_id: coroutines.job-state-cancellation
+    scenario: failure
+    applicability: required
+    rationale: 子Coroutine失敗時の兄弟cancelとcaller伝播をJVM実Runtimeで検証する既存証跡をv2 Matrixへ移行する。
+    proof_obligation_id: coroutines.sibling-finally
+    evidence_ids: [coroutines.failure-propagation]
+    execution_requirement: runtime
+    profile: local

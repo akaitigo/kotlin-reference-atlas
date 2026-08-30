@@ -1,0 +1,142 @@
+{
+  "absolute_count_threshold_transplanted": false,
+  "all_axes_closed": false,
+  "axis_count": 18,
+  "axis_results": [
+    {
+      "behavior_count": 69,
+      "gap_count": 1,
+      "id": "authority-body-digestion",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 69,
+      "gap_count": 2,
+      "id": "surface-atomic-behavior-variant",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 69,
+      "gap_count": 4,
+      "id": "real-runtime-lab",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 69,
+      "gap_count": 1,
+      "id": "scenario-normal",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 69,
+      "gap_count": 1,
+      "id": "scenario-boundary",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 69,
+      "gap_count": 1,
+      "id": "scenario-refusal",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 69,
+      "gap_count": 1,
+      "id": "scenario-failure",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 69,
+      "gap_count": 1,
+      "id": "scenario-recovery",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 22,
+      "gap_count": 2,
+      "id": "scenario-migration",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 24,
+      "gap_count": 2,
+      "id": "scenario-operations",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 12,
+      "gap_count": 2,
+      "id": "scenario-security",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 6,
+      "gap_count": 1,
+      "id": "scenario-performance",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 20,
+      "gap_count": 7,
+      "id": "scenario-compatibility",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 69,
+      "gap_count": 1,
+      "id": "artifact-trace",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 5,
+      "gap_count": 1,
+      "id": "integrated-reference-system",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 69,
+      "gap_count": 1,
+      "id": "skill-eval",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 69,
+      "gap_count": 1,
+      "id": "rights-provenance",
+      "status": "partial"
+    },
+    {
+      "behavior_count": 69,
+      "gap_count": 0,
+      "id": "non-regression-gate",
+      "status": "satisfied"
+    }
+  ],
+  "core_definitive_required": true,
+  "depth_reference": "baseline/fe-depth-reference-v1.json",
+  "id": "kotlin-depth-parity",
+  "kotlin_authority_behaviors": 69,
+  "local_reference": {
+    "artifact_count": 8,
+    "available": true,
+    "verified": true
+  },
+  "matrix": "atlas/definitive/kotlin-depth-parity.json",
+  "reference_commit": "4a0b2df8e2091a963bd0e0e1bbccef9c84b49a45",
+  "reference_frontend_status": "incomplete",
+  "reference_frontend_summary": {
+    "missing": 0,
+    "partial": 17,
+    "satisfied": 1
+  },
+  "schema_version": 1,
+  "status_counts": {
+    "missing": 0,
+    "partial": 17,
+    "satisfied": 1
+  },
+  "total_axis_gaps": 30,
+  "unassigned_behaviors": [],
+  "verdict": "incomplete",
+  "violations": []
+}

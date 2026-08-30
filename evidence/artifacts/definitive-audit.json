@@ -1,0 +1,14 @@
+{
+  "active_definitive_certificate": null,
+  "base_audit": "監査済み: kotlin-reference-atlas completion_class=incomplete manifest_status=incomplete mastery=14 target_sets=13 targets=33 claims=31 evidence=33 open_required=3",
+  "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
+  "completion_class": "incomplete",
+  "definitive_audit_exit_code": 1,
+  "definitive_audit_output": "エラー: subject-definitiveではrequired Targetをcoveredにする必要があります: authority.locator-extraction state=partial\nexit status 1",
+  "evidence_dependency_audit": "Evidence dependency監査済み: kotlin-reference-atlas inputs=4 changed_inputs=4 outputs=819 affected_outputs=819 reruns=1 digest_only_closure=false",
+  "evidence_durability_audit_exit_code": 1,
+  "evidence_durability_audit_output": "エラー: failed runを成功Evidence directoryへ公開できません\nexit status 1",
+  "scenario_plan_audit_exit_code": 1,
+  "scenario_plan_audit_output": "エラー: Scenario Closure Evidence durability: failed runを成功Evidence directoryへ公開できません\nexit status 1",
+  "verdict": "incomplete"
+}

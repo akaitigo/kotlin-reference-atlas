@@ -1,0 +1,35 @@
+{
+  "all_candidates_pending_human": true,
+  "baseline": "baselines/authority-body-inventory-v1.json",
+  "historical_anchor_floor": 146146,
+  "index": "authority/body-inventory.snapshot.json",
+  "local_methodology_reference": {
+    "artifact_count": 5,
+    "available": true,
+    "verified": true
+  },
+  "methodology_reference": "baseline/fe-authority-body-reference-v1.json",
+  "raw_anchor_depth_credit": false,
+  "schema_migration": "migrations/authority-body-schema-v2.json",
+  "schema_version": 1,
+  "stable_historical_anchors_preserved": true,
+  "summary": {
+    "anchors_by_selector": {
+      "document-root": 16,
+      "tracked-blob": 146386
+    },
+    "authority_semantics_exhaustive": false,
+    "failed_documents": 0,
+    "human_reviewed_anchors": 0,
+    "matched_documents": 16,
+    "pending_human_anchors": 146402,
+    "promoted_surface_artifacts": 0,
+    "raw_anchor_candidates": 146402,
+    "selector_exhaustive_documents": 16,
+    "source_entries": 18,
+    "stale_documents": 0,
+    "unique_documents": 16
+  },
+  "verdict": "pass",
+  "violations": []
+}

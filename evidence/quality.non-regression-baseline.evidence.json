@@ -1,0 +1,27 @@
+{
+  "artifact": {
+    "digest": "sha256:58b0348a1248e99c3c36e6fd0ccfaf06b682bbab6f28b557a2bf3ae8245a9284",
+    "media_type": "application/json",
+    "size_bytes": 1116,
+    "uri": "evidence/artifacts/non-regression.json"
+  },
+  "atlas_id": "kotlin-reference-atlas",
+  "claim_ids": [
+    "quality.public-main-never-regresses"
+  ],
+  "command": "python3 scripts/verify_non_regression.py",
+  "created_at": "2026-08-28T00:00:00+09:00",
+  "environment": {
+    "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
+    "profile": "local"
+  },
+  "harness_digest": "sha256:c4c9c25bae599ca507cd199b81c2ebfc9c4f55237d6c8494c8a51219e2b99bce",
+  "harness_path": "baseline/public-main-v0.2.0.json",
+  "id": "quality.non-regression-baseline",
+  "kind": "compatibility",
+  "producer": "kotlin-atlas-baseline-gate",
+  "retention": "git",
+  "schema_version": 1,
+  "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
+  "verdict": "pass"
+}

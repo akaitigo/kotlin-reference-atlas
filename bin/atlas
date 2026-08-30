@@ -8,7 +8,7 @@ if [[ -d "${repo_root}/.atlas-core/.git" ]]; then
 fi
 core_dir="${ATLAS_CORE_DIR:-${default_core_dir}}"
 go_cache_dir="${ATLAS_GO_CACHE_DIR:-${repo_root}/.cache/go-build}"
-pinned_commit="b32f6afe888e2e07eef0e2e016f6f7d139582159"
+pinned_commit="072d7ca77981f51754e824d70c6d4ecd55ea67e5"
 
 if [[ ! -d "${core_dir}/.git" ]]; then
   echo "エラー: reference-atlas-coreが見つかりません: ${core_dir}" >&2
@@ -22,8 +22,8 @@ if [[ "${actual_commit}" != "${pinned_commit}" ]]; then
 fi
 
 command="${1:-}"
-if [[ "${command}" != "validate" && "${command}" != "audit" && "${command}" != "certificate" ]]; then
-  echo "エラー: 使い方: atlas validate <manifest...> | atlas audit <repository-root> | atlas certificate generate|verify <repository-root>" >&2
+if [[ "${command}" != "validate" && "${command}" != "audit" && "${command}" != "certificate" && "${command}" != "baseline" ]]; then
+  echo "エラー: 使い方: atlas validate <manifest...> | atlas audit <repository-root> [--gate definitive|non-regression|evidence-dependency] | atlas baseline generate <repository-root> <output> --commit SHA [--captured-at RFC3339] | atlas certificate generate|verify|generate-definitive|verify-definitive <repository-root>" >&2
   exit 1
 fi
 
@@ -41,6 +41,10 @@ if [[ "${command}" == "validate" ]]; then
   exec env GOCACHE="${go_cache_dir}" go -C "${core_dir}" run ./cmd/atlas validate "${manifest_paths[@]}"
 fi
 
+if [[ "${command}" == "baseline" ]]; then
+  exec env GOCACHE="${go_cache_dir}" go -C "${core_dir}" run ./cmd/atlas baseline "$@"
+fi
+
 if [[ "${command}" == "certificate" ]]; then
   if [[ "$#" -lt 2 ]]; then
     echo "エラー: 使い方: atlas certificate generate|verify <repository-root>" >&2
@@ -55,12 +59,19 @@ if [[ "${command}" == "certificate" ]]; then
   exec env GOCACHE="${go_cache_dir}" go -C "${core_dir}" run ./cmd/atlas certificate "${certificate_action}" "${certificate_root}" "$@"
 fi
 
-if [[ "$#" -ne 1 ]]; then
-  echo "エラー: 使い方: atlas audit <repository-root>" >&2
+if [[ "$#" -ne 1 && "$#" -ne 3 ]]; then
+  echo "エラー: 使い方: atlas audit <repository-root> [--gate definitive|non-regression|authority-extraction|authority-body|authority-review|authority-review-export|authority-relock|skill-router|scenario-trace|scenario-plan|evidence-durability|evidence-dependency]" >&2
   exit 1
 fi
 audit_root="$1"
 if [[ "${audit_root}" != /* ]]; then
   audit_root="${repo_root}/${audit_root}"
+fi
+if [[ "$#" -eq 3 ]]; then
+  if [[ "$2" != "--gate" || ! "$3" =~ ^(definitive|non-regression|authority-extraction|authority-body|authority-review|authority-review-export|authority-relock|skill-router|scenario-trace|scenario-plan|evidence-durability|evidence-dependency)$ ]]; then
+    echo "エラー: 不明なaudit gateです: $3" >&2
+    exit 1
+  fi
+  exec env GOCACHE="${go_cache_dir}" go -C "${core_dir}" run ./cmd/atlas audit "${audit_root}" --gate "$3"
 fi
 exec env GOCACHE="${go_cache_dir}" go -C "${core_dir}" run ./cmd/atlas audit "${audit_root}"

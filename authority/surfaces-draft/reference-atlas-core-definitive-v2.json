@@ -1,0 +1,52 @@
+{
+  "candidate_surfaces": [
+    {
+      "candidate_behavior_id": "candidate.authority.reference-atlas-core-definitive-v2",
+      "capability_id": "authority.locator-extraction",
+      "claim_id": "authority.locator-inventory-is-copyright-safe-and-incomplete",
+      "classification": "candidate-included-unreviewed",
+      "classification_basis": "domain-contract-projection-unreviewed",
+      "context_digest": "sha256:2c0f1135d55c00f647ad5f4aa78333d00980f5bc5613dc32ccea9a784bbd9ab2",
+      "context_end": 1,
+      "context_start": 0,
+      "context_unit": "utf16-code-unit",
+      "domain_reference_metadata_digest": "sha256:792c3bb8774e1c9fce9b3b34bd63a47f9f1e1b9ffa45246418b811c1a8505220",
+      "edge_id": "edge.authority.reference-atlas-core-definitive-v2",
+      "heading_digest": null,
+      "locator": "document-root",
+      "locator_status": "root-document",
+      "pattern_id": "authority/reference-atlas-core-definitive-v2",
+      "pattern_kind": "atomic",
+      "reference_url": "https://github.com/akaitigo/reference-atlas-core/commit/072d7ca77981f51754e824d70c6d4ecd55ea67e5",
+      "source_id": "reference-atlas-core-definitive-v2",
+      "surface_ids": [
+        "provenance-rights"
+      ],
+      "target_id": "authority.locator-extraction",
+      "variant_ids": [
+        "variant.authority.reference-atlas-core-definitive-v2.locked"
+      ]
+    }
+  ],
+  "extraction": {
+    "body_storage": "digest-and-locator-context-digest-only",
+    "method": "locked-body-locator-context-digest",
+    "review_status": "automated-unreviewed",
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v2",
+    "tool_digest": "sha256:250ed66a276212e8d4af1743e1198fa85538cdb830560ff65fcd8b08ad29062a"
+  },
+  "fetch": {
+    "content_type": "application/vnd.reference-atlas.locked-metadata+json",
+    "error_digest": null,
+    "fetched_bytes": null,
+    "fetched_digest": "sha256:2c0f1135d55c00f647ad5f4aa78333d00980f5bc5613dc32ccea9a784bbd9ab2",
+    "final_url": null,
+    "http_status": null,
+    "locked_digest_match": true,
+    "status": "matched"
+  },
+  "locked_source_digest": "sha256:2c0f1135d55c00f647ad5f4aa78333d00980f5bc5613dc32ccea9a784bbd9ab2",
+  "schema_version": 1,
+  "source_id": "reference-atlas-core-definitive-v2",
+  "source_url": "https://github.com/akaitigo/reference-atlas-core/commit/072d7ca77981f51754e824d70c6d4ecd55ea67e5"
+}

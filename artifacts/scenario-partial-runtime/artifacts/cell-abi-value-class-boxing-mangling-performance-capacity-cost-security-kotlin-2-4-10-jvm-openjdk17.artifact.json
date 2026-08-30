@@ -1,0 +1,37 @@
+{
+  "cell_id": "cell.abi.value-class-boxing-mangling.performance-capacity-cost.security.kotlin-2.4.10-jvm-openjdk17",
+  "compiler_artifact": {
+    "bytes": 6972,
+    "digest": "sha256:452c0b608bb6450f11c78edad8afeae402c4e7688a14476cf6abebd6a633647d",
+    "path": "labs/abi-runtime-security/build/libs/abi-runtime-security-jvm-0.2.0.jar"
+  },
+  "harness_digest": "sha256:3e64feae71035a839621fc354ce69c68cb3844bc5aef27b450ad6d267347c936",
+  "oracle": {
+    "assertion": "performance capacity cost boundary remains deterministic under repetition",
+    "kind": "kotlin-value-class-security-boundary",
+    "passed": true,
+    "scenario": "security",
+    "surface_id": "performance-capacity-cost"
+  },
+  "runtime_identity": {
+    "compiler": "Kotlin 2.4.10 IR",
+    "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+    "host_architecture": "arm64",
+    "host_os": "Darwin",
+    "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+    "node": "v25.2.1",
+    "runtime": "JVM on OpenJDK 17",
+    "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+  },
+  "schema_version": 1,
+  "source_digest": "sha256:9511134072ec7ce54bd544c895c38404aa0187b7f434bac2dfd0e9bd3d7a4639",
+  "test_result": {
+    "digest": "sha256:32c720148b648e84dc8c3473c6de95a282fd5b0ea2a0dbeb25edbe6f3e4489f2",
+    "path": "labs/abi-runtime-security/build/test-results/jvmTest/TEST-dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest.xml",
+    "testcase": {
+      "classname": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+      "name": "performance capacity cost boundary remains deterministic under repetition()[jvm]",
+      "time": "0.034"
+    }
+  }
+}

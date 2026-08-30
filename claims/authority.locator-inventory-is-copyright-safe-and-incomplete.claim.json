@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "authority.locator-extraction",
+  "id": "authority.locator-inventory-is-copyright-safe-and-incomplete",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "本文fieldを再帰的に拒否し、9 Sourceのdeferred、69 reference edge、0 exhaustive Surface、0 Human reviewを実体から再集計すること"
+      ],
+      "id": "authority.locator-storage-and-incompleteness",
+      "statement": "本文fieldを再帰的に拒否し、9 Sourceのdeferred、69 reference edge、0 exhaustive Surface、0 Human reviewを実体から再集計すること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "reference-atlas-core-definitive-v2"
+  ],
+  "statement": "Authority locator InventoryはURL・metadata・digest・offsetだけを許可し、既存reference edge分類と本文全体の網羅抽出を分離し、未取得・未Reviewを未完として記録する。",
+  "status": "accepted"
+}

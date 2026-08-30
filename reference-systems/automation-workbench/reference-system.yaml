@@ -1,0 +1,18 @@
+schema_version: 1
+id: automation-workbench
+title: Kotlin Automation Workbench
+status: partial
+runtime: jvm
+entrypoint: dev.akaitigo.kotlinatlas.workbench.AutomationWorkbench
+behaviors:
+  - coroutines.job-state-cancellation
+  - coroutines.structured-scope-lifetime
+  - flow.shared-replay-buffer-overflow
+  - gradle.jvm-toolchain-selection
+  - stdlib.result-failure-boundary
+scenarios: [normal, boundary, rejection, failure, recovery]
+comparison_variants: [strict, normalize]
+artifact: evidence/artifacts/workbench-jvm-runtime.json
+limitations:
+  - JS、Wasm、Native実Runtimeは未接続である。
+  - Behavior専用Claim、Proof Obligation、Skill Evalへの分割は未完である。

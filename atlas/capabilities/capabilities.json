@@ -3,6 +3,8 @@
   "atlas_id": "kotlin-reference-atlas",
   "capabilities": [
     { "id": "authority.lock", "title_ja": "一次資料とToolchainの固定", "verdict": "default", "source_ids": ["reference-atlas-core-v1", "kotlin-compiler-2.4.10", "gradle-9.5.0", "kotlinx-coroutines-core-jvm-1.11.0"], "lab": "scripts/verify.py" },
+    { "id": "authority.locator-extraction", "title_ja": "一次資料Locator抽出と本文保存境界", "verdict": "conditional", "source_ids": ["kotlin-spec-snapshot", "kotlin-docs-snapshot", "kotlin-keep-snapshot", "kotlin-compiler-source-2.4.10", "kotlin-stdlib-source-2.4.10", "kotlin-native-source-2.4.10", "kotlinx-coroutines-source-1.11.0", "kotlinx-serialization-source-snapshot", "gradle-source-9.5.0"], "lab": "scripts/verify_authority_locators.py" },
+    { "id": "authority.body-denominator", "title_ja": "一次資料unique documentとraw anchor候補母集団", "verdict": "conditional", "source_ids": ["kotlin-spec-snapshot", "kotlin-docs-snapshot", "kotlin-keep-snapshot", "kotlin-compiler-source-2.4.10", "kotlin-stdlib-source-2.4.10", "kotlin-native-source-2.4.10", "kotlinx-coroutines-source-1.11.0", "kotlinx-serialization-source-snapshot", "gradle-source-9.5.0"], "lab": "scripts/verify_authority_body_inventory.py" },
     { "id": "inventory.public-surface", "title_ja": "Compilerとstdlibの公開Surface Inventory", "verdict": "default", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "scripts/inventory.py" },
     { "id": "semantics.language-core", "title_ja": "Nullability、sealed型、smart cast、delegate、Sequence", "verdict": "default", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/semantics" },
     { "id": "semantics.type-system", "title_ja": "Variance、Nothing、reified型", "verdict": "default", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/semantics" },
@@ -24,6 +26,9 @@
     { "id": "operation.lifecycle-recovery", "title_ja": "Service lifecycleの劣化・回復・停止", "verdict": "default", "source_ids": ["kotlin-compiler-2.4.10"], "lab": "labs/engineering" },
     { "id": "operation.reproducible-profiles", "title_ja": "LocalとContainer profileのEvidence再生成", "verdict": "default", "source_ids": ["reference-atlas-core-v1", "gradle-9.5.0"], "lab": "scripts/verify.py" },
     { "id": "publication.complete-sbom", "title_ja": "Gradleとnpm lockから生成するtransitive SPDX SBOM", "verdict": "default", "source_ids": ["reference-atlas-core-v1", "gradle-9.5.0"], "lab": "scripts/generate_sbom.py" },
-    { "id": "skill.coverage-router", "title_ja": "Coverage準拠Router", "verdict": "default", "source_ids": ["reference-atlas-core-v1"], "lab": "evals" }
+    { "id": "skill.coverage-router", "title_ja": "Coverage準拠Router", "verdict": "default", "source_ids": ["reference-atlas-core-v1"], "lab": "evals" },
+    { "id": "reference-system.automation-workbench", "title_ja": "統合Automation Workbench", "verdict": "conditional", "source_ids": ["kotlin-spec-snapshot", "kotlinx-coroutines-source-1.11.0", "gradle-source-9.5.0"], "lab": "reference-systems/automation-workbench" },
+    { "id": "quality.non-regression-baseline", "title_ja": "公開main非後退Baseline", "verdict": "default", "source_ids": ["reference-atlas-core-v1", "reference-atlas-core-definitive-v2"], "lab": "scripts/verify_non_regression.py" },
+    { "id": "quality.kotlin-depth-parity", "title_ja": "Kotlin Depth Parity Gate", "verdict": "default", "source_ids": ["reference-atlas-core-definitive-v2"], "lab": "scripts/verify_fe_parity.py" }
   ]
 }

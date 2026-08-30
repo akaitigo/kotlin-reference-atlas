@@ -1,0 +1,22 @@
+{
+  "contract": "toolchains/python-ci.lock.json",
+  "contract_digest": "sha256:7cb49c16218ac3d3b9730cc32ad88e420cecd197557008365865f864cea78fdd",
+  "packages": [
+    {
+      "distribution": "PyYAML",
+      "version": "6.0.3"
+    }
+  ],
+  "profile_id": "github-actions-macos-14-local-gate",
+  "python": {
+    "implementation": "CPython",
+    "version": "3.14.0"
+  },
+  "python_contract_version": "3.14.0",
+  "pyyaml_version": "6.0.3",
+  "requirements": "requirements-ci.lock",
+  "requirements_digest": "sha256:af718fedd6f4ba1f6f41ddd507134a8cd963d4d08ab197cbd80f0e3a1a0fe379",
+  "schema_version": 1,
+  "verdict": "pass",
+  "wheel_hash_count": 9
+}

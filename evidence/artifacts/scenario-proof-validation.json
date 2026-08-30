@@ -1,0 +1,41 @@
+{
+  "authority_atomic_completion_blocked": true,
+  "closure_methodology": {
+    "artifacts": 4,
+    "commit": "f2e4c4b19156f8e993f48cdcbce23679ad881924",
+    "mutation_rejected": true,
+    "vendor_snapshot": "baseline/fe-methodology-vendor/f2e4c4b19156f8e993f48cdcbce23679ad881924",
+    "verified": true
+  },
+  "index": "evidence/scenarios/kotlin-closure-index.json",
+  "integrated_trace_reuse_blocked": true,
+  "methodology": {
+    "artifacts": 4,
+    "commit": "deadad18b6588d2c907170a451c3b5cea5ea4192",
+    "mutation_rejected": true,
+    "vendor_snapshot": "baseline/fe-methodology-vendor/deadad18b6588d2c907170a451c3b5cea5ea4192",
+    "verified": true
+  },
+  "retry_zero_first_attempt_required": true,
+  "schema_version": 1,
+  "summary": {
+    "authority_atomic_rows": 0,
+    "behavior_specific_rows": 0,
+    "behaviors": 69,
+    "closed_surface_scenario_variant_cells": 30,
+    "completion_eligible_rows": 0,
+    "dedicated_artifacts": 690,
+    "dedicated_oracle_trace_artifact_cells": 30,
+    "explicit_gap_rows": 690,
+    "explicit_gap_surface_scenario_variant_cells": 4560,
+    "integrated_trace_rows": 690,
+    "retained_identity_rows": 0,
+    "retry_zero_cells": 30,
+    "rows": 690,
+    "scenarios": 10,
+    "surface_scenario_variant_cells": 4590
+  },
+  "unrelated_artifact_metadata_reuse_blocked": true,
+  "verdict": "pass",
+  "violations": []
+}

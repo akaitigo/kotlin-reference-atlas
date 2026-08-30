@@ -1,0 +1,11 @@
+{
+  "classification": "deterministic-runtime-state-snapshot-not-behavior-proof",
+  "scenario": "performance",
+  "schema_version": 1,
+  "source_trace": {
+    "bytes": 3168,
+    "digest": "sha256:cd2d7e03ddb6e911743d3982a9bb02b1761f6a24b27904a123d43233c6e0094f",
+    "path": "evidence/scenarios/integrated/performance.trace.json"
+  },
+  "status": "passed"
+}

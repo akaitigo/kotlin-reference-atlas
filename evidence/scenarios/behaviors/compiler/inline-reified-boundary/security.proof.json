@@ -1,0 +1,722 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "authority_source": {
+    "artifact_digest": "sha256:dd99046f3e796bdf35a0a31ee2f405e27b673e989c29f9ed19593af7e9b7bdb3",
+    "artifact_digest_verified": true,
+    "artifact_id": "kotlin-spec",
+    "artifact_path": "authority/surfaces/kotlin-spec.authority-surfaces.yaml",
+    "locator": "docs/src/md/kotlin.core/declarations.md#inline-functions",
+    "source_id": "kotlin-spec-snapshot",
+    "surface_id": "spec.declarations.inline"
+  },
+  "behavior_id": "compiler.inline-reified-boundary",
+  "behavior_scope": "authority-inventory-candidate-not-human-reviewed-atomic",
+  "candidate_evidence": [
+    {
+      "artifact": {
+        "digest": "sha256:98c4eac42e85d32d934a21a6777a5f29c548257e3664b9ca6da810e20c9e6770",
+        "exists": true,
+        "path": "evidence/artifacts/lab-results.json"
+      },
+      "claim_ids": [
+        "compiler.runtime-shapes-observable"
+      ],
+      "command": "./gradlew :labs:compiler-runtime:test",
+      "harness": {
+        "digest": "sha256:fa6641ce4ffd67e9b91894f8d6690c429d3e39d7f944398aaa404a91c26d4969",
+        "exists": true,
+        "path": "labs/compiler-runtime/build.gradle.kts"
+      },
+      "id": "compiler.runtime-shapes",
+      "identity": null,
+      "kind": "test-report",
+      "producer": "gradle-junit",
+      "record": {
+        "bytes": 977,
+        "digest": "sha256:3f69f7a8ce26a646ea8dca712791a515f513d3265fe93e30711b4f0289b4fd64",
+        "path": "evidence/compiler.runtime-shapes.evidence.json"
+      },
+      "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
+      "verdict": "pass"
+    }
+  ],
+  "capability_id": "compiler.inline",
+  "claim_ids": [
+    "compiler.runtime-shapes-observable"
+  ],
+  "closure": {
+    "all_surface_scenario_variants_closed": false,
+    "authority_atomic_binding": false,
+    "behavior_specific_evidence": false,
+    "completion_eligible": false,
+    "dedicated_artifact": true,
+    "dedicated_oracle_trace_artifact_all_variants": false,
+    "dedicated_row": true,
+    "retained_identity": false,
+    "retry_zero_all_variants": false,
+    "scenario_applicable": false,
+    "unrelated_metadata_reuse_blocked": true
+  },
+  "gaps": [
+    "This Behavior has no subject-specific oracle classified for this scenario.",
+    "3 of 12 Surface×Scenario×Variant closure cells remain explicit gaps.",
+    "Mapped Target Evidence is candidate context only; unrelated Artifact metadata cannot close a dedicated cell.",
+    "The mapped Claim is shared by multiple Authority inventory Behaviors and is not a dedicated Behavior proof.",
+    "No human-reviewed Authority anchor decision binds this Atomic behavior; completion credit is zero."
+  ],
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "id": "proof.behavior.compiler.inline-reified-boundary.security",
+  "integrated_reference": {
+    "manifest": {
+      "bytes": 33851,
+      "digest": "sha256:3abe4aa0f98c9daeb03e843125c81a68e235a19f9a87748e6ee45ca01f13dcbd",
+      "path": "integrations/reference-system/manifest.json"
+    },
+    "results": {
+      "bytes": 3983,
+      "digest": "sha256:db5a9b489fe103cd22a092393a0bfb27cc7ca0e1816988aa2fdf7cb764d8cb9b",
+      "path": "evidence/scenarios/reference-system-results.json"
+    },
+    "reuse_as_behavior_specific_proof": false,
+    "target_mapped": false,
+    "trace": {
+      "digest": "sha256:00273f5121ddfcaaaf12e8bc14ec7e604ef8665d8f394c4ccc638aa1a30bb3f6",
+      "path": "evidence/scenarios/integrated/security.trace.json",
+      "rows": 1
+    }
+  },
+  "inventory_id": "inventory.compiler.inline-reified-boundary",
+  "required_variants": [
+    "kotlin-2.4.10-k2-jvm-ir-openjdk17",
+    "kotlin-2.4.10-js-ir-node",
+    "kotlin-2.4.10-wasm-js-node",
+    "kotlin-2.4.10-native-macos-arm64"
+  ],
+  "scenario": "security",
+  "schema_version": 1,
+  "specific_evidence": [],
+  "status": "explicit-gap",
+  "surface_ids": [
+    "foundations-mechanics",
+    "performance-capacity-cost",
+    "compatibility-integration"
+  ],
+  "surface_scenario_variant_proofs": [
+    {
+      "closure": {
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
+      },
+      "dedicated_execution": {
+        "artifact": {
+          "bytes": 2320,
+          "digest": "sha256:40196a44cdae1b2f0a19203fa5a81e8f368747616e325cb275bb39d8ec8b36a0",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-foundations-mechanics-security-kotlin-2-4-10-k2-jvm-ir-openjdk17.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 K2 IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "node": "v25.2.1",
+          "runtime": "K2 JVM IR on OpenJDK 17",
+          "variant_id": "kotlin-2.4.10-k2-jvm-ir-openjdk17"
+        },
+        "harness_digest": "sha256:5163702e378c97ff0e15b3b9e526626ca67d753cf9d42fba15f3044fe8b01834",
+        "oracle": {
+          "assertion": "foundations mechanics rejects a mismatched runtime type token",
+          "kind": "kotlin-inline-reified-type-confusion-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "foundations-mechanics"
+        },
+        "retries": 0,
+        "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
+        "trace": {
+          "action_stream": true,
+          "bytes": 3107,
+          "digest": "sha256:439aff2dfff7c8a2e8218659f48c80f8cda3f8a7d6ea201285731c2d68f23407",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-foundations-mechanics-security-kotlin-2-4-10-k2-jvm-ir-openjdk17.trace.json",
+          "resource_stream": true
+        }
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [],
+      "id": "cell.compiler.inline-reified-boundary.foundations-mechanics.security.kotlin-2.4.10-k2-jvm-ir-openjdk17",
+      "scenario": "security",
+      "status": "dedicated-runtime-pass",
+      "surface_id": "foundations-mechanics",
+      "variant_id": "kotlin-2.4.10-k2-jvm-ir-openjdk17"
+    },
+    {
+      "closure": {
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
+      },
+      "dedicated_execution": {
+        "artifact": {
+          "bytes": 2406,
+          "digest": "sha256:16b0147f76de4ad4bd1d8ed6cd0636676f57a15b3f1046a72f24697e04cef534",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-foundations-mechanics-security-kotlin-2-4-10-js-ir-node.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 K2 IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "node": "v25.2.1",
+          "runtime": "K2 Kotlin/JS IR on Node.js",
+          "variant_id": "kotlin-2.4.10-js-ir-node"
+        },
+        "harness_digest": "sha256:5163702e378c97ff0e15b3b9e526626ca67d753cf9d42fba15f3044fe8b01834",
+        "oracle": {
+          "assertion": "foundations mechanics rejects a mismatched runtime type token",
+          "kind": "kotlin-inline-reified-type-confusion-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "foundations-mechanics"
+        },
+        "retries": 0,
+        "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
+        "trace": {
+          "action_stream": true,
+          "bytes": 3182,
+          "digest": "sha256:981f0ce3a453f7a6b2daaa56d927a9a6959931d001dd27b2eaea1475aed5dc1a",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-foundations-mechanics-security-kotlin-2-4-10-js-ir-node.trace.json",
+          "resource_stream": true
+        }
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [],
+      "id": "cell.compiler.inline-reified-boundary.foundations-mechanics.security.kotlin-2.4.10-js-ir-node",
+      "scenario": "security",
+      "status": "dedicated-runtime-pass",
+      "surface_id": "foundations-mechanics",
+      "variant_id": "kotlin-2.4.10-js-ir-node"
+    },
+    {
+      "closure": {
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
+      },
+      "dedicated_execution": {
+        "artifact": {
+          "bytes": 2433,
+          "digest": "sha256:b76d2979edbc372d2931a2bb3a2c7671f2bab162edd058e467b7acca4633deaa",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-foundations-mechanics-security-kotlin-2-4-10-wasm-js-node.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 K2 IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "node": "v25.2.1",
+          "runtime": "K2 Kotlin/Wasm JS on Node.js",
+          "variant_id": "kotlin-2.4.10-wasm-js-node"
+        },
+        "harness_digest": "sha256:5163702e378c97ff0e15b3b9e526626ca67d753cf9d42fba15f3044fe8b01834",
+        "oracle": {
+          "assertion": "foundations mechanics rejects a mismatched runtime type token",
+          "kind": "kotlin-inline-reified-type-confusion-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "foundations-mechanics"
+        },
+        "retries": 0,
+        "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
+        "trace": {
+          "action_stream": true,
+          "bytes": 3205,
+          "digest": "sha256:effea56b5add868be2c0535cb88ac665d3f386e567ea71591fb14bd544f42ffc",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-foundations-mechanics-security-kotlin-2-4-10-wasm-js-node.trace.json",
+          "resource_stream": true
+        }
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [],
+      "id": "cell.compiler.inline-reified-boundary.foundations-mechanics.security.kotlin-2.4.10-wasm-js-node",
+      "scenario": "security",
+      "status": "dedicated-runtime-pass",
+      "surface_id": "foundations-mechanics",
+      "variant_id": "kotlin-2.4.10-wasm-js-node"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.compiler.inline-reified-boundary.foundations-mechanics.security.kotlin-2.4.10-native-macos-arm64",
+      "scenario": "security",
+      "status": "explicit-gap",
+      "surface_id": "foundations-mechanics",
+      "variant_id": "kotlin-2.4.10-native-macos-arm64"
+    },
+    {
+      "closure": {
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
+      },
+      "dedicated_execution": {
+        "artifact": {
+          "bytes": 2352,
+          "digest": "sha256:c0d598d07600d3a5ec70b87d9ec950d32a76c5e0ad509d7670756594203872bb",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-performance-capacity-cost-security-kotlin-2-4-10-k2-jvm-ir-openjdk17.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 K2 IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "node": "v25.2.1",
+          "runtime": "K2 JVM IR on OpenJDK 17",
+          "variant_id": "kotlin-2.4.10-k2-jvm-ir-openjdk17"
+        },
+        "harness_digest": "sha256:5163702e378c97ff0e15b3b9e526626ca67d753cf9d42fba15f3044fe8b01834",
+        "oracle": {
+          "assertion": "performance capacity cost keeps the reified refusal result deterministic",
+          "kind": "kotlin-inline-reified-type-confusion-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "performance-capacity-cost"
+        },
+        "retries": 0,
+        "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
+        "trace": {
+          "action_stream": true,
+          "bytes": 3124,
+          "digest": "sha256:7296dde104c82ede5e473a158e30ac0ab9349bebb83da4156df413b6a384b72a",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-performance-capacity-cost-security-kotlin-2-4-10-k2-jvm-ir-openjdk17.trace.json",
+          "resource_stream": true
+        }
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [],
+      "id": "cell.compiler.inline-reified-boundary.performance-capacity-cost.security.kotlin-2.4.10-k2-jvm-ir-openjdk17",
+      "scenario": "security",
+      "status": "dedicated-runtime-pass",
+      "surface_id": "performance-capacity-cost",
+      "variant_id": "kotlin-2.4.10-k2-jvm-ir-openjdk17"
+    },
+    {
+      "closure": {
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
+      },
+      "dedicated_execution": {
+        "artifact": {
+          "bytes": 2434,
+          "digest": "sha256:2a1ab90db6b6fdd7af35785ee44c364badda2fb4be26c01831bdb7ba14f12209",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-performance-capacity-cost-security-kotlin-2-4-10-js-ir-node.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 K2 IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "node": "v25.2.1",
+          "runtime": "K2 Kotlin/JS IR on Node.js",
+          "variant_id": "kotlin-2.4.10-js-ir-node"
+        },
+        "harness_digest": "sha256:5163702e378c97ff0e15b3b9e526626ca67d753cf9d42fba15f3044fe8b01834",
+        "oracle": {
+          "assertion": "performance capacity cost keeps the reified refusal result deterministic",
+          "kind": "kotlin-inline-reified-type-confusion-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "performance-capacity-cost"
+        },
+        "retries": 0,
+        "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
+        "trace": {
+          "action_stream": true,
+          "bytes": 3195,
+          "digest": "sha256:61681a4eb75370f44b124aa6230be026a2b7eccc505c459b75aabdc0a53ad8e9",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-performance-capacity-cost-security-kotlin-2-4-10-js-ir-node.trace.json",
+          "resource_stream": true
+        }
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [],
+      "id": "cell.compiler.inline-reified-boundary.performance-capacity-cost.security.kotlin-2.4.10-js-ir-node",
+      "scenario": "security",
+      "status": "dedicated-runtime-pass",
+      "surface_id": "performance-capacity-cost",
+      "variant_id": "kotlin-2.4.10-js-ir-node"
+    },
+    {
+      "closure": {
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
+      },
+      "dedicated_execution": {
+        "artifact": {
+          "bytes": 2463,
+          "digest": "sha256:e5444c6c18eb42a847deb1f4d0d393e100e378a61aa7c55aacc612d4a86587ed",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-performance-capacity-cost-security-kotlin-2-4-10-wasm-js-node.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 K2 IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "node": "v25.2.1",
+          "runtime": "K2 Kotlin/Wasm JS on Node.js",
+          "variant_id": "kotlin-2.4.10-wasm-js-node"
+        },
+        "harness_digest": "sha256:5163702e378c97ff0e15b3b9e526626ca67d753cf9d42fba15f3044fe8b01834",
+        "oracle": {
+          "assertion": "performance capacity cost keeps the reified refusal result deterministic",
+          "kind": "kotlin-inline-reified-type-confusion-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "performance-capacity-cost"
+        },
+        "retries": 0,
+        "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
+        "trace": {
+          "action_stream": true,
+          "bytes": 3220,
+          "digest": "sha256:d0dd0e40d30bef800f45f3b280dce2c42b8279f55c5069edee212b8da06d91c8",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-performance-capacity-cost-security-kotlin-2-4-10-wasm-js-node.trace.json",
+          "resource_stream": true
+        }
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [],
+      "id": "cell.compiler.inline-reified-boundary.performance-capacity-cost.security.kotlin-2.4.10-wasm-js-node",
+      "scenario": "security",
+      "status": "dedicated-runtime-pass",
+      "surface_id": "performance-capacity-cost",
+      "variant_id": "kotlin-2.4.10-wasm-js-node"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.compiler.inline-reified-boundary.performance-capacity-cost.security.kotlin-2.4.10-native-macos-arm64",
+      "scenario": "security",
+      "status": "explicit-gap",
+      "surface_id": "performance-capacity-cost",
+      "variant_id": "kotlin-2.4.10-native-macos-arm64"
+    },
+    {
+      "closure": {
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
+      },
+      "dedicated_execution": {
+        "artifact": {
+          "bytes": 2362,
+          "digest": "sha256:3b123ab7ff1853799bdd1b7c0db7726144eefa4708ad2cfadb6ba3bce054c347",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-compatibility-integration-security-kotlin-2-4-10-k2-jvm-ir-openjdk17.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 K2 IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "node": "v25.2.1",
+          "runtime": "K2 JVM IR on OpenJDK 17",
+          "variant_id": "kotlin-2.4.10-k2-jvm-ir-openjdk17"
+        },
+        "harness_digest": "sha256:5163702e378c97ff0e15b3b9e526626ca67d753cf9d42fba15f3044fe8b01834",
+        "oracle": {
+          "assertion": "compatibility integration validates generic elements after outer type erasure",
+          "kind": "kotlin-inline-reified-type-confusion-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "compatibility-integration"
+        },
+        "retries": 0,
+        "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
+        "trace": {
+          "action_stream": true,
+          "bytes": 3129,
+          "digest": "sha256:68a99a8f69c0495e52c5f7770fcdadc583099e56374e7b65cb557bea2478450e",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-compatibility-integration-security-kotlin-2-4-10-k2-jvm-ir-openjdk17.trace.json",
+          "resource_stream": true
+        }
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [],
+      "id": "cell.compiler.inline-reified-boundary.compatibility-integration.security.kotlin-2.4.10-k2-jvm-ir-openjdk17",
+      "scenario": "security",
+      "status": "dedicated-runtime-pass",
+      "surface_id": "compatibility-integration",
+      "variant_id": "kotlin-2.4.10-k2-jvm-ir-openjdk17"
+    },
+    {
+      "closure": {
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
+      },
+      "dedicated_execution": {
+        "artifact": {
+          "bytes": 2444,
+          "digest": "sha256:db527421de28b840ed1b43c0e395c6551b0ffd85c7ad99582fd14ebdb421a7ea",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-compatibility-integration-security-kotlin-2-4-10-js-ir-node.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 K2 IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "node": "v25.2.1",
+          "runtime": "K2 Kotlin/JS IR on Node.js",
+          "variant_id": "kotlin-2.4.10-js-ir-node"
+        },
+        "harness_digest": "sha256:5163702e378c97ff0e15b3b9e526626ca67d753cf9d42fba15f3044fe8b01834",
+        "oracle": {
+          "assertion": "compatibility integration validates generic elements after outer type erasure",
+          "kind": "kotlin-inline-reified-type-confusion-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "compatibility-integration"
+        },
+        "retries": 0,
+        "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
+        "trace": {
+          "action_stream": true,
+          "bytes": 3200,
+          "digest": "sha256:7699370898a48acb51bed4c565300b5760d2153af824513b8d1fdc4eae75dc2c",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-compatibility-integration-security-kotlin-2-4-10-js-ir-node.trace.json",
+          "resource_stream": true
+        }
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [],
+      "id": "cell.compiler.inline-reified-boundary.compatibility-integration.security.kotlin-2.4.10-js-ir-node",
+      "scenario": "security",
+      "status": "dedicated-runtime-pass",
+      "surface_id": "compatibility-integration",
+      "variant_id": "kotlin-2.4.10-js-ir-node"
+    },
+    {
+      "closure": {
+        "artifact_bound": true,
+        "closed": true,
+        "dedicated_to_this_cell": true,
+        "first_attempt_pass": true,
+        "harness_bound": true,
+        "identity_bound": true,
+        "oracle_bound": true,
+        "retry_count_zero": true,
+        "source_bound": true,
+        "trace_bound": true
+      },
+      "dedicated_execution": {
+        "artifact": {
+          "bytes": 2473,
+          "digest": "sha256:69902cec227de3704e9b7e431ce0f5f35ed53ae379c6db73eea8366e2fedaa5c",
+          "path": "artifacts/scenario-partial-runtime/artifacts/cell-compiler-inline-reified-boundary-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.artifact.json"
+        },
+        "attempts": 1,
+        "compiler_runtime_platform_identity": {
+          "compiler": "Kotlin 2.4.10 K2 IR",
+          "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+          "host_architecture": "arm64",
+          "host_os": "Darwin",
+          "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+          "node": "v25.2.1",
+          "runtime": "K2 Kotlin/Wasm JS on Node.js",
+          "variant_id": "kotlin-2.4.10-wasm-js-node"
+        },
+        "harness_digest": "sha256:5163702e378c97ff0e15b3b9e526626ca67d753cf9d42fba15f3044fe8b01834",
+        "oracle": {
+          "assertion": "compatibility integration validates generic elements after outer type erasure",
+          "kind": "kotlin-inline-reified-type-confusion-security",
+          "passed": true,
+          "scenario": "security",
+          "surface_id": "compatibility-integration"
+        },
+        "retries": 0,
+        "source_digest": "sha256:b40a6ff4f339dd3a0ebc26ef7a8cc598acb0a97a1cc745c0d9d49410d59775ff",
+        "trace": {
+          "action_stream": true,
+          "bytes": 3225,
+          "digest": "sha256:589f6565663b0ab2cd65dfb69a48306b91ff7fe609e1ef853f9d208f06052765",
+          "network_stream": true,
+          "path": "artifacts/scenario-partial-runtime/traces/cell-compiler-inline-reified-boundary-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.trace.json",
+          "resource_stream": true
+        }
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [],
+      "id": "cell.compiler.inline-reified-boundary.compatibility-integration.security.kotlin-2.4.10-wasm-js-node",
+      "scenario": "security",
+      "status": "dedicated-runtime-pass",
+      "surface_id": "compatibility-integration",
+      "variant_id": "kotlin-2.4.10-wasm-js-node"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.compiler.inline-reified-boundary.compatibility-integration.security.kotlin-2.4.10-native-macos-arm64",
+      "scenario": "security",
+      "status": "explicit-gap",
+      "surface_id": "compatibility-integration",
+      "variant_id": "kotlin-2.4.10-native-macos-arm64"
+    }
+  ],
+  "target_id": "compiler.runtime-shapes"
+}

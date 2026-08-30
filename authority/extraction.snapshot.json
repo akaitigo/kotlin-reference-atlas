@@ -1,0 +1,207 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "body_storage": "digest-and-locator-context-digest-only",
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "input_digest": "sha256:eaf7c86d5163bef4616a4496080812c0c4ef286f04044388cbdd6bed0c042a27",
+  "schema_version": 1,
+  "sources": [
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:e6a363da25d2e32c5a4947c34816c1e7e412778deb105d6de7ac717aa33a59bb",
+      "id": "gradle-9.5.0",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/gradle-9.5.0.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:8f76483f537c30309402742b10823d0ede23e398722fe8eaf39b4cc952f1e4fd",
+      "id": "gradle-source-9.5.0",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/gradle-source-9.5.0.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:6f077e0417a46697eb1daedbb23041685792534a5d1fe8c8937081c48ff69b48",
+      "id": "kotlin-compiler-2.4.10",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlin-compiler-2.4.10.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:3f43bb88c9b44f8af06562e5979b5d506e794b6c5ab05bdcf287c0bf20f03288",
+      "id": "kotlin-compiler-source-2.4.10",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlin-compiler-source-2.4.10.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:3a4b2ded51a8b4ab8e90f99c7a387aa12a148280ffa01d0c4d1bfd6b145cc413",
+      "id": "kotlin-docs-snapshot",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlin-docs-snapshot.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:abada6ed5dff77fba16cccb9c67b2a06f8a64c0642fed772a309d055d0b60a9f",
+      "id": "kotlin-keep-snapshot",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlin-keep-snapshot.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:3fa5e9d5405a564ae4659e5694e4dee0692d1fb5a56ae02dda05b4ce6a88030a",
+      "id": "kotlin-native-macos-arm64-2.4.10",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlin-native-macos-arm64-2.4.10.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:c42154eda257b2a5e73ecf1ad5056ae25de71f8e7f80d4deafdf743458640a15",
+      "id": "kotlin-native-source-2.4.10",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlin-native-source-2.4.10.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:78b0ec3c232e335e553926011f974b4b48a3b84bdc37ae5905aa4d23594f5778",
+      "id": "kotlin-spec-snapshot",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlin-spec-snapshot.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:1414bd40e6cca93992a720c75e76de93a166fa2f875e43b747f57e90493ad165",
+      "id": "kotlin-stdlib-js-2.4.10",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlin-stdlib-js-2.4.10.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:022e59df0b2d6bf5eab4d45b0c443afb47e3a53c8faa10d134f599bb78e7c397",
+      "id": "kotlin-stdlib-jvm-2.4.10",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlin-stdlib-jvm-2.4.10.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:856c2c2788b3824e0d91d72b739cfbd848de1abd9cfb893adf0c7e034b00f72d",
+      "id": "kotlin-stdlib-source-2.4.10",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlin-stdlib-source-2.4.10.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:d26567ac8045e0c13befccdf4297463876fe5d5ebac03c2000d0d85de91ead83",
+      "id": "kotlin-stdlib-wasm-js-2.4.10",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlin-stdlib-wasm-js-2.4.10.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:66c36ad500871b554693ca5295126475515e3b5b058afe05ffe86a077964ced9",
+      "id": "kotlinx-coroutines-core-jvm-1.11.0",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlinx-coroutines-core-jvm-1.11.0.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:c12e01de527913057a28d0987dc1a572fcd9d576c449d3d24cf716a5d66b855f",
+      "id": "kotlinx-coroutines-source-1.11.0",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlinx-coroutines-source-1.11.0.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:5d83d0780343b21af7ace693ff66c30df9a81ae872f27944baed253e9ed04e05",
+      "id": "kotlinx-serialization-source-snapshot",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/kotlinx-serialization-source-snapshot.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:41e1d58f3ae88b333ce7c0ff6764a36cc81397f650a37f2d892fa1602a3950d0",
+      "id": "reference-atlas-core-definitive-v2",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/reference-atlas-core-definitive-v2.json"
+    },
+    {
+      "candidate_surfaces": 1,
+      "digest": "sha256:cdadf061da1b8649672d011e7051f5199d024d45adaf45c25df6aa44927956dd",
+      "id": "reference-atlas-core-v1",
+      "locator_status": {
+        "root-document": 1
+      },
+      "locked_digest_match": true,
+      "path": "authority/surfaces-draft/reference-atlas-core-v1.json"
+    }
+  ],
+  "status": "incomplete-human-review-required",
+  "summary": {
+    "authority_text_surfaces_exhaustive": false,
+    "candidate_surfaces": 18,
+    "core_v2_eligible_surfaces": 0,
+    "fetch_failed": 0,
+    "fetched_digest_matched": 18,
+    "fetched_digest_stale": 0,
+    "fragments_found": 0,
+    "fragments_not_found": 0,
+    "human_reviewed_surfaces": 0,
+    "locator_evaluations_deferred": 0,
+    "locked_sources": 18,
+    "reference_edges_classified": 0,
+    "root_locators": 18,
+    "unclassified_reference_edges": 18
+  },
+  "tool_digest": "sha256:250ed66a276212e8d4af1743e1198fa85538cdb830560ff65fcd8b08ad29062a"
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "profile_id": "github-actions-macos-14-local-gate",
+  "python": {
+    "implementation": "CPython",
+    "version": "3.14.0",
+    "setup_action": "actions/setup-python",
+    "setup_action_commit": "ece7cb06caefa5fff74198d8649806c4678c61a1"
+  },
+  "requirements": {
+    "install_command": "python3 -m pip install --disable-pip-version-check --only-binary=:all: --require-hashes -r requirements-ci.lock",
+    "path": "requirements-ci.lock",
+    "sha256": "sha256:af718fedd6f4ba1f6f41ddd507134a8cd963d4d08ab197cbd80f0e3a1a0fe379"
+  },
+  "packages": [
+    {
+      "distribution": "PyYAML",
+      "import_name": "yaml",
+      "license": "MIT",
+      "purl": "pkg:pypi/PyYAML@6.0.3",
+      "source": "https://pypi.org/project/PyYAML/6.0.3/",
+      "version": "6.0.3",
+      "wheel_sha256": [
+        "34d5fcd24b8445fadc33f9cf348c1047101756fd760b4dacb5c3e99755703310",
+        "4a2e8cebe2ff6ab7d1050ecd59c25d4c8bd7e6f400f5f82b96557ac0abafd0ac",
+        "501a031947e3a9025ed4405a168e6ef5ae3126c59f90ce0cd6f2bfc477be31b7",
+        "5190d403f121660ce8d1d2c1bb2ef1bd05b5f68533fc5c2ea899bd15f4399b35",
+        "7c6610def4f163542a622a73fb39f534f8c101d690126992300bf3207eab9764",
+        "8d1fab6bb153a416f9aeb4b8763bc0f22a5586065f86f7664fc23339fc1c1fac",
+        "93dda82c9c22deb0a405ea4dc5f2d0cda384168e466364dec6255b293923b2f3",
+        "b3bc83488de33889877a0f2543ade9f70c67d66d9ebb4ac959502e12de895788",
+        "c458b6d084f9b935061bc36216e8a69a7e293a2f1e68bf956dcd9e6cbcd143f5"
+      ]
+    }
+  ]
+}

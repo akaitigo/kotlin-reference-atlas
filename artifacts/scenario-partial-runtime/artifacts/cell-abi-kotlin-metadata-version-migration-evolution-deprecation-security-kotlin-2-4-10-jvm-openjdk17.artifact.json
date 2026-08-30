@@ -1,0 +1,65 @@
+{
+  "cell_id": "cell.abi.kotlin-metadata-version.migration-evolution-deprecation.security.kotlin-2.4.10-jvm-openjdk17",
+  "compiler_artifacts": [
+    {
+      "bytes": 2053,
+      "digest": "sha256:0d832edb79cd082ebda15e470b6a2be6cbbbb350c9e672caa0ad8ca7f80b374b",
+      "path": "labs/abi-metadata-api-supported/build/libs/abi-metadata-api-supported-0.2.0.jar"
+    },
+    {
+      "bytes": 2042,
+      "digest": "sha256:f4e5cadbb291e153f312ad00adb5e5453ca8ba9c72b899eb6eb230380ae3c5c8",
+      "path": "labs/abi-metadata-api-future/build/libs/abi-metadata-api-future-0.2.0.jar"
+    },
+    {
+      "bytes": 1950,
+      "digest": "sha256:6eeffb8ab6c3f6d750438787fb83bdee726ba40aa90e13aa09347706f1917129",
+      "path": "labs/abi-metadata-consumer-supported/build/libs/abi-metadata-consumer-supported-0.2.0.jar"
+    },
+    {
+      "bytes": 1965,
+      "digest": "sha256:ded563ffc53a4a97e9a4598a2f3b438b9f4d15208c5f4ab550fafc3c2c6e5373",
+      "path": "labs/abi-metadata-consumer-override/build/libs/abi-metadata-consumer-override-0.2.0.jar"
+    }
+  ],
+  "compiler_refusal": {
+    "consumer_readable_metadata_version": "2.4.0",
+    "exit_code": 1,
+    "output_digest": "sha256:4c3e48a5e7bb7c9c2695d839a31af67f68318ca0e5c20f44701c47aab1c2aeac",
+    "producer_metadata_version": "999.0.0",
+    "required_diagnostics": [
+      "Incompatible classes were found in dependencies",
+      "binary version of its metadata is 999.0.0",
+      "expected version is 2.4.0"
+    ],
+    "status": "expected-refusal"
+  },
+  "harness_digest": "sha256:54a0ef5fde8be58f1beaab354cae06901dcfa50748c9c291940b1ce92f65b794",
+  "oracle": {
+    "assertion": "future strict metadata is rejected by default and an explicit isolated override executes without changing the security result",
+    "kind": "kotlin-jvm-metadata-version-security",
+    "passed": true,
+    "scenario": "security",
+    "surface_id": "migration-evolution-deprecation"
+  },
+  "runtime_identity": {
+    "compiler": "Kotlin 2.4.10 JVM IR",
+    "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+    "host_architecture": "arm64",
+    "host_os": "Darwin",
+    "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+    "runtime": "JVM metadata compatibility on OpenJDK 17",
+    "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+  },
+  "runtime_test_result": {
+    "digest": "sha256:f37f3d330f182fe1af8a86b3ebf69cdf600df41ab5f238891f058b16d39197be",
+    "path": "labs/abi-metadata-consumer-override/build/test-results/test/TEST-dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest.xml",
+    "testcase": {
+      "classname": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest",
+      "name": "explicit metadata override remains bounded by the runtime security oracle()",
+      "time": "0.019"
+    }
+  },
+  "schema_version": 1,
+  "source_digest": "sha256:f2a0f6a0108c3b27d7e5dd7ff8734ba8435960a3459753fa5c38f41d50d828c9"
+}

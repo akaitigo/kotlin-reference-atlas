@@ -5,7 +5,7 @@
       "annotationDate": "2026-08-28T00:00:00Z",
       "annotationType": "OTHER",
       "annotator": "Tool: scripts/generate_sbom.py",
-      "comment": "Gradle/npm lock closure components=149 sha256=2b3508842c097799f82505fc7e5ff449d40492484ad66891285d0124663665d8"
+      "comment": "Gradle/npm/Python lock closure components=150 sha256=b165d81c8ff9dd295ec93bd780c7473c1d0f50adda61fabd21d61942f62603a7"
     }
   ],
   "creationInfo": {
@@ -18,7 +18,7 @@
   "documentDescribes": [
     "SPDXRef-Package-kotlin-reference-atlas"
   ],
-  "documentNamespace": "https://github.com/akaitigo/kotlin-reference-atlas/sbom/2026-08-28/2b3508842c097799f82505fc7e5ff449d40492484ad66891285d0124663665d8",
+  "documentNamespace": "https://github.com/akaitigo/kotlin-reference-atlas/sbom/2026-08-28/b165d81c8ff9dd295ec93bd780c7473c1d0f50adda61fabd21d61942f62603a7",
   "name": "kotlin-reference-atlas-transitive-sbom",
   "packages": [
     {
@@ -2712,6 +2712,24 @@
       "licenseDeclared": "MIT",
       "name": "yocto-queue",
       "versionInfo": "0.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-f25f7309ec6994358454",
+      "comment": "python lockから生成",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/PyYAML@6.0.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "PyYAML",
+      "versionInfo": "6.0.3"
     }
   ],
   "relationships": [
@@ -3457,6 +3475,11 @@
     },
     {
       "relatedSpdxElement": "SPDXRef-Package-63dd14f733935ee42de2",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-f25f7309ec6994358454",
       "relationshipType": "DEPENDS_ON",
       "spdxElementId": "SPDXRef-Package-kotlin-reference-atlas"
     }

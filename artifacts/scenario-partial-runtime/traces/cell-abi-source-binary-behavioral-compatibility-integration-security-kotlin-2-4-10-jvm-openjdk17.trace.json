@@ -1,0 +1,83 @@
+{
+  "attempt": 1,
+  "cell_id": "cell.abi.source-binary-behavioral.compatibility-integration.security.kotlin-2.4.10-jvm-openjdk17",
+  "command": [
+    "./gradlew",
+    ":labs:abi-runtime-security:jvmTest",
+    ":labs:abi-runtime-security:jsNodeTest",
+    ":labs:abi-runtime-security:wasmJsNodeTest",
+    ":labs:compiler-runtime-security:jvmTest",
+    ":labs:compiler-runtime-security:jsNodeTest",
+    ":labs:compiler-runtime-security:wasmJsNodeTest",
+    ":labs:abi-compat-consumer:compatibilityBaselineTest",
+    ":labs:abi-compat-consumer:compatibilityBreakingTest",
+    ":labs:abi-compat-consumer:migrationBreakingTest",
+    ":labs:abi-compat-consumer:migrationCompatibleTest",
+    ":labs:abi-compat-kmp-consumer-baseline:jsNodeTest",
+    ":labs:abi-compat-kmp-consumer-baseline:wasmJsNodeTest",
+    ":labs:abi-compat-kmp-consumer-compatible:jsNodeTest",
+    ":labs:abi-compat-kmp-consumer-compatible:wasmJsNodeTest",
+    ":labs:abi-metadata-consumer-supported:test",
+    ":labs:abi-metadata-consumer-override:test",
+    ":labs:abi-metadata-kmp-consumer-supported:jsNodeTest",
+    ":labs:abi-metadata-kmp-consumer-supported:wasmJsNodeTest",
+    ":labs:abi-metadata-kmp-consumer-override:jsNodeTest",
+    ":labs:abi-metadata-kmp-consumer-override:wasmJsNodeTest",
+    "--rerun-tasks",
+    "--no-daemon"
+  ],
+  "outcome": "expected",
+  "phases": [
+    {
+      "digest": "sha256:d61e368931d31086b68d2230a6fe3cdc2f01763eb3462a0ddc361ce08d6a1477",
+      "path": "labs/abi-compat-consumer/build/test-results/compatibilityBaselineTest/TEST-dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBaselineTest.xml",
+      "task": "compatibilityBaselineTest",
+      "testcase": {
+        "classname": "dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBaselineTest",
+        "name": "compatibility integration executes the v1 binary contract without privilege change()",
+        "time": "0.084"
+      }
+    },
+    {
+      "digest": "sha256:f4e01cfd3a7adf527660d4b24d89a86327f071c3af99072d11156caa2a57f252",
+      "path": "labs/abi-compat-consumer/build/test-results/compatibilityBreakingTest/TEST-dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBreakingTest.xml",
+      "task": "compatibilityBreakingTest",
+      "testcase": {
+        "classname": "dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBreakingTest",
+        "name": "compatibility integration rejects a binary incompatible producer()",
+        "time": "0.031"
+      }
+    }
+  ],
+  "retry_count": 0,
+  "runtime_identity": {
+    "compiler": "Kotlin 2.4.10 JVM IR",
+    "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+    "host_architecture": "arm64",
+    "host_os": "Darwin",
+    "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+    "runtime": "JVM binary linkage on OpenJDK 17",
+    "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+  },
+  "schema_version": 1,
+  "streams": {
+    "action": [
+      "compile consumer against v1 descriptor",
+      "replace producer JAR without recompiling consumer",
+      "execute JVM linkage oracle"
+    ],
+    "network": [
+      "no application network operation; dependency resolution is repository-locked"
+    ],
+    "resource": [
+      "compiler_artifact=labs/abi-compat-api-v1/build/libs/abi-compat-api-v1-0.2.0.jar",
+      "compiler_artifact=labs/abi-compat-api-v2-breaking/build/libs/abi-compat-api-v2-breaking-0.2.0.jar",
+      "compiler_artifact=labs/abi-compat-api-v2-compatible/build/libs/abi-compat-api-v2-compatible-0.2.0.jar",
+      "compiler_artifact=labs/abi-compat-consumer/build/libs/abi-compat-consumer-0.2.0.jar"
+    ]
+  },
+  "tasks": [
+    ":labs:abi-compat-consumer:compatibilityBaselineTest",
+    ":labs:abi-compat-consumer:compatibilityBreakingTest"
+  ]
+}

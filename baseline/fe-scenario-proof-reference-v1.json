@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "fe-scenario-proof-methodology-reference-v1",
+  "repository": "frontend-behavior-atlas",
+  "git_commit": "deadad18b6588d2c907170a451c3b5cea5ea4192",
+  "classification": "methodology-reference-not-completion-authority",
+  "absolute_counts_transplanted": false,
+  "artifacts": {
+    "integrations/reference-system/manifest.json": "sha256:118ae5f25958855e3e1846ab998b6d45db656220ab8e4bd99330c0e208082940",
+    "scripts/lib/scenario-proof.ts": "sha256:e8ac9f30fef762be5ff37826e357a195faafb411cd7c0803126e27b1792d2bfa",
+    "scripts/verify-scenario-proofs.ts": "sha256:2ebe02b5400dce8cbb8d022d35b90c921fedfc6be9af29ca795f1e4b323f9dda",
+    "docs/REFERENCE_SYSTEM.md": "sha256:3e751a7394fa79ad805cf229d053311fbdee86bdfc7efc0e89542999d45e7d1c"
+  }
+}

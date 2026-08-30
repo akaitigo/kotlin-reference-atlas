@@ -13,6 +13,8 @@
     { "type": "framework", "group": "org.jetbrains.kotlin", "name": "kotlin", "version": "2.4.10", "licenses": [{ "license": { "id": "Apache-2.0" } }] },
     { "type": "framework", "group": "org.gradle", "name": "gradle", "version": "9.5.0", "licenses": [{ "license": { "id": "Apache-2.0" } }] },
     { "type": "library", "group": "org.jetbrains.kotlinx", "name": "kotlinx-coroutines-core-jvm", "version": "1.11.0", "licenses": [{ "license": { "id": "Apache-2.0" } }] },
-    { "type": "library", "group": "org.junit", "name": "junit-bom", "version": "5.10.5", "licenses": [{ "license": { "id": "EPL-2.0" } }] }
+    { "type": "library", "group": "org.junit", "name": "junit-bom", "version": "5.10.5", "licenses": [{ "license": { "id": "EPL-2.0" } }] },
+    { "type": "framework", "group": "python", "name": "CPython", "version": "3.14.0", "licenses": [{ "license": { "id": "PSF-2.0" } }] },
+    { "type": "library", "group": "python", "name": "PyYAML", "version": "6.0.3", "purl": "pkg:pypi/PyYAML@6.0.3", "licenses": [{ "license": { "id": "MIT" } }] }
   ]
 }

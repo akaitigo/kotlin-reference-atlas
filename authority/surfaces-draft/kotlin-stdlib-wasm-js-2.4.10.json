@@ -1,0 +1,52 @@
+{
+  "candidate_surfaces": [
+    {
+      "candidate_behavior_id": "candidate.authority.kotlin-stdlib-wasm-js-2.4.10",
+      "capability_id": "authority.locator-extraction",
+      "claim_id": "authority.locator-inventory-is-copyright-safe-and-incomplete",
+      "classification": "candidate-included-unreviewed",
+      "classification_basis": "domain-contract-projection-unreviewed",
+      "context_digest": "sha256:4da1327c168060f0f4a08f41f2e9db9ec76f161cc5765470a03a7c7e0f815925",
+      "context_end": 1,
+      "context_start": 0,
+      "context_unit": "utf16-code-unit",
+      "domain_reference_metadata_digest": "sha256:afb8a39c16aabfa5989e66843703834586a09e1c5487cf94e929024898ebe4ff",
+      "edge_id": "edge.authority.kotlin-stdlib-wasm-js-2.4.10",
+      "heading_digest": null,
+      "locator": "document-root",
+      "locator_status": "root-document",
+      "pattern_id": "authority/kotlin-stdlib-wasm-js-2-4-10",
+      "pattern_kind": "atomic",
+      "reference_url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-wasm-js/2.4.10/kotlin-stdlib-wasm-js-2.4.10.klib",
+      "source_id": "kotlin-stdlib-wasm-js-2.4.10",
+      "surface_ids": [
+        "provenance-rights"
+      ],
+      "target_id": "authority.locator-extraction",
+      "variant_ids": [
+        "variant.authority.kotlin-stdlib-wasm-js-2.4.10.locked"
+      ]
+    }
+  ],
+  "extraction": {
+    "body_storage": "digest-and-locator-context-digest-only",
+    "method": "locked-body-locator-context-digest",
+    "review_status": "automated-unreviewed",
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v2",
+    "tool_digest": "sha256:250ed66a276212e8d4af1743e1198fa85538cdb830560ff65fcd8b08ad29062a"
+  },
+  "fetch": {
+    "content_type": "application/vnd.reference-atlas.locked-metadata+json",
+    "error_digest": null,
+    "fetched_bytes": null,
+    "fetched_digest": "sha256:4da1327c168060f0f4a08f41f2e9db9ec76f161cc5765470a03a7c7e0f815925",
+    "final_url": null,
+    "http_status": null,
+    "locked_digest_match": true,
+    "status": "matched"
+  },
+  "locked_source_digest": "sha256:4da1327c168060f0f4a08f41f2e9db9ec76f161cc5765470a03a7c7e0f815925",
+  "schema_version": 1,
+  "source_id": "kotlin-stdlib-wasm-js-2.4.10",
+  "source_url": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-wasm-js/2.4.10/kotlin-stdlib-wasm-js-2.4.10.klib"
+}

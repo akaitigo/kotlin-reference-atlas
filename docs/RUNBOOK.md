@@ -7,19 +7,35 @@
 - Git
 - Node.js 25（Kotlin/JS・Wasm実行）
 - Docker 29（Container profile）
-- `reference-atlas-core` commit `d5c0a6ce757fd5f43af837edd26f55c7325b811e`
+- `reference-atlas-core` 正式main／CI成功DCO commit pin `072d7ca77981f51754e824d70c6d4ecd55ea67e5`
 
 ## Execute
 
 ```bash
 PATH="$PWD/bin:$PATH" atlas validate atlas.yaml mastery.yaml coverage.yaml sources.lock.yaml skill.package.yaml
 PATH="$PWD/bin:$PATH" atlas audit .
+PATH="$PWD/bin:$PATH" atlas audit . --gate definitive # 未完中は非0終了
+PATH="$PWD/bin:$PATH" atlas audit . --gate non-regression
+PATH="$PWD/bin:$PATH" atlas audit . --gate scenario-plan # 成功世代未生成中は非0終了
+PATH="$PWD/bin:$PATH" atlas audit . --gate evidence-durability # 成功世代未生成中は非0終了
+PATH="$PWD/bin:$PATH" atlas audit . --gate evidence-dependency
+python3 scripts/generate_evidence_dependency_graph.py
+python3 scripts/test_evidence_dependency_graph.py
+python3 scripts/generate_authority_review_queue.py
+python3 scripts/test_authority_review_queue.py
+python3 scripts/verify_authority_review_queue.py
+python3 scripts/capture_workbench.py
+python3 scripts/generate_scenario_proofs.py
+python3 scripts/verify_scenario_proofs.py
+python3 scripts/generate_scenario_closure_plan.py
+python3 scripts/verify_scenario_closure_plan.py
+python3 scripts/test_atomic_evidence.py
 python3 scripts/verify.py
 ```
 
 ## Verify
 
-終了Code 0、`evidence/artifacts/verification-summary.json`の`verdict: pass`、各`*.evidence.json`の`verdict: pass`を確認します。`atlas audit .`は`open_required=0`でなければなりません。
+`scripts/verify.py`の終了Code 0、`verification-summary.json`の`verdict: implementation-pass-definitive-incomplete`、各bounded `*.evidence.json`の`verdict: pass`を確認します。基礎`atlas audit .`は`completion_class=incomplete`、Definitive auditは非0終了でなければなりません。
 
 個別再実行：
 

@@ -4,6 +4,288 @@
     {
       "cases": [
         {
+          "class": "dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBaselineTest",
+          "name": "compatibility integration executes the v1 binary contract without privilege change()",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-consumer",
+      "suite": "dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBaselineTest",
+      "task": "compatibilityBaselineTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBreakingTest",
+          "name": "compatibility integration rejects a binary incompatible producer()",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-consumer",
+      "suite": "dev.akaitigo.kotlinatlas.abi.compat.CompatibilityBreakingTest",
+      "task": "compatibilityBreakingTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.compat.MigrationBreakingTest",
+          "name": "migration evolution observes the removed descriptor as a linkage failure()",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-consumer",
+      "suite": "dev.akaitigo.kotlinatlas.abi.compat.MigrationBreakingTest",
+      "task": "migrationBreakingTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.compat.MigrationCompatibleTest",
+          "name": "migration evolution preserves the old descriptor during recovery()",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-consumer",
+      "suite": "dev.akaitigo.kotlinatlas.abi.compat.MigrationCompatibleTest",
+      "task": "migrationCompatibleTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
+          "name": "unchanged consumer executes the version one security contract[js, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-kmp-consumer-baseline",
+      "suite": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
+      "task": "jsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
+          "name": "unchanged consumer executes the version one security contract()[jvm]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-kmp-consumer-baseline",
+      "suite": "AbiBaselineRuntimeTest[jvm]",
+      "task": "jvmTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
+          "name": "unchanged consumer executes the version one security contract[wasmJs, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-kmp-consumer-baseline",
+      "suite": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiBaselineRuntimeTest",
+      "task": "wasmJsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest",
+          "name": "unchanged consumer executes after a descriptor preserving migration[js, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-kmp-consumer-compatible",
+      "suite": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest",
+      "task": "jsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest",
+          "name": "unchanged consumer executes after a descriptor preserving migration()[jvm]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-kmp-consumer-compatible",
+      "suite": "AbiCompatibleRuntimeTest[jvm]",
+      "task": "jvmTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest",
+          "name": "unchanged consumer executes after a descriptor preserving migration[wasmJs, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-compat-kmp-consumer-compatible",
+      "suite": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.compat.kmp.AbiCompatibleRuntimeTest",
+      "task": "wasmJsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest",
+          "name": "explicit metadata override remains bounded by the runtime security oracle()",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-consumer-override",
+      "suite": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataOverrideRuntimeTest",
+      "task": "test"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataSupportedRuntimeTest",
+          "name": "supported metadata executes with the security contract intact()",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-consumer-supported",
+      "suite": "dev.akaitigo.kotlinatlas.abi.metadata.MetadataSupportedRuntimeTest",
+      "task": "test"
+    },
+    {
+      "cases": [
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest",
+          "name": "explicit multiplatform metadata override remains bounded by the runtime security oracle[js, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-kmp-consumer-override",
+      "suite": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest",
+      "task": "jsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest",
+          "name": "explicit multiplatform metadata override remains bounded by the runtime security oracle()[jvm]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-kmp-consumer-override",
+      "suite": "MetadataOverrideRuntimeTest[jvm]",
+      "task": "jvmTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest",
+          "name": "explicit multiplatform metadata override remains bounded by the runtime security oracle[wasmJs, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-kmp-consumer-override",
+      "suite": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataOverrideRuntimeTest",
+      "task": "wasmJsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest",
+          "name": "supported multiplatform metadata executes with the security contract intact[js, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-kmp-consumer-supported",
+      "suite": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest",
+      "task": "jsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest",
+          "name": "supported multiplatform metadata executes with the security contract intact()[jvm]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-kmp-consumer-supported",
+      "suite": "MetadataSupportedRuntimeTest[jvm]",
+      "task": "jvmTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest",
+          "name": "supported multiplatform metadata executes with the security contract intact[wasmJs, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-metadata-kmp-consumer-supported",
+      "suite": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.metadata.kmp.MetadataSupportedRuntimeTest",
+      "task": "wasmJsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "compatibility integration keeps expect actual value representation executable[js, node]",
+          "status": "pass"
+        },
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "foundations mechanics preserves trusted identity at a generic boxing boundary[js, node]",
+          "status": "pass"
+        },
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "performance capacity cost boundary remains deterministic under repetition[js, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-runtime-security",
+      "suite": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+      "task": "jsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "compatibility integration keeps expect actual value representation executable()[jvm]",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "foundations mechanics preserves trusted identity at a generic boxing boundary()[jvm]",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "performance capacity cost boundary remains deterministic under repetition()[jvm]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-runtime-security",
+      "suite": "ValueClassSecurityTest[jvm]",
+      "task": "jvmTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "compatibility integration keeps expect actual value representation executable[wasmJs, node]",
+          "status": "pass"
+        },
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "foundations mechanics preserves trusted identity at a generic boxing boundary[wasmJs, node]",
+          "status": "pass"
+        },
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "performance capacity cost boundary remains deterministic under repetition[wasmJs, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-runtime-security",
+      "suite": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+      "task": "wasmJsNodeTest"
+    },
+    {
+      "cases": [
+        {
           "class": "dev.akaitigo.kotlinatlas.runtime.RuntimeShapesTest",
           "name": "capturing lambda preserves lexical value()",
           "status": "pass"
@@ -27,6 +309,72 @@
       "module": "compiler-runtime",
       "suite": "dev.akaitigo.kotlinatlas.runtime.RuntimeShapesTest",
       "task": "test"
+    },
+    {
+      "cases": [
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "compatibility integration validates generic elements after outer type erasure[js, node]",
+          "status": "pass"
+        },
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "foundations mechanics rejects a mismatched runtime type token[js, node]",
+          "status": "pass"
+        },
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "performance capacity cost keeps the reified refusal result deterministic[js, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "compiler-runtime-security",
+      "suite": "jsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+      "task": "jsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "compatibility integration validates generic elements after outer type erasure()[jvm]",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "foundations mechanics rejects a mismatched runtime type token()[jvm]",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "performance capacity cost keeps the reified refusal result deterministic()[jvm]",
+          "status": "pass"
+        }
+      ],
+      "module": "compiler-runtime-security",
+      "suite": "ReifiedSecurityBoundaryTest[jvm]",
+      "task": "jvmTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "compatibility integration validates generic elements after outer type erasure[wasmJs, node]",
+          "status": "pass"
+        },
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "foundations mechanics rejects a mismatched runtime type token[wasmJs, node]",
+          "status": "pass"
+        },
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+          "name": "performance capacity cost keeps the reified refusal result deterministic[wasmJs, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "compiler-runtime-security",
+      "suite": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.compiler.ReifiedSecurityBoundaryTest",
+      "task": "wasmJsNodeTest"
     },
     {
       "cases": [
@@ -247,8 +595,80 @@
       "module": "semantics",
       "suite": "dev.akaitigo.kotlinatlas.semantics.SemanticsTest",
       "task": "test"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "boundary policy compares strict rejection with normalization()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "bounded dispatcher exposes backpressure and closed recovery path()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "cancellation is not converted into failure and active gauge recovers()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "compatibility records current JVM execution identity()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "duplicate execution returns stored artifact without rerunning step()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "invalid identifier and attempt limit are rejected before execution()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "migration normalizes legacy payload into current representation()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "normal execution emits context attempt and immutable artifact()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "operations expose quiescent health after completion()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "performance boundary keeps dispatcher capacity finite()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "permanent failure is categorized and observable()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "security rejects traversal shaped workflow identity()",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+          "name": "transient failure recovers within bounded retry budget()",
+          "status": "pass"
+        }
+      ],
+      "module": "reference-systems/automation-workbench",
+      "suite": "dev.akaitigo.kotlinatlas.workbench.AutomationWorkbenchTest",
+      "task": "test"
     }
   ],
-  "test_case_count": 34,
+  "test_case_count": 83,
   "verdict": "pass"
 }

@@ -1,22 +1,157 @@
 {
   "atlas_id": "kotlin-reference-atlas",
-  "completion_gaps": [],
+  "authority_body_denominator": {
+    "anchors_by_selector": {
+      "document-root": 16,
+      "tracked-blob": 146386
+    },
+    "authority_semantics_exhaustive": false,
+    "failed_documents": 0,
+    "human_reviewed_anchors": 0,
+    "matched_documents": 16,
+    "pending_human_anchors": 146402,
+    "promoted_surface_artifacts": 0,
+    "raw_anchor_candidates": 146402,
+    "selector_exhaustive_documents": 16,
+    "source_entries": 18,
+    "stale_documents": 0,
+    "unique_documents": 16
+  },
+  "authority_locator_extraction": {
+    "authority_body_locator_candidates": 0,
+    "authority_text_surfaces_exhaustive": false,
+    "core_v2_eligible_surfaces": 0,
+    "human_reviewed_locator_surfaces": 0,
+    "locked_authority_sources": 9,
+    "reference_edges_classified": 69,
+    "source_body_evaluations_deferred": 9,
+    "source_digest_matched": 0,
+    "source_digest_stale": 0,
+    "unclassified_reference_edges": 0
+  },
+  "authority_review_queue": {
+    "authority_semantics_exhaustive": false,
+    "batches": 143,
+    "candidate_clusters": 9758,
+    "clustered_anchors": 43126,
+    "decisions": 0,
+    "deferred": 0,
+    "eligible_documents": 16,
+    "excluded": 0,
+    "human_reviewed": 0,
+    "included": 0,
+    "merged": 0,
+    "pending_human": 146402,
+    "priority_counts": {
+      "0": 16,
+      "1": 92993,
+      "2": 53393
+    },
+    "queue_counts_as_depth_achievement": false,
+    "queued_anchors": 146402,
+    "split": 0,
+    "stale_document_holds": 0,
+    "unavailable_document_holds": 0
+  },
+  "authority_surface_inventory": {
+    "artifacts": 9,
+    "behaviors": 69
+  },
+  "bounded_historical_certificate": "evidence/history/v0.2.0/completion-certificate.json",
+  "completion_class": "incomplete",
+  "completion_gaps": [
+    "146402 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
+    "69 Authority inventory Behavior×10 Scenarioは専用row化済み。Authority非依存のSecurity 4 BehaviorについてJVM/JS/Wasm 30 cellを専用初回実行で閉じたが、Closure Plan rowは全Variantを要求するためcompleted 0/690。Native実RuntimeとAuthority atomic bindingは未閉鎖",
+    "Pattern Scenario Reporterは原子的retention契約へ適合するが、公開可能なfull-run成功世代が未生成のためCore Evidence durability／Scenario Plan Gateは未閉鎖",
+    "112-cell Router契約と独立Agent Forward Evalはpassだが22 Mastery routing gapが未閉鎖",
+    "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖"
+  ],
+  "core_authority_extraction": {
+    "authority_text_surfaces_exhaustive": false,
+    "binary_only_sources": 7,
+    "core_v2_eligible_sources": 0,
+    "deferred_source_bindings": 0,
+    "document_digest_matched": 16,
+    "http_fetch_failed": 18,
+    "human_reviewed_sources": 0,
+    "locked_sources": 18,
+    "root_locator_bindings": 18,
+    "source_bindings_matched": 18,
+    "stale_source_bindings": 0,
+    "tracked_blob_candidates": 146386,
+    "unique_documents": 16
+  },
+  "definitive_skill_eval": {
+    "boundary_case_count": 7,
+    "completion_claim": false,
+    "independent_agent_scenario_count": 23,
+    "matrix_cell_count": 112,
+    "routed_cell_count": 90,
+    "routing_gap_count": 22,
+    "target_state_counts": {
+      "covered": 28,
+      "infeasible": 1,
+      "partial": 4
+    },
+    "verdict": "pass-bounded-incomplete"
+  },
   "epoch": "2026-08-28",
+  "gap_ledger": {
+    "gap_count": 30,
+    "state_counts": {
+      "blocked": 3,
+      "open": 12,
+      "partial": 15
+    }
+  },
   "implementation_gates": {
+    "authority_body_denominator": "pass",
+    "authority_locator": "pass",
+    "authority_review_queue": "pass",
     "container": "pass",
+    "core_authority_extraction": "pass",
     "deep_artifacts": "pass",
+    "definitive": "expected-incomplete",
+    "definitive_skill": "pass-bounded-incomplete",
+    "evidence_dependency": "owner-managed-full-live-runtime-regenerated-pass",
+    "evidence_durability": "expected-incomplete-no-success-generation",
+    "kotlin_depth_parity": "incomplete",
     "labs": "pass",
     "manifest": "pass",
     "mastery_audit": "pass",
+    "neutral_language": "pass",
+    "non_regression": "pass",
+    "partial_scenario_runtime": "passed",
+    "python_dependency": "pass",
     "rights_metadata": "pass",
+    "scenario_plan": "expected-incomplete-no-success-generation",
     "skill": "pass"
   },
+  "kotlin_depth_parity": {
+    "all_axes_closed": false,
+    "axis_count": 18,
+    "reference_commit": "4a0b2df8e2091a963bd0e0e1bbccef9c84b49a45",
+    "status_counts": {
+      "missing": 0,
+      "partial": 17,
+      "satisfied": 1
+    },
+    "total_axis_gaps": 30
+  },
+  "python_dependency_contract": {
+    "negative_case_count": 6,
+    "profile_id": "github-actions-macos-14-local-gate",
+    "python_contract_version": "3.14.0",
+    "pyyaml_version": "6.0.3",
+    "verdict": "pass"
+  },
   "recommended_open": [
-    "reference-system.automation-workbench"
+    "Gap LedgerのBehavior別Proof closure",
+    "Automation WorkbenchのPlatform横断Runtimeと比較Variant"
   ],
   "recorded_infeasible": [
-    "platform.native-runtime: Full Xcode unavailable"
+    "platform.native-runtime: Full Xcode unavailable; KLIB compileはRuntime Evidenceの代替ではない"
   ],
-  "repository_status": "complete",
-  "verdict": "pass"
+  "repository_status": "incomplete",
+  "verdict": "implementation-pass-definitive-incomplete"
 }

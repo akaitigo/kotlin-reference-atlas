@@ -1,0 +1,52 @@
+{
+  "candidate_surfaces": [
+    {
+      "candidate_behavior_id": "candidate.authority.kotlinx-coroutines-source-1.11.0",
+      "capability_id": "authority.locator-extraction",
+      "claim_id": "authority.locator-inventory-is-copyright-safe-and-incomplete",
+      "classification": "candidate-included-unreviewed",
+      "classification_basis": "domain-contract-projection-unreviewed",
+      "context_digest": "sha256:ff25c4fd2855309cc047a17136f350579a3561e58c10515251063b81b8b8afef",
+      "context_end": 1,
+      "context_start": 0,
+      "context_unit": "utf16-code-unit",
+      "domain_reference_metadata_digest": "sha256:7d7c1dccd82a3d40e260c752aa43bfb758dc2b5ad3d97a0bc6baead60021ef79",
+      "edge_id": "edge.authority.kotlinx-coroutines-source-1.11.0",
+      "heading_digest": null,
+      "locator": "document-root",
+      "locator_status": "root-document",
+      "pattern_id": "authority/kotlinx-coroutines-source-1-11-0",
+      "pattern_kind": "atomic",
+      "reference_url": "https://github.com/Kotlin/kotlinx.coroutines/commit/8564f65764d3d05893cec026c6e94250e2b23874",
+      "source_id": "kotlinx-coroutines-source-1.11.0",
+      "surface_ids": [
+        "provenance-rights"
+      ],
+      "target_id": "authority.locator-extraction",
+      "variant_ids": [
+        "variant.authority.kotlinx-coroutines-source-1.11.0.locked"
+      ]
+    }
+  ],
+  "extraction": {
+    "body_storage": "digest-and-locator-context-digest-only",
+    "method": "locked-body-locator-context-digest",
+    "review_status": "automated-unreviewed",
+    "tool": "kotlin-reference-atlas-core-authority-extractor-v2",
+    "tool_digest": "sha256:250ed66a276212e8d4af1743e1198fa85538cdb830560ff65fcd8b08ad29062a"
+  },
+  "fetch": {
+    "content_type": "application/vnd.reference-atlas.locked-metadata+json",
+    "error_digest": null,
+    "fetched_bytes": null,
+    "fetched_digest": "sha256:ff25c4fd2855309cc047a17136f350579a3561e58c10515251063b81b8b8afef",
+    "final_url": null,
+    "http_status": null,
+    "locked_digest_match": true,
+    "status": "matched"
+  },
+  "locked_source_digest": "sha256:ff25c4fd2855309cc047a17136f350579a3561e58c10515251063b81b8b8afef",
+  "schema_version": 1,
+  "source_id": "kotlinx-coroutines-source-1.11.0",
+  "source_url": "https://github.com/Kotlin/kotlinx.coroutines/commit/8564f65764d3d05893cec026c6e94250e2b23874"
+}

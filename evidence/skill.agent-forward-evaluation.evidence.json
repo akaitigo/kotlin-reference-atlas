@@ -1,0 +1,27 @@
+{
+  "artifact": {
+    "digest": "sha256:a50e24c8346bd152be2d48a70bb662e3fd9828094fafe44e795fbac4e8e808c0",
+    "media_type": "application/json",
+    "size_bytes": 119503,
+    "uri": "evals/kotlin-reference-router.agent-forward-eval.json"
+  },
+  "atlas_id": "kotlin-reference-atlas",
+  "claim_ids": [
+    "skill.definitive-routing-is-bounded"
+  ],
+  "command": "independent subagent forwarded Router scenarios",
+  "created_at": "2026-08-28T00:00:00+09:00",
+  "environment": {
+    "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
+    "profile": "local"
+  },
+  "harness_digest": "sha256:6ed0ef4d9b441bc788268516cbe50d6b08b8c487b7bee31a67e500843ce1bfed",
+  "harness_path": ".agents/skills/kotlin-reference-router/SKILL.md",
+  "id": "skill.agent-forward-evaluation",
+  "kind": "skill-eval",
+  "producer": "independent-agent-forward-eval",
+  "retention": "git",
+  "schema_version": 1,
+  "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
+  "verdict": "pass"
+}

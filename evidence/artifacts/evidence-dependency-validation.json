@@ -1,0 +1,52 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "certificate_connection": "Definitive certificate remains unavailable while repository status is incomplete",
+  "definitive_connection": "definitive.yaml requires evidence/dependency-graph.json",
+  "gate": "evidence-dependency",
+  "negative_fixtures": [
+    {
+      "expected_rejection": "current_digestが実体と一致しません",
+      "id": "input-change-stales-transitively",
+      "result": "pass"
+    },
+    {
+      "expected_rejection": "digest書換えだけではClosureできません",
+      "id": "digest-only-closure",
+      "result": "pass"
+    },
+    {
+      "expected_rejection": "再実行対象がEvidence dependency graphから欠落しています",
+      "id": "required-output-omission",
+      "result": "pass"
+    },
+    {
+      "expected_rejection": "影響Evidenceがstaleのままです",
+      "id": "stale-output-retreat",
+      "result": "pass"
+    },
+    {
+      "expected_rejection": "runtime_identityがありません",
+      "id": "runtime-identity-omission",
+      "result": "pass"
+    },
+    {
+      "expected_rejection": "attempts",
+      "id": "first-attempt-violation",
+      "result": "pass"
+    },
+    {
+      "expected_rejection": "既存Proof/Closure Planの構造が変化しています",
+      "id": "scenario-proof-structure-shrink",
+      "result": "pass"
+    },
+    {
+      "expected_rejection": "既存Proof/Closure Planの構造が変化しています",
+      "id": "closure-plan-structure-shrink",
+      "result": "pass"
+    }
+  ],
+  "non_regression_connection": "active Core baseline fixes the graph collection and structure fingerprints",
+  "positive_fixture": "pass",
+  "schema_version": 1,
+  "verdict": "pass"
+}

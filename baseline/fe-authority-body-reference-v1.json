@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "fe-authority-body-reference-v1",
+  "classification": "methodology-reference-not-completion-authority",
+  "repository": "frontend-behavior-atlas",
+  "git_commit": "841ec2fa399606a10305021a8bcd396713b8cee5",
+  "artifacts": {
+    "authority/body-inventory.snapshot.json": "sha256:8b3d2823ec22b2193c89932017d8fd9308fc1851a13e3515c28da0752cd99a1d",
+    "scripts/lib/authority-body-inventory.ts": "sha256:04f62a0b63981c62a7ab90f39637c71745642e84a3bdd4404ce715a0163ebe76",
+    "scripts/verify-authority-body-inventory.ts": "sha256:5ba278737bfedae54b3c3b92fdf16a9ecf6b914bcaf0ab2cd04ff0d6ef24884a",
+    "scripts/lib/authority-body-baseline.ts": "sha256:0dc48dc9e62fdc9cd8493e9b5827b4cf5948c4b72df3374d5ebcc73ac344009c",
+    "scripts/verify-authority-body-baseline.ts": "sha256:599d6dee6d34b10f8496309c68e5cd3b8752366238311ecfbda4e2a23a8be897"
+  },
+  "adopted_boundaries": [
+    "unique-document-denominator",
+    "fixed-selector-raw-anchor-candidates",
+    "all-candidates-start-pending-human",
+    "raw-anchor-count-does-not-credit-semantic-surface-or-depth",
+    "stable-id-tool-source-digest-and-dedicated-non-regression-baseline",
+    "promotion-only-after-human-decision"
+  ]
+}

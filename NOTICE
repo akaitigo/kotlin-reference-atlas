@@ -3,7 +3,9 @@ Copyright 2026 akaitigo
 
 This product includes software developed by JetBrains and the Kotlin project,
 the Gradle project, the kotlinx.coroutines project, the JUnit project, Node.js,
-and Eclipse Temurin.
+Eclipse Temurin, the Python Software Foundation, and the PyYAML project.
+This product also contains fixed Apache-2.0 methodology snapshots from
+frontend-behavior-atlas commits 7175de4, deadad18, and f2e4c4b.
 Attribution and license metadata are recorded in third_party/manifest.yaml.
 
 Kotlin and related marks are trademarks of their respective owners. This

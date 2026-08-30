@@ -1,0 +1,108 @@
+{
+  "applicability": "required",
+  "atlas_id": "kotlin-reference-atlas",
+  "behavior_id": "generics.mixed-site-variance",
+  "behavior_scope": "current-domain-pattern-not-authority-atomic",
+  "classification": {
+    "matcher_digest": "sha256:dd99046f3e796bdf35a0a31ee2f405e27b673e989c29f9ed19593af7e9b7bdb3",
+    "method": "kotlin-authority-inventory-candidate-before-human-atomic-review",
+    "semantic_scope_match": true,
+    "state_ids": [
+      "failure"
+    ]
+  },
+  "closure": {
+    "authority_atomic_behavior": false,
+    "completion_eligible": false,
+    "dedicated_artifact": true,
+    "dedicated_row": true,
+    "integrated_runtime_trace": true,
+    "pattern_specific_evidence": false,
+    "real_runtime_identity": false
+  },
+  "gaps": [
+    "The companion Kotlin closure row has no dedicated retry-zero execution for every Surface×Scenario×Variant cell.",
+    "Human-reviewed Authority atomic binding is absent; integrated JVM traces cannot supply completion credit."
+  ],
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "id": "proof-generics-mixed-site-variance-failure",
+  "integrated_reference": {
+    "assertions": [
+      "scenario outcome is recorded",
+      "runtime returns to a bounded observable state"
+    ],
+    "attempts": 1,
+    "manifest": "integrations/reference-system/manifest.json",
+    "outcome": "expected",
+    "pattern_mapped": true,
+    "result": "artifacts/reference-system/results.json",
+    "runtime_boundaries": [
+      "Gradle 9.5.0",
+      "Kotlin 2.4.10 JVM IR",
+      "OpenJDK 17",
+      "macOS arm64"
+    ],
+    "screenshot": {
+      "bytes": 348,
+      "digest": "sha256:5215273cd6d9c8d1fa9cb3f2880d4f35b147e12916611f40ca2bc0106f57fe95",
+      "path": "artifacts/reference-system/snapshots/failure.snapshot.json"
+    },
+    "trace": {
+      "action_stream": true,
+      "bytes": 3363,
+      "digest": "sha256:541a7c08f9102aa43800a2670a8038b0fda7fd3a73734e162f856e3eba5989d2",
+      "network_stream": true,
+      "path": "evidence/scenarios/integrated/failure.trace.json",
+      "resource_stream": true
+    }
+  },
+  "pattern_evidence": {
+    "benchmark_environment": null,
+    "benchmark_records": [],
+    "capture_environment_identity": {
+      "architecture": "arm64",
+      "build_tool": "Gradle Wrapper 9.5.0",
+      "compiler": "Kotlin 2.4.10 JVM IR",
+      "os": "Darwin",
+      "platform": "JVM",
+      "retries": 0,
+      "runtime": "OpenJDK 17.0.17",
+      "trace_mode": "on"
+    },
+    "capture_harness_digest": "sha256:897b93cde0639b3e6b6c4be6ff4ba4b7acad298a1e7bff7060bc2f8fcb0f823b",
+    "capture_records": [],
+    "compatibility_environment": null,
+    "compatibility_records": [],
+    "scenario_runtime_environment": null,
+    "scenario_runtime_records": [],
+    "scenario_runtime_report": null
+  },
+  "pattern_id": "generics.mixed-site-variance",
+  "scenario": "failure",
+  "schema_version": 1,
+  "source_bindings": [
+    {
+      "digest": "sha256:dd99046f3e796bdf35a0a31ee2f405e27b673e989c29f9ed19593af7e9b7bdb3",
+      "path": "authority/surfaces/kotlin-spec.authority-surfaces.yaml",
+      "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+    },
+    {
+      "digest": "sha256:dd99046f3e796bdf35a0a31ee2f405e27b673e989c29f9ed19593af7e9b7bdb3",
+      "path": "authority/surfaces/kotlin-spec.authority-surfaces.yaml",
+      "variant_id": "kotlin-2.4.10-js-node"
+    },
+    {
+      "digest": "sha256:dd99046f3e796bdf35a0a31ee2f405e27b673e989c29f9ed19593af7e9b7bdb3",
+      "path": "authority/surfaces/kotlin-spec.authority-surfaces.yaml",
+      "variant_id": "kotlin-2.4.10-wasm-js-node"
+    },
+    {
+      "digest": "sha256:dd99046f3e796bdf35a0a31ee2f405e27b673e989c29f9ed19593af7e9b7bdb3",
+      "path": "authority/surfaces/kotlin-spec.authority-surfaces.yaml",
+      "variant_id": "kotlin-2.4.10-native-macos-arm64"
+    }
+  ],
+  "status": "pattern-specific-gap",
+  "target_id": "semantics.type-system",
+  "target_set": "foundations-mechanics,testing-verification"
+}

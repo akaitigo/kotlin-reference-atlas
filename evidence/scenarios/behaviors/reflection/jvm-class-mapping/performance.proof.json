@@ -1,0 +1,378 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "authority_source": {
+    "artifact_digest": "sha256:56e22ffb299b046d42e4467ca52d7da9945f986f8c694448ce869984a89db6eb",
+    "artifact_digest_verified": true,
+    "artifact_id": "kotlin-stdlib",
+    "artifact_path": "authority/surfaces/kotlin-stdlib.authority-surfaces.yaml",
+    "locator": "libraries/stdlib/src/kotlin/jvm/JvmClassMapping.kt",
+    "source_id": "kotlin-stdlib-source-2.4.10",
+    "surface_id": "stdlib.reflection"
+  },
+  "behavior_id": "reflection.jvm-class-mapping",
+  "behavior_scope": "authority-inventory-candidate-not-human-reviewed-atomic",
+  "candidate_evidence": [
+    {
+      "artifact": {
+        "digest": "sha256:98c4eac42e85d32d934a21a6777a5f29c548257e3664b9ca6da810e20c9e6770",
+        "exists": true,
+        "path": "evidence/artifacts/lab-results.json"
+      },
+      "claim_ids": [
+        "compiler.runtime-shapes-observable"
+      ],
+      "command": "./gradlew :labs:compiler-runtime:test",
+      "harness": {
+        "digest": "sha256:fa6641ce4ffd67e9b91894f8d6690c429d3e39d7f944398aaa404a91c26d4969",
+        "exists": true,
+        "path": "labs/compiler-runtime/build.gradle.kts"
+      },
+      "id": "compiler.runtime-shapes",
+      "identity": null,
+      "kind": "test-report",
+      "producer": "gradle-junit",
+      "record": {
+        "bytes": 977,
+        "digest": "sha256:3f69f7a8ce26a646ea8dca712791a515f513d3265fe93e30711b4f0289b4fd64",
+        "path": "evidence/compiler.runtime-shapes.evidence.json"
+      },
+      "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
+      "verdict": "pass"
+    }
+  ],
+  "capability_id": "runtime.reflection",
+  "claim_ids": [
+    "compiler.runtime-shapes-observable"
+  ],
+  "closure": {
+    "all_surface_scenario_variants_closed": false,
+    "authority_atomic_binding": false,
+    "behavior_specific_evidence": false,
+    "completion_eligible": false,
+    "dedicated_artifact": true,
+    "dedicated_oracle_trace_artifact_all_variants": false,
+    "dedicated_row": true,
+    "retained_identity": false,
+    "retry_zero_all_variants": false,
+    "scenario_applicable": false,
+    "unrelated_metadata_reuse_blocked": true
+  },
+  "gaps": [
+    "This Behavior has no subject-specific oracle classified for this scenario.",
+    "All 8 Surface×Scenario×Variant closure cells remain explicit gaps.",
+    "Mapped Target Evidence is candidate context only; unrelated Artifact metadata cannot close a dedicated cell.",
+    "The mapped Claim is shared by multiple Authority inventory Behaviors and is not a dedicated Behavior proof.",
+    "No human-reviewed Authority anchor decision binds this Atomic behavior; completion credit is zero."
+  ],
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "id": "proof.behavior.reflection.jvm-class-mapping.performance",
+  "integrated_reference": {
+    "manifest": {
+      "bytes": 33851,
+      "digest": "sha256:3abe4aa0f98c9daeb03e843125c81a68e235a19f9a87748e6ee45ca01f13dcbd",
+      "path": "integrations/reference-system/manifest.json"
+    },
+    "results": {
+      "bytes": 3983,
+      "digest": "sha256:db5a9b489fe103cd22a092393a0bfb27cc7ca0e1816988aa2fdf7cb764d8cb9b",
+      "path": "evidence/scenarios/reference-system-results.json"
+    },
+    "reuse_as_behavior_specific_proof": false,
+    "target_mapped": false,
+    "trace": {
+      "digest": "sha256:cd2d7e03ddb6e911743d3982a9bb02b1761f6a24b27904a123d43233c6e0094f",
+      "path": "evidence/scenarios/integrated/performance.trace.json",
+      "rows": 1
+    }
+  },
+  "inventory_id": "inventory.reflection.jvm-class-mapping",
+  "required_variants": [
+    "kotlin-2.4.10-k2-jvm-ir-openjdk17",
+    "kotlin-2.4.10-js-ir-node",
+    "kotlin-2.4.10-wasm-js-node",
+    "kotlin-2.4.10-native-macos-arm64"
+  ],
+  "scenario": "performance",
+  "schema_version": 1,
+  "specific_evidence": [],
+  "status": "explicit-gap",
+  "surface_ids": [
+    "compatibility-integration",
+    "failure-recovery"
+  ],
+  "surface_scenario_variant_proofs": [
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.reflection.jvm-class-mapping.compatibility-integration.performance.kotlin-2.4.10-k2-jvm-ir-openjdk17",
+      "scenario": "performance",
+      "status": "explicit-gap",
+      "surface_id": "compatibility-integration",
+      "variant_id": "kotlin-2.4.10-k2-jvm-ir-openjdk17"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.reflection.jvm-class-mapping.compatibility-integration.performance.kotlin-2.4.10-js-ir-node",
+      "scenario": "performance",
+      "status": "explicit-gap",
+      "surface_id": "compatibility-integration",
+      "variant_id": "kotlin-2.4.10-js-ir-node"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.reflection.jvm-class-mapping.compatibility-integration.performance.kotlin-2.4.10-wasm-js-node",
+      "scenario": "performance",
+      "status": "explicit-gap",
+      "surface_id": "compatibility-integration",
+      "variant_id": "kotlin-2.4.10-wasm-js-node"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.reflection.jvm-class-mapping.compatibility-integration.performance.kotlin-2.4.10-native-macos-arm64",
+      "scenario": "performance",
+      "status": "explicit-gap",
+      "surface_id": "compatibility-integration",
+      "variant_id": "kotlin-2.4.10-native-macos-arm64"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.reflection.jvm-class-mapping.failure-recovery.performance.kotlin-2.4.10-k2-jvm-ir-openjdk17",
+      "scenario": "performance",
+      "status": "explicit-gap",
+      "surface_id": "failure-recovery",
+      "variant_id": "kotlin-2.4.10-k2-jvm-ir-openjdk17"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.reflection.jvm-class-mapping.failure-recovery.performance.kotlin-2.4.10-js-ir-node",
+      "scenario": "performance",
+      "status": "explicit-gap",
+      "surface_id": "failure-recovery",
+      "variant_id": "kotlin-2.4.10-js-ir-node"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.reflection.jvm-class-mapping.failure-recovery.performance.kotlin-2.4.10-wasm-js-node",
+      "scenario": "performance",
+      "status": "explicit-gap",
+      "surface_id": "failure-recovery",
+      "variant_id": "kotlin-2.4.10-wasm-js-node"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.reflection.jvm-class-mapping.failure-recovery.performance.kotlin-2.4.10-native-macos-arm64",
+      "scenario": "performance",
+      "status": "explicit-gap",
+      "surface_id": "failure-recovery",
+      "variant_id": "kotlin-2.4.10-native-macos-arm64"
+    }
+  ],
+  "target_id": "compiler.runtime-shapes"
+}

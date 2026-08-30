@@ -1,0 +1,32 @@
+schema_version: 2
+atlas_id: kotlin-reference-atlas
+epoch: "2026-08-28"
+completion_class: subject-definitive
+surface_inventory: surface.inventory.yaml
+authority_extraction: authority/extraction.snapshot.json
+authority_body_inventory: authority/body-inventory.snapshot.json
+authority_body_review: authority/review-queue.snapshot.json
+verification_matrix: verification.matrix.yaml
+depth_parity: depth.parity.yaml
+scenario_proofs: evidence/scenarios/index.json
+scenario_closure_plan: evidence/scenarios/closure-plan.json
+evidence_durability: artifacts/pattern-scenarios/results.json
+evidence_dependency_graph: evidence/dependency-graph.json
+skill_eval: evals/kotlin-reference-router.definitive-skill-eval.json
+skill_router: evals/definitive-skill-router.json
+non_regression: non-regression.yaml
+certificate: evidence/definitive-certificate.json
+historical_certificates:
+  - path: evidence/history/v0.2.0/completion-certificate.json
+    classification: bounded-complete
+reference_systems:
+  - id: automation-workbench
+    path: reference-systems/automation-workbench/reference-system.yaml
+    digest: sha256:79a77b9faf553cbb09ee573b3e91c40fb54f17b2d37d62efac6ef29641923fc5
+    behavior_ids:
+      - coroutines.job-state-cancellation
+      - coroutines.structured-scope-lifetime
+      - flow.shared-replay-buffer-overflow
+      - gradle.jvm-toolchain-selection
+      - stdlib.result-failure-boundary
+comparisons: []

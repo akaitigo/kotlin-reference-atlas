@@ -1,0 +1,34 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "legacy_history_policy": "only explicit base..head new commit range is checked",
+  "negative_fixtures": [
+    {
+      "expected_rejection": "Signed-off-by",
+      "id": "missing-signoff",
+      "result": "pass"
+    },
+    {
+      "expected_rejection": "Signed-off-by",
+      "id": "mixed-signed-unsigned",
+      "result": "pass"
+    },
+    {
+      "expected_rejection": "ancestor",
+      "id": "non-ancestor",
+      "result": "pass"
+    },
+    {
+      "expected_rejection": "空",
+      "id": "empty-range",
+      "result": "pass"
+    },
+    {
+      "expected_rejection": "非zero",
+      "id": "zero-before",
+      "result": "pass"
+    }
+  ],
+  "positive_fixture": "pass",
+  "schema_version": 1,
+  "verdict": "pass"
+}

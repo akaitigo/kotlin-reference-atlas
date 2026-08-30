@@ -1,4 +1,4 @@
-# Kotlin決定版Decision Guide
+# Kotlin Decision Guide
 
 ## 読み方
 

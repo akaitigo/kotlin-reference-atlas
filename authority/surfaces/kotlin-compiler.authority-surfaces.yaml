@@ -1,0 +1,15 @@
+schema_version: 2
+source_id: kotlin-compiler-source-2.4.10
+source_digest: sha256:c1955090a98fbec3283cb09cad57985267d4d811f9000749225e1dfc78377902
+extraction: {method: machine-readable-primary, tool: git-tree-surface-extractor-v2, reviewed_by: kotlin-atlas-maintainer, reviewed_at: "2026-08-28"}
+surfaces:
+  - {id: compiler.fir.analysis, locator: compiler/fir/analysis, kind: capability, capability_id: compiler.fir, behavior_id: compiler.fir-resolution-diagnostics, title: FIR resolutionとdiagnostics生成, surface_ids: [foundations-mechanics, failure-recovery]}
+  - {id: compiler.fir.java-enhancement, locator: compiler/fir/java, kind: behavior, capability_id: compiler.java-enhancement, behavior_id: compiler.java-nullability-enhancement, title: Java annotation型enhancement, surface_ids: [compatibility-integration, failure-recovery]}
+  - {id: compiler.diagnostics.tests, locator: compiler/testData/diagnostics, kind: capability, capability_id: compiler.diagnostics, behavior_id: compiler.diagnostic-id-location-severity, title: Diagnostic ID・位置・severity fixture, surface_ids: [testing-verification, failure-recovery]}
+  - {id: compiler.ir.backend.jvm, locator: compiler/ir/backend.jvm, kind: capability, capability_id: compiler.jvm-backend, behavior_id: compiler.jvm-ir-lowering, title: JVM IR loweringとbytecode形状, surface_ids: [foundations-mechanics, compatibility-integration]}
+  - {id: compiler.ir.backend.js, locator: compiler/ir/backend.js, kind: capability, capability_id: compiler.js-backend, behavior_id: compiler.js-ir-export, title: JS IR exportとmodule生成, surface_ids: [implementation-construction, compatibility-integration]}
+  - {id: compiler.ir.backend.wasm, locator: compiler/ir/backend.wasm, kind: capability, capability_id: compiler.wasm-backend, behavior_id: compiler.wasm-ir-runtime-link, title: Wasm IRとruntime link, surface_ids: [implementation-construction, compatibility-integration]}
+  - {id: compiler.incremental, locator: compiler/incremental-compilation-impl, kind: behavior, capability_id: compiler.incremental, behavior_id: compiler.incremental-dirty-set, title: Incremental dirty setとcache invalidation, surface_ids: [performance-capacity-cost, failure-recovery]}
+  - {id: compiler.metadata, locator: core/metadata, kind: behavior, capability_id: compiler.metadata, behavior_id: abi.kotlin-metadata-version, title: Kotlin metadata versionとreader互換, surface_ids: [compatibility-integration, migration-evolution-deprecation]}
+  - {id: compiler.klib, locator: compiler/cli/cli-klib, kind: capability, capability_id: compiler.klib, behavior_id: abi.klib-linkage, title: KLIB metadataとlinkage, surface_ids: [compatibility-integration, migration-evolution-deprecation]}
+  - {id: compiler.gradle.plugin, locator: libraries/tools/kotlin-gradle-plugin, kind: capability, capability_id: tooling.kgp, behavior_id: gradle.kgp-task-toolchain-model, title: KGP Task・compilerOptions・toolchain model, surface_ids: [architecture-design, implementation-construction, operations-observability]}

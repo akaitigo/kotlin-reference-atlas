@@ -1,0 +1,27 @@
+{
+  "artifact": {
+    "digest": "sha256:a0d29d6312005fb35fe694d32083ff8c4373198d744060c0e0d4c20530b1cdfd",
+    "media_type": "application/json",
+    "size_bytes": 3080,
+    "uri": "evidence/artifacts/kotlin-depth-parity.json"
+  },
+  "atlas_id": "kotlin-reference-atlas",
+  "claim_ids": [
+    "quality.kotlin-depth-parity-gaps-block-definitive"
+  ],
+  "command": "python3 scripts/verify_fe_parity.py",
+  "created_at": "2026-08-28T00:00:00+09:00",
+  "environment": {
+    "manifest_digest": "sha256:104e8affc1df8f3a5626ee8c83ab0608ac6845dec39143dfbacc499c65681ea7",
+    "profile": "local"
+  },
+  "harness_digest": "sha256:44e173a42e1bdfbf9d197092cc36098c0865c14ed1e2ede289f27896ab07d219",
+  "harness_path": "atlas/definitive/kotlin-depth-parity.json",
+  "id": "quality.kotlin-depth-parity-gate",
+  "kind": "compatibility",
+  "producer": "kotlin-depth-parity-gate",
+  "retention": "git",
+  "schema_version": 1,
+  "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
+  "verdict": "pass"
+}

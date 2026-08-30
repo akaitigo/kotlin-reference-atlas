@@ -1,0 +1,170 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "authority_source": {
+    "artifact_digest": "sha256:7718d456c71af37cb8c092c9027a7aa5f80b1b77a160df506460a629a178a627",
+    "artifact_digest_verified": true,
+    "artifact_id": "kotlin-native",
+    "artifact_path": "authority/surfaces/kotlin-native.authority-surfaces.yaml",
+    "locator": "kotlin-native/shared/src/main/kotlin/org/jetbrains/kotlin/konan/library",
+    "source_id": "kotlin-native-source-2.4.10",
+    "surface_id": "native.klib"
+  },
+  "behavior_id": "native.klib-version-linkage",
+  "behavior_scope": "authority-inventory-candidate-not-human-reviewed-atomic",
+  "candidate_evidence": [
+    {
+      "artifact": {
+        "digest": "sha256:87d3b74bf48a38df4119e0a66ea74df9f01f3b65d257bbf527ab1829d5d3c1fc",
+        "exists": true,
+        "path": "evidence/artifacts/platform-validation.json"
+      },
+      "claim_ids": [
+        "platform.native-test-klib"
+      ],
+      "command": "./gradlew :labs:multiplatform:compileTestKotlinMacosArm64",
+      "harness": {
+        "digest": "sha256:08af5e1d8a7cf85040f5c99bbb66420cc3ae74c6497f273873bc4f085c52940f",
+        "exists": true,
+        "path": "labs/multiplatform/build.gradle.kts"
+      },
+      "id": "platform.native-compile",
+      "identity": null,
+      "kind": "compatibility",
+      "producer": "kotlin-native",
+      "record": {
+        "bytes": 994,
+        "digest": "sha256:26e6088b67bd07e93fa1ee26b9d4eec9dc02d26cf8f50377c33d1559cc70adf8",
+        "path": "evidence/platform.native-compile.evidence.json"
+      },
+      "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",
+      "verdict": "pass"
+    }
+  ],
+  "capability_id": "compiler.klib",
+  "claim_ids": [
+    "platform.native-test-klib"
+  ],
+  "closure": {
+    "all_surface_scenario_variants_closed": false,
+    "authority_atomic_binding": false,
+    "behavior_specific_evidence": false,
+    "completion_eligible": false,
+    "dedicated_artifact": true,
+    "dedicated_oracle_trace_artifact_all_variants": false,
+    "dedicated_row": true,
+    "retained_identity": false,
+    "retry_zero_all_variants": false,
+    "scenario_applicable": true,
+    "unrelated_metadata_reuse_blocked": true
+  },
+  "gaps": [
+    "All 2 Surface×Scenario×Variant closure cells remain explicit gaps.",
+    "Mapped Target Evidence is candidate context only; unrelated Artifact metadata cannot close a dedicated cell.",
+    "The mapped Claim is shared by multiple Authority inventory Behaviors and is not a dedicated Behavior proof.",
+    "No human-reviewed Authority anchor decision binds this Atomic behavior; completion credit is zero."
+  ],
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "id": "proof.behavior.native.klib-version-linkage.boundary",
+  "integrated_reference": {
+    "manifest": {
+      "bytes": 33851,
+      "digest": "sha256:3abe4aa0f98c9daeb03e843125c81a68e235a19f9a87748e6ee45ca01f13dcbd",
+      "path": "integrations/reference-system/manifest.json"
+    },
+    "results": {
+      "bytes": 3983,
+      "digest": "sha256:db5a9b489fe103cd22a092393a0bfb27cc7ca0e1816988aa2fdf7cb764d8cb9b",
+      "path": "evidence/scenarios/reference-system-results.json"
+    },
+    "reuse_as_behavior_specific_proof": false,
+    "target_mapped": false,
+    "trace": {
+      "digest": "sha256:fd211f2a89a34de8d6dd3cd90cf9d3bee2c41453fbd6aae2e7ab088ff9442e61",
+      "path": "evidence/scenarios/integrated/boundary.trace.json",
+      "rows": 2
+    }
+  },
+  "inventory_id": "inventory.native.klib-version-linkage",
+  "required_variants": [
+    "kotlin-2.4.10-native-macos-arm64-runtime"
+  ],
+  "scenario": "boundary",
+  "schema_version": 1,
+  "specific_evidence": [],
+  "status": "explicit-gap",
+  "surface_ids": [
+    "compatibility-integration",
+    "migration-evolution-deprecation"
+  ],
+  "surface_scenario_variant_proofs": [
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.native.klib-version-linkage.compatibility-integration.boundary.kotlin-2.4.10-native-macos-arm64-runtime",
+      "scenario": "boundary",
+      "status": "explicit-gap",
+      "surface_id": "compatibility-integration",
+      "variant_id": "kotlin-2.4.10-native-macos-arm64-runtime"
+    },
+    {
+      "closure": {
+        "artifact_bound": false,
+        "closed": false,
+        "dedicated_to_this_cell": false,
+        "first_attempt_pass": false,
+        "harness_bound": false,
+        "identity_bound": false,
+        "oracle_bound": false,
+        "retry_count_zero": false,
+        "source_bound": false,
+        "trace_bound": false
+      },
+      "dedicated_execution": {
+        "artifact": null,
+        "attempts": null,
+        "compiler_runtime_platform_identity": null,
+        "harness_digest": null,
+        "oracle": null,
+        "retries": null,
+        "source_digest": null,
+        "trace": null
+      },
+      "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+      "gaps": [
+        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit."
+      ],
+      "id": "cell.native.klib-version-linkage.migration-evolution-deprecation.boundary.kotlin-2.4.10-native-macos-arm64-runtime",
+      "scenario": "boundary",
+      "status": "explicit-gap",
+      "surface_id": "migration-evolution-deprecation",
+      "variant_id": "kotlin-2.4.10-native-macos-arm64-runtime"
+    }
+  ],
+  "target_id": "platform.native-compile"
+}

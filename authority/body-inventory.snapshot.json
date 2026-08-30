@@ -1,0 +1,217 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "body_storage": "digest-locator-and-metadata-only",
+  "documents": [
+    {
+      "anchors": 205,
+      "anchors_by_selector": {
+        "document-root": 1,
+        "tracked-blob": 204
+      },
+      "digest": "sha256:1cae7d3d55397257c78921790be2d7d8a4579bf4b2df46be6e61bc6a17723e3b",
+      "fetch_status": "matched",
+      "id": "document-akaitigo-reference-atlas-core-1962d92e4393",
+      "path": "authority/body-inventory-draft/document-akaitigo-reference-atlas-core-1962d92e4393.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 44,
+      "anchors_by_selector": {
+        "document-root": 1,
+        "tracked-blob": 43
+      },
+      "digest": "sha256:73094e1de23c0df9b81c8149f52c8a86a1719d0542d4a1397bcdbe360dd610ef",
+      "fetch_status": "matched",
+      "id": "document-akaitigo-reference-atlas-core-3e1de93e838a",
+      "path": "authority/body-inventory-draft/document-akaitigo-reference-atlas-core-3e1de93e838a.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 1,
+      "anchors_by_selector": {
+        "document-root": 1
+      },
+      "digest": "sha256:db209521559e20554744716280c5626db0c8985a6368cef85a9b5b85c2874c0e",
+      "fetch_status": "matched",
+      "id": "document-gradle-9-5-0-2055dd1ccac0",
+      "path": "authority/body-inventory-draft/document-gradle-9-5-0-2055dd1ccac0.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 26750,
+      "anchors_by_selector": {
+        "document-root": 1,
+        "tracked-blob": 26749
+      },
+      "digest": "sha256:5b13e745e2f3d0caa9b242c4c919c397c4f0f86ad52c0954a73efbcd0a9c6787",
+      "fetch_status": "matched",
+      "id": "document-gradle-gradle-8c4beeb1d6ea",
+      "path": "authority/body-inventory-draft/document-gradle-gradle-8c4beeb1d6ea.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 108210,
+      "anchors_by_selector": {
+        "document-root": 1,
+        "tracked-blob": 108209
+      },
+      "digest": "sha256:d724d370eb1d0c48e0cb090bf70ecf3e4bb2ae912a2c167c92933584c3ddf3d7",
+      "fetch_status": "matched",
+      "id": "document-jetbrains-kotlin-55ae826a5657",
+      "path": "authority/body-inventory-draft/document-jetbrains-kotlin-55ae826a5657.json",
+      "source_entries": 3
+    },
+    {
+      "anchors": 1713,
+      "anchors_by_selector": {
+        "document-root": 1,
+        "tracked-blob": 1712
+      },
+      "digest": "sha256:d099e137c276ed6fe3a5db702602e10ee0e1709cfac380e754923b929bf8ecd2",
+      "fetch_status": "matched",
+      "id": "document-jetbrains-kotlin-web-site-41bce3535b30",
+      "path": "authority/body-inventory-draft/document-jetbrains-kotlin-web-site-41bce3535b30.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 1,
+      "anchors_by_selector": {
+        "document-root": 1
+      },
+      "digest": "sha256:aa7a02c9120fd739d159c7007ce9e5abf86aefce8b7c126b7b46c893ab59d294",
+      "fetch_status": "matched",
+      "id": "document-kotlin-compiler-2-4-10-f2c27c089b3c",
+      "path": "authority/body-inventory-draft/document-kotlin-compiler-2-4-10-f2c27c089b3c.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 156,
+      "anchors_by_selector": {
+        "document-root": 1,
+        "tracked-blob": 155
+      },
+      "digest": "sha256:37b2e8038961e76ecf49efb2f1bf236fd87f9d6aa5236d3dab99deafc3080844",
+      "fetch_status": "matched",
+      "id": "document-kotlin-keep-8cfb549b3048",
+      "path": "authority/body-inventory-draft/document-kotlin-keep-8cfb549b3048.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 6933,
+      "anchors_by_selector": {
+        "document-root": 1,
+        "tracked-blob": 6932
+      },
+      "digest": "sha256:b14b9dc0d7ed9c2ab01b64fd3c574a6ac127f5f0bb3eb25d1b9936739e569483",
+      "fetch_status": "matched",
+      "id": "document-kotlin-kotlin-spec-d30c735b8b40",
+      "path": "authority/body-inventory-draft/document-kotlin-kotlin-spec-d30c735b8b40.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 1328,
+      "anchors_by_selector": {
+        "document-root": 1,
+        "tracked-blob": 1327
+      },
+      "digest": "sha256:06b6166a0472048714a4c4987a2e9aa44fc24de288a46dba5653c8baf3ced62c",
+      "fetch_status": "matched",
+      "id": "document-kotlin-kotlinx-coroutines-b6cf464a1968",
+      "path": "authority/body-inventory-draft/document-kotlin-kotlinx-coroutines-b6cf464a1968.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 1056,
+      "anchors_by_selector": {
+        "document-root": 1,
+        "tracked-blob": 1055
+      },
+      "digest": "sha256:768e5cd47f7eb366a1dfa0f0dd26287d5a93b523af501e2524d95108cf30a5d3",
+      "fetch_status": "matched",
+      "id": "document-kotlin-kotlinx-serialization-19ce84e31d4f",
+      "path": "authority/body-inventory-draft/document-kotlin-kotlinx-serialization-19ce84e31d4f.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 1,
+      "anchors_by_selector": {
+        "document-root": 1
+      },
+      "digest": "sha256:79c3ad54448c273f3526cd77945918089126c281667f0c892785320bfc52d686",
+      "fetch_status": "matched",
+      "id": "document-kotlin-native-macos-arm64-2-4-10-f01da68263ff",
+      "path": "authority/body-inventory-draft/document-kotlin-native-macos-arm64-2-4-10-f01da68263ff.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 1,
+      "anchors_by_selector": {
+        "document-root": 1
+      },
+      "digest": "sha256:52923bde6e33785aa4467a718366a81e842177daba52407ad2bc7529cfb2e196",
+      "fetch_status": "matched",
+      "id": "document-kotlin-stdlib-js-2-4-10-2aae8e0cca27",
+      "path": "authority/body-inventory-draft/document-kotlin-stdlib-js-2-4-10-2aae8e0cca27.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 1,
+      "anchors_by_selector": {
+        "document-root": 1
+      },
+      "digest": "sha256:c6544a403684eb7f8feda3e0b415069afbe0de8a6dc2ce25f5ce0af4aa2e4607",
+      "fetch_status": "matched",
+      "id": "document-kotlin-stdlib-jvm-2-4-10-bb664af1d0b7",
+      "path": "authority/body-inventory-draft/document-kotlin-stdlib-jvm-2-4-10-bb664af1d0b7.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 1,
+      "anchors_by_selector": {
+        "document-root": 1
+      },
+      "digest": "sha256:d492744a81102c0f9e621eb75527486d84a3f675c407053e7302742e6d3cbe13",
+      "fetch_status": "matched",
+      "id": "document-kotlin-stdlib-wasm-js-2-4-10-069f8d90580f",
+      "path": "authority/body-inventory-draft/document-kotlin-stdlib-wasm-js-2-4-10-069f8d90580f.json",
+      "source_entries": 1
+    },
+    {
+      "anchors": 1,
+      "anchors_by_selector": {
+        "document-root": 1
+      },
+      "digest": "sha256:b4a26e10f3bff8b1d23b0d5ae6e9ebd052fa92439f773b33c1051a4a769641b7",
+      "fetch_status": "matched",
+      "id": "document-kotlinx-coroutines-core-jvm-1-11-0-06d9be2a0154",
+      "path": "authority/body-inventory-draft/document-kotlinx-coroutines-core-jvm-1-11-0-06d9be2a0154.json",
+      "source_entries": 1
+    }
+  ],
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "input_digest": "sha256:9393b68e541744d3093e45127e6e6cd8303775549443fe907e986228c814eff2",
+  "schema_version": 1,
+  "selector_contract": [
+    "document-root",
+    "tracked-blob"
+  ],
+  "status": "incomplete-human-review-required",
+  "summary": {
+    "anchors_by_selector": {
+      "document-root": 16,
+      "tracked-blob": 146386
+    },
+    "authority_semantics_exhaustive": false,
+    "failed_documents": 0,
+    "human_reviewed_anchors": 0,
+    "matched_documents": 16,
+    "pending_human_anchors": 146402,
+    "promoted_surface_artifacts": 0,
+    "raw_anchor_candidates": 146402,
+    "selector_exhaustive_documents": 16,
+    "source_entries": 18,
+    "stale_documents": 0,
+    "unique_documents": 16
+  },
+  "tool_digest": "sha256:0407cea0fd4d71ac34e340eb5e87ec02e363d2a708354c23712a897ca1669947"
+}

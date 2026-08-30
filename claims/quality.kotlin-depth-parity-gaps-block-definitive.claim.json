@@ -1,0 +1,20 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "capability_id": "quality.kotlin-depth-parity",
+  "id": "quality.kotlin-depth-parity-gaps-block-definitive",
+  "proof_obligations": [
+    {
+      "acceptance_criteria": [
+        "FE正本commitと18 Axisを固定し、Kotlinの69 Behaviorと固有Runtime/Profile denominatorへ写像し、Gap残存中はstatus=incompleteかつDefinitive Certificate不在であること"
+      ],
+      "id": "quality.kotlin-depth-parity-incomplete-gate",
+      "statement": "FE正本commitと18 Axisを固定し、Kotlinの69 Behaviorと固有Runtime/Profile denominatorへ写像し、Gap残存中はstatus=incompleteかつDefinitive Certificate不在であること"
+    }
+  ],
+  "schema_version": 1,
+  "source_ids": [
+    "reference-atlas-core-definitive-v2"
+  ],
+  "statement": "FE Depth Referenceの18 AxisをKotlin固有denominatorへ写像し、全Axisがgap 0かつCore Definitive Gate v2成功でない限りDefinitive Certificateを許可しない。",
+  "status": "accepted"
+}

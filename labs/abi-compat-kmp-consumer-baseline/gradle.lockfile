@@ -1,0 +1,11 @@
+# This is a Gradle generated file for dependency locking.
+# Manual edits can break the build and are not advised.
+# This file is expected to be part of source control.
+org.jetbrains.kotlin:kotlin-dom-api-compat:2.4.10=jsNpmAggregated,jsTestNpmAggregated
+org.jetbrains.kotlin:kotlin-stdlib-js:2.4.10=jsNpmAggregated,jsTestNpmAggregated
+org.jetbrains.kotlin:kotlin-stdlib-wasm-js:2.4.10=wasmJsNpmAggregated,wasmJsTestNpmAggregated
+org.jetbrains.kotlin:kotlin-stdlib:2.4.10=jsNpmAggregated,jsTestNpmAggregated,wasmJsNpmAggregated,wasmJsTestNpmAggregated
+org.jetbrains.kotlin:kotlin-test-js:2.4.10=jsTestNpmAggregated
+org.jetbrains.kotlin:kotlin-test-wasm-js:2.4.10=wasmJsTestNpmAggregated
+org.jetbrains.kotlin:kotlin-test:2.4.10=jsTestNpmAggregated,wasmJsTestNpmAggregated
+empty=

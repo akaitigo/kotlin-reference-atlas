@@ -1,0 +1,1328 @@
+{
+  "atlas_id": "kotlin-reference-atlas",
+  "batches": [
+    {
+      "bucket": "04",
+      "digest": "sha256:086dad358f131ae817836b0ae63f04b4bb8a75c15b89776bbd2a7d9808111add",
+      "id": "review-p0-document-root-04",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-04.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "05",
+      "digest": "sha256:426975ddf57c44a8a0f349b4aa93fc612c09fa85082bad85c7c7295ad49cb24b",
+      "id": "review-p0-document-root-05",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-05.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "08",
+      "digest": "sha256:264276d22e97d17d4020984bad17d70c11ed8b6fb6b226cb98101305bc414a63",
+      "id": "review-p0-document-root-08",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-08.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "0a",
+      "digest": "sha256:ad88e3c8413a0a3a3fc8c4f8672f933c385169ca7abac4bc7d8f6109cee3b65d",
+      "id": "review-p0-document-root-0a",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-0a.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "0e",
+      "digest": "sha256:a56d3c1a3062f6635274044190785057463f070a411ed6b559f49e7cc428ce44",
+      "id": "review-p0-document-root-0e",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-0e.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "10",
+      "digest": "sha256:86ea8c19c4f71713dec9c09bc18dbc24ed36e9f5d4700518b391ce4140f2e15a",
+      "id": "review-p0-document-root-10",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-10.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "1b",
+      "digest": "sha256:f2761b45a4971fe8e1c14f9de9f74870633449d2ba90e68864d8e731ce3cbb93",
+      "id": "review-p0-document-root-1b",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-1b.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "1c",
+      "digest": "sha256:3ee03b8a00fec0b2a3ec5641b6bc714fdb8bf5e3e59cc096ff9ed35593d975bc",
+      "id": "review-p0-document-root-1c",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-1c.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "1d",
+      "digest": "sha256:201d52e48f16d32138fe6106617d2962d9898b1979ecbb1cee4ee8ad8e42e963",
+      "id": "review-p0-document-root-1d",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-1d.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "1f",
+      "digest": "sha256:f77e1aaafd1f5d23eb9400aa21c44a46c4dc6ff4c32615842918cd5adb9a7c72",
+      "id": "review-p0-document-root-1f",
+      "items": 2,
+      "path": "authority/review-queue-draft/review-p0-document-root-1f.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "23",
+      "digest": "sha256:6c378844eb2d5b72fd61867b7ed06d357198cfd1984209b4ef36b082eee89a40",
+      "id": "review-p0-document-root-23",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-23.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "27",
+      "digest": "sha256:314759db72c4c0099786ec6b67621ddde5f73c1fa9237c5b7edaacb64294ae89",
+      "id": "review-p0-document-root-27",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-27.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "30",
+      "digest": "sha256:9e14bae9c9b4e2eb973e13d8ac29de7536b97614d9c722abb96c80161ff143bd",
+      "id": "review-p0-document-root-30",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-30.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "33",
+      "digest": "sha256:156158178908822daabf14eb2683ce82d984f4e3ad3f7f05478458ba220e72f0",
+      "id": "review-p0-document-root-33",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-33.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "3d",
+      "digest": "sha256:ae9583d99977dfef7434d7b0870d9519567df1b451d6598d847ac7a024f8681a",
+      "id": "review-p0-document-root-3d",
+      "items": 1,
+      "path": "authority/review-queue-draft/review-p0-document-root-3d.json",
+      "priority": 0,
+      "raw_selector": "document-root"
+    },
+    {
+      "bucket": "00",
+      "digest": "sha256:7ce5f6107ed2074a148f2e42076db6e78d61bf9a54ec577f9ca886f309e9cd88",
+      "id": "review-p1-tracked-blob-00",
+      "items": 1396,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-00.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "01",
+      "digest": "sha256:8d04b2e206af0be1f5c5039e70310ccfabb9e1918c20474a56165c07c9401e4f",
+      "id": "review-p1-tracked-blob-01",
+      "items": 1416,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-01.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "02",
+      "digest": "sha256:121f344a8827040da3f980c628ca4131ef3ac60277bfc0109d38d77aed26f2ac",
+      "id": "review-p1-tracked-blob-02",
+      "items": 1457,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-02.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "03",
+      "digest": "sha256:d7b4ffab3c58865713706c40eca19d5001a4e1fcc6f5e13b63928dd9a48e739e",
+      "id": "review-p1-tracked-blob-03",
+      "items": 1437,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-03.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "04",
+      "digest": "sha256:439cd2f1d98681b8205ad310cdf599183095e72ba66bbe0ffe4f6badd8c5554a",
+      "id": "review-p1-tracked-blob-04",
+      "items": 1412,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-04.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "05",
+      "digest": "sha256:d551b461894ed87d149f95af00ef3f8b7685335661243ef3a2658bbc946eb8ef",
+      "id": "review-p1-tracked-blob-05",
+      "items": 1471,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-05.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "06",
+      "digest": "sha256:47c24fe865c0db7cda8fc87613d7350b280f6c68ce1773d271eccff71f49659b",
+      "id": "review-p1-tracked-blob-06",
+      "items": 1449,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-06.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "07",
+      "digest": "sha256:345c1e69056c8ed338b79dc3e8b600da4764e4e651a6ae4134d3d62f68a4f8b0",
+      "id": "review-p1-tracked-blob-07",
+      "items": 1451,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-07.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "08",
+      "digest": "sha256:e3858249b45fa05ddd65e09f3b7fd118a6ada6e6099eefa8b45631c7481be4eb",
+      "id": "review-p1-tracked-blob-08",
+      "items": 1454,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-08.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "09",
+      "digest": "sha256:b410bfd5ce7675c054ae026f6e9ca994bfc2fa6551d3ec764ce3b7ad1408f0ff",
+      "id": "review-p1-tracked-blob-09",
+      "items": 1465,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-09.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "0a",
+      "digest": "sha256:4b55dc6e63dca2a5d872a3539caf57adb47292ba4d49b94557cfb1ce219ee708",
+      "id": "review-p1-tracked-blob-0a",
+      "items": 1407,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-0a.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "0b",
+      "digest": "sha256:d4a77f8c68b9daebacd819284ee84b1581ef72332b49393bdebbc71e9cce83c8",
+      "id": "review-p1-tracked-blob-0b",
+      "items": 1436,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-0b.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "0c",
+      "digest": "sha256:2baed8a34b3d47b3487f3513b19f1ec2886f42502a1087d3dfd9a207fb368c33",
+      "id": "review-p1-tracked-blob-0c",
+      "items": 1477,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-0c.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "0d",
+      "digest": "sha256:3cc71469910880e334f483d48de9d80852e998286fb26206f54069747a3482b3",
+      "id": "review-p1-tracked-blob-0d",
+      "items": 1446,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-0d.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "0e",
+      "digest": "sha256:6f1d2a8c0cf6b116d877abdf3d644983584f64548302f5d8fabb0ba4cee1a217",
+      "id": "review-p1-tracked-blob-0e",
+      "items": 1494,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-0e.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "0f",
+      "digest": "sha256:bcc369aa3e52f174e4241e771c97092082770a623d8665399d5a44d4677084b6",
+      "id": "review-p1-tracked-blob-0f",
+      "items": 1510,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-0f.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "10",
+      "digest": "sha256:0be5d1621f5519773ceea3a0a16c816af2cb8be3230f68769bcc59cd72516e26",
+      "id": "review-p1-tracked-blob-10",
+      "items": 1496,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-10.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "11",
+      "digest": "sha256:5e30ed9b749dee58062c6e3d9b15277e224d9825384036c02853f85c56ea045b",
+      "id": "review-p1-tracked-blob-11",
+      "items": 1458,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-11.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "12",
+      "digest": "sha256:b613d88b383031fad2bf58648c9eae8baecc29c00f3170e8c3fce2d004b503ca",
+      "id": "review-p1-tracked-blob-12",
+      "items": 1452,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-12.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "13",
+      "digest": "sha256:69ba549dbc3bb608c60cf35028bdad6d1c6364a460944379e26a0c4993ea1866",
+      "id": "review-p1-tracked-blob-13",
+      "items": 1478,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-13.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "14",
+      "digest": "sha256:96c495718811ebbaf75eac477858a520110a47a71e7f89b8edb5b28099d5ec37",
+      "id": "review-p1-tracked-blob-14",
+      "items": 1453,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-14.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "15",
+      "digest": "sha256:2ee4ac4f7f2a92baf3ab0c18d66bfa998a326a39e51e026e7258728395f2ce9c",
+      "id": "review-p1-tracked-blob-15",
+      "items": 1487,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-15.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "16",
+      "digest": "sha256:edb549ea11917ff49d85072c65c16914b6e111b6335fb223fe2fee2bf98a0397",
+      "id": "review-p1-tracked-blob-16",
+      "items": 1419,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-16.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "17",
+      "digest": "sha256:40840b50f6a78c282dba5c538b78612ef7ed706a204def8d848c580b6ff2b5c4",
+      "id": "review-p1-tracked-blob-17",
+      "items": 1431,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-17.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "18",
+      "digest": "sha256:6db0ff5a4a3d7f3da5398fd4d85fbce18d26227d8b9b89e785fe6f5e77d2f56b",
+      "id": "review-p1-tracked-blob-18",
+      "items": 1430,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-18.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "19",
+      "digest": "sha256:3d73f9f2b6cfcd966550ef44fcfa001bbb6d2aa55a18dc1a41fc9d8b1c0d48bd",
+      "id": "review-p1-tracked-blob-19",
+      "items": 1436,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-19.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "1a",
+      "digest": "sha256:c619f2e152ff2808f87f99fd336450c576f3ab5d635027f62fb2b9dc4981756f",
+      "id": "review-p1-tracked-blob-1a",
+      "items": 1467,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-1a.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "1b",
+      "digest": "sha256:fd607bd4347a7b9b770b2206c07c7662b6ce8c16ac409fc34084381a7862c81b",
+      "id": "review-p1-tracked-blob-1b",
+      "items": 1477,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-1b.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "1c",
+      "digest": "sha256:ec01057061523b048e14c8735f0bf08fb73f21a7fe4a9032b08102f1c48e483f",
+      "id": "review-p1-tracked-blob-1c",
+      "items": 1469,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-1c.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "1d",
+      "digest": "sha256:cc52dd2607e3bfb49e30d451c7938a019681799990a2beb09aae657cc924ddef",
+      "id": "review-p1-tracked-blob-1d",
+      "items": 1448,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-1d.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "1e",
+      "digest": "sha256:ae9259a960b4aeb6e62eb566575a493005a336f41d515df856f25168f66139c6",
+      "id": "review-p1-tracked-blob-1e",
+      "items": 1507,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-1e.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "1f",
+      "digest": "sha256:c2d233846cbd702962604b25cd27f0339b0fa20b59f5e5e0099a7479c40ec123",
+      "id": "review-p1-tracked-blob-1f",
+      "items": 1473,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-1f.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "20",
+      "digest": "sha256:edb497db9dde2004f4a4c97cf4f4b2256d8f4654064c869447855254ee9bc885",
+      "id": "review-p1-tracked-blob-20",
+      "items": 1495,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-20.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "21",
+      "digest": "sha256:c1ebfd094ade43e3d545b799467eb659e6c56fd460f2c08b4019e9a5a81c3e33",
+      "id": "review-p1-tracked-blob-21",
+      "items": 1422,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-21.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "22",
+      "digest": "sha256:7136ffdde5b4674ddd2ef2e2f2dee71918378416ee5bb7acc3d371b6cc51d6b5",
+      "id": "review-p1-tracked-blob-22",
+      "items": 1454,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-22.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "23",
+      "digest": "sha256:4513c403cee4e6634670bceb5134d649fe0fd22d12ad312de7152305d966b492",
+      "id": "review-p1-tracked-blob-23",
+      "items": 1476,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-23.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "24",
+      "digest": "sha256:58f2d693459513a9246c873f239cd670bb57a8664bdc185f5dd1829eb179deb0",
+      "id": "review-p1-tracked-blob-24",
+      "items": 1410,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-24.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "25",
+      "digest": "sha256:fe2696eecad5be95671cb0239b88a35f76aa6309d24ae26d7eb343e70865ffa5",
+      "id": "review-p1-tracked-blob-25",
+      "items": 1432,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-25.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "26",
+      "digest": "sha256:6f9312412d39f235b0fdc0d29951e2d445a4a62f7c66500fcbf0728f971fe828",
+      "id": "review-p1-tracked-blob-26",
+      "items": 1477,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-26.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "27",
+      "digest": "sha256:cc95cfc854bf672e5f8fa1c621cc248830e916807fbbfba4926dbe3ae3f357b0",
+      "id": "review-p1-tracked-blob-27",
+      "items": 1538,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-27.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "28",
+      "digest": "sha256:a0b137534279d170b5d8836cfced46eebf50086dafaa07901d448cb2768661b1",
+      "id": "review-p1-tracked-blob-28",
+      "items": 1444,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-28.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "29",
+      "digest": "sha256:0be8b86c1d3ca8860e2a1c5b2ad916c503d0e5fff94f93612f4dcaca69b8c41d",
+      "id": "review-p1-tracked-blob-29",
+      "items": 1494,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-29.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "2a",
+      "digest": "sha256:638d8c553dfa14be35430ef636e16748a6de4d2f7d6214f6f8efae8b5967ba0d",
+      "id": "review-p1-tracked-blob-2a",
+      "items": 1424,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-2a.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "2b",
+      "digest": "sha256:472086678defbf3cd38425728c0ed86b3e58c2e6b73ec2a9ecdeebc20ba9003f",
+      "id": "review-p1-tracked-blob-2b",
+      "items": 1451,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-2b.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "2c",
+      "digest": "sha256:9ca476c789de67a0b874cc2c10e58a2ee5b3e6230b174311193739f74699ceaf",
+      "id": "review-p1-tracked-blob-2c",
+      "items": 1411,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-2c.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "2d",
+      "digest": "sha256:b7a69f28dbc0e1a6bb7ea34858e119a81c785d6beae4574d8c542f0b9c3beb41",
+      "id": "review-p1-tracked-blob-2d",
+      "items": 1456,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-2d.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "2e",
+      "digest": "sha256:9c89d438aa4318e4d052b23d4bdec3cf577fa6bfdf277772c71a41456060323b",
+      "id": "review-p1-tracked-blob-2e",
+      "items": 1492,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-2e.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "2f",
+      "digest": "sha256:2ba22160696bfd944e36b7dbe0d4179ae4c60ddf56a617d188d7d1c0a57ed6e6",
+      "id": "review-p1-tracked-blob-2f",
+      "items": 1378,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-2f.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "30",
+      "digest": "sha256:89f514a0d0a779ccc2500c0743cca7577c061f1a795fdbd1196b4707075ccd2d",
+      "id": "review-p1-tracked-blob-30",
+      "items": 1418,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-30.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "31",
+      "digest": "sha256:79b20f96fa2aa46b72bfa70fe87f530282735b944097d894f98d493e6375d991",
+      "id": "review-p1-tracked-blob-31",
+      "items": 1478,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-31.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "32",
+      "digest": "sha256:4657c48c1ad956aca81e27b86598248c4ba0af6a1cfad59ede5228a8b7edd61f",
+      "id": "review-p1-tracked-blob-32",
+      "items": 1416,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-32.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "33",
+      "digest": "sha256:18e4edd32565a3c0cd2ee134789d099d7cca36105e5e705f849b785e943168a4",
+      "id": "review-p1-tracked-blob-33",
+      "items": 1468,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-33.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "34",
+      "digest": "sha256:0fbaf69e1c6c3fff159869fbfc62b449677090a10dfbc846d069b2940219f7f2",
+      "id": "review-p1-tracked-blob-34",
+      "items": 1469,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-34.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "35",
+      "digest": "sha256:661dec8b8f5d307958c6367aaa29b5d47a8d00c877b51bd82b1e10b82a9bdb69",
+      "id": "review-p1-tracked-blob-35",
+      "items": 1433,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-35.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "36",
+      "digest": "sha256:5155510b775a7ed6149344963b8559bf07c9c4eab1ab9e20bb32318894a1bf2b",
+      "id": "review-p1-tracked-blob-36",
+      "items": 1424,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-36.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "37",
+      "digest": "sha256:714928b59c6beeab91ea22ed2b1656efe007e7d2346afe77df75698b295cd75a",
+      "id": "review-p1-tracked-blob-37",
+      "items": 1451,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-37.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "38",
+      "digest": "sha256:2b8d1257a1bd48124dd0101dbdb9d7ef870b9b679ffbc07565418e5e732d563b",
+      "id": "review-p1-tracked-blob-38",
+      "items": 1469,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-38.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "39",
+      "digest": "sha256:c5d68d2150c2140d97c0029c0044487d8136ae3602b027b3d634d473b517efc0",
+      "id": "review-p1-tracked-blob-39",
+      "items": 1411,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-39.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "3a",
+      "digest": "sha256:b1f27cca0b44d6346dcdb1e2593579e73f0ddae70abe0fc5f7defc9ae579679f",
+      "id": "review-p1-tracked-blob-3a",
+      "items": 1473,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-3a.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "3b",
+      "digest": "sha256:2f4ae452edc2a3766d097e0f5706499ec592acb9860e2e2d77b41a3dda6f05f2",
+      "id": "review-p1-tracked-blob-3b",
+      "items": 1477,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-3b.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "3c",
+      "digest": "sha256:6dac2515772ebb618c2d4ea3cb6ebda292474782e28c1bf44351468f99cc50e1",
+      "id": "review-p1-tracked-blob-3c",
+      "items": 1414,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-3c.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "3d",
+      "digest": "sha256:475704729f228a290ec66af32a98ab28edc55026fcc71c7fd9a2811fa70c5345",
+      "id": "review-p1-tracked-blob-3d",
+      "items": 1475,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-3d.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "3e",
+      "digest": "sha256:a51596c844295d269bc22258727b4ac39943be88cc3875c826a1880ba0a6a372",
+      "id": "review-p1-tracked-blob-3e",
+      "items": 1431,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-3e.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "3f",
+      "digest": "sha256:6c6f105f6771e67dce2c9e489f8041f48d42fe08f1c14c0bf3e7c6cc60c6b308",
+      "id": "review-p1-tracked-blob-3f",
+      "items": 1473,
+      "path": "authority/review-queue-draft/review-p1-tracked-blob-3f.json",
+      "priority": 1,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "00",
+      "digest": "sha256:dda79a1f2c82beef85e28c17bc28c47149efa59f92836e96f3b1229b8b3b6657",
+      "id": "review-p2-tracked-blob-00",
+      "items": 875,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-00.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "01",
+      "digest": "sha256:3bbdbccdc697813d3d187c0becf74ab4a875e49f34cc6a604d40f50172434059",
+      "id": "review-p2-tracked-blob-01",
+      "items": 806,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-01.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "02",
+      "digest": "sha256:d87d3ae6805bc8a5b88381781228eadf40efcdd7206b8935e2ee2d2ab6ab9e8b",
+      "id": "review-p2-tracked-blob-02",
+      "items": 819,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-02.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "03",
+      "digest": "sha256:7646ef16daf8d452a1ed8936fa8a9815fd07d9612f1c629e801806794e0cd713",
+      "id": "review-p2-tracked-blob-03",
+      "items": 830,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-03.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "04",
+      "digest": "sha256:bda6944a153cba0dd8867b0a15f027340748ad9a501f58e82297e678739e3967",
+      "id": "review-p2-tracked-blob-04",
+      "items": 832,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-04.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "05",
+      "digest": "sha256:db6a0b49aeb6df14325c62303372d15141718843d62ac3b5f103ccf78dd92631",
+      "id": "review-p2-tracked-blob-05",
+      "items": 835,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-05.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "06",
+      "digest": "sha256:8c2584633459af48270147714188383bb800281ef1b69451f0ff1367ebc0c189",
+      "id": "review-p2-tracked-blob-06",
+      "items": 796,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-06.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "07",
+      "digest": "sha256:f2807853b2e65a12a559e7c32b70d264f664386a801a90e9df90962cad93bf73",
+      "id": "review-p2-tracked-blob-07",
+      "items": 863,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-07.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "08",
+      "digest": "sha256:946cca3e699d47b800e7aa69dd881d79559337e11221f9d5b1003f8908add714",
+      "id": "review-p2-tracked-blob-08",
+      "items": 844,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-08.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "09",
+      "digest": "sha256:3de29bfc91485fdad18d9f2eaa2066dabfebd79161b4d2790d8510853481442d",
+      "id": "review-p2-tracked-blob-09",
+      "items": 822,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-09.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "0a",
+      "digest": "sha256:bb7388a90b85fe03eff9d34f7112a27ea1b723455ad01d66f4afc03ea023a161",
+      "id": "review-p2-tracked-blob-0a",
+      "items": 833,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-0a.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "0b",
+      "digest": "sha256:6c5c4450920d6ebeb4087b9380201b2f40c94b54233362f7b7686361ab7894a1",
+      "id": "review-p2-tracked-blob-0b",
+      "items": 811,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-0b.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "0c",
+      "digest": "sha256:03aa74dd3a903c21fd9f8e14af58cfb178b1794d561c22f77be6e076c85976d7",
+      "id": "review-p2-tracked-blob-0c",
+      "items": 805,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-0c.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "0d",
+      "digest": "sha256:b4c5c0784a577383b0f388393d3624a8cceb24ebec215db1ef7c0e2d6d74ffa6",
+      "id": "review-p2-tracked-blob-0d",
+      "items": 853,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-0d.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "0e",
+      "digest": "sha256:65de231425ba9efb682e67420aa29df0af536d996106e2d2d4ec452a19014272",
+      "id": "review-p2-tracked-blob-0e",
+      "items": 839,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-0e.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "0f",
+      "digest": "sha256:dda6030beb3a5e6bb2ee2e22b918965ad3415bca93c6876a9cd2d0fb357f1895",
+      "id": "review-p2-tracked-blob-0f",
+      "items": 787,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-0f.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "10",
+      "digest": "sha256:b56d5b9c609d08be6aa17aa43c9484aeccc2a1b1ca0af9d6272801195bea40f5",
+      "id": "review-p2-tracked-blob-10",
+      "items": 844,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-10.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "11",
+      "digest": "sha256:ff4a7f5ac5978ec7dfd1aa1a2c3340f531893b4c023410c517807633d58282f0",
+      "id": "review-p2-tracked-blob-11",
+      "items": 839,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-11.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "12",
+      "digest": "sha256:2ace59b43caea72f16cd3e49fd28d96b43601bd24c218463327362c93bb799ef",
+      "id": "review-p2-tracked-blob-12",
+      "items": 799,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-12.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "13",
+      "digest": "sha256:3b4b8f097864a6628b6228b5fcc32961481d06df45d131536bcb161c6314db56",
+      "id": "review-p2-tracked-blob-13",
+      "items": 818,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-13.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "14",
+      "digest": "sha256:9f5fa3ff6a6b8959dff3fbe0514d2142257d322fcd5af9743681e3ec093779aa",
+      "id": "review-p2-tracked-blob-14",
+      "items": 835,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-14.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "15",
+      "digest": "sha256:c707bbe0c7281dfce1c578b8c675f7a76d80c140ce85bd116cc62128e536d4f7",
+      "id": "review-p2-tracked-blob-15",
+      "items": 845,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-15.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "16",
+      "digest": "sha256:1888a816c643569ab6d579e2808072ae8ab14686973084a8f92f5f5cca8cafe5",
+      "id": "review-p2-tracked-blob-16",
+      "items": 835,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-16.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "17",
+      "digest": "sha256:bab5da0062e1757b2eb50750760af71de619f325d4ea602e6e95e875dd929576",
+      "id": "review-p2-tracked-blob-17",
+      "items": 825,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-17.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "18",
+      "digest": "sha256:24b12be1385076513474d2340905bb65bb7241403ff550bd2f380f171aae440d",
+      "id": "review-p2-tracked-blob-18",
+      "items": 839,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-18.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "19",
+      "digest": "sha256:2d34c31173d759cc7872df8c32ee3e0d327463e25a8047cf6f1094f422ad1f71",
+      "id": "review-p2-tracked-blob-19",
+      "items": 852,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-19.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "1a",
+      "digest": "sha256:f79f96ea0d739af9956adc0161985079a34f49db15add28f34245c7fc80209a8",
+      "id": "review-p2-tracked-blob-1a",
+      "items": 876,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-1a.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "1b",
+      "digest": "sha256:d7f5c21de1e9c0feaa70b1176cd2ea27f61e36b629aae1a7ea530f1b3fb9841d",
+      "id": "review-p2-tracked-blob-1b",
+      "items": 807,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-1b.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "1c",
+      "digest": "sha256:0b49da5912433ed0554ca7ef6aef489d62eb4861188fc23537c940c2c1724dae",
+      "id": "review-p2-tracked-blob-1c",
+      "items": 832,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-1c.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "1d",
+      "digest": "sha256:4567e346360f18ec0bc648388c2f7a3c004559e28de86b27e1f2293fd662f055",
+      "id": "review-p2-tracked-blob-1d",
+      "items": 836,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-1d.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "1e",
+      "digest": "sha256:1cfce0ecb9f24af0df67d5b8a40eb0cb89d534de24bd33b97cb3e0cfc07ef52f",
+      "id": "review-p2-tracked-blob-1e",
+      "items": 849,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-1e.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "1f",
+      "digest": "sha256:b0b1ba6d3e64717782a9d757a4a058e8d2caaec33886d9295fa5750362a1b6e4",
+      "id": "review-p2-tracked-blob-1f",
+      "items": 807,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-1f.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "20",
+      "digest": "sha256:6a4e50fc85159cd40d64d23e93d1551d5620e01f79e86300ede761452939831b",
+      "id": "review-p2-tracked-blob-20",
+      "items": 859,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-20.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "21",
+      "digest": "sha256:0ec10d0f4b43d8cc5dd02d4dcf2a2c140040ba57b70b3d54bd83011dbe502329",
+      "id": "review-p2-tracked-blob-21",
+      "items": 890,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-21.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "22",
+      "digest": "sha256:3e79b14327cbf5d39374ab15793b5f48f3a92d9dced5604fb17805a70b9aa4c8",
+      "id": "review-p2-tracked-blob-22",
+      "items": 827,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-22.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "23",
+      "digest": "sha256:fcd1647abd6e78d61f575072a294ce2652953acec1ac2f5fc4dd08fc1d31dda1",
+      "id": "review-p2-tracked-blob-23",
+      "items": 788,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-23.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "24",
+      "digest": "sha256:98e6c2cc7c2121679ed417c9738c90ad2ab321ddc8b2d2c05e8376d76e10cbd6",
+      "id": "review-p2-tracked-blob-24",
+      "items": 807,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-24.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "25",
+      "digest": "sha256:48a8874d47df8d6c6e28df5414ce3a3a456d18cb1743e220223b5558a1a54b4f",
+      "id": "review-p2-tracked-blob-25",
+      "items": 817,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-25.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "26",
+      "digest": "sha256:c4aa73945f255dbf3cdb28ebc85d586892175a3929f78ef50c0d88f9ff8dda25",
+      "id": "review-p2-tracked-blob-26",
+      "items": 817,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-26.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "27",
+      "digest": "sha256:792121fa82037519222500c885d2c9898357c6b298d29baf343adcebd3b7d5fc",
+      "id": "review-p2-tracked-blob-27",
+      "items": 834,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-27.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "28",
+      "digest": "sha256:69086221b5323a682f401f54c905c8448df1f123aa4da40dc3a259b2903d4c4d",
+      "id": "review-p2-tracked-blob-28",
+      "items": 834,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-28.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "29",
+      "digest": "sha256:be70ad699832bc0dbacc345be59e0c66eaf2fb849f26a87f86c4c7ec02bf11fd",
+      "id": "review-p2-tracked-blob-29",
+      "items": 850,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-29.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "2a",
+      "digest": "sha256:f460ad2d4fb7148ded4d81a96ea39d82b6da6b6f1c0146d43b23f9b3666f574c",
+      "id": "review-p2-tracked-blob-2a",
+      "items": 844,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-2a.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "2b",
+      "digest": "sha256:fc0b19fc3d3ae53467bcf0fed5199807ad678c2072ea5d3791b5fe4c6b5dba03",
+      "id": "review-p2-tracked-blob-2b",
+      "items": 842,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-2b.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "2c",
+      "digest": "sha256:83b653b97d2cb13e4889d01824913334e4e2817db7d780140c27262d248f0dcf",
+      "id": "review-p2-tracked-blob-2c",
+      "items": 844,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-2c.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "2d",
+      "digest": "sha256:2ce127204354efb2a7cb665eb3b66950195ce98d718744acc5b1d2f74b553183",
+      "id": "review-p2-tracked-blob-2d",
+      "items": 832,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-2d.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "2e",
+      "digest": "sha256:a21f05e22176bbd5d9c63e72607e170be2c27cf5ab688fe25fbd20d018bb0ffb",
+      "id": "review-p2-tracked-blob-2e",
+      "items": 817,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-2e.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "2f",
+      "digest": "sha256:234279b8849e4a7f727040414bed85d278da5ccf7075f4bd1f1ccda203907bac",
+      "id": "review-p2-tracked-blob-2f",
+      "items": 853,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-2f.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "30",
+      "digest": "sha256:7d35438bdf0bba7e53030f04b5c3a001bd818ee6f6b2dbcb918a246c09a7212f",
+      "id": "review-p2-tracked-blob-30",
+      "items": 831,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-30.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "31",
+      "digest": "sha256:cca776cd1c3792eaf2c01c133c879df1435615c9f4f058491e477841fb376554",
+      "id": "review-p2-tracked-blob-31",
+      "items": 860,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-31.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "32",
+      "digest": "sha256:43a2eda4392b587d19deb3e76480bd8a7ec02d5f612f665f0f0b1cdff7eea71a",
+      "id": "review-p2-tracked-blob-32",
+      "items": 860,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-32.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "33",
+      "digest": "sha256:7f97ba19d439e03364beb8744bc1157b494289db9f4f5aeb743bd7d077ca4fa8",
+      "id": "review-p2-tracked-blob-33",
+      "items": 867,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-33.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "34",
+      "digest": "sha256:78b016943acaff8db86c366444306748430c80fecba3ea5023e2871c56f637fd",
+      "id": "review-p2-tracked-blob-34",
+      "items": 869,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-34.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "35",
+      "digest": "sha256:08359a7d2ec862952ced2a5c95478f6647d160b34e614ff7555313f9d8221f47",
+      "id": "review-p2-tracked-blob-35",
+      "items": 848,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-35.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "36",
+      "digest": "sha256:b70631b2b2723e766aacd955c5b8d0dd63f0fa9d483032a03eaff8e3f79c7fb0",
+      "id": "review-p2-tracked-blob-36",
+      "items": 805,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-36.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "37",
+      "digest": "sha256:da841ce7555ca2533118e5e3db1c4de939dc971d77dfd2935886f9febe0a6a75",
+      "id": "review-p2-tracked-blob-37",
+      "items": 839,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-37.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "38",
+      "digest": "sha256:75460bb95e27cdf83651f04e5085262894987b4ecc9b30db06c92b91f8f676c1",
+      "id": "review-p2-tracked-blob-38",
+      "items": 871,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-38.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "39",
+      "digest": "sha256:2049831c3731fc9327caeb9340567c8e1c1251d3a6bbee305b2f7c43b8efda65",
+      "id": "review-p2-tracked-blob-39",
+      "items": 823,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-39.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "3a",
+      "digest": "sha256:d0e95d5a1ab202bca7334904ccab283171c86329ee6d72d82f11143dfa5932a1",
+      "id": "review-p2-tracked-blob-3a",
+      "items": 839,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-3a.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "3b",
+      "digest": "sha256:480f86250870acfbd136975d934fba6a91e1f9f5d106464dc0024cfe1c6ffc9e",
+      "id": "review-p2-tracked-blob-3b",
+      "items": 851,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-3b.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "3c",
+      "digest": "sha256:bc8b3112dcb545e5b2475daf44e54621dde425cabaf0c5ce790f24e50e3ced0f",
+      "id": "review-p2-tracked-blob-3c",
+      "items": 847,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-3c.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "3d",
+      "digest": "sha256:eecc62bfc53851d6c5955120cbf98e3816cc6ad27b85b7e4a5265a3cced32a79",
+      "id": "review-p2-tracked-blob-3d",
+      "items": 771,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-3d.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "3e",
+      "digest": "sha256:4da68b004b5f8bbcca88183e75d8105c4f686416d9b3dce65e9ead345c372a24",
+      "id": "review-p2-tracked-blob-3e",
+      "items": 826,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-3e.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    },
+    {
+      "bucket": "3f",
+      "digest": "sha256:6a8cad2c259771cb91e1bbfbea958450267aa574dc08a6d7a989d4e137cef8b4",
+      "id": "review-p2-tracked-blob-3f",
+      "items": 843,
+      "path": "authority/review-queue-draft/review-p2-tracked-blob-3f.json",
+      "priority": 2,
+      "raw_selector": "tracked-blob"
+    }
+  ],
+  "body_storage": "digest-locator-and-metadata-only",
+  "decision_ledger": "authority/reviews/decisions.json",
+  "generated_at": "2026-08-28T00:00:00+09:00",
+  "input_digest": "sha256:e943a6b04c9490cd7ee57ffd2abc992d213254e0f91f8d17b1fc29442bb0264c",
+  "machine_assistance": "priority-cluster-and-batch-proposals-only",
+  "queue_id": "authority-review-cbcc1380368377c8d760",
+  "schema_version": 1,
+  "semantic_decisions": "human-only",
+  "stale_holds": [],
+  "status": "incomplete-human-review-required",
+  "summary": {
+    "authority_semantics_exhaustive": false,
+    "batches": 143,
+    "candidate_clusters": 9758,
+    "clustered_anchors": 43126,
+    "decisions": 0,
+    "deferred": 0,
+    "eligible_documents": 16,
+    "excluded": 0,
+    "human_reviewed": 0,
+    "included": 0,
+    "merged": 0,
+    "pending_human": 146402,
+    "priority_counts": {
+      "0": 16,
+      "1": 92993,
+      "2": 53393
+    },
+    "queue_counts_as_depth_achievement": false,
+    "queued_anchors": 146402,
+    "split": 0,
+    "stale_document_holds": 0,
+    "unavailable_document_holds": 0
+  },
+  "tool_digest": "sha256:07c2da41083331e977d3235d0e42395814b4dbaeaaecef43b0bf245c5454d71a",
+  "unavailable_holds": []
+}
