@@ -77,6 +77,12 @@ def main() -> None:
     if actual_files != expected_files:
         errors.append("Scenario Proof専用Artifact集合がIndexと一致しない")
     proofs = []
+    partial_report_path = ROOT / "artifacts" / "scenario-partial-runtime" / "results.json"
+    partial_report = load(partial_report_path)
+    partial_records = {record["id"]: record for record in partial_report.get("records", [])}
+    if partial_report.get("status") != "passed" or partial_report.get("execution", {}).get("retries") != 0:
+        errors.append("security-001 partial Runtime reportがpass/retry 0ではない")
+    used_dedicated_paths = set()
     reference_results = load(REFERENCE_RESULTS)
     trace_by_scenario = {item["scenario"]: item for item in reference_results["scenarios"]}
     for item in index.get("files", []):
@@ -128,6 +134,12 @@ def main() -> None:
                 errors.append(f"Scenario cell closure flag不整合: {cell.get('id')}")
             if should_close:
                 closed_cells.append(cell)
+                report_record = partial_records.get(cell.get("id"))
+                if not report_record or any(dedicated.get(field) != report_record.get(field) for field in (
+                    "source_digest", "harness_digest", "compiler_runtime_platform_identity", "oracle",
+                    "trace", "artifact", "attempts", "retries",
+                )):
+                    errors.append(f"Scenario cellが専用Runtime report実体と一致しない: {cell.get('id')}")
                 if dedicated.get("attempts") != 1 or dedicated.get("retries") != 0:
                     errors.append(f"Scenario cellが初回成功/retry 0ではない: {cell.get('id')}")
                 if not all(dedicated.get(field) for field in ("source_digest", "harness_digest", "compiler_runtime_platform_identity", "oracle", "trace", "artifact")):
@@ -137,6 +149,12 @@ def main() -> None:
                     artifact_path = ROOT / str(artifact.get("path", "missing"))
                     if not artifact_path.is_file() or sha256(artifact_path.read_bytes()) != artifact.get("digest"):
                         errors.append(f"Scenario cell専用{artifact_field} binding不一致: {cell.get('id')}")
+                    if artifact.get("path") in used_dedicated_paths:
+                        errors.append(f"Scenario cell専用Artifact pathが別cellと共有されている: {artifact.get('path')}")
+                    used_dedicated_paths.add(artifact.get("path"))
+                trace_payload = load(ROOT / dedicated["trace"]["path"])
+                if set(trace_payload.get("streams", {})) != {"action", "network", "resource"}:
+                    errors.append(f"Scenario cell専用Trace streamが不足: {cell.get('id')}")
                 if dedicated.get("trace", {}).get("path") == dedicated.get("artifact", {}).get("path"):
                     errors.append(f"Scenario cell Trace/Artifactが独立していない: {cell.get('id')}")
             elif not cell.get("gaps"):

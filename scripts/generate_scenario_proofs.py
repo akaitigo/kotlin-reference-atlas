@@ -21,6 +21,7 @@ CORE_REFERENCE_SNAPSHOTS = ROOT / "artifacts" / "reference-system" / "snapshots"
 REFERENCE_MANIFEST = ROOT / "integrations" / "reference-system" / "manifest.json"
 DECISIONS = ROOT / "authority" / "reviews" / "decisions.json"
 CLOSURE_REFERENCE = ROOT / "baseline" / "fe-scenario-gap-closure-reference-v1.json"
+PARTIAL_RUNTIME_REPORT = ROOT / "artifacts" / "scenario-partial-runtime" / "results.json"
 SURFACE_SCENARIOS = {
     "foundations-mechanics": {"normal", "boundary", "failure"},
     "architecture-design": {"normal", "boundary", "compatibility"},
@@ -219,6 +220,85 @@ def evidence_supports_scenario(evidence_id: str, scenario: str) -> bool:
     return scenario == "normal"
 
 
+def partial_runtime_records() -> dict[str, dict]:
+    if not PARTIAL_RUNTIME_REPORT.is_file():
+        return {}
+    report = load_json(PARTIAL_RUNTIME_REPORT)
+    if report.get("status") != "passed" or report.get("execution", {}).get("retries") != 0:
+        return {}
+    records = report.get("records", [])
+    return {record["id"]: record for record in records if record.get("final_status") == "passed"}
+
+
+def closure_cell(item: dict, surface_id: str, scenario: str, variant_id: str, runtime_records: dict[str, dict]) -> dict:
+    cell_id = f"cell.{item['behavior_id']}.{surface_id}.{scenario}.{variant_id}"
+    record = runtime_records.get(cell_id)
+    if record:
+        dedicated = {
+            field: record[field]
+            for field in (
+                "source_digest", "harness_digest", "compiler_runtime_platform_identity",
+                "oracle", "trace", "artifact", "attempts", "retries",
+            )
+        }
+        return {
+            "id": cell_id,
+            "surface_id": surface_id,
+            "scenario": scenario,
+            "variant_id": variant_id,
+            "status": "dedicated-runtime-pass",
+            "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+            "dedicated_execution": dedicated,
+            "closure": {
+                "source_bound": True,
+                "harness_bound": True,
+                "identity_bound": True,
+                "oracle_bound": True,
+                "trace_bound": True,
+                "artifact_bound": True,
+                "first_attempt_pass": record["attempts"] == 1,
+                "retry_count_zero": record["retries"] == 0,
+                "dedicated_to_this_cell": record.get("dedicated_to_this_cell") is True,
+                "closed": record["attempts"] == 1 and record["retries"] == 0 and record.get("dedicated_to_this_cell") is True,
+            },
+            "gaps": [],
+        }
+    return {
+        "id": cell_id,
+        "surface_id": surface_id,
+        "scenario": scenario,
+        "variant_id": variant_id,
+        "status": "explicit-gap",
+        "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
+        "dedicated_execution": {
+            "source_digest": None,
+            "harness_digest": None,
+            "compiler_runtime_platform_identity": None,
+            "oracle": None,
+            "trace": None,
+            "artifact": None,
+            "attempts": None,
+            "retries": None,
+        },
+        "closure": {
+            "source_bound": False,
+            "harness_bound": False,
+            "identity_bound": False,
+            "oracle_bound": False,
+            "trace_bound": False,
+            "artifact_bound": False,
+            "first_attempt_pass": False,
+            "retry_count_zero": False,
+            "dedicated_to_this_cell": False,
+            "closed": False,
+        },
+        "gaps": [
+            "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
+            "Integrated traces and unrelated Evidence metadata are ineligible for closure credit.",
+        ],
+    }
+
+
 def generate() -> dict:
     inventory = yaml.safe_load((ROOT / "surface.inventory.yaml").read_text(encoding="utf-8"))
     coverage = load_json(ROOT / "coverage.yaml")
@@ -228,6 +308,7 @@ def generate() -> dict:
     artifact_by_id = {item["id"]: item for item in inventory["authority_artifacts"]}
     claim_counts = collections.Counter(claim for item in inventory["items"] for claim in item["claim_ids"])
     promoted = authority_promotions()
+    runtime_records = partial_runtime_records()
     behavior_ids = sorted(item["behavior_id"] for item in inventory["items"])
     core_manifest, core_results, core_integrated = core_integrated_artifacts(reference, behavior_ids)
     proofs, files = [], []
@@ -246,40 +327,7 @@ def generate() -> dict:
             scenario_applicable = scenario in applicable_scenarios or scenario == "normal"
             identity_bindings = [binding for binding in bindings if binding["identity"] and evidence_supports_scenario(binding["id"], scenario)]
             closure_cells = [
-                {
-                    "id": f"cell.{item['behavior_id']}.{surface_id}.{scenario}.{variant_id}",
-                    "surface_id": surface_id,
-                    "scenario": scenario,
-                    "variant_id": variant_id,
-                    "status": "explicit-gap",
-                    "execution_requirement": "dedicated-real-compiler-runtime-or-platform",
-                    "dedicated_execution": {
-                        "source_digest": None,
-                        "harness_digest": None,
-                        "compiler_runtime_platform_identity": None,
-                        "oracle": None,
-                        "trace": None,
-                        "artifact": None,
-                        "attempts": None,
-                        "retries": None,
-                    },
-                    "closure": {
-                        "source_bound": False,
-                        "harness_bound": False,
-                        "identity_bound": False,
-                        "oracle_bound": False,
-                        "trace_bound": False,
-                        "artifact_bound": False,
-                        "first_attempt_pass": False,
-                        "retry_count_zero": False,
-                        "dedicated_to_this_cell": False,
-                        "closed": False,
-                    },
-                    "gaps": [
-                        "No dedicated execution drives this Kotlin Surface, Scenario, and Variant cell.",
-                        "Integrated traces and unrelated Evidence metadata are ineligible for closure credit.",
-                    ],
-                }
+                closure_cell(item, surface_id, scenario, variant_id, runtime_records)
                 for surface_id in item["surface_ids"]
                 for variant_id in variants
             ]
@@ -289,7 +337,11 @@ def generate() -> dict:
             gaps = []
             if not scenario_applicable:
                 gaps.append("This Behavior has no subject-specific oracle classified for this scenario.")
-            gaps.append(f"All {len(closure_cells)} Surface×Scenario×Variant closure cells remain explicit gaps.")
+            gap_cells = sum(not cell["closure"]["closed"] for cell in closure_cells)
+            if gap_cells == len(closure_cells):
+                gaps.append(f"All {len(closure_cells)} Surface×Scenario×Variant closure cells remain explicit gaps.")
+            elif gap_cells:
+                gaps.append(f"{gap_cells} of {len(closure_cells)} Surface×Scenario×Variant closure cells remain explicit gaps.")
             if bindings:
                 gaps.append("Mapped Target Evidence is candidate context only; unrelated Artifact metadata cannot close a dedicated cell.")
             if not claim_unique:
@@ -442,6 +494,7 @@ def generate() -> dict:
             "surface_inventory": file_binding(ROOT / "surface.inventory.yaml"), "coverage": file_binding(ROOT / "coverage.yaml"),
             "reference_manifest": file_binding(REFERENCE_MANIFEST), "reference_results": file_binding(REFERENCE_RESULTS),
             "authority_decisions": file_binding(DECISIONS), "gap_closure_reference": file_binding(CLOSURE_REFERENCE),
+            "partial_runtime_report": file_binding(PARTIAL_RUNTIME_REPORT),
         },
         "summary": {
             "behaviors": len(inventory["items"]), "scenarios": len(SCENARIOS), "rows": len(proofs),
@@ -490,6 +543,7 @@ def generate() -> dict:
             "coverage.yaml": sha256((ROOT / "coverage.yaml").read_bytes()),
             "authority/reviews/decisions.json": sha256(DECISIONS.read_bytes()),
             "evidence/scenarios/kotlin-closure-index.json": sha256(KOTLIN_CLOSURE_INDEX.read_bytes()),
+            "artifacts/scenario-partial-runtime/results.json": sha256(PARTIAL_RUNTIME_REPORT.read_bytes()),
         },
         "summary": {
             "patterns": len(behavior_ids),

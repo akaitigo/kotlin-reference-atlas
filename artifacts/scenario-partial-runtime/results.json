@@ -1,0 +1,421 @@
+{
+  "command": "./gradlew :labs:abi-runtime-security:jvmTest :labs:abi-runtime-security:jsNodeTest :labs:abi-runtime-security:wasmJsNodeTest --rerun-tasks --no-daemon",
+  "completion_limits": [
+    "security-001 is not complete: Native runtime cells require a working Xcode toolchain and remain explicit gaps.",
+    "This generation closes only abi.value-class-boxing-mangling security cells for JVM, JS, and Wasm."
+  ],
+  "counts": {
+    "cells": 9,
+    "failed": 0,
+    "passed": 9,
+    "surfaces": 3,
+    "variants": 3
+  },
+  "created_at": "2026-08-30T23:23:08+09:00",
+  "execution": {
+    "attempts": 1,
+    "full_requested_profile_passed": true,
+    "retries": 0
+  },
+  "gradle_output_digest": "sha256:05b819e5d8a34a2434631c2c1c9da9b97a2f2a30c24eef1d102f46cd7db3fba9",
+  "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+  "id": "kotlin-security-001-partial-runtime-v1",
+  "profile": "real-kotlin-jvm-js-wasm-runtime",
+  "records": [
+    {
+      "artifact": {
+        "bytes": 2286,
+        "digest": "sha256:afeecdb21ef063985e9a9c23fb5d0c33df123b817e4ce6adc7b58a3f8d99c395",
+        "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
+      },
+      "attempts": 1,
+      "behavior_id": "abi.value-class-boxing-mangling",
+      "compiler_runtime_platform_identity": {
+        "compiler": "Kotlin 2.4.10 IR",
+        "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+        "host_architecture": "arm64",
+        "host_os": "Darwin",
+        "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+        "node": "v25.2.1",
+        "runtime": "JVM on OpenJDK 17",
+        "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+      },
+      "dedicated_to_this_cell": true,
+      "final_status": "passed",
+      "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+      "id": "cell.abi.value-class-boxing-mangling.foundations-mechanics.security.kotlin-2.4.10-jvm-openjdk17",
+      "oracle": {
+        "assertion": "foundations mechanics preserves trusted identity at a generic boxing boundary",
+        "kind": "kotlin-value-class-security-boundary",
+        "passed": true,
+        "scenario": "security",
+        "surface_id": "foundations-mechanics"
+      },
+      "retries": 0,
+      "scenario": "security",
+      "source_digest": "sha256:9511134072ec7ce54bd544c895c38404aa0187b7f434bac2dfd0e9bd3d7a4639",
+      "surface_id": "foundations-mechanics",
+      "trace": {
+        "action_stream": true,
+        "bytes": 2081,
+        "digest": "sha256:e67795158aa70de60caca0cbce721082d5895b91ec052117a68d071d75f2a5c1",
+        "network_stream": true,
+        "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
+        "resource_stream": true
+      },
+      "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+    },
+    {
+      "artifact": {
+        "bytes": 2296,
+        "digest": "sha256:3b6c2238af2ba1f70e957423a7fbf53b82a06bfe1d44e6348a2db125c5a2700a",
+        "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
+      },
+      "attempts": 1,
+      "behavior_id": "abi.value-class-boxing-mangling",
+      "compiler_runtime_platform_identity": {
+        "compiler": "Kotlin 2.4.10 IR",
+        "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+        "host_architecture": "arm64",
+        "host_os": "Darwin",
+        "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+        "node": "v25.2.1",
+        "runtime": "JVM on OpenJDK 17",
+        "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+      },
+      "dedicated_to_this_cell": true,
+      "final_status": "passed",
+      "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+      "id": "cell.abi.value-class-boxing-mangling.compatibility-integration.security.kotlin-2.4.10-jvm-openjdk17",
+      "oracle": {
+        "assertion": "compatibility integration keeps expect actual value representation executable",
+        "kind": "kotlin-value-class-security-boundary",
+        "passed": true,
+        "scenario": "security",
+        "surface_id": "compatibility-integration"
+      },
+      "retries": 0,
+      "scenario": "security",
+      "source_digest": "sha256:9511134072ec7ce54bd544c895c38404aa0187b7f434bac2dfd0e9bd3d7a4639",
+      "surface_id": "compatibility-integration",
+      "trace": {
+        "action_stream": true,
+        "bytes": 2087,
+        "digest": "sha256:26752d758dbfc48878e8748f70117a196052896ae876a4a41bbe4a3a79ef6705",
+        "network_stream": true,
+        "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
+        "resource_stream": true
+      },
+      "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+    },
+    {
+      "artifact": {
+        "bytes": 2288,
+        "digest": "sha256:17d31ec4a2c19b9c4a4fd0d47997ee8ef6cd14671cf8191691312baef449e7db",
+        "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-jvm-openjdk17.artifact.json"
+      },
+      "attempts": 1,
+      "behavior_id": "abi.value-class-boxing-mangling",
+      "compiler_runtime_platform_identity": {
+        "compiler": "Kotlin 2.4.10 IR",
+        "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+        "host_architecture": "arm64",
+        "host_os": "Darwin",
+        "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+        "node": "v25.2.1",
+        "runtime": "JVM on OpenJDK 17",
+        "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+      },
+      "dedicated_to_this_cell": true,
+      "final_status": "passed",
+      "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+      "id": "cell.abi.value-class-boxing-mangling.performance-capacity-cost.security.kotlin-2.4.10-jvm-openjdk17",
+      "oracle": {
+        "assertion": "performance capacity cost boundary remains deterministic under repetition",
+        "kind": "kotlin-value-class-security-boundary",
+        "passed": true,
+        "scenario": "security",
+        "surface_id": "performance-capacity-cost"
+      },
+      "retries": 0,
+      "scenario": "security",
+      "source_digest": "sha256:9511134072ec7ce54bd544c895c38404aa0187b7f434bac2dfd0e9bd3d7a4639",
+      "surface_id": "performance-capacity-cost",
+      "trace": {
+        "action_stream": true,
+        "bytes": 2083,
+        "digest": "sha256:925f1a537a2430aafdc917e0b999b6b3f306bde3ee3f19b1fa89a1d4fd4724bf",
+        "network_stream": true,
+        "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-jvm-openjdk17.trace.json",
+        "resource_stream": true
+      },
+      "variant_id": "kotlin-2.4.10-jvm-openjdk17"
+    },
+    {
+      "artifact": {
+        "bytes": 2378,
+        "digest": "sha256:130b6fed2ad86568d19401b527346a702430c040e4fe51695ab8ed905ab8ee2a",
+        "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-js-node.artifact.json"
+      },
+      "attempts": 1,
+      "behavior_id": "abi.value-class-boxing-mangling",
+      "compiler_runtime_platform_identity": {
+        "compiler": "Kotlin 2.4.10 IR",
+        "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+        "host_architecture": "arm64",
+        "host_os": "Darwin",
+        "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+        "node": "v25.2.1",
+        "runtime": "Kotlin/JS IR on Node.js",
+        "variant_id": "kotlin-2.4.10-js-node"
+      },
+      "dedicated_to_this_cell": true,
+      "final_status": "passed",
+      "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+      "id": "cell.abi.value-class-boxing-mangling.foundations-mechanics.security.kotlin-2.4.10-js-node",
+      "oracle": {
+        "assertion": "foundations mechanics preserves trusted identity at a generic boxing boundary",
+        "kind": "kotlin-value-class-security-boundary",
+        "passed": true,
+        "scenario": "security",
+        "surface_id": "foundations-mechanics"
+      },
+      "retries": 0,
+      "scenario": "security",
+      "source_digest": "sha256:bc60d30e24fe8363c38d2450f1d5cf86298b247141bfde79dccd32dfaf354f3e",
+      "surface_id": "foundations-mechanics",
+      "trace": {
+        "action_stream": true,
+        "bytes": 2162,
+        "digest": "sha256:b8d52c7ee1ec62afa73937b88ea5897d9438805c810d784333f1c7a5e5657073",
+        "network_stream": true,
+        "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-js-node.trace.json",
+        "resource_stream": true
+      },
+      "variant_id": "kotlin-2.4.10-js-node"
+    },
+    {
+      "artifact": {
+        "bytes": 2388,
+        "digest": "sha256:8c91b59963803f862c136a6b4982e4e4f376adbd8df608074c5a61754fbdcf3e",
+        "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-js-node.artifact.json"
+      },
+      "attempts": 1,
+      "behavior_id": "abi.value-class-boxing-mangling",
+      "compiler_runtime_platform_identity": {
+        "compiler": "Kotlin 2.4.10 IR",
+        "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+        "host_architecture": "arm64",
+        "host_os": "Darwin",
+        "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+        "node": "v25.2.1",
+        "runtime": "Kotlin/JS IR on Node.js",
+        "variant_id": "kotlin-2.4.10-js-node"
+      },
+      "dedicated_to_this_cell": true,
+      "final_status": "passed",
+      "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+      "id": "cell.abi.value-class-boxing-mangling.compatibility-integration.security.kotlin-2.4.10-js-node",
+      "oracle": {
+        "assertion": "compatibility integration keeps expect actual value representation executable",
+        "kind": "kotlin-value-class-security-boundary",
+        "passed": true,
+        "scenario": "security",
+        "surface_id": "compatibility-integration"
+      },
+      "retries": 0,
+      "scenario": "security",
+      "source_digest": "sha256:bc60d30e24fe8363c38d2450f1d5cf86298b247141bfde79dccd32dfaf354f3e",
+      "surface_id": "compatibility-integration",
+      "trace": {
+        "action_stream": true,
+        "bytes": 2168,
+        "digest": "sha256:f8a1ac964986696c84e92c15dc5089b90329894fa1e2f4f6464c5c898ae58534",
+        "network_stream": true,
+        "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-js-node.trace.json",
+        "resource_stream": true
+      },
+      "variant_id": "kotlin-2.4.10-js-node"
+    },
+    {
+      "artifact": {
+        "bytes": 2378,
+        "digest": "sha256:4cd6f03cf6da0b2ab4c8f68957133b613344757b9f3f2d7520f8f3f2e9da2a00",
+        "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-js-node.artifact.json"
+      },
+      "attempts": 1,
+      "behavior_id": "abi.value-class-boxing-mangling",
+      "compiler_runtime_platform_identity": {
+        "compiler": "Kotlin 2.4.10 IR",
+        "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+        "host_architecture": "arm64",
+        "host_os": "Darwin",
+        "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+        "node": "v25.2.1",
+        "runtime": "Kotlin/JS IR on Node.js",
+        "variant_id": "kotlin-2.4.10-js-node"
+      },
+      "dedicated_to_this_cell": true,
+      "final_status": "passed",
+      "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+      "id": "cell.abi.value-class-boxing-mangling.performance-capacity-cost.security.kotlin-2.4.10-js-node",
+      "oracle": {
+        "assertion": "performance capacity cost boundary remains deterministic under repetition",
+        "kind": "kotlin-value-class-security-boundary",
+        "passed": true,
+        "scenario": "security",
+        "surface_id": "performance-capacity-cost"
+      },
+      "retries": 0,
+      "scenario": "security",
+      "source_digest": "sha256:bc60d30e24fe8363c38d2450f1d5cf86298b247141bfde79dccd32dfaf354f3e",
+      "surface_id": "performance-capacity-cost",
+      "trace": {
+        "action_stream": true,
+        "bytes": 2162,
+        "digest": "sha256:e6df3c8085f160fdff1b04e241d544d1e64a74be24dbd5f51253e5ab175e0382",
+        "network_stream": true,
+        "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-js-node.trace.json",
+        "resource_stream": true
+      },
+      "variant_id": "kotlin-2.4.10-js-node"
+    },
+    {
+      "artifact": {
+        "bytes": 2416,
+        "digest": "sha256:7e7003ace2b156a0a3b2b57f7a86757e33c9508e8c477c3106e388a9ceba2f17",
+        "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-wasm-js-node.artifact.json"
+      },
+      "attempts": 1,
+      "behavior_id": "abi.value-class-boxing-mangling",
+      "compiler_runtime_platform_identity": {
+        "compiler": "Kotlin 2.4.10 IR",
+        "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+        "host_architecture": "arm64",
+        "host_os": "Darwin",
+        "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+        "node": "v25.2.1",
+        "runtime": "Kotlin/Wasm JS on Node.js",
+        "variant_id": "kotlin-2.4.10-wasm-js-node"
+      },
+      "dedicated_to_this_cell": true,
+      "final_status": "passed",
+      "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+      "id": "cell.abi.value-class-boxing-mangling.foundations-mechanics.security.kotlin-2.4.10-wasm-js-node",
+      "oracle": {
+        "assertion": "foundations mechanics preserves trusted identity at a generic boxing boundary",
+        "kind": "kotlin-value-class-security-boundary",
+        "passed": true,
+        "scenario": "security",
+        "surface_id": "foundations-mechanics"
+      },
+      "retries": 0,
+      "scenario": "security",
+      "source_digest": "sha256:7d88402bb355dbfce8a33b9295b79c42af45223417845969ab134ac15f950b31",
+      "surface_id": "foundations-mechanics",
+      "trace": {
+        "action_stream": true,
+        "bytes": 2196,
+        "digest": "sha256:b2d8dcc8b199367854ea0d1f42b40d70136492db9c1b69beaa09ddacf340e732",
+        "network_stream": true,
+        "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-foundations-mechanics-security-kotlin-2-4-10-wasm-js-node.trace.json",
+        "resource_stream": true
+      },
+      "variant_id": "kotlin-2.4.10-wasm-js-node"
+    },
+    {
+      "artifact": {
+        "bytes": 2422,
+        "digest": "sha256:c459f543fc0443f374c03108b2f03cbc408c5653a036f6cc3eb497855149574a",
+        "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.artifact.json"
+      },
+      "attempts": 1,
+      "behavior_id": "abi.value-class-boxing-mangling",
+      "compiler_runtime_platform_identity": {
+        "compiler": "Kotlin 2.4.10 IR",
+        "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+        "host_architecture": "arm64",
+        "host_os": "Darwin",
+        "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+        "node": "v25.2.1",
+        "runtime": "Kotlin/Wasm JS on Node.js",
+        "variant_id": "kotlin-2.4.10-wasm-js-node"
+      },
+      "dedicated_to_this_cell": true,
+      "final_status": "passed",
+      "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+      "id": "cell.abi.value-class-boxing-mangling.compatibility-integration.security.kotlin-2.4.10-wasm-js-node",
+      "oracle": {
+        "assertion": "compatibility integration keeps expect actual value representation executable",
+        "kind": "kotlin-value-class-security-boundary",
+        "passed": true,
+        "scenario": "security",
+        "surface_id": "compatibility-integration"
+      },
+      "retries": 0,
+      "scenario": "security",
+      "source_digest": "sha256:7d88402bb355dbfce8a33b9295b79c42af45223417845969ab134ac15f950b31",
+      "surface_id": "compatibility-integration",
+      "trace": {
+        "action_stream": true,
+        "bytes": 2198,
+        "digest": "sha256:77b0df2a72f3de61f1a944a4578cbb1408adbd64510abb0b9985136e24c7adc7",
+        "network_stream": true,
+        "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-compatibility-integration-security-kotlin-2-4-10-wasm-js-node.trace.json",
+        "resource_stream": true
+      },
+      "variant_id": "kotlin-2.4.10-wasm-js-node"
+    },
+    {
+      "artifact": {
+        "bytes": 2414,
+        "digest": "sha256:fc4ec0bfffdc2ffc03c8863bd8f87cf67a2b10b75d900e08b65ebfe884597654",
+        "path": "artifacts/scenario-partial-runtime/artifacts/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-wasm-js-node.artifact.json"
+      },
+      "attempts": 1,
+      "behavior_id": "abi.value-class-boxing-mangling",
+      "compiler_runtime_platform_identity": {
+        "compiler": "Kotlin 2.4.10 IR",
+        "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+        "host_architecture": "arm64",
+        "host_os": "Darwin",
+        "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+        "node": "v25.2.1",
+        "runtime": "Kotlin/Wasm JS on Node.js",
+        "variant_id": "kotlin-2.4.10-wasm-js-node"
+      },
+      "dedicated_to_this_cell": true,
+      "final_status": "passed",
+      "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+      "id": "cell.abi.value-class-boxing-mangling.performance-capacity-cost.security.kotlin-2.4.10-wasm-js-node",
+      "oracle": {
+        "assertion": "performance capacity cost boundary remains deterministic under repetition",
+        "kind": "kotlin-value-class-security-boundary",
+        "passed": true,
+        "scenario": "security",
+        "surface_id": "performance-capacity-cost"
+      },
+      "retries": 0,
+      "scenario": "security",
+      "source_digest": "sha256:7d88402bb355dbfce8a33b9295b79c42af45223417845969ab134ac15f950b31",
+      "surface_id": "performance-capacity-cost",
+      "trace": {
+        "action_stream": true,
+        "bytes": 2194,
+        "digest": "sha256:16ae670e35339db2fc6d1718c8c73eb33c73673efb5c571961a83603d1beb7eb",
+        "network_stream": true,
+        "path": "artifacts/scenario-partial-runtime/traces/cell-abi-value-class-boxing-mangling-performance-capacity-cost-security-kotlin-2-4-10-wasm-js-node.trace.json",
+        "resource_stream": true
+      },
+      "variant_id": "kotlin-2.4.10-wasm-js-node"
+    }
+  ],
+  "retention_contract": {
+    "failed_run": "retain-prior-success",
+    "publish_on": "full-run-passed",
+    "swap": "staged-directory-rename-with-rollback"
+  },
+  "schema_version": 1,
+  "source_digest": "sha256:d00a7be46b35ac8af6c7fb667e9604c0ad93b034deb9a1d413d74df9812bb2b6",
+  "status": "passed"
+}

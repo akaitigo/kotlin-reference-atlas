@@ -13,6 +13,6 @@
     "dev.akaitigo.kotlinatlas.runtime.RuntimeRecord",
     "dev.akaitigo.kotlinatlas.runtime.RuntimeShapesKt"
   ],
-  "tool": "/usr/bin/javap",
+  "tool": "/opt/homebrew/opt/openjdk@17/bin/javap",
   "verdict": "pass"
 }

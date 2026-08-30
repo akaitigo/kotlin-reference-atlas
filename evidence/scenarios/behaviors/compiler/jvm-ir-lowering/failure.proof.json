@@ -14,7 +14,7 @@
   "candidate_evidence": [
     {
       "artifact": {
-        "digest": "sha256:3ccc910e53ecc505a50f522eb7baf59809a6d2b4f54fd1d45b6e73e06ae5cb9a",
+        "digest": "sha256:1b4a4f0ca61d278df9f06c563627a2eadc857f41e5eec44aae6fc01ccf53f93c",
         "exists": true,
         "path": "evidence/artifacts/bytecode-inspection.json"
       },
@@ -28,12 +28,12 @@
         "path": "labs/compiler-runtime/build.gradle.kts"
       },
       "id": "compiler.bytecode-inspection",
-      "identity": "Kotlin 2.4.10 JVM artifact inspected by /usr/bin/javap",
+      "identity": "Kotlin 2.4.10 JVM artifact inspected by /opt/homebrew/opt/openjdk@17/bin/javap",
       "kind": "compatibility",
       "producer": "jdk-javap",
       "record": {
         "bytes": 984,
-        "digest": "sha256:4245d47e80dbf09372783fa9ddbb1da7afa9d01559585b13e8a266b695d0738f",
+        "digest": "sha256:d9791fb5edf3ccb12ff8ec805df13d63bf49f7a5d110a6c6384c2f152d08a884",
         "path": "evidence/compiler.bytecode-inspection.evidence.json"
       },
       "source_digest": "sha256:664fb978befc25f11eaedb437c2210610758f949a0e41ae141366528144d3afd",

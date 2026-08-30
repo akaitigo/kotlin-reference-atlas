@@ -24,5 +24,6 @@ include(
     ":labs:multiplatform",
     ":labs:compiler-runtime",
     ":labs:engineering",
+    ":labs:abi-runtime-security",
     ":reference-systems:automation-workbench",
 )

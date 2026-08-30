@@ -4,6 +4,72 @@
     {
       "cases": [
         {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "compatibility integration keeps expect actual value representation executable[js, node]",
+          "status": "pass"
+        },
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "foundations mechanics preserves trusted identity at a generic boxing boundary[js, node]",
+          "status": "pass"
+        },
+        {
+          "class": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "performance capacity cost boundary remains deterministic under repetition[js, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-runtime-security",
+      "suite": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+      "task": "jsNodeTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "compatibility integration keeps expect actual value representation executable()[jvm]",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "foundations mechanics preserves trusted identity at a generic boxing boundary()[jvm]",
+          "status": "pass"
+        },
+        {
+          "class": "dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "performance capacity cost boundary remains deterministic under repetition()[jvm]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-runtime-security",
+      "suite": "ValueClassSecurityTest[jvm]",
+      "task": "jvmTest"
+    },
+    {
+      "cases": [
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "compatibility integration keeps expect actual value representation executable[wasmJs, node]",
+          "status": "pass"
+        },
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "foundations mechanics preserves trusted identity at a generic boxing boundary[wasmJs, node]",
+          "status": "pass"
+        },
+        {
+          "class": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+          "name": "performance capacity cost boundary remains deterministic under repetition[wasmJs, node]",
+          "status": "pass"
+        }
+      ],
+      "module": "abi-runtime-security",
+      "suite": "wasmJsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+      "task": "wasmJsNodeTest"
+    },
+    {
+      "cases": [
+        {
           "class": "dev.akaitigo.kotlinatlas.runtime.RuntimeShapesTest",
           "name": "capturing lambda preserves lexical value()",
           "status": "pass"
@@ -321,6 +387,6 @@
       "task": "test"
     }
   ],
-  "test_case_count": 47,
+  "test_case_count": 56,
   "verdict": "pass"
 }

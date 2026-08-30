@@ -937,6 +937,10 @@ def main(*, skip_container: bool = False) -> None:
             raise RuntimeError("既存Container Evidenceがpassではありません")
     else:
         container_result = validate_container_profile()
+    run([sys.executable, str(ROOT / "scripts" / "capture_security_001_partial.py")])
+    partial_scenario_runtime = load_json(ROOT / "artifacts" / "scenario-partial-runtime" / "results.json")
+    if partial_scenario_runtime.get("status") != "passed" or partial_scenario_runtime.get("execution", {}).get("retries") != 0:
+        raise RuntimeError("security-001 partial Runtime Evidenceがpass/retry 0ではない")
     # RouterはEvidence artifact digestをfail-closedで確認する。直前のLab/Artifact
     # 再生成をrecordへ反映してからEvalし、後段で全Gateの最終recordを再固定する。
     write_evidence()
@@ -962,7 +966,7 @@ def main(*, skip_container: bool = False) -> None:
     summary = {
         "atlas_id": "kotlin-reference-atlas",
         "epoch": "2026-08-28",
-        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "skill": skill_result["verdict"], "definitive_skill": definitive_skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "evidence_dependency": "pass", "scenario_plan": "expected-incomplete-no-success-generation", "evidence_durability": "expected-incomplete-no-success-generation", "definitive": "expected-incomplete"},
+        "implementation_gates": {"manifest": manifest_result["verdict"], "mastery_audit": manifest_result["verdict"], "labs": lab_result["verdict"], "deep_artifacts": deep_result["verdict"], "container": container_result["verdict"], "partial_scenario_runtime": partial_scenario_runtime["status"], "skill": skill_result["verdict"], "definitive_skill": definitive_skill_result["verdict"], "rights_metadata": rights_result["verdict"], "non_regression": non_regression_result["verdict"], "authority_locator": authority_locator_result["verdict"], "authority_body_denominator": authority_body_result["verdict"], "authority_review_queue": authority_review_result["verdict"], "kotlin_depth_parity": fe_parity_result["verdict"], "neutral_language": neutral_language_result["verdict"], "evidence_dependency": "pass", "scenario_plan": "expected-incomplete-no-success-generation", "evidence_durability": "expected-incomplete-no-success-generation", "definitive": "expected-incomplete"},
         "definitive_skill_eval": definitive_skill_result,
         "kotlin_depth_parity": {"axis_count": fe_parity_result["axis_count"], "status_counts": fe_parity_result["status_counts"], "total_axis_gaps": fe_parity_result["total_axis_gaps"], "all_axes_closed": fe_parity_result["all_axes_closed"], "reference_commit": fe_parity_result["reference_commit"]},
         "completion_class": "incomplete",
@@ -974,7 +978,7 @@ def main(*, skip_container: bool = False) -> None:
         "gap_ledger": gaps,
         "completion_gaps": [
             "146402 candidate anchorは全件Queue済みだが、Human decisionとSemantic Surface／Atomic behaviorへの昇格が未閉鎖",
-            "69 Authority inventory Behavior×10 Scenarioは専用row化済みだが、4590 Surface×Scenario×Variant cellの専用初回実行・Identity・Source/Harness・Oracle/Trace/ArtifactとAuthority atomic bindingが未閉鎖",
+            "69 Authority inventory Behavior×10 Scenarioは専用row化済み。security-001のvalue-class securityはJVM/JS/Wasmの9 cellを専用初回実行で閉じたが、Nativeを含む残cellとAuthority atomic bindingは未閉鎖",
             "Pattern Scenario Reporterは原子的retention契約へ適合するが、公開可能なfull-run成功世代が未生成のためCore Evidence durability／Scenario Plan Gateは未閉鎖",
             "112-cell Router契約と独立Agent Forward Evalはpassだが22 Mastery routing gapが未閉鎖",
             "JVM以外を含む実Runtime、比較Variant、Artifact Evidenceが未閉鎖",

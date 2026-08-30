@@ -6294,9 +6294,10 @@
   "id": "kotlin-scenario-proof-core-v2",
   "schema_version": 1,
   "source_digests": {
+    "artifacts/scenario-partial-runtime/results.json": "sha256:70a7a7eee85b5b69b3bd86e4fdfe0ba0c46e4ce3267ed885d4c913c5c9dbb3e9",
     "authority/reviews/decisions.json": "sha256:b9bc220d5954ff4959905ac4efbf4fcff9c67a18256bba1f6a3d626b9a0106b8",
     "coverage.yaml": "sha256:12b913c1ec409c2bdd2435637c466b863d8c9720c81b2ebfdd2e8169e3e998a3",
-    "evidence/scenarios/kotlin-closure-index.json": "sha256:01aab400c74558c01becd69fea32b0f2ccd44d192245283444f795aa1a6999b7",
+    "evidence/scenarios/kotlin-closure-index.json": "sha256:201ac29e0121d7420fdf45e8438c9990d71f1ec3c767d4b7d4de8b38dbc272a0",
     "surface.inventory.yaml": "sha256:7a69a420fecf94590e888ddbcd4f736b86ba534759143c3492818fdbff6997fd"
   },
   "status": "incomplete-authority-atomic-and-runtime-closure",
@@ -6313,5 +6314,5 @@
     "rows": 690,
     "scenarios": 10
   },
-  "tool_digest": "sha256:cbbbbbc11fed48620eb9dc2daec95c655d91bb5e32917a0a6d029bd9c5bf8a86"
+  "tool_digest": "sha256:d7947cbeb8b3c5f33e0670e20ca68cb0571b59d7896d6ee3caff381cff5e27d6"
 }

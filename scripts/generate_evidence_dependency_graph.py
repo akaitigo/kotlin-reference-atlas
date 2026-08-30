@@ -146,9 +146,10 @@ def discover_required_outputs() -> list[str]:
             if not path.is_file() or path.suffix.lower() not in {".json", ".yaml", ".yml"}:
                 continue
             basename = path.name.lower()
-            if root == "artifacts" and "results" not in basename and "manifest" not in basename:
+            relative = path.relative_to(ROOT).as_posix()
+            if root == "artifacts" and not relative.startswith("artifacts/scenario-partial-runtime/") and "results" not in basename and "manifest" not in basename:
                 continue
-            result.add(path.relative_to(ROOT).as_posix())
+            result.add(relative)
     for pattern in [
         "evidence/*.evidence.json", "evidence/*.evidence.yaml", "evidence/*.evidence.yml",
         "evals/*.definitive-skill-eval.json",

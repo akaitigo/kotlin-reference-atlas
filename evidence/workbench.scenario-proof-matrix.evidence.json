@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "digest": "sha256:01aab400c74558c01becd69fea32b0f2ccd44d192245283444f795aa1a6999b7",
+    "digest": "sha256:201ac29e0121d7420fdf45e8438c9990d71f1ec3c767d4b7d4de8b38dbc272a0",
     "media_type": "application/json",
-    "size_bytes": 275380,
+    "size_bytes": 275596,
     "uri": "evidence/scenarios/kotlin-closure-index.json"
   },
   "atlas_id": "kotlin-reference-atlas",

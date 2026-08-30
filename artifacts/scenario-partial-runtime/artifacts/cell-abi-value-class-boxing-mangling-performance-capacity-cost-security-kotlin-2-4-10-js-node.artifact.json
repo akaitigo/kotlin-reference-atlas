@@ -1,0 +1,37 @@
+{
+  "cell_id": "cell.abi.value-class-boxing-mangling.performance-capacity-cost.security.kotlin-2.4.10-js-node",
+  "compiler_artifact": {
+    "bytes": 9650,
+    "digest": "sha256:cbca6752ae5672814a6e09b8260a77506c3a46a2df939b35e486b9a08aaf20f9",
+    "path": "labs/abi-runtime-security/build/compileSync/js/test/testDevelopmentExecutable/kotlin/kotlin-reference-atlas-labs-abi-runtime-security-test.js"
+  },
+  "harness_digest": "sha256:c601a5f1c08322fcf13bf557e148b6479ed18849135d997c2727078619adaa29",
+  "oracle": {
+    "assertion": "performance capacity cost boundary remains deterministic under repetition",
+    "kind": "kotlin-value-class-security-boundary",
+    "passed": true,
+    "scenario": "security",
+    "surface_id": "performance-capacity-cost"
+  },
+  "runtime_identity": {
+    "compiler": "Kotlin 2.4.10 IR",
+    "gradle": "------------------------------------------------------------\nGradle 9.5.0\n------------------------------------------------------------\n\nBuild time:    2026-04-28 12:05:30 UTC\nRevision:      3fe117d68f3907790f3809f121aa36303a9151f8\n\nKotlin:        2.3.20\nGroovy:        4.0.29\nAnt:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024\nLauncher JVM:  17.0.17 (Homebrew 17.0.17+0)\nDaemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.17/libexec/openjdk.jdk/Contents/Home (no Daemon JVM specified, using current Java home)\nOS:            Mac OS X 26.1 aarch64",
+    "host_architecture": "arm64",
+    "host_os": "Darwin",
+    "java": "openjdk version \"17.0.17\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 17.0.17+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.17+0, mixed mode, sharing)",
+    "node": "v25.2.1",
+    "runtime": "Kotlin/JS IR on Node.js",
+    "variant_id": "kotlin-2.4.10-js-node"
+  },
+  "schema_version": 1,
+  "source_digest": "sha256:bc60d30e24fe8363c38d2450f1d5cf86298b247141bfde79dccd32dfaf354f3e",
+  "test_result": {
+    "digest": "sha256:a419ff11a66c1e9e91d95edf5f9abdfab9491d5fe380cedb5aaa1b4f16a2678b",
+    "path": "labs/abi-runtime-security/build/test-results/jsNodeTest/TEST-jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest.xml",
+    "testcase": {
+      "classname": "jsNodeTest.dev.akaitigo.kotlinatlas.abi.ValueClassSecurityTest",
+      "name": "performance capacity cost boundary remains deterministic under repetition[js, node]",
+      "time": "0.0"
+    }
+  }
+}
